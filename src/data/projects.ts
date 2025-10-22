@@ -97,7 +97,9 @@ export const getProjectsByServiceAndLocation = (serviceId: string, location: str
 export const getProjectStats = () => {
   const totalProjects = projects.projects.length
   const projectsByService = projects.projects.reduce((acc, project) => {
-    acc[project.service] = (acc[project.service] || 0) + 1
+    if (project.service) {
+      acc[project.service] = (acc[project.service] || 0) + 1
+    }
     return acc
   }, {} as Record<string, number>)
   
