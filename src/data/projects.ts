@@ -9,7 +9,7 @@ export interface Project {
   beforeAlt: string
   afterAlt: string
   location: string
-  service: string
+  service?: string
   category: string
 }
 
