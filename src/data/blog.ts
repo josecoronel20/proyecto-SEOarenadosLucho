@@ -130,7 +130,7 @@ export const getPostsByTag = (tag: string): BlogPost[] => {
 // Get all unique tags
 export const getAllTags = (): string[] => {
   const allTags = blog.posts.flatMap(post => post.tags)
-  return [...new Set(allTags)].sort()
+  return Array.from(new Set(allTags)).sort()
 }
 
 // Generate sitemap data for blog posts
