@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.arenadoslucho.com.ar"),
   title: `Arenados Lucho | Arenado Pilar y Zona Norte - Sandblasting Profesional`,
   description: `Servicio profesional de arenado y sandblasting en Pilar y Zona Norte. 20+ años de experiencia. Presupuesto gratuito en 24h. ¡Cotizá ahora!`,
   keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}`,
