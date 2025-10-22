@@ -74,8 +74,8 @@ export const getFeaturedProjects = (limit: number = 6): Project[] => {
       
       // Luego por servicio (piletas primero)
       const serviceOrder = ['arenado-piletas', 'arenado-vehiculos', 'arenado-industrial', 'arenado-fachadas', 'arenado-barcos', 'arenado-piezas']
-      const aServiceIndex = serviceOrder.indexOf(a.service)
-      const bServiceIndex = serviceOrder.indexOf(b.service)
+      const aServiceIndex = serviceOrder.indexOf(a.service || '')
+      const bServiceIndex = serviceOrder.indexOf(b.service || '')
       
       return aServiceIndex - bServiceIndex
     })
