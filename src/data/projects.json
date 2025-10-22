@@ -1,0 +1,425 @@
+{
+  "projects": [
+    {
+      "id": "pileta-pilar",
+      "title": "Arenado de pileta en Pilar",
+      "description": "Limpieza profunda y preparación para pintura",
+      "beforeImage": "/images/proyectos/arenado-pileta-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-pileta-pilar-despues.webp",
+      "beforeAlt": "Pileta antes del arenado - Pilar",
+      "afterAlt": "Pileta después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "pileta"
+    },
+    {
+      "id": "pileta-zona-norte",
+      "title": "Arenado de pileta en Zona Norte",
+      "description": "Limpieza profunda y preparación para pintura",
+      "beforeImage": "/images/proyectos/arenado-pileta-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/arenado-pileta-zona-norte-despues.webp",
+      "beforeAlt": "Pileta antes del arenado - Zona Norte",
+      "afterAlt": "Pileta después del arenado - Zona Norte",
+      "location": "Zona Norte",
+      "category": "pileta"
+    },
+    {
+      "id": "pileta-zona-oeste",
+      "title": "Arenado de pileta en Zona Oeste",
+      "description": "Limpieza profunda y preparación para pintura",
+      "beforeImage": "/images/proyectos/arenado-pileta-zona-oeste-antes.webp",
+      "afterImage": "/images/proyectos/arenado-pileta-zona-oeste-despues.webp",
+      "beforeAlt": "Pileta antes del arenado - Zona Oeste",
+      "afterAlt": "Pileta después del arenado - Zona Oeste",
+      "location": "Zona Oeste",
+      "category": "pileta"
+    },
+    {
+      "id": "piscina-pilar",
+      "title": "Arenado de piscina en Pilar",
+      "description": "Limpieza profunda y preparación para pintura",
+      "beforeImage": "/images/proyectos/arenado-piscina-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-piscina-pilar-despues.webp",
+      "beforeAlt": "Piscina antes del arenado - Pilar",
+      "afterAlt": "Piscina después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "pileta"
+    },
+    {
+      "id": "piscina-zona-norte",
+      "title": "Arenado de piscina en Zona Norte",
+      "description": "Limpieza profunda y preparación para pintura",
+      "beforeImage": "/images/proyectos/arenado-piscina-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/arenado-piscina-zona-norte-despues.webp",
+      "beforeAlt": "Piscina antes del arenado - Zona Norte",
+      "afterAlt": "Piscina después del arenado - Zona Norte",
+      "location": "Zona Norte",
+      "category": "pileta"
+    },
+    {
+      "id": "vehiculo-auto-pilar",
+      "title": "Arenado de auto en Pilar",
+      "description": "Remoción de pintura y óxido en vehículo",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-auto-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-auto-pilar-despues.webp",
+      "beforeAlt": "Auto antes del arenado - Pilar",
+      "afterAlt": "Auto después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-auto-zona-norte",
+      "title": "Arenado de auto en Zona Norte",
+      "description": "Remoción de pintura y óxido en vehículo",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-auto-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-auto-zona-norte-despues.webp",
+      "beforeAlt": "Auto antes del arenado - Zona Norte",
+      "afterAlt": "Auto después del arenado - Zona Norte",
+      "location": "Zona Norte",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-camion-pilar",
+      "title": "Arenado de camión en Pilar",
+      "description": "Remoción de pintura y óxido en camión",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-camion-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-camion-pilar-despues.webp",
+      "beforeAlt": "Camión antes del arenado - Pilar",
+      "afterAlt": "Camión después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-camion-zona-norte",
+      "title": "Arenado de camión en Zona Norte",
+      "description": "Remoción de pintura y óxido en camión",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-camion-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-camion-zona-norte-despues.webp",
+      "beforeAlt": "Camión antes del arenado - Zona Norte",
+      "afterAlt": "Camión después del arenado - Zona Norte",
+      "location": "Zona Norte",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-camion-zona-oeste",
+      "title": "Arenado de camión en Zona Oeste",
+      "description": "Remoción de pintura y óxido en camión",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-camion-zona-oeste-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-camion-zona-oeste-despues.webp",
+      "beforeAlt": "Camión antes del arenado - Zona Oeste",
+      "afterAlt": "Camión después del arenado - Zona Oeste",
+      "location": "Zona Oeste",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-chasis-pilar",
+      "title": "Arenado de chasis en Pilar",
+      "description": "Remoción de pintura y óxido en chasis",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-chasis-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-chasis-pilar-despues.webp",
+      "beforeAlt": "Chasis antes del arenado - Pilar",
+      "afterAlt": "Chasis después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "vehiculo"
+    },
+    {
+      "id": "vehiculo-chasis-zona-norte",
+      "title": "Arenado de chasis en Zona Norte",
+      "description": "Remoción de pintura y óxido en chasis",
+      "beforeImage": "/images/proyectos/arenado-vehiculo-chasis-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/arenado-vehiculo-chasis-zona-norte-despues.webp",
+      "beforeAlt": "Chasis antes del arenado - Zona Norte",
+      "afterAlt": "Chasis después del arenado - Zona Norte",
+      "location": "Zona Norte",
+      "category": "vehiculo"
+    },
+    {
+      "id": "industrial-columnas-pilar",
+      "title": "Arenado industrial en Pilar",
+      "description": "Limpieza de estructuras metálicas industriales",
+      "beforeImage": "/images/proyectos/arenado-industrial-columnas-pilar-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-columnas-pilar-despues.webp",
+      "beforeAlt": "Columnas industriales antes del arenado - Pilar",
+      "afterAlt": "Columnas industriales después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "industrial"
+    },
+    {
+      "id": "industrial-monumento-san-miguel",
+      "title": "Arenado industrial en San Miguel",
+      "description": "Limpieza de monumento metálico",
+      "beforeImage": "/images/proyectos/arenado-industrial-monumento-san-miguel-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-monumento-san-miguel-despues.webp",
+      "beforeAlt": "Monumento antes del arenado - San Miguel",
+      "afterAlt": "Monumento después del arenado - San Miguel",
+      "location": "San Miguel",
+      "category": "industrial"
+    },
+    {
+      "id": "industrial-paredon-jose-c-paz",
+      "title": "Arenado industrial en José C. Paz",
+      "description": "Limpieza de paredón industrial",
+      "beforeImage": "/images/proyectos/arenado-industrial-paredon-jose-c-paz-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-paredon-jose-c-paz-despues.webp",
+      "beforeAlt": "Paredón industrial antes del arenado - José C. Paz",
+      "afterAlt": "Paredón industrial después del arenado - José C. Paz",
+      "location": "José C. Paz",
+      "category": "industrial"
+    },
+    {
+      "id": "industrial-tanque-ituzaingo",
+      "title": "Arenado industrial en Ituzaingó",
+      "description": "Limpieza de tanque industrial",
+      "beforeImage": "/images/proyectos/arenado-industrial-tanque-ituzaingo-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-tanque-ituzaingo-despues.webp",
+      "beforeAlt": "Tanque industrial antes del arenado - Ituzaingó",
+      "afterAlt": "Tanque industrial después del arenado - Ituzaingó",
+      "location": "Ituzaingó",
+      "category": "industrial"
+    },
+    {
+      "id": "industrial-tanque-moreno",
+      "title": "Arenado industrial en Moreno",
+      "description": "Limpieza de tanque industrial",
+      "beforeImage": "/images/proyectos/arenado-industrial-tanque-moreno-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-tanque-moreno-despues.webp",
+      "beforeAlt": "Tanque industrial antes del arenado - Moreno",
+      "afterAlt": "Tanque industrial después del arenado - Moreno",
+      "location": "Moreno",
+      "category": "industrial"
+    },
+    {
+      "id": "industrial-tanque-moron",
+      "title": "Arenado industrial en Morón",
+      "description": "Limpieza de tanque industrial",
+      "beforeImage": "/images/proyectos/arenado-industrial-tanque-moron-antes.webp",
+      "afterImage": "/images/proyectos/arenado-industrial-tanque-moron-despues.webp",
+      "beforeAlt": "Tanque industrial antes del arenado - Morón",
+      "afterAlt": "Tanque industrial después del arenado - Morón",
+      "location": "Morón",
+      "category": "industrial"
+    },
+    {
+      "id": "fachada-san-martin",
+      "title": "Arenado de fachada en San Martín",
+      "description": "Restauración de fachada residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-san-martin-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-san-martin-despues.webp",
+      "beforeAlt": "Fachada antes del arenado - San Martín",
+      "afterAlt": "Fachada después del arenado - San Martín",
+      "location": "San Martín",
+      "category": "fachada"
+    },
+    {
+      "id": "fachada-frente-san-martin",
+      "title": "Arenado de fachada frontal en San Martín",
+      "description": "Restauración de fachada frontal residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-frente-san-martin-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-frente-san-martin-despues.webp",
+      "beforeAlt": "Fachada frontal antes del arenado - San Martín",
+      "afterAlt": "Fachada frontal después del arenado - San Martín",
+      "location": "San Martín",
+      "category": "fachada"
+    },
+    {
+      "id": "fachada-frente-vicente-lopez",
+      "title": "Arenado de fachada frontal en Vicente López",
+      "description": "Restauración de fachada frontal residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-frente-vicente-lopez-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-frente-vicente-lopez-despues.webp",
+      "beforeAlt": "Fachada frontal antes del arenado - Vicente López",
+      "afterAlt": "Fachada frontal después del arenado - Vicente López",
+      "location": "Vicente López",
+      "category": "fachada"
+    },
+    {
+      "id": "fachada-pared-san-martin",
+      "title": "Arenado de pared en San Martín",
+      "description": "Restauración de pared residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-pared-san-martin-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-pared-san-martin-despues.webp",
+      "beforeAlt": "Pared antes del arenado - San Martín",
+      "afterAlt": "Pared después del arenado - San Martín",
+      "location": "San Martín",
+      "category": "fachada"
+    },
+    {
+      "id": "fachada-paredon-vicente-lopez",
+      "title": "Arenado de paredón en Vicente López",
+      "description": "Restauración de paredón residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-paredon-vicente-lopez-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-paredon-vicente-lopez-despues.webp",
+      "beforeAlt": "Paredón antes del arenado - Vicente López",
+      "afterAlt": "Paredón después del arenado - Vicente López",
+      "location": "Vicente López",
+      "category": "fachada"
+    },
+    {
+      "id": "fachada-techo-general-rodriguez",
+      "title": "Arenado de techo en General Rodríguez",
+      "description": "Restauración de techo residencial",
+      "beforeImage": "/images/proyectos/arenado-fachada-techo-general-rodriguez-antes.webp",
+      "afterImage": "/images/proyectos/arenado-fachada-techo-general-rodriguez-despues.webp",
+      "beforeAlt": "Techo antes del arenado - General Rodríguez",
+      "afterAlt": "Techo después del arenado - General Rodríguez",
+      "location": "General Rodríguez",
+      "category": "fachada"
+    },
+    {
+      "id": "barco-tigre",
+      "title": "Arenado de barco en Tigre",
+      "description": "Despintado y tratamiento de casco naval",
+      "beforeImage": "/images/proyectos/arenado-barco-tigre-antes.webp",
+      "afterImage": "/images/proyectos/arenado-barco-tigre-despues.webp",
+      "beforeAlt": "Barco antes del arenado - Tigre",
+      "afterAlt": "Barco después del arenado - Tigre",
+      "location": "Tigre",
+      "category": "barco"
+    },
+    {
+      "id": "piezas-metal-cardales",
+      "title": "Arenado de piezas metálicas en Cardales",
+      "description": "Servicio fino en taller para piezas mecánicas",
+      "beforeImage": "/images/proyectos/arenado-piezas-metal-cardales-antes.webp",
+      "afterImage": "/images/proyectos/arenado-piezas-metal-cardales-despues.webp",
+      "beforeAlt": "Piezas metálicas antes del arenado - Cardales",
+      "afterAlt": "Piezas metálicas después del arenado - Cardales",
+      "location": "Cardales",
+      "category": "pieza"
+    },
+    {
+      "id": "piezas-llanta-cardales",
+      "title": "Arenado de llanta en Cardales",
+      "description": "Servicio fino en taller para llanta",
+      "beforeImage": "/images/proyectos/arenado-piezas-metal-llanta-cardales-antes.webp",
+      "afterImage": "/images/proyectos/arenado-piezas-metal-llanta-cardales-despues.webp",
+      "beforeAlt": "Llanta antes del arenado - Cardales",
+      "afterAlt": "Llanta después del arenado - Cardales",
+      "location": "Cardales",
+      "category": "pieza"
+    },
+    {
+      "id": "mueble-mesa-pilar",
+      "title": "Arenado de mesa en Pilar",
+      "description": "Restauración completa de mesa de madera mediante arenado profesional",
+      "beforeImage": "/images/proyectos/arenado-mueble-mesa-pilar-antes.jpg",
+      "afterImage": "/images/proyectos/arenado-mueble-mesa-pilar-despues.jpg",
+      "beforeAlt": "Mesa de madera antes del arenado - Pilar",
+      "afterAlt": "Mesa de madera después del arenado - Pilar",
+      "location": "Pilar",
+      "category": "mueble"
+    },
+    {
+      "id": "mueble-mesa-san-isidro",
+      "title": "Arenado de mesa en San Isidro",
+      "description": "Restauración completa de mesa de madera mediante arenado profesional",
+      "beforeImage": "/images/proyectos/arenado-mueble-mesa-san-isidro-antes.jpg",
+      "afterImage": "/images/proyectos/arenado-mueble-mesa-san-isidro-despues.jpg",
+      "beforeAlt": "Mesa de madera antes del arenado - San Isidro",
+      "afterAlt": "Mesa de madera después del arenado - San Isidro",
+      "location": "San Isidro",
+      "category": "mueble"
+    }
+  ],
+  "categories": {
+    "pileta": {
+      "name": "Piletas",
+      "description": "Arenado y restauración de piletas y piscinas"
+    },
+    "vehiculo": {
+      "name": "Vehículos",
+      "description": "Arenado de autos, camiones y chasis"
+    },
+    "industrial": {
+      "name": "Industrial",
+      "description": "Proyectos industriales y comerciales"
+    },
+    "fachada": {
+      "name": "Fachadas",
+      "description": "Restauración de fachadas y paredes"
+    },
+    "barco": {
+      "name": "Barcos",
+      "description": "Arenado de embarcaciones"
+    },
+    "pieza": {
+      "name": "Piezas",
+      "description": "Arenado de piezas metálicas"
+    },
+    "mueble": {
+      "name": "Muebles",
+      "description": "Arenado y restauración de muebles de madera y metal"
+    }
+  },
+  "locations": {
+    "Pilar": {
+      "name": "Pilar",
+      "zone": "Zona Norte",
+      "priority": 1
+    },
+    "Zona Norte": {
+      "name": "Zona Norte",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Zona Oeste": {
+      "name": "Zona Oeste",
+      "zone": "Zona Oeste",
+      "priority": 3
+    },
+    "San Martín": {
+      "name": "San Martín",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "José C. Paz": {
+      "name": "José C. Paz",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "San Miguel": {
+      "name": "San Miguel",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Vicente López": {
+      "name": "Vicente López",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Tigre": {
+      "name": "Tigre",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Cardales": {
+      "name": "Cardales",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Ituzaingó": {
+      "name": "Ituzaingó",
+      "zone": "Zona Oeste",
+      "priority": 3
+    },
+    "Moreno": {
+      "name": "Moreno",
+      "zone": "Zona Oeste",
+      "priority": 3
+    },
+    "Morón": {
+      "name": "Morón",
+      "zone": "Zona Oeste",
+      "priority": 3
+    },
+    "General Rodríguez": {
+      "name": "General Rodríguez",
+      "zone": "Zona Oeste",
+      "priority": 3
+    },
+    "San Isidro": {
+      "name": "San Isidro",
+      "zone": "Zona Norte",
+      "priority": 2
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "services": [
+    {
+      "id": "arenado-piletas",
+      "title": "Arenado de piletas",
+      "description": "Limpieza profunda y preparación de superficies para pintura o revestimiento",
+      "href": "/servicios/arenado-de-piletas",
+      "imageSrc": "/images/servicios/arenado-pileta-pilar.png",
+      "imageAlt": "Arenado de piletas - Arenados Lucho",
+      "features": [
+        "Preparación para pintura epoxi",
+        "Eliminación de algas y moho",
+        "Servicio móvil a domicilio",
+        "Equipos de alta presión"
+      ],
+      "category": "residencial",
+      "popular": true
+    },
+    {
+      "id": "arenado-industrial",
+      "title": "Arenado industrial",
+      "description": "Limpieza y preparación de estructuras metálicas, maquinarias y obras industriales",
+      "href": "/servicios/arenado-industrial",
+      "imageSrc": "/images/servicios/arenado-industrial-pilar.png",
+      "imageAlt": "Arenado industrial - Arenados Lucho",
+      "features": [
+        "Estructuras metálicas grandes",
+        "Maquinaria industrial",
+        "Preparación para pintura",
+        "Servicio móvil a domicilio"
+      ],
+      "category": "industrial",
+      "popular": true
+    },
+    {
+      "id": "arenado-vehiculos",
+      "title": "Arenado de vehículos",
+      "description": "Remoción de pintura y óxido en autos, camiones y chasis",
+      "href": "/servicios/arenado-de-vehiculos",
+      "imageSrc": "/images/servicios/arenado-vehiculo-san-fernando.png",
+      "imageAlt": "Arenado de vehículos - Arenados Lucho",
+      "features": [
+        "Remoción de pintura",
+        "Eliminación de óxido",
+        "Preparación para pintura",
+        "Técnicas no abrasivas"
+      ],
+      "category": "automotriz",
+      "popular": true
+    },
+    {
+      "id": "arenado-barcos",
+      "title": "Arenado de barcos",
+      "description": "Despintado y tratamiento de cascos, cubiertas y estructuras navales",
+      "href": "/servicios/arenado-de-barcos",
+      "imageSrc": "/images/servicios/arenado-barco-tigre.png",
+      "imageAlt": "Arenado de barcos - Arenados Lucho",
+      "features": [
+        "Cascos y cubiertas",
+        "Estructuras navales",
+        "Técnicas controladas",
+        "Protección de materiales"
+      ],
+      "category": "naval",
+      "popular": false
+    },
+    {
+      "id": "arenado-piezas",
+      "title": "Arenado de piezas metálicas",
+      "description": "Servicio fino en cabina para piezas mecánicas, ornamentales o industriales",
+      "href": "/servicios/arenado-de-piezas-metalicas",
+      "imageSrc": "/images/servicios/arenado-pieza-metalica-san-isidro.png",
+      "imageAlt": "Arenado de piezas metálicas - Arenados Lucho",
+      "features": [
+        "Piezas mecánicas",
+        "Trabajo en taller",
+        "Terminación uniforme"
+      ],
+      "category": "industrial",
+      "popular": false
+    },
+    {
+      "id": "arenado-muebles",
+      "title": "Arenado de muebles de madera",
+      "description": "Restauración y despintado de muebles con acabado fino",
+      "href": "/servicios/arenado-de-muebles",
+      "imageSrc": "/images/servicios/arenado-mueble-madera-pilar.png",
+      "imageAlt": "Arenado de muebles de madera - Arenados Lucho",
+      "features": [
+        "Restauración de muebles",
+        "Despintado fino",
+        "Acabado profesional",
+        "Preservación de madera"
+      ],
+      "category": "residencial",
+      "popular": false
+    },
+    {
+      "id": "arenado-fachadas",
+      "title": "Arenado de fachadas particulares",
+      "description": "Restauración de fachadas de viviendas y edificios",
+      "href": "/servicios/arenado-de-fachadas",
+      "imageSrc": "/images/servicios/arenado-fachada-moreno.png",
+      "imageAlt": "Arenado de fachadas particulares - Arenados Lucho",
+      "features": [
+        "Fachadas residenciales",
+        "Fachadas comerciales",
+        "Eliminación de pintura",
+        "Limpieza profunda",
+        "Preparación para revestimiento"
+      ],
+      "category": "residencial",
+      "popular": true
+    }
+  ],
+  "categories": {
+    "residencial": {
+      "name": "Residencial",
+      "description": "Servicios para viviendas particulares",
+      "icon": "🏠"
+    },
+    "industrial": {
+      "name": "Industrial",
+      "description": "Servicios industriales y comerciales",
+      "icon": "🏭"
+    },
+    "automotriz": {
+      "name": "Automotriz",
+      "description": "Servicios para vehículos y transporte",
+      "icon": "🚗"
+    },
+    "naval": {
+      "name": "Naval",
+      "description": "Servicios para embarcaciones",
+      "icon": "🚢"
+    }
+  }
+}
