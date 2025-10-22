@@ -16,7 +16,7 @@ export interface Project {
 export interface Category {
   name: string
   description: string
-  services: string[]
+  services?: string[]
 }
 
 export interface Location {
