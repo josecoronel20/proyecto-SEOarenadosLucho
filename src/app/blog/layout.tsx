@@ -102,13 +102,13 @@ export default function BlogLayout({
             "author": {
               "@type": "Organization",
               "name": PROJECT.name,
-              "url": PROJECT.url
+              "url": "https://www.arenadoslucho.com.ar"
             },
             "inLanguage": "es-AR",
             "isPartOf": {
               "@type": "WebSite",
               "name": PROJECT.name,
-              "url": PROJECT.url
+              "url": "https://www.arenadoslucho.com.ar"
             }
           })
         }}
@@ -208,13 +208,13 @@ export default function BlogLayout({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": PROJECT.url
+                "item": "https://www.arenadoslucho.com.ar"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Blog",
-                "item": `${PROJECT.url}/blog`
+                "item": "https://www.arenadoslucho.com.ar/blog"
               }
             ]
           })
