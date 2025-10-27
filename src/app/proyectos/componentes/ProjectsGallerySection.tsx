@@ -19,7 +19,7 @@ export function ProjectsGallerySection() {
   const services = [
     { id: "todos", nameDesktop: "Todos los Servicios de Arenado en Pilar y Zona Norte",nameMobile: "Todos", icon: "🔧" },
     { id: "pileta", nameDesktop: "Arenado de Piletas en Pilar",nameMobile: "Piletas", icon: "🏊‍♂️" },
-    { id: "industrial", nameDesktop: "Arenado Industrial en Zona Norte",nameMobile: "Industrial", icon: "🏭" },
+    { id: "industrial", nameDesktop: "Arenado Industrial en Zona Norte",nameMobile: "Industri", icon: "🏭" },
     { id: "pieza", nameDesktop: "Arenado de Piezas en Pilar",nameMobile: "Piezas", icon: "⚙️" },
     { id: "mueble", nameDesktop: "Arenado de Muebles en Zona Norte",nameMobile: "Muebles", icon: "🪑" },
     { id: "barco", nameDesktop: "Arenado de Barcos en Buenos Aires",nameMobile: "Barcos", icon: "🚢" },
