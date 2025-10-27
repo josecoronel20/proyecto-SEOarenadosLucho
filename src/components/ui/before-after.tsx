@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 interface BeforeAfterProps {
@@ -84,11 +85,13 @@ export function BeforeAfter({
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={afterImage}
           alt={afterAlt}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
           draggable={false}
+          priority
         />
       </div>
 
@@ -97,11 +100,13 @@ export function BeforeAfter({
         className="absolute inset-0 overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
-        <img
+        <Image
           src={beforeImage}
           alt={beforeAlt}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
           draggable={false}
+          priority
         />
       </div>
 

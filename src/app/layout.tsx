@@ -213,6 +213,33 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            :root{--background:0 0% 100%;--foreground:0 0% 3.9%;--primary:203 58% 22%}
+            *{box-sizing:border-box}
+            body{margin:0;font-family:system-ui;background:hsl(var(--background))}
+            .container{width:100%;margin:0 auto;padding:0 1rem}
+            .hero-section{background:linear-gradient(135deg,#f0f9ff 0%,#ffffff 50%,#f8fafc 100%);padding:5rem 0}
+            .hero-title{font-size:2rem;font-weight:800;color:#1f2937;margin-bottom:1.5rem}
+            .btn-primary{background:#18415a;color:white;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;display:inline-flex;align-items:center}
+          `
+        }} />
+        <link 
+  rel="preload" 
+  href="/_next/static/css/app/globals.css" 
+  as="style" 
+/>
+<script dangerouslySetInnerHTML={{
+  __html: `
+    document.addEventListener('DOMContentLoaded', function() {
+      const link = document.querySelector('link[href="/_next/static/css/app/globals.css"]');
+      if (link) {
+        link.rel = 'stylesheet';
+      }
+    });
+  `
+}} />
+<noscript><link rel="stylesheet" href="/_next/static/css/app/globals.css" /></noscript>
       </head>
       <body className={inter.className}>
         <Header />
