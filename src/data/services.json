@@ -66,7 +66,7 @@
     },
     {
       "id": "arenado-piezas",
-      "title": "Arenado de piezas metálicas",
+      "title": "Arenado de piezas",
       "description": "Servicio fino en cabina para piezas mecánicas, ornamentales o industriales",
       "href": "/servicios/arenado-de-piezas-metalicas",
       "imageSrc": "/images/servicios/arenado-pieza-metalica-san-isidro.png",
@@ -81,7 +81,7 @@
     },
     {
       "id": "arenado-muebles",
-      "title": "Arenado de muebles de madera",
+      "title": "Arenado de muebles",
       "description": "Restauración y despintado de muebles con acabado fino",
       "href": "/servicios/arenado-de-muebles",
       "imageSrc": "/images/servicios/arenado-mueble-madera-pilar.png",
@@ -97,7 +97,7 @@
     },
     {
       "id": "arenado-fachadas",
-      "title": "Arenado de fachadas particulares",
+      "title": "Arenado de fachadas",
       "description": "Restauración de fachadas de viviendas y edificios",
       "href": "/servicios/arenado-de-fachadas",
       "imageSrc": "/images/servicios/arenado-fachada-moreno.png",

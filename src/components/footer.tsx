@@ -60,8 +60,8 @@ const quickLinks = [
 const contactInfo = [
   {
     icon: Phone,
-    text: "11-2791-2073",
-    href: "tel:+5491127912073"
+    text: "+54 9 11 2378-7750",
+    href: "tel:+5491123787750"
   },
   {
     icon: Mail,

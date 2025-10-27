@@ -13,9 +13,9 @@ export function CoverageSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold mb-4 block">SERVICIO DE ARENADO EN BUENOS AIRES</span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
             Zonas de Cobertura para Servicios de Arenado y Sandblasting
-          </h1>
+          </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Brindamos <strong>servicio profesional de arenado industrial y sandblasting</strong> en toda el área metropolitana de Buenos Aires. 
             Nuestro equipo móvil se desplaza hasta tu ubicación para garantizar resultados excepcionales.

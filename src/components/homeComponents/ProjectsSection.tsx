@@ -37,7 +37,7 @@ export function ProjectsSection() {
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/proyectos" className="flex items-center gap-2">
               <Eye className="h-5 w-5" />
-              Ver galería completa de proyectos de arenado
+              Ver más proyectos de arenado
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

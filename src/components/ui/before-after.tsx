@@ -22,19 +22,40 @@ export function BeforeAfter({
   const [isDragging, setIsDragging] = React.useState(false)
   const containerRef = React.useRef<HTMLDivElement>(null)
 
-  const handleMouseMove = React.useCallback(
-    (e: MouseEvent) => {
-      if (!isDragging || !containerRef.current) return
+  const updateSliderPosition = React.useCallback(
+    (clientX: number) => {
+      if (!containerRef.current) return
 
       const rect = containerRef.current.getBoundingClientRect()
-      const x = e.clientX - rect.left
+      const x = clientX - rect.left
       const percentage = (x / rect.width) * 100
       setSliderPosition(Math.max(0, Math.min(100, percentage)))
     },
-    [isDragging]
+    []
+  )
+
+  const handleMouseMove = React.useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging) return
+      updateSliderPosition(e.clientX)
+    },
+    [isDragging, updateSliderPosition]
   )
 
   const handleMouseUp = React.useCallback(() => {
+    setIsDragging(false)
+  }, [])
+
+  const handleTouchMove = React.useCallback(
+    (e: TouchEvent) => {
+      if (!isDragging) return
+      e.preventDefault()
+      updateSliderPosition(e.touches[0].clientX)
+    },
+    [isDragging, updateSliderPosition]
+  )
+
+  const handleTouchEnd = React.useCallback(() => {
     setIsDragging(false)
   }, [])
 
@@ -42,27 +63,24 @@ export function BeforeAfter({
     if (isDragging) {
       document.addEventListener("mousemove", handleMouseMove)
       document.addEventListener("mouseup", handleMouseUp)
+      document.addEventListener("touchmove", handleTouchMove, { passive: false })
+      document.addEventListener("touchend", handleTouchEnd)
       return () => {
         document.removeEventListener("mousemove", handleMouseMove)
         document.removeEventListener("mouseup", handleMouseUp)
+        document.removeEventListener("touchmove", handleTouchMove)
+        document.removeEventListener("touchend", handleTouchEnd)
       }
     }
-  }, [isDragging, handleMouseMove, handleMouseUp])
+  }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd])
 
   return (
     <div
       ref={containerRef}
       className={cn(
-        "relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg cursor-col-resize select-none",
+        "relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg select-none",
         className
       )}
-      onMouseDown={(e) => {
-        setIsDragging(true)
-        const rect = e.currentTarget.getBoundingClientRect()
-        const x = e.clientX - rect.left
-        const percentage = (x / rect.width) * 100
-        setSliderPosition(Math.max(0, Math.min(100, percentage)))
-      }}
     >
       {/* After Image (Background) */}
       <div className="absolute inset-0">
@@ -93,7 +111,17 @@ export function BeforeAfter({
         style={{ left: `${sliderPosition}%` }}
       >
         {/* Slider Handle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center">
+        <div 
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg border-2 border-gray-300 flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 transition-transform"
+          onMouseDown={(e) => {
+            e.preventDefault()
+            setIsDragging(true)
+          }}
+          onTouchStart={(e) => {
+            e.preventDefault()
+            setIsDragging(true)
+          }}
+        >
           <div className="flex space-x-0.5">
             <div className="w-0.5 h-3 bg-gray-400"></div>
             <div className="w-0.5 h-3 bg-gray-400"></div>

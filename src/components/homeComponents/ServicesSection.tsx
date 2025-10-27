@@ -111,7 +111,7 @@ export function ServicesSection() {
             asChild
           >
             <Link href="/servicios" className="flex items-center gap-2">
-              Ver todos los servicios de arenado profesional
+              Ver todos los servicios
               <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </Button>

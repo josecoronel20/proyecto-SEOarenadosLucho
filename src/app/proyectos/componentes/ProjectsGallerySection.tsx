@@ -17,20 +17,20 @@ export function ProjectsGallerySection() {
   
   // Servicios disponibles para filtrar
   const services = [
-    { id: "todos", name: "Todos los Servicios de Arenado en Pilar y Zona Norte", icon: "🔧" },
-    { id: "arenado-piletas", name: "Arenado de Piletas en Pilar", icon: "🏊‍♂️" },
-    { id: "arenado-industrial", name: "Arenado Industrial en Zona Norte", icon: "🏭" },
-    { id: "arenado-piezas", name: "Arenado de Piezas en Pilar", icon: "⚙️" },
-    { id: "arenado-muebles", name: "Arenado de Muebles en Zona Norte", icon: "🪑" },
-    { id: "arenado-barcos", name: "Arenado de Barcos en Buenos Aires", icon: "🚢" },
-    { id: "arenado-vehiculos", name: "Arenado de Vehículos en Pilar", icon: "🚗" },
-    { id: "arenado-fachadas", name: "Arenado de Fachadas en Zona Norte", icon: "🏠" }
+    { id: "todos", nameDesktop: "Todos los Servicios de Arenado en Pilar y Zona Norte",nameMobile: "Todos", icon: "🔧" },
+    { id: "pileta", nameDesktop: "Arenado de Piletas en Pilar",nameMobile: "Piletas", icon: "🏊‍♂️" },
+    { id: "industrial", nameDesktop: "Arenado Industrial en Zona Norte",nameMobile: "Industrial", icon: "🏭" },
+    { id: "pieza", nameDesktop: "Arenado de Piezas en Pilar",nameMobile: "Piezas", icon: "⚙️" },
+    { id: "mueble", nameDesktop: "Arenado de Muebles en Zona Norte",nameMobile: "Muebles", icon: "🪑" },
+    { id: "barco", nameDesktop: "Arenado de Barcos en Buenos Aires",nameMobile: "Barcos", icon: "🚢" },
+    { id: "vehiculo", nameDesktop: "Arenado de Vehículos en Pilar",nameMobile: "Vehículos", icon: "🚗" },
+    { id: "fachada", nameDesktop: "Arenado de Fachadas en Zona Norte",nameMobile: "Fachadas", icon: "🏠" }
   ]
   
   // Filtrar proyectos según el servicio seleccionado
   const filteredProjects = selectedService === "todos" 
     ? allProjects 
-    : allProjects.filter(project => project.service === selectedService)
+    : allProjects.filter(project => project.category === selectedService)
   
   // Mostrar los primeros 12 proyectos filtrados
   const featuredProjects = filteredProjects.slice(0, 12)
@@ -69,8 +69,8 @@ export function ProjectsGallerySection() {
                 aria-pressed={selectedService === service.id}
               >
                 <span className="text-lg" aria-hidden="true">{service.icon}</span>
-                <span className="hidden sm:inline">{service.name}</span>
-                <span className="sm:hidden">{service.name.split(' ')[0]}</span>
+                <span className="hidden sm:inline">{service.nameDesktop}</span>
+                <span className="sm:hidden">{service.nameMobile}</span>
               </Button>
             ))}
           </div>
@@ -79,7 +79,12 @@ export function ProjectsGallerySection() {
           <div className="text-center mt-4">
             <p className="text-sm text-muted-foreground" aria-live="polite">
               Mostrando {featuredProjects.length} de {filteredProjects.length} proyectos de arenado
-              {selectedService !== "todos" && ` en ${services.find(s => s.id === selectedService)?.name}`}
+              {selectedService !== "todos" && (
+                <>
+                  <span className="hidden sm:inline"> en {services.find(s => s.id === selectedService)?.nameDesktop}</span>
+                  <span className="sm:hidden"> en {services.find(s => s.id === selectedService)?.nameMobile}</span>
+                </>
+              )}
             </p>
           </div>
         </div>
@@ -99,14 +104,15 @@ export function ProjectsGallerySection() {
             ¿Te interesa realizar un proyecto de arenado? Tenemos más de 500 proyectos completados en Pilar y Zona Norte.
             {selectedService !== "todos" && (
               <span className="block mt-2 text-blue-600 font-medium">
-                Especialistas en {services.find(s => s.id === selectedService)?.name.toLowerCase()}
+                <span className="hidden sm:inline">Especialistas en {services.find(s => s.id === selectedService)?.nameDesktop.toLowerCase()}</span>
+                <span className="sm:hidden">Especialistas en {services.find(s => s.id === selectedService)?.nameMobile.toLowerCase()}</span>
                 en toda la zona norte.
               </span>
             )}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-              <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20${selectedService === "todos" ? "arenado" : services.find(s => s.id === selectedService)?.name.toLowerCase()}`}>
+              <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20${selectedService === "todos" ? "arenado" : services.find(s => s.id === selectedService)?.nameMobile.toLowerCase()}`}>
                 Consultar por WhatsApp
                 <MessageCircle className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>

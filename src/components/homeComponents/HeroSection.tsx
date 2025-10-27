@@ -147,7 +147,7 @@ export function HeroSection() {
                   className="mr-2 h-5 w-5 inline-block"
                   aria-hidden
                 />
-                Solicitar presupuesto por WhatsApp
+                presupuesto por WhatsApp
               </a>
             </Button>
 
@@ -162,7 +162,7 @@ export function HeroSection() {
                 aria-label="Solicitar presupuesto gratuito de arenado"
               >
                 <FileText className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                Solicitar presupuesto gratuito de arenado
+                presupuesto gratuito
               </Link>
             </Button>
           </div>
