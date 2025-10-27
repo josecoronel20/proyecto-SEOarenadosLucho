@@ -91,7 +91,9 @@ export function BeforeAfter({
           fill
           className="object-cover"
           draggable={false}
-          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={false}
+          quality={75}
         />
       </div>
 
@@ -106,7 +108,9 @@ export function BeforeAfter({
           fill
           className="object-cover"
           draggable={false}
-          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={false}
+          quality={75}
         />
       </div>
 

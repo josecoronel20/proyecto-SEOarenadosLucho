@@ -94,6 +94,8 @@ export function Footer() {
                 width={64} 
                 height={32}
                 className="h-8 w-16"
+                priority={false}
+                quality={75}
               />
               <span className={`text-3xl font-bold text-primary ${poppins.className}`}>Arenados Lucho</span>
             </div>
