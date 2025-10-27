@@ -4,6 +4,7 @@ import "./globals.css";
 import { PROJECT } from "@/config/project";
 import { Header } from "@/components/headerComponents/header";
 import { Footer } from "@/components/footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 
 export const metadata: Metadata = {
@@ -242,6 +243,7 @@ export default function RootLayout({
 <noscript><link rel="stylesheet" href="/_next/static/css/app/globals.css" /></noscript>
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Header />
         <main className="pt-16">{children}</main>
         <Footer />
