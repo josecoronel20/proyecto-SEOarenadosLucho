@@ -2,7 +2,7 @@
 
 import Script from 'next/script'
 
-const GA_TRACKING_ID = 'G-S1N9PL0G40'
+const GA_TRACKING_ID = 'AW-11151875862'
 
 export function GoogleAnalytics() {
   return (
@@ -16,10 +16,7 @@ export function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}', {
-            page_title: document.title,
-            page_location: window.location.href,
-          });
+          gtag('config', '${GA_TRACKING_ID}');
         `}
       </Script>
     </>

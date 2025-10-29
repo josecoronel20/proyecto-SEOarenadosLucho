@@ -13,6 +13,14 @@ const nextConfig = {
   // Webpack configuration
   webpack: (config, { isServer }) => {
     if (!isServer) {
+      // Asegurar que splitChunks y cacheGroups existan
+      if (!config.optimization.splitChunks) {
+        config.optimization.splitChunks = {};
+      }
+      if (!config.optimization.splitChunks.cacheGroups) {
+        config.optimization.splitChunks.cacheGroups = {};
+      }
+      
       // Combinar CSS en un solo archivo
       config.optimization.splitChunks.cacheGroups.styles = {
         name: 'styles',

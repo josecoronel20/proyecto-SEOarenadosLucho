@@ -56,29 +56,44 @@ export function FAQSection() {
   // Consolidated and optimized FAQs to avoid duplication and improve SEO/snippeting.
   const faqs = [
     {
-      question: "¿Cuál es el precio del arenado de una pileta?",
+      question: "¿Cuál es el precio del arenado de una pileta en Pilar?",
       answer:
-        "El precio depende de m² y de si se desea un posterior revestimiento o solo aplicación de pintura. Podemos dar una cotización preliminar por WhatsApp con medidas. La cotización final puede requerir visita técnica si es una pileta grande.",
+        "El precio del arenado de piletas en Pilar depende de los m² y si se desea un posterior revestimiento o solo aplicación de pintura. Ofrecemos los mejores precios de arenado de piletas en Zona Norte. Podemos dar una cotización preliminar por WhatsApp con medidas. La cotización final puede requerir visita técnica si es una pileta grande.",
     },
     {
-      question: "¿Ofrecen cotización por m² y por proyecto?",
+      question: "¿Ofrecen cotización por m² y por proyecto completo?",
       answer:
-        "Cotizamos por proyecto cuando es pequeño, para obras grandes se cotiza por m2 dependiendo del tamaño, complejidad, distancia, etc.",
+        "Sí, cotizamos por proyecto cuando es pequeño, para obras grandes se cotiza por m² dependiendo del tamaño, complejidad, distancia, etc. Siempre proporcionamos presupuestos detallados sin cargo en menos de 24 horas.",
     },
     {
-      question: "¿Realizan servicio móvil en Pilar y Zona Norte?",
+      question: "¿Realizan servicio móvil de arenado en Pilar y Zona Norte?",
       answer:
-        "Sí. Llevamos maquinaria para realizar el arenado en Zona Norte, Zona Oeste y Caba. Para piezas pequeñas ofrecemos taller con cabina cerrada.",
+        "Sí, llevamos maquinaria profesional para realizar el arenado en Zona Norte, Zona Oeste y CABA. Para piezas pequeñas ofrecemos taller con cabina cerrada en Pilar. Nuestro servicio móvil incluye todos los equipos necesarios.",
     },
     {
-      question: "¿Cómo se controla el polvo y residuos en obra?",
+      question: "¿Cómo se controla el polvo y residuos durante el arenado?",
       answer:
-        "Es responsabilidad del contratista despejar el área de personal ajeno y cubrir/proteger zonas sensibles al polvo, ya que su control total es muy difícil. Nosotros nos encargamos de remover los residuos del arenado.",
+        "Es responsabilidad del contratista despejar el área de personal ajeno y cubrir/proteger zonas sensibles al polvo. Nosotros nos encargamos de remover todos los residuos del arenado y dejamos el área limpia. Utilizamos equipos con supresión de polvo cuando es posible.",
     },
     {
-      question: "¿Cuánto tiempo lleva el trabajo?",
+      question: "¿Cuánto tiempo lleva el trabajo de arenado?",
       answer:
-        "Depende de muchos factores. Las piletas de casas particulares generalmente se terminan en el día. Para calcular un tiempo más preciso, se realiza una prueba inicial en el material para evaluar su estado.",
+        "Depende del tamaño y complejidad del proyecto. Las piletas de casas particulares generalmente se terminan en el día. Para calcular un tiempo más preciso, realizamos una prueba inicial en el material para evaluar su estado y dar una estimación exacta.",
+    },
+    {
+      question: "¿Qué tipos de superficies pueden arenar?",
+      answer:
+        "Arenamos una amplia variedad de superficies: piletas de hormigón, vehículos, estructuras metálicas, muebles de madera, fachadas de ladrillo, piezas industriales, cascos de barcos y más. Cada tipo requiere técnicas y materiales específicos.",
+    },
+    {
+      question: "¿El arenado daña la superficie original?",
+      answer:
+        "No, cuando se realiza correctamente por profesionales como nosotros, el arenado no daña la superficie. Utilizamos la presión y el abrasivo adecuados para cada material, garantizando una limpieza efectiva sin causar daños estructurales.",
+    },
+    {
+      question: "¿Ofrecen garantía en sus trabajos de arenado?",
+      answer:
+        "Sí, ofrecemos garantía completa en todos nuestros trabajos. La duración varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro trabajo y la satisfacción del cliente.",
     },
   ]
 

@@ -93,7 +93,7 @@ export function ServicesSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allServices.slice(0, 3).map((service) => (
+          {allServices.slice(0, 6).map((service) => (
             <ServiceCard
               key={service.id}
               title={service.title}
@@ -113,7 +113,7 @@ export function ServicesSection() {
             asChild
           >
             <Link href="/servicios" className="flex items-center gap-2">
-              Ver todos los servicios
+              Ver todos los servicios de arenado profesional
               <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </Button>

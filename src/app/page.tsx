@@ -2,8 +2,11 @@ import { Header } from "@/components/headerComponents/header"
 import { Footer } from "@/components/footer"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { HeroSection } from "@/components/homeComponents/HeroSection"
+import { WhatIsSandblastingSection } from "@/components/homeComponents/WhatIsSandblastingSection"
+import { BenefitsSection } from "@/components/homeComponents/BenefitsSection"
 import { ServicesSection } from "@/components/homeComponents/ServicesSection"
 import { ProjectsSection } from "@/components/homeComponents/ProjectsSection"
+import { ProcessSection } from "@/components/homeComponents/ProcessSection"
 import { QuoteFormSection } from "@/components/common/QuoteFormSection"
 import { CoverageSection } from "@/components/homeComponents/CoverageSection"
 import { FAQSection } from "@/components/homeComponents/FAQSection"
@@ -17,8 +20,11 @@ export default function HomePage() {
       <main className="min-h-screen">
         <h1 className="sr-only">Arenado y granallado profesional en Pilar y Zona Norte - Arenados Lucho</h1>
         <HeroSection />
+        <WhatIsSandblastingSection />
+        <BenefitsSection />
         <ServicesSection />
         <ProjectsSection />
+        <ProcessSection />
         <QuoteFormSection />
         <CoverageSection />
         <FAQSection />

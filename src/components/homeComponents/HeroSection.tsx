@@ -48,7 +48,7 @@ function slugify(s: string) {
 export function HeroSection() {
   const whatsappNumber = PROJECT.contact?.whatsapp?.replace(/\D/g, "") ?? "";
   const waText = encodeURIComponent(
-    `Solicitud de presupuesto Arenado - ${LOCALIDADES[0]} - (indicar m2)`
+    ``
   );
   const waHref = `https://wa.me/${whatsappNumber}?text=${waText}`;
 
@@ -84,16 +84,17 @@ export function HeroSection() {
       <div className={`container mx-auto px-4 relative z-10 ${poppins.className}`}>
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-6xl font-extrabold mb-6 text-gray-900 leading-tight">
-            Arenado y granallado en Pilar y Zona Norte
+            Arenado de Piletas, Vehículos e Industrial en Pilar
             <span className="block text-primary mt-2 text-xl md:text-2xl font-bold">
-              Servicio profesional móvil y en taller
+              Sandblasting profesional móvil y en taller
             </span>
           </h2>
 
           <p className="text-base md:text-lg text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Servicio profesional de <strong>arenado y granallado</strong> para eliminación de pintura, óxido, sarro y otros residuos
-            para dejar la superficie lista para pintura o revestimiento. Trabajo
-            controlado y eficiente con <strong>sandblasting profesional</strong>. Atención rápida en{" "}
+            Especialistas en <strong>arenado de piletas</strong>, <strong>vehículos</strong>, 
+            <strong>estructuras industriales</strong> y <strong>piezas metálicas</strong>. 
+            Eliminamos óxido, pintura, sarro y algas con <strong>sandblasting profesional</strong>. 
+            Servicio móvil en{" "}
             {LOCALIDADES.slice(0, 4).map((loc: {title: string, href: string}, i: number): React.ReactNode => (
               <span key={loc.title}>
                 {i > 0 && ", "}
@@ -147,7 +148,7 @@ export function HeroSection() {
                   className="mr-2 h-5 w-5 inline-block"
                   aria-hidden
                 />
-                presupuesto por WhatsApp
+                Solicitar presupuesto por WhatsApp
               </a>
             </Button>
 
@@ -162,7 +163,7 @@ export function HeroSection() {
                 aria-label="Solicitar presupuesto gratuito de arenado"
               >
                 <FileText className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                presupuesto gratuito
+                Solicitar presupuesto gratuito
               </Link>
             </Button>
           </div>
