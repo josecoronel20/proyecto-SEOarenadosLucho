@@ -1,6 +1,5 @@
 import { Header } from "@/components/headerComponents/header"
 import { Footer } from "@/components/footer"
-import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { HeroSection } from "@/components/homeComponents/HeroSection"
 import { WhatIsSandblastingSection } from "@/components/homeComponents/WhatIsSandblastingSection"
 import { BenefitsSection } from "@/components/homeComponents/BenefitsSection"
@@ -9,26 +8,42 @@ import { ProjectsSection } from "@/components/homeComponents/ProjectsSection"
 import { ProcessSection } from "@/components/homeComponents/ProcessSection"
 import { QuoteFormSection } from "@/components/common/QuoteFormSection"
 import { CoverageSection } from "@/components/homeComponents/CoverageSection"
-import { FAQSection } from "@/components/homeComponents/FAQSection"
+import dynamic from "next/dynamic"
+import { Suspense } from "react"
+const FAQSection = dynamic(() => import("@/components/homeComponents/FAQSection").then(m => m.FAQSection), { ssr: false })
 import { TrustSection } from "@/components/homeComponents/TrustSection"
 
 export default function HomePage() {
   return (
     <>
-      <Breadcrumbs segments={[]} />
-      
       <main className="min-h-screen">
         <h1 className="sr-only">Arenado y granallado profesional en Pilar y Zona Norte - Arenados Lucho</h1>
         <HeroSection />
-        <WhatIsSandblastingSection />
-        <BenefitsSection />
-        <ServicesSection />
-        <ProjectsSection />
-        <ProcessSection />
-        <QuoteFormSection />
-        <CoverageSection />
+        <Suspense>
+          <WhatIsSandblastingSection />
+        </Suspense>
+        <Suspense>
+          <BenefitsSection />
+        </Suspense>
+        <Suspense>
+          <ServicesSection />
+        </Suspense>
+        <Suspense>
+          <ProjectsSection />
+        </Suspense>
+        <Suspense>
+          <ProcessSection />
+        </Suspense>
+        <Suspense>
+          <QuoteFormSection />
+        </Suspense>
+        <Suspense>
+          <CoverageSection />
+        </Suspense>
         <FAQSection />
-        <TrustSection />
+        <Suspense>
+          <TrustSection />
+        </Suspense>
       </main>
     </>
   )

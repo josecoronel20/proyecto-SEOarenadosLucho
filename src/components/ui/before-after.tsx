@@ -22,18 +22,23 @@ export function BeforeAfter({
   const [sliderPosition, setSliderPosition] = React.useState(50)
   const [isDragging, setIsDragging] = React.useState(false)
   const containerRef = React.useRef<HTMLDivElement>(null)
+  const containerMetricsRef = React.useRef<{ left: number; width: number } | null>(null)
+  const pendingClientXRef = React.useRef<number | null>(null)
+  const rafIdRef = React.useRef<number | null>(null)
 
-  const updateSliderPosition = React.useCallback(
-    (clientX: number) => {
-      if (!containerRef.current) return
-
-      const rect = containerRef.current.getBoundingClientRect()
-      const x = clientX - rect.left
-      const percentage = (x / rect.width) * 100
+  const updateSliderPosition = React.useCallback((clientX: number) => {
+    pendingClientXRef.current = clientX
+    if (rafIdRef.current != null) return
+    rafIdRef.current = window.requestAnimationFrame(() => {
+      rafIdRef.current = null
+      if (!containerMetricsRef.current || pendingClientXRef.current == null) return
+      const { left, width } = containerMetricsRef.current
+      const x = pendingClientXRef.current - left
+      const percentage = (x / width) * 100
       setSliderPosition(Math.max(0, Math.min(100, percentage)))
-    },
-    []
-  )
+      pendingClientXRef.current = null
+    })
+  }, [])
 
   const handleMouseMove = React.useCallback(
     (e: MouseEvent) => {
@@ -62,6 +67,11 @@ export function BeforeAfter({
 
   React.useEffect(() => {
     if (isDragging) {
+      // Cachear métricas al inicio del drag para evitar lecturas repetidas
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect()
+        containerMetricsRef.current = { left: rect.left, width: rect.width }
+      }
       document.addEventListener("mousemove", handleMouseMove)
       document.addEventListener("mouseup", handleMouseUp)
       document.addEventListener("touchmove", handleTouchMove, { passive: false })
@@ -71,9 +81,26 @@ export function BeforeAfter({
         document.removeEventListener("mouseup", handleMouseUp)
         document.removeEventListener("touchmove", handleTouchMove)
         document.removeEventListener("touchend", handleTouchEnd)
+        if (rafIdRef.current != null) {
+          cancelAnimationFrame(rafIdRef.current)
+          rafIdRef.current = null
+        }
+        pendingClientXRef.current = null
       }
     }
   }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd])
+
+  // Actualizar métricas si el contenedor cambia de tamaño (responsive)
+  React.useEffect(() => {
+    if (!containerRef.current) return
+    const el = containerRef.current
+    const ro = new ResizeObserver(() => {
+      const rect = el.getBoundingClientRect()
+      containerMetricsRef.current = { left: rect.left, width: rect.width }
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   return (
     <div

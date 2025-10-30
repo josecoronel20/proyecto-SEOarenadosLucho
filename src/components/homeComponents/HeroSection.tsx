@@ -1,11 +1,9 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { MessageCircle, FileText, Clock, MapPin, Award } from "lucide-react";
+import { Clock, MapPin, Award } from "lucide-react";
 import { PROJECT } from "@/config/project";
 import { poppins } from "@/lib/fonts";
+import { ClientCTA } from "./ClientCTA";
 const LOCALIDADES = [
   {title: "Pilar", href: "/zona-de-cobertura/zona-norte/pilar"},
   {title: "José C. Paz", href: "/zona-de-cobertura/zona-norte/jose-c-paz"},
@@ -51,21 +49,6 @@ export function HeroSection() {
     ``
   );
   const waHref = `https://wa.me/${whatsappNumber}?text=${waText}`;
-
-  function openWhatsAppAnalytics() {
-    if (typeof window === "undefined") return;
-    try {
-      // gtag event if configured
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      window.gtag?.("event", "click_whatsapp", {
-        service: "arenado",
-        location: LOCALIDADES[0],
-      });
-    } catch (e) {
-      /* noop */
-    }
-  }
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-20">
@@ -130,43 +113,7 @@ export function HeroSection() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 px-4 sm:px-0">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white shadow-lg"
-              asChild
-            >
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Solicitar presupuesto por WhatsApp - Arenados Lucho"
-                onClick={openWhatsAppAnalytics}
-                data-analytics="cta_whatsapp"
-              >
-                <MessageCircle
-                  className="mr-2 h-5 w-5 inline-block"
-                  aria-hidden
-                />
-                Solicitar presupuesto por WhatsApp
-              </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              asChild
-            >
-              <Link
-                href="/presupuesto-rapido"
-                aria-label="Solicitar presupuesto gratuito de arenado"
-              >
-                <FileText className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                Solicitar presupuesto gratuito
-              </Link>
-            </Button>
-          </div>
+          <ClientCTA waHref={waHref} />
 
           <p className="text-sm text-gray-500 flex gap-2 justify-center">
             <Clock className="h-4 w-4" aria-hidden />

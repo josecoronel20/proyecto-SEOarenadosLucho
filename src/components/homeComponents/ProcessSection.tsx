@@ -99,7 +99,7 @@ export function ProcessSection() {
                   <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center mr-4`}>
                     <step.icon className="h-8 w-8 text-white" />
                   </div>
-                  <div className="text-4xl font-bold text-gray-300">
+                  <div className="text-4xl font-bold text-gray-400">
                     {step.number}
                   </div>
                 </div>

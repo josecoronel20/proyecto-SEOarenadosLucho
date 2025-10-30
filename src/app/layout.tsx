@@ -225,22 +225,8 @@ export default function RootLayout({
             .btn-primary{background:#18415a;color:white;padding:0.75rem 1.5rem;border-radius:0.5rem;text-decoration:none;display:inline-flex;align-items:center}
           `
         }} />
-        <link 
-  rel="preload" 
-  href="/_next/static/css/app/globals.css" 
-  as="style" 
-/>
-<script dangerouslySetInnerHTML={{
-  __html: `
-    document.addEventListener('DOMContentLoaded', function() {
-      const link = document.querySelector('link[href="/_next/static/css/app/globals.css"]');
-      if (link) {
-        link.rel = 'stylesheet';
-      }
-    });
-  `
-}} />
-<noscript><link rel="stylesheet" href="/_next/static/css/app/globals.css" /></noscript>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />

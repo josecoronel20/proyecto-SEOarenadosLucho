@@ -102,7 +102,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Servicios profesionales de arenado con más de 10 años de experiencia. 
               Calidad garantizada en cada proyecto.{" "}
-              <Link href="/preguntas-frecuentes" className="text-primary hover:underline">
+              <Link href="/preguntas-frecuentes" className="text-primary underline underline-offset-2 decoration-2 font-semibold">
                 Conoce más sobre nuestros servicios
               </Link>.
             </p>
