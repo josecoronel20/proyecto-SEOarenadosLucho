@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { ArrowRight, HelpCircle, Phone, Mail, MessageCircle } from "lucide-react"
 import type { Metadata } from "next"
 import { generateFAQSchema } from "@/lib/schema"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export const metadata: Metadata = {
   title: "FAQ Arenado | Preguntas Frecuentes - Arenados Lucho Pilar",
@@ -368,11 +369,13 @@ export default function PreguntasFrecuentesPage() {
                 <CardDescription>
                   +54 9 11 2378-7750
                 </CardDescription>
-                <Button variant="outline" className="mt-4 bg-green-600 hover:bg-green-700 text-white border-green-600" asChild>
-                  <Link href="https://wa.me/5491123787750" target="_blank">
-                    Enviar WhatsApp
-                  </Link>
-                </Button>
+                <WhatsAppButton
+                  href="https://wa.me/5491123787750"
+                  label="Enviar WhatsApp"
+                  className="mt-4 bg-green-600 hover:bg-green-700 text-white border-green-600"
+                  variant="outline"
+                  size="lg"
+                />
               </CardContent>
             </Card>
             <Card className="text-center">

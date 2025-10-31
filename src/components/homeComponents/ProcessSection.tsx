@@ -1,6 +1,7 @@
 import { MessageCircle, Eye, Wrench, CheckCircle, Clock, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ProcessSection() {
   const steps = [
@@ -162,17 +163,13 @@ export function ProcessSection() {
               </Link>
             </Button>
             
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white" asChild>
-              <a 
-                href={`https://wa.me/5491123787750?text=Hola,%20necesito%20información%20sobre%20arenado%20y%20sandblasting`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Phone className="h-5 w-5" />
-                Consultar por WhatsApp
-              </a>
-            </Button>
+            <WhatsAppButton
+              href={`https://wa.me/5491123787750?text=Hola,%20necesito%20información%20sobre%20arenado%20y%20sandblasting`}
+              label="Consultar por WhatsApp"
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+              variant="outline"
+              size="lg"
+            />
           </div>
         </div>
       </div>

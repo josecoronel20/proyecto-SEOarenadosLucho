@@ -9,6 +9,7 @@ import { ArrowRight, Calendar, User, Tag, Clock, ArrowLeft, Share2, BookOpen } f
 import type { Metadata } from "next"
 import { getPostBySlug, getRelatedPosts, getRecentPosts, getAllPosts } from "@/data/blog"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 interface BlogPostPageProps {
   params: {
@@ -527,6 +528,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
+
+              <WhatsAppButton
+                href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
+                label="WhatsApp"
+                className="bg-green-600 hover:bg-green-700"
+                variant="default"
+                size="lg"
+              />
               <Button size="lg" variant="outline" className="text-lg border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 shadow-lg" asChild>
                 <Link href="/servicios">
                   Ver Todos los Servicios

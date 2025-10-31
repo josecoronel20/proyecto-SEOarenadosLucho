@@ -1,4 +1,5 @@
 import { CheckCircle, Shield, Zap, Wrench } from "lucide-react";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
 export function WhatIsSandblastingSection() {
   return (
@@ -179,29 +180,19 @@ export function WhatIsSandblastingSection() {
             <div className="relative h-[400px] lg:h-[500px]">
               <video
                 className="w-full h-full object-cover rounded-lg"
-                poster="/images/que-es-el-arenado.webp"
+                poster="/images/portada-hero-arenados-lucho.webp"
                 preload="metadata"
                 playsInline
                 muted
                 loop
+                autoPlay
                 aria-label="Video demostrativo del proceso de arenado de piletas en Pilar - Sandblasting profesional"
               >
-                <source
-                  src="/videos/arenado-pileta-pilar-video.MOV"
-                  type="video/quicktime"
-                />
-                <source 
-                  src="/videos/arenado-pileta-pilar-video.mp4"
-                  type="video/mp4"
-                />
-                <source
-                  src="/videos/arenado-pileta-pilar-video.webm"
-                  type="video/webm"
-                />
+                <source src="/videos/arenado-pileta-pilar-video.mp4" type="video/mp4" />
                 <p className="text-center text-gray-500 p-4">
                   Tu navegador no soporta la reproducción de video.
                   <a
-                    href="/videos/arenado-pileta-pilar-video.MOV"
+                    href="/videos/arenado-pileta-pilar-video.mp4"
                     className="text-primary hover:underline ml-1"
                   >
                     Descargar video
@@ -295,12 +286,13 @@ export function WhatIsSandblastingSection() {
               <strong>preparación de superficies</strong> en Pilar y Zona Norte
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <WhatsAppButton
                 href="https://wa.me/5491123787750?text=Hola,%20necesito%20información%20sobre%20arenado%20y%20sandblasting"
-                className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Consultar por WhatsApp
-              </a>
+                label="Consultar por WhatsApp"
+                className="bg-white text-primary hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold"
+                variant="default"
+                size="lg"
+              />
               <a
                 href="/presupuesto-rapido"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"

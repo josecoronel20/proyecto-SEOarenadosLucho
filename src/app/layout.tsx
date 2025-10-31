@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}`,
   authors: [{ name: PROJECT.name }],
   icons: {
-    icon: '/images/favicon.png',
-    shortcut: '/images/favicon.png',
-    apple: '/images/favicon.png',
+    icon: '/images/favicon.PNG',
+    shortcut: '/images/favicon.PNG',
+    apple: '/images/favicon.PNG',
   },
   openGraph: {
     title: `Arenados Lucho | Arenado Pilar y Zona Norte - Sandblasting Profesional`,
@@ -227,6 +227,24 @@ export default function RootLayout({
         }} />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        <script id="ga-conversion-fn" dangerouslySetInnerHTML={{ __html: `
+          window.gtag_report_conversion = function(url) {
+            try {
+              var callback = function () {
+                if (typeof(url) !== 'undefined') {
+                  window.location = url;
+                }
+              };
+              window.gtag && window.gtag('event', 'conversion', {
+                send_to: 'AW-11151875862/_Vc5CP7J7bYbEJa-0MUp',
+                event_callback: callback
+              });
+              return false;
+            } catch (e) {
+              return true;
+            }
+          }
+        `}} />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />

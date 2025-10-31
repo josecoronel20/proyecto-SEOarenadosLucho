@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, FileText, Clock, MapPin } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ContactCTA() {
   return (
@@ -29,20 +30,13 @@ export function ContactCTA() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center mb-8">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-xl transition-all duration-300 text-lg py-6" 
-              asChild
-            >
-              <Link 
-                href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\D/g, '')}?text=Quiero%20presupuesto%20de%20arenado%20-%20[servicio]%20-%20[localidad]`}
-                aria-label="Pedir presupuesto por WhatsApp"
-                className="flex items-center"
-              >
-                <MessageCircle className=" h-6 w-6" />
-                Solicitar presupuesto por WhatsApp
-              </Link>
-            </Button>
+            <WhatsAppButton
+              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\D/g, '')}?text=Quiero%20presupuesto%20de%20arenado%20-%20[servicio]%20-%20[localidad]`}
+              label="Solicitar presupuesto por WhatsApp"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-xl transition-all duration-300 text-lg py-6"
+              variant="default"
+              size="lg"
+            />
             <Button 
               size="lg" 
               variant="outline" 

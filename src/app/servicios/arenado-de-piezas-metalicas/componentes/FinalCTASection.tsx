@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MessageCircle, Clock, CheckCircle } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FinalCTASection() {
   const benefits = [
@@ -79,12 +80,13 @@ export function FinalCTASection() {
                 <p className="text-sm opacity-90 mb-4">
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envianos fotos de tus piezas metálicas para recibir una cotización detallada al instante. Incluye asesoramiento técnico especializado sin cargo.
                 </p>
-                <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white" asChild>
-                  <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial%20de%20piezas%20metalicas%20en%20Zona%20Norte">
-                    Solicitar Precio de Arenado Industrial
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                <WhatsAppButton
+                  href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial%20de%20piezas%20metalicas%20en%20Zona%20Norte"
+                  label="Solicitar Precio de Arenado Industrial"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  variant="default"
+                  size="lg"
+                />
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

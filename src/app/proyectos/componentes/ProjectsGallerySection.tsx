@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/ui/project-card"
 import { Filter, MessageCircle, ArrowRight } from "lucide-react"
 import { getAllProjects } from "@/data/projects"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ProjectsGallerySection() {
   // Obtener todos los proyectos del JSON
@@ -111,12 +112,13 @@ export function ProjectsGallerySection() {
             )}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-              <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20${selectedService === "todos" ? "arenado" : services.find(s => s.id === selectedService)?.nameMobile.toLowerCase()}`}>
-                Consultar por WhatsApp
-                <MessageCircle className="ml-2 h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
+            <WhatsAppButton
+              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20${selectedService === "todos" ? "arenado" : services.find(s => s.id === selectedService)?.nameMobile.toLowerCase()}`}
+              label="Consultar por WhatsApp"
+              className="bg-green-600 hover:bg-green-700 text-white"
+              variant="default"
+              size="lg"
+            />
             <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
               <Link href="/presupuesto-rapido">
                 Cotizar Online

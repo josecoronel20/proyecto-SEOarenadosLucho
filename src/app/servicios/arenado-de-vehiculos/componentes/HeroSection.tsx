@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { ProjectCard } from "@/components/ui/project-card"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function HeroSection() {
   return (
@@ -19,12 +20,13 @@ export function HeroSection() {
               y restauración de autos, camionetas, camiones y todo tipo de vehículos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-                <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20vehiculo" aria-label="Solicitar presupuesto por WhatsApp">
-                  Solicitar Presupuesto Gratuito
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <WhatsAppButton
+                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20vehiculo"
+                label="Solicitar Presupuesto Gratuito"
+                className="bg-green-600 hover:bg-green-700 text-white"
+                variant="default"
+                size="lg"
+              />
               <Button size="lg" variant="outline" asChild>
                 <Link href="/presupuesto-rapido" aria-label="Cotizar servicio de arenado online">
                   Cotización Online Inmediata

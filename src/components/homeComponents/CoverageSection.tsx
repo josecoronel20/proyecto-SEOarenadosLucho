@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, MapPin, Clock, CheckCircle2 } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 import { PROJECT, getZonaNorteAreas, getZonaOesteAreas, getCABAAreas } from "@/config/project"
 
 export function CoverageSection() {
@@ -103,12 +104,13 @@ export function CoverageSection() {
           <p className="text-xl text-gray-700 mb-6">
             ¿No encontrás tu localidad en la lista? Consultanos
           </p>
-          <Button variant="outline" size="lg" className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold text-lg px-8" asChild>
-            <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\D/g, '')}`} aria-label="Consultar cobertura de servicio de arenado por WhatsApp">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Consultar por WhatsApp
-            </Link>
-          </Button>
+          <WhatsAppButton
+            href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\D/g, '')}`}
+            label="Consultar por WhatsApp"
+            className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold text-lg px-8"
+            variant="outline"
+            size="lg"
+          />
         </div>
       </div>
     </section>

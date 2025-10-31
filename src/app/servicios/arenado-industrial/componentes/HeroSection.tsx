@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { ProjectCard } from "@/components/ui/project-card"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function HeroSection() {
   return (
@@ -36,17 +37,13 @@ export function HeroSection() {
             >
               <meta itemProp="priceSpecification" content="Presupuesto personalizado" />
               <meta itemProp="availability" content="https://schema.org/InStock" />
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-                <Link 
-                  href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial" 
-                  aria-label="Solicitar presupuesto gratuito de arenado industrial por WhatsApp"
-                  rel="noopener noreferrer"
-                  itemProp="url"
-                >
-                  Solicitar Presupuesto Gratuito
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <WhatsAppButton
+                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial"
+                label="Solicitar Presupuesto Gratuito"
+                className="bg-green-600 hover:bg-green-700 text-white"
+                variant="default"
+                size="lg"
+              />
               <Button size="lg" variant="outline" asChild>
                 <Link 
                   href="/presupuesto-rapido" 

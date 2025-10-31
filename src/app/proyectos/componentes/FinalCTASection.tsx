@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FinalCTASection() {
   return (
@@ -15,12 +16,13 @@ export function FinalCTASection() {
           contactanos hoy mismo para tu proyecto de arenado en Pilar, San Isidro, Tigre y todo Zona Norte.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-            <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20arenado%20en%20Pilar`}>
-              Pedir Presupuesto de Arenado en Pilar
-              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-            </Link>
-          </Button>
+          <WhatsAppButton
+            href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20arenado%20en%20Pilar`}
+            label="Pedir Presupuesto de Arenado en Pilar"
+            className="bg-green-600 hover:bg-green-700 text-white"
+            variant="default"
+            size="lg"
+          />
           <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
             <Link href="/presupuesto-rapido">
               Cotizar Arenado Online

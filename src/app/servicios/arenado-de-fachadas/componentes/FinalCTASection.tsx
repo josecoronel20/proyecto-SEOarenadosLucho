@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Clock, CheckCircle } from "lucide-react";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 
 export function FinalCTASection() {
   const benefits = [

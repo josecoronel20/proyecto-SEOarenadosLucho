@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -10,11 +10,31 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MessageCircle, ArrowRight, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function QuoteFormSection() {
   // Replace YOUR_FORM_ID with your actual Formspree form ID
   const [state, handleSubmit] = useForm("xrgnqbod")
   
+  // Fire conversion when succeeded
+  useEffect(() => {
+    if (state.succeeded) {
+      try {
+        // Prefer global helper if present
+        // @ts-ignore
+        if (typeof window.gtag_report_conversion === 'function') {
+          // Do not redirect anywhere, just fire event
+          // @ts-ignore
+          window.gtag_report_conversion();
+        } else if (window.gtag) {
+          // Fallback direct event
+          // @ts-ignore
+          window.gtag('event', 'conversion', { send_to: 'AW-11151875862/_Vc5CP7J7bYbEJa-0MUp' });
+        }
+      } catch {}
+    }
+  }, [state.succeeded])
+
   // Show success message when form is submitted successfully
   if (state.succeeded) {
     return (
@@ -206,17 +226,13 @@ export function QuoteFormSection() {
           
           <div className="text-center mt-6">
             <p className="text-gray-500 mb-4">O</p>
-            <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white min-h-[48px] text-base font-semibold" asChild>
-              <Link 
-                href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Cotizar por WhatsApp"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Cotizar por WhatsApp
-              </Link>
-            </Button>
+            <WhatsAppButton
+              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
+              label="Cotizar por WhatsApp"
+              className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white min-h-[48px] text-base font-semibold"
+              variant="outline"
+              size="lg"
+            />
             <p className="text-sm text-gray-500 mt-4">
               Respondemos en 24 horas hábiles.
             </p>

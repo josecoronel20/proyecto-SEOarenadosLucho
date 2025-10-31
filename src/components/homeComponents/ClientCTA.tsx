@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, FileText } from "lucide-react";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import * as React from "react";
 
 export function ClientCTA({ waHref }: { waHref: string }) {
@@ -18,19 +19,7 @@ export function ClientCTA({ waHref }: { waHref: string }) {
 
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 px-4 sm:px-0">
-      <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
-        <a
-          href={waHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Solicitar presupuesto por WhatsApp - Arenados Lucho"
-          onClick={onClickWhatsapp}
-          data-analytics="cta_whatsapp"
-        >
-          <MessageCircle className="mr-2 h-5 w-5 inline-block" aria-hidden />
-          Solicitar presupuesto por WhatsApp
-        </a>
-      </Button>
+      <WhatsAppButton href={waHref} label="Solicitar presupuesto por WhatsApp" className="bg-primary hover:bg-primary/90 text-white shadow-lg" variant="default" />
 
       <Button
         size="lg"

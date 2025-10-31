@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Anchor, Waves, Ship } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export default function TigrePage() {
   const tigreServices = [
@@ -274,12 +275,13 @@ export default function TigrePage() {
                     Presupuesto especializado sin compromiso.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-green-600 hover:bg-green-700" asChild>
-                      <Link href="https://wa.me/5491123787750" target="_blank">
-                        <Phone className="mr-2 h-4 w-4" />
-                        WhatsApp Naval
-                      </Link>
-                    </Button>
+                    <WhatsAppButton
+                      href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
+                      label="WhatsApp"
+                      className="bg-green-600 hover:bg-green-700"
+                      variant="default"
+                      size="lg"
+                    />
                     <Button variant="outline" asChild>
                       <Link href="/presupuesto-rapido">
                         Presupuesto Especializado

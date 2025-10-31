@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, ArrowRight } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ContactCTASection() {
   return (
@@ -19,12 +20,13 @@ export function ContactCTASection() {
                   Como nuestra localidad principal, te garantizamos la mejor atención y respuesta inmediata para todos los servicios de arenado.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="bg-green-600 hover:bg-green-700" asChild>
-                    <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`} target="_blank" aria-label="Contactar por WhatsApp para servicio en Pilar">
-                      <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                      WhatsApp
-                    </Link>
-                  </Button>
+                  <WhatsAppButton
+                    href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
+                    label="WhatsApp"
+                    className="bg-green-600 hover:bg-green-700"
+                    variant="default"
+                    size="lg"
+                  />
                   <Button variant="outline" asChild>
                     <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto para arenado en Pilar">
                       Solicitar Presupuesto
