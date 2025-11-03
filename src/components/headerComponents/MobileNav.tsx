@@ -19,6 +19,10 @@ export function MobileNav({
 }: MobileNavProps) {
   const navItems = [
     {
+      title: "Superficies que Arenamos",
+      href: "/superficies-que-arenamos",
+    },
+    {
       title: "Proyectos",
       href: "/proyectos",
     },

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MapPin, Clock, Phone, ArrowRight, ArrowLeft, Star } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function HeroSection() {
   return (
@@ -33,6 +34,7 @@ export function HeroSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <WhatsAppButton />
             <Button asChild>
               <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto para arenado en Pilar">
                 Solicitar Presupuesto

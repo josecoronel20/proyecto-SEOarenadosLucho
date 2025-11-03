@@ -52,6 +52,10 @@ export function DesktopNav() {
 
   const navItems = [
     {
+      title: "Superficies que Arenamos",
+      href: "/superficies-que-arenamos"
+    },
+    {
       title: "Proyectos",
       href: "/proyectos"
     },

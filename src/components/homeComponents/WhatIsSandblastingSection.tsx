@@ -287,10 +287,7 @@ export function WhatIsSandblastingSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton
-                label="Consultar por WhatsApp"
-                className="bg-white text-primary hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold"
-                variant="default"
-                size="lg"
+                
               />
               <a
                 href="/presupuesto-rapido"

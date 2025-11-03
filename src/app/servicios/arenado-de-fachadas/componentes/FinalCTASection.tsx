@@ -96,9 +96,7 @@ export function FinalCTASection() {
                   Enviá fotos de tu fachada y recibí una cotización detallada al
                   instante. Incluye asesoramiento técnico sin cargo.
                 </p>
-                <WhatsAppButton
-                 
-                />
+                <WhatsAppButton />
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

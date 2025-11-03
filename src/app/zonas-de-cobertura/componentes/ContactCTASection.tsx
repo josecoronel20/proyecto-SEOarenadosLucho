@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail } from "lucide-react"
+import { Mail } from "lucide-react"
 import { PROJECT } from "@/config/project"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
@@ -22,10 +22,7 @@ export function ContactCTASection() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <WhatsAppButton
-                    label="WhatsApp"
-                    className="bg-green-600 hover:bg-green-700"
-                    variant="default"
-                    size="default"
+                    
                   />
                   <Button variant="outline" asChild>
                     <Link href={`mailto:${PROJECT.contact.email}?subject=Consulta de Cobertura - Arenado`}>
@@ -33,12 +30,7 @@ export function ContactCTASection() {
                       Email
                     </Link>
                   </Button>
-                  <Button variant="outline" asChild>
-                    <Link href={`tel:${PROJECT.contact.phone.replace(/\s+/g, '')}`}>
-                      <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Llamar
-                    </Link>
-                  </Button>
+                  <WhatsAppButton />
                 </div>
               </CardContent>
             </Card>

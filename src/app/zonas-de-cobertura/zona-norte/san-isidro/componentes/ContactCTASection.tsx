@@ -22,10 +22,7 @@ export function ContactCTASection() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <WhatsAppButton
-                    href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
-                    label="WhatsApp Premium"
-                    className="bg-green-600 hover:bg-green-700"
-                    variant="default"
+                    
                   />
                   <Button variant="outline" asChild>
                     <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto personalizado para arenado en San Isidro">

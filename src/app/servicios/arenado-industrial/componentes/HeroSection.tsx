@@ -38,10 +38,7 @@ export function HeroSection() {
               <meta itemProp="priceSpecification" content="Presupuesto personalizado" />
               <meta itemProp="availability" content="https://schema.org/InStock" />
               <WhatsAppButton
-                label="Solicitar Presupuesto Gratuito"
-                className="bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
+               
               />
               <Button size="lg" variant="outline" asChild>
                 <Link 

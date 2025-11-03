@@ -80,9 +80,7 @@ export function FinalCTASection() {
                 <p className="text-sm opacity-90 mb-4">
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envianos fotos de tus piezas metálicas para recibir una cotización detallada al instante. Incluye asesoramiento técnico especializado sin cargo.
                 </p>
-                <WhatsAppButton
-                  
-                />
+                <WhatsAppButton />
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

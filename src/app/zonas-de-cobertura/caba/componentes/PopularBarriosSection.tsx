@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function PopularBarriosSection() {
   const popularBarrios = ["Palermo", "Recoleta", "Belgrano", "Villa Crespo", "Caballito", "Almagro"]
@@ -47,6 +48,7 @@ export function PopularBarriosSection() {
                     {barrioDescriptions[barrio as keyof typeof barrioDescriptions]}
                   </p>
                   <div className="space-y-2">
+                    <WhatsAppButton />
                     <Button asChild className="w-full">
                       <Link href={`/servicios?zona=${encodeURIComponent(barrio)}`} aria-label={`Ver servicios de arenado en ${barrio}`}>
                         Ver Servicios en {barrio}

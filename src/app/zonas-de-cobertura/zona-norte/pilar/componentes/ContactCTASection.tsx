@@ -29,12 +29,7 @@ export function ContactCTASection() {
                       <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </Link>
                   </Button>
-                  <Button variant="outline" asChild>
-                    <Link href={`tel:${PROJECT.contact.phone.replace(/\s+/g, '')}`} aria-label="Llamar para servicio en Pilar">
-                      <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Llamar
-                    </Link>
-                  </Button>
+                  
                 </div>
               </CardContent>
             </Card>

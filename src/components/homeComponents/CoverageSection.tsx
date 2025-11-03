@@ -105,10 +105,7 @@ export function CoverageSection() {
             ¿No encontrás tu localidad en la lista? Consultanos
           </p>
           <WhatsAppButton
-            label="Consultar por WhatsApp"
-            className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold text-lg px-8"
-            variant="outline"
-            size="lg"
+           
           />
         </div>
       </div>
