@@ -32,11 +32,7 @@ export function FinalCTASection() {
                 Atención personalizada para Tigre, San Fernando y Zona Norte. Envianos fotos de tu embarcación y recibí un presupuesto detallado al instante. Asesoramiento técnico gratuito.
               </p>
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20barco%20en%20Zona%20Norte"
-                label="Solicitar Presupuesto Gratuito"
-                className="w-full bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
+             
               />
             </div>
 

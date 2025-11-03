@@ -3,8 +3,8 @@
 import React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MessageCircle, FileText, Clock, MapPin, Award, Shield } from "lucide-react"
-import { PROJECT } from "@/config/project"
+import {  FileText, Clock, MapPin, Award, Shield } from "lucide-react"
+import { WhatsAppButton } from "../common/WhatsAppButton"
 
 const LOCALIDADES = [
   "Pilar",
@@ -28,27 +28,6 @@ function slugify(s: string) {
 }
 
 export function ServiciosHeroSection() {
-  const rawWhatsapp = PROJECT.contact?.whatsapp ?? ""
-  const whatsappNumber = rawWhatsapp.replace(/\D/g, "")
-  const waText = encodeURIComponent(
-    "Hola! Necesito presupuesto para arenado en Buenos Aires. Indico local y m2."
-  )
-  const waHref = `https://wa.me/${whatsappNumber}?text=${waText}`
-
-  const handleWhatsAppClick = () => {
-    if (typeof window === "undefined") return
-    try {
-      // analytics event (gtag or dataLayer)
-      // @ts-ignore
-      window.gtag?.("event", "click_whatsapp", {
-        service: "arenado",
-        location: "Buenos Aires",
-      })
-    } catch (e) {
-      // noop
-    }
-  }
-
   return (
     <section
       className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-20"
@@ -107,19 +86,7 @@ export function ServiciosHeroSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Solicitar presupuesto por WhatsApp - Arenados Lucho"
-                onClick={handleWhatsAppClick}
-                data-analytics="cta_whatsapp"
-              >
-                <MessageCircle className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                Presupuesto gratis por WhatsApp
-              </a>
-            </Button>
+            <WhatsAppButton />
 
             <Button
               size="lg"

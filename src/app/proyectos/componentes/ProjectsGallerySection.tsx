@@ -113,11 +113,7 @@ export function ProjectsGallerySection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton
-              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20${selectedService === "todos" ? "arenado" : services.find(s => s.id === selectedService)?.nameMobile.toLowerCase()}`}
-              label="Consultar por WhatsApp"
-              className="bg-green-600 hover:bg-green-700 text-white"
-              variant="default"
-              size="lg"
+             
             />
             <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
               <Link href="/presupuesto-rapido">

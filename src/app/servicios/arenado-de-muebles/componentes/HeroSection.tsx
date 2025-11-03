@@ -70,11 +70,7 @@ export function HeroSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <WhatsAppButton
-                  href="https://wa.me/5491123787750?text=Hola,%20quiero%20consultar%20por%20el%20servicio%20de%20arenado%20de%20muebles%20en%20Zona%20Norte"
-                  label="Solicitar Presupuesto Gratuito"
-                  className="bg-green-600 hover:bg-green-700 text-white"
-                  variant="default"
-                  size="lg"
+
                 />
                 <Button size="lg" variant="outline" asChild>
                   <Link 

@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 import { PROJECT } from "@/config/project"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
@@ -16,13 +15,7 @@ export function HeroSection() {
             Portfolio de trabajos de arenado realizados con éxito en más de 20 años de experiencia local. 
             Servicio profesional de arenado y sandblasting en Pilar, San Isidro, Tigre y todo Zona Norte de Buenos Aires.
           </p>
-          <WhatsAppButton
-            href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20arenado%20en%20Pilar`}
-            label="Presupuesto de Arenado en Pilar"
-            className="bg-green-600 hover:bg-green-700 text-white"
-            variant="default"
-            size="lg"
-          />
+          <WhatsAppButton />
         </div>
       </div>
     </section>

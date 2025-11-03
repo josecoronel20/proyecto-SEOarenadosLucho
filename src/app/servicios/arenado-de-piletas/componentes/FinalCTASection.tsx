@@ -32,11 +32,7 @@ export function FinalCTASection() {
                 Atención inmediata para Pilar, San Isidro y Zona Norte. Enviá fotos de tu pileta y recibí presupuesto personalizado al instante.
               </p>
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20pileta%20en%20Zona%20Norte"
-                label="Consultar Precio para Zona Norte"
-                className="w-full bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
+               
               />
             </div>
 

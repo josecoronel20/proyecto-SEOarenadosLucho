@@ -81,7 +81,6 @@ export function FinalCTASection() {
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envía fotos de tu maquinaria o estructura industrial para recibir una cotización detallada inmediata. Incluye asesoramiento técnico profesional sin cargo.
                 </p>
                 <WhatsAppButton
-                  href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial%20profesional%20en%20Zona%20Norte"
                   label="Solicitar Presupuesto"
                   className="w-full bg-green-600 hover:bg-green-700 text-white truncate"
                   variant="default"

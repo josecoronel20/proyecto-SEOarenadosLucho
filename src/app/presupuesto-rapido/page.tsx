@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { CheckCircle, Phone, Mail, Clock, Shield } from "lucide-react"
 import { QuoteFormSection } from "@/components/common/QuoteFormSection"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export default function PresupuestoRapidoPage() {
   return (
@@ -135,12 +136,7 @@ export default function PresupuestoRapidoPage() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Button className="w-full bg-green-600 hover:bg-green-700" asChild>
-                        <Link href="https://wa.me/5491123787750" target="_blank">
-                          <Phone className="mr-2 h-4 w-4" />
-                          WhatsApp Directo Pilar
-                        </Link>
-                      </Button>
+                      <WhatsAppButton />
                       <Button variant="outline" className="w-full" asChild>
                         <Link href="mailto:arenadoslucho@hotmail.com?subject=Solicitud de Presupuesto - Arenado en Pilar">
                           <Mail className="mr-2 h-4 w-4" />
@@ -389,12 +385,7 @@ export default function PresupuestoRapidoPage() {
                 ¿Tienes más preguntas sobre nuestro servicio en Pilar? Contáctanos directamente
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-green-600 hover:bg-green-700" asChild>
-                  <Link href="https://wa.me/5491123787750" target="_blank">
-                    <Phone className="mr-2 h-4 w-4" />
-                    WhatsApp Pilar
-                  </Link>
-                </Button>
+                <WhatsAppButton />
                 <Button variant="outline" asChild>
                   <Link href="mailto:arenadoslucho@hotmail.com?subject=Solicitud de Presupuesto - Arenado en Pilar">
                     <Mail className="mr-2 h-4 w-4" />

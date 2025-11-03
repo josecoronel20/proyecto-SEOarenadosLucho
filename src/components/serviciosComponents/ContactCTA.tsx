@@ -31,7 +31,6 @@ export function ContactCTA() {
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center mb-8">
             <WhatsAppButton
-              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\D/g, '')}?text=Quiero%20presupuesto%20de%20arenado%20-%20[servicio]%20-%20[localidad]`}
               label="Solicitar presupuesto por WhatsApp"
               className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-xl transition-all duration-300 text-lg py-6"
               variant="default"

@@ -17,11 +17,7 @@ export function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <WhatsAppButton
-            href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
-            label="WhatsApp"
-            className="bg-green-600 hover:bg-green-700"
-            variant="default"
-            size="lg"
+           
           />
           <Button size="lg" asChild>
             <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto para arenado en Pilar">

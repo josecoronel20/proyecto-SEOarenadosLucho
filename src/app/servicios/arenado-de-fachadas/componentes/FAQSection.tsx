@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FAQSection() {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -109,13 +110,7 @@ export function FAQSection() {
               <p className="text-muted-foreground mb-4">
                 ¿Necesitas asesoramiento profesional o presupuesto detallado para arenado de fachadas en Pilar y Zona Norte de Buenos Aires 2024?
               </p>
-              <a
-                href="https://wa.me/5491123787750?text=Hola,%20quiero%20consultar%20sobre%20servicios%20profesionales%20de%20arenado%20de%20fachadas%20en%20Pilar%20y%20Zona%20Norte%202024"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-                aria-label="Solicitar presupuesto gratuito de arenado de fachadas profesional en Pilar y Zona Norte 2024 por WhatsApp"
-              >
-                Solicitar Presupuesto Gratuito y Asesoramiento Técnico en Pilar y Zona Norte
-              </a>
+              <WhatsAppButton />
             </div>
           </div>
         </div>

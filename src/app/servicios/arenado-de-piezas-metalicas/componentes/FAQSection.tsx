@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FAQSection() {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -109,13 +110,8 @@ export function FAQSection() {
               <p className="text-muted-foreground mb-4">
                 ¿Necesitás presupuesto o asesoramiento sobre arenado industrial en Zona Norte?
               </p>
-              <a
-                href="https://wa.me/5491123787750?text=Hola,%20quiero%20consultar%20sobre%20arenado%20industrial%20en%20Zona%20Norte"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-                aria-label="Solicitar presupuesto gratuito de arenado industrial por WhatsApp"
-              >
-                Solicitar Presupuesto Gratuito
-              </a>
+              <WhatsAppButton />  
+
             </div>
           </div>
         </div>

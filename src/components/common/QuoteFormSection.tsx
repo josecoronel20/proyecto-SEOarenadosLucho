@@ -227,11 +227,7 @@ export function QuoteFormSection() {
           <div className="text-center mt-6">
             <p className="text-gray-500 mb-4">O</p>
             <WhatsAppButton
-              href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`}
-              label="Cotizar por WhatsApp"
-              className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white min-h-[48px] text-base font-semibold"
-              variant="outline"
-              size="lg"
+              
             />
             <p className="text-sm text-gray-500 mt-4">
               Respondemos en 24 horas hábiles.

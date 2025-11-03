@@ -21,11 +21,7 @@ export function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20vehiculo"
-                label="Solicitar Presupuesto Gratuito"
-                className="bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
+                
               />
               <Button size="lg" variant="outline" asChild>
                 <Link href="/presupuesto-rapido" aria-label="Cotizar servicio de arenado online">

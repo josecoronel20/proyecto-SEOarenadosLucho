@@ -17,11 +17,7 @@ export function FinalCTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <WhatsAppButton
-            href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}?text=Hola,%20necesito%20presupuesto%20para%20arenado%20en%20Pilar`}
-            label="Pedir Presupuesto de Arenado en Pilar"
-            className="bg-green-600 hover:bg-green-700 text-white"
-            variant="default"
-            size="lg"
+            
           />
           <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
             <Link href="/presupuesto-rapido">

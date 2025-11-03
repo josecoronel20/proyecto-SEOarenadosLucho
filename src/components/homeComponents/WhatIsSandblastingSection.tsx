@@ -287,7 +287,6 @@ export function WhatIsSandblastingSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20información%20sobre%20arenado%20y%20sandblasting"
                 label="Consultar por WhatsApp"
                 className="bg-white text-primary hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold"
                 variant="default"

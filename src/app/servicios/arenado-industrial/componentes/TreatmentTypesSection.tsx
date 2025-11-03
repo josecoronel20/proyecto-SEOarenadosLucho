@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function TreatmentTypesSection() {
   return (
@@ -49,12 +47,7 @@ export function TreatmentTypesSection() {
           <p className="text-muted-foreground mb-4">
             ¿Necesitas asesoramiento experto para tu proyecto de arenado industrial? Nuestro equipo de especialistas está listo para ayudarte.
           </p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-            <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20asesoramiento%20sobre%20arenado%20industrial">
-              Solicita una Consulta Gratuita por WhatsApp
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <WhatsAppButton />
         </div>
       </div>
     </section>

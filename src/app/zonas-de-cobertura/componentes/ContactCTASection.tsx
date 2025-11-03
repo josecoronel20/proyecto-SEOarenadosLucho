@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail } from "lucide-react"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ContactCTASection() {
   return (
@@ -20,12 +21,12 @@ export function ContactCTASection() {
                   Estamos constantemente expandiendo nuestra cobertura.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="bg-green-600 hover:bg-green-700" asChild>
-                    <Link href={`https://wa.me/${PROJECT.contact.whatsapp.replace(/\s+/g, '')}`} target="_blank" rel="noopener">
-                      <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                      WhatsApp
-                    </Link>
-                  </Button>
+                  <WhatsAppButton
+                    label="WhatsApp"
+                    className="bg-green-600 hover:bg-green-700"
+                    variant="default"
+                    size="default"
+                  />
                   <Button variant="outline" asChild>
                     <Link href={`mailto:${PROJECT.contact.email}?subject=Consulta de Cobertura - Arenado`}>
                       <Mail className="mr-2 h-4 w-4" aria-hidden="true" />

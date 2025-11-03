@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function CoverageAreasSection() {
   const coverageAreas = {
@@ -111,14 +112,7 @@ export function CoverageAreasSection() {
               <p className="text-blue-800 mb-6 text-lg">
                 Presupuesto sin cargo para arenado industrial en todo Buenos Aires. Garantía de calidad y servicio profesional.
               </p>
-              <Link 
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20piezas%20metalicas%20en%20mi%20zona"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 text-lg"
-                aria-label="Solicitar presupuesto de arenado industrial por WhatsApp"
-              >
-                <Phone className="h-6 w-6 mr-3" aria-hidden="true" />
-                Solicitá Presupuesto por WhatsApp
-              </Link>
+              <WhatsAppButton />
             </div>
           </div>
         </div>

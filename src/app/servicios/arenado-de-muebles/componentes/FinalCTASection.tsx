@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, MessageCircle, Clock, CheckCircle } from "lucide-react"
+import { MessageCircle, Clock, CheckCircle } from "lucide-react"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FinalCTASection() {
@@ -85,13 +85,7 @@ export function FinalCTASection() {
                 <p className="text-sm opacity-90 mb-4">
                   Atención personalizada en Pilar, San Isidro, Tigre y Zona Norte. Envía fotos de tus muebles para recibir evaluación técnica detallada y cotización inmediata. Incluye asesoramiento profesional especializado sin cargo.
                 </p>
-                <WhatsAppButton
-                  href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20y%20restauración%20de%20muebles%20en%20Zona%20Norte"
-                  label="Solicitar Presupuesto Gratuito 2025"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white truncate"
-                  variant="default"
-                  size="lg"
-                />
+                <WhatsAppButton />
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

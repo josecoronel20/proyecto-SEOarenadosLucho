@@ -1,7 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 import { ProjectCard } from "@/components/ui/project-card"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
@@ -19,11 +17,6 @@ export function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20pileta"
-                label="Pedir Presupuesto por WhatsApp"
-                className="bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
               />
               <Button size="lg" variant="outline" asChild>
                 <Link href="/presupuesto-rapido">

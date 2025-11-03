@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function CTASection() {
   return (
@@ -11,12 +11,7 @@ export function CTASection() {
           Contactanos hoy mismo y obtén un presupuesto personalizado para arenado de piletas en Pilar, José C. Paz, San Isidro, Tigre, Vicente López y toda Zona Norte. Respuesta en 24 horas hábiles.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-            <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20pileta">
-              Pedir Presupuesto por WhatsApp
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <WhatsAppButton />
           <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-blue-600" asChild>
             <Link href="/presupuesto-rapido">
               Cotizar Online

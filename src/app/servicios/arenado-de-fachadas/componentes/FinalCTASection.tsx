@@ -96,16 +96,9 @@ export function FinalCTASection() {
                   Enviá fotos de tu fachada y recibí una cotización detallada al
                   instante. Incluye asesoramiento técnico sin cargo.
                 </p>
-                <Button
-                  size="lg"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white truncate"
-                  asChild
-                >
-                  <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20fachadas%20en%20Pilar">
-                    Solicitar Presupuesto en Pilar
-                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
-                  </Link>
-                </Button>
+                <WhatsAppButton
+                 
+                />
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

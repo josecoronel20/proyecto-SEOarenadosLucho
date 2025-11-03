@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function TreatmentTypesSection() {
   return (
@@ -86,12 +84,8 @@ export function TreatmentTypesSection() {
           <p className="text-muted-foreground mb-4">
             ¿Necesitás asesoramiento sobre cuál es la mejor opción para tu proyecto?
           </p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white" asChild>
-            <Link href="https://wa.me/5491123787750?text=Hola,%20necesito%20asesoramiento%20sobre%20arenado%20de%20piezas%20metalicas">
-              Consultá gratis por WhatsApp
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <WhatsAppButton />
+
         </div>
       </div>
     </section>

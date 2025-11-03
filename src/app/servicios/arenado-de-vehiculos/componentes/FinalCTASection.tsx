@@ -61,11 +61,7 @@ export function FinalCTASection() {
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envianos fotos de tu vehículo para recibir un presupuesto detallado al instante. Incluye asesoramiento técnico sin cargo.
                 </p>
                 <WhatsAppButton
-                  href="https://wa.me/5491123787750?text=Hola,%20quiero%20presupuesto%20para%20arenado%20de%20vehiculo%20en%20Zona%20Norte"
-                  label="Consultar Precio de Arenado"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  variant="default"
-                  size="lg"
+                  
                 />
               </div>
 

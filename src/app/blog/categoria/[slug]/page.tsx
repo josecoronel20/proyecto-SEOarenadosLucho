@@ -9,6 +9,7 @@ import { ArrowRight, Calendar, User, Tag, Clock, ArrowLeft } from "lucide-react"
 import type { Metadata } from "next"
 import { getCategoryBySlug, getPostsByCategory, getAllCategories } from "@/data/blog"
 import { PROJECT } from "@/config/project"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 interface CategoryPageProps {
   params: {
@@ -188,6 +189,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             Contactanos para obtener un presupuesto personalizado.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <WhatsAppButton />
             <Button size="lg" asChild>
               <Link href="/presupuesto-rapido">
                 Solicitar Presupuesto

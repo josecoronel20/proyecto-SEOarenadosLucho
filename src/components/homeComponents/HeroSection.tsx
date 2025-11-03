@@ -44,12 +44,6 @@ function slugify(s: string) {
 }
 
 export function HeroSection() {
-  const whatsappNumber = PROJECT.contact?.whatsapp?.replace(/\D/g, "") ?? "";
-  const waText = encodeURIComponent(
-    ``
-  );
-  const waHref = `https://wa.me/${whatsappNumber}?text=${waText}`;
-
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-gray-50 py-20">
       {/* Hero Background Image (LCP) */}
@@ -113,7 +107,7 @@ export function HeroSection() {
             ))}
           </div>
 
-          <ClientCTA waHref={waHref} />
+          <ClientCTA />
 
           <p className="text-sm text-gray-500 flex gap-2 justify-center">
             <Clock className="h-4 w-4" aria-hidden />

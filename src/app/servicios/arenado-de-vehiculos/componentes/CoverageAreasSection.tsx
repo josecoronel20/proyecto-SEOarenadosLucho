@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function CoverageAreasSection() {
   const coverageAreas = {
@@ -78,14 +79,7 @@ export function CoverageAreasSection() {
             <p className="text-blue-800 mb-4">
               Brindamos servicio en todo el Gran Buenos Aires. Consultá disponibilidad y presupuesto para tu ubicación.
             </p>
-            <Link 
-              href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20vehiculo%20en%20mi%20zona"
-              className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              aria-label="Consultar cobertura de servicio de arenado por WhatsApp"
-            >
-              <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-              Consultá Ahora por WhatsApp
-            </Link>
+            <WhatsAppButton />
           </div>
         </div>
       </div>

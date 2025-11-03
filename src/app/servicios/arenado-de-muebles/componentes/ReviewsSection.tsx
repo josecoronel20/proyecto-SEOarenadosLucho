@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Star, Quote, MapPin, Calendar } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ReviewsSection() {
   const reviews = [
@@ -128,14 +129,7 @@ export function ReviewsSection() {
               <p className="text-muted-foreground mb-6">
                 Unite a más de 150 familias satisfechas que ya restauraron sus muebles con nuestro servicio certificado de arenado profesional. Atención personalizada y resultados garantizados en Pilar y toda la Zona Norte.
               </p>
-              <a
-                href="https://wa.me/5491123787750?text=Hola,%20quiero%20consultar%20por%20el%20servicio%20de%20arenado%20de%20muebles%20en%20Zona%20Norte"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-                aria-label="Solicitar presupuesto gratuito para arenado de muebles"
-                rel="noopener noreferrer"
-              >
-                Solicitar Presupuesto Gratuito | Respuesta Inmediata
-              </a>
+              <WhatsAppButton />
             </div>
           </div>
         </div>

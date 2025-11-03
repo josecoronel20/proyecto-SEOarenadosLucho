@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Star, Quote, MapPin, Calendar } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function ReviewsSection() {
   const reviews = [
@@ -131,12 +132,7 @@ export function ReviewsSection() {
               <p className="text-muted-foreground mb-6">
                 Unite a más de 100 clientes que ya renovaron su pileta con nuestro servicio profesional de arenado.
               </p>
-              <a
-                href="https://wa.me/5491123787750?text=Hola,%20quiero%20contratar%20el%20servicio%20de%20arenado%20de%20pileta"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Pedir Presupuesto Ahora
-              </a>
+              <WhatsAppButton />
             </div>
           </div>
         </div>

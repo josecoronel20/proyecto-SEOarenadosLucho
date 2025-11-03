@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function FAQSection() {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -104,12 +105,7 @@ export function FAQSection() {
               <p className="text-muted-foreground mb-4">
                 ¿No encontraste la respuesta que buscabas?
               </p>
-              <a
-                href="https://wa.me/5491123787750?text=Hola,%20tengo%20una%20consulta%20sobre%20arenado%20de%20pileta"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Consultar por WhatsApp
-              </a>
+              <WhatsAppButton />
             </div>
           </div>
         </div>

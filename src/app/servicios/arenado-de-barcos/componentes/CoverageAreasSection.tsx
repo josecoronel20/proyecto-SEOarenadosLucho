@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function CoverageAreasSection() {
   const coverageAreas = {
@@ -71,13 +72,7 @@ export function CoverageAreasSection() {
             <p className="text-blue-800 mb-4">
               Cubrimos gran parte del Gran Buenos Aires y zonas náuticas. Consultanos por tu ubicación específica.
             </p>
-            <Link 
-              href="https://wa.me/5491123787750?text=Hola,%20necesito%20arenado%20de%20barco%20en%20mi%20zona"
-              className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Consultar Cobertura Naval por WhatsApp
-            </Link>
+            <WhatsAppButton />
           </div>
         </div>
       </div>

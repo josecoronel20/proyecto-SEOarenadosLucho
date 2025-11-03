@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
-import { ArrowRight, HelpCircle, Phone, Mail, MessageCircle } from "lucide-react"
+import { ArrowRight, HelpCircle, MessageCircle, Phone, Mail } from "lucide-react"
 import type { Metadata } from "next"
 import { generateFAQSchema } from "@/lib/schema"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
@@ -369,13 +369,7 @@ export default function PreguntasFrecuentesPage() {
                 <CardDescription>
                   +54 9 11 2378-7750
                 </CardDescription>
-                <WhatsAppButton
-                  href="https://wa.me/5491123787750"
-                  label="Enviar WhatsApp"
-                  className="mt-4 bg-green-600 hover:bg-green-700 text-white border-green-600"
-                  variant="outline"
-                  size="lg"
-                />
+                <WhatsAppButton />
               </CardContent>
             </Card>
             <Card className="text-center">

@@ -38,7 +38,6 @@ export function HeroSection() {
               <meta itemProp="priceSpecification" content="Presupuesto personalizado" />
               <meta itemProp="availability" content="https://schema.org/InStock" />
               <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20industrial"
                 label="Solicitar Presupuesto Gratuito"
                 className="bg-green-600 hover:bg-green-700 text-white"
                 variant="default"

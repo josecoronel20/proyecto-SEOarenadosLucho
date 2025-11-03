@@ -1,7 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 import { ProjectCard } from "@/components/ui/project-card"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
@@ -36,13 +34,7 @@ export function HeroSection() {
               itemScope 
               itemType="http://schema.org/Offer"
             >
-              <WhatsAppButton
-                href="https://wa.me/5491123787750?text=Hola,%20necesito%20presupuesto%20para%20arenado%20de%20piezas%20metalicas"
-                label="Solicitar Presupuesto Gratuito"
-                className="bg-green-600 hover:bg-green-700 text-white"
-                variant="default"
-                size="lg"
-              />
+              <WhatsAppButton />
               <Button size="lg" variant="outline" asChild>
                 <Link 
                   href="/presupuesto-rapido" 

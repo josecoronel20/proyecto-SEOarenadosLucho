@@ -164,7 +164,6 @@ export function ProcessSection() {
             </Button>
             
             <WhatsAppButton
-              href={`https://wa.me/5491123787750?text=Hola,%20necesito%20información%20sobre%20arenado%20y%20sandblasting`}
               label="Consultar por WhatsApp"
               className="border-primary text-primary hover:bg-primary hover:text-white"
               variant="outline"
