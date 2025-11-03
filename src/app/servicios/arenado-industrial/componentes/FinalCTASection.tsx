@@ -81,10 +81,7 @@ export function FinalCTASection() {
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envía fotos de tu maquinaria o estructura industrial para recibir una cotización detallada inmediata. Incluye asesoramiento técnico profesional sin cargo.
                 </p>
                 <WhatsAppButton
-                  label="Solicitar Presupuesto"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white truncate"
-                  variant="default"
-                  size="lg"
+                  
                 />
               </div>
 
