@@ -141,7 +141,7 @@ export function WhatIsSandblastingSection() {
           </h3>
 
           {/* Imagen explicativa */}
-          <div className="flex justify-center my-6">
+          <div id="how-it-works" className="flex justify-center my-6">
             <Image
               src="/images/maquinaria/imagen-explicativa.png"
               alt="Imagen explicativa del funcionamiento de la maquinaria de arenado y sandblasting"
