@@ -25,7 +25,8 @@ export function ProjectsGallerySection() {
     { id: "mueble", nameDesktop: "Arenado de Muebles en Zona Norte",nameMobile: "Muebles", icon: "🪑" },
     { id: "barco", nameDesktop: "Arenado de Barcos en Buenos Aires",nameMobile: "Barcos", icon: "🚢" },
     { id: "vehiculo", nameDesktop: "Arenado de Vehículos en Pilar",nameMobile: "Vehículos", icon: "🚗" },
-    { id: "fachada", nameDesktop: "Arenado de Fachadas en Zona Norte",nameMobile: "Fachadas", icon: "🏠" }
+    { id: "fachada", nameDesktop: "Arenado de Fachadas en Zona Norte",nameMobile: "Fachadas", icon: "🏠" },
+    { id: "pintura", nameDesktop: "Servicio de Pintura en Pilar",nameMobile: "Pintura", icon: "🎨" }
   ]
   
   // Filtrar proyectos según el servicio seleccionado
@@ -35,6 +36,11 @@ export function ProjectsGallerySection() {
   
   // Mostrar los primeros 12 proyectos filtrados
   const featuredProjects = filteredProjects.slice(0, 12)
+  
+  // Handler para cambiar el filtro
+  const handleFilterChange = (serviceId: string) => {
+    setSelectedService(serviceId);
+  }
 
   return (
     <section className="py-16" aria-labelledby="gallery-heading">
@@ -59,9 +65,10 @@ export function ProjectsGallerySection() {
             {services.map((service) => (
               <Button
                 key={service.id}
+                type="button"
                 variant={selectedService === service.id ? "default" : "outline"}
                 size="sm"
-                onClick={() => setSelectedService(service.id)}
+                onClick={() => handleFilterChange(service.id)}
                 className={`flex items-center gap-2 transition-all ${
                   selectedService === service.id 
                     ? "bg-blue-600 hover:bg-blue-700 text-white" 

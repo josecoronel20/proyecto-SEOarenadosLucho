@@ -25,7 +25,7 @@ const superficies = [
     title: "Metales",
     href: "/superficies-que-arenamos/arenado-de-metales",
     description: "Arenado profesional de estructuras y piezas metálicas. Eliminación de óxido, corrosión y pintura antigua. Preparación para galvanizado, pintura epoxi y tratamientos especializados.",
-    image: "/images/superficies/metales.jpg",
+    image: "/images/servicios/arenado-pieza-metalica-san-isidro.png",
     keywords: "arenado de metales, arenado de hierro, arenado de acero"
   },
   {
@@ -33,7 +33,7 @@ const superficies = [
     title: "Madera",
     href: "/superficies-que-arenamos/arenado-de-madera",
     description: "Arenado de superficies de madera para restauración y eliminación de pintura antigua. Preparación para barnizado, lacado o pintura. Ideal para muebles y elementos arquitectónicos.",
-    image: "/images/superficies/madera.jpg",
+    image: "/images/servicios/arenado-mueble-madera-pilar.png",
     keywords: "arenado de madera, restauración de madera"
   },
   {
@@ -41,7 +41,7 @@ const superficies = [
     title: "Hormigón",
     href: "/superficies-que-arenamos/arenado-de-hormigon",
     description: "Arenado de superficies de hormigón para obras y construcción. Eliminación de pintura, marcas y preparación para revestimiento. Ideal para pisos, muros y estructuras.",
-    image: "/images/superficies/hormigon.jpg",
+    image: "/images/superficies/arenado-superficie-hormigon-Moron.png",
     keywords: "arenado de hormigón, preparación de hormigón"
   },
   {
@@ -49,17 +49,9 @@ const superficies = [
     title: "Piedra",
     href: "/superficies-que-arenamos/arenado-de-piedra",
     description: "Arenado de superficies de piedra natural para restauración y limpieza. Eliminación de manchas, pintura y preparación para tratamientos protectores. Ideal para fachadas y elementos decorativos.",
-    image: "/images/superficies/piedra.jpg",
+    image: "/images/superficies/arenado-superficie-piedra-san-miguel.png",
     keywords: "arenado piedra, restauración de piedra"
   },
-  {
-    id: "piletas",
-    title: "Piletas",
-    href: "/superficies-que-arenamos/arenado-de-piletas",
-    description: "Arenado profesional de piletas. Limpieza profunda y preparación para pintura epoxi. Eliminación de algas, manchas y pintura antigua. Servicio móvil a domicilio.",
-    image: "/images/servicios/arenado-pileta-pilar.png",
-    keywords: "arenado de piletas, limpieza de piletas, renovación de piletas"
-  }
 ]
 
 export default function SuperficiesQueArenamosPage() {

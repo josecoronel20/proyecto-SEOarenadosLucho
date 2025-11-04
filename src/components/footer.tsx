@@ -82,7 +82,7 @@ const contactInfo = [
 
 export function Footer() {
   return (
-    <footer className="bg-muted/50">
+    <footer className="bg-muted/50 py-10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}

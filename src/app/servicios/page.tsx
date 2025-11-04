@@ -1,6 +1,7 @@
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { ServiciosHeroSection } from "@/components/serviciosComponents/ServiciosHeroSection"
 import { ServiciosSection } from "@/components/serviciosComponents/ServiciosSection"
+import { MaquinariaSection } from "@/components/serviciosComponents/MaquinariaSection"
 import { BenefitsSection } from "@/components/serviciosComponents/BenefitsSection"
 import { ContactCTA } from "@/components/serviciosComponents/ContactCTA"
 
@@ -12,6 +13,7 @@ export default function ServiciosPage() {
       <main className="min-h-screen">
         <ServiciosHeroSection />
         <ServiciosSection />
+        <MaquinariaSection />
         <BenefitsSection />
         <ContactCTA />
       </main>

@@ -114,7 +114,7 @@ export default function ArenadoDeHormigonPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/superficies/arenado-hormigon-zona-norte.jpg"
+                  src="/images/superficies/arenado-superficie-hormigon-Moron.png"
                   alt="Arenado profesional de hormigón en Pilar y Zona Norte"
                   fill
                   className="object-cover"

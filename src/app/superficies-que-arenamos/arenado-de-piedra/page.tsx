@@ -113,7 +113,7 @@ export default function ArenadoDePiedraPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/superficies/arenado-piedra-zona-norte.jpg"
+                  src="/images/superficies/arenado-superficie-piedra-san-miguel.png"
                   alt="Arenado profesional de piedra en Pilar y Zona Norte"
                   fill
                   className="object-cover"

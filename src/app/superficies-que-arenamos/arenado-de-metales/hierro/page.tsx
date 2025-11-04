@@ -114,7 +114,7 @@ export default function ArenadoDeHierroPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/superficies/arenado-hierro-zona-norte.jpg"
+                  src="/images/servicios/arenado-pieza-metalica-san-isidro.png"
                   alt="Arenado profesional de hierro en Pilar y Zona Norte"
                   fill
                   className="object-cover"

@@ -111,6 +111,23 @@
       ],
       "category": "residencial",
       "popular": true
+    },
+    {
+      "id": "pintura",
+      "title": "Servicio de Pintura",
+      "description": "Pintura profesional epoxi, anticorrosiva y para fachadas con preparación previa",
+      "href": "/servicios/pintura",
+      "imageSrc": "/images/servicios/arenado-pileta-pilar.png",
+      "imageAlt": "Servicio de Pintura Profesional - Arenados Lucho",
+      "features": [
+        "Pintura epoxi",
+        "Pintura anticorrosiva",
+        "Pintura para fachadas",
+        "Preparación con arenado",
+        "Garantía por escrito"
+      ],
+      "category": "residencial",
+      "popular": true
     }
   ],
   "categories": {

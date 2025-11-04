@@ -47,6 +47,11 @@ export function DesktopNav() {
       title: "Arenado de fachadas particulares",
       href: "/servicios/arenado-de-fachadas",
       description: "Restauración de fachadas de viviendas y edificios."
+    },
+    {
+      title: "Servicio de Pintura",
+      href: "/servicios/pintura",
+      description: "Pintura profesional epoxi, anticorrosiva y para fachadas con preparación previa."
     }
   ]
 

@@ -318,6 +318,83 @@
       "afterAlt": "Mesa de madera después del arenado - San Isidro",
       "location": "San Isidro",
       "category": "mueble"
+    },
+    {
+      "id": "pintura-piscina-pilar",
+      "title": "Pintura de piscina en Pilar",
+      "description": "Servicio completo de pintura epoxi para piscina",
+      "beforeImage": "/images/proyectos/pintura-piscina-pilar-antes.webp",
+      "afterImage": "/images/proyectos/pintura-piscina-pilar-despues.png",
+      "beforeAlt": "Piscina antes de la pintura - Pilar",
+      "afterAlt": "Piscina después de la pintura profesional - Pilar",
+      "location": "Pilar",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-piscina-zona-norte",
+      "title": "Pintura de piscina en Zona Norte",
+      "description": "Servicio completo de pintura epoxi para piscina",
+      "beforeImage": "/images/proyectos/pintura-piscina-zona-norte-antes.webp",
+      "afterImage": "/images/proyectos/pintura-piscina-zona-norte-despues.png",
+      "beforeAlt": "Piscina antes de la pintura - Zona Norte",
+      "afterAlt": "Piscina después de la pintura profesional - Zona Norte",
+      "location": "Zona Norte",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-pileta-pilar",
+      "title": "Pintura de pileta en Pilar",
+      "description": "Pintura profesional epoxi para pileta",
+      "beforeImage": "/images/proyectos/pintura-pileta-pilar-antes.webp",
+      "afterImage": "/images/proyectos/pintura-pileta-pilar-despues.png",
+      "beforeAlt": "Pileta antes de la pintura - Pilar",
+      "afterAlt": "Pileta después de la pintura profesional - Pilar",
+      "location": "Pilar",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-fachada-frente-san-martin",
+      "title": "Pintura de fachada en San Martín",
+      "description": "Pintura profesional para fachada residencial",
+      "beforeImage": "/images/proyectos/pintura-fachada-frente-san-martin-antes.webp",
+      "afterImage": "/images/proyectos/pintura-fachada-frente-san-martin-despues.png",
+      "beforeAlt": "Fachada antes de la pintura - San Martín",
+      "afterAlt": "Fachada después de la pintura profesional - San Martín",
+      "location": "San Martín",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-fachada-lujan",
+      "title": "Pintura de fachada en Luján",
+      "description": "Pintura profesional para fachada residencial",
+      "beforeImage": "/images/proyectos/pintura-fachada-lujan-antes.jpg",
+      "afterImage": "/images/proyectos/pintura-fachada-lujan-despues.png",
+      "beforeAlt": "Fachada antes de la pintura - Luján",
+      "afterAlt": "Fachada después de la pintura profesional - Luján",
+      "location": "Luján",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-porton-san-isidro",
+      "title": "Pintura de portón en San Isidro",
+      "description": "Pintura anticorrosiva para portón metálico",
+      "beforeImage": "/images/proyectos/pintura-porton-san-isidro-antes.jpg",
+      "afterImage": "/images/proyectos/pintura-porton-san-isidro-despues.png",
+      "beforeAlt": "Portón antes de la pintura - San Isidro",
+      "afterAlt": "Portón después de la pintura profesional - San Isidro",
+      "location": "San Isidro",
+      "category": "pintura"
+    },
+    {
+      "id": "pintura-tribuna-palermo",
+      "title": "Pintura de tribuna en Palermo",
+      "description": "Pintura profesional para estructura deportiva",
+      "beforeImage": "/images/proyectos/pintura-tribuna-palermo-antes.jpg",
+      "afterImage": "/images/proyectos/pintura-tribuna-palermo-despues.jpg",
+      "beforeAlt": "Tribuna antes de la pintura - Palermo",
+      "afterAlt": "Tribuna después de la pintura profesional - Palermo",
+      "location": "Palermo",
+      "category": "pintura"
     }
   ],
   "categories": {
@@ -348,6 +425,10 @@
     "mueble": {
       "name": "Muebles",
       "description": "Arenado y restauración de muebles de madera y metal"
+    },
+    "pintura": {
+      "name": "Pintura",
+      "description": "Servicio profesional de pintura epoxi, anticorrosiva y para fachadas"
     }
   },
   "locations": {
@@ -420,6 +501,16 @@
       "name": "San Isidro",
       "zone": "Zona Norte",
       "priority": 2
+    },
+    "Luján": {
+      "name": "Luján",
+      "zone": "Zona Norte",
+      "priority": 2
+    },
+    "Palermo": {
+      "name": "Palermo",
+      "zone": "CABA",
+      "priority": 4
     }
   }
 }

@@ -113,7 +113,7 @@ export default function ArenadoDeAceroInoxidablePage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/superficies/arenado-acero-inoxidable-zona-norte.jpg"
+                  src="/images/superficies/arenado-superficie-acero-inoxidable-pilar.png"
                   alt="Arenado profesional de acero inoxidable en Pilar y Zona Norte"
                   fill
                   className="object-cover"

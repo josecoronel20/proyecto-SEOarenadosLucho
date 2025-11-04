@@ -69,6 +69,10 @@ export function MobileNav({
       title: "Arenado de fachadas particulares",
       href: "/servicios/arenado-de-fachadas",
     },
+    {
+      title: "Servicio de Pintura",
+      href: "/servicios/pintura",
+    },
   ];
 
   return (
