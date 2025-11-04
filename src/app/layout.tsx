@@ -9,8 +9,8 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arenadoslucho.com.ar"),
-  title: `Arenados Lucho | Arenado Pilar y Zona Norte - Sandblasting Profesional`,
-  description: `Servicio profesional de arenado y sandblasting en Pilar y Zona Norte. 20+ años de experiencia. Presupuesto gratuito en 24h. ¡Cotizá ahora!`,
+  title: `Arenado profesional en Pilar, Zona Norte, Zona Oeste y CABA | Arenados Lucho`,
+  description: `Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.`,
   keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}`,
   authors: [{ name: PROJECT.name }],
   icons: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     apple: '/images/favicon.PNG',
   },
   openGraph: {
-    title: `Arenados Lucho | Arenado Pilar y Zona Norte - Sandblasting Profesional`,
-    description: `Expertos en arenado y sandblasting en Pilar y Zona Norte. 20+ años de experiencia. Presupuesto gratuito en 24h. ¡Cotizá ahora!`,
+    title: `Arenado profesional en Pilar, Zona Norte, Zona Oeste y CABA | Arenados Lucho`,
+    description: `Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.`,
     type: "website",
     locale: "es_AR",
     url: "https://www.arenadoslucho.com.ar",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Arenados Lucho | Arenado Pilar y Zona Norte`,
-    description: `Servicio profesional de arenado y sandblasting en Pilar y Zona Norte. 20+ años de experiencia. Presupuesto gratuito en 24h.`,
+    title: `Arenado profesional en Pilar, Zona Norte, Zona Oeste y CABA | Arenados Lucho`,
+    description: `Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.`,
     images: ['/images/portada-hero-arenados-lucho.webp'],
   },
   alternates: {

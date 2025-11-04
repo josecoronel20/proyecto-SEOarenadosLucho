@@ -1,9 +1,12 @@
-import { CheckCircle, Shield, Zap, Wrench } from "lucide-react";
+import { CheckCircle, Shield, Zap, Wrench, AirVent, Package, Target, Sparkles } from "lucide-react";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function WhatIsSandblastingSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="what-is-sandblasting" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -11,73 +14,67 @@ export function WhatIsSandblastingSection() {
             ¿Qué es el <span className="text-primary">Arenado</span> o{" "}
             <span className="text-primary">Sandblasting</span>?
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            El <strong>arenado</strong>, también conocido como{" "}
-            <strong>sandblasting</strong> o <strong>granallado</strong>, es una
-            técnica profesional de <strong>limpieza profunda</strong> y{" "}
-            <strong>preparación de superficies</strong> que revoluciona la
-            industria de la restauración y mantenimiento.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+            El <strong>arenado</strong> (también conocido como <strong>sandblasting</strong> o <strong>granallado</strong>) es una técnica industrial que proyecta partículas abrasivas a alta presión sobre superficies para eliminar pintura, óxido, sarro y contaminantes. 
+            Se utiliza para <strong>preparación de superficies</strong> antes de aplicar nuevos recubrimientos, mejorando la adherencia y durabilidad.
           </p>
-        </div>
+          
+          {/* Ventajas y tipos de abrasivos */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
+            <div className="bg-primary/5 p-8 rounded-xl border-l-4 border-primary text-left">
+              <h3 className="text-2xl font-semibold text-primary mb-6">
+                Ventajas sobre métodos tradicionales
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">
+                    <strong>Más rápido</strong> que lijado manual o decapado químico
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">
+                    <strong>Llega a áreas difíciles</strong> y espacios angostos
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">
+                    <strong>Rugosidad controlada</strong> para mejor adherencia de pintura
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">
+                    <strong>No deja residuos químicos</strong> como el decapado
+                  </span>
+                </li>
+              </ul>
+            </div>
 
-        <div className="flex flex-col md:flex-row gap-16 items-center mb-16">
-          {/* Content Section */}
-          <div className="order-1 lg:order-none">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Técnicas de{" "}
-              <span className="text-primary">Limpieza Profunda</span>{" "}
-              Profesional
-            </h3>
-
-            <div className="space-y-6 text-gray-700 leading-relaxed">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <p className="text-lg mb-4">
-                    El <strong>arenado</strong> (también conocido como{" "}
-                    <strong>sandblasting</strong> o <strong>granallado</strong>)
-                    es un proceso industrial que utiliza{" "}
-                    <strong>aire comprimido a alta presión</strong> para
-                    proyectar partículas abrasivas contra superficies, logrando
-                    una <strong>limpieza profunda</strong> sin precedentes.
-                  </p>
-                  <p>
-                    Las partículas abrasivas pueden ser arena, granalla metálica
-                    u otros materiales según el tipo de superficie y el
-                    resultado deseado, permitiendo una{" "}
-                    <strong>preparación de superficies</strong> óptima para cada
-                    proyecto.
-                  </p>
-                </div>
-
-                <div className="bg-primary/5 p-8 rounded-xl border-l-4 border-primary">
-                  <h4 className="text-2xl font-semibold text-primary mb-6">
-                    ¿Por qué elegir el Arenado Profesional?
-                  </h4>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-4">
-                      <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-lg">
-                        <strong>Limpieza profunda</strong> que elimina óxido,
-                        pintura, sarro y contaminantes persistentes
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-lg">
-                        <strong>Preparación de superficies</strong> perfecta
-                        para nuevos acabados y revestimientos
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-lg">
-                        Resultados <strong>profesionales</strong> imposibles de
-                        lograr con métodos tradicionales
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 text-left">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                Tipos de abrasivos utilizados
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-primary">• Granalla metálica:</span>
+                  <span>Para metales y estructuras industriales</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-primary">• Arena de sílice:</span>
+                  <span>Para superficies de hormigón y piedra</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-primary">• Óxido de aluminio:</span>
+                  <span>Para trabajos de precisión y acabados finos</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="font-semibold text-primary">• Bicarbonato de sodio:</span>
+                  <span>Para superficies delicadas sin dañar el sustrato</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -137,6 +134,98 @@ export function WhatIsSandblastingSection() {
           </div>
         </div>
 
+        {/* Equipment Functioning Section */}
+        <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            ¿Cómo Funciona el <span className="text-primary">Equipo de Arenado</span>?
+          </h3>
+
+          {/* Imagen explicativa */}
+          <div className="flex justify-center my-6">
+            <Image
+              src="/images/maquinaria/imagen-explicativa.png"
+              alt="Imagen explicativa del funcionamiento de la maquinaria de arenado y sandblasting"
+              className="rounded-xl shadow-lg border border-gray-100 w-64 h-auto max-w-full"
+              width={256}
+              height={171}
+              loading="lazy"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-l-4 border-primary">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <AirVent className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+                Compresor de Aire
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Genera <strong>aire a alta presión</strong>, que se conduce por una manguera hasta la tolva.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-l-4 border-primary">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Package className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+                Tolva o Tanque Presurizado
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Contiene el <strong>abrasivo</strong>. El aire comprimido mezcla y expulsa la arena por una manguera hacia la boquilla.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-l-4 border-primary">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+                Boquilla de Arenado
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                El operador dirige el <strong>chorro de aire y arena</strong> sobre la superficie, removiendo pintura, óxido, impurezas o revestimientos antiguos.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-l-4 border-primary">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="h-8 w-8 text-primary" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+                Resultado
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                La superficie queda <strong>limpia, con rugosidad controlada</strong>, lista para aplicar pintura, epoxi o revestimientos protectores.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/20 text-center">
+            <p className="text-lg text-gray-700 mb-4">
+              ¿Necesitás conocer el <strong>espacio requerido</strong> para ubicar el compresor y la camioneta en tu obra?
+            </p>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-white text-primary border-primary hover:bg-primary hover:text-white"
+              asChild
+            >
+              <Link
+                href="/servicios#maquinaria-arenado"
+                className="w-full flex flex-row flex-wrap justify-center items-center text-center"
+                style={{ wordBreak: "break-word", whiteSpace: "normal" }}
+              >
+                <span className="break-words block">
+                  Ver Dimensiones de Maquinaria
+                </span>
+                <Zap className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+
         {/* Video Demonstration Section */}
         <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -149,33 +238,10 @@ export function WhatIsSandblastingSection() {
                 Arenado de Piletas en Pilar - Proceso Profesional
               </h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Observa cómo realizamos el <strong>arenado profesional</strong>{" "}
-                de piletas en Pilar. Nuestro proceso de{" "}
-                <strong>sandblasting</strong> elimina completamente algas, sarro
-                y pintura vieja, dejando la superficie perfectamente preparada
-                para nuevos revestimientos.
+                Observa en este video cómo realizamos el <strong>arenado profesional</strong> de piletas en Pilar. 
+                El proceso elimina completamente algas, sarro y pintura vieja, dejando la superficie perfectamente 
+                preparada para nuevos revestimientos sin dañar la estructura.
               </p>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>
-                    <strong>Limpieza profunda</strong> sin dañar la estructura
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>
-                    <strong>Preparación de superficies</strong> para pintura o
-                    revestimiento
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>
-                    Resultados <strong>profesionales</strong> garantizados
-                  </span>
-                </li>
-              </ul>
             </div>
             <div className="relative h-[400px] lg:h-[500px]">
               <video
@@ -206,7 +272,7 @@ export function WhatIsSandblastingSection() {
         {/* Applications Section */}
         <div className="bg-white rounded-2xl p-8 shadow-xl">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Aplicaciones del <span className="text-primary">Arenado</span>
+            Qué se puede <span className="text-primary">Arenar</span>?
           </h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -281,9 +347,8 @@ export function WhatIsSandblastingSection() {
               <strong>Sandblasting</strong> Profesional?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Más de 20 años de experiencia en{" "}
-              <strong>limpieza profunda</strong> y{" "}
-              <strong>preparación de superficies</strong> en Pilar y Zona Norte
+              Más de 20 años de experiencia en Pilar, Zona Norte, Zona Oeste y CABA. 
+              Equipos propios y personal capacitado para garantizar resultados profesionales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton
