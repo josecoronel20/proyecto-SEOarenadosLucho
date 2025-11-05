@@ -3,7 +3,7 @@ import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function TreatmentTypesSection() {
   return (
-    <section className="py-16">
+    <section id="tipos-de-tratamiento" className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Servicios de Arenado de Piletas en Zona Norte</h2>
@@ -40,7 +40,7 @@ export function TreatmentTypesSection() {
 
           <Card className="border-2 border-orange-200">
             <CardHeader>
-              <CardTitle className="text-2xl text-orange-600">Arenado Integral para Revestimientos</CardTitle>
+              <CardTitle className="text-2xl text-orange-600">Arenado para otros Revestimientos</CardTitle>
               <CardDescription className="text-lg">
                 Preparación profesional para revestimientos de alta durabilidad
               </CardDescription>

@@ -27,7 +27,7 @@ export function HeroSection() {
               className="text-xl text-muted-foreground mb-8"
               itemProp="description"
             >
-              Expertos en arenado industrial para todo tipo de superficies metálicas. Ofrecemos servicios especializados de limpieza y preparación de superficies mediante arenado abrasivo en Pilar, San Isidro y toda la Zona Norte de Buenos Aires. Eliminamos óxido, pintura antigua, corrosión y contaminantes industriales utilizando equipamiento de última generación. Garantizamos una preparación profesional para pintura industrial y tratamientos anticorrosivos.
+              Expertos en arenado industrial para todo tipo de superficies metálicas. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Ofrecemos servicios especializados de limpieza y preparación de superficies mediante arenado abrasivo en Pilar, San Isidro y toda la Zona Norte de Buenos Aires. Eliminamos óxido, pintura antigua, corrosión y contaminantes industriales utilizando equipamiento de última generación. Garantizamos una preparación profesional para pintura industrial y tratamientos anticorrosivos.
             </p>
             <div 
               className="flex flex-col sm:flex-row gap-4"

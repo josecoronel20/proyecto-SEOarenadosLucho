@@ -15,7 +15,7 @@ export function HeroSection() {
               Arenado de Vehículos en <span className="text-blue-600">Zona Norte</span> | Servicio Profesional
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Servicio especializado de arenado automotriz en Pilar, San Isidro, Tigre y toda Zona Norte de Buenos Aires. 
+              Servicio especializado de arenado automotriz. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro, Tigre y toda Zona Norte de Buenos Aires. 
               Eliminamos óxido, corrosión y pintura deteriorada con técnicas profesionales. Preparación experta para pintura 
               y restauración de autos, camionetas, camiones y todo tipo de vehículos.
             </p>

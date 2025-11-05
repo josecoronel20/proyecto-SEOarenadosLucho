@@ -13,7 +13,7 @@ export function HeroSection() {
               Arenado de Piletas en <span className="text-blue-600">Pilar</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Renovamos tu pileta eliminando manchas, algas y pintura vieja con <strong>arenado profesional de piletas</strong>. Nuestro <strong>servicio de granallado</strong> está disponible en <strong>Pilar, San Isidro, Tigre y toda Zona Norte</strong> de Buenos Aires. <strong>Precio competitivo</strong> y <strong>mejor empresa de arenado en Pilar</strong>.
+              Renovamos tu pileta eliminando manchas, algas y pintura vieja con <strong>arenado profesional de piletas</strong>. Nuestro <strong>servicio de granallado</strong> está disponible en <strong>Zona Norte, Zona Oeste y CABA</strong>. Realizamos trabajos en <strong>Pilar, San Isidro, Tigre y toda Zona Norte</strong> de Buenos Aires. <strong>Precio competitivo</strong> y <strong>mejor empresa de arenado en Pilar</strong>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton

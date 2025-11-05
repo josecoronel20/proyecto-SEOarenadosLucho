@@ -15,7 +15,7 @@ export function HeroSection() {
               Arenado de Barcos en <span className="text-blue-600">Zona Norte</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Servicio profesional de arenado para embarcaciones en Tigre, San Fernando y toda Zona Norte. 
+              Servicio profesional de arenado para embarcaciones. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Tigre, San Fernando y toda Zona Norte. 
               Eliminamos incrustaciones, óxido y pintura deteriorada para preparar tu barco para pintura o revestimiento.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
