@@ -25,7 +25,7 @@ export function HeroSection() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
-            Acondicionamos y preparamos superficies —incluyendo metales— para pintura y revestimiento. Trabajamos con equipos industriales propios y coordinamos el ingreso en obra para optimizar tiempos.
+          Realizamos trabajos de restauración y preparación de superficies en todo tipo de proyectos. Disponemos de equipos propios y planificamos cada etapa para optimizar tiempos y resultados.
           </p>
 
           <p className="text-sm text-gray-500 mb-6">

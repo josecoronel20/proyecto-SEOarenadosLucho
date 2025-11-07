@@ -54,6 +54,10 @@ const quickLinks = [
   {
     title: "Presupuesto",
     href: "/presupuesto-rapido"
+  },
+  {
+    title: "Política de Privacidad",
+    href: "/politica-de-privacidad"
   }
 ]
 

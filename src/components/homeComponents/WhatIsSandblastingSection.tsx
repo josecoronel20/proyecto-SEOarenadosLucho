@@ -1,4 +1,13 @@
-import { CheckCircle, Shield, Zap, Wrench, AirVent, Package, Target, Sparkles } from "lucide-react";
+import {
+  CheckCircle,
+  Shield,
+  Zap,
+  Wrench,
+  AirVent,
+  Package,
+  Target,
+  Sparkles,
+} from "lucide-react";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -6,76 +15,59 @@ import Image from "next/image";
 
 export function WhatIsSandblastingSection() {
   return (
-    <section id="what-is-sandblasting" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section
+      id="what-is-sandblasting"
+      className="py-20 bg-gradient-to-br from-gray-50 to-white"
+    >
       <div className="container max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ¿Qué es el <span className="text-primary">Arenado</span> o{" "}
-            <span className="text-primary">Sandblasting</span>?
+            ¿Qué es el <span className="text-primary">Arenado</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-            El <strong>arenado</strong> (también conocido como <strong>sandblasting</strong> o <strong>granallado</strong>) es una técnica industrial que proyecta partículas abrasivas a alta presión sobre superficies para eliminar pintura, óxido, sarro y contaminantes. 
-            Se utiliza para <strong>preparación de superficies</strong> antes de aplicar nuevos recubrimientos, mejorando la adherencia y durabilidad.
+            El <strong>arenado</strong> (también conocido como{" "}
+            <strong>sandblasting</strong> o <strong>granallado</strong>) es una
+            técnica industrial que proyecta partículas abrasivas a alta presión
+            sobre superficies para eliminar pintura, óxido, sarro y
+            contaminantes. Se utiliza como método de limpieza profunda y{" "}
+            <strong>preparación de superficies</strong> antes de aplicar nuevos
+            recubrimientos, mejorando la adherencia y durabilidad.
           </p>
-          
-          {/* Ventajas y tipos de abrasivos */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
-            <div className="bg-primary/5 p-8 rounded-xl border-l-4 border-primary text-left">
-              <h3 className="text-2xl font-semibold text-primary mb-6">
-                Ventajas sobre métodos tradicionales
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    <strong>Más rápido</strong> que lijado manual o decapado químico
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    <strong>Llega a áreas difíciles</strong> y espacios angostos
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    <strong>Rugosidad controlada</strong> para mejor adherencia de pintura
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    <strong>No deja residuos químicos</strong> como el decapado
-                  </span>
-                </li>
-              </ul>
-            </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 text-left">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Tipos de abrasivos utilizados
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-primary">• Granalla metálica:</span>
-                  <span>Para metales y estructuras industriales</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-primary">• Arena de sílice:</span>
-                  <span>Para superficies de hormigón y piedra</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-primary">• Óxido de aluminio:</span>
-                  <span>Para trabajos de precisión y acabados finos</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold text-primary">• Bicarbonato de sodio:</span>
-                  <span>Para superficies delicadas sin dañar el sustrato</span>
-                </li>
-              </ul>
-            </div>
+          {/* Ventajas y tipos de abrasivos */}
+          <div className="bg-primary/5 p-8 rounded-xl border-l-4 border-primary text-left max-w-2xl mx-auto">
+            <h3 className="text-2xl font-semibold text-primary mb-6">
+              Ventajas sobre métodos tradicionales
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-gray-700">
+                  <strong>Más rápido</strong> que lijado manual o decapado
+                  químico
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-gray-700">
+                  <strong>Llega a áreas difíciles</strong> y espacios angostos
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-gray-700">
+                  <strong>Rugosidad controlada</strong> para mejor adherencia de
+                  pintura
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-gray-700">
+                  <strong>No deja residuos químicos</strong> como el decapado
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -137,7 +129,8 @@ export function WhatIsSandblastingSection() {
         {/* Equipment Functioning Section */}
         <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            ¿Cómo Funciona el <span className="text-primary">Equipo de Arenado</span>?
+            ¿Cómo Funciona el{" "}
+            <span className="text-primary">Equipo de Arenado</span>?
           </h3>
 
           {/* Imagen explicativa */}
@@ -161,7 +154,8 @@ export function WhatIsSandblastingSection() {
                 Compresor de Aire
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Genera <strong>aire a alta presión</strong>, que se conduce por una manguera hasta la tolva.
+                Genera <strong>aire a alta presión</strong>, que se conduce por
+                una manguera hasta la tolva.
               </p>
             </div>
 
@@ -173,7 +167,8 @@ export function WhatIsSandblastingSection() {
                 Tolva o Tanque Presurizado
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Contiene el <strong>abrasivo</strong>. El aire comprimido mezcla y expulsa la arena por una manguera hacia la boquilla.
+                Contiene el <strong>abrasivo</strong>. El aire comprimido mezcla
+                y expulsa la arena por una manguera hacia la boquilla.
               </p>
             </div>
 
@@ -185,7 +180,9 @@ export function WhatIsSandblastingSection() {
                 Boquilla de Arenado
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                El operador dirige el <strong>chorro de aire y arena</strong> sobre la superficie, removiendo pintura, óxido, impurezas o revestimientos antiguos.
+                El operador dirige el <strong>chorro de aire y arena</strong>{" "}
+                sobre la superficie, removiendo pintura, óxido, impurezas o
+                revestimientos antiguos.
               </p>
             </div>
 
@@ -197,14 +194,17 @@ export function WhatIsSandblastingSection() {
                 Resultado
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed">
-                La superficie queda <strong>limpia, con rugosidad controlada</strong>, lista para aplicar pintura, epoxi o revestimientos protectores.
+                La superficie queda{" "}
+                <strong>limpia, con rugosidad controlada</strong>, lista para
+                aplicar pintura, epoxi o revestimientos protectores.
               </p>
             </div>
           </div>
 
           <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/20 text-center">
             <p className="text-lg text-gray-700 mb-4">
-              ¿Necesitás conocer el <strong>espacio requerido</strong> para ubicar el compresor y la camioneta en tu obra?
+              ¿Necesitás conocer el <strong>espacio requerido</strong> para
+              ubicar el compresor y la camioneta en tu obra?
             </p>
             <Button
               size="lg"
@@ -238,9 +238,11 @@ export function WhatIsSandblastingSection() {
                 Arenado de Piletas en Pilar - Proceso Profesional
               </h4>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Observa en este video cómo realizamos el <strong>arenado profesional</strong> de piletas en Pilar. 
-                El proceso elimina completamente algas, sarro y pintura vieja, dejando la superficie perfectamente 
-                preparada para nuevos revestimientos sin dañar la estructura.
+                Observa en este video cómo realizamos el{" "}
+                <strong>arenado profesional</strong> de piletas en Pilar. El
+                proceso elimina completamente algas, sarro y pintura vieja,
+                dejando la superficie perfectamente preparada para nuevos
+                revestimientos sin dañar la estructura.
               </p>
             </div>
             <div className="relative h-[400px] lg:h-[500px]">
@@ -254,7 +256,10 @@ export function WhatIsSandblastingSection() {
                 autoPlay
                 aria-label="Video demostrativo del proceso de arenado de piletas en Pilar - Sandblasting profesional"
               >
-                <source src="/videos/arenado-pileta-pilar-video.mp4" type="video/mp4" />
+                <source
+                  src="/videos/arenado-pileta-pilar-video.mp4"
+                  type="video/mp4"
+                />
                 <p className="text-center text-gray-500 p-4">
                   Tu navegador no soporta la reproducción de video.
                   <a
@@ -347,13 +352,12 @@ export function WhatIsSandblastingSection() {
               <strong>Sandblasting</strong> Profesional?
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Más de 20 años de experiencia en Pilar, Zona Norte, Zona Oeste y CABA. 
-              Equipos propios y personal capacitado para garantizar resultados profesionales.
+              Más de 20 años de experiencia en Pilar, Zona Norte, Zona Oeste y
+              CABA. Equipos propios y personal capacitado para garantizar
+              resultados profesionales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <WhatsAppButton
-                
-              />
+              <WhatsAppButton />
               <a
                 href="/presupuesto-rapido"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
