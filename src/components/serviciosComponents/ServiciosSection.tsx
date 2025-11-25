@@ -13,14 +13,7 @@ export function ServiciosSection() {
             y Zona Norte
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Ofrecemos{" "}
-            <strong>
-              servicios profesionales de arenado, granallado y limpieza
-              industrial
-            </strong>{" "}
-            para diferentes industrias y aplicaciones. Trabajamos con{" "}
-            <strong>equipos profesionales y técnicas especializadas</strong> en
-            Pilar, Zona Norte, Zona Oeste y CABA.
+            Ofrecemos servicios profesionales de arenado y granallado para diferentes industrias y aplicaciones en Buenos Aires. Trabajamos con equipos profesionales y técnicas especializadas, brindando servicio móvil a domicilio y también en nuestro taller. Atendemos en Zona Norte, Zona Oeste y CABA.
           </p>
         </div>
 

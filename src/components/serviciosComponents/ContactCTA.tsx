@@ -45,7 +45,7 @@ export function ContactCTA() {
                 className="flex items-center"
               >
                 <FileText className="mr-3 h-6 w-6" />
-                Cotizar online (formulario)
+                Solicitar Cotización
               </Link>
             </Button>
           </div>

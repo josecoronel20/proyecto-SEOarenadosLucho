@@ -52,7 +52,7 @@ export function CoverageAreasSection() {
             <div key={zone} className="bg-white rounded-lg shadow-md p-6">
               <div className="flex items-center mb-4">
                 <MapPin className="h-6 w-6 text-blue-600 mr-2" />
-                <h3 className="text-xl font-bold text-gray-900">{zone}</h3>
+                <div className="text-xl font-bold text-gray-900">{zone}</div>
               </div>
               <ul className="flex flex-wrap gap-4">
                 {areas.map((area) => (
@@ -73,9 +73,9 @@ export function CoverageAreasSection() {
 
         <div className="mt-8 text-center">
           <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">
+            <div className="text-xl font-semibold text-blue-900 mb-2">
               ¿No encontrás tu zona?
-            </h3>
+            </div>
             <p className="text-blue-800 mb-4">
               Cubrimos gran parte del Gran Buenos Aires. Consultanos por tu ubicación específica.
             </p>

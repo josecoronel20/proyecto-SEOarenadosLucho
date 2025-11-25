@@ -26,7 +26,7 @@ export function TreatmentTypesSection() {
                 una excelente adherencia.
               </p>
               <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-800 mb-2">Beneficios del arenado para repintado:</h4>
+                <div className="font-semibold text-blue-800 mb-2">Beneficios del arenado para repintado:</div>
                 <ul className="space-y-1 text-sm text-blue-700">
                   <li>• Remoción selectiva de pintura deteriorada</li>
                   <li>• Preservación del hormigón original</li>
@@ -52,7 +52,7 @@ export function TreatmentTypesSection() {
                 una adherencia óptima del nuevo revestimiento.
               </p>
               <div className="bg-orange-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-orange-800 mb-2">Ventajas del arenado integral:</h4>
+                <div className="font-semibold text-orange-800 mb-2">Ventajas del arenado integral:</div>
                 <ul className="space-y-1 text-sm text-orange-700">
                   <li>• Remoción total de pintura antigua</li>
                   <li>• Base perfecta para revestimientos premium</li>

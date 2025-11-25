@@ -46,7 +46,7 @@ export function ServiciosHeroSection() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-4xl mx-auto leading-relaxed">
-            Arenados Lucho ofrece servicios de arenado en diferentes superficies como piletas, vehículos, fachadas, barcos, piezas metálicas, entre otros.
+            Arenados Lucho ofrece servicios profesionales de arenado y granallado en diferentes superficies como piletas, vehículos, fachadas, barcos, piezas metálicas y más. Trabajamos con servicio móvil a domicilio y también en nuestro taller ubicado en Buenos Aires.
           </p>
 
           <p className="text-md text-gray-600 mb-6 max-w-3xl mx-auto">
@@ -94,9 +94,9 @@ export function ServiciosHeroSection() {
               className="border-primary text-primary hover:bg-primary hover:text-white"
               asChild
             >
-              <Link href="/presupuesto-rapido" aria-label="Cotizar servicio de arenado online">
+              <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto de sandblasting">
                 <FileText className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                Cotizar arenado online
+                Solicitar Presupuesto
               </Link>
             </Button>
           </div>

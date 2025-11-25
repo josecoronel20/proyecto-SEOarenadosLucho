@@ -24,10 +24,10 @@ export function FinalCTASection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+              <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                 <MessageCircle className="h-6 w-6 mr-2" />
                 Presupuesto WhatsApp - Zona Norte
-              </h3>
+              </div>
               <p className="text-sm opacity-90 mb-4">
                 Atención inmediata para Pilar, San Isidro y Zona Norte. Enviá fotos de tu pileta y recibí presupuesto personalizado al instante.
               </p>
@@ -37,16 +37,16 @@ export function FinalCTASection() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+              <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                 <Clock className="h-6 w-6 mr-2" />
                 Cotización Online - Buenos Aires Norte
-              </h3>
+              </div>
               <p className="text-sm opacity-90 mb-4">
                 Servicio express para Zona Norte. Completá el formulario y recibí tu presupuesto detallado en 24 horas.
               </p>
               <Button size="lg" variant="outline" className="w-full border-white text-primary hover:bg-white hover:text-blue-600" asChild>
                 <Link href="/presupuesto-rapido">
-                  Solicitar Presupuesto Local
+                  Cotizar Online
                 </Link>
               </Button>
             </div>
@@ -62,9 +62,9 @@ export function FinalCTASection() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">
+            <div className="text-lg font-semibold mb-2">
               🏆 Empresa Líder en Arenado de Piletas en Zona Norte de Buenos Aires
-            </h3>
+            </div>
             <p className="text-sm opacity-90">
               Más de 100 piletas renovadas en Pilar, San Isidro, Tigre y toda la Zona Norte. 
               Servicio móvil profesional con técnicos locales especializados. Atendemos countries, 

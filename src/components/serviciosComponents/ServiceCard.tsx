@@ -46,8 +46,8 @@ export function ServiceCard({ id }: ServiceCardProps) {
           ))}
         </ul>
         <Button variant="outline" asChild className="w-full group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-colors">
-          <Link href={href} aria-label={`Ver detalles de ${title}`}>
-            Ver servicio: {title}
+          <Link href={href} aria-label={`Conocer más sobre ${title}`}>
+            Conocer más sobre {title}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

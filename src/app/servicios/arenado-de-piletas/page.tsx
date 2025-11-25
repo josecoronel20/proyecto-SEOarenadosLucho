@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Piletas en Zona Norte, Oeste y CABA | Servicio Profesional - Cotizá Online",
-  description: "Arenado de piletas en Zona Norte, Oeste y CABA. Limpieza profunda y preparación para pintura epoxi con servicio móvil. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Piletas en Zona Norte, Oeste y CABA | Arenados Lucho",
+  description: "Arenado de piletas en Zona Norte, Oeste y CABA. Limpieza profunda y preparación para pintura epoxi. Servicio móvil. Presupuesto gratuito.",
   keywords: "arenado piletas Pilar, precio arenado pileta Zona Norte, empresa arenado piletas Buenos Aires, limpieza profunda piletas, renovación piletas, preparación pintura epoxi",
 }
 
