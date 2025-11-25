@@ -48,7 +48,7 @@ export function BenefitsSection() {
             ¿Por qué elegir <span className="text-primary">Arenado</span> vs. otros métodos?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            El <strong>sandblasting profesional</strong> supera a cualquier método tradicional de limpieza y preparación de superficies. 
+            El sandblasting profesional supera a cualquier método tradicional de limpieza y preparación de superficies. 
             Descubrí las ventajas que nos convierten en la mejor opción para tu proyecto.
           </p>
         </div>
@@ -85,10 +85,10 @@ export function BenefitsSection() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-400">
-              <h4 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
+              <div className="text-lg font-semibold text-red-800 mb-4 flex items-center">
                 <span className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">✗</span>
                 Métodos Tradicionales
-              </h4>
+              </div>
               <ul className="space-y-2 text-red-700">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
@@ -110,10 +110,10 @@ export function BenefitsSection() {
             </div>
 
             <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-400">
-              <h4 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
+              <div className="text-lg font-semibold text-green-800 mb-4 flex items-center">
                 <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">✓</span>
-                Arenado Profesional
-              </h4>
+                Sandblasting Profesional
+              </div>
               <ul className="space-y-2 text-green-700">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>

@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Fachadas en Pilar y Zona Norte | Limpieza Profesional de Edificios Residenciales y Comerciales - Cotizá Online",
-  description: "Arenado de fachadas en Pilar, San Isidro y Zona Norte. Limpieza profesional de fachadas residenciales y comerciales. Eliminación de pintura antigua y preparación para pintura exterior. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Fachadas en Zona Norte, Oeste y CABA | Limpieza Profesional de Edificios - Cotizá Online",
+  description: "Arenado de fachadas en Zona Norte, Oeste y CABA. Restauramos exteriores residenciales y comerciales eliminando pintura antigua y suciedad. Presupuesto gratuito por WhatsApp.",
   keywords: "arenado fachadas Pilar, arenado fachadas Zona Norte, limpieza fachadas Buenos Aires, restauracion fachadas, pintura fachadas, edificios residenciales",
 }
 

@@ -75,7 +75,7 @@ export function HeroSection() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Arenado de Fachadas en <span className="text-blue-600">Pilar, San Isidro y Zona Norte</span> | Servicio Premium 2025
+                Arenado de Fachadas en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Especialistas certificados en limpieza y restauración profesional de fachadas. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro y todo el corredor norte de Buenos Aires. 

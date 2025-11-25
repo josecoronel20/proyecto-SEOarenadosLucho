@@ -75,7 +75,7 @@ export function QuoteFormSection() {
             Presupuesto rápido
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Completá el formulario y te respondemos con cotización preliminar via email.
+            Completá el formulario y te respondemos con cotización preliminar vía email.
           </p>
         </div>
         

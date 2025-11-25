@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Servicio de Pintura en <span className="text-blue-600">Pilar</span>
+              Arenado de Pintura y Revestimientos en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Ofrecemos <strong>servicio profesional de pintura</strong> para estructuras, fachadas, vehículos y superficies metálicas. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Nuestro <strong>servicio de pintura epoxi</strong> está disponible en <strong>Pilar, San Isidro, Tigre y toda Zona Norte</strong> de Buenos Aires. <strong>Pintura anticorrosiva</strong> y <strong>preparación profesional</strong> para resultados duraderos.

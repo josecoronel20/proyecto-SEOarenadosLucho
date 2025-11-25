@@ -61,7 +61,7 @@ export function HeroSection() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Arenado de Muebles en <span className="text-blue-600">Pilar y Zona Norte</span> | Restauración Profesional Garantizada
+                Arenado de Muebles en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Expertos en restauración y arenado profesional de muebles de madera y metal. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro y toda la Zona Norte. 

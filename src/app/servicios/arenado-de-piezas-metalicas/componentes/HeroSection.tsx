@@ -18,7 +18,7 @@ export function HeroSection() {
               className="text-4xl md:text-6xl font-bold mb-6"
               itemProp="name"
             >
-              Arenado de Piezas Metálicas en <span className="text-blue-600">Zona Norte</span> | Servicio Especializado
+              Arenado de Piezas Metálicas en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
             </h1>
             <p 
               className="text-xl text-muted-foreground mb-8"

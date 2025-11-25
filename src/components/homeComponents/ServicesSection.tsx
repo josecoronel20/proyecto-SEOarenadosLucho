@@ -80,16 +80,13 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-            Servicios de limpieza profunda y preparación de superficies en Pilar y Zona Norte
+            Nuestros Servicios de Arenado y Sandblasting Profesional
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Ofrecemos{" "}
-            <strong>servicios profesionales de arenado y sandblasting</strong>{" "}
-            para diferentes industrias y aplicaciones en <strong>Pilar y Zona Norte</strong>. Trabajamos con{" "}
-            <strong>equipos profesionales y técnicas especializadas de granallado</strong> en{" "}
+            Ofrecemos servicios profesionales de sandblasting y granallado para diferentes industrias y aplicaciones en Pilar y Zona Norte. Trabajamos con equipos profesionales y técnicas especializadas en{" "}
             <Link href="/zonas-de-cobertura" className="text-primary hover:underline font-semibold">
-              Zona Norte, Zona Oeste y CABA
-            </Link>. Nuestro <strong>arenado profesional</strong> garantiza la mejor <strong>limpieza profunda de superficies</strong>.
+              Gran Buenos Aires
+            </Link>. Nuestro servicio garantiza la mejor limpieza profunda de superficies.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,7 +110,7 @@ export function ServicesSection() {
             asChild
           >
             <Link href="/servicios" className="flex items-center gap-2">
-              Ver todos los servicios de arenado profesional
+              Ver todos los servicios de sandblasting profesional
               <ArrowRight className="h-5 w-5" aria-hidden />
             </Link>
           </Button>

@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado Industrial en Pilar y Zona Norte | Servicio Profesional para Maquinaria Pesada - Cotizá Online",
-  description: "Arenado industrial en Pilar, San Isidro y Zona Norte. Limpieza de maquinaria pesada, estructuras metálicas y equipos industriales. Servicio móvil a domicilio. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado Industrial en Zona Norte, Oeste y CABA | Servicio Profesional para Maquinaria Pesada",
+  description: "Arenado industrial en Zona Norte, Oeste y CABA para maquinaria, estructuras metálicas y equipos. Eliminamos óxido y contaminantes con tecnología profesional. Presupuesto gratuito por WhatsApp.",
   keywords: "arenado industrial Pilar, granallado industrial Zona Norte, limpieza maquinaria pesada Buenos Aires, arenado estructuras metálicas, mantenimiento industrial, equipos industriales",
 }
 

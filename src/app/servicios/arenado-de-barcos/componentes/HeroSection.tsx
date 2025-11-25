@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Arenado de Barcos en <span className="text-blue-600">Zona Norte</span>
+              Arenado de Barcos en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Servicio profesional de arenado para embarcaciones. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Tigre, San Fernando y toda Zona Norte. 

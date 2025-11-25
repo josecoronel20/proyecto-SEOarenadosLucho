@@ -20,7 +20,7 @@ export function HeroSection() {
               className="text-4xl md:text-6xl font-bold mb-6"
               itemProp="name"
             >
-              Servicio de Arenado Industrial Profesional en <span className="text-blue-600">Pilar y Zona Norte</span>
+              Arenado de Superficies Industriales en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
             </h1>
             <meta itemProp="alternateName" content="Granallado Industrial en Pilar" />
             <p 

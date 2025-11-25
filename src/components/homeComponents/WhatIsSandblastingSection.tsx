@@ -26,12 +26,11 @@ export function WhatIsSandblastingSection() {
             ¿Qué es el <span className="text-primary">Arenado</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-            El <strong>arenado</strong> (también conocido como{" "}
-            <strong>sandblasting</strong> o <strong>granallado</strong>) es una
+            El sandblasting (también conocido como granallado o chorro de arena) es una
             técnica industrial que proyecta partículas abrasivas a alta presión
             sobre superficies para eliminar pintura, óxido, sarro y
-            contaminantes. Se utiliza como método de limpieza profunda y{" "}
-            <strong>preparación de superficies</strong> antes de aplicar nuevos
+            contaminantes. Se utiliza como método de limpieza profunda y
+            preparación de superficies antes de aplicar nuevos
             recubrimientos, mejorando la adherencia y durabilidad.
           </p>
 
@@ -44,27 +43,27 @@ export function WhatIsSandblastingSection() {
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-700">
-                  <strong>Más rápido</strong> que lijado manual o decapado
+                  Más rápido que lijado manual o decapado
                   químico
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-700">
-                  <strong>Llega a áreas difíciles</strong> y espacios angostos
+                  Llega a áreas difíciles y espacios angostos
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-700">
-                  <strong>Rugosidad controlada</strong> para mejor adherencia de
+                  Rugosidad controlada para mejor adherencia de
                   pintura
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-700">
-                  <strong>No deja residuos químicos</strong> como el decapado
+                  No deja residuos químicos como el decapado
                 </span>
               </li>
             </ul>
@@ -77,12 +76,11 @@ export function WhatIsSandblastingSection() {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Wrench className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="text-lg font-semibold text-gray-900 mb-2">
               1. Evaluación
-            </h4>
+            </div>
             <p className="text-gray-600 text-sm">
-              Analizamos la superficie y determinamos el tipo de{" "}
-              <strong>arenado</strong> más adecuado
+              Analizamos la superficie y determinamos el tipo de sandblasting más adecuado
             </p>
           </div>
 
@@ -90,11 +88,11 @@ export function WhatIsSandblastingSection() {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="text-lg font-semibold text-gray-900 mb-2">
               2. Aplicación
-            </h4>
+            </div>
             <p className="text-gray-600 text-sm">
-              Ejecutamos el <strong>sandblasting</strong> con equipos
+              Ejecutamos el sandblasting con equipos
               profesionales de última generación
             </p>
           </div>
@@ -103,12 +101,11 @@ export function WhatIsSandblastingSection() {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="text-lg font-semibold text-gray-900 mb-2">
               3. Control
-            </h4>
+            </div>
             <p className="text-gray-600 text-sm">
-              Verificamos la calidad de la <strong>limpieza profunda</strong> y{" "}
-              <strong>preparación de superficies</strong>
+              Verificamos la calidad de la limpieza profunda y preparación de superficies
             </p>
           </div>
 
@@ -116,9 +113,9 @@ export function WhatIsSandblastingSection() {
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="h-8 w-8 text-primary" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="text-lg font-semibold text-gray-900 mb-2">
               4. Finalización
-            </h4>
+            </div>
             <p className="text-gray-600 text-sm">
               Entregamos la superficie lista para pintura, galvanizado o el
               tratamiento deseado
@@ -150,11 +147,11 @@ export function WhatIsSandblastingSection() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <AirVent className="h-8 w-8 text-primary" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="text-xl font-semibold text-gray-900 mb-3 text-center">
                 Compresor de Aire
-              </h4>
+              </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Genera <strong>aire a alta presión</strong>, que se conduce por
+                Genera aire a alta presión, que se conduce por
                 una manguera hasta la tolva.
               </p>
             </div>
@@ -163,11 +160,11 @@ export function WhatIsSandblastingSection() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Package className="h-8 w-8 text-primary" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="text-xl font-semibold text-gray-900 mb-3 text-center">
                 Tolva o Tanque Presurizado
-              </h4>
+              </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Contiene el <strong>abrasivo</strong>. El aire comprimido mezcla
+                Contiene el abrasivo. El aire comprimido mezcla
                 y expulsa la arena por una manguera hacia la boquilla.
               </p>
             </div>
@@ -176,12 +173,11 @@ export function WhatIsSandblastingSection() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="text-xl font-semibold text-gray-900 mb-3 text-center">
                 Boquilla de Arenado
-              </h4>
+              </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                El operador dirige el <strong>chorro de aire y arena</strong>{" "}
-                sobre la superficie, removiendo pintura, óxido, impurezas o
+                El operador dirige el chorro de aire y arena sobre la superficie, removiendo pintura, óxido, impurezas o
                 revestimientos antiguos.
               </p>
             </div>
@@ -190,12 +186,11 @@ export function WhatIsSandblastingSection() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="h-8 w-8 text-primary" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="text-xl font-semibold text-gray-900 mb-3 text-center">
                 Resultado
-              </h4>
+              </div>
               <p className="text-gray-600 text-sm leading-relaxed">
-                La superficie queda{" "}
-                <strong>limpia, con rugosidad controlada</strong>, lista para
+                La superficie queda limpia, con rugosidad controlada, lista para
                 aplicar pintura, epoxi o revestimientos protectores.
               </p>
             </div>
@@ -203,7 +198,7 @@ export function WhatIsSandblastingSection() {
 
           <div className="bg-primary/5 rounded-xl p-6 border-2 border-primary/20 text-center">
             <p className="text-lg text-gray-700 mb-4">
-              ¿Necesitás conocer el <strong>espacio requerido</strong> para
+              ¿Necesitás conocer el espacio requerido para
               ubicar el compresor y la camioneta en tu obra?
             </p>
             <Button
@@ -234,12 +229,11 @@ export function WhatIsSandblastingSection() {
           </h3>
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h4 className="text-2xl font-semibold text-gray-900 mb-4">
-                Arenado de Piletas en Pilar - Proceso Profesional
-              </h4>
+              <div className="text-2xl font-semibold text-gray-900 mb-4">
+                Sandblasting de Piletas en Pilar - Proceso Profesional
+              </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Observa en este video cómo realizamos el{" "}
-                <strong>arenado profesional</strong> de piletas en Pilar. El
+                Observa en este video cómo realizamos el sandblasting profesional de piletas en Pilar. El
                 proceso elimina completamente algas, sarro y pintura vieja,
                 dejando la superficie perfectamente preparada para nuevos
                 revestimientos sin dañar la estructura.
@@ -282,40 +276,38 @@ export function WhatIsSandblastingSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🏊‍♂️ Piletas y Piscinas
-              </h4>
+              </div>
               <p className="text-gray-600">
-                Eliminación de algas, sarro y pintura vieja.{" "}
-                <strong>Preparación de superficies</strong> para nuevos
+                Eliminación de algas, sarro y pintura vieja. Preparación de superficies para nuevos
                 revestimientos.
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🏭 Industria
-              </h4>
+              </div>
               <p className="text-gray-600">
-                <strong>Limpieza profunda</strong> de maquinaria, estructuras
+                Limpieza profunda de maquinaria, estructuras
                 metálicas y equipos industriales.
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🚗 Vehículos
-              </h4>
+              </div>
               <p className="text-gray-600">
-                Restauración de chasis, carrocerías y piezas automotrices con{" "}
-                <strong>sandblasting</strong> profesional.
+                Restauración de chasis, carrocerías y piezas automotrices con granallado profesional.
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🪑 Muebles
-              </h4>
+              </div>
               <p className="text-gray-600">
                 Restauración de muebles de madera eliminando barnices y pinturas
                 antiguas.
@@ -323,22 +315,21 @@ export function WhatIsSandblastingSection() {
             </div>
 
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🏠 Fachadas
-              </h4>
+              </div>
               <p className="text-gray-600">
-                <strong>Preparación de superficies</strong> de ladrillo,
+                Preparación de superficies de ladrillo,
                 concreto y piedra para nuevos acabados.
               </p>
             </div>
 
             <div className="text-center">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-xl font-semibold text-gray-900 mb-4">
                 🚢 Barcos
-              </h4>
+              </div>
               <p className="text-gray-600">
-                Mantenimiento de cascos y estructuras náuticas con{" "}
-                <strong>arenado</strong> especializado.
+                Mantenimiento de cascos y estructuras náuticas con sandblasting especializado.
               </p>
             </div>
           </div>
@@ -348,8 +339,7 @@ export function WhatIsSandblastingSection() {
         <div className="text-center mt-16">
           <div className="bg-primary text-white rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
-              ¿Necesitas <strong>Arenado</strong> o{" "}
-              <strong>Sandblasting</strong> Profesional?
+              ¿Necesitas Sandblasting o Granallado Profesional?
             </h3>
             <p className="text-lg mb-6 opacity-90">
               Más de 20 años de experiencia en Pilar, Zona Norte, Zona Oeste y

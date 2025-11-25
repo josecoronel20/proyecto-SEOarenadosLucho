@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Barcos en Tigre y Zona Norte | Servicios Navales Profesionales - Cotizá Online",
-  description: "Arenado de barcos, cascos y embarcaciones en Tigre, San Fernando y Zona Norte. Mantenimiento naval especializado, eliminación de incrustaciones marinas y preparación para pintura. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Barcos en Zona Norte, Oeste y CABA | Servicio Naval Profesional - Cotizá Online",
+  description: "Arenado de barcos, cascos y embarcaciones en Zona Norte, Oeste y CABA. Eliminamos incrustaciones marinas y preparamos el casco para nuevos recubrimientos. Presupuesto gratuito por WhatsApp.",
   keywords: "arenado barcos Tigre, arenado barcos Zona Norte, mantenimiento naval Buenos Aires, cascos barcos, embarcaciones, incrustaciones marinas, pintura, arenado Nordelta",
 }
 

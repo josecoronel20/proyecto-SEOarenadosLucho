@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Servicio de Pintura en Pilar y Zona Norte | Pintura Epoxi y Anticorrosiva",
-  description: "Servicio profesional de pintura en Pilar, Zona Norte y CABA. Pintura epoxi, anticorrosiva y para fachadas. Preparación con arenado previo. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Pintura y Revestimientos en Zona Norte, Oeste y CABA | Pintura Epoxi y Anticorrosiva",
+  description: "Servicio de arenado y pintura en Zona Norte, Oeste y CABA. Aplicamos pintura epoxi y anticorrosiva con preparación abrasiva profesional. Presupuesto gratuito por WhatsApp.",
   keywords: "pintura Pilar, pintura epoxi, pintura anticorrosiva, servicio pintura Zona Norte, pintura fachadas, pintura automotriz",
 }
 

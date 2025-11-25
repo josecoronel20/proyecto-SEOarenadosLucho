@@ -81,7 +81,7 @@ export function ProcessSection() {
             Nuestro <span className="text-primary">Proceso de Trabajo</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Un proceso probado y eficiente que garantiza resultados excepcionales en cada proyecto de <strong>arenado profesional</strong>. 
+            Un proceso probado y eficiente que garantiza resultados excepcionales en cada proyecto de sandblasting profesional. 
             Desde la consulta inicial hasta la entrega final, te acompañamos en cada paso.
           </p>
         </div>
@@ -138,7 +138,7 @@ export function ProcessSection() {
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <guarantee.icon className="h-8 w-8 text-white" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2">{guarantee.title}</h4>
+                <div className="text-lg font-semibold mb-2">{guarantee.title}</div>
                 <p className="text-blue-100">{guarantee.description}</p>
               </div>
             ))}
@@ -159,7 +159,7 @@ export function ProcessSection() {
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg" asChild>
               <Link href="/presupuesto-rapido" className="flex items-center gap-2">
                 <MessageCircle className="h-5 w-5" />
-                Solicitar Presupuesto Gratuito
+                Cotizar Ahora
               </Link>
             </Button>
             

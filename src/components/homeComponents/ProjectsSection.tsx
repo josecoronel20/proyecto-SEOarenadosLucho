@@ -16,10 +16,10 @@ export function ProjectsSection() {
             Proyectos de arenado | Antes y Después
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Galería de resultados reales de <strong>arenado y granallado</strong>. Comprobá la calidad del <strong>sandblasting profesional</strong> en nuestros proyectos realizados en <strong>Pilar y Zona Norte</strong>.{" "}
+            Galería de resultados reales de sandblasting y granallado. Comprobá la calidad del servicio profesional en nuestros proyectos realizados en Pilar y Zona Norte.{" "}
             <Link href="/zonas-de-cobertura" className="text-primary hover:underline font-semibold">
-              Buenos Aires
-            </Link>. Ver <strong>arenado antes y después</strong> de nuestros trabajos.
+              GBA
+            </Link>. Ver trabajos antes y después de nuestros servicios.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export function ProjectsSection() {
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/proyectos" className="flex items-center gap-2">
               <Eye className="h-5 w-5" />
-              Ver más proyectos de arenado
+              Ver más proyectos de sandblasting
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

@@ -21,7 +21,7 @@ export function HeroSection() {
       <div className={`container mx-auto px-4 relative z-10 ${poppins.className}`}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 leading-tight">
-            Arenado profesional en Pilar, Zona Norte, Zona Oeste y CABA
+            Arenado profesional en Pilar, Zona Norte y Oeste y CABA
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ export function HeroSection() {
               className="inline-block px-6 py-3 rounded-lg text-white bg-blue-600 hover:bg-blue-700 font-medium transition"
               aria-label="Pedir presupuesto rápido"
             >
-              Presupuesto rápido
+              Solicitar Presupuesto
             </Link>
             <WhatsAppButton />
           </div>

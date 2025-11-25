@@ -1,5 +1,3 @@
-import { Header } from "@/components/headerComponents/header"
-import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/homeComponents/HeroSection"
 import { WhatIsSandblastingSection } from "@/components/homeComponents/WhatIsSandblastingSection"
 import { BenefitsSection } from "@/components/homeComponents/BenefitsSection"
@@ -12,12 +10,39 @@ import dynamic from "next/dynamic"
 import { Suspense } from "react"
 const FAQSection = dynamic(() => import("@/components/homeComponents/FAQSection").then(m => m.FAQSection), { ssr: false })
 import { TrustSection } from "@/components/homeComponents/TrustSection"
+import type { Metadata } from "next"
+
+const SITE_URL = "https://www.arenadoslucho.com.ar"
+
+// Solo sobrescribimos lo específico de la home
+export const metadata: Metadata = {
+  title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho - Sandblasting y Granallado",
+  description:
+    "Servicio profesional de arenado, sandblasting y granallado en Zona Norte, Oeste y CABA. Arenado de piletas, vehículos, barcos, fachadas y más. Equipos propios. Presupuesto gratuito por WhatsApp.",
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      "es-AR": SITE_URL,
+      es: SITE_URL,
+      "x-default": SITE_URL,
+    },
+  },
+  openGraph: {
+    title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
+    description:
+      "Servicio profesional de arenado, sandblasting y granallado en Zona Norte, Oeste y CABA. Equipos propios. Presupuesto gratuito por WhatsApp.",
+  },
+  twitter: {
+    title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
+    description:
+      "Servicio profesional de arenado, sandblasting y granallado. Equipos propios. Presupuesto gratuito.",
+  },
+}
 
 export default function HomePage() {
   return (
     <>
       <main className="min-h-screen">
-        <h1 className="sr-only">Arenado y granallado profesional en Pilar y Zona Norte - Arenados Lucho</h1>
         <HeroSection />
         <Suspense>
           <WhatIsSandblastingSection />

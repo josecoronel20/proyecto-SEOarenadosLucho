@@ -139,7 +139,7 @@ export function TrustSection() {
                   <cert.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-gray-900 mb-1">{cert.title}</h4>
+                  <div className="font-semibold text-gray-900 mb-1">{cert.title}</div>
                   <p className="text-sm text-gray-600">{cert.description}</p>
                 </div>
               </div>

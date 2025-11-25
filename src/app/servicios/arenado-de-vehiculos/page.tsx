@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Vehículos en Pilar y Zona Norte | Servicio Automotriz Profesional - Cotizá Online",
-  description: "Arenado de vehículos en Pilar, San Isidro y Zona Norte. Remoción de pintura, óxido y preparación para pintura automotriz. Servicio móvil a domicilio. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Vehículos en Zona Norte, Oeste y CABA | Servicio Automotriz Profesional - Cotizá Online",
+  description: "Arenado de vehículos en Zona Norte, Oeste y CABA. Removemos pintura, óxido y corrosión para preparar carrocerías y chasis. Servicio móvil y presupuesto gratuito por WhatsApp.",
   keywords: "arenado vehiculos Pilar, remocion pintura auto Zona Norte, restauracion automotriz Buenos Aires, arenado carroceria, preparacion pintura vehiculos, sandblasting auto",
 }
 

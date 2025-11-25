@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Muebles en Pilar y Zona Norte | Restauración Profesional de Muebles de Madera y Metal - Cotizá Online",
-  description: "Arenado de muebles en Pilar, San Isidro y Zona Norte. Restauración profesional de muebles de madera y metal. Eliminación de pintura antigua y preparación para barnizado. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Muebles en Zona Norte, Oeste y CABA | Restauración Profesional de Madera y Metal - Cotizá Online",
+  description: "Arenado de muebles en Zona Norte, Oeste y CABA. Recuperamos piezas de madera y metal, eliminamos pintura vieja y preparamos superficies para nuevos acabados. Presupuesto gratuito por WhatsApp.",
   keywords: "arenado muebles Pilar, arenado muebles madera Zona Norte, restauracion muebles Buenos Aires, despintado muebles, barnizado muebles, muebles antiguos",
 }
 

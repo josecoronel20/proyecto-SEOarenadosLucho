@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Piezas Metálicas en Pilar y Zona Norte | Servicio Industrial Profesional - Cotizá Online",
-  description: "Arenado de piezas metálicas en Pilar, San Isidro y Zona Norte. Eliminación de óxido, corrosión y preparación para galvanizado. Servicio industrial especializado. Presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Piezas Metálicas en Zona Norte, Oeste y CABA | Servicio Industrial Profesional - Cotizá Online",
+  description: "Arenado de piezas metálicas en Zona Norte, Oeste y CABA. Eliminamos óxido y corrosión para dejar las piezas listas para galvanizado y pintura. Presupuesto gratuito por WhatsApp.",
   keywords: "arenado piezas metalicas Pilar, arenado industrial Zona Norte, galvanizado Buenos Aires, arenado piezas, preparacion galvanizado, sandblasting industrial",
 }
 

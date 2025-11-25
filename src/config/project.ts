@@ -220,6 +220,8 @@ export const PROJECT: Readonly<ProjectConfig> = {
   seo: {
     // Keywords primarias - Alta competencia, alto volumen
     primaryKeywords: [
+      "arenados lucho",
+      "arenado piletas",
       "arenado Pilar",
       "arenado Zona Norte", 
       "sandblasting Buenos Aires",

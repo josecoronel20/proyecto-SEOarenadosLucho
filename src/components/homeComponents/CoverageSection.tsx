@@ -15,10 +15,10 @@ export function CoverageSection() {
         <div className="text-center mb-16">
           <span className="text-blue-600 font-semibold mb-4 block">SERVICIO DE ARENADO EN BUENOS AIRES</span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-            Zonas de Cobertura para Servicios de Arenado y Sandblasting
+            Áreas de Servicio: Zona Norte, Oeste y CABA
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Brindamos <strong>servicio profesional de arenado industrial y sandblasting</strong> en toda el área metropolitana de Buenos Aires. 
+            Brindamos servicio profesional de sandblasting industrial y granallado en toda el área metropolitana de Buenos Aires. 
             Nuestro equipo móvil se desplaza hasta tu ubicación para garantizar resultados excepcionales.
           </p>
         </div>
@@ -30,15 +30,23 @@ export function CoverageSection() {
             Zona Norte GBA
           </h2>
           <div className="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto">
-            {zonaNorte.map((area, index) => (
-              <Link 
-                key={index}
-                href={`/zonas-de-cobertura/zona-norte/${area.toLowerCase().replace(/\s+/g, '-')}`}
-                className="px-6 py-3 text-base text-center bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:bg-blue-100 hover:-translate-y-1"
-              >
-                <div className="font-medium text-blue-800">Arenado en {area}</div>
-              </Link>
-            ))}
+            {zonaNorte.map((area, index) => {
+              const anchorTexts = [
+                `Sandblasting en ${area}`,
+                `Servicio en ${area}`,
+                `Arenado en ${area}`,
+                `Granallado en ${area}`,
+              ]
+              return (
+                <Link 
+                  key={index}
+                  href={`/zonas-de-cobertura/zona-norte/${area.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-6 py-3 text-base text-center bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:bg-blue-100 hover:-translate-y-1"
+                >
+                  <div className="font-medium text-blue-800">{anchorTexts[index % anchorTexts.length]}</div>
+                </Link>
+              )
+            })}
           </div>
         </div>
 
@@ -49,15 +57,23 @@ export function CoverageSection() {
             Zona Oeste GBA
           </h2>
           <div className="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto">
-            {zonaOeste.map((area, index) => (
-              <Link 
-                key={index}
-                href={`/zonas-de-cobertura/zona-oeste/${area.toLowerCase().replace(/\s+/g, '-')}`}
-                className="px-6 py-3 text-base text-center bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:bg-blue-100 hover:-translate-y-1"
-              >
-                <div className="font-medium text-blue-800">Arenado en {area}</div>
-              </Link>
-            ))}
+            {zonaOeste.map((area, index) => {
+              const anchorTexts = [
+                `Servicio en ${area}`,
+                `Sandblasting en ${area}`,
+                `Arenado en ${area}`,
+                `Granallado en ${area}`,
+              ]
+              return (
+                <Link 
+                  key={index}
+                  href={`/zonas-de-cobertura/zona-oeste/${area.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-6 py-3 text-base text-center bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:bg-blue-100 hover:-translate-y-1"
+                >
+                  <div className="font-medium text-blue-800">{anchorTexts[index % anchorTexts.length]}</div>
+                </Link>
+              )
+            })}
           </div>
         </div>
 
@@ -74,7 +90,7 @@ export function CoverageSection() {
                 href={`/zonas-de-cobertura/${area.toLowerCase().replace(/\s+/g, '-')}`}
                 className="px-6 py-3 text-base text-center bg-blue-50 rounded-xl shadow-sm hover:shadow-md transition-all hover:bg-blue-100 hover:-translate-y-1"
               >
-                <div className="font-medium text-blue-800">Arenado en {area}</div>
+                <div className="font-medium text-blue-800">Sandblasting en {area}</div>
               </Link>
             ))}
           </div>
