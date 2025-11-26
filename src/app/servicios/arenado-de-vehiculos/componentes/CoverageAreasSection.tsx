@@ -40,7 +40,7 @@ export function CoverageAreasSection() {
             Servicio de Arenado de Vehículos en Buenos Aires | Zona Norte, Oeste y CABA
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            <strong>Servicio profesional de arenado automotriz en toda la región metropolitana.</strong> Especialistas 
+            Servicio profesional de arenado automotriz en toda la región. Especialistas 
             en arenado de autos, camionetas y vehículos comerciales en Pilar, San Isidro, Tigre y todo Buenos Aires. 
             Contamos con equipos móviles para brindar servicio en tu zona.
           </p>
@@ -51,7 +51,7 @@ export function CoverageAreasSection() {
             <div key={zone} className="bg-white rounded-lg shadow-md p-6" role="region" aria-label={`Cobertura en ${zone}`}>
               <div className="flex items-center mb-4">
                 <MapPin className="h-6 w-6 text-blue-600 mr-2" aria-hidden="true" />
-                <h3 className="text-xl font-bold text-gray-900">Arenado en {zone}</h3>
+                <div className="text-xl font-bold text-gray-900">Arenado en {zone}</div>
               </div>
               <ul className="flex flex-wrap gap-4">
                 {areas.map((area) => (
@@ -73,9 +73,9 @@ export function CoverageAreasSection() {
 
         <div className="mt-8 text-center">
           <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">
+            <div className="text-xl font-semibold text-blue-900 mb-2">
               ¿Necesitás Arenado de Vehículos en Tu Zona?
-            </h3>
+            </div>
             <p className="text-blue-800 mb-4">
               Brindamos servicio en todo el Gran Buenos Aires. Consultá disponibilidad y presupuesto para tu ubicación.
             </p>

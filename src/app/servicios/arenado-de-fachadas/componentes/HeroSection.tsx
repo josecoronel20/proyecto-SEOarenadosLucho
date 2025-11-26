@@ -78,7 +78,7 @@ export function HeroSection() {
                 Arenado de Fachadas en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Especialistas certificados en limpieza y restauración profesional de fachadas. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro y todo el corredor norte de Buenos Aires. 
+                Arenados Lucho ofrece limpieza profesional de edificios y restauración de fachadas. Realizamos trabajos en Zona Norte, Zona Oeste y CABA. Atendemos en Pilar, San Isidro y todo el corredor norte de Buenos Aires. 
                 Más de 15 años brindando servicios premium de arenado para casas, edificios y locales comerciales. 
                 Eliminación garantizada de pintura antigua, hongos y preparación especializada para revestimientos exteriores.
               </p>
@@ -91,7 +91,7 @@ export function HeroSection() {
                     href="/presupuesto-rapido" 
                     aria-label="Cotización online 24hs para arenado de fachadas en Zona Norte Buenos Aires"
                   >
-                    Cotización Online 24hs | Zona Norte
+                    Solicitar Presupuesto
                   </Link>
                 </Button>
               </div>

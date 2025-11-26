@@ -73,10 +73,10 @@ export function FinalCTASection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+                <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                   <MessageCircle className="h-6 w-6 mr-2" />
                   Presupuesto Gratuito por WhatsApp - Zona Norte GBA
-                </h3>
+                </div>
                 <p className="text-sm opacity-90 mb-4">
                   Atención personalizada en Pilar, San Isidro, Tigre y alrededores. Envianos fotos de tus piezas metálicas para recibir una cotización detallada al instante. Incluye asesoramiento técnico especializado sin cargo.
                 </p>
@@ -84,10 +84,10 @@ export function FinalCTASection() {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+                <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                   <Clock className="h-6 w-6 mr-2" />
                   Cotización Online - Arenado Industrial Profesional
-                </h3>
+                </div>
                 <p className="text-sm opacity-90 mb-4">
                   Servicio express para toda la Zona Norte del GBA. Completá el formulario y recibí en 24 horas una cotización detallada para el arenado industrial de tus piezas metálicas.
                 </p>
@@ -109,9 +109,9 @@ export function FinalCTASection() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-2">
+              <div className="text-lg font-semibold mb-2">
                 🏆 Empresa Líder en Arenado Industrial de Piezas Metálicas en Zona Norte Buenos Aires
-              </h3>
+              </div>
               <p className="text-sm opacity-90">
                 Más de 100 empresas confían en nuestro servicio profesional de arenado industrial en Pilar, San Isidro, Tigre y toda la región norte. 
                 Equipo especializado con más de 15 años de experiencia en tratamiento de superficies metálicas. 

@@ -11,8 +11,8 @@ import { FinalCTASection } from "./componentes/FinalCTASection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado de Vehículos en Zona Norte, Oeste y CABA | Servicio Automotriz Profesional - Cotizá Online",
-  description: "Arenado de vehículos en Zona Norte, Oeste y CABA. Removemos pintura, óxido y corrosión para preparar carrocerías y chasis. Servicio móvil y presupuesto gratuito por WhatsApp.",
+  title: "Arenado de Vehículos en Zona Norte, Oeste y CABA | Arenados Lucho",
+  description: "Arenado de vehículos en Zona Norte, Oeste y CABA. Removemos pintura, óxido y corrosión. Servicio móvil. Presupuesto gratuito.",
   keywords: "arenado vehiculos Pilar, remocion pintura auto Zona Norte, restauracion automotriz Buenos Aires, arenado carroceria, preparacion pintura vehiculos, sandblasting auto",
 }
 

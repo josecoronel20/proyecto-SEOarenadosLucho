@@ -75,11 +75,11 @@ export function CoverageAreasSection() {
       <section className="py-16 bg-gray-50" aria-label="Zonas de cobertura para arenado de fachadas profesional en Buenos Aires 2024">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl font-bold mb-4">
               Arenado de Fachadas Profesional en Buenos Aires 2024 | Servicio Local Especializado
-            </h1>
+            </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              <strong>Expertos locales certificados en arenado de fachadas con más de 15 años de experiencia en Buenos Aires.</strong> Brindamos 
+              Expertos locales certificados en arenado de fachadas con más de 15 años de experiencia. Brindamos 
               servicio especializado de arenado para fachadas residenciales y comerciales, limpieza integral y eliminación de pintura antigua en toda la región metropolitana. 
               Utilizamos equipamiento de última generación y contamos con personal local altamente capacitado para garantizar resultados profesionales duraderos.
             </p>
@@ -112,9 +112,9 @@ export function CoverageAreasSection() {
 
           <div className="mt-12 text-center">
             <div className="bg-blue-50 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+              <div className="text-2xl font-semibold text-blue-900 mb-4">
                 ¿Busca Servicio Local de Arenado de Fachadas en Buenos Aires 2024?
-              </h3>
+              </div>
               <p className="text-blue-800 mb-6 text-lg">
                 Solicite presupuesto sin cargo para arenado de fachadas certificado en su zona. Garantizamos calidad superior y atención personalizada por expertos locales en limpieza de fachadas residenciales y comerciales.
               </p>

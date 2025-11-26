@@ -4,11 +4,11 @@ import { BenefitsSection } from "@/components/homeComponents/BenefitsSection"
 import { ServicesSection } from "@/components/homeComponents/ServicesSection"
 import { ProjectsSection } from "@/components/homeComponents/ProjectsSection"
 import { ProcessSection } from "@/components/homeComponents/ProcessSection"
-import { QuoteFormSection } from "@/components/common/QuoteFormSection"
 import { CoverageSection } from "@/components/homeComponents/CoverageSection"
 import dynamic from "next/dynamic"
 import { Suspense } from "react"
 const FAQSection = dynamic(() => import("@/components/homeComponents/FAQSection").then(m => m.FAQSection), { ssr: false })
+const QuoteFormSection = dynamic(() => import("@/components/common/QuoteFormSection").then(m => m.QuoteFormSection), { ssr: false })
 import { TrustSection } from "@/components/homeComponents/TrustSection"
 import type { Metadata } from "next"
 
@@ -59,9 +59,7 @@ export default function HomePage() {
         <Suspense>
           <ProcessSection />
         </Suspense>
-        <Suspense>
-          <QuoteFormSection />
-        </Suspense>
+        <QuoteFormSection />
         <Suspense>
           <CoverageSection />
         </Suspense>

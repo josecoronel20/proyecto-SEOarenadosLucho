@@ -92,7 +92,7 @@ export function ReviewsSection() {
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <div>
-                      <h3 className="font-semibold text-gray-900">{review.name}</h3>
+                      <div className="font-semibold text-gray-900">{review.name}</div>
                       <div className="flex items-center text-sm text-muted-foreground">
                         <MapPin className="h-4 w-4 mr-1" aria-label="Ubicación" />
                         {review.location}
@@ -131,9 +131,9 @@ export function ReviewsSection() {
 
           <div className="text-center">
             <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <div className="text-2xl font-bold text-gray-900 mb-4">
                 Solicitá tu Presupuesto Gratuito para Arenado de Fachadas en Zona Norte 2025
-              </h3>
+              </div>
               <p className="text-muted-foreground mb-6">
                 Unite a más de 140 propietarios satisfechos que ya confiaron en nuestro servicio profesional de arenado y restauración de fachadas en Pilar, San Isidro y todo el corredor norte.
               </p>

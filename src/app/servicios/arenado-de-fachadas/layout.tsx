@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://arenadoslucho.com"),
+  metadataBase: new URL("https://www.arenadoslucho.com.ar"),
   alternates: {
     canonical: "/servicios/arenado-de-fachadas",
   },
   openGraph: {
     title: "Arenado de Fachadas en Pilar y Zona Norte 2025 | Servicio Premium Certificado",
     description: "Expertos en limpieza y restauración de fachadas en Pilar, San Isidro y Zona Norte. Más de 15 años de experiencia. Presupuesto gratuito y garantía por escrito.",
-    url: "https://arenadoslucho.com/servicios/arenado-de-fachadas",
+    url: "https://www.arenadoslucho.com.ar/servicios/arenado-de-fachadas",
     siteName: "Arenados Lucho",
     locale: "es_AR",
     type: "website",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     "DC.coverage": "Pilar, San Isidro, Tigre, Vicente López, Zona Norte, Buenos Aires",
     "DC.type": "Service",
     "DC.format": "text/html",
-    "DC.identifier": "https://arenadoslucho.com/servicios/arenado-de-fachadas",
+    "DC.identifier": "https://www.arenadoslucho.com.ar/servicios/arenado-de-fachadas",
     "DC.rights": "Copyright Arenados Lucho",
     "DC.date.created": "2025-01-27",
     "DC.date.modified": "2025-01-27",
@@ -108,7 +108,7 @@ export default function ArenadoFachadasLayout({
             "name": "Arenados Lucho - Expertos en Arenado de Fachadas",
             "image": "/images/logo.webp",
             "description": "Servicio profesional de arenado y limpieza de fachadas en Pilar, San Isidro y Zona Norte de Buenos Aires. Más de 15 años de experiencia en restauración de edificios residenciales y comerciales.",
-            "url": "https://arenadoslucho.com/servicios/arenado-de-fachadas",
+            "url": "https://www.arenadoslucho.com.ar/servicios/arenado-de-fachadas",
             "telephone": "+54 9 11 2378-7750",
             "email": "arenadoslucho@hotmail.com",
             "address": {
@@ -214,19 +214,19 @@ export default function ArenadoFachadasLayout({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": "https://arenadoslucho.com"
+                "item": "https://www.arenadoslucho.com.ar"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Servicios",
-                "item": "https://arenadoslucho.com/servicios"
+                "item": "https://www.arenadoslucho.com.ar/servicios"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Arenado de Fachadas",
-                "item": "https://arenadoslucho.com/servicios/arenado-de-fachadas"
+                "item": "https://www.arenadoslucho.com.ar/servicios/arenado-de-fachadas"
               }
             ]
           })

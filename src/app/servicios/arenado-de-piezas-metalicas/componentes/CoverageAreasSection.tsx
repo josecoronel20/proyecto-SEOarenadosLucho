@@ -69,9 +69,9 @@ export function CoverageAreasSection() {
       <section className="py-16 bg-gray-50" aria-label="Zonas de cobertura para arenado de piezas metálicas">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl font-bold mb-4">
               Arenado Industrial de Piezas Metálicas en Buenos Aires | Servicio Profesional
-            </h1>
+            </h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               <strong>Expertos en arenado industrial con más de 15 años de experiencia.</strong> Brindamos servicio 
               especializado de arenado para piezas metálicas en toda la región metropolitana. Equipamiento de última 
@@ -106,9 +106,9 @@ export function CoverageAreasSection() {
 
           <div className="mt-12 text-center">
             <div className="bg-blue-50 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+              <div className="text-2xl font-semibold text-blue-900 mb-4">
                 ¿Buscás Arenado Industrial de Calidad en Tu Zona?
-              </h3>
+              </div>
               <p className="text-blue-800 mb-6 text-lg">
                 Presupuesto sin cargo para arenado industrial en todo Buenos Aires. Garantía de calidad y servicio profesional.
               </p>

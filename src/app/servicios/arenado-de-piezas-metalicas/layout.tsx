@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://arenadoslucho.com"),
+  metadataBase: new URL("https://www.arenadoslucho.com.ar"),
   alternates: {
     canonical: "/servicios/arenado-de-piezas-metalicas",
   },
   openGraph: {
     title: "Arenado de Piezas Metálicas en Pilar y Zona Norte 2025 | Servicio Industrial Profesional",
     description: "Expertos en arenado de piezas metálicas con precisión en Pilar, San Isidro y Zona Norte. Más de 15 años de experiencia. Presupuesto gratuito.",
-    url: "https://arenadoslucho.com/servicios/arenado-de-piezas-metalicas",
+    url: "https://www.arenadoslucho.com.ar/servicios/arenado-de-piezas-metalicas",
     siteName: "Arenados Lucho",
     locale: "es_AR",
     type: "website",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     "DC.coverage": "Pilar, San Isidro, Tigre, Vicente López, San Fernando, Zona Norte, Buenos Aires",
     "DC.type": "Service",
     "DC.format": "text/html",
-    "DC.identifier": "https://arenadoslucho.com/servicios/arenado-de-piezas-metalicas",
+    "DC.identifier": "https://www.arenadoslucho.com.ar/servicios/arenado-de-piezas-metalicas",
     "DC.rights": "Copyright Arenados Lucho",
     "DC.date.created": "2025-01-27",
     "DC.date.modified": "2025-01-27",
@@ -106,7 +106,7 @@ export default function ArenadoPiezasMetalicasLayout({
             "name": "Arenados Lucho - Expertos en Arenado de Piezas Metálicas",
             "image": "/images/logo.webp",
             "description": "Servicio profesional de arenado de piezas metálicas con precisión en Pilar, San Isidro y Zona Norte de Buenos Aires. Más de 15 años de experiencia en servicios industriales de precisión.",
-            "url": "https://arenadoslucho.com/servicios/arenado-de-piezas-metalicas",
+            "url": "https://www.arenadoslucho.com.ar/servicios/arenado-de-piezas-metalicas",
             "telephone": "+54 9 11 2378-7750",
             "email": "arenadoslucho@hotmail.com",
             "address": {
@@ -212,19 +212,19 @@ export default function ArenadoPiezasMetalicasLayout({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": "https://arenadoslucho.com"
+                "item": "https://www.arenadoslucho.com.ar"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Servicios",
-                "item": "https://arenadoslucho.com/servicios"
+                "item": "https://www.arenadoslucho.com.ar/servicios"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Arenado de Piezas Metálicas",
-                "item": "https://arenadoslucho.com/servicios/arenado-de-piezas-metalicas"
+                "item": "https://www.arenadoslucho.com.ar/servicios/arenado-de-piezas-metalicas"
               }
             ]
           })

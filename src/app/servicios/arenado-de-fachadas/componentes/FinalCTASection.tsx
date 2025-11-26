@@ -87,10 +87,10 @@ export function FinalCTASection() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+                <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                   <MessageCircle className="h-6 w-6 mr-2" />
                   Presupuesto Gratuito WhatsApp - Arenado Fachadas Pilar 2025
-                </h3>
+                </div>
                 <p className="text-sm opacity-90 mb-4">
                   Atención local inmediata en Pilar, San Isidro y alrededores.
                   Enviá fotos de tu fachada y recibí una cotización detallada al
@@ -100,10 +100,10 @@ export function FinalCTASection() {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 flex items-center justify-center">
+                <div className="text-xl font-semibold mb-4 flex items-center justify-center">
                   <Clock className="h-6 w-6 mr-2" />
                   Cotización Online - Arenado Fachadas San Isidro 2025
-                </h3>
+                </div>
                 <p className="text-sm opacity-90 mb-4">
                   Servicio express local para Pilar, San Isidro y Zona Norte.
                   Completá el formulario y recibí en 24 horas una cotización
@@ -116,7 +116,7 @@ export function FinalCTASection() {
                   asChild
                 >
                   <Link href="/presupuesto-rapido">
-                    Solicitar Presupuesto en San Isidro
+                    Cotizar Online
                   </Link>
                 </Button>
               </div>
@@ -135,10 +135,10 @@ export function FinalCTASection() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-2">
+              <div className="text-lg font-semibold mb-2">
                 🏆 Empresa Líder en Arenado de Fachadas en Pilar y Zona Norte
                 2025
-              </h3>
+              </div>
               <p className="text-sm opacity-90">
                 Más de 90 familias de Pilar, San Isidro y Zona Norte confían en
                 nuestro servicio local de arenado de fachadas certificado.
