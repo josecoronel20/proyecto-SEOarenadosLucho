@@ -161,7 +161,7 @@ export default function ArenadoDeHierroPage() {
                   {
                     icon: Users,
                     title: "Atención Personalizada",
-                    desc: "Asesoramiento técnico gratuito y garantía por escrito en todos los trabajos."
+                    desc: "Asesoramiento técnico gratuito y garantía por escrito en todos los proyectos."
                   }
                 ].map((item, i) => (
                   <div key={i} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">

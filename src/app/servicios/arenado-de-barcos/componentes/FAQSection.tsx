@@ -21,7 +21,7 @@ export function FAQSection() {
       answer: "El precio del arenado de barcos varía según el tamaño de la embarcación, estado del casco y ubicación. Para lanchas estándar en Tigre o San Fernando, el costo oscila según el tamaño. Ofrecemos presupuesto gratuito y sin compromiso."
     },
     {
-      question: "¿Cuánto tarda el trabajo de arenado de barcos?",
+      question: "¿Cuánto tarda el servicio de arenado de barcos?",
       answer: "El tiempo de arenado depende del tamaño de la embarcación y el tipo de incrustaciones. Para lanchas: 1 día, para embarcaciones más grandes: 2-3 días. Incluye limpieza, arenado y preparación final. Trabajamos en toda Zona Norte y CABA."
     },
     {

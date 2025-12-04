@@ -10,7 +10,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Enero 2024",
       content:
-        "Realizaron un excelente trabajo en mi barco. Sacaron la pintura vieja del casco y dejaron la superficie perfecta para el pintura. Muy profesionales.",
+        "Brindaron un excelente servicio en mi barco. Sacaron la pintura vieja del casco y dejaron la superficie perfecta para el pintura. Muy profesionales.",
       service: "Arenado de Casco para Pintura",
       verified: true,
     },

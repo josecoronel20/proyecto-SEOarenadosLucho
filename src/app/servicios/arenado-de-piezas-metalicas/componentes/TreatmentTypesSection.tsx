@@ -40,7 +40,7 @@ export function TreatmentTypesSection() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-blue-500">•</span>
-                  Trabajo inmediato en el lugar
+                  Servicio inmediato en el lugar
                 </li>
               </ul>
             </CardContent>
@@ -50,7 +50,7 @@ export function TreatmentTypesSection() {
             <CardHeader>
               <CardTitle className="text-2xl text-orange-600">Servicio en Taller</CardTitle>
               <CardDescription className="text-lg">
-                Trabajo especializado en nuestras instalaciones
+                Servicio especializado en nuestras instalaciones
               </CardDescription>
             </CardHeader>
             <CardContent>

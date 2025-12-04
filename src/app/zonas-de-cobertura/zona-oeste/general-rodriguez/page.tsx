@@ -227,7 +227,7 @@ export default function GeneralRodriguezPage() {
                   </div>
                   <p className="text-sm text-orange-800 mb-4">
                     "Contraté el servicio para mis camiones comerciales. 
-                    El trabajo fue impecable y muy rápido. 
+                    El resultado fue impecable y muy rápido. 
                     Definitivamente los recomiendo para vehículos industriales."
                   </p>
                   <div className="text-sm font-semibold text-orange-700">

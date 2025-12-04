@@ -41,7 +41,7 @@ export function TrustSection() {
       location: "San Isidro",
       service: "Arenado de Vehículo",
       rating: 5,
-      text: "Arenaron mi auto y quedó como nuevo. Muy buen trabajo, precios justos y servicio a domicilio. El equipo fue muy cuidadoso con el vehículo. Volveré a contratarlos."
+      text: "Arenaron mi auto y quedó como nuevo. Muy buen servicio, precios justos y servicio a domicilio. El equipo fue muy cuidadoso con el vehículo. Volveré a contratarlos."
     },
     {
       name: "Ana Martínez",
@@ -56,7 +56,7 @@ export function TrustSection() {
     {
       icon: Shield,
       title: "Seguro de Responsabilidad Civil",
-      description: "Cobertura completa para todos nuestros trabajos"
+      description: "Cobertura completa para todos nuestros proyectos"
     },
     {
       icon: Award,
@@ -66,7 +66,7 @@ export function TrustSection() {
     {
       icon: MapPin,
       title: "Servicio Móvil Certificado",
-      description: "Equipos certificados para trabajo en cualquier ubicación"
+      description: "Equipos certificados para ejecución en cualquier ubicación"
     }
   ]
 

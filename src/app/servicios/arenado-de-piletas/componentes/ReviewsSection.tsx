@@ -20,7 +20,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Diciembre 2023",
       content:
-        "Buen trabajo y sin complicaciones. Llegaron con todo el equipo, hicieron el arenado en un día y dejaron todo limpio. Recomendables para Zona Norte.",
+        "Buen resultado y sin complicaciones. Llegaron con todo el equipo, hicieron el arenado en un día y dejaron todo limpio. Recomendables para Zona Norte.",
       service: "Arenado Integral",
       verified: true,
     },
@@ -30,7 +30,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Noviembre 2023",
       content:
-        "El resultado fue excelente. Teníamos manchas y la superficie quedó perfecta para revestir. El equipo fue cuidadoso y prolijo durante todo el trabajo.",
+        "El resultado fue excelente. Teníamos manchas y la superficie quedó perfecta para revestir. El equipo fue cuidadoso y prolijo durante todo el proceso.",
       service: "Arenado de Pileta Residencial",
       verified: true,
     },

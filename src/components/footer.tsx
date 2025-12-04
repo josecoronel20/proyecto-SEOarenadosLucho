@@ -64,8 +64,8 @@ const quickLinks = [
 const contactInfo = [
   {
     icon: Phone,
-    text: "+54 9 11 2378-7750",
-    href: "tel:+5491123787750"
+    text: "WhatsApp",
+    href: "https://wa.me/5491123787750"
   },
   {
     icon: Mail,

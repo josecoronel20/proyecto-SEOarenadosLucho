@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      content: "Excelente servicio de arenado en Pilar. Arenaron mi pileta y quedó perfecta. Muy profesionales, llegaron puntuales y el trabajo fue impecable. Definitivamente los recomiendo para cualquier trabajo de arenado.",
+      content: "Excelente servicio de arenado en Pilar. Arenaron mi pileta y quedó perfecta. Muy profesionales, llegaron puntuales y el resultado fue impecable. Definitivamente los recomiendo para cualquier servicio de arenado.",
       author: "María González",
       location: "Centro de Pilar",
       rating: 5,
@@ -12,7 +12,7 @@ export function TestimonialsSection() {
       authorColor: "text-green-700"
     },
     {
-      content: "Contraté el servicio de arenado industrial para mi empresa en el Polo Industrial de Pilar. Arenaron toda la maquinaria y quedó como nueva. Muy recomendables para trabajos industriales de arenado.",
+      content: "Contraté el servicio de arenado industrial para mi empresa en el Polo Industrial de Pilar. Arenaron toda la maquinaria y quedó como nueva. Muy recomendables para servicios industriales de arenado.",
       author: "Carlos Rodríguez",
       location: "Polo Industrial Pilar",
       rating: 5,

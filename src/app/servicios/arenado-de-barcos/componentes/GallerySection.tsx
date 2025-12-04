@@ -30,7 +30,7 @@ export function GallerySection() {
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" asChild>
             <Link href="/proyectos" className="flex items-center gap-2">
               <Eye className="h-5 w-5" />
-              Ver Más Trabajos de Arenado Naval
+              Ver Más Proyectos de Arenado Naval
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

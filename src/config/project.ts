@@ -173,7 +173,7 @@ export const PROJECT: Readonly<ProjectConfig> = {
       href: "/servicios/arenado-de-piezas-metalicas",
       features: [
         "Piezas mecánicas",
-        "Trabajo en taller",
+        "Servicio en taller",
         "Terminación uniforme"
       ]
     },
@@ -212,7 +212,7 @@ export const PROJECT: Readonly<ProjectConfig> = {
     },
     {
       title: "Arenado en taller",
-      description: "Trabajo en cabina especializada para piezas pequeñas y trabajos de alta precisión",
+      description: "Servicio en cabina especializada para piezas pequeñas y proyectos de alta precisión",
       icon: "Award"
     }
   ],

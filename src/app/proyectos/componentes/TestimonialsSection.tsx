@@ -13,14 +13,14 @@ export function TestimonialsSection() {
       name: "Carlos Rodríguez",
       location: "San Isidro",
       project: "Arenado Industrial",
-      content: "Trabajo impecable en nuestros equipos industriales. Muy recomendables en Zona Norte.",
+      content: "Servicio impecable en nuestros equipos industriales. Muy recomendables en Zona Norte.",
       rating: 5
     },
     {
       name: "Ana Martínez",
       location: "Tigre",
       project: "Mantenimiento Naval",
-      content: "Conocen perfectamente el trabajo naval. Mi yate quedó como nuevo. Excelente servicio en el Delta.",
+      content: "Conocen perfectamente el área naval. Mi yate quedó como nuevo. Excelente servicio en el Delta.",
       rating: 5
     }
   ]
@@ -33,7 +33,7 @@ export function TestimonialsSection() {
             Testimonios de Clientes en Pilar y Zona Norte
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            La satisfacción de nuestros clientes locales es el mejor testimonio de nuestro trabajo de arenado.
+            La satisfacción de nuestros clientes locales es el mejor testimonio de nuestro servicio de arenado.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6" role="list" aria-label="Testimonios de clientes">

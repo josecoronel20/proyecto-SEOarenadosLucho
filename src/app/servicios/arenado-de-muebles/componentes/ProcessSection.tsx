@@ -7,7 +7,7 @@ export function ProcessSection() {
       step: "01",
       icon: <ClipboardCheck className="h-8 w-8 text-white" />,
       title: "Evaluación del Mueble",
-      description: "Inspección detallada del mueble para identificar tipo de madera, estado de la pintura, barniz y estructura. Análisis técnico del trabajo de restauración necesario y recomendaciones específicas."
+      description: "Inspección detallada del mueble para identificar tipo de madera, estado de la pintura, barniz y estructura. Análisis técnico del proyecto de restauración necesario y recomendaciones específicas."
     },
     {
       step: "02", 

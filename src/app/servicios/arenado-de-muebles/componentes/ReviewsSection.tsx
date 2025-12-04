@@ -20,7 +20,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Diciembre 2023",
       content:
-        "Servicio premium de arenado de muebles en San Isidro. Realizaron un trabajo impecable en mis muebles de madera, quedaron perfectamente preparados para el barnizado. Excelente atención y asesoramiento técnico. Los recomiendo 100% para restauración de muebles en Zona Norte.",
+        "Servicio premium de arenado de muebles en San Isidro. Brindaron un servicio impecable en mis muebles de madera, quedaron perfectamente preparados para el barnizado. Excelente atención y asesoramiento técnico. Los recomiendo 100% para restauración de muebles en Zona Norte.",
       service: "Arenado Profesional y Preparación para Barnizado",
       verified: true,
     },

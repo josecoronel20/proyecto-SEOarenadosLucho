@@ -206,7 +206,7 @@ function generateStructuredData() {
             bestRating: "5",
           },
           reviewBody:
-            "Arenaron mi auto y quedó como nuevo. Muy buen trabajo, precios justos y servicio a domicilio. Volveré a contratarlos.",
+            "Arenaron mi auto y quedó como nuevo. Muy buen resultado, precios justos y servicio a domicilio. Volveré a contratarlos.",
         },
         {
           "@type": "Review",

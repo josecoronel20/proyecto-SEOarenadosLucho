@@ -84,7 +84,7 @@ src/
 
 1. **Inicio** - Página principal con hero section y servicios destacados
 2. **Servicios** - Lista completa de servicios con navegación por categorías
-3. **Proyectos** - Portfolio de trabajos realizados
+3. **Proyectos** - Portfolio de proyectos realizados
 4. **Blog** - Artículos informativos sobre arenado
 5. **Preguntas Frecuentes** - FAQ completo con respuestas detalladas
 6. **Presupuesto Rápido** - Formulario de cotización interactivo

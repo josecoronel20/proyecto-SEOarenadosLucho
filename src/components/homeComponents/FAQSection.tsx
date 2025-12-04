@@ -76,7 +76,7 @@ export function FAQSection() {
         "Es responsabilidad del contratista despejar el área de personal ajeno y cubrir/proteger zonas sensibles al polvo. Nosotros nos encargamos de remover todos los residuos del arenado y dejamos el área limpia. Utilizamos equipos con supresión de polvo cuando es posible.",
     },
     {
-      question: "¿Cuánto tiempo lleva el trabajo de arenado?",
+      question: "¿Cuánto tiempo lleva el servicio de arenado?",
       answer:
         "Depende del tamaño y complejidad del proyecto. Las piletas de casas particulares generalmente se terminan en el día. Para calcular un tiempo más preciso, realizamos una prueba inicial en el material para evaluar su estado y dar una estimación exacta.",
     },
@@ -91,9 +91,9 @@ export function FAQSection() {
         "No, cuando se realiza correctamente por profesionales como nosotros, el arenado no daña la superficie. Utilizamos la presión y el abrasivo adecuados para cada material, garantizando una limpieza efectiva sin causar daños estructurales.",
     },
     {
-      question: "¿Ofrecen garantía en sus trabajos de arenado?",
+      question: "¿Ofrecen garantía en sus servicios de arenado?",
       answer:
-        "Sí, ofrecemos garantía completa en todos nuestros trabajos. La duración varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro trabajo y la satisfacción del cliente.",
+        "Sí, ofrecemos garantía completa en todos nuestros proyectos. La duración varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro servicio y la satisfacción del cliente.",
     },
   ]
 

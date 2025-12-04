@@ -20,7 +20,7 @@ export function TreatmentTypesSection() {
             <CardContent>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-center gap-2">• Inspección técnica inicial para evaluación detallada de superficies metálicas y condiciones del sitio</li>
-                <li className="flex items-center gap-2">• Gestión completa de documentación y permisos para trabajos en plantas industriales</li>
+                <li className="flex items-center gap-2">• Gestión completa de documentación y permisos en plantas industriales</li>
                 <li className="flex items-center gap-2">• Análisis profesional y prueba preliminar para determinar el tratamiento óptimo</li>
                 <li className="flex items-center gap-2">• Planificación estratégica de equipos industriales y materiales según dimensiones del proyecto</li>
               </ul>

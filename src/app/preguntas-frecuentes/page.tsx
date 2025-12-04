@@ -66,7 +66,7 @@ export default function PreguntasFrecuentesPage() {
         },
         {
           question: "¿Ofrecen garantía en sus servicios de arenado?",
-          answer: "Sí, ofrecemos garantía completa en todos nuestros trabajos. La duración de la garantía varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro trabajo y la satisfacción del cliente."
+          answer: "Sí, ofrecemos garantía completa en todos nuestros proyectos. La duración de la garantía varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro proyecto y la satisfacción del cliente."
         },
         {
           question: "¿Trabajan con equipos móviles o en taller?",
@@ -99,7 +99,7 @@ export default function PreguntasFrecuentesPage() {
         },
         {
           question: "¿Trabajan en piletas de fibra de vidrio?",
-          answer: "No, no trabajamos con piletas de fibra de vidrio debido a que son muy delicadas para el proceso de arenado. Solo trabajamos con piletas de hormigón y gunita, donde nuestras técnicas y materiales abrasivos son seguros y efectivos. Tenemos amplia experiencia con estos tipos de piletas que son los más comunes en Pilar y Zona Norte. Somos la mejor empresa de arenado de piletas en Pilar para este tipo de trabajos."
+          answer: "No, no trabajamos con piletas de fibra de vidrio debido a que son muy delicadas para el proceso de arenado. Solo trabajamos con piletas de hormigón y gunita, donde nuestras técnicas y materiales abrasivos son seguros y efectivos. Tenemos amplia experiencia con estos tipos de piletas que son los más comunes en Pilar y Zona Norte. Somos la mejor empresa de arenado de piletas en Pilar para este tipo de proyectos."
         }
       ]
     },
@@ -120,9 +120,9 @@ export default function PreguntasFrecuentesPage() {
         },
         {
           question: "¿Cuánto cuesta el arenado industrial?",
-          answer: "El precio del arenado industrial depende del trabajo, logística, dimensiones y ubicación. Contactanos para recibir un presupuesto personalizado según las características específicas de tu proyecto."
+          answer: "El precio del arenado industrial depende del proyecto, logística, dimensiones y ubicación. Contactanos para recibir un presupuesto personalizado según las características específicas de tu proyecto."
         },
-        {
+        { 
           question: "¿Preparan superficies para galvanizado?",
           answer: "Sí, el arenado es el método más efectivo para preparar superficies metálicas antes del galvanizado. Elimina óxido, pintura y contaminantes, creando el perfil de superficie ideal para una adhesión perfecta del zinc."
         },
@@ -148,8 +148,8 @@ export default function PreguntasFrecuentesPage() {
           answer: "El precio del arenado de barcos en Tigre depende del tamaño de la embarcación, su ubicación y si requiere remoción superficial o profunda de pintura y contaminantes. Contactanos para recibir un presupuesto personalizado según las características específicas de tu embarcación."
         },
         {
-          question: "¿Cuánto dura el trabajo de arenado en un barco?",
-          answer: "La duración depende del tamaño del barco, el estado de las superficies, la cantidad de incrustaciones y el tipo de trabajo requerido. Cada proyecto es único y requiere una evaluación personalizada para determinar el tiempo necesario. Trabajamos en los clubes náuticos de Tigre y San Isidro."
+          question: "¿Cuánto dura el servicio de arenado en un barco?",
+          answer: "La duración depende del tamaño del barco, el estado de las superficies, la cantidad de incrustaciones y el tipo de servicio requerido. Cada proyecto es único y requiere una evaluación personalizada para determinar el tiempo necesario. Trabajamos en los clubes náuticos de Tigre y San Isidro."
         },
         {
           question: "¿Trabajan en clubes náuticos?",
@@ -216,7 +216,7 @@ export default function PreguntasFrecuentesPage() {
         },
         {
           question: "¿Qué incluye el presupuesto?",
-          answer: "El presupuesto incluye evaluación del sitio, materiales necesarios, tiempo estimado de trabajo, preparación del área, ejecución del arenado, limpieza final, garantía del trabajo realizado, y cronograma de ejecución detallado."
+          answer: "El presupuesto incluye evaluación del sitio, materiales necesarios, tiempo estimado de servicio, preparación del área, ejecución del arenado, limpieza final, garantía del proyecto realizado, y cronograma de ejecución detallado."
         },
         {
           question: "¿Ofrecen descuentos por proyectos grandes?",
@@ -233,11 +233,11 @@ export default function PreguntasFrecuentesPage() {
         },
         {
           question: "¿Cómo puedo contactarlos?",
-          answer: "Puedes contactarnos por WhatsApp al +54 9 11 2378-7750 (recomendado), por teléfono al +54 11 2378-7750, por email a arenadoslucho@hotmail.com, o completando el formulario de presupuesto rápido en nuestro sitio web. Respuesta garantizada en 24 horas."
+          answer: "Puedes contactarnos por WhatsApp (recomendado), por email a arenadoslucho@hotmail.com, o completando el formulario de presupuesto rápido en nuestro sitio web. Respuesta garantizada en 24 horas."
         },
         {
           question: "¿Cuáles son sus horarios de atención?",
-          answer: "Nuestros horarios de atención son de Lunes a Viernes de 8:00 a 18:00, y Sábados de 8:00 a 14:00. Para emergencias, atendemos 24/7. Los trabajos de arenado se realizan en horarios diurnos por seguridad y calidad."
+          answer: "Nuestros horarios de atención son de Lunes a Viernes de 8:00 a 18:00, y Sábados de 8:00 a 14:00. Para emergencias, atendemos 24/7. Los servicios de arenado se realizan en horarios diurnos por seguridad y calidad."
         },
         {
           question: "¿Ofrecen servicio a domicilio?",
@@ -334,9 +334,6 @@ export default function PreguntasFrecuentesPage() {
                 <CardTitle>Llamanos</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  +54 11 2378-7750
-                </CardDescription>
                 <Button variant="outline" className="mt-4" asChild>
                   <Link href="tel:+541123787750">
                     Llamar Ahora
@@ -366,9 +363,6 @@ export default function PreguntasFrecuentesPage() {
                 <CardTitle>WhatsApp</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  +54 9 11 2378-7750
-                </CardDescription>
                 <WhatsAppButton />
               </CardContent>
             </Card>

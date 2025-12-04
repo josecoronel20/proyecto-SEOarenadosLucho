@@ -62,7 +62,7 @@ export function TreatmentTypesSection() {
                   <li className="flex items-center gap-2">• Inspección detallada para identificar tipo de madera, estado de pintura y barniz</li>
                   <li className="flex items-center gap-2">• Análisis profesional del estado estructural y recomendaciones de restauración</li>
                   <li className="flex items-center gap-2">• Planificación específica del tratamiento según el tipo de mueble y acabado deseado</li>
-                  <li className="flex items-center gap-2">• Preparación del área de trabajo y protección de elementos sensibles</li>
+                  <li className="flex items-center gap-2">• Preparación del área y protección de elementos sensibles</li>
                 </ul>
               </CardContent>
             </Card>

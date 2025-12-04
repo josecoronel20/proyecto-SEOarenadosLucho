@@ -19,7 +19,7 @@ export function FAQSection() {
   const faqs = [
     {
       question: "¿Cuál es el costo del arenado industrial profesional en Pilar y Zona Norte de Buenos Aires?",
-      answer: "El precio del arenado industrial profesional en Pilar y Zona Norte varía según factores como: dimensiones del proyecto, tipo de maquinaria o estructura, nivel de corrosión y ubicación específica. Para equipos industriales en Pilar, San Isidro, Tigre y alrededores, realizamos una evaluación técnica gratuita para determinar el costo exacto. Ofrecemos presupuestos detallados sin cargo que incluyen asesoramiento especializado, garantía del servicio y toda la documentación necesaria como certificados de seguridad, permisos de trabajo y garantías por escrito."
+      answer: "El precio del arenado industrial profesional en Pilar y Zona Norte varía según factores como: dimensiones del proyecto, tipo de maquinaria o estructura, nivel de corrosión y ubicación específica. Para equipos industriales en Pilar, San Isidro, Tigre y alrededores, realizamos una evaluación técnica gratuita para determinar el costo exacto. Ofrecemos presupuestos detallados sin cargo que incluyen asesoramiento especializado, garantía del servicio y toda la documentación necesaria como certificados de seguridad, permisos y garantías por escrito."
     },
     {
       question: "¿Cuánto tiempo demora el arenado industrial para maquinaria pesada y estructuras en Buenos Aires?", 

@@ -633,7 +633,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="text-xl mb-10 max-w-3xl mx-auto opacity-95 font-light leading-relaxed">
               Después de leer este artículo sobre {post.category.toLowerCase()},
               ¿estás listo para tu próximo proyecto? Contactanos para obtener un
-              presupuesto personalizado y comenzar tu trabajo de arenado
+              presupuesto personalizado y comenzar tu proyecto de arenado
               profesional.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -662,28 +662,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </Link>
               </Button>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-6">
-                Información de Contacto
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-3xl">📞</span>
-                  <span className="font-medium">WhatsApp</span>
-                  <span className="opacity-90">{PROJECT.contact.whatsapp}</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-3xl">📧</span>
-                  <span className="font-medium">Email</span>
-                  <span className="opacity-90">{PROJECT.contact.email}</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-3xl">⏰</span>
-                  <span className="font-medium">Horarios</span>
-                  <span className="opacity-90">{PROJECT.contact.hours}</span>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>

@@ -50,7 +50,7 @@ export function ProjectsGallerySection() {
             Galería de Proyectos de Arenado en Pilar y Zona Norte - Antes y Después
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Una selección de nuestros mejores trabajos de arenado en diferentes industrias. 
+            Una selección de nuestros mejores proyectos de arenado en diferentes industrias. 
             Servicio profesional de arenado y sandblasting en Pilar, San Isidro, Tigre y todo el Norte de Buenos Aires.
           </p>
         </div>

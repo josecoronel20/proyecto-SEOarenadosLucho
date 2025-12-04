@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      content: "Excelente trabajo en la fachada de mi casa histórica en San Isidro. Preservaron todos los detalles originales y el resultado fue espectacular. Muy profesionales y cuidadosos.",
+      content: "Excelente resultado en la fachada de mi casa histórica en San Isidro. Preservaron todos los detalles originales y el resultado fue espectacular. Muy profesionales y cuidadosos.",
       author: "Dr. Roberto Martínez",
       location: "Barrio Norte",
       rating: 5,

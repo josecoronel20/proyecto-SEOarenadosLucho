@@ -15,7 +15,7 @@ export function ReviewsSection() {
     {
       name: "Laura Martínez",
       location: "Tigre",
-      comment: "Muy contenta con el trabajo. Prepararon bien la superficie y aplicaron la pintura epoxi correctamente.",
+      comment: "Muy contenta con el resultado. Prepararon bien la superficie y aplicaron la pintura epoxi correctamente.",
       rating: 5
     }
   ]

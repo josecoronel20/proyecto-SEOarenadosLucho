@@ -36,8 +36,8 @@ export function FAQSection() {
       answer: "El tiempo depende del tamaño y complejidad del proyecto. Piletas pequeñas: 2-3 días. Estructuras medianas: 3-5 días. Proyectos grandes: 5-7 días. Incluye tiempo de secado entre capas."
     },
     {
-      question: "¿Ofrecen garantía en el trabajo de pintura?",
-      answer: "Sí, ofrecemos garantía por escrito en todos nuestros trabajos de pintura. La duración varía según el tipo de servicio (6 meses para pintura de piletas, 1 año para pintura anticorrosiva)."
+      question: "¿Ofrecen garantía en el servicio de pintura?",
+      answer: "Sí, ofrecemos garantía por escrito en todos nuestros proyectos de pintura. La duración varía según el tipo de servicio (6 meses para pintura de piletas, 1 año para pintura anticorrosiva)."
     }
   ]
 

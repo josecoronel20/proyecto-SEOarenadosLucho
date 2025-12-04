@@ -15,7 +15,7 @@ export function HeroSection() {
               Arenado de Vehículos en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Arenados Lucho ofrece servicio especializado de arenado automotriz profesional. Realizamos trabajos en Zona Norte, Zona Oeste y CABA. Atendemos en Pilar, San Isidro, Tigre y toda Zona Norte de Buenos Aires. 
+              Arenados Lucho ofrece servicio especializado de arenado automotriz profesional. Brindamos nuestro servicio en Zona Norte, Zona Oeste y CABA. Atendemos en Pilar, San Isidro, Tigre y toda Zona Norte de Buenos Aires. 
               Eliminamos óxido, corrosión y pintura deteriorada con técnicas profesionales. Preparación experta para pintura 
               y restauración de autos, camionetas, camiones y todo tipo de vehículos.
             </p>

@@ -16,7 +16,7 @@ export function GallerySection() {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Nuestros Trabajos de Pintura</h2>
+          <h2 className="text-3xl font-bold mb-4">Nuestros Proyectos de Pintura</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             Galería de proyectos completados con nuestro servicio profesional de pintura
           </p>

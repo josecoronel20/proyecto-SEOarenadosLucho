@@ -13,7 +13,7 @@ export function SpecialConsiderationsSection() {
     },
     {
       title: "Edificios Históricos",
-      description: "Especialistas en trabajos en edificios protegidos y estructuras de valor patrimonial. Se debe tener la autorización del Ministerio de Cultura para realizar trabajos en edificios históricos."
+      description: "Especialistas en edificios protegidos y estructuras de valor patrimonial. Se debe tener la autorización del Ministerio de Cultura para ejecutar el servicio en edificios históricos."
     }
   ]
 

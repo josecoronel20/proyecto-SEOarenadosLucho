@@ -48,7 +48,7 @@ export function TreatmentTypesSection() {
 
           <Card className="border-2 border-orange-200">
             <CardHeader>
-              <CardTitle className="text-2xl text-orange-600">Nuestro Proceso de Trabajo</CardTitle>
+              <CardTitle className="text-2xl text-orange-600">Nuestro Proceso de Ejecución</CardTitle>
               <CardDescription className="text-lg">
                 Metodología profesional paso a paso
               </CardDescription>

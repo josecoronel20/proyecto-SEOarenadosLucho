@@ -35,7 +35,7 @@ export function ProcessSection() {
       title: "Preparación y Arenado",
       description: "Protegemos el área, preparamos los equipos y ejecutamos el arenado profesional con técnicas especializadas.",
       details: [
-        "Protección del área de trabajo",
+        "Protección del área de ejecución",
         "Arenado con equipos profesionales",
         "Control de calidad en tiempo real"
       ],
@@ -45,7 +45,7 @@ export function ProcessSection() {
       number: "04",
       icon: CheckCircle,
       title: "Control y Entrega",
-      description: "Verificamos la calidad del trabajo, limpiamos el área y entregamos la superficie lista para el siguiente paso.",
+      description: "Verificamos la calidad del resultado, limpiamos el área y entregamos la superficie lista para el siguiente paso.",
       details: [
         "Inspección final de calidad",
         "Limpieza completa del área",
@@ -78,7 +78,7 @@ export function ProcessSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Nuestro <span className="text-primary">Proceso de Trabajo</span>
+            Nuestro <span className="text-primary">Proceso de Ejecución</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Un proceso probado y eficiente que garantiza resultados excepcionales en cada proyecto de sandblasting profesional. 

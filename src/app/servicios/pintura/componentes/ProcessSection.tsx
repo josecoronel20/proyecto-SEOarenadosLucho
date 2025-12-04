@@ -24,8 +24,8 @@ export function ProcessSection() {
     {
       step: "04",
       icon: <CheckCircle className="h-8 w-8 text-white" />,
-      title: "Entrega y Garantía",
-      description: "Entregamos el trabajo completado con garantía por escrito y seguimiento post-aplicación."
+      title: "Entrega Profesional",
+      description: "Se realiza la entrega final del proyecto, certificando la calidad y brindando asesoramiento para el mantenimiento de la pintura."
     }
   ]
 

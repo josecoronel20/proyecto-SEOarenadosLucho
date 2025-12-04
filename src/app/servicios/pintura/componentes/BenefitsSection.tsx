@@ -30,7 +30,7 @@ export function BenefitsSection() {
     {
       icon: <CheckCircle className="h-6 w-6 text-blue-500" />,
       title: "Garantía de calidad",
-      description: "Todos nuestros trabajos incluyen garantía por escrito y seguimiento post-aplicación"
+      description: "Todos nuestros proyectos incluyen garantía por escrito y seguimiento post-aplicación"
     }
   ]
 

@@ -154,7 +154,7 @@ Dominar búsquedas locales de "arenado + [zona]" en Buenos Aires, especialmente 
 ---
 
 ## 🔧 **Modalidades: móvil y en taller**
-- **Arenado móvil**: Equipos portátiles para trabajo in situ en obras o domicilios
+- **Arenado móvil**: Equipos portátiles para proyectos in situ en obras o domicilios
 - **Arenado en taller**: Cabina cerrada para piezas que requieren mayor precisión
 
 ---

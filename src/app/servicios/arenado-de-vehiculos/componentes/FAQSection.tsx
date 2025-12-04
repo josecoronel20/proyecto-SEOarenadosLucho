@@ -18,10 +18,10 @@ export function FAQSection() {
   const faqs = [
     {
       question: "¿Cuánto cuesta el servicio de arenado de autos en Pilar y Zona Norte de Buenos Aires?",
-      answer: "El precio del arenado profesional de vehículos varía según el tamaño del auto, el estado de oxidación de la carrocería y la ubicación en Zona Norte. Para autos estándar en Pilar, San Isidro o alrededores, el costo se determina según una evaluación técnica del trabajo necesario. Ofrecemos presupuesto detallado totalmente gratuito y sin compromiso."
+      answer: "El precio del arenado profesional de vehículos varía según el tamaño del auto, el estado de oxidación de la carrocería y la ubicación en Zona Norte. Para autos estándar en Pilar, San Isidro o alrededores, el costo se determina según una evaluación técnica. Ofrecemos presupuesto detallado totalmente gratuito y sin compromiso."
     },
     {
-      question: "¿Cuál es el tiempo de trabajo para arenar un vehículo completo?", 
+      question: "¿Cuál es el tiempo para arenar un vehículo completo?", 
       answer: "La duración del proceso de arenado industrial depende del tamaño del vehículo y nivel de corrosión. Para autos , camionetas y vehículos grandes: 1 dia laborable. Brindamos este servicio especializado en toda Zona Norte, CABA y GBA."
     },
     {

@@ -55,12 +55,12 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Proyectos de Arenado en Pilar y Zona Norte",
-  "description": "Galería de proyectos de arenado realizados en Pilar y Zona Norte. Fotos antes y después de trabajos en piletas, industrias, barcos y más.",
+  "description": "Galería de proyectos de arenado realizados en Pilar y Zona Norte. Fotos antes y después de proyectos en piletas, industrias, barcos y más.",
   "url": "https://www.arenadoslucho.com.ar/proyectos",
   "mainEntity": {
     "@type": "ItemList",
     "name": "Proyectos de Arenado",
-    "description": "Portfolio de trabajos de arenado y sandblasting realizados con éxito",
+    "description": "Portfolio de proyectos de arenado y sandblasting realizados con éxito",
     "numberOfItems": "150+",
     "itemListElement": [
       {

@@ -21,7 +21,7 @@ export function FAQSection() {
       answer: "El precio del arenado industrial de piezas metálicas en Pilar y Zona Norte varía según el tamaño, cantidad y estado de corrosión. Para piezas estándar en Pilar, San Isidro, Tigre y alrededores, el costo se determina mediante evaluación de imágenes o visita técnica. Ofrecemos presupuesto gratuito sin compromiso con asesoramiento especializado incluido."
     },
     {
-      question: "¿Cuál es el tiempo de trabajo para arenar piezas metálicas industriales en Buenos Aires?", 
+      question: "¿Cuál es el tiempo de servicio para arenar piezas metálicas industriales en Buenos Aires?", 
       answer: "El proceso de arenado industrial en Buenos Aires tiene tiempos estimados según el proyecto. Servicio express disponible en Zona Norte, CABA y GBA con equipamiento industrial de última generación."
     },
     {

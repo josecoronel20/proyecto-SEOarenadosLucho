@@ -170,7 +170,7 @@ export default function PreguntasFrecuentesLayout({
                 "name": "¿Ofrecen garantía en sus servicios de arenado?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sí, ofrecemos garantía completa en todos nuestros trabajos. La duración de la garantía varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro trabajo y la satisfacción del cliente."
+                  "text": "Sí, ofrecemos garantía completa en todos nuestros proyectos. La duración de la garantía varía según el tipo de servicio (6 meses para piletas, 1 año para industrial), pero siempre garantizamos la calidad de nuestro proyecto y la satisfacción del cliente."
                 }
               }
             ]

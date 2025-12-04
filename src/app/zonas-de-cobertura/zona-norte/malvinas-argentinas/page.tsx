@@ -255,8 +255,8 @@ export default function MalvinasArgentinasPage() {
                   </div>
                   <p className="text-sm text-teal-800 mb-4">
                     "Contraté el servicio para restaurar mis muebles de madera. 
-                    El trabajo fue impecable y muy cuidadoso. 
-                    Muy recomendables para trabajos de restauración."
+                    El resultado fue impecable y muy cuidadoso. 
+                    Muy recomendables para proyectos de restauración."
                   </p>
                   <div className="text-sm font-semibold text-teal-700">
                     - Sr. Carlos Mendoza, Centro de Malvinas Argentinas

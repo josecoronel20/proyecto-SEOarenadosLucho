@@ -255,8 +255,8 @@ export default function CardalesPage() {
                   </div>
                   <p className="text-sm text-violet-800 mb-4">
                     "Contraté el servicio para restaurar mis muebles de madera. 
-                    El trabajo fue impecable y muy cuidadoso. 
-                    Muy recomendables para trabajos de restauración."
+                    El resultado fue impecable y muy cuidadoso. 
+                    Muy recomendables para proyectos de restauración."
                   </p>
                   <div className="text-sm font-semibold text-violet-700">
                     - Sr. Carlos Mendoza, Centro de Cardales

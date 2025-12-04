@@ -12,7 +12,7 @@ export function HeroSection() {
             Proyectos de <span className="text-primary">Arenado en Pilar</span> y Zona Norte - Antes/Después
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Portfolio de trabajos de arenado realizados con éxito en más de 20 años de experiencia local. 
+            Portfolio de proyectos de arenado realizados con éxito en más de 20 años de experiencia local. 
             Servicio profesional de arenado y sandblasting en Pilar, San Isidro, Tigre y todo Zona Norte de Buenos Aires.
           </p>
           <WhatsAppButton />

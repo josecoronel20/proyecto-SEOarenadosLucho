@@ -236,7 +236,7 @@ export default function TigrePage() {
                     </div>
                   </div>
                   <p className="text-sm text-cyan-800 mb-4">
-                    "Excelente trabajo en mi barco en el Puerto de Frutos. Arenaron el casco 
+                    "Excelente resultado en mi barco en el Puerto de Frutos. Arenaron el casco 
                     y quedó como nuevo. Conocen muy bien cómo trabajar con embarcaciones. 
                     Muy recomendables."
                   </p>
@@ -256,7 +256,7 @@ export default function TigrePage() {
                   <p className="text-sm text-cyan-800 mb-4">
                     "Arenaron la pileta de mi casa en el Delta y quedó perfecta. 
                     Entienden las particularidades del ambiente húmedo. 
-                    Trabajo impecable y muy profesionales."
+                    Resultado impecable y muy profesionales."
                   </p>
                   <div className="text-sm font-semibold text-cyan-700">
                     - Sra. Ana Fernández, Delta del Paraná

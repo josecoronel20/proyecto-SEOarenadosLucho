@@ -31,11 +31,7 @@ export function CTASection() {
             </Link>
           </Button>
         </div>
-        <div className="mt-8 text-sm text-muted-foreground" role="list" aria-label="Información de contacto">
-          <p role="listitem">📞 WhatsApp para Pilar y Zona Norte: {PROJECT.contact.whatsapp}</p>
-          <p role="listitem">📧 Email: {PROJECT.contact.email}</p>
-          <p role="listitem">⏰ Horarios de atención en Pilar: {PROJECT.contact.hours}</p>
-        </div>
+        
       </div>
     </section>
   )

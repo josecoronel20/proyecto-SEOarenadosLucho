@@ -19,7 +19,7 @@ export function ProjectsSection() {
             Galería de resultados reales de sandblasting y granallado. Comprobá la calidad del servicio profesional en nuestros proyectos realizados en Pilar y Zona Norte.{" "}
             <Link href="/zonas-de-cobertura" className="text-primary hover:underline font-semibold">
               GBA
-            </Link>. Ver trabajos antes y después de nuestros servicios.
+            </Link>. Ver proyectos antes y después de nuestros servicios.
           </p>
         </div>
 

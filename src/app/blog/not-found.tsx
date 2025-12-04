@@ -57,7 +57,7 @@ export default function BlogNotFound() {
                   </div>
                   <CardTitle className="text-lg">Guía Completa del Arenado de Piletas</CardTitle>
                   <CardDescription>
-                    Descubre todo sobre el proceso de arenado para piletas, desde cuándo es necesario hasta cómo prepararse para el trabajo.
+                    Descubre todo sobre el proceso de arenado para piletas, desde cuándo es necesario hasta cómo prepararse para el proyecto.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

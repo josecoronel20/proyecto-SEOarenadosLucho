@@ -226,7 +226,7 @@ export default function ArenadoDeMetalesPage() {
                   Para estructuras que requieren galvanizado, el <strong>arenado de metales</strong> es esencial. La superficie limpia y rugosa garantiza una adherencia perfecta del recubrimiento de zinc, protegiendo el metal contra corrosión por décadas. El mismo principio aplica para otros tratamientos especializados como metalización o recubrimientos cerámicos.
                 </p>
                 <p className="mb-4">
-                  El servicio de <strong>limpieza metálica</strong> mediante <strong>arenado</strong> es versátil y se adapta a diferentes tipos de proyectos. Desde pequeñas piezas en cabina hasta estructuras industriales grandes, nuestro equipamiento móvil permite realizar trabajos in situ, reduciendo costos de transporte y tiempos de espera.
+                  El servicio de <strong>limpieza metálica</strong> mediante <strong>arenado</strong> es versátil y se adapta a diferentes tipos de proyectos. Desde pequeñas piezas en cabina hasta estructuras industriales grandes, nuestro equipamiento móvil permite ejecutar el servicio in situ, reduciendo costos de transporte y tiempos de espera.
                 </p>
                 <p className="mb-4">
                   Finalmente, el <strong>arenado de metales</strong> prolonga significativamente la vida útil de estructuras y componentes. Al eliminar completamente óxido y corrosión, y preparar la superficie para tratamientos protectores adecuados, se previene futura degradación, reduciendo costos de mantenimiento y reparación a largo plazo.
@@ -272,7 +272,7 @@ export default function ArenadoDeMetalesPage() {
                   {
                     icon: Users,
                     title: "Atención Personalizada",
-                    desc: "Asesoramiento técnico gratuito y seguimiento post-servicio. Garantía por escrito en todos los trabajos de arenado metálico."
+                    desc: "Asesoramiento técnico gratuito y seguimiento post-servicio. Garantía por escrito en todos los proyectos de arenado metálico."
                   }
                 ].map((item, i) => (
                   <div key={i} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">

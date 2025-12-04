@@ -37,7 +37,7 @@ export function ServicesSection() {
       id: "arenado-piezas-metalicas-pilar",
       title: "Arenado de Piezas Metálicas en Pilar",
       description: "Servicio fino en cabina para piezas mecánicas, ornamentales o industriales en Pilar",
-      features: ["Piezas mecánicas", "Trabajo en taller", "Terminación uniforme", "Servicio móvil"],
+      features: ["Piezas mecánicas", "Servicio en taller", "Terminación uniforme", "Servicio móvil"],
       href: "/servicios/arenado-de-piezas-metalicas"
     },
     {

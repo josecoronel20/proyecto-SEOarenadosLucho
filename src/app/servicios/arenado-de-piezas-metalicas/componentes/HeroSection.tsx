@@ -24,7 +24,7 @@ export function HeroSection() {
               className="text-xl text-muted-foreground mb-8"
               itemProp="description"
             >
-              Arenados Lucho ofrece servicio industrial profesional de arenado para piezas metálicas. Realizamos trabajos en Zona Norte, Zona Oeste y CABA. Atendemos en Pilar, San Isidro y toda Zona Norte de Buenos Aires. 
+              Arenados Lucho ofrece servicio industrial profesional de arenado para piezas metálicas. Brindamos nuestro servicio en Zona Norte, Zona Oeste y CABA. Atendemos en Pilar, San Isidro y toda Zona Norte de Buenos Aires. 
               Eliminamos óxido, corrosión y contaminantes con precisión industrial. Preparación experta para galvanizado, 
               pintura y tratamientos especializados en piezas de precisión.
             </p>

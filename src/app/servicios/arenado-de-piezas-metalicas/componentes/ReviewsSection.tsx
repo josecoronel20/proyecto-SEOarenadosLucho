@@ -10,7 +10,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Enero 2024",
       content:
-        "Excelente trabajo. Quitaron todo el óxido de las piezas y quedaron listas para galvanizar. Cumplieron en tiempo y forma.",
+        "Excelente servicio. Quitaron todo el óxido de las piezas y quedaron listas para galvanizar. Cumplieron en tiempo y forma.",
       service: "Arenado para Galvanizado",
       verified: true,
     },
@@ -20,7 +20,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Diciembre 2023",
       content:
-        "Muy buen servicio. Arenaron las piezas industriales rápido y quedaron perfectas para pintura. Recomendables para trabajos en Zona Norte.",
+        "Muy buen servicio. Arenaron las piezas industriales rápido y quedaron perfectas para pintura. Recomendables para proyectos en Zona Norte.",
       service: "Arenado Industrial",
       verified: true,
     },

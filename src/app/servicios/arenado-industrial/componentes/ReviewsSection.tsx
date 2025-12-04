@@ -10,7 +10,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Enero 2024",
       content:
-        "Excelente trabajo. Muy profesionales y cumplieron en tiempo y forma.",
+        "Excelente resultado. Muy profesionales y cumplieron en tiempo y forma.",
       service: "Arenado Industrial",
       verified: true,
     },
@@ -20,7 +20,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Diciembre 2023",
       content:
-        "Muy buen servicio. Arenaron las estructuras industriales rápido y quedaron perfectas para pintura. Recomendables para trabajos industriales en Zona Norte.",
+        "Muy buen servicio. Arenaron las estructuras industriales rápido y quedaron perfectas para pintura. Recomendables para proyectos industriales en Zona Norte.",
       service: "Arenado de Estructuras",
       verified: true,
     },

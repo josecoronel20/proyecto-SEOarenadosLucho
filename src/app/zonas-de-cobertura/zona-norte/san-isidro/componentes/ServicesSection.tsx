@@ -37,7 +37,7 @@ export function ServicesSection() {
       id: "arenado-piezas-metalicas-san-isidro",
       title: "Arenado de Piezas Metálicas en San Isidro",
       description: "Servicio fino para piezas ornamentales y de diseño en San Isidro",
-      features: ["Piezas ornamentales", "Trabajo fino", "Terminación premium", "Preservación de detalles"],
+      features: ["Piezas ornamentales", "Restauración fina", "Terminación premium", "Preservación de detalles"],
       href: "/servicios/arenado-de-piezas-metalicas"
     },
     {

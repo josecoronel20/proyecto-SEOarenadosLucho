@@ -64,7 +64,7 @@ export function HeroSection() {
                 Arenado de Muebles en <span className="text-blue-600">Zona Norte, Oeste y CABA</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Expertos en restauración y arenado profesional de muebles de madera y metal. Realizamos trabajos en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro y toda la Zona Norte. 
+                Expertos en restauración y arenado profesional de muebles de madera y metal. Brindamos nuestro servicio en <strong>Zona Norte, Zona Oeste y CABA</strong>. Atendemos en Pilar, San Isidro y toda la Zona Norte. 
                 Más de 15 años recuperando muebles antiguos con técnicas especializadas que preservan la estructura original. 
                 Eliminación garantizada de pintura antigua y preparación profesional para barnizado, lacado y acabados premium.
               </p>

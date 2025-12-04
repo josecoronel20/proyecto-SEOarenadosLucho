@@ -21,7 +21,7 @@ export function FAQSection() {
       answer: "El precio del arenado de piletas varía según el tamaño, estado y ubicación. Ofrecemos presupuesto gratuito y sin compromiso."
     },
     {
-      question: "¿Cuánto tarda el trabajo de arenado de piletas?",
+      question: "¿Cuánto tarda el arenado de piletas?",
       answer: "El tiempo de arenado depende del tamaño de la pileta y el tipo de tratamiento. Para arenado de repintado o revestimiento: 1 día, para arenado de pileta más grande es variable. Trabajamos de lunes a viernes en toda Zona Norte, caba y zona oeste."
     },
     {

@@ -111,7 +111,7 @@ export default function ZonaNortePage() {
                         {area === "General San Martín" && "Servicio integral de arenado para hogares y empresas."}
                         {area === "San Fernando" && "Arenado de primera calidad para proyectos residenciales y comerciales."}
                         {area === "Cardales" && "Servicio rápido y eficiente de arenado para todo tipo de superficies."}
-                        {area === "Zárate" && "Arenado profesional con precisión garantizada en cada trabajo."}
+                        {area === "Zárate" && "Arenado profesional con precisión garantizada en cada proyecto."}
                       </p>
                       <div className="space-y-2">
                         <Button asChild className="w-full">

@@ -166,7 +166,7 @@ export default function PresupuestoRapidoPage() {
                     <p className="text-sm text-green-700">
                       <strong>Para obtener el presupuesto más preciso en Zona Norte:</strong> Incluye en la descripción 
                       las dimensiones exactas, el estado actual del material, y si hay acceso especial 
-                      o restricciones en el lugar de trabajo.
+                      o restricciones en el lugar de ejecución.
                     </p>
                   </CardContent>
                 </Card>
@@ -183,7 +183,7 @@ export default function PresupuestoRapidoPage() {
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold mb-4">Lo que Dicen Nuestros Clientes en Pilar y Zona Norte</h3>
               <p className="text-lg text-muted-foreground">
-                Más de 10 años de experiencia en Pilar y alrededores respaldan nuestro trabajo
+                Más de 10 años de experiencia en Pilar y alrededores respaldan nuestro servicio
               </p>
             </div>
             
@@ -213,7 +213,7 @@ export default function PresupuestoRapidoPage() {
                     </div>
                   </div>
                   <p className="text-sm text-blue-800 mb-4">
-                    "Muy recomendable en San Isidro. Arenaron mi auto y el trabajo fue impecable. 
+                    "Muy recomendable en San Isidro. Arenaron mi auto y el servicio fue impecable. 
                     Presupuesto claro y sin sorpresas. Volveré a contratarlos."
                   </p>
                   <div className="text-sm font-semibold text-blue-700">
@@ -231,7 +231,7 @@ export default function PresupuestoRapidoPage() {
                   </div>
                   <p className="text-sm text-purple-800 mb-4">
                     "Servicio móvil excelente en Tigre. Llegaron a mi casa y arenaron la fachada. 
-                    Trabajo limpio y bien hecho. Muy satisfecho."
+                    Resultado limpio y bien hecho. Muy satisfecho."
                   </p>
                   <div className="text-sm font-semibold text-purple-700">
                     - Ana Martínez, Tigre Centro
@@ -249,7 +249,7 @@ export default function PresupuestoRapidoPage() {
                   </div>
                   <h3 className="font-semibold mb-2">Garantía de Calidad en Pilar</h3>
                   <p className="text-sm text-muted-foreground">
-                    Garantizamos la calidad de nuestro trabajo en toda la zona
+                    Garantizamos la calidad de nuestro servicio en toda la zona
                   </p>
                 </CardContent>
               </Card>
@@ -362,7 +362,7 @@ export default function PresupuestoRapidoPage() {
                 <CardContent>
                   <p className="text-muted-foreground">
                     Sí, para proyectos en Pilar y alrededores ofrecemos una visita técnica 
-                    gratuita para evaluar el trabajo y dar un presupuesto más preciso.
+                    gratuita para evaluar el proyecto y dar un presupuesto más preciso.
                   </p>
                 </CardContent>
               </Card>

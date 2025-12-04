@@ -25,7 +25,7 @@ export function FAQSection() {
     },
     {
       question: "¿Qué mantenimiento requieren los muebles después del arenado profesional?",
-      answer: "Post arenado profesional recomendamos: 1) Almacenamiento en ambiente seco y controlado, 2) Manipulación cuidadosa evitando golpes y rayones, 3) Aplicación inmediata de protección (barniz, laca o pintura según especificaciones), 4) Control de humedad y limpieza periódica. Brindamos manual completo de cuidados y garantía por escrito para asegurar la durabilidad del trabajo."
+      answer: "Post arenado profesional recomendamos: 1) Almacenamiento en ambiente seco y controlado, 2) Manipulación cuidadosa evitando golpes y rayones, 3) Aplicación inmediata de protección (barniz, laca o pintura según especificaciones), 4) Control de humedad y limpieza periódica. Brindamos manual completo de cuidados y garantía por escrito para asegurar la durabilidad del resultado."
     },
     {
       question: "¿El arenado profesional daña la madera o estructura original del mueble?",

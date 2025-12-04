@@ -10,7 +10,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Enero 2024",
       content:
-        "Excelente trabajo. Eliminaron todo el óxido del chasis y dejaron el auto listo para pintar. Muy profesionales y puntuales.",
+        "Excelente resultado. Eliminaron todo el óxido del chasis y dejaron el auto listo para pintar. Muy profesionales y puntuales.",
       service: "Arenado de Auto",
       verified: true,
     },
@@ -20,7 +20,7 @@ export function ReviewsSection() {
       rating: 5,
       date: "Diciembre 2023",
       content:
-        "Muy buen servicio. Arenaron mi camioneta rápido y quedó perfecta para pintura. Los recomiendo para trabajos en Zona Norte.",
+        "Muy buen servicio. Arenaron mi camioneta rápido y quedó perfecta para pintura. Los recomiendo en Zona Norte.",
       service: "Arenado de Camioneta",
       verified: true,
     },
