@@ -1,15 +1,13 @@
 import { HeroSection } from "@/components/homeComponents/HeroSection"
-import { WhatIsSandblastingSection } from "@/components/homeComponents/WhatIsSandblastingSection"
-import { BenefitsSection } from "@/components/homeComponents/BenefitsSection"
-import { ServicesSection } from "@/components/homeComponents/ServicesSection"
-import { ProjectsSection } from "@/components/homeComponents/ProjectsSection"
-import { ProcessSection } from "@/components/homeComponents/ProcessSection"
-import { CoverageSection } from "@/components/homeComponents/CoverageSection"
+import { WhatWeDoSection } from "@/components/homeComponents/WhatWeDoSection"
+import { CompactServicesSection } from "@/components/homeComponents/CompactServicesSection"
+import { CompactTestimonialsSection } from "@/components/homeComponents/CompactTestimonialsSection"
+import { CompactBenefitsSection } from "@/components/homeComponents/CompactBenefitsSection"
+import { CompactProjectsSection } from "@/components/homeComponents/CompactProjectsSection"
+import { CompactProcessSection } from "@/components/homeComponents/CompactProcessSection"
 import dynamic from "next/dynamic"
 import { Suspense } from "react"
-const FAQSection = dynamic(() => import("@/components/homeComponents/FAQSection").then(m => m.FAQSection), { ssr: false })
 const QuoteFormSection = dynamic(() => import("@/components/common/QuoteFormSection").then(m => m.QuoteFormSection), { ssr: false })
-import { TrustSection } from "@/components/homeComponents/TrustSection"
 import type { Metadata } from "next"
 
 const SITE_URL = "https://www.arenadoslucho.com.ar"
@@ -43,30 +41,29 @@ export default function HomePage() {
   return (
     <>
       <main className="min-h-screen">
+        {/* 1. Hero claro */}
         <HeroSection />
-        <Suspense>
-          <WhatIsSandblastingSection />
-        </Suspense>
-        <Suspense>
-          <BenefitsSection />
-        </Suspense>
-        <Suspense>
-          <ServicesSection />
-        </Suspense>
-        <Suspense>
-          <ProjectsSection />
-        </Suspense>
-        <Suspense>
-          <ProcessSection />
-        </Suspense>
+        
+        {/* 2. Qué haces + beneficio principal */}
+        <WhatWeDoSection />
+        
+        {/* 3. Servicios principales (4 categorías, 1 frase cada una) */}
+        <CompactServicesSection />
+        
+        {/* 4. Prueba social (testimonios) */}
+        <CompactTestimonialsSection />
+        
+        {/* 5. Beneficios clave (3-4 bullets) */}
+        <CompactBenefitsSection />
+        
+        {/* 6. Casos/resultados rápidos (2-3 mini casos) */}
+        <CompactProjectsSection />
+        
+        {/* 7. Proceso simple (3 pasos) */}
+        <CompactProcessSection />
+        
+        {/* 8. CTA final fuerte (formulario) */}
         <QuoteFormSection />
-        <Suspense>
-          <CoverageSection />
-        </Suspense>
-        <FAQSection />
-        <Suspense>
-          <TrustSection />
-        </Suspense>
       </main>
     </>
   )

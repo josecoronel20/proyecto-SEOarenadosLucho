@@ -5,60 +5,9 @@ import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Home, Building2, Wre
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function ItuzaingoPage() {
-  const ituzaingoServices = [
-    {
-      id: "arenado-piletas-ituzaingo",
-      title: "Arenado de Piletas en Ituzaingó",
-      description: "Limpieza profunda y preparación para pintura de piletas en Ituzaingó",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-industrial-ituzaingo", 
-      title: "Arenado Industrial en Ituzaingó",
-      description: "Servicio industrial para estructuras metálicas y maquinaria en Ituzaingó",
-      features: ["Estructuras metálicas", "Maquinaria pesada", "Tanques industriales", "Mantenimiento preventivo"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-barcos-ituzaingo",
-      title: "Arenado de Barcos en Ituzaingó", 
-      description: "Mantenimiento naval profesional para embarcaciones en Ituzaingó",
-      features: ["Cascos de barcos", "Eliminación de incrustaciones", "Preparación pintura", "Mantenimiento naval"],
-      href: "/servicios/arenado-de-barcos"
-    },
-    {
-      id: "arenado-vehiculos-ituzaingo",
-      title: "Arenado de Vehículos en Ituzaingó", 
-      description: "Preparación para pintura automotriz en Ituzaingó",
-      features: ["Vehículos familiares", "Vehículos comerciales", "Técnicas suaves", "Preservación"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-piezas-metalicas-ituzaingo",
-      title: "Arenado de Piezas Metálicas en Ituzaingó", 
-      description: "Tratamiento de piezas pequeñas con precisión en Ituzaingó",
-      features: ["Piezas pequeñas", "Preparación galvanizado", "Mantenimiento tolerancias", "Servicio en taller"],
-      href: "/servicios/arenado-de-piezas-metalicas"
-    },
-    {
-      id: "arenado-muebles-ituzaingo",
-      title: "Arenado de Muebles en Ituzaingó", 
-      description: "Restauración de muebles de madera y metal en Ituzaingó",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    },
-    {
-      id: "arenado-fachadas-ituzaingo", 
-      title: "Arenado de Fachadas en Ituzaingó",
-      description: "Limpieza de edificios residenciales y comerciales en Ituzaingó",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    }
-  ]
-
   const ituzaingoAdvantages = [
     {
       icon: <Home className="h-6 w-6" />,
@@ -153,40 +102,7 @@ export default function ItuzaingoPage() {
               ))}
             </div>
 
-            {/* Services in Ituzaingó */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Todos los Servicios en Ituzaingó</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios completos de arenado para hogares y comercios en Ituzaingó
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {ituzaingoServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-orange-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="Ituzaingó" />
 
             {/* Ituzaingó Specific Info */}
             <div className="mb-16">

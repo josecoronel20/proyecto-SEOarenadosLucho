@@ -13,7 +13,7 @@ export default function ZonaOestePage() {
       <HeroSection />
       <PrimaryAreasSection />
       <OtherAreasSection />
-      <ServicesSection />
+      <ServicesSection locationName="Zona Oeste" />
       <ContactCTASection />
     </main>
   )

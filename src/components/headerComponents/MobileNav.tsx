@@ -19,10 +19,6 @@ export function MobileNav({
 }: MobileNavProps) {
   const navItems = [
     {
-      title: "Superficies que Arenamos",
-      href: "/superficies-que-arenamos",
-    },
-    {
       title: "Proyectos",
       href: "/proyectos",
     },
@@ -40,43 +36,87 @@ export function MobileNav({
     },
   ];
 
-  const servicesItems = [
+  const serviceCategories = [
     {
-      title: "Arenado de piletas",
-      href: "/servicios/arenado-de-piletas",
+      title: "Arenado Residencial",
+      href: "/servicios/arenado-residencial",
+      subServices: [
+        {
+          title: "Arenado de piletas",
+          href: "/servicios/arenado-de-piletas",
+        },
+        {
+          title: "Arenado de fachadas domiciliarias",
+          href: "/servicios/arenado-de-fachadas-domiciliarias",
+        },
+        {
+          title: "Arenado de pisos",
+          href: "/servicios/arenado-de-pisos",
+        },
+        {
+          title: "Arenado de muebles",
+          href: "/servicios/arenado-de-muebles",
+        }
+      ]
     },
     {
-      title: "Arenado de vehículos",
-      href: "/servicios/arenado-de-vehiculos",
-    },
-    {
-      title: "Arenado de barcos",
-      href: "/servicios/arenado-de-barcos",
-    },
-    {
-      title: "Arenado de piezas metálicas",
-      href: "/servicios/arenado-de-piezas-metalicas",
-    },
-    {
-      title: "Arenado industrial",
+      title: "Arenado Industrial",
       href: "/servicios/arenado-industrial",
+      subServices: [
+        {
+          title: "Arenado de tanques",
+          href: "/servicios/arenado-de-tanques",
+        },
+        {
+          title: "Arenado de estructuras metálicas",
+          href: "/servicios/arenado-de-estructuras-metalicas",
+        },
+        {
+          title: "Arenado de edificios antiguos",
+          href: "/servicios/arenado-de-edificios-antiguos",
+        },
+        {
+          title: "Arenado en fábrica",
+          href: "/servicios/arenado-en-fabrica",
+        }
+      ]
     },
     {
-      title: "Arenado de muebles de madera",
-      href: "/servicios/arenado-de-muebles",
+      title: "Arenado de Vehículos",
+      href: "/servicios/arenado-de-vehiculos",
+      subServices: [
+        {
+          title: "Arenado de camiones",
+          href: "/servicios/arenado-de-camiones",
+        },
+        {
+          title: "Arenado de autos",
+          href: "/servicios/arenado-de-autos",
+        },
+        {
+          title: "Arenado de barcos",
+          href: "/servicios/arenado-de-barcos",
+        }
+      ]
     },
     {
-      title: "Arenado de fachadas particulares",
-      href: "/servicios/arenado-de-fachadas",
-    },
-    {
-      title: "Servicio de Pintura",
-      href: "/servicios/pintura",
-    },
+      title: "Arenado de Superficies",
+      href: "/servicios/arenado-de-superficies",
+      subServices: [
+        {
+          title: "Arenado de superficies metálicas",
+          href: "/servicios/arenado-de-piezas-metalicas",
+        },
+        {
+          title: "Arenado de superficies de madera",
+          href: "/servicios/arenado-de-muebles",
+        }
+      ]
+    }
   ];
 
   return (
-    <div className={`lg:hidden ${isOpen ? "block" : "hidden"} pb-4`}>
+    <div className={`lg:hidden ${isOpen ? "block" : "hidden"} pb-4 max-h-[calc(100vh-80px)] overflow-y-auto`}>
       <nav className="flex flex-col space-y-2">
         <Link
           href="/"
@@ -103,20 +143,33 @@ export function MobileNav({
               <div className="flex flex-col gap-2">
                 <Link
                   href="/servicios"
-                  className="px-3 py-3 text-base hover:bg-accent rounded-md min-h-[44px] flex items-center"
+                  className="px-3 py-3 text-base hover:bg-accent rounded-md min-h-[44px] flex items-center font-semibold"
                   onClick={onClose}
                 >
                   Todos los servicios
                 </Link>
-                {servicesItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="px-3 py-3 text-base hover:bg-accent rounded-md min-h-[44px] flex items-center"
-                    onClick={onClose}
-                  >
-                    {item.title}
-                  </Link>
+                {serviceCategories.map((category) => (
+                  <div key={category.href} className="space-y-1">
+                    <Link
+                      href={category.href}
+                      className="px-3 py-3 text-base hover:bg-accent rounded-md min-h-[44px] flex items-center font-semibold text-primary"
+                      onClick={onClose}
+                    >
+                      {category.title}
+                    </Link>
+                    <div className="ml-4 space-y-1 border-l-2 border-muted pl-3">
+                      {category.subServices.map((subService) => (
+                        <Link
+                          key={subService.href}
+                          href={subService.href}
+                          className="px-3 py-2 text-sm hover:bg-accent rounded-md min-h-[40px] flex items-center"
+                          onClick={onClose}
+                        >
+                          {subService.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

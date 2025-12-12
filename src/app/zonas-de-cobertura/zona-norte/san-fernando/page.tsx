@@ -13,7 +13,7 @@ export default function SanFernandoPage() {
       
       <HeroSection />
       <WhySanFernandoSection />
-      <ServicesSection />
+      <ServicesSection locationName="San Fernando" />
       <SanFernandoInfoSection />
       <TestimonialsSection />
       <ContactCTASection />

@@ -5,60 +5,9 @@ import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Home, Building2, Awa
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function TresDeFebreroPage() {
-  const tresDeFebreroServices = [
-    {
-      id: "arenado-piletas-3-de-febrero",
-      title: "Arenado de Piletas en 3 de Febrero",
-      description: "Limpieza profunda y preparación para pintura de piletas en 3 de Febrero",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-industrial-3-de-febrero", 
-      title: "Arenado Industrial en 3 de Febrero",
-      description: "Servicio industrial para estructuras metálicas y maquinaria en 3 de Febrero",
-      features: ["Estructuras metálicas", "Maquinaria pesada", "Tanques industriales", "Mantenimiento preventivo"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-barcos-3-de-febrero",
-      title: "Arenado de Barcos en 3 de Febrero", 
-      description: "Mantenimiento naval profesional para embarcaciones en 3 de Febrero",
-      features: ["Cascos de barcos", "Eliminación de incrustaciones", "Preparación pintura", "Mantenimiento naval"],
-      href: "/servicios/arenado-de-barcos"
-    },
-    {
-      id: "arenado-vehiculos-3-de-febrero",
-      title: "Arenado de Vehículos en 3 de Febrero", 
-      description: "Preparación para pintura automotriz en 3 de Febrero",
-      features: ["Vehículos familiares", "Vehículos comerciales", "Técnicas suaves", "Preservación"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-piezas-metalicas-3-de-febrero",
-      title: "Arenado de Piezas Metálicas en 3 de Febrero", 
-      description: "Tratamiento de piezas pequeñas con precisión en 3 de Febrero",
-      features: ["Piezas pequeñas", "Preparación galvanizado", "Mantenimiento tolerancias", "Servicio en taller"],
-      href: "/servicios/arenado-de-piezas-metalicas"
-    },
-    {
-      id: "arenado-muebles-3-de-febrero",
-      title: "Arenado de Muebles en 3 de Febrero", 
-      description: "Restauración de muebles de madera y metal en 3 de Febrero",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    },
-    {
-      id: "arenado-fachadas-3-de-febrero", 
-      title: "Arenado de Fachadas en 3 de Febrero",
-      description: "Limpieza de edificios residenciales y comerciales en 3 de Febrero",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    }
-  ]
-
   const tresDeFebreroAdvantages = [
     {
       icon: <Home className="h-6 w-6" />,
@@ -153,40 +102,7 @@ export default function TresDeFebreroPage() {
               ))}
             </div>
 
-            {/* Services in 3 de Febrero */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Todos los Servicios en 3 de Febrero</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios completos de arenado para hogares y comercios en 3 de Febrero
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {tresDeFebreroServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-pink-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-pink-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-pink-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="3 de Febrero" />
 
             {/* 3 de Febrero Specific Info */}
             <div className="mb-16">

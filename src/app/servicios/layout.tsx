@@ -229,7 +229,7 @@ export default function ServiciosLayout({
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Arenado de Fachadas",
-                    "description": "Limpieza de edificios residenciales y comerciales, preparación para pintura exterior"
+                    "description": "Limpieza de edificios y comerciales, preparación para pintura exterior"
                   }
                 },
                 {

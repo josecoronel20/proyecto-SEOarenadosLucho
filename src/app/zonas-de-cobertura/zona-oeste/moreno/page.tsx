@@ -5,32 +5,9 @@ import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Home, Building2, Car
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function MorenoPage() {
-  const morenoServices = [
-    {
-      id: "arenado-piletas-moreno",
-      title: "Arenado de Piletas en Moreno",
-      description: "Especialistas en limpieza profunda de piletas residenciales y comerciales en Moreno",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-fachadas-moreno", 
-      title: "Arenado de Fachadas en Moreno",
-      description: "Servicio para fachadas residenciales y comerciales en Moreno",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    },
-    {
-      id: "arenado-muebles-moreno",
-      title: "Arenado de Muebles en Moreno", 
-      description: "Restauración de muebles de madera en Moreno",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    }
-  ]
-
   const morenoAdvantages = [
     {
       icon: <Home className="h-6 w-6" />,
@@ -125,40 +102,7 @@ export default function MorenoPage() {
               ))}
             </div>
 
-            {/* Services in Moreno */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Servicios en Moreno</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios especializados para hogares y comercios en Moreno
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {morenoServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-green-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-green-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="Moreno" />
 
             {/* Moreno Specific Info */}
             <div className="mb-16">

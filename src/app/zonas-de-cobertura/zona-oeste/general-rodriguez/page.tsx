@@ -5,32 +5,9 @@ import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Factory, Wrench, Cog
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function GeneralRodriguezPage() {
-  const generalRodriguezServices = [
-    {
-      id: "arenado-industrial-general-rodriguez",
-      title: "Arenado Industrial en General Rodríguez",
-      description: "Especialistas en arenado de maquinaria pesada y estructuras industriales en General Rodríguez",
-      features: ["Maquinaria pesada", "Estructuras industriales", "Equipos de gran porte", "Técnicas especializadas"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-vehiculos-general-rodriguez", 
-      title: "Arenado de Vehículos en General Rodríguez",
-      description: "Servicio para vehículos comerciales, camiones y maquinaria agrícola en General Rodríguez",
-      features: ["Vehículos comerciales", "Camiones", "Maquinaria agrícola", "Técnicas industriales"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-piletas-general-rodriguez",
-      title: "Arenado de Piletas en General Rodríguez", 
-      description: "Servicio para piletas residenciales y comerciales en General Rodríguez",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    }
-  ]
-
   const generalRodriguezAdvantages = [
     {
       icon: <Factory className="h-6 w-6" />,
@@ -125,40 +102,7 @@ export default function GeneralRodriguezPage() {
               ))}
             </div>
 
-            {/* Services in General Rodríguez */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Servicios Industriales en General Rodríguez</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios especializados para el sector industrial de General Rodríguez
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {generalRodriguezServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-orange-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="General Rodríguez" />
 
             {/* General Rodríguez Specific Info */}
             <div className="mb-16">

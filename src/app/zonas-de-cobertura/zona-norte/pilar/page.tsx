@@ -13,7 +13,7 @@ export default function PilarPage() {
       
       <HeroSection />
       <WhyPilarSection />
-      <ServicesSection />
+      <ServicesSection locationName="Pilar" />
       <PilarInfoSection />
       <TestimonialsSection />
       <ContactCTASection />

@@ -5,59 +5,9 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Anchor, Waves, Ship } from "lucide-react"
 import { PROJECT } from "@/config/project"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function TigrePage() {
-  const tigreServices = [
-    {
-      id: "arenado-barcos-tigre",
-      title: "Arenado de Barcos en Tigre",
-      description: "Especialistas en arenado de cascos, cubiertas y estructuras navales en Tigre",
-      features: ["Cascos de barcos", "Cubiertas navales", "Estructuras marinas", "Técnicas controladas"],
-      href: "/servicios/arenado-de-barcos"
-    },
-    {
-      id: "arenado-piletas-tigre", 
-      title: "Arenado de Piletas en Tigre",
-      description: "Servicio especializado para piletas residenciales y clubes náuticos en Tigre",
-      features: ["Piletas residenciales", "Clubes náuticos", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-vehiculos-tigre",
-      title: "Arenado de Vehículos en Tigre", 
-      description: "Servicio para vehículos y embarcaciones menores en Tigre",
-      features: ["Vehículos terrestres", "Embarcaciones menores", "Técnicas adaptadas", "Protección marina"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-industrial-tigre",
-      title: "Arenado Industrial en Tigre",
-      description: "Servicio industrial para estructuras metálicas y maquinaria en Tigre",
-      features: ["Estructuras metálicas", "Maquinaria pesada", "Tanques industriales", "Mantenimiento preventivo"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-piezas-metalicas-tigre",
-      title: "Arenado de Piezas Metálicas en Tigre",
-      description: "Tratamiento de piezas pequeñas con precisión en Tigre",
-      features: ["Piezas pequeñas", "Preparación galvanizado", "Mantenimiento tolerancias", "Servicio en taller"],
-      href: "/servicios/arenado-de-piezas-metalicas"
-    },
-    {
-      id: "arenado-muebles-tigre",
-      title: "Arenado de Muebles en Tigre",
-      description: "Restauración de muebles de madera y metal en Tigre",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    },
-    {
-      id: "arenado-fachadas-tigre",
-      title: "Arenado de Fachadas en Tigre",
-      description: "Limpieza de edificios residenciales y comerciales en Tigre",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    }
-  ]
 
   const tigreAdvantages = [
     {
@@ -153,40 +103,7 @@ export default function TigrePage() {
               ))}
             </div>
 
-            {/* Services in Tigre */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Servicios Navales en Tigre</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios especializados para el ambiente marino y náutico de Tigre
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {tigreServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-cyan-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-cyan-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-cyan-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="Tigre" />
 
             {/* Tigre Specific Info */}
             <div className="mb-16">

@@ -5,60 +5,9 @@ import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Home, Building2, Use
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function JoseCPazPage() {
-  const joseCPazServices = [
-    {
-      id: "arenado-piletas-jose-c-paz",
-      title: "Arenado de Piletas en José C. Paz",
-      description: "Limpieza profunda y preparación para pintura de piletas en José C. Paz",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-industrial-jose-c-paz", 
-      title: "Arenado Industrial en José C. Paz",
-      description: "Servicio industrial para estructuras metálicas y maquinaria en José C. Paz",
-      features: ["Estructuras metálicas", "Maquinaria pesada", "Tanques industriales", "Mantenimiento preventivo"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-barcos-jose-c-paz",
-      title: "Arenado de Barcos en José C. Paz", 
-      description: "Mantenimiento naval profesional para embarcaciones en José C. Paz",
-      features: ["Cascos de barcos", "Eliminación de incrustaciones", "Preparación pintura", "Mantenimiento naval"],
-      href: "/servicios/arenado-de-barcos"
-    },
-    {
-      id: "arenado-vehiculos-jose-c-paz",
-      title: "Arenado de Vehículos en José C. Paz", 
-      description: "Preparación para pintura automotriz en José C. Paz",
-      features: ["Vehículos familiares", "Vehículos comerciales", "Técnicas suaves", "Preservación"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-piezas-metalicas-jose-c-paz",
-      title: "Arenado de Piezas Metálicas en José C. Paz", 
-      description: "Tratamiento de piezas pequeñas con precisión en José C. Paz",
-      features: ["Piezas pequeñas", "Preparación galvanizado", "Mantenimiento tolerancias", "Servicio en taller"],
-      href: "/servicios/arenado-de-piezas-metalicas"
-    },
-    {
-      id: "arenado-muebles-jose-c-paz",
-      title: "Arenado de Muebles en José C. Paz", 
-      description: "Restauración de muebles de madera y metal en José C. Paz",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    },
-    {
-      id: "arenado-fachadas-jose-c-paz", 
-      title: "Arenado de Fachadas en José C. Paz",
-      description: "Limpieza de edificios residenciales y comerciales en José C. Paz",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    }
-  ]
-
   const joseCPazAdvantages = [
     {
       icon: <Home className="h-6 w-6" />,
@@ -153,40 +102,7 @@ export default function JoseCPazPage() {
               ))}
             </div>
 
-            {/* Services in José C. Paz */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Todos los Servicios en José C. Paz</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios completos de arenado para hogares y comercios en José C. Paz
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {joseCPazServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-indigo-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-indigo-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="José C. Paz" />
 
             {/* José C. Paz Specific Info */}
             <div className="mb-16">
@@ -301,3 +217,5 @@ export default function JoseCPazPage() {
     </div>
   )
 }
+
+

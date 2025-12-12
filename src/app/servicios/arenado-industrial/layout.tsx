@@ -1,23 +1,19 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado Industrial en Pilar y Zona Norte 2025 | Servicio Profesional para Maquinaria y Estructuras - Arenados Lucho",
-  description: "Servicio especializado de arenado industrial en Pilar, San Isidro y Zona Norte Buenos Aires 2025. Expertos en maquinaria pesada, estructuras metálicas y equipos industriales. Presupuesto gratuito y garantía por escrito.",
+  title: "Arenado Industrial en Zona Norte, Oeste y CABA | Servicios Profesionales - Arenados Lucho",
+  description: "Arenado industrial profesional en Zona Norte, Oeste y CABA. Servicios de arenado para tanques, estructuras metálicas, edificios antiguos y fábricas. Presupuesto gratuito y servicio móvil.",
   keywords: [
     "arenado industrial Pilar",
-    "arenado industrial San Isidro",
     "arenado industrial Zona Norte",
-    "arenado maquinaria Buenos Aires",
+    "servicios arenado industrial Buenos Aires",
+    "arenado tanques",
     "arenado estructuras metálicas",
-    "arenado equipos industriales",
-    "granallado industrial Pilar",
-    "arenado tanques industriales",
-    "arenado industrial Tigre",
-    "arenado industrial Vicente López",
-    "servicio industrial Zona Norte",
-    "arenado industrial precio",
-    "arenado industrial presupuesto",
-    "arenado industrial 2025"
+    "arenado edificios antiguos",
+    "arenado en fábrica",
+    "arenado industrial CABA",
+    "arenado industrial zona oeste",
+    "servicio arenado industrial"
   ],
   authors: [{ name: "Arenados Lucho" }],
   creator: "Arenados Lucho - Expertos en Arenado Industrial",
@@ -27,31 +23,31 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://arenadoslucho.com"),
+  metadataBase: new URL("https://www.arenadoslucho.com.ar"),
   alternates: {
     canonical: "/servicios/arenado-industrial",
   },
   openGraph: {
-    title: "Arenado Industrial en Pilar y Zona Norte 2025 | Servicio Profesional",
-    description: "Expertos en arenado industrial para maquinaria pesada y estructuras metálicas en Pilar, San Isidro y Zona Norte. Más de 15 años de experiencia. Presupuesto gratuito.",
-    url: "https://arenadoslucho.com/servicios/arenado-industrial",
+    title: "Arenado Industrial en Zona Norte, Oeste y CABA | Servicios Profesionales",
+    description: "Servicios profesionales de arenado industrial para tanques, estructuras metálicas, edificios antiguos y fábricas. Más de 15 años de experiencia. Presupuesto gratuito y servicio móvil.",
+    url: "https://www.arenadoslucho.com.ar/servicios/arenado-industrial",
     siteName: "Arenados Lucho",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "/images/proyectos/arenado-industrial-pilar-despues.webp",
+        url: "/images/proyectos/arenado-tanque-industrial-despues.webp",
         width: 1200,
         height: 630,
-        alt: "Arenado industrial profesional en Pilar y Zona Norte - Maquinaria y estructuras",
+        alt: "Arenado industrial profesional en Zona Norte, Oeste y CABA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arenado Industrial en Pilar y Zona Norte 2025 | Servicio Profesional",
-    description: "Expertos en arenado industrial para maquinaria pesada y estructuras metálicas en Pilar, San Isidro y Zona Norte. 15 años de experiencia certificada.",
-    images: ["/images/proyectos/arenado-industrial-pilar-despues.webp"],
+    title: "Arenado Industrial en Zona Norte, Oeste y CABA | Servicios Profesionales",
+    description: "Servicios profesionales de arenado industrial. Más de 15 años de experiencia. Presupuesto gratuito.",
+    images: ["/images/proyectos/arenado-tanque-industrial-despues.webp"],
   },
   robots: {
     index: true,
@@ -68,22 +64,22 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
   },
   category: "industrial",
-  classification: "Arenado Industrial y Granallado",
+  classification: "Arenado Industrial",
   other: {
     "geo.region": "AR-C",
     "geo.placename": "Pilar, Buenos Aires",
     "geo.position": "-34.4359;-58.7014",
     "ICBM": "-34.4359, -58.7014",
-    "DC.title": "Arenado Industrial en Pilar y Zona Norte Buenos Aires 2025",
-    "DC.description": "Servicio profesional de arenado industrial para maquinaria pesada, estructuras metálicas y equipos industriales en Pilar, San Isidro y Zona Norte de Buenos Aires.",
-    "DC.subject": "Arenado Industrial, Granallado, Maquinaria, Estructuras Metálicas, Equipos Industriales, Pilar, San Isidro, Zona Norte",
+    "DC.title": "Arenado Industrial en Zona Norte, Oeste y CABA Buenos Aires",
+    "DC.description": "Servicios profesionales de arenado industrial para tanques, estructuras metálicas, edificios antiguos y fábricas en Zona Norte, Oeste y CABA de Buenos Aires.",
+    "DC.subject": "Arenado, Industrial, Tanques, Estructuras Metálicas, Edificios Antiguos, Fábricas, Zona Norte, Zona Oeste, CABA",
     "DC.language": "es",
     "DC.creator": "Arenados Lucho",
     "DC.publisher": "Arenados Lucho",
-    "DC.coverage": "Pilar, San Isidro, Tigre, Vicente López, Zona Norte, Buenos Aires",
+    "DC.coverage": "Zona Norte, Zona Oeste, CABA, Buenos Aires",
     "DC.type": "Service",
     "DC.format": "text/html",
-    "DC.identifier": "https://arenadoslucho.com/servicios/arenado-industrial",
+    "DC.identifier": "https://www.arenadoslucho.com.ar/servicios/arenado-industrial",
     "DC.rights": "Copyright Arenados Lucho",
     "DC.date.created": "2025-01-27",
     "DC.date.modified": "2025-01-27",
@@ -106,8 +102,8 @@ export default function ArenadoIndustrialLayout({
             "@type": "LocalBusiness",
             "name": "Arenados Lucho - Expertos en Arenado Industrial",
             "image": "/images/logo.webp",
-            "description": "Servicio profesional de arenado industrial para maquinaria pesada, estructuras metálicas y equipos industriales en Pilar, San Isidro y Zona Norte de Buenos Aires. Más de 15 años de experiencia en arenado industrial.",
-            "url": "https://arenadoslucho.com/servicios/arenado-industrial",
+            "description": "Servicios profesionales de arenado industrial en Zona Norte, Oeste y CABA de Buenos Aires. Especialistas en tanques, estructuras metálicas, edificios antiguos y fábricas. Más de 15 años de experiencia.",
+            "url": "https://www.arenadoslucho.com.ar/servicios/arenado-industrial",
             "telephone": "+54 9 11 2378-7750",
             "email": "arenadoslucho@hotmail.com",
             "address": {
@@ -130,28 +126,16 @@ export default function ArenadoIndustrialLayout({
             },
             "areaServed": [
               {
-                "@type": "City",
-                "name": "Pilar"
-              },
-              {
-                "@type": "City", 
-                "name": "San Isidro"
-              },
-              {
-                "@type": "City",
-                "name": "Tigre"
-              },
-              {
-                "@type": "City",
-                "name": "Vicente López"
-              },
-              {
-                "@type": "City",
-                "name": "San Fernando"
+                "@type": "AdministrativeArea",
+                "name": "Zona Norte GBA"
               },
               {
                 "@type": "AdministrativeArea",
-                "name": "Zona Norte GBA"
+                "name": "Zona Oeste GBA"
+              },
+              {
+                "@type": "City",
+                "name": "CABA"
               }
             ],
             "serviceArea": {
@@ -161,13 +145,13 @@ export default function ArenadoIndustrialLayout({
                 "latitude": "-34.4359",
                 "longitude": "-58.7014"
               },
-              "geoRadius": "30000"
+              "geoRadius": "50000"
             },
             "priceRange": "$$",
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "110",
+              "reviewCount": "200",
               "bestRating": "5",
               "worstRating": "1"
             },
@@ -179,16 +163,32 @@ export default function ArenadoIndustrialLayout({
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Arenado de Maquinaria Pesada",
-                    "description": "Tratamiento profesional para maquinaria pesada y equipos industriales"
+                    "name": "Arenado de Tanques",
+                    "description": "Limpieza y preparación de tanques industriales"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Arenado de Estructuras Metálicas", 
-                    "description": "Servicio especializado para estructuras metálicas y tanques industriales"
+                    "name": "Arenado de Estructuras Metálicas",
+                    "description": "Restauración de estructuras metálicas industriales"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Arenado de Edificios Antiguos",
+                    "description": "Restauración de edificios antiguos y fachadas históricas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Arenado en Fábrica",
+                    "description": "Servicio de arenado industrial en fábricas"
                   }
                 }
               ]
@@ -200,7 +200,7 @@ export default function ArenadoIndustrialLayout({
           })
         }}
       />
-      
+
       {/* BreadcrumbList Schema */}
       <script
         type="application/ld+json"
@@ -213,19 +213,19 @@ export default function ArenadoIndustrialLayout({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": "https://arenadoslucho.com"
+                "item": "https://www.arenadoslucho.com.ar"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Servicios",
-                "item": "https://arenadoslucho.com/servicios"
+                "item": "https://www.arenadoslucho.com.ar/servicios"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Arenado Industrial",
-                "item": "https://arenadoslucho.com/servicios/arenado-industrial"
+                "item": "https://www.arenadoslucho.com.ar/servicios/arenado-industrial"
               }
             ]
           })
@@ -236,3 +236,4 @@ export default function ArenadoIndustrialLayout({
     </>
   )
 }
+

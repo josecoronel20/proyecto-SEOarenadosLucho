@@ -4,61 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapPin, ArrowRight, Phone, Mail, Clock, ArrowLeft, Home, Building2, Target } from "lucide-react"
 import { PROJECT } from "@/config/project"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
-import { WhatsAppButton } from "@/components/common/WhatsAppButton" 
+import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { ServicesSection } from "./componentes/ServicesSection"
 
 export default function ZaratePage() {
-  const zarateServices = [
-    {
-      id: "arenado-piletas-zarate",
-      title: "Arenado de Piletas en Zárate",
-      description: "Limpieza profunda y preparación para pintura de piletas en Zárate",
-      features: ["Piletas residenciales", "Piletas comerciales", "Preparación epoxi", "Limpieza profunda"],
-      href: "/servicios/arenado-de-piletas"
-    },
-    {
-      id: "arenado-industrial-zarate", 
-      title: "Arenado Industrial en Zárate",
-      description: "Servicio industrial para estructuras metálicas y maquinaria en Zárate",
-      features: ["Estructuras metálicas", "Maquinaria pesada", "Tanques industriales", "Mantenimiento preventivo"],
-      href: "/servicios/arenado-industrial"
-    },
-    {
-      id: "arenado-barcos-zarate",
-      title: "Arenado de Barcos en Zárate", 
-      description: "Mantenimiento naval profesional para embarcaciones en Zárate",
-      features: ["Cascos de barcos", "Eliminación de incrustaciones", "Preparación pintura", "Mantenimiento naval"],
-      href: "/servicios/arenado-de-barcos"
-    },
-    {
-      id: "arenado-vehiculos-zarate",
-      title: "Arenado de Vehículos en Zárate", 
-      description: "Preparación para pintura automotriz en Zárate",
-      features: ["Vehículos familiares", "Vehículos comerciales", "Técnicas suaves", "Preservación"],
-      href: "/servicios/arenado-de-vehiculos"
-    },
-    {
-      id: "arenado-piezas-metalicas-zarate",
-      title: "Arenado de Piezas Metálicas en Zárate", 
-      description: "Tratamiento de piezas pequeñas con precisión en Zárate",
-      features: ["Piezas pequeñas", "Preparación galvanizado", "Mantenimiento tolerancias", "Servicio en taller"],
-      href: "/servicios/arenado-de-piezas-metalicas"
-    },
-    {
-      id: "arenado-muebles-zarate",
-      title: "Arenado de Muebles en Zárate", 
-      description: "Restauración de muebles de madera y metal en Zárate",
-      features: ["Muebles de madera", "Restauración", "Despintado fino", "Preservación"],
-      href: "/servicios/arenado-de-muebles"
-    },
-    {
-      id: "arenado-fachadas-zarate", 
-      title: "Arenado de Fachadas en Zárate",
-      description: "Limpieza de edificios residenciales y comerciales en Zárate",
-      features: ["Fachadas residenciales", "Fachadas comerciales", "Técnicas no abrasivas", "Preservación"],
-      href: "/servicios/arenado-de-fachadas"
-    }
-  ]
-
   const zarateAdvantages = [
     {
       icon: <Home className="h-6 w-6" />,
@@ -153,40 +102,7 @@ export default function ZaratePage() {
               ))}
             </div>
 
-            {/* Services in Zárate */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Todos los Servicios en Zárate</h2>
-              <p className="text-lg text-muted-foreground">
-                Servicios completos de arenado para hogares y comercios en Zárate
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {zarateServices.map((service) => (
-                <Card key={service.id} className="hover:shadow-lg transition-shadow border-cyan-200">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-cyan-800">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm">
-                          <div className="w-2 h-2 bg-cyan-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full">
-                      <Link href={service.href}>
-                        Ver Detalles
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ServicesSection locationName="Zárate" />
 
             {/* Zárate Specific Info */}
             <div className="mb-16">
@@ -301,3 +217,5 @@ export default function ZaratePage() {
     </div>
   )
 }
+
+

@@ -16,23 +16,51 @@ export function ProjectsGallerySection() {
   // Estado para el filtro
   const [selectedService, setSelectedService] = useState<string>("todos")
   
-  // Servicios disponibles para filtrar
+  // Servicios disponibles para filtrar (4 categorías principales)
   const services = [
-    { id: "todos", nameDesktop: "Todos los Servicios de Arenado en Pilar y Zona Norte",nameMobile: "Todos", icon: "🔧" },
-    { id: "pileta", nameDesktop: "Arenado de Piletas en Pilar",nameMobile: "Piletas", icon: "🏊‍♂️" },
-    { id: "industrial", nameDesktop: "Arenado Industrial en Zona Norte",nameMobile: "Industri", icon: "🏭" },
-    { id: "pieza", nameDesktop: "Arenado de Piezas en Pilar",nameMobile: "Piezas", icon: "⚙️" },
-    { id: "mueble", nameDesktop: "Arenado de Muebles en Zona Norte",nameMobile: "Muebles", icon: "🪑" },
-    { id: "barco", nameDesktop: "Arenado de Barcos en Buenos Aires",nameMobile: "Barcos", icon: "🚢" },
-    { id: "vehiculo", nameDesktop: "Arenado de Vehículos en Pilar",nameMobile: "Vehículos", icon: "🚗" },
-    { id: "fachada", nameDesktop: "Arenado de Fachadas en Zona Norte",nameMobile: "Fachadas", icon: "🏠" },
-    { id: "pintura", nameDesktop: "Servicio de Pintura en Pilar",nameMobile: "Pintura", icon: "🎨" }
+    { id: "todos", nameDesktop: "Todos los Servicios de Arenado", nameMobile: "Todos", icon: "🔧" },
+    { id: "residencial", nameDesktop: "Arenado Residencial", nameMobile: "Residencial", icon: "🏠" },
+    { id: "industrial", nameDesktop: "Arenado Industrial", nameMobile: "Industrial", icon: "🏭" },
+    { id: "vehiculos", nameDesktop: "Arenado de Vehículos", nameMobile: "Vehículos", icon: "🚗" },
+    { id: "superficies", nameDesktop: "Arenado de Superficies", nameMobile: "Superficies", icon: "✨" }
   ]
+  
+  // Mapeo de categorías antiguas a nuevas categorías principales
+  const categoryMapping: Record<string, string> = {
+    "pileta": "residencial",
+    "fachada": "residencial",
+    "mueble": "residencial",
+    "piso": "residencial",
+    "industrial": "industrial",
+    "tanque": "industrial",
+    "estructura": "industrial",
+    "edificio": "industrial",
+    "fabrica": "industrial",
+    "vehiculo": "vehiculos",
+    "barco": "vehiculos",
+    "camion": "vehiculos",
+    "auto": "vehiculos",
+    "pieza": "superficies",
+    "superficie": "superficies"
+  }
+  
+  // Función para obtener la categoría principal de un proyecto
+  const getMainCategory = (category: string): string => {
+    const normalizedCategory = category.toLowerCase()
+    // Buscar coincidencia exacta o parcial
+    for (const [oldCategory, newCategory] of Object.entries(categoryMapping)) {
+      if (normalizedCategory.includes(oldCategory)) {
+        return newCategory
+      }
+    }
+    // Si no hay coincidencia, retornar la categoría original
+    return normalizedCategory
+  }
   
   // Filtrar proyectos según el servicio seleccionado
   const filteredProjects = selectedService === "todos" 
     ? allProjects 
-    : allProjects.filter(project => project.category === selectedService)
+    : allProjects.filter(project => getMainCategory(project.category) === selectedService)
   
   // Mostrar los primeros 12 proyectos filtrados
   const featuredProjects = filteredProjects.slice(0, 12)

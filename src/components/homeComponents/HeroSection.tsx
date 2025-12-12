@@ -20,47 +20,39 @@ export function HeroSection() {
 
       <div className={`container mx-auto px-4 relative z-10 ${poppins.className}`}>
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 leading-tight">
-            Arenado profesional en Pilar, Zona Norte y Oeste y CABA
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
+            Arenado Profesional en <span className="text-primary">Zona Norte, Oeste y CABA</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
-          Realizamos proyectos de restauración y preparación de superficies en todo tipo de proyectos. Disponemos de equipos propios y planificamos cada etapa para optimizar tiempos y resultados.
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium">
+            Eliminamos pintura, óxido y contaminantes. Tu superficie queda lista para pintar con mejor adherencia y durabilidad.
           </p>
 
-          <p className="text-sm text-gray-500 mb-6">
-            Respuesta en el día · Equipos propios · Coordinamos ingreso en obra
-          </p>
-
-          {/* CTAs principales */}
-          <div className="flex flex-col sm:flex-row justify-center gap-3 mb-4">
-            <Link
-              href="/presupuesto-rapido"
-              className="inline-block px-6 py-3 rounded-lg text-white bg-blue-600 hover:bg-blue-700 font-medium transition"
-              aria-label="Pedir presupuesto rápido"
-            >
-              Solicitar Presupuesto
-            </Link>
-            <WhatsAppButton />
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 mb-8">
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              Respuesta en 24 horas
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              Equipos propios
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              Servicio móvil
+            </span>
           </div>
 
-          {/* CTAs secundarios */}
-          <div className="flex justify-center gap-4 text-sm mb-6">
+          {/* CTAs principales */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
             <Link
-              href="/proyectos"
-              className="text-gray-600 hover:underline"
-              aria-label="Ver proyectos"
+              href="/presupuesto-rapido"
+              className="inline-block px-8 py-4 rounded-lg text-white bg-primary hover:bg-primary/90 font-semibold text-lg transition shadow-lg hover:shadow-xl"
+              aria-label="Pedir presupuesto rápido"
             >
-              Ver proyectos
+              Solicitar Presupuesto Gratis
             </Link>
-            <span className="text-gray-400">·</span>
-            <Link
-              href="/servicios"
-              className="text-gray-600 hover:underline"
-              aria-label="Ver servicios"
-            >
-              Ver servicios
-            </Link>
+            <WhatsAppButton />
           </div>
         </div>
       </div>

@@ -31,6 +31,7 @@
     "@types/node": "20.19.21",
     "@types/react": "18.3.26",
     "@types/react-dom": "^18",
+    "baseline-browser-mapping": "^2.9.7",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
     "eslint": "^8",

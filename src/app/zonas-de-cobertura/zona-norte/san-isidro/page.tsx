@@ -13,7 +13,7 @@ export default function SanIsidroPage() {
       
       <HeroSection />
       <WhySanIsidroSection />
-      <ServicesSection />
+      <ServicesSection locationName="San Isidro" />
       <SanIsidroInfoSection />
       <TestimonialsSection />
       <ContactCTASection />
