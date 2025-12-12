@@ -18,7 +18,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className={`container mx-auto px-4 relative z-10 ${poppins.className}`}>
+      <div className={`container mx-auto px-4 relative ${poppins.className}`} style={{ zIndex: 1 }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
             Arenado Profesional en <span className="text-primary">Zona Norte, Oeste y CABA</span>

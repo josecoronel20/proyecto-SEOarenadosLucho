@@ -8,7 +8,6 @@ import { MobileNav } from "./MobileNav"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,8 +21,6 @@ export function Header() {
 
         <MobileNav 
           isOpen={isMenuOpen}
-          isServicesOpen={isServicesOpen}
-          onToggleServices={() => setIsServicesOpen(!isServicesOpen)}
           onClose={() => setIsMenuOpen(false)}
         />
       </div>
