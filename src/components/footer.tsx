@@ -51,11 +51,6 @@ const quickLinks = [
 
 const contactInfo = [
   {
-    icon: Phone,
-    text: "WhatsApp",
-    href: "https://wa.me/5491123787750"
-  },
-  {
     icon: Mail,
     text: "arenadoslucho@hotmail.com",
     href: "mailto:arenadoslucho@hotmail.com"

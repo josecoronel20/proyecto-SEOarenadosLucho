@@ -242,10 +242,7 @@ export default function ServiciosLayout({
                 }
               ]
             },
-            "sameAs": [
-              "https://wa.me/5491123787750",
-              "mailto:arenadoslucho@hotmail.com"
-            ]
+           
           })
         }}
       />

@@ -143,12 +143,6 @@ export default function PresupuestoRapidoPage() {
                           Enviar Email
                         </Link>
                       </Button>
-                      <Button variant="outline" className="w-full" asChild>
-                        <Link href="tel:+5491123787750">
-                          <Phone className="mr-2 h-4 w-4" />
-                          Llamar Ahora
-                        </Link>
-                      </Button>
                     </div>
                     <div className="text-center">
                       <p className="text-xs text-muted-foreground">
@@ -392,12 +386,7 @@ export default function PresupuestoRapidoPage() {
                     Enviar Email
                   </Link>
                 </Button>
-                <Button variant="outline" asChild>
-                  <Link href="tel:+5491123787750">
-                    <Phone className="mr-2 h-4 w-4" />
-                    Llamar
-                  </Link>
-                </Button>
+                
               </div>
             </div>
           </div>

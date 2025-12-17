@@ -193,22 +193,11 @@ export default function ZonaNortePage() {
                     Solicite su presupuesto gratuito ahora. Garantizamos respuesta en menos de 24 horas.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-green-600 hover:bg-green-700" asChild>
-                      <Link href="https://wa.me/5491123787750" target="_blank" aria-label="Contactar por WhatsApp">
-                        <Phone className="mr-2 h-4 w-4" />
-                        WhatsApp
-                      </Link>
-                    </Button>
+                    
                     <Button variant="outline" asChild>
                       <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto rápido">
                         Solicitar Presupuesto
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <Link href="tel:+5491123787750" aria-label="Llamar ahora">
-                        <Phone className="mr-2 h-4 w-4" />
-                        Llamar
                       </Link>
                     </Button>
                   </div>

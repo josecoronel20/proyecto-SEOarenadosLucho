@@ -252,10 +252,7 @@ export default function PreguntasFrecuentesLayout({
               "bestRating": "5",
               "worstRating": "1"
             },
-            "sameAs": [
-              "https://wa.me/5491123787750",
-              "mailto:arenadoslucho@hotmail.com"
-            ]
+           
           })
         }}
       />

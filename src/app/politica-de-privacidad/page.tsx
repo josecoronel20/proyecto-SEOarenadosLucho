@@ -64,9 +64,6 @@ export default function PoliticaDePrivacidadPage() {
                   <strong>Correo electrónico:</strong> <Link href="mailto:arenadoslucho@hotmail.com" className="text-primary">arenadoslucho@hotmail.com</Link>
                 </p>
                 <p>
-                  <strong>Teléfono:</strong> <Link href="tel:+5491123787750" className="text-primary">+54 9 11 2378-7750</Link>
-                </p>
-                <p>
                   <strong>Dirección comercial:</strong> Pilar, Provincia de Buenos Aires, Argentina.
                 </p>
               </CardContent>

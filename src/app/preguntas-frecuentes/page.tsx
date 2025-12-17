@@ -334,11 +334,7 @@ export default function PreguntasFrecuentesPage() {
                 <CardTitle>Llamanos</CardTitle>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="mt-4" asChild>
-                  <Link href="tel:+541123787750">
-                    Llamar Ahora
-                  </Link>
-                </Button>
+                
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -401,11 +397,7 @@ export default function PreguntasFrecuentesPage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link href="tel:+541123787750">
-                Llamar Ahora
-              </Link>
-            </Button>
+           
           </div>
         </div>
       </section>

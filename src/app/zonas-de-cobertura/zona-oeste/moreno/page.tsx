@@ -201,10 +201,7 @@ export default function MorenoPage() {
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
-                      <Link href="tel:+5491123787750">
-                        <Phone className="mr-2 h-4 w-4" />
-                        Llamar
-                      </Link>
+                      
                     </Button>
                   </div>
                 </CardContent>
