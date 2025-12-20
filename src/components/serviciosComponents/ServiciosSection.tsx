@@ -55,10 +55,10 @@ export function ServiciosSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Servicios de Arenado más solicitados 
+            Servicios de Arenados más solicitados 
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Aunque el arenado es ejecutable en cualquier superficie, hay algunos servicios que son más comunes.
+            El <strong>arenado</strong> y <strong>granallado</strong> se aplican en muchos sectores, pero estos son los servicios más solicitados por nuestros clientes.
           </p>
         </div>
 

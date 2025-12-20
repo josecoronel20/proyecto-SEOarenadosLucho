@@ -9,9 +9,14 @@ export function MaquinariaSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Maquinaria utilizada para el arenado
+              Maquinaria utilizada para el arenado y granallado
             </h2>
-          
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Nuestros equipos profesionales permiten realizar trabajos de <strong>arenado</strong>, 
+              <strong>granallado</strong> y <strong>decapado</strong> con la máxima eficiencia. 
+              El <strong>arenador</strong> se desplaza a domicilio con toda la maquinaria necesaria 
+              para realizar <strong>arenados</strong> de alta calidad.
+            </p>
           </div>
 
           <div className="mb-10 flex justify-center">

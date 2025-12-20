@@ -28,7 +28,9 @@ export function BenefitsSection() {
             ¿Por qué elegir Arenados Lucho para tu proyecto?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Somos la <strong>empresa líder en arenado y sandblasting en Pilar y Zona Norte</strong> con amplia experiencia en el sector.
+            Somos la <strong>empresa líder en arenado y sandblasting en Pilar y Zona Norte</strong> con amplia experiencia en el sector. 
+            Nuestros <strong>arenadores</strong> profesionales realizan trabajos de <strong>granallados</strong> 
+            y servicios de <strong>arenado a domicilio</strong> con equipos de última generación.
           </p>
         </div>
         

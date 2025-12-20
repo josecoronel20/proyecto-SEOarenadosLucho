@@ -21,6 +21,9 @@ export function ServiciosHeroSection() {
             Servicio de arenado y granallado Profesional en Zona Norte, Oeste y CABA
           </h1>
 
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            Somos especialistas en <strong>arenado</strong>, <strong>granallado</strong> y <strong>decapado</strong> de superficies. <strong>Arenado a domicilio</strong> en toda la Zona Norte, Zona Oeste y CABA.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-2">
             <WhatsAppButton />
