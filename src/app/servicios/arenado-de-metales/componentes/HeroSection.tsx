@@ -31,8 +31,8 @@ export function HeroSection() {
               </h1>
               
               {/* Subtítulo corto orientado a empatizar */}
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-                Quitá el óxido, pintura vieja y otros contaminantes de tus piezas metálicas, rejas y estructuras. Dejalas como nuevas.
+              <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Solución profesional para restaurar piezas metálicas, rejas y superficies metálicas.
               </p>
 
               {/* Trust indicators */}

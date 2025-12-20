@@ -18,7 +18,7 @@ const steps = [
     number: "3",
     icon: Wrench,
     title: "Ejecución del arenado",
-    description: "Ejecutamos el arenado profesional para quitar contaminantes, pintura y óxido de las piezas.",
+    description: "Ejecutamos el <strong>arenado de piezas</strong> de forma profesional para quitar contaminantes, pintura y óxido.",
   }
 ]
 

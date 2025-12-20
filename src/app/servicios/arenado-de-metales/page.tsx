@@ -117,7 +117,7 @@ export default function ArenadoDeMetalesPage() {
         <BenefitsSection />
         
         {/* Resultados reales - Antes/después */}
-        <BeforeAfterSection />
+        <BeforeAfterSection category="metales" />
         
         {/* CTA después de resultados */}
         <div className="py-12 bg-primary/5">

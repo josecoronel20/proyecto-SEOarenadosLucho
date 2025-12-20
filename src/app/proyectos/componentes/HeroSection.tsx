@@ -11,13 +11,14 @@ export function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Proyectos de <span className="text-primary">Arenado en Pilar</span> y Zona Norte - Antes/Después
           </h1>
+          
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Portfolio de proyectos de arenado realizados con éxito en más de 20 años de experiencia local. 
-            
+          Conoce el acabado del arenado en diferentes proyectos realizados con éxito en más de 20 años de
+            experiencia local.
           </p>
           <WhatsAppButton />
         </div>
       </div>
     </section>
-  )
+  );
 }

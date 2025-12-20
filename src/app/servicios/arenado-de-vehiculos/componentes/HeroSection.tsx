@@ -60,7 +60,7 @@ export function HeroSection() {
                 >
                   <Link href="#cotizar">
                     <Calendar className="mr-2 h-5 w-5" />
-                    Cotizá tu vehículo
+                    Cotizá tu arenado automotriz
                   </Link>
                 </Button>
                 <WhatsAppButton />
