@@ -14,8 +14,7 @@ export function MaquinariaSection() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Nuestros equipos profesionales permiten realizar trabajos de <strong>arenado</strong>, 
               <strong>granallado</strong> y <strong>decapado</strong> con la máxima eficiencia. 
-              El <strong>arenador</strong> se desplaza a domicilio con toda la maquinaria necesaria 
-              para realizar <strong>arenados</strong> de alta calidad.
+              El <strong>arenador</strong> se desplaza a domicilio con toda la maquinaria para realizar el "servicio de arenado a domicilio".
             </p>
           </div>
 
