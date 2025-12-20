@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/homeComponents/HeroSection"
+import { WhatIsSandblastingSection } from "@/components/homeComponents/WhatIsSandblastingSection"
 import { WhatWeDoSection } from "@/components/homeComponents/WhatWeDoSection"
 import { CompactServicesSection } from "@/components/homeComponents/CompactServicesSection"
 import { CompactTestimonialsSection } from "@/components/homeComponents/CompactTestimonialsSection"
@@ -16,7 +17,23 @@ const SITE_URL = "https://www.arenadoslucho.com.ar"
 export const metadata: Metadata = {
   title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho - Sandblasting y Granallado",
   description:
-    "Servicio profesional de arenado, sandblasting y granallado en Zona Norte, Oeste y CABA. Arenado de piletas, vehículos, barcos, fachadas y más. Equipos propios. Presupuesto gratuito por WhatsApp.",
+    "Servicio profesional de arenado, sandblasting, granallado y decapado en Zona Norte, Oeste y CABA. Arenado de piletas, vehículos, barcos, fachadas y más. Equipos propios. Presupuesto gratuito por WhatsApp.",
+  keywords: [
+    "arenado",
+    "sandblasting",
+    "granallado",
+    "decapado",
+    "chorro de arena",
+    "tratamiento de superficies",
+    "arenado profesional",
+    "arenado Buenos Aires",
+    "arenado Zona Norte",
+    "arenado Zona Oeste",
+    "arenado CABA",
+    "arenado de piletas",
+    "arenado de vehículos",
+    "arenado industrial"
+  ].join(", "),
   alternates: {
     canonical: SITE_URL,
     languages: {
@@ -44,25 +61,23 @@ export default function HomePage() {
         {/* 1. Hero claro */}
         <HeroSection />
         
-        {/* 2. Qué haces + beneficio principal */}
-        <WhatWeDoSection />
+        {/* 2. Qué es el arenado - explicación breve */}
+        <WhatIsSandblastingSection />
         
-        {/* 3. Servicios principales (4 categorías, 1 frase cada una) */}
-        <CompactServicesSection />
-        
-        {/* 4. Prueba social (testimonios) */}
-        <CompactTestimonialsSection />
-        
-        {/* 5. Beneficios clave (3-4 bullets) */}
+        {/* 6. Beneficios clave (3-4 bullets) */}
         <CompactBenefitsSection />
         
-        {/* 6. Casos/resultados rápidos (2-3 mini casos) */}
+        {/* 4. Servicios principales (4 categorías, 1 frase cada una) */}
+        <CompactServicesSection />
+        
+        
+        {/* 7. Casos/resultados rápidos (2-3 mini casos) */}
         <CompactProjectsSection />
         
-        {/* 7. Proceso simple (3 pasos) */}
+        {/* 8. Proceso simple (3 pasos) */}
         <CompactProcessSection />
         
-        {/* 8. CTA final fuerte (formulario) */}
+        {/* 9. CTA final fuerte (formulario) */}
         <QuoteFormSection />
       </main>
     </>

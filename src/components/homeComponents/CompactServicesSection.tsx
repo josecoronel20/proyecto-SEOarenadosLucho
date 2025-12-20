@@ -7,24 +7,34 @@ import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 export function CompactServicesSection() {
   const services = [
     {
-      title: "Arenado Residencial",
-      description: "Piletas, fachadas, pisos y muebles para tu hogar.",
-      href: "/servicios/arenado-residencial"
-    },
-    {
-      title: "Arenado Industrial",
-      description: "Tanques, estructuras metálicas y maquinaria pesada.",
-      href: "/servicios/arenado-industrial"
+      title: "Arenado de Piletas",
+      description: "Limpieza profunda y preparación para pintura epoxi.",
+      href: "/servicios/arenado-de-piletas",
+      imageSrc: "/images/servicios/servicio-arenado-pileta-pilar.png"
     },
     {
       title: "Arenado de Vehículos",
-      description: "Camiones, autos y barcos con técnicas especializadas.",
-      href: "/servicios/arenado-de-vehiculos"
+      description: "Autos, camiones y barcos con técnicas especializadas.",
+      href: "/servicios/arenado-de-vehiculos",
+      imageSrc: "/images/servicios/servicio-arenado-auto-san-fernando.png"
     },
     {
-      title: "Arenado de Superficies",
-      description: "Superficies metálicas y de madera con acabado fino.",
-      href: "/servicios/arenado-de-superficies"
+      title: "Arenado Industrial",
+      description: "Estructuras metálicas y maquinaria pesada.",
+      href: "/servicios/arenado-industrial",
+      imageSrc: "/images/servicios/servicio-arenado-industrial-pilar.jpg"
+    },
+    {
+      title: "Arenado de Metales",
+      description: "Piezas metálicas con servicio fino en cabina.",
+      href: "/servicios/arenado-de-metales",
+      imageSrc: "/images/servicios/servicio-arenado-superficie-metalica-san-isidro.png"
+    },
+    {
+      title: "Arenado de Madera",
+      description: "Muebles y superficies de madera con acabado fino.",
+      href: "/servicios/arenado-de-madera",
+      imageSrc: "/images/servicios/servicio-arenado-superficie-madera-pilar.png"
     }
   ]
 
@@ -41,15 +51,40 @@ export function CompactServicesSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border-blue-200">
-                <CardHeader>
-                  <CardTitle className="text-xl text-blue-800">{service.title}</CardTitle>
+              <Card
+                key={index}
+                className="group transition-all border border-blue-100 bg-white rounded-2xl shadow-md hover:shadow-xl hover:border-primary/40 hover:-translate-y-1 focus-within:shadow-xl focus-within:border-primary/60 relative overflow-hidden"
+              >
+                <Link href={service.href} className="absolute inset-0 z-10" tabIndex={-1} aria-label={`Ver más sobre ${service.title}`}></Link>
+                <CardHeader className="flex flex-col items-start pb-0">
+                  {/* Imagen añadida aquí */}
+                  <div className="w-full flex justify-center mb-4">
+                    <img
+                      src={service.imageSrc}
+                      alt={service.title}
+                      className="rounded-xl w-full h-28 object-cover border border-blue-100 shadow-sm transition-transform group-hover:scale-105"
+                      loading="lazy"
+                      style={{ maxHeight: "7rem", minHeight: "5rem", background: "#eaf1fb" }}
+                    />
+                  </div>
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform -mt-8">
+                    <ArrowRight className="text-primary h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button variant="outline" className="w-full" asChild>
+                <CardContent className="pt-2 pb-6 flex flex-col justify-between h-full">
+                  <p className="text-gray-600 text-sm mb-6">
+                    {service.description}
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="w-full font-medium group-hover:bg-primary/10 border-primary/50 group-hover:border-primary group-hover:text-primary relative z-20"
+                    asChild
+                  >
                     <Link href={service.href}>
                       Ver más
                       <ArrowRight className="ml-2 h-4 w-4" />

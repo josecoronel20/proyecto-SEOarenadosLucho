@@ -4,6 +4,7 @@ import { ServiciosSection } from "@/components/serviciosComponents/ServiciosSect
 import { MaquinariaSection } from "@/components/serviciosComponents/MaquinariaSection"
 import { BenefitsSection } from "@/components/serviciosComponents/BenefitsSection"
 import { ContactCTA } from "@/components/serviciosComponents/ContactCTA"
+import { QuoteFormSection } from "@/components/common/QuoteFormSection"
 
 export default function ServiciosPage() {
   return (
@@ -14,8 +15,8 @@ export default function ServiciosPage() {
         <ServiciosHeroSection />
         <ServiciosSection />
         <MaquinariaSection />
-        <BenefitsSection />
-        <ContactCTA />
+        
+        <QuoteFormSection />
       </main>
     </>
   )

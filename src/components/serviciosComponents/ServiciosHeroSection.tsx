@@ -3,29 +3,8 @@
 import React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import {  FileText, Clock, MapPin, Award, Shield } from "lucide-react"
+import { FileText } from "lucide-react"
 import { WhatsAppButton } from "../common/WhatsAppButton"
-
-const LOCALIDADES = [
-  "Pilar",
-  "San Isidro",
-  "Tigre",
-  "Vicente López",
-  "San Fernando",
-  "Moreno",
-  "Morón",
-  "Palermo",
-  "Recoleta",
-]
-
-function slugify(s: string) {
-  return s
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-}
 
 export function ServiciosHeroSection() {
   return (
@@ -34,69 +13,26 @@ export function ServiciosHeroSection() {
       aria-labelledby="servicios-hero-title"
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h1
             id="servicios-hero-title"
             className="text-4xl md:text-6xl font-bold mb-4 text-gray-900 leading-tight"
           >
-            Servicios de arenado y granallado en Buenos Aires
-            <span className="block text-primary mt-2 text-2xl md:text-3xl font-semibold">
-              Zona Norte, Oeste y CABA — Servicio móvil y en taller
-            </span>
+            Servicio de arenado y granallado Profesional en Zona Norte, Oeste y CABA
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-4xl mx-auto leading-relaxed">
-            Arenados Lucho ofrece servicios profesionales de arenado y granallado en diferentes superficies como piletas, vehículos, fachadas, barcos, piezas metálicas y más. Trabajamos con servicio móvil a domicilio y también en nuestro taller ubicado en Buenos Aires.
-          </p>
 
-          <p className="text-md text-gray-600 mb-6 max-w-3xl mx-auto">
-            Servicio móvil en{" "}
-            {LOCALIDADES.slice(0, 6).map((loc, i) => (
-              <span key={loc}>
-                {i > 0 && " · "}
-                <Link
-                  href={`/zona/${slugify(loc)}`}
-                  className="underline decoration-dotted decoration-primary/40 hover:decoration-solid"
-                >
-                  {loc}
-                </Link>
-              </span>
-            ))}
-            {", y otras localidades de Buenos Aires."}
-          </p>
-
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-primary" aria-hidden />
-              <span>Servicio móvil en Buenos Aires</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="h-4 w-4 text-primary" aria-hidden />
-              <span>20+ años de experiencia</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-primary" aria-hidden />
-              <span>Garantía de calidad</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary" aria-hidden />
-              <span>Presupuesto en 24h</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-2">
             <WhatsAppButton />
-
             <Button
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-white"
               asChild
             >
-              <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto de sandblasting">
+              <Link href="/presupuesto-rapido" aria-label="Solicitar presupuesto arenado y granallado">
                 <FileText className="mr-2 h-5 w-5 inline-block" aria-hidden />
-                Solicitar Presupuesto
+                Pedí presupuesto ahora
               </Link>
             </Button>
           </div>

@@ -1,18 +1,61 @@
-import { CoverageAreasSection as BaseCoverageAreasSection } from "../../componentes/CoverageAreasSection"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { MapPin } from "lucide-react"
+import Link from "next/link"
 
-interface CoverageArea {
-  name: string
-  slug: string
-  description: string
-}
+export function CoverageAreasSection() {
+  const zones = [
+    {
+      name: "Zona Norte",
+      href: "/zonas-de-cobertura/zona-norte",
+      description: "Arenado industrial en Zona Norte"
+    },
+    {
+      name: "Zona Oeste",
+      href: "/zonas-de-cobertura/zona-oeste",
+      description: "Arenado industrial en Zona Oeste"
+    },
+    {
+      name: "CABA",
+      href: "/zonas-de-cobertura/caba",
+      description: "Arenado industrial en CABA"
+    }
+  ]
 
-interface CoverageAreasSectionProps {
-  title: string
-  subtitle: string
-  coverageAreas: Record<string, CoverageArea[]>
-}
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Zonas que cubrimos
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Servicio profesional de arenado industrial en toda la región metropolitana de Buenos Aires.
+          </p>
+        </div>
 
-export function CoverageAreasSection(props: CoverageAreasSectionProps) {
-  return <BaseCoverageAreasSection {...props} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {zones.map((zone) => (
+            <Card key={zone.name} className="hover:shadow-lg transition-shadow border-blue-100">
+              <CardHeader>
+                <div className="flex items-center justify-center mb-2">
+                  <MapPin className="h-6 w-6 text-primary mr-2" />
+                  <CardTitle className="text-xl text-gray-900">{zone.name}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Link 
+                  href={zone.href}
+                  className="text-primary hover:text-primary/80 hover:underline transition-colors duration-200 font-medium"
+                  title={zone.description}
+                >
+                  Ver más información
+                </Link>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
 

@@ -13,7 +13,7 @@ export function HeroSection() {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Portfolio de proyectos de arenado realizados con éxito en más de 20 años de experiencia local. 
-            Servicio profesional de arenado y sandblasting en Pilar, San Isidro, Tigre y todo Zona Norte de Buenos Aires.
+            
           </p>
           <WhatsAppButton />
         </div>

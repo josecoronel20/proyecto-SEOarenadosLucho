@@ -19,32 +19,39 @@ interface ServicesSectionProps {
 export function ServicesSection({ locationName, services }: ServicesSectionProps) {
   const defaultServices: Service[] = [
     {
-      id: "arenado-residencial",
-      title: "Arenado Residencial",
-      description: `Servicios profesionales de arenado para tu hogar en ${locationName}`,
-      features: ["Piletas", "Fachadas", "Pisos", "Muebles"],
-      href: "/servicios/arenado-residencial"
-    },
-    {
-      id: "arenado-industrial",
-      title: "Arenado Industrial", 
-      description: `Servicio industrial especializado para empresas y fábricas en ${locationName}`,
-      features: ["Tanques", "Estructuras metálicas", "Fábricas", "Edificios antiguos"],
-      href: "/servicios/arenado-industrial"
+      id: "arenado-piletas",
+      title: "Arenado de Piletas",
+      description: `Limpieza profunda y preparación de piletas para pintura epoxi en ${locationName}`,
+      features: ["Preparación para pintura epoxi", "Eliminación de algas y moho", "Servicio móvil", "Equipos profesionales"],
+      href: "/servicios/arenado-de-piletas"
     },
     {
       id: "arenado-vehiculos", 
       title: "Arenado de Vehículos",
-      description: `Servicio profesional de despintado y preparación de vehículos en ${locationName}`,
-      features: ["Camiones", "Autos", "Barcos"],
+      description: `Remoción de pintura y óxido en autos, camiones y barcos en ${locationName}`,
+      features: ["Autos", "Camiones", "Barcos", "Técnicas especializadas"],
       href: "/servicios/arenado-de-vehiculos"
     },
     {
-      id: "arenado-superficies",
-      title: "Arenado de Superficies",
-      description: `Servicio fino para superficies metálicas y de madera en ${locationName}`,
-      features: ["Superficies metálicas", "Superficies de madera", "Servicio en taller", "Servicio móvil"],
-      href: "/servicios/arenado-de-superficies"
+      id: "arenado-industrial",
+      title: "Arenado Industrial", 
+      description: `Limpieza y preparación de estructuras metálicas y maquinarias en ${locationName}`,
+      features: ["Estructuras metálicas", "Maquinaria industrial", "Servicio móvil", "Equipos propios"],
+      href: "/servicios/arenado-industrial"
+    },
+    {
+      id: "arenado-metales",
+      title: "Arenado de Metales",
+      description: `Servicio fino en cabina para piezas metálicas en ${locationName}`,
+      features: ["Piezas mecánicas", "Servicio en taller", "Preparación para galvanizado", "Terminación uniforme"],
+      href: "/servicios/arenado-de-metales"
+    },
+    {
+      id: "arenado-madera",
+      title: "Arenado de Madera",
+      description: `Restauración y despintado de muebles y superficies de madera en ${locationName}`,
+      features: ["Muebles", "Superficies de madera", "Acabado fino", "Preservación del material"],
+      href: "/servicios/arenado-de-madera"
     }
   ]
 
@@ -63,7 +70,7 @@ export function ServicesSection({ locationName, services }: ServicesSectionProps
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" role="list" aria-label={`Servicios de arenado disponibles en ${locationName}`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16" role="list" aria-label={`Servicios de arenado disponibles en ${locationName}`}>
             {displayServices.map((service) => (
               <Card key={service.id} className="hover:shadow-lg transition-shadow border-blue-200" role="listitem">
                 <CardHeader>

@@ -9,7 +9,6 @@ export function CoverageZonesSection() {
     {
       id: "zona-norte",
       title: "Zona Norte",
-      description: "Nuestra zona principal de cobertura, incluyendo Pilar y áreas aledañas",
       areas: PROJECT.coverage.zonaNorte,
       href: "/zonas-de-cobertura/zona-norte",
       color: "border-blue-200 bg-blue-50",
@@ -19,7 +18,6 @@ export function CoverageZonesSection() {
     {
       id: "zona-oeste", 
       title: "Zona Oeste",
-      description: "Servicio móvil en el oeste del Gran Buenos Aires",
       areas: PROJECT.coverage.zonaOeste,
       href: "/zonas-de-cobertura/zona-oeste",
       color: "border-green-200 bg-green-50",
@@ -29,7 +27,6 @@ export function CoverageZonesSection() {
     {
       id: "caba",
       title: "Ciudad Autónoma de Buenos Aires",
-      description: "Cobertura completa en CABA y barrios porteños",
       areas: PROJECT.coverage.caba,
       href: "/zonas-de-cobertura/caba",
       color: "border-purple-200 bg-purple-50",
@@ -46,9 +43,7 @@ export function CoverageZonesSection() {
             <h2 id="coverage-heading" className="text-3xl font-bold mb-4">
               Nuestras Zonas de Cobertura
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Selecciona tu zona para ver las localidades que cubrimos
-            </p>
+           
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" role="list" aria-label="Zonas de cobertura disponibles">
@@ -66,9 +61,7 @@ export function CoverageZonesSection() {
                       </CardDescription>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    {zone.description}
-                  </p>
+                  
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">

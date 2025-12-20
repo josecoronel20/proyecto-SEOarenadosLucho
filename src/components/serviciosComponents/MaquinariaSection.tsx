@@ -11,10 +11,7 @@ export function MaquinariaSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Maquinaria utilizada para el arenado
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-              Utilizamos equipos industriales móviles: camioneta y compresor, para arenado en obra. 
-              Es importante contar con espacio cercano y suficiente para la instalación de la maquinaria.
-            </p>
+          
           </div>
 
           <div className="mb-10 flex justify-center">

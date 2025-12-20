@@ -331,7 +331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <GoogleAnalytics />
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16 lg:pt-28">{children}</main>
         <Footer />
       </body>
     </html>

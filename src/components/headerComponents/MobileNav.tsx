@@ -1,10 +1,26 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { createPortal } from "react-dom"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Home, Factory, Car, Layers, MapPin, FileText, HelpCircle, FolderKanban, X } from "lucide-react"
+import { 
+  ChevronDown, 
+  Home, 
+  Factory, 
+  Car, 
+  Layers, 
+  MapPin, 
+  FileText, 
+  HelpCircle, 
+  FolderKanban, 
+  X, 
+  Droplet, 
+  Wrench, 
+  TreePine,
+  Calculator,
+  Sparkles
+} from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface MobileNavProps {
@@ -17,25 +33,43 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const [expandedSections, setExpandedSections] = useState<{
     services: boolean
     coverage: boolean
-    [key: string]: boolean
   }>({
     services: false,
     coverage: false,
   })
+  const servicesRef = useRef<HTMLDivElement>(null)
+  const coverageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  const toggleSection = (section: string) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }))
+  const toggleSection = (section: "services" | "coverage") => {
+    setExpandedSections((prev) => {
+      const newState = {
+        ...prev,
+        [section]: !prev[section],
+      }
+      
+      // Scroll to expanded section
+      if (!prev[section]) {
+        setTimeout(() => {
+          const ref = section === "services" ? servicesRef : coverageRef
+          if (ref.current) {
+            ref.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start',
+              inline: 'nearest'
+            })
+          }
+        }, 150)
+      }
+      
+      return newState
+    })
   }
 
   const handleClose = () => {
-    // Reset expanded sections when closing
     setExpandedSections({
       services: false,
       coverage: false,
@@ -43,90 +77,36 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     onClose()
   }
 
-  const serviceCategories = [
+  const services = [
     {
-      title: "Arenado Residencial",
-      href: "/servicios/arenado-residencial",
-      icon: Home,
+      title: "Arenado de Piletas",
+      href: "/servicios/arenado-de-piletas",
+      icon: Droplet,
       color: "text-blue-600",
-      subServices: [
-        {
-          title: "Arenado de piletas",
-          href: "/servicios/arenado-residencial/arenado-de-piletas",
-        },
-        {
-          title: "Arenado de fachadas domiciliarias",
-          href: "/servicios/arenado-residencial/arenado-de-fachadas-domiciliarias",
-        },
-        {
-          title: "Arenado de pisos",
-          href: "/servicios/arenado-residencial/arenado-de-pisos",
-        },
-        {
-          title: "Arenado de muebles",
-          href: "/servicios/arenado-residencial/arenado-de-muebles",
-        }
-      ]
-    },
-    {
-      title: "Arenado Industrial",
-      href: "/servicios/arenado-industrial",
-      icon: Factory,
-      color: "text-orange-600",
-      subServices: [
-        {
-          title: "Arenado de tanques",
-          href: "/servicios/arenado-industrial/arenado-de-tanques",
-        },
-        {
-          title: "Arenado de estructuras metálicas",
-          href: "/servicios/arenado-industrial/arenado-de-estructuras-metalicas",
-        },
-        {
-          title: "Arenado de edificios antiguos",
-          href: "/servicios/arenado-industrial/arenado-de-edificios-antiguos",
-        },
-        {
-          title: "Arenado en fábrica",
-          href: "/servicios/arenado-industrial/arenado-en-fabrica",
-        }
-      ]
     },
     {
       title: "Arenado de Vehículos",
       href: "/servicios/arenado-de-vehiculos",
       icon: Car,
       color: "text-green-600",
-      subServices: [
-        {
-          title: "Arenado de camiones",
-          href: "/servicios/arenado-de-vehiculos/arenado-de-camiones",
-        },
-        {
-          title: "Arenado de autos",
-          href: "/servicios/arenado-de-vehiculos/arenado-de-autos",
-        },
-        {
-          title: "Arenado de barcos",
-          href: "/servicios/arenado-de-vehiculos/arenado-de-barcos",
-        }
-      ]
     },
     {
-      title: "Arenado de Superficies",
-      href: "/servicios/arenado-de-superficies",
-      icon: Layers,
+      title: "Arenado Industrial",
+      href: "/servicios/arenado-industrial",
+      icon: Factory,
+      color: "text-orange-600",
+    },
+    {
+      title: "Arenado de Metales",
+      href: "/servicios/arenado-de-metales",
+      icon: Wrench,
       color: "text-purple-600",
-      subServices: [
-        {
-          title: "Arenado de superficies metálicas",
-          href: "/servicios/arenado-de-superficies/arenado-de-superficies-metalicas",
-        },
-        {
-          title: "Arenado de superficies de madera",
-          href: "/servicios/arenado-de-superficies/arenado-de-superficies-de-madera",
-        }
-      ]
+    },
+    {
+      title: "Arenado de Madera",
+      href: "/servicios/arenado-de-madera",
+      icon: TreePine,
+      color: "text-amber-600",
     }
   ]
 
@@ -139,7 +119,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     {
       title: "Zona Oeste",
       href: "/zonas-de-cobertura/zona-oeste",
-      description: "Moreno, Morón, Hurlingham y más"
+      description: "Morón, Ituzaingó, Hurlingham y más"
     },
     {
       title: "CABA",
@@ -149,6 +129,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   ]
 
   const navItems = [
+    {
+      title: "Precios",
+      href: "/precios-arenados",
+      icon: Calculator,
+    },
     {
       title: "Proyectos",
       href: "/proyectos",
@@ -169,16 +154,16 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   if (!isOpen || !mounted) return null
 
   const menuContent = (
-    <div className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-[100] bg-background overflow-y-auto shadow-lg">
-      {/* Close Button */}
-      
+    <div className="lg:hidden fixed inset-x-0 top-[56px] bottom-0 z-[100] bg-background overflow-y-auto shadow-xl">
+      {/* Close Button - Sticky */}
+     
       
       {/* Navigation Menu */}
-      <nav className="flex flex-col p-4 space-y-1">
+      <nav className="flex flex-col p-4 space-y-1 pb-8">
         {/* Inicio */}
         <Link
           href="/"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px]"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px] active:bg-accent"
           onClick={handleClose}
         >
           <Home className="h-5 w-5 text-primary" />
@@ -186,10 +171,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         </Link>
 
         {/* Servicios */}
-        <div className="space-y-1">
+        <div ref={servicesRef} className="space-y-1">
           <button
             onClick={() => toggleSection("services")}
-            className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px]"
+            className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px] active:bg-accent"
           >
             <div className="flex items-center gap-3">
               <Layers className="h-5 w-5 text-primary" />
@@ -197,67 +182,35 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             </div>
             <ChevronDown
               className={cn(
-                "h-5 w-5 transition-transform",
+                "h-5 w-5 transition-transform duration-200",
                 expandedSections.services && "rotate-180"
               )}
             />
           </button>
           
           {expandedSections.services && (
-            <div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
+            <div className="ml-4 space-y-1 border-l-2 border-primary/20 pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
               <Link
                 href="/servicios"
-                className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-accent transition-colors text-sm font-semibold text-primary min-h-[44px]"
+                className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-accent transition-colors text-sm font-semibold text-primary min-h-[44px] active:bg-accent"
                 onClick={handleClose}
               >
+                <Sparkles className="h-4 w-4" />
                 Todos los servicios
               </Link>
               
-              {serviceCategories.map((category) => {
-                const Icon = category.icon
-                const categoryKey = `category-${category.href}`
-                const isCategoryExpanded = expandedSections[categoryKey] || false
-                
+              {services.map((service) => {
+                const Icon = service.icon
                 return (
-                  <div key={category.href} className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={() => toggleSection(categoryKey)}
-                        className="flex-1 flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-accent transition-colors text-sm font-semibold min-h-[40px]"
-                      >
-                        <Icon className={cn("h-4 w-4", category.color)} />
-                        <span className="flex-1 text-left">{category.title}</span>
-                        <ChevronDown
-                          className={cn(
-                            "h-4 w-4 transition-transform",
-                            isCategoryExpanded && "rotate-180"
-                          )}
-                        />
-                      </button>
-                    </div>
-                    
-                    {isCategoryExpanded && (
-                      <div className="ml-6 space-y-1 border-l-2 border-muted pl-3">
-                        <Link
-                          href={category.href}
-                            className="flex items-center px-3 py-2 rounded-lg hover:bg-accent transition-colors text-xs font-medium text-primary min-h-[36px]"
-                          onClick={handleClose}
-                        >
-                          Ver todos
-                        </Link>
-                        {category.subServices.map((subService) => (
-                          <Link
-                            key={subService.href}
-                            href={subService.href}
-                            className="flex items-center px-3 py-2 rounded-lg hover:bg-accent transition-colors text-xs min-h-[36px]"
-                            onClick={handleClose}
-                          >
-                            {subService.title}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-accent transition-colors text-sm min-h-[44px] active:bg-accent"
+                    onClick={handleClose}
+                  >
+                    <Icon className={cn("h-4 w-4 flex-shrink-0", service.color)} />
+                    <span>{service.title}</span>
+                  </Link>
                 )
               })}
             </div>
@@ -265,10 +218,10 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
         </div>
 
         {/* Zonas de Cobertura */}
-        <div className="space-y-1">
+        <div ref={coverageRef} className="space-y-1">
           <button
             onClick={() => toggleSection("coverage")}
-            className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px]"
+            className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px] active:bg-accent"
           >
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-primary" />
@@ -276,19 +229,20 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             </div>
             <ChevronDown
               className={cn(
-                "h-5 w-5 transition-transform",
+                "h-5 w-5 transition-transform duration-200",
                 expandedSections.coverage && "rotate-180"
               )}
             />
           </button>
           
           {expandedSections.coverage && (
-            <div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
+            <div className="ml-4 space-y-1 border-l-2 border-primary/20 pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
               <Link
                 href="/zonas-de-cobertura"
-                className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-accent transition-colors text-sm font-semibold text-primary min-h-[44px]"
+                className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-accent transition-colors text-sm font-semibold text-primary min-h-[44px] active:bg-accent"
                 onClick={handleClose}
               >
+                <MapPin className="h-4 w-4" />
                 Todas las zonas
               </Link>
               
@@ -296,11 +250,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 <Link
                   key={zone.href}
                   href={zone.href}
-                  className="block px-4 py-2 rounded-lg hover:bg-accent transition-colors text-sm min-h-[44px]"
+                  className="block px-4 py-2.5 rounded-lg hover:bg-accent transition-colors text-sm min-h-[44px] active:bg-accent"
                   onClick={handleClose}
                 >
                   <div className="font-medium">{zone.title}</div>
-                  <p className="text-xs text-muted-foreground">{zone.description}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{zone.description}</p>
                 </Link>
               ))}
             </div>
@@ -314,7 +268,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px]"
+              className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent transition-colors text-base font-medium min-h-[48px] active:bg-accent"
               onClick={handleClose}
             >
               <Icon className="h-5 w-5 text-primary" />
@@ -325,7 +279,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
         {/* CTA Button */}
         <Button
-          className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold min-h-[48px] text-base"
+          className="mt-4 bg-primary hover:bg-primary/90 text-white font-semibold min-h-[48px] text-base shadow-sm"
           asChild
         >
           <Link href="/presupuesto-rapido" onClick={handleClose}>

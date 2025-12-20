@@ -5,20 +5,24 @@ import { poppins } from "@/lib/fonts"
 
 const footerServices = [
   {
-    title: "Arenado Residencial",
-    href: "/servicios/arenado-residencial"
+    title: "Arenado de Piletas",
+    href: "/servicios/arenado-de-piletas"
+  },
+  {
+    title: "Arenado de Vehículos",
+    href: "/servicios/arenado-de-vehiculos"
   },
   {
     title: "Arenado Industrial",
     href: "/servicios/arenado-industrial"
   },
   {
-    title: "Arenado de Vehículos", 
-    href: "/servicios/arenado-de-vehiculos"
+    title: "Arenado de Metales",
+    href: "/servicios/arenado-de-metales"
   },
   {
-    title: "Arenado de Superficies",
-    href: "/servicios/arenado-de-superficies"
+    title: "Arenado de Madera",
+    href: "/servicios/arenado-de-madera"
   }
 ]
 

@@ -5,22 +5,22 @@ export function CompactBenefitsSection() {
     {
       icon: CheckCircle,
       title: "Limpieza 100% efectiva",
-      description: "Elimina completamente óxido, pintura y contaminantes"
+      description: "Elimina completamente óxido, pintura y contaminantes recuperando la superficie original"
     },
     {
       icon: Zap,
       title: "Hasta 70% más rápido",
-      description: "Proceso eficiente que ahorra tiempo y dinero"
+      description: "Proceso eficiente que ahorra tiempo y dinero evitando días de trabajo manual con lija o químicos"
     },
     {
       icon: Shield,
       title: "Resultado profesional garantizado",
-      description: "Calidad industrial imposible de lograr con métodos tradicionales"
+      description: "Calidad industrial imposible de lograr con métodos tradicionales, garantizando una superficie nueva y lista para cualquier recubrimiento"
     },
     {
       icon: Clock,
       title: "Respuesta en 24 horas",
-      description: "Presupuesto rápido y servicio puntual"
+      description: "Presupuesto rápido y servicio puntual, para que puedas empezar a trabajar en tu proyecto lo antes posible"
     }
   ]
 

@@ -6,6 +6,7 @@ import { ProcessSection } from "./componentes/ProcessSection"
 import { WhyChooseSection } from "./componentes/WhyChooseSection"
 import { TestimonialsSection } from "./componentes/TestimonialsSection"
 import { FinalCTASection } from "./componentes/FinalCTASection"
+import { QuoteFormSection } from "@/components/common/QuoteFormSection"
 
 export default function ProyectosPage() {
   return (
@@ -13,12 +14,9 @@ export default function ProyectosPage() {
       <Breadcrumbs segments={[{ label: 'Proyectos de Arenado en Pilar y Zona Norte' }]} />
       
       <HeroSection />
-      <StatsSection />
       <ProjectsGallerySection />
-      <ProcessSection />
-      <WhyChooseSection />
-      <TestimonialsSection />
-      <FinalCTASection />
+      
+      <QuoteFormSection />
     </main>
   )
 }

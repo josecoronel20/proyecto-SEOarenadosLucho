@@ -131,6 +131,18 @@ export const PROJECT: Readonly<ProjectConfig> = {
       ]
     },
     {
+      id: "arenado-vehiculos",
+      title: "Arenado de vehículos",
+      description: "Remoción de pintura y óxido en autos, camiones, barcos y chasis",
+      href: "/servicios/arenado-de-vehiculos",
+      features: [
+        "Remoción de pintura",
+        "Eliminación de óxido",
+        "Preparación para pintura",
+        "Técnicas no abrasivas"
+      ]
+    },
+    {
       id: "arenado-industrial",
       title: "Arenado industrial",
       description: "Limpieza y preparación de estructuras metálicas, maquinarias y obras industriales",
@@ -143,63 +155,27 @@ export const PROJECT: Readonly<ProjectConfig> = {
       ]
     },
     {
-      id: "arenado-vehiculos",
-      title: "Arenado de vehículos",
-      description: "Remoción de pintura y óxido en autos, camiones y chasis",
-      href: "/servicios/arenado-de-vehiculos",
-      features: [
-        "Remoción de pintura",
-        "Eliminación de óxido",
-        "Preparación para pintura",
-        "Técnicas no abrasivas"
-      ]
-    },
-    {
-      id: "arenado-barcos",
-      title: "Arenado de barcos",
-      description: "Despintado y tratamiento de cascos, cubiertas y estructuras navales",
-      href: "/servicios/arenado-de-barcos",
-      features: [
-        "Cascos y cubiertas",
-        "Estructuras navales",
-        "Técnicas controladas",
-        "Protección de materiales"
-      ]
-    },
-    {
-      id: "arenado-piezas",
-      title: "Arenado de piezas metálicas",
-      description: "Servicio fino en cabina para piezas mecánicas, ornamentales o industriales",
-      href: "/servicios/arenado-de-piezas-metalicas",
+      id: "arenado-metales",
+      title: "Arenado de metales",
+      description: "Servicio fino en cabina para piezas metálicas, mecánicas, ornamentales o industriales",
+      href: "/servicios/arenado-de-metales",
       features: [
         "Piezas mecánicas",
         "Servicio en taller",
-        "Terminación uniforme"
+        "Terminación uniforme",
+        "Preparación para galvanizado"
       ]
     },
     {
-      id: "arenado-muebles",
-      title: "Arenado de muebles de madera",
-      description: "Restauración y despintado de muebles con acabado fino",
-      href: "/servicios/arenado-de-muebles",
+      id: "arenado-madera",
+      title: "Arenado de madera",
+      description: "Restauración y despintado de muebles y superficies de madera con acabado fino",
+      href: "/servicios/arenado-de-madera",
       features: [
         "Restauración de muebles",
         "Despintado fino",
         "Acabado profesional",
         "Preservación de madera"
-      ]
-    },
-    {
-      id: "arenado-fachadas",
-      title: "Arenado de fachadas particulares",
-      description: "Restauración de fachadas de viviendas y edificios",
-      href: "/servicios/arenado-de-fachadas",
-      features: [
-        "Fachadas residenciales",
-        "Fachadas comerciales",
-        "Eliminación de pintura",
-        "Limpieza profunda",
-        "Preparación para revestimiento"
       ]
     }
   ],

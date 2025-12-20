@@ -8,21 +8,31 @@ export function CompactProcessSection() {
     {
       number: "1",
       icon: MessageCircle,
-      title: "Consulta",
-      description: "Contactanos por WhatsApp o formulario. Te damos una cotización preliminar."
+      title: "Pedí tu presupuesto",
+      description:
+        "Contactanos por WhatsApp o completá el formulario en la página de presupuesto rápido.",
     },
     {
-      number: "2", 
+      number: "2",
       icon: Eye,
-      title: "Visita Técnica",
-      description: "Inspección gratuita para evaluar tu proyecto y presupuesto final."
+      title: "Evaluamos tu caso",
+      description:
+        "Analizamos el trabajo según los detalles y la descripción que nos brindes para darte un presupuesto preciso.",
     },
     {
       number: "3",
+      icon: MessageCircle,
+      title: "Coordinamos fecha",
+      description:
+        "Agendamos la fecha de ejecución según tu disponibilidad.",
+    },
+    {
+      number: "4",
       icon: CheckCircle,
-      title: "Ejecución",
-      description: "Arenado profesional con equipos propios y entrega lista para pintar."
-    }
+      title: "Realizamos el arenado",
+      description:
+        "Nuestro equipo realiza el arenado correspondiente en obra o en taller según el servicio.",
+    },
   ]
 
   return (
@@ -34,7 +44,7 @@ export function CompactProcessSection() {
               Proceso Simple
             </h2>
             <p className="text-lg text-gray-600">
-              3 pasos para contratar nuestro servicio
+              4 pasos para contratar nuestro servicio
             </p>
           </div>
 
@@ -49,20 +59,6 @@ export function CompactProcessSection() {
                 <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              ¿Listo para comenzar?
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/presupuesto-rapido">
-                  Solicitar Presupuesto
-                </Link>
-              </Button>
-              <WhatsAppButton />
-            </div>
           </div>
         </div>
       </div>
