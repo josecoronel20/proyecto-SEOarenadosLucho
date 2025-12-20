@@ -49,7 +49,7 @@ export function BeforeAfterSection() {
             Resultados reales
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Observá la diferencia que hace el arenado profesional. Deslizá el control para ver el antes y después.
+            Observá la restauración de autos, camión y barcos, embarcaciones y veleros . Deslizá el control para ver el antes y después.
           </p>
 
           {featuredProjects.length > 0 ? (

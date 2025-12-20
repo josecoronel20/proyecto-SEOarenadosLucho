@@ -70,7 +70,7 @@ export function HeroSection() {
             {/* Right: Imagen */}
             <div className="relative h-96 rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/servicios/servicio-arenado-vehiculo-pilar.png"
+                src="/images/servicios/servicio-arenado-auto-san-fernando.png"
                 alt="Arenado profesional de vehículos - Autos, camiones y barcos"
                 fill
                 className="object-cover"

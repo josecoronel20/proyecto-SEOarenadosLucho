@@ -18,7 +18,7 @@ const benefits = [
     icon: PaintBucket,
     title: "Preparación para pintura",
     description:
-      "Deja la superficie nueva lista para pintura automotriz, garantizando mejor adherencia y durabilidad del acabado.",
+      "El arenado aplica una limpieza profunda sobre chasis, carrocería y componentes metálicos como motores, garantizando una superficie limpia y lista para pintar.",
   },
 ]
 
