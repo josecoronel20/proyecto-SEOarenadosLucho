@@ -19,17 +19,6 @@ export function WhatsAppButton() {
   const handleClick = React.useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    // Inicializar dataLayer si no existe
-    window.dataLayer = window.dataLayer || [];
-    
-    // Enviar evento a GTM / GA4 con información adicional
-    window.dataLayer.push({ 
-      event: 'contact_whatsapp',
-      event_category: 'Contact',
-      event_label: 'WhatsApp Button Click',
-      interaction_type: 'click'
-    });
-
     // Construir número de WhatsApp
     const part1 = '549';
     const part2 = '11';
@@ -37,15 +26,38 @@ export function WhatsAppButton() {
     const phoneNumber = part1 + part2 + part3;
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-    // Dar tiempo suficiente para que GTM procese el evento antes de abrir WhatsApp
-    // Usamos requestAnimationFrame para asegurar que el navegador procese el evento
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-        }, 300);
-      });
+    // Inicializar dataLayer si no existe
+    window.dataLayer = window.dataLayer || [];
+    
+    // Enviar evento a GTM / GA4
+    // Formato compatible con GA4 a través de GTM
+    window.dataLayer.push({ 
+      event: 'contact_whatsapp',
+      event_category: 'Contact',
+      event_label: 'WhatsApp Button Click',
+      value: 1
     });
+
+    // Forzar el envío del evento antes de abrir WhatsApp
+    // Usamos múltiples estrategias para asegurar que GTM procese el evento:
+    // 1. requestIdleCallback para cuando el navegador esté listo
+    // 2. Fallback a setTimeout si requestIdleCallback no está disponible
+    const openWhatsApp = () => {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        setTimeout(openWhatsApp, 500);
+      }, { timeout: 1000 });
+    } else {
+      // Fallback para navegadores sin requestIdleCallback
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(openWhatsApp, 500);
+        });
+      });
+    }
 
   }, []);
 
