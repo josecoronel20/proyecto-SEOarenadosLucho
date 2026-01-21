@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -11,22 +10,6 @@ import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function QuoteFormSection() {
   const [state, handleSubmit] = useForm("xrgnqbod")
-  
-  // Fire conversion when succeeded
-  useEffect(() => {
-    if (state.succeeded) {
-      try {
-        // @ts-ignore
-        if (typeof window.gtag_report_conversion === 'function') {
-          // @ts-ignore
-          window.gtag_report_conversion();
-        } else if (window.gtag) {
-          // @ts-ignore
-          window.gtag('event', 'conversion', { send_to: 'AW-11151875862/_Vc5CP7J7bYbEJa-0MUp' });
-        }
-      } catch {}
-    }
-  }, [state.succeeded])
 
   // Show success message when form is submitted successfully
   if (state.succeeded) {

@@ -4,7 +4,6 @@ import "./globals.css";
 import { PROJECT } from "@/config/project";
 import { Header } from "@/components/headerComponents/header";
 import { Footer } from "@/components/footer";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 const SITE_URL = "https://www.arenadoslucho.com.ar";
 const LOGO_URL = `${SITE_URL}/images/logo-azul-arenados-lucho.png`;
@@ -249,22 +248,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
         
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-S1N9PL0G40"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-S1N9PL0G40');
-            `,
-          }}
-        />
-        
         {/* Meta tags esenciales */}
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -311,11 +294,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           href="https://www.googletagmanager.com"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preconnect"
-          href="https://www.google-analytics.com"
-          crossOrigin="anonymous"
-        />
       </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
@@ -329,7 +307,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         
-        <GoogleAnalytics />
         <Header />
         <main className="pt-16 lg:pt-28">{children}</main>
         <Footer />
