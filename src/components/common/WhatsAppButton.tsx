@@ -31,6 +31,7 @@ export function WhatsAppButton() {
       className={className}
       onClick={handleClick}
       aria-label={label}
+      id="whatsapp-button"
     >
       <MessageCircle className="mr-2 h-5 w-5" aria-hidden />
       {label}
