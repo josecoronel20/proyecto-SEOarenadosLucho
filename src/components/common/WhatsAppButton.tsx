@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Window {
+    dataLayer?: any[];
+  }
+}
+
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import * as React from "react";
@@ -12,16 +18,35 @@ export function WhatsAppButton() {
 
   const handleClick = React.useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+
+    // Inicializar dataLayer si no existe
+    window.dataLayer = window.dataLayer || [];
     
-    // Construir número dividido en partes
+    // Enviar evento a GTM / GA4 con información adicional
+    window.dataLayer.push({ 
+      event: 'contact_whatsapp',
+      event_category: 'Contact',
+      event_label: 'WhatsApp Button Click',
+      interaction_type: 'click'
+    });
+
+    // Construir número de WhatsApp
     const part1 = '549';
     const part2 = '11';
     const part3 = '23787750';
     const phoneNumber = part1 + part2 + part3;
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-    // Redirigir a WhatsApp
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    // Dar tiempo suficiente para que GTM procese el evento antes de abrir WhatsApp
+    // Usamos requestAnimationFrame para asegurar que el navegador procese el evento
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }, 300);
+      });
+    });
+
   }, []);
 
   return (
@@ -38,4 +63,3 @@ export function WhatsAppButton() {
     </Button>
   );
 }
-
