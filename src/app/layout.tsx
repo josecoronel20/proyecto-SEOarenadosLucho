@@ -236,7 +236,14 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Google Tag Manager */}
+        {/* Inicializar dataLayer ANTES de GTM para que esté disponible inmediatamente */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];`,
+          }}
+        />
+        
+        {/* Google Tag Manager - Debe estar lo más arriba posible */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -19,18 +19,8 @@ export function WhatsAppButton() {
   const handleClick = React.useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    // Construir número de WhatsApp
-    const part1 = '549';
-    const part2 = '11';
-    const part3 = '23787750';
-    const phoneNumber = part1 + part2 + part3;
-    const whatsappUrl = `https://wa.me/${phoneNumber}`;
-
-    // Inicializar dataLayer si no existe
-    window.dataLayer = window.dataLayer || [];
-    
     // Enviar evento a GTM / GA4
-    // Formato compatible con GA4 a través de GTM
+    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ 
       event: 'contact_whatsapp',
       event_category: 'Contact',
@@ -38,26 +28,17 @@ export function WhatsAppButton() {
       value: 1
     });
 
-    // Forzar el envío del evento antes de abrir WhatsApp
-    // Usamos múltiples estrategias para asegurar que GTM procese el evento:
-    // 1. requestIdleCallback para cuando el navegador esté listo
-    // 2. Fallback a setTimeout si requestIdleCallback no está disponible
-    const openWhatsApp = () => {
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    };
+    // Construir número de WhatsApp
+    const part1 = '549';
+    const part2 = '11';
+    const part3 = '23787750';
+    const phoneNumber = part1 + part2 + part3;
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        setTimeout(openWhatsApp, 500);
-      }, { timeout: 1000 });
-    } else {
-      // Fallback para navegadores sin requestIdleCallback
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          setTimeout(openWhatsApp, 500);
-        });
-      });
-    }
+    // Abrir WhatsApp con pequeño delay para asegurar que GTM procese el evento
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    }, 300);
 
   }, []);
 
