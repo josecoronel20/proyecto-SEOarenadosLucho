@@ -4,7 +4,7 @@ import { PROJECT } from "@/config/project"
 export const metadata: Metadata = {
   title: "Blog de Arenado en Pilar y Zona Norte | Consejos Profesionales y Guías Técnicas - Arenados Lucho",
   description: "Blog especializado en servicios de arenado en Pilar, San Isidro, Tigre y Zona Norte. Artículos sobre arenado de piletas, vehículos, barcos, industrial, fachadas y muebles. Consejos de expertos locales con más de 15 años de experiencia.",
-  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, blog arenado Pilar, consejos arenado Zona Norte, mantenimiento piletas Pilar, arenado vehículos San Isidro, arenado industrial Tigre, sandblasting Zona Norte, guías técnicas arenado, arenado barcos Tigre, arenado muebles San Fernando, arenado fachadas Vicente López, consejos profesionales arenado, casos de éxito arenado, técnicas arenado, blog sandblasting, blog granallado, expertos arenado Pilar, mantenimiento especializado Zona Norte`,
+  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, blog arenado Pilar, consejos arenado Zona Norte, mantenimiento piletas Pilar, arenado vehículos San Isidro, arenado industrial Tigre, Zona Norte, guías técnicas arenado, arenado barcos Tigre, arenado muebles San Fernando, arenado fachadas Vicente López, consejos profesionales arenado, casos de éxito arenado, técnicas arenado, blog arenado, expertos arenado Pilar, mantenimiento especializado Zona Norte`,
   authors: [{ name: PROJECT.name }],
   creator: `${PROJECT.name} - Expertos en Arenado`,
   publisher: PROJECT.name,
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     "ICBM": "-34.4587, -58.9142",
     "DC.title": "Blog de Arenado en Pilar y Zona Norte | Consejos Profesionales y Guías Técnicas",
     "DC.description": "Blog especializado en servicios de arenado en Pilar, San Isidro, Tigre, Vicente López, San Fernando y Zona Norte de Buenos Aires. Consejos de expertos locales.",
-    "DC.subject": "Blog, Arenado, Sandblasting, Granallado, Consejos, Guías Técnicas, Pilar, San Isidro, Tigre, Vicente López, San Fernando, Zona Norte",
+    "DC.subject": "Blog, Arenado, Consejos, Guías Técnicas, Pilar, San Isidro, Tigre, Vicente López, San Fernando, Zona Norte",
     "DC.language": "es",
     "DC.creator": PROJECT.name,
     "DC.publisher": PROJECT.name,

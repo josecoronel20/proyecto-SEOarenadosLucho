@@ -24,8 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       "guías técnicas arenado",
       "consejos profesionales",
       "técnicas arenado",
-      "blog sandblasting",
-      "blog granallado",
+      "blog arenado",
       "mantenimiento " + category.name.toLowerCase()
     ],
     authors: [{ name: "Arenados Lucho" }],
@@ -85,7 +84,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       "ICBM": "-34.4359, -58.7014",
       "DC.title": `${category.name} | Blog Arenado Pilar 2025`,
       "DC.description": `Artículos especializados sobre ${category.name.toLowerCase()} en Pilar, San Isidro y Zona Norte de Buenos Aires.`,
-      "DC.subject": `Blog, Arenado, ${category.name}, Sandblasting, Granallado, Consejos, Guías Técnicas, Pilar, San Isidro, Zona Norte`,
+      "DC.subject": `Blog, Arenado, ${category.name}, Consejos, Guías Técnicas, Pilar, San Isidro, Zona Norte`,
       "DC.language": "es",
       "DC.creator": "Arenados Lucho",
       "DC.publisher": "Arenados Lucho",

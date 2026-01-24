@@ -15,8 +15,6 @@ export const metadata: Metadata = {
     "arenado vehículos información",
     "arenado muebles consultas",
     "arenado fachadas preguntas",
-    "sandblasting FAQ",
-    "granallado preguntas frecuentes",
     "arenado presupuesto",
     "arenado cobertura servicio"
   ],
@@ -77,7 +75,7 @@ export const metadata: Metadata = {
     "ICBM": "-34.4359, -58.7014",
     "DC.title": "Preguntas Frecuentes sobre Arenado en Pilar y Zona Norte Buenos Aires 2025",
     "DC.description": "Respuestas completas a las preguntas más frecuentes sobre servicios de arenado profesional en Pilar, San Isidro y Zona Norte de Buenos Aires.",
-    "DC.subject": "Preguntas Frecuentes, FAQ, Arenado, Sandblasting, Granallado, Pilar, San Isidro, Zona Norte",
+    "DC.subject": "Preguntas Frecuentes, FAQ, Arenado, Pilar, San Isidro, Zona Norte",
     "DC.language": "es",
     "DC.creator": "Arenados Lucho",
     "DC.publisher": "Arenados Lucho",
@@ -114,7 +112,7 @@ export default function PreguntasFrecuentesLayout({
                 "name": "¿Qué es el arenado y cómo funciona?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "El arenado (también conocido como sandblasting o granallado) es un proceso de limpieza que utiliza materiales abrasivos a alta presión para eliminar pintura, óxido, suciedad y otros contaminantes de superficies."
+                  "text": "El arenado es un proceso de limpieza que utiliza materiales abrasivos a alta presión para eliminar pintura, óxido, suciedad y otros contaminantes de superficies."
                 }
               },
               {

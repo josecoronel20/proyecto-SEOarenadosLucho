@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles José C. Paz",
     "arenado residencial José C. Paz",
     "arenado comercial José C. Paz",
-    "granallado José C. Paz",
     "limpieza profunda José C. Paz",
     "servicio móvil José C. Paz",
     "presupuesto arenado José C. Paz"

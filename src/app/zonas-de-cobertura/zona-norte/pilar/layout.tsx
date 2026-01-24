@@ -4,7 +4,7 @@ import { PROJECT } from "@/config/project"
 export const metadata: Metadata = {
   title: "Arenado en Pilar | Servicio Profesional de Sandblasting - Arenados Lucho",
   description: "Servicio de arenado móvil en Pilar. Base principal con respuesta inmediata. Arenado de piletas, vehículos, fachadas, industrial y más. Presupuesto gratuito. +10 años de experiencia local en Pilar.",
-  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado Pilar, sandblasting Pilar, arenado de piletas Pilar, arenado de vehículos Pilar, arenado industrial Pilar, arenado de fachadas Pilar, arenado de barcos Pilar, arenado de muebles Pilar, granallado Pilar, limpieza profunda Pilar, servicio móvil Pilar, presupuesto arenado Pilar, base principal Pilar, respuesta inmediata Pilar`,
+  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado Pilar, arenado de piletas Pilar, arenado de vehículos Pilar, arenado industrial Pilar, arenado de fachadas Pilar, arenado de barcos Pilar, arenado de muebles Pilar, limpieza profunda Pilar, servicio móvil Pilar, presupuesto arenado Pilar, base principal Pilar, respuesta inmediata Pilar`,
   authors: [{ name: PROJECT.name }],
   openGraph: {
     title: "Arenado en Pilar | Base Principal - Arenados Lucho",

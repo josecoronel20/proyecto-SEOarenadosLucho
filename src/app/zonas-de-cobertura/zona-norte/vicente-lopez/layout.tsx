@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Vicente López",
     "arenado residencial Vicente López",
     "arenado comercial Vicente López",
-    "granallado Vicente López",
     "limpieza profunda Vicente López",
     "servicio móvil Vicente López",
     "presupuesto arenado Vicente López"

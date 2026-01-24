@@ -201,7 +201,6 @@ export const PROJECT: Readonly<ProjectConfig> = {
       "arenado Pilar",
       "arenado Zona Norte", 
       "sandblasting Buenos Aires",
-      "granallado Pilar",
       "limpieza profunda superficies"
     ],
     
@@ -225,7 +224,6 @@ export const PROJECT: Readonly<ProjectConfig> = {
       "sandblasting barcos Zona Norte",
       "presupuesto arenado industrial Buenos Aires",
       "arenado piletas antes y después Pilar",
-      "granallado industrial Pilar",
       "arenado cabina Zona Norte",
       "mejor empresa arenado Pilar",
       "arenado profesional Zona Norte",

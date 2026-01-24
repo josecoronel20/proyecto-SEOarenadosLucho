@@ -32,7 +32,7 @@ export function HeroSection() {
               
               {/* Subtítulo orientado a B2B */}
               <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-                Granallado y tratamiento anticorrosivo para industrias y grandes estructuras. Preparación profesional de superficies.
+                 Tratamiento anticorrosivo para industrias y grandes estructuras. Preparación profesional de superficies.
               </p>
 
               {/* Trust indicators B2B */}

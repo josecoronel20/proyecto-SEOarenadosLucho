@@ -4,7 +4,7 @@ import { PROJECT } from "@/config/project"
 export const metadata: Metadata = {
   title: "Arenado en San Isidro | Servicio Premium de Sandblasting - Arenados Lucho",
   description: "Servicio de arenado móvil premium en San Isidro. Especialistas en fachadas históricas, vehículos de lujo y propiedades de alto standing. Presupuesto gratuito. Técnicas no abrasivas y preservación patrimonial.",
-  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado San Isidro, sandblasting San Isidro, arenado de fachadas San Isidro, arenado de vehículos San Isidro, arenado de piletas San Isidro, arenado de muebles San Isidro, arenado de barcos San Isidro, granallado San Isidro, limpieza profunda San Isidro, servicio móvil San Isidro, presupuesto arenado San Isidro, arenado residencial San Isidro, servicio premium San Isidro, fachadas históricas San Isidro, vehículos de lujo San Isidro, preservación patrimonial San Isidro`,
+  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado San Isidro, arenado de fachadas San Isidro, arenado de vehículos San Isidro, arenado de piletas San Isidro, arenado de muebles San Isidro, arenado de barcos San Isidro, limpieza profunda San Isidro, servicio móvil San Isidro, presupuesto arenado San Isidro, arenado residencial San Isidro, servicio premium San Isidro, fachadas históricas San Isidro, vehículos de lujo San Isidro, preservación patrimonial San Isidro`,
   authors: [{ name: PROJECT.name }],
   openGraph: {
     title: "Arenado en San Isidro | Servicio Premium - Arenados Lucho",

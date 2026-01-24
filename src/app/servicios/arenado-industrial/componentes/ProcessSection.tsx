@@ -18,7 +18,7 @@ const steps = [
     number: "3",
     icon: Wrench,
     title: "Ejecución del arenado industrial",
-    description: "Ejecutamos el granallado profesional para quitar óxido, pintura y contaminantes, preparando la superficie para recubrimientos industriales.",
+    description: "Ejecutamos el Arenado profesional para quitar óxido, pintura y contaminantes, preparando la superficie para recubrimientos industriales.",
   }
 ]
 

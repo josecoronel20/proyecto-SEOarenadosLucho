@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Hurlingham",
     "arenado residencial Hurlingham",
     "arenado comercial Hurlingham",
-    "granallado Hurlingham",
     "limpieza profunda Hurlingham",
     "servicio móvil Hurlingham",
     "presupuesto arenado Hurlingham"

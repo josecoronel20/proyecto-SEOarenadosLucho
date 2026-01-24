@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Cardales",
     "arenado residencial Cardales",
     "arenado comercial Cardales",
-    "granallado Cardales",
     "limpieza profunda Cardales",
     "servicio móvil Cardales",
     "presupuesto arenado Cardales"

@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Moreno",
     "arenado residencial Moreno",
     "arenado comercial Moreno",
-    "granallado Moreno",
     "limpieza profunda Moreno",
     "servicio móvil Moreno",
     "presupuesto arenado Moreno"

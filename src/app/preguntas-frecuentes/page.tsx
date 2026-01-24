@@ -22,8 +22,6 @@ export const metadata: Metadata = {
     "arenado vehículos información",
     "arenado muebles consultas",
     "arenado fachadas preguntas",
-    "sandblasting FAQ",
-    "granallado preguntas frecuentes"
   ],
   openGraph: {
     title: "FAQ Arenado | Preguntas Frecuentes - Arenados Lucho Pilar",
@@ -54,7 +52,7 @@ export default function PreguntasFrecuentesPage() {
       questions: [
         {
           question: "¿Qué es el arenado y cómo funciona?",
-          answer: "El arenado (también conocido como sandblasting o granallado) es un proceso de limpieza que utiliza materiales abrasivos a alta presión para eliminar pintura, óxido, suciedad y otros contaminantes de superficies. Es más efectivo que métodos tradicionales y prepara perfectamente la superficie para nuevos tratamientos como pintura, galvanizado o revestimientos."
+          answer: "El arenado es un proceso de limpieza que utiliza materiales abrasivos a alta presión para eliminar pintura, óxido, suciedad y otros contaminantes de superficies. Es más efectivo que métodos tradicionales y prepara perfectamente la superficie para nuevos tratamientos como pintura, galvanizado o revestimientos."
         },
         {
           question: "¿Qué tipos de servicios de arenado ofrecen en Pilar?",

@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "arenado vehículos CABA",
     "arenado vehículos Zona Norte",
     "arenado vehículos Zona Oeste",
-    "granallado automotriz",
     "decapado de autos",
     "arenado chasis",
     "arenado barcos"

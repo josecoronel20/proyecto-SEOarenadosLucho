@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     "precio arenado Zona Norte",
     "precio arenado Zona Oeste",
     "cuanto cuesta arenado",
-    "precio granallado"
   ].join(", "),
   alternates: {
     canonical: `${SITE_URL}/precios-arenados`,

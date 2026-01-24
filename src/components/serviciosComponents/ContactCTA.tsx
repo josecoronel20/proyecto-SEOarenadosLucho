@@ -14,9 +14,9 @@ export function ContactCTA() {
             Solicitá tu presupuesto personalizado
           </h2>
           <p className="text-xl mb-10 text-blue-200 leading-relaxed">
-            Especificá el servicio de <strong className="text-white">arenado, granallado o sandblasting</strong> que necesitás, junto con la ubicación y dimensiones. 
+            Especificá el servicio de <strong className="text-white">arenado o sandblasting</strong> que necesitás, junto con la ubicación y dimensiones. 
             Nuestros <strong className="text-white">arenadores</strong> profesionales brindan servicios de <strong className="text-white">arenado a domicilio</strong> 
-            en <strong className="text-white">Zona Norte, Zona Oeste y CABA</strong>, realizando <strong className="text-white">granallados</strong> de alta calidad.
+            en <strong className="text-white">Zona Norte, Zona Oeste y CABA</strong>, realizando Arenado de alta calidad.
           </p>
           
           <div className="flex flex-wrap justify-center gap-8 mb-10">

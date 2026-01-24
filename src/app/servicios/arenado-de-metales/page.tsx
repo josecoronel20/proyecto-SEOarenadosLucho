@@ -14,12 +14,11 @@ import { Suspense } from "react"
 const SITE_URL = "https://www.arenadoslucho.com.ar"
 
 export const metadata: Metadata = {
-  title: "Arenado de Metales en CABA, Zona Norte y Oeste | Precio y Granallado",
+  title: "Arenado de Metales en CABA, Zona Norte y Oeste | Precio",
   description:
     "Arenado profesional de metales. Quita óxido y pintura vieja de piezas metálicas, rejas y estructuras. Precio competitivo. Servicio móvil en CABA, Zona Norte y Oeste. Cotizá gratis.",
   keywords: [
     "arenado de metales",
-    "granallado",
     "decapado de metales",
     "arenado de piezas metálicas",
     "arenado acero inoxidable",
@@ -28,14 +27,13 @@ export const metadata: Metadata = {
     "arenado metales Zona Oeste",
     "arenado rejas",
     "arenado estructuras metálicas",
-    "granallado piezas",
     "decapado piezas metálicas"
   ].join(", "),
   alternates: {
     canonical: `${SITE_URL}/servicios/arenado-de-metales`,
   },
   openGraph: {
-    title: "Arenado de Metales en CABA, Zona Norte y Oeste | Precio y Granallado",
+    title: "Arenado de Metales en CABA, Zona Norte y Oeste | Precio",
     description:
       "Arenado profesional de metales. Quita óxido y pintura vieja de piezas metálicas, rejas y estructuras. Precio competitivo. Servicio móvil.",
     url: `${SITE_URL}/servicios/arenado-de-metales`,
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arenado de Metales | Precio y Granallado Profesional",
+    title: "Arenado de Metales | Precio Profesional",
     description:
       "Arenado profesional de metales. Quita óxido y pintura vieja de piezas metálicas, rejas y estructuras.",
   },

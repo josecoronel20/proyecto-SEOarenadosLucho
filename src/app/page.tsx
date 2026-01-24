@@ -15,16 +15,11 @@ const SITE_URL = "https://www.arenadoslucho.com.ar"
 
 // Solo sobrescribimos lo específico de la home
 export const metadata: Metadata = {
-  title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho - Sandblasting y Granallado",
+  title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho - Arenado en Buenos Aires",
   description:
-    "Servicio profesional de arenado, sandblasting, granallado y decapado en Zona Norte, Oeste y CABA. Arenado de piletas, vehículos, barcos, fachadas y más. Equipos propios. Presupuesto gratuito por WhatsApp.",
+    "Servicio profesional de arenado en Zona Norte, Oeste y CABA. Arenado de piletas, vehículos, barcos, fachadas y más. Equipos propios. Presupuesto gratuito por WhatsApp.",
   keywords: [
     "arenado",
-    "sandblasting",
-    "granallado",
-    "decapado",
-    "chorro de arena",
-    "tratamiento de superficies",
     "arenado profesional",
     "arenado Buenos Aires",
     "arenado Zona Norte",
@@ -45,12 +40,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
     description:
-      "Servicio profesional de arenado, sandblasting y granallado en Zona Norte, Oeste y CABA. Equipos propios. Presupuesto gratuito por WhatsApp.",
+      "Servicio profesional de arenado en Zona Norte, Oeste y CABA. Equipos propios. Presupuesto gratuito por WhatsApp.",
   },
   twitter: {
     title: "Arenado Profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
     description:
-      "Servicio profesional de arenado, sandblasting y granallado. Equipos propios. Presupuesto gratuito.",
+      "Servicio profesional de arenado. Equipos propios. Presupuesto gratuito.",
   },
 }
 

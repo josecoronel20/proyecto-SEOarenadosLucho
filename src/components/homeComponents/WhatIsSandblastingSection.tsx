@@ -11,7 +11,7 @@ export function WhatIsSandblastingSection() {
 
           <div className="prose prose-lg max-w-none mb-8">
             <p className="text-lg text-gray-700 leading-relaxed mb-4 text-center">
-              El <strong>arenado</strong> (también llamado <strong>sandblasting</strong>, <strong>granallado</strong> o <strong>decapado</strong>) 
+              El <strong>arenado</strong> (también llamado <strong>sandblasting</strong> o <strong>decapado</strong>) 
               es un proceso profesional de limpieza y preparación de superficies que consiste en proyectar partículas abrasivas 
               a alta velocidad para eliminar pintura vieja, óxido, suciedad, moho y otros contaminantes.
             </p>
@@ -36,15 +36,6 @@ export function WhatIsSandblastingSection() {
             <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
               <div className="flex items-center mb-2">
                 <Zap className="h-5 w-5 text-primary mr-2" />
-                <h3 className="text-base font-semibold text-gray-900">Granallado</h3>
-              </div>
-              <p className="text-sm text-gray-600">
-                Proceso similar que utiliza partículas metálicas (granalla) en lugar de arena, ideal para superficies más duras.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-2">
                 <Shield className="h-5 w-5 text-primary mr-2" />
                 <h3 className="text-base font-semibold text-gray-900">Decapado</h3>
               </div>

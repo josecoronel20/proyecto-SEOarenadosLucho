@@ -14,18 +14,16 @@ import { Suspense } from "react"
 const SITE_URL = "https://www.arenadoslucho.com.ar"
 
 export const metadata: Metadata = {
-  title: "Arenado Industrial en CABA, Zona Norte y Oeste | Granallado y Tratamiento Anticorrosivo",
+  title: "Arenado Industrial en CABA, Zona Norte y Oeste | Tratamiento Anticorrosivo",
   description:
-    "Arenado industrial profesional. Granallado y tratamiento anticorrosivo para industrias y grandes estructuras. Servicio móvil en CABA, Zona Norte y Oeste. Solicite presupuesto.",
+    "Arenado industrial profesional. Tratamiento anticorrosivo para industrias y grandes estructuras. Servicio móvil en CABA, Zona Norte y Oeste. Solicite presupuesto.",
   keywords: [
     "arenado industrial",
-    "granallado industrial",
     "tratamiento anticorrosivo",
     "arenado metalúrgico",
     "arenado industrial CABA",
     "arenado industrial Zona Norte",
     "arenado industrial Zona Oeste",
-    "granallado estructuras",
     "tratamiento superficies industriales",
     "arenado maquinaria industrial"
   ].join(", "),
@@ -33,17 +31,17 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/servicios/arenado-industrial`,
   },
   openGraph: {
-    title: "Arenado Industrial en CABA, Zona Norte y Oeste | Granallado y Tratamiento Anticorrosivo",
+    title: "Arenado Industrial en CABA, Zona Norte y Oeste | Tratamiento Anticorrosivo",
     description:
-      "Arenado industrial profesional. Granallado y tratamiento anticorrosivo para industrias y grandes estructuras. Servicio móvil.",
+      "Arenado industrial profesional. Tratamiento anticorrosivo para industrias y grandes estructuras. Servicio móvil.",
     url: `${SITE_URL}/servicios/arenado-industrial`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arenado Industrial | Granallado y Tratamiento Anticorrosivo",
+    title: "Arenado Industrial | Tratamiento Anticorrosivo",
     description:
-      "Arenado industrial profesional. Granallado y tratamiento anticorrosivo para industrias y grandes estructuras.",
+      "Arenado industrial profesional. Tratamiento anticorrosivo para industrias y grandes estructuras.",
   },
 }
 
@@ -73,7 +71,7 @@ function generateStructuredData() {
         { "@type": "City", "name": "CABA" }
       ]
     },
-    "description": "Servicio profesional de arenado industrial. Granallado y tratamiento anticorrosivo para industrias, grandes estructuras y maquinarias. Preparación de superficies para pintura o recubrimientos industriales. Servicio móvil y en taller.",
+    "description": "Servicio profesional de arenado industrial. Tratamiento anticorrosivo para industrias, grandes estructuras y maquinarias. Preparación de superficies para pintura o recubrimientos industriales. Servicio móvil y en taller.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Servicios de Arenado Industrial",
@@ -83,7 +81,7 @@ function generateStructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Arenado industrial",
-            "description": "Granallado y tratamiento anticorrosivo para industrias y grandes estructuras. Preparación de superficies para pintura o recubrimientos industriales."
+            "description": "Tratamiento anticorrosivo para industrias y grandes estructuras. Preparación de superficies para pintura o recubrimientos industriales."
           }
         }
       ]

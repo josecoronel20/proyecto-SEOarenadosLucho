@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Malvinas Argentinas",
     "arenado residencial Malvinas Argentinas",
     "arenado comercial Malvinas Argentinas",
-    "granallado Malvinas Argentinas",
     "limpieza profunda Malvinas Argentinas",
     "servicio móvil Malvinas Argentinas",
     "presupuesto arenado Malvinas Argentinas"

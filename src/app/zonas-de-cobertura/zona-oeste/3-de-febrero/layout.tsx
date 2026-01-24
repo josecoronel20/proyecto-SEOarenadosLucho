@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles 3 de Febrero",
     "arenado residencial 3 de Febrero",
     "arenado comercial 3 de Febrero",
-    "granallado 3 de Febrero",
     "limpieza profunda 3 de Febrero",
     "servicio móvil 3 de Febrero",
     "presupuesto arenado 3 de Febrero"

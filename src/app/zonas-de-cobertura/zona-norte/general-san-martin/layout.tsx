@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles General San Martín",
     "arenado residencial General San Martín",
     "arenado comercial General San Martín",
-    "granallado General San Martín",
     "limpieza profunda General San Martín",
     "servicio móvil General San Martín",
     "presupuesto arenado General San Martín"

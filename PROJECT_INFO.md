@@ -1,7 +1,7 @@
 # Arenados Lucho - README del Proyecto
 
 ## 🎯 **Objetivo del Negocio**
-Posicionar **Arenados Lucho** como referente en **servicios profesionales de arenado y granallado en Buenos Aires**, con foco en **piletas, industria, vehículos, madera y restauración de fachadas**.  
+Posicionar **Arenados Lucho** como referente en **servicios profesionales de arenado en Buenos Aires**, con foco en **piletas, industria, vehículos, madera y restauración de fachadas**.  
 Prioridad: **SEO local en Zona Norte**, generación de leads calificados y conversión vía WhatsApp o formulario.
 
 ---
@@ -68,7 +68,6 @@ Dominar búsquedas locales de "arenado + [zona]" en Buenos Aires, especialmente 
 - arenado Pilar
 - arenado Zona Norte  
 - sandblasting Buenos Aires
-- granallado Pilar
 - limpieza profunda superficies
 
 **🎯 Keywords Secundarias (Media Competencia)**

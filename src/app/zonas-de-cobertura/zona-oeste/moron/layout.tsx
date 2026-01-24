@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Morón",
     "arenado residencial Morón",
     "arenado comercial Morón",
-    "granallado Morón",
     "limpieza profunda Morón",
     "servicio móvil Morón",
     "presupuesto arenado Morón"

@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Zárate",
     "arenado residencial Zárate",
     "arenado comercial Zárate",
-    "granallado Zárate",
     "limpieza profunda Zárate",
     "servicio móvil Zárate",
     "presupuesto arenado Zárate"

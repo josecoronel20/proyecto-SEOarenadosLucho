@@ -1,13 +1,11 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Arenado y Granallado en Pilar | Servicios Profesionales 2025",
+  title: "Arenado en Pilar | Servicios Profesionales 2025",
   description: "Servicios profesionales de arenado en Pilar y Zona Norte. Piletas, vehículos, fachadas. Presupuesto gratuito en 24h. ¡Cotizá ahora!",
   keywords: [
     "arenado Pilar",
     "arenado Zona Norte",
-    "granallado Buenos Aires",
-    "sandblasting Pilar",
     "limpieza industrial",
     "arenado piletas",
     "arenado industria",
@@ -33,7 +31,7 @@ export const metadata: Metadata = {
     canonical: "/servicios",
   },
   openGraph: {
-    title: "Arenado y Granallado en Pilar | Servicios Profesionales 2025",
+    title: "Arenado en Pilar | Servicios Profesionales 2025",
     description: "Servicios profesionales de arenado en Pilar y Zona Norte. Piletas, vehículos, fachadas. Presupuesto gratuito en 24h. ¡Cotizá ahora!",
     url: "https://www.arenadoslucho.com.ar/servicios",
     siteName: "Arenados Lucho",
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arenado y Granallado en Pilar | Servicios Profesionales 2025",
+    title: "Arenado en Pilar | Servicios Profesionales 2025",
     description: "Servicios profesionales de arenado en Pilar y Zona Norte. Piletas, vehículos, fachadas. Presupuesto gratuito en 24h. ¡Cotizá ahora!",
     images: ["/images/logo.webp"],
   },
@@ -69,15 +67,15 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
   },
   category: "services",
-  classification: "Servicios de Arenado y Granallado",
+  classification: "Servicios de Arenado",
   other: {
     "geo.region": "AR-C",
     "geo.placename": "Pilar, Buenos Aires",
     "geo.position": "-34.4359;-58.7014",
     "ICBM": "-34.4359, -58.7014",
-    "DC.title": "Arenado y Granallado en Pilar y Zona Norte Buenos Aires 2025",
-    "DC.description": "Servicios profesionales de arenado, granallado, sandblasting y limpieza de superficies para piletas, industria, vehículos, barcos, muebles y fachadas en Pilar, San Isidro y Zona Norte de Buenos Aires.",
-    "DC.subject": "Arenado, Granallado, Sandblasting, Limpieza Industrial, Piletas, Industria, Vehículos, Barcos, Muebles, Fachadas, Pilar, San Isidro, Zona Norte",
+    "DC.title": "Arenado en Pilar y Zona Norte Buenos Aires 2025",
+    "DC.description": "Servicios profesionales de arenado y limpieza de superficies para piletas, industria, vehículos, barcos, muebles y fachadas en Pilar, San Isidro y Zona Norte de Buenos Aires.",
+    "DC.subject": "Arenado, Limpieza Industrial, Piletas, Industria, Vehículos, Barcos, Muebles, Fachadas, Pilar, San Isidro, Zona Norte",
     "DC.language": "es",
     "DC.creator": "Arenados Lucho",
     "DC.publisher": "Arenados Lucho",
@@ -105,9 +103,9 @@ export default function ServiciosLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Arenados Lucho - Expertos en Arenado y Granallado",
+            "name": "Arenados Lucho - Expertos en Arenado",
             "image": "/images/logo.webp",
-            "description": "Servicio profesional de arenado, granallado, sandblasting y limpieza de superficies para piletas, industria, vehículos, barcos, muebles y fachadas en Pilar, San Isidro y Zona Norte de Buenos Aires.",
+            "description": "Servicio profesional de arenado y limpieza de superficies para piletas, industria, vehículos, barcos, muebles y fachadas en Pilar, San Isidro y Zona Norte de Buenos Aires.",
             "url": "https://www.arenadoslucho.com.ar/servicios",
             "telephone": "+54 9 11 2378-7750",
             "email": "arenadoslucho@hotmail.com",
@@ -182,7 +180,7 @@ export default function ServiciosLayout({
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Servicios de Arenado y Granallado",
+              "name": "Servicios de Arenado",
               "itemListElement": [
                 {
                   "@type": "Offer",

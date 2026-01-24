@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "arenado de muebles Ituzaingó",
     "arenado residencial Ituzaingó",
     "arenado comercial Ituzaingó",
-    "granallado Ituzaingó",
     "limpieza profunda Ituzaingó",
     "servicio móvil Ituzaingó",
     "presupuesto arenado Ituzaingó"

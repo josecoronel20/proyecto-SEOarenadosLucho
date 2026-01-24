@@ -4,7 +4,7 @@ import { PROJECT } from "@/config/project"
 export const metadata: Metadata = {
   title: "Arenado en San Fernando | Servicio Residencial y Comercial - Arenados Lucho",
   description: "Servicio de arenado móvil en San Fernando. Especialistas en piletas, fachadas, vehículos, muebles, industrial y barcos. Servicio residencial y comercial con excelencia garantizada. Presupuesto gratuito.",
-  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado San Fernando, sandblasting San Fernando, arenado de piletas San Fernando, arenado de fachadas San Fernando, arenado de vehículos San Fernando, arenado de muebles San Fernando, arenado residencial San Fernando, arenado comercial San Fernando, granallado San Fernando, limpieza profunda San Fernando, servicio móvil San Fernando, presupuesto arenado San Fernando, servicio residencial San Fernando, servicio comercial San Fernando, excelencia en servicio San Fernando`,
+  keywords: `${PROJECT.seo.primaryKeywords.join(", ")}, ${PROJECT.seo.secondaryKeywords.join(", ")}, ${PROJECT.seo.longTailKeywords.join(", ")}, arenado San Fernando, arenado de piletas San Fernando, arenado de fachadas San Fernando, arenado de vehículos San Fernando, arenado de muebles San Fernando, arenado residencial San Fernando, arenado comercial San Fernando, limpieza profunda San Fernando, servicio móvil San Fernando, presupuesto arenado San Fernando, servicio residencial San Fernando, servicio comercial San Fernando, excelencia en servicio San Fernando`,
   authors: [{ name: PROJECT.name }],
   openGraph: {
     title: "Arenado en San Fernando | Servicio Residencial y Comercial - Arenados Lucho",

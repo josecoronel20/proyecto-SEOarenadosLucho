@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     "arenado de estructuras General Rodríguez",
     "arenado de vehículos General Rodríguez",
     "arenado de piletas General Rodríguez",
-    "granallado industrial General Rodríguez",
     "limpieza profunda General Rodríguez",
     "servicio móvil General Rodríguez",
     "presupuesto arenado General Rodríguez",

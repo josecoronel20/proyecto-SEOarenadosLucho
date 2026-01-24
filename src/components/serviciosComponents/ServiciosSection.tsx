@@ -58,7 +58,7 @@ export function ServiciosSection() {
             Servicios de Arenados más solicitados 
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            El <strong>arenado</strong> y <strong>granallado</strong> se aplican en muchos sectores, pero estos son los servicios más solicitados por nuestros clientes.
+            El <strong>arenado</strong> se aplican en muchos sectores, pero estos son los servicios más solicitados por nuestros clientes.
           </p>
         </div>
 
