@@ -11,7 +11,7 @@ export function WhatIsSandblastingSection() {
 
           <div className="prose prose-lg max-w-none mb-8">
             <p className="text-lg text-gray-700 leading-relaxed mb-4 text-center">
-              El <strong>arenado</strong> (también llamado <strong>sandblasting</strong> o <strong>decapado</strong>) 
+              El <strong>arenado</strong> (también llamado <strong>limpieza por chorro de arena</strong> o <strong>chorro abrasivo</strong>) 
               es un proceso profesional de limpieza y preparación de superficies que consiste en proyectar partículas abrasivas 
               a alta velocidad para eliminar pintura vieja, óxido, suciedad, moho y otros contaminantes.
             </p>

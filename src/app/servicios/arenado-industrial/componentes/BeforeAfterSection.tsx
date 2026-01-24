@@ -9,7 +9,7 @@ export function BeforeAfterSection() {
       project.category === "industrial" || 
       project.title.toLowerCase().includes("industrial") ||
       project.title.toLowerCase().includes("estructura") ||
-      project.title.toLowerCase().includes("metalurgico") ||
+      project.title.toLowerCase().includes("metalurgico") 
     )
     .slice(0, 3)
     .map(project => ({
