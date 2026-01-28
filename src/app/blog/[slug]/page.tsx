@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { QuoteFormSection } from "@/components/common/QuoteFormSection";
 import {
   Card,
   CardContent,
@@ -622,50 +623,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-primary-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="container mx-auto px-4 text-center relative">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              ¿Necesitas Servicios de Arenado?
-            </h2>
-            <p className="text-xl mb-10 max-w-3xl mx-auto opacity-95 font-light leading-relaxed">
-              Después de leer este artículo sobre {post.category.toLowerCase()},
-              ¿estás listo para tu próximo proyecto? Contactanos para obtener un
-              presupuesto personalizado y comenzar tu proyecto de arenado
-              profesional.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="text-lg hover:scale-105 transition-all duration-300 shadow-lg"
-                asChild
-              >
-                <Link href="/presupuesto-rapido">
-                  Solicitar Presupuesto Gratuito
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-
-              <WhatsAppButton />
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg border-white text-primary hover:bg-white hover:text-primary transition-all duration-300 shadow-lg"
-                asChild
-              >
-                <Link href="/servicios">
-                  Ver Todos los Servicios
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-           
-          </div>
-        </div>
-      </section>
+        <QuoteFormSection/>    
     </div>
   );
 }

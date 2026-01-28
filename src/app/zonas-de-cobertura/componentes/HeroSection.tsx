@@ -1,5 +1,4 @@
-import { MapPin, Clock, Phone } from "lucide-react";
-import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { MapPin } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -14,30 +13,11 @@ export function HeroSection() {
             Servicio Móvil Profesional
           </div>
           <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold mb-6">
-            Zonas de <span className="text-primary">Cobertura</span>
+            Zonas de cobertura – <span className="text-primary">Arenado profesional</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Llevamos nuestro servicio de arenado profesional a tu ubicación.
-            Cubrimos Zona Norte, Zona Oeste y CABA con equipos móviles de última
-            generación.
+            Brindamos servicios de arenado en Zona Norte, Zona Oeste y CABA, con equipos y logística propia para trabajos en obra o en taller.
           </p>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-2">
-            <p className="text-sm text-muted-foreground">
-              ¿Querés saber si trabajamos en tu localidad?{" "}
-              <span className="ml-2 hidden sm:inline">
-                Consulta por WhatsApp
-              </span>
-            </p>
-            <WhatsAppButton />  
-            <a
-              href="/presupuesto-rapido"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:bg-primary/90 transition-colors"
-            >
-              <Clock className="h-5 w-5 mr-2" aria-hidden="true" />
-              Pedí un presupuesto rápido
-            </a>
-          </div>
         </div>
       </div>
     </section>

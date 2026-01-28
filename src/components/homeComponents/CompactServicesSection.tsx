@@ -1,41 +1,31 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
-import { WhatsAppButton } from "@/components/common/WhatsAppButton"
+import { CTAActionButtons } from "@/components/common/CTAActionButtons"
 
 export function CompactServicesSection() {
   const services = [
     {
-      title: "Arenado de Piletas",
-      description: "Limpieza profunda y preparación para pintura epoxi.",
-      href: "/servicios/arenado-de-piletas",
-      imageSrc: "/images/servicios/servicio-arenado-pileta-pilar.png"
+      title: "Arenado Industrial",
+      description: "Estructuras metálicas y maquinaria pesada.",
+      href: "/servicios#arenado-industrial",
+      imageSrc: "/images/servicios/servicio-arenado-industrial-pilar.jpg"
     },
+   
+    
     {
-      title: "Arenado de Vehículos",
-      description: "Autos, camiones y barcos con técnicas especializadas.",
-      href: "/servicios/arenado-de-vehiculos",
+      title: "Arenado de Metales",
+      description: "Arenado de cualquier superficie metálica.",
+      href: "/servicios#arenado-de-metales",
       imageSrc: "/images/servicios/servicio-arenado-auto-san-fernando.png"
     },
     {
-      title: "Arenado Industrial",
-      description: "Estructuras metálicas y maquinaria pesada.",
-      href: "/servicios/arenado-industrial",
-      imageSrc: "/images/servicios/servicio-arenado-industrial-pilar.jpg"
+      title: "Arenado de Piletas",
+      description: "Limpieza profunda y preparación para pintura epoxi.",
+      href: "/servicios#arenado-de-piletas",
+      imageSrc: "/images/servicios/servicio-arenado-pileta-pilar.png"
     },
-    {
-      title: "Arenado de Metales",
-      description: "Piezas metálicas con servicio fino en cabina.",
-      href: "/servicios/arenado-de-metales",
-      imageSrc: "/images/servicios/servicio-arenado-superficie-metalica-san-isidro.png"
-    },
-    {
-      title: "Arenado de Madera",
-      description: "Muebles y superficies de madera con acabado fino.",
-      href: "/servicios/arenado-de-madera",
-      imageSrc: "/images/servicios/servicio-arenado-superficie-madera-pilar.png"
-    }
   ]
 
   return (
@@ -44,45 +34,49 @@ export function CompactServicesSection() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Nuestros Servicios Principales
+              Servicios más solicitados
             </h2>
             <p className="text-lg text-gray-600">
               Soluciones profesionales de arenado para cada necesidad
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group transition-all border border-blue-100 bg-white rounded-2xl shadow-md hover:shadow-xl hover:border-primary/40 hover:-translate-y-1 focus-within:shadow-xl focus-within:border-primary/60 relative overflow-hidden"
+                className="group transition-all border border-blue-100 rounded-2xl shadow-md hover:shadow-xl hover:border-primary/40 hover:-translate-y-1 focus-within:shadow-xl focus-within:border-primary/60 relative overflow-hidden min-h-[400px]"
+                style={{
+                  backgroundImage: `url(${service.imageSrc})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
               >
-                <Link href={service.href} className="absolute inset-0 z-10" tabIndex={-1} aria-label={`Ver más sobre ${service.title}`}></Link>
-                <CardHeader className="flex flex-col items-start pb-0">
-                  {/* Imagen añadida aquí */}
-                  <div className="w-full flex justify-center mb-4">
-                    <img
-                      src={service.imageSrc}
-                      alt={service.title}
-                      className="rounded-xl w-full h-28 object-cover border border-blue-100 shadow-sm transition-transform group-hover:scale-105"
-                      loading="lazy"
-                      style={{ maxHeight: "7rem", minHeight: "5rem", background: "#eaf1fb" }}
-                    />
+                {/* Link over the card */}
+                <Link
+                  href={service.href}
+                  className="absolute inset-0 z-10"
+                  tabIndex={-1}
+                  aria-label={`Ver más sobre ${service.title}`}
+                ></Link>
+                
+                {/* Contenedor inferior con degradado que se funde con la imagen */}
+                <div className="absolute inset-x-0 bottom-0 z-20 p-6"
+                  style={{
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.2) 80%, transparent 100%)"
+                  }}
+                >
+                  <div className="flex flex-col items-start">
+                    
+                    <CardTitle className="text-lg font-semibold text-white mb-1 group-hover:text-white/90 transition-colors">
+                      {service.title}
+                    </CardTitle>
+                    <p className="text-white/90 text-sm mb-4">{service.description}</p>
                   </div>
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/10 to-blue-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform -mt-8">
-                    <ArrowRight className="text-primary h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-2 pb-6 flex flex-col justify-between h-full">
-                  <p className="text-gray-600 text-sm mb-6">
-                    {service.description}
-                  </p>
                   <Button
                     variant="outline"
-                    className="w-full font-medium group-hover:bg-primary/10 border-primary/50 group-hover:border-primary group-hover:text-primary relative z-20"
+                    className="w-full font-medium bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:border-white/50 hover:text-white relative z-20"
                     asChild
                   >
                     <Link href={service.href}>
@@ -90,21 +84,16 @@ export function CompactServicesSection() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
 
           <div className="text-center">
             <p className="text-gray-600 mb-4">¿Necesitas un presupuesto personalizado?</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/presupuesto-rapido">
-                  Cotizar Ahora
-                </Link>
-              </Button>
-              <WhatsAppButton />
-            </div>
+            
+              <CTAActionButtons />
+            
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ const contactInfo = [
   {
     icon: MapPin,
     text: "Pilar, Zona Norte",
-    href: "/zonas-de-cobertura/zona-norte/pilar"
+    href: "/zonas-de-cobertura"
   },
   {
     icon: Clock,

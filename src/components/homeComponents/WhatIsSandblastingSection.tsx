@@ -21,29 +21,7 @@ export function WhatIsSandblastingSection() {
             </p>
           </div>
 
-          {/* Términos relacionados - versión compacta */}
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-2">
-                <Sparkles className="h-5 w-5 text-primary mr-2" />
-                <h3 className="text-base font-semibold text-gray-900">Sandblasting</h3>
-              </div>
-              <p className="text-sm text-gray-600">
-                Término en inglés que significa "chorro de arena". El nombre más usado en la industria.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
-              <div className="flex items-center mb-2">
-                <Zap className="h-5 w-5 text-primary mr-2" />
-                <Shield className="h-5 w-5 text-primary mr-2" />
-                <h3 className="text-base font-semibold text-gray-900">Decapado</h3>
-              </div>
-              <p className="text-sm text-gray-600">
-                Remoción específica de pintura o recubrimientos antiguos para preparar la superficie para un nuevo tratamiento.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

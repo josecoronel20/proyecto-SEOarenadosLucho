@@ -5,7 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowRight, Loader2, CheckCircle, AlertCircle } from "lucide-react"
+import { ArrowRight, Loader2, CheckCircle, AlertCircle, Mail } from "lucide-react"
+import Link from "next/link"
 import { WhatsAppButton } from "@/components/common/WhatsAppButton"
 
 export function QuoteFormSection() {
@@ -152,7 +153,21 @@ export function QuoteFormSection() {
           
           <div className="text-center mt-6">
             <p className="text-gray-500 mb-4">O</p>
-            <WhatsAppButton />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <WhatsAppButton />
+      <Button 
+        size="lg" 
+        variant="default" 
+        className="bg-blue-500 hover:bg-blue-600 text-white shadow-lg"
+        asChild
+      >
+        <Link href="mailto:arenadoslucho@hotmail.com" aria-label="Contactar por mail">
+          <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+          Contactar por Mail
+        </Link>
+      </Button>
+      </div>
+
             <p className="text-sm text-gray-500 mt-4">
               Respondemos en 24 horas hábiles.
             </p>

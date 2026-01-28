@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { poppins } from "@/lib/fonts";
-import { WhatsAppButton } from "../common/WhatsAppButton";
+import { CTAActionButtons } from "../common/CTAActionButtons";
 
 export function HeroSection() {
   return (
@@ -44,16 +43,7 @@ export function HeroSection() {
           </div>
 
           {/* CTAs principales */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <Link
-              href="/presupuesto-rapido"
-              className="inline-block px-8 py-4 rounded-lg text-white bg-primary hover:bg-primary/90 font-semibold text-lg transition shadow-lg hover:shadow-xl"
-              aria-label="Pedir presupuesto rápido"
-            >
-              Solicitar Presupuesto Gratis
-            </Link>
-            <WhatsAppButton />
-          </div>
+          <CTAActionButtons className="mb-6" />
         </div>
       </div>
     </section>

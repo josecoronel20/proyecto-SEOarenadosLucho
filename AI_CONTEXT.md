@@ -28,7 +28,6 @@ Mantener consistencia en diseño, SEO y UX al trabajar en el proyecto.
 - **CTA secundario**: Formulario online, mensaje: "Cotizar online"
 
 ### **Técnicas**
-- **Granallado**: Impacto con partículas abrasivas  
 - **Arenado móvil**: Equipos portátiles in situ  
 - **Arenado en taller**: Cabina cerrada para piezas de precisión  
 

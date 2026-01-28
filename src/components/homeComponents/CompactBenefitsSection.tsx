@@ -4,23 +4,23 @@ export function CompactBenefitsSection() {
   const benefits = [
     {
       icon: CheckCircle,
-      title: "Limpieza 100% efectiva",
-      description: "Elimina completamente óxido, pintura y contaminantes recuperando la superficie original"
+      title: "Presupuesto rápido y sin costo",
+      description: "Evaluamos técnicamente cada trabajo, desde superficies industriales hasta proyectos generales, para cotizar con precisión real."
     },
     {
       icon: Zap,
-      title: "Hasta 70% más rápido",
-      description: "Proceso eficiente que ahorra tiempo y dinero evitando días de trabajo manual con lija o químicos"
+      title: "Movilidad y operación propia",
+      description: "Equipos y personal preparados para operar en plantas industriales, obras y trabajos particulares de gran o mediana escala."
     },
     {
       icon: Shield,
-      title: "Resultado profesional garantizado",
-      description: "Calidad industrial imposible de lograr con métodos tradicionales, garantizando una superficie nueva y lista para cualquier recubrimiento"
+      title: "Adaptación logística a cada proyecto",
+      description: "Nos integramos a cronogramas industriales complejos y también a trabajos puntuales con menor infraestructura."
     },
     {
       icon: Clock,
-      title: "Respuesta en 24 horas",
-      description: "Presupuesto rápido y servicio puntual, para que puedas empezar a trabajar en tu proyecto lo antes posible"
+      title: "Experiencia en superficies y estructuras exigentes",
+      description: "Aplicamos criterio técnico tanto en entornos industriales críticos como en trabajos generales que requieren calidad profesional."
     }
   ]
 
@@ -33,7 +33,7 @@ export function CompactBenefitsSection() {
               Beneficios Clave
             </h2>
             <p className="text-lg text-gray-600">
-              Por qué elegir arenado profesional
+              Por qué elegir <strong>Arenados Lucho</strong>
             </p>
           </div>
 

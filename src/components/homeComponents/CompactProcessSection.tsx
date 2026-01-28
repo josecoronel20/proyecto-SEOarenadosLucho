@@ -8,30 +8,30 @@ export function CompactProcessSection() {
     {
       number: "1",
       icon: MessageCircle,
-      title: "Pedí tu presupuesto",
+      title: "Solicitud de trabajo",
       description:
-        "Contactanos por WhatsApp o completá el formulario en la página de presupuesto rápido.",
+        "Nos enviás los datos del proyecto por formulario, whatsapp o mail.",
     },
     {
       number: "2",
       icon: Eye,
-      title: "Evaluamos tu caso",
+      title: "Evaluación y presupuesto",
       description:
-        "Analizamos el trabajo según los detalles y la descripción que nos brindes para darte un presupuesto preciso.",
+        "Definimos alcance, superficie y logística para cotizar con precisión.",
     },
     {
       number: "3",
       icon: MessageCircle,
-      title: "Coordinamos fecha",
+      title: "Planificación operativa",
       description:
-        "Agendamos la fecha de ejecución según tu disponibilidad.",
+        "Coordinamos fecha, modalidad (obra o taller) y condiciones de trabajo.",
     },
     {
       number: "4",
       icon: CheckCircle,
-      title: "Realizamos el arenado",
+      title: "Ejecución del arenado",
       description:
-        "Nuestro equipo realiza el arenado correspondiente en obra o en taller según el servicio.",
+        "Realizamos el servicio según lo planificado y el tipo de superficie.",
     },
   ]
 
@@ -48,7 +48,7 @@ export function CompactProcessSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
