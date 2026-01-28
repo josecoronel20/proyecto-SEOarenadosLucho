@@ -2,10 +2,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FileText, Mail } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
+import { cn } from "@/lib/utils";
 
-export function CTAActionButtons() {
+interface CTAActionButtonsProps {
+  className?: string;
+}
+
+export function CTAActionButtons({ className }: CTAActionButtonsProps) {
   return (
-      <div className="flex flex-col gap-4">
+      <div className={cn("flex flex-col gap-4", className)}>
       <Button 
         size="lg" 
         variant="default" 
