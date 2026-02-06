@@ -22,7 +22,7 @@ export function WhatsAppButton() {
     // Construir número de WhatsApp
     const part1 = '5491123'
     const part2 = '787750'
-    const phoneNumber =     part1 + part2;
+    const phoneNumber = part1 + part2;
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
     // Enviar evento a GTM / GA4
