@@ -19,31 +19,30 @@ export function WhatsAppButton() {
   const handleClick = React.useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    // Enviar evento a GTM / GA4
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 
-      event: 'contact_whatsapp',
-      event_category: 'Contact',
-      event_label: 'WhatsApp Button Click',
-      value: 1
-    });
-
     // Construir número de WhatsApp
-    const part1 = '549';
-    const part2 = '11';
-    const part3 = '23787750';
-    const phoneNumber = part1 + part2 + part3;
+    const part1 = '5491123'
+    const part2 = '787750'
+    const phoneNumber =     part1 + part2;
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-    // Abrir WhatsApp con pequeño delay para asegurar que GTM procese el evento
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    }, 300);
+    // Enviar evento a GTM / GA4
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({ 
+        event: 'contact_whatsapp',
+        event_category: 'Contact',
+        event_label: 'WhatsApp Button Click',
+        value: 1
+      });
+    }
+
+    // Redirigir a WhatsApp usando location.href (más confiable que window.open)
+    window.location.href = whatsappUrl;
 
   }, []);
 
   return (
     <Button 
+      type="button"
       size={size} 
       variant={variant} 
       className={className}
