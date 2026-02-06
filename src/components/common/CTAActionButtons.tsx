@@ -9,6 +9,9 @@ interface CTAActionButtonsProps {
 }
 
 export function CTAActionButtons({ className }: CTAActionButtonsProps) {
+  const mailPart1 = 'arenadoslucho@ho'
+  const mailPart2 = 'tmail.com'
+  const mail = mailPart1 + mailPart2
   return (
       <div className={cn("flex flex-col gap-4", className)}>
       <Button 
@@ -31,7 +34,7 @@ export function CTAActionButtons({ className }: CTAActionButtonsProps) {
         className="bg-blue-500 hover:bg-blue-600 text-white shadow-lg"
         asChild
       >
-        <Link href="mailto:arenadoslucho@hotmail.com" aria-label="Contactar por mail">
+        <Link href={`mailto:${mail}`} aria-label="Contactar por mail">
           <Mail className="mr-2 h-5 w-5" aria-hidden />
           Contactar por Mail
         </Link>

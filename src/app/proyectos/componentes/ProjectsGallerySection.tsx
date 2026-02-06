@@ -62,47 +62,48 @@ export function ProjectsGallerySection() {
     },
   ];
 
-  // Función para obtener la categoría del proyecto (coincide con el nombre del archivo)
+  // Función para obtener la categoría del proyecto (coincide exactamente con los nombres de archivo)
+  // Los nombres de archivo siguen el patrón: arenado-{categoria}-{descripcion}-{ubicacion}-antes.{ext}
+  // Las categorías son: pileta, vehiculo, industrial, madera, metal, otro
   const getMainCategory = (category: string): string => {
-    const normalizedCategory = category.toLowerCase();
+    const normalizedCategory = category.toLowerCase().trim();
 
-    // Mapeo directo a las categorías de los nombres de archivo
-    if (normalizedCategory === "pileta" || normalizedCategory === "piscina") {
-      return "pileta";
-    }
-    if (
-      normalizedCategory === "vehiculo" ||
-      normalizedCategory === "auto" ||
-      normalizedCategory === "camion" ||
-      normalizedCategory === "chasis" ||
-      normalizedCategory === "barco"
-    ) {
-      return "vehiculo";
-    }
-    if (
-      normalizedCategory === "industrial" ||
-      normalizedCategory === "tanque" ||
-      normalizedCategory === "estructura" ||
-      normalizedCategory === "edificio" ||
-      normalizedCategory === "fabrica" ||
-      normalizedCategory === "pared"
-    ) {
-      return "industrial";
-    }
-    if (normalizedCategory === "madera" || normalizedCategory === "mueble") {
-      return "madera";
-    }
-    if (
-      normalizedCategory === "metal" ||
-      normalizedCategory === "pieza" ||
-      normalizedCategory === "llanta" ||
-      normalizedCategory === "acero"
-    ) {
-      return "metal";
-    }
+    // Mapeo directo basado en los nombres reales de archivos en public/images/proyectos
+    // Categorías exactas que coinciden con los nombres de archivo
+    const categoryMap: Record<string, string> = {
+      // Piletas (incluye piscinas, escaleras, pisos)
+      "pileta": "pileta",
+      "piscina": "pileta",
+      
+      // Vehículos (incluye autos, camiones, chasis, barcos)
+      "vehiculo": "vehiculo",
+      "auto": "vehiculo",
+      "camion": "vehiculo",
+      "chasis": "vehiculo",
+      "barco": "vehiculo",
+      
+      // Industrial (incluye tanques, estructuras, paredes)
+      "industrial": "industrial",
+      "tanque": "industrial",
+      "estructura": "industrial",
+      "pared": "industrial",
+      "edificio": "industrial",
+      "fabrica": "industrial",
+      
+      // Madera (incluye muebles, mesas)
+      "madera": "madera",
+      "mueble": "madera",
+      "mesa": "madera",
+      
+      // Metal (incluye llantas, piezas, acero)
+      "metal": "metal",
+      "llanta": "metal",
+      "pieza": "metal",
+      "acero": "metal",
+    };
 
-    // Todo lo demás es "otro"
-    return "otro";
+    // Retornar la categoría mapeada o "otro" por defecto
+    return categoryMap[normalizedCategory] || "otro";
   };
 
   // Filtrar proyectos según el servicio seleccionado
