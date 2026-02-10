@@ -1,0 +1,161 @@
+[
+    {"industrialProjects" : [
+        {
+        "id": 1,
+        "title": "Arenado de Nave Ferroviaria",
+        "category":"Industrial",
+        "url":"/arenado-industrial#nave-ferroviaria",
+        "idSection": "nave-ferroviaria",
+        "description": "Intervención de arenado sobre estructura metálica de nave ferroviaria, enfocada en la recuperación del estado superficial y preparación para nuevas etapas de mantenimiento y protección.",
+        "images": [
+          "/images/services/arenadoIndustrial/Nave/IMG_2419.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2423.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2424.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2425.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2426.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG"
+        ],
+        "challenges": "La nave presentaba desgaste generalizado por uso y exposición ambiental, con superficies deterioradas que requerían una intervención integral sin afectar la operatividad del entorno industrial. El desafío principal fue abordar una estructura de gran escala manteniendo orden, seguridad y continuidad del proyecto.",
+        "solutions": "Se planificó una ejecución por etapas, organizando el trabajo sobre distintos sectores de la estructura para avanzar de forma eficiente y controlada. El enfoque estuvo orientado a optimizar tiempos de intervención y facilitar la continuidad de las tareas posteriores dentro del cronograma del cliente.",
+        "results": "La estructura quedó preparada para nuevas aplicaciones de protección, mejorando su aspecto general y prolongando su vida útil operativa. El proyecto permitió al cliente continuar con su planificación de mantenimiento con una base sólida y uniforme."
+      },
+      {
+        "id": 2,
+        "title": "Arenado de Estructura de Carga para Veleros",
+        "category":"Industrial",
+        "url":"/arenado-industrial#estructura-naval",
+        "idSection": "estructura-naval",
+        "description": "Trabajo de arenado sobre estructura metálica utilizada en el soporte y traslado de veleros, orientado a recuperar el estado superficial y preparar la pieza para nuevas etapas de protección y uso continuo.",
+        "images": [
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2444.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2445.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2446.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2447.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2448.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2449.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2450.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2451.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG"
+        ],
+        "challenges": "La estructura presentaba desgaste por exposición constante al ambiente marítimo y al uso operativo, con zonas afectadas que requerían una intervención completa sin comprometer su funcionalidad ni sus tiempos de utilización dentro de la logística del cliente.",
+        "solutions": "Se organizó la intervención considerando la geometría del esqueleto metálico y sus puntos de apoyo, permitiendo avanzar de forma ordenada sobre cada sector y facilitando el acceso a todas las superficies sin interferir con otras tareas del entorno.",
+        "results": "La estructura quedó renovada y lista para recibir nuevos sistemas de protección, mejorando su aspecto general y asegurando condiciones adecuadas para continuar con operaciones de carga y traslado de veleros."
+      },{
+        "id": 3,
+        "title": "Arenado de Pasarela Metálica Urbana",
+        "category":"Industrial",
+        "url":"/arenado-industrial#pasarela-urbana",
+        "idSection": "pasarela-urbana",
+        "description": "Intervención de arenado sobre pasarela metálica perteneciente a infraestructura urbana, orientada a la recuperación de superficies y preparación para tareas de mantenimiento y puesta en valor.",
+        "images": [
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2429.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2430.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2431.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2432.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2433.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2434.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2435.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2436.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG"
+        ],
+        "challenges": "La pasarela presentaba desgaste propio del uso intensivo y de la exposición a condiciones ambientales, con superficies deterioradas que requerían una intervención eficaz sin afectar la circulación ni el entorno urbano.",
+        "solutions": "La ejecución se organizó por sectores, permitiendo avanzar de manera ordenada y segura dentro del espacio público. El trabajo se integró al contexto urbano, minimizando interferencias y respetando los tiempos definidos por el organismo responsable.",
+        "results": "La estructura quedó preparada para nuevas etapas de protección y mejora estética, contribuyendo a prolongar su vida útil y a mantener condiciones adecuadas de seguridad y funcionamiento dentro de la infraestructura urbana."
+      },{
+        "id": 4,
+        "title": "Arenado Exterior de Tanques Industriales",
+        "category":"Industrial",
+        "url":"/arenado-industrial#tanque-industrial",
+        "idSection": "tanque-industrial",
+        "description": "Proceso de arenado exterior sobre tanques industriales trasladados a un área aislada para su intervención, enfocado en la recuperación superficial y preparación para nuevas etapas de mantenimiento.",
+        "images": [
+          "/images/services/arenadoIndustrial/Tanque/IMG_2438.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2439.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2440.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2441.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG"
+        ],
+        "challenges": "Los tanques presentaban desgaste por uso prolongado y exposición ambiental, requiriendo una intervención completa sin interferir con la operación del sector productivo. El principal desafío fue reorganizar el trabajo fuera del área industrial manteniendo orden y eficiencia en el proceso.",
+        "solutions": "Se coordinó el traslado de las unidades hacia un espacio abierto y aislado dentro del predio, permitiendo ejecutar el arenado exterior en un entorno controlado y sin impacto directo sobre las actividades principales de la planta.",
+        "results": "Los tanques quedaron renovados y listos para recibir nuevos sistemas de protección, mejorando su condición general y permitiendo al cliente continuar con su planificación de mantenimiento sin afectar la operatividad del área industrial."
+      }
+
+      
+      
+    ]
+},
+{
+    "particularProjects": [
+      {
+        "id": 1,
+        "title": "Arenado de Piletas",
+        "category":"Particular",
+        "url":"/arenado-particular#pileta",
+        "idSection": "pileta",
+        "description": "Servicio de arenado orientado a la renovación integral de piletas, eliminando capas deterioradas y preparando la superficie para repintado o nuevos revestimientos decorativos y funcionales.",
+        "images": [
+          "/images/services/arenadoParticular/Piletas/IMG_2454.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2455.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2456.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2457.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2478.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2479.PNG"
+        ],
+        "challenges": "Muchas piletas presentan múltiples manos de pintura descascarada imposibles de reparar con métodos superficiales, acumulación de sarro y desgaste general que afecta tanto la estética como la durabilidad. En otros casos, el objetivo es renovar completamente la pileta para cambiar su terminación o modernizar su apariencia.",
+        "solutions": "Se realiza un arenado que elimina la mayor cantidad de pintura suelta y residuos acumulados, dejando la superficie preparada para una nueva mano de pintura con mejor adherencia. Cuando el objetivo es un cambio más profundo, el proceso permite retirar la capa superficial existente para luego aplicar revestimientos como venecita u otras terminaciones que no requieren pintura.",
+        "results": "La pileta queda con una base firme y uniforme, lista para repintado o revestimiento, mejorando la durabilidad del acabado final y permitiendo una renovación completa sin depender de soluciones temporales."
+      },{
+        "id": 2,
+        "title": "Arenado de Chasis y Estructuras Vehiculares",
+        "category":"Particular",
+        "url":"/arenado-particular#vehiculo",
+        "idSection": "vehiculo",
+        "description": "Servicio de arenado aplicado sobre chasis y estructuras de autos, camiones y embarcaciones, orientado a la recuperación integral de superficies metálicas antes de procesos de protección o restauración.",
+        "images": [
+          "/images/services/arenadoParticular/Vehículos/IMG_2464.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2465.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2466.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2467.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2472.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2473.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2474.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2475.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2476.PNG",
+          "/images/services/arenadoParticular/Vehículos/IMG_2477.PNG"
+        ],
+        "challenges": "Los chasis y estructuras vehiculares suelen presentar óxido, pintura deteriorada y suciedad acumulada por uso prolongado, lo que dificulta cualquier reparación o repintado duradero si no se elimina completamente el material dañado.",
+        "solutions": "Mediante el arenado se retiran restos de pintura, óxido y contaminantes adheridos, dejando el metal limpio y con una superficie adecuada para la aplicación de nuevos recubrimientos protectores o trabajos de restauración.",
+        "results": "Las estructuras quedan recuperadas y listas para su protección posterior, mejorando la durabilidad del tratamiento aplicado y permitiendo una restauración más confiable y de mayor vida útil."
+      },
+      {
+        "id": 3,
+        "title": "Arenado de Piezas Metálicas",
+        "category":"Particular",
+        "url":"/arenado-particular#pieza-metalica",
+        "idSection": "pieza-metalica",
+        "description": "Servicio de arenado aplicado a piezas metálicas de distintos tamaños y usos, orientado a limpiar, renovar y preparar superficies antes de pintura, restauración o nuevos tratamientos.",
+        "images": [
+          "/images/services/arenadoParticular/Piezas/IMG_2480.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2481.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2482.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2483.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2484.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2485.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2486.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_2487.PNG",
+          "/images/services/arenadoParticular/Piezas/IMG_20250531_105459177_HDR.JPG",
+          "/images/services/arenadoParticular/Piezas/IMG_20250531_111748159_HDR.JPG"
+        ],
+        "challenges": "Muchas piezas metálicas presentan pintura deteriorada, óxido superficial o acumulación de suciedad que impide lograr un acabado uniforme. En trabajos de restauración también es común encontrar múltiples capas antiguas que dificultan cualquier intervención posterior.",
+        "solutions": "El arenado permite remover restos de pintura suelta, corrosión y contaminantes adheridos, dejando la superficie limpia y preparada para nuevos procesos de pintura, reparación o reutilización de la pieza.",
+        "results": "Las piezas quedan renovadas y listas para su tratamiento final, mejorando la adherencia de nuevos recubrimientos y extendiendo su vida útil sin depender de soluciones superficiales."
+      }
+
+      
+    ]
+}
+      
+]
