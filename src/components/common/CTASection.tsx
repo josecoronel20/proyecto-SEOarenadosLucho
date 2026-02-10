@@ -2,17 +2,11 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { MessageCircle, Mail, FileText } from 'lucide-react'
-
+import { FileText } from 'lucide-react'
+import WppBtn from './WppBtn'
+import EmailBtn from './EmailBtn'
 const CTASection = () => {
-  // WhatsApp number - actualizar con el número real
 
-  const whatsappNumberPart1 = "5491123" 
-  const whatsappNumberPart2 = "787750"
-  const whatsappMessage = encodeURIComponent("Hola, me gustaría recibir asesoramiento sobre arenado.")
-  const whatsappUrl = `https://wa.me/${whatsappNumberPart1}${whatsappNumberPart2}?text=${whatsappMessage}`
-const emailPart1 = "arenados"
-const emailPart2 = "lucho@hotmail.com"
   return (
     <section className="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
       <div className="container mx-auto px-4 lg:px-8">
@@ -44,25 +38,11 @@ const emailPart2 = "lucho@hotmail.com"
           {/* Botones Secundarios */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* WhatsApp */}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-md hover:shadow-lg border border-gray-200 w-full sm:w-auto"
-            >
-              <MessageCircle className="w-5 h-5 text-green-600" />
-              Hablar por WhatsApp
-            </a>
+            <WppBtn type="CTASection" />
            
 
             {/* Email */}
-            <Link
-              href={`mailto:${emailPart1}${emailPart2}`}
-              className="flex items-center gap-3 px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-md hover:shadow-lg border border-gray-200 w-full sm:w-auto"
-            >
-              <Mail className="w-5 h-5 text-primary" />
-              Contactar por email
-            </Link>
+            <EmailBtn type="CTASection" />
           
           </div>
 

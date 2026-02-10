@@ -1,9 +1,18 @@
 "use client"
 
+declare global {
+  interface Window {
+    dataLayer?: any[];
+  }
+}
+
 import React, { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { FileText, Send, CheckCircle2 } from 'lucide-react'
+import Link from 'next/link';
+import WppBtn from '@/components/common/WppBtn';
+import EmailBtn from '@/components/common/EmailBtn';
 
 export default function PresupuestoRapidoPage() {
   const [formData, setFormData] = useState({
@@ -28,6 +37,22 @@ export default function PresupuestoRapidoPage() {
     setIsSubmitting(true)
     setError('')
 
+    const now = Date.now()
+    const eventId = `form_submit_${now}_${Math.random().toString(36).substr(2, 9)}`
+
+    // Enviar evento a GTM / GA4 antes de enviar el formulario
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({ 
+        event: 'form_submit',
+        event_category: 'Contact',
+        event_label: 'Presupuesto Rápido Form Submit',
+        event_id: eventId, // ID único para deduplicación en GA4
+        value: 1,
+        timestamp: now,
+        form_name: 'presupuesto_rapido'
+      })
+    }
+
     try {
       const response = await fetch('https://formspree.io/f/xrgnqbod', {
         method: 'POST',
@@ -43,12 +68,38 @@ export default function PresupuestoRapidoPage() {
       })
 
       if (response.ok) {
+        // Enviar evento de éxito después de que el formulario se envió correctamente
+        if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({ 
+            event: 'form_submit_success',
+            event_category: 'Contact',
+            event_label: 'Presupuesto Rápido Form Success',
+            event_id: `form_success_${now}_${Math.random().toString(36).substr(2, 9)}`,
+            value: 1,
+            timestamp: Date.now(),
+            form_name: 'presupuesto_rapido'
+          })
+        }
+        
         setIsSubmitted(true)
         setFormData({ name: '', contact: '', details: '' })
       } else {
         throw new Error('Error al enviar el formulario')
       }
     } catch (err) {
+      // Enviar evento de error si falla el envío
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({ 
+          event: 'form_submit_error',
+          event_category: 'Contact',
+          event_label: 'Presupuesto Rápido Form Error',
+          event_id: `form_error_${now}_${Math.random().toString(36).substr(2, 9)}`,
+          value: 0,
+          timestamp: Date.now(),
+          form_name: 'presupuesto_rapido'
+        })
+      }
+      
       setError('Hubo un error al enviar el formulario. Por favor, intentá nuevamente o contactanos directamente.')
       console.error('Form submission error:', err)
     } finally {
@@ -200,21 +251,9 @@ export default function PresupuestoRapidoPage() {
               <div className="text-center pt-4">
                 <p className="text-sm text-gray-600">
                   También podés contactarnos directamente por{' '}
-                  <a 
-                    href="https://wa.me/5491123787750" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 font-semibold underline"
-                  >
-                    WhatsApp
-                  </a>
+                  <WppBtn type="PresupuestoRapido" />
                   {' '}o{' '}
-                  <a 
-                    href="mailto:arenadoslucho@hotmail.com"
-                    className="text-primary-600 hover:text-primary-700 font-semibold underline"
-                  >
-                    email
-                  </a>
+                  <EmailBtn type="PresupuestoRapido" />
                 </p>
               </div>
             </form>
