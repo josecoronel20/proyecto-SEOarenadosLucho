@@ -123,8 +123,8 @@ const ProjectsSection = () => {
                         <Link 
                           href={
                             project.category === 'industrial'
-                              ? `/arenado-industrial#accordion-section`
-                              : `/arenado-particular#accordion-section`
+                              ? `/arenado-industrial#proyectos`
+                              : `/arenado-particular#proyectos`
                           }
                           className="w-full"
                           tabIndex={-1}

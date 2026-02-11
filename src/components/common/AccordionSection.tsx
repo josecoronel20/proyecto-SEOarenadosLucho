@@ -67,7 +67,7 @@ export function AccordionSection({
   }
 
   return (
-    <section className="pb-20 bg-gray-50" id="accordion-section">
+    <section className="pb-20 bg-gray-50" id="proyectos">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <H2 title={title} />
