@@ -5,19 +5,36 @@ import Link from 'next/link'
 import { FileText } from 'lucide-react'
 import WppBtn from './WppBtn'
 import EmailBtn from './EmailBtn'
-const CTASection = () => {
 
+const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/ctaVideo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Overlay Gradient - De abajo hacia arriba */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/80 to-transparent"></div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 lg:px-8 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Título */}
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-600 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             ¿Listo para avanzar con tu proyecto de arenado?
           </h2>
 
           {/* Subtítulo */}
-          <p className="text-lg md:text-xl text-primary-600 mb-12 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-white/95 mb-12 max-w-2xl mx-auto drop-shadow-md">
             Contanos qué necesitás y recibí una respuesta clara para evaluar tiempos, alcance y próxima etapa del trabajo.
           </p>
 
@@ -25,12 +42,12 @@ const CTASection = () => {
           <div className="mb-8">
             <Link
               href="/presupuesto-rapido"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-400 text-white font-semibold text-lg rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-primary-400 hover:bg-primary-500 text-white font-semibold text-lg rounded-full transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               <FileText className="w-5 h-5" />
               Solicitar Presupuesto Rápido
             </Link>
-            <p className="text-sm text-primary-600 mt-3">
+            <p className="text-sm text-white/90 mt-3 drop-shadow-md">
               Enviá los detalles de tu proyecto y recibí una propuesta orientativa.
             </p>
           </div>
@@ -39,21 +56,9 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* WhatsApp */}
             <WppBtn type="CTASection" />
-           
 
             {/* Email */}
             <EmailBtn type="CTASection" />
-          
-          </div>
-
-          {/* Descripciones de botones secundarios (desktop) */}
-          <div className="hidden sm:flex gap-8 justify-center mt-4">
-            <p className="text-sm text-primary-600 max-w-xs">
-              Asesoramiento directo para resolver dudas rápidas antes de avanzar.
-            </p>
-            <p className="text-sm text-primary-600 max-w-xs">
-              Contactar mediante un formulario para establecer contacto para un proyecto profesional.
-            </p>
           </div>
         </div>
       </div>

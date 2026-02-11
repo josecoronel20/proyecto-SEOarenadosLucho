@@ -39,63 +39,67 @@ interface ProjectDescriptionProps {
 export function ProjectDescription({ project }: ProjectDescriptionProps) {
   return (
     <Card className="w-full max-w-5xl mx-auto shadow-xl overflow-hidden">
-      {/* Image Carousel */}
-      {project.images && project.images.length > 0 && (
-        <div className="relative w-full h-[400px] md:h-[500px] bg-gray-100">
-          <Carousel className="w-full h-full" opts={{ align: "start", loop: project.images.length > 1 }}>
-            <CarouselContent className="-ml-0" style={{ height: '100%' }}>
-              {project.images.map((image, index) => (
-                <CarouselItem 
-                  key={`${project.id}-${index}`} 
-                  className="basis-full pl-0"
-                  style={{ minWidth: '100%', height: '100%' }}
-                >
-                  <div className="relative w-full h-full overflow-hidden">
-                    <Image
-                      src={image}
-                      alt={`${project.title} - Imagen ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 80vw"
-                      priority={index === 0}
-                      unoptimized
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            {project.images.length > 1 && (
-              <>
-                <CarouselPrevious className="left-2 md:left-4" />
-                <CarouselNext className="right-2 md:right-4" />
-              </>
-            )}
-          </Carousel>
-        </div>
-      )}
+      {/* Desktop Layout: Images left, Title/Description right */}
+      <div className="flex flex-col lg:flex-row">
+        {/* Image Carousel - Left side on desktop */}
+        {project.images && project.images.length > 0 && (
+          <div className="relative w-full lg:w-1/2 h-[400px] md:h-[500px] lg:h-auto lg:min-h-[500px] bg-gray-100 mb-4">
+            <Carousel className="w-full h-full" opts={{ align: "start", loop: project.images.length > 1 }}>
+              <CarouselContent className="-ml-0" style={{ height: '100%' }}>
+                {project.images.map((image, index) => (
+                  <CarouselItem 
+                    key={`${project.id}-${index}`} 
+                    className="basis-full pl-0"
+                    style={{ minWidth: '100%', height: '100%' }}
+                  >
+                    <div className="relative w-full h-full overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={`${project.title} - Imagen ${index + 1}`}
+                        fill
+                        className="object-cover lg:rounded-br-xl"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        priority={index === 0}
+                        unoptimized
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              {project.images.length > 1 && (
+                <>
+                  <CarouselPrevious className="left-2 md:left-4" />
+                  <CarouselNext className="right-2 md:right-4" />
+                </>
+              )}
+            </Carousel>
+          </div>
+        )}
 
-      {/* Content */}
-      <CardHeader className="pb-4">
-        <div className="flex items-start justify-between gap-4 mb-2">
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
-            {project.title}
-          </CardTitle>
-          <Badge 
-            variant="secondary"
-            className={`${
-              project.category === 'Industrial' 
-                ? 'bg-primary/80 text-white' 
-                : 'bg-primary-400/80 text-white'
-            }`}
-          >
-            {project.category}
-          </Badge>
-        </div>
-        <CardDescription className="text-base md:text-lg text-gray-700 leading-relaxed">
-          {project.description}
-        </CardDescription>
-      </CardHeader>
+        {/* Title and Description - Right side on desktop */}
+        <CardHeader className="pb-4 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
+          <div className="flex items-start justify-between gap-4 mb-2">
+            <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
+              {project.title}
+            </CardTitle>
+            <Badge 
+              variant="secondary"
+              className={`${
+                project.category === 'Industrial' 
+                  ? 'bg-primary/80 text-white' 
+                  : 'bg-primary-400/80 text-white'
+              }`}
+            >
+              {project.category}
+            </Badge>
+          </div>
+          <CardDescription className="text-base md:text-lg text-gray-700 leading-relaxed">
+            {project.description}
+          </CardDescription>
+        </CardHeader>
+      </div>
 
+      {/* Challenges, Solutions, Results - Full width below */}
       <CardContent className="space-y-6">
         {/* Challenges */}
         <div className="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-5">

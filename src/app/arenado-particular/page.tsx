@@ -6,6 +6,7 @@ import { AccordionSection } from '@/components/common/AccordionSection'
 import projectsData from '@/lib/projectsInfo.json'
 import { Project } from '@/components/common/ProjectDescription'
 import CTASection from '@/components/common/CTASection'
+import H2 from '@/components/common/H2'
 const page = () => {
   // Safely extract particular projects
   const particularProjects = (projectsData as any)[1]?.particularProjects || []

@@ -2,19 +2,14 @@
 
 import React from 'react'
 import { Target } from 'lucide-react'
-
+import H2 from '../common/H2'
 export function ResumeSection() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Qué hacemos
-            </h2>
-            <div className="w-20 h-1 bg-primary mx-auto"></div>
-          </div>
+          <H2 title="Qué hacemos" />
 
           {/* Main Content */}
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 md:p-8 shadow-md">

@@ -89,11 +89,11 @@ const WppBtn = ({ type = 'CTASection' }: WppBtnProps) => {
         type="button"
         onClick={handleClick}
         disabled={isProcessing}
-        aria-label="Hablar por WhatsApp"
+        aria-label="Contactar por WhatsApp"
         className="flex items-center gap-3 px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-md hover:shadow-lg border border-gray-200 w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <MessageCircle className="w-5 h-5 text-green-600" />
-        {isProcessing ? 'Abriendo...' : 'Hablar por WhatsApp'}
+        {isProcessing ? 'Abriendo...' : 'Contactar por WhatsApp'}
       </button>
     )
   }

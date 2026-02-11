@@ -26,7 +26,9 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
+            <Link href="/">
             <Image src="/images/logo-solo-azul.png" alt="Arenados Lucho" width={75} height={75} />
+            </Link>
             <div className="hidden md:block">
               <h1 className="text-xl font-bold text-primary">Arenados Lucho</h1>
               <p className="text-xs text-primary">Preparación y Limpieza de Superficies</p>

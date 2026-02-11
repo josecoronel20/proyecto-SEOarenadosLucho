@@ -1,20 +1,15 @@
 "use client"
 
-import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import WppBtn from "../common/WppBtn";
 
 export function HeroSection() {
-  const email = "arenadoslucho@hotmail.com"
-  const whatsappNumber = "5491123787750"
-  const whatsappMessage = encodeURIComponent("Hola, me gustaría consultar sobre servicios de arenado para mi proyecto particular.")
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
-
   return (
     <section className="h-screen bg-white px-4 pb-4 pt-24">
       <div className="relative flex items-end h-full p-4">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
+          
           <Image 
             src="/images/services/arenadoParticular.JPG" 
             alt="Arenado Particular" 
@@ -41,14 +36,8 @@ export function HeroSection() {
 
             {/* CTAs - Botones con bordes completamente redondeados */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mt-2">
-              {/* CTA Primaria - Email */}
-              <Link 
-                href={`mailto:${email}?subject=Solicitud de Presupuesto - Arenado Particular&body=Hola, me gustaría solicitar un presupuesto para un proyecto de arenado particular.%0D%0A%0D%0ADetalles del proyecto:%0D%0A- Tipo de superficie:%0D%0A- Dimensiones:%0D%0A- Ubicación:%0D%0A- Fecha estimada:%0D%0A%0D%0AGracias.`}
-                className="inline-flex items-center justify-center gap-1 px-8 py-4 bg-primary-400 hover:bg-primary-500 text-white font-semibold text-base md:text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto"
-              >
-                <MessageCircle className="w-5 h-5 text-white" />
-                Contactar
-              </Link>
+              {/* CTA Primaria - WhatsApp */}
+              <WppBtn type="CTASection" />
 
             </div>
           </div>

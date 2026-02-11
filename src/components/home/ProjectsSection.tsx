@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-
+import H2 from "../common/H2"
 interface Project {
   id: number
   title: string
@@ -71,11 +71,7 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 bg-white max-w-7xl mx-auto">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-center text-primary mb-4">
-            Proyectos destacados
-          </h2>
-        </div>
+        <H2 title="Proyectos Destacados" />
 
         <div className="relative px-12 md:px-16">
           <Carousel className="w-full">
@@ -124,7 +120,15 @@ const ProjectsSection = () => {
                       </CardHeader>
 
                       <CardFooter className="pt-0 pb-6">
-                        <Link href={project.url} className="w-full" tabIndex={-1}>
+                        <Link 
+                          href={
+                            project.category === 'industrial'
+                              ? `/arenado-industrial#accordion-section`
+                              : `/arenado-particular#accordion-section`
+                          }
+                          className="w-full"
+                          tabIndex={-1}
+                        >
                           <Button className="w-full bg-primary-400" asChild>
                             <span>Ver Proyecto</span>
                           </Button>

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { FileText, Calendar, Wrench, CheckCircle2 } from 'lucide-react'
-
+import H2 from '../common/H2'
 const steps = [
   {
     number: 1,
@@ -36,15 +36,7 @@ export function ProcessSection() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Cómo trabajamos
-            </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Proceso en 4 pasos diseñado para ofrecer predictibilidad operativa y confianza sin entrar en tecnicismos.
-            </p>
-            <div className="w-20 h-1 bg-primary mx-auto mt-4"></div>
-          </div>
+          <H2 title="Cómo trabajamos" />
 
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">

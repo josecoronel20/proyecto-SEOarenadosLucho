@@ -9,17 +9,17 @@ import {
 } from "@/components/ui/accordion"
 import { ProjectDescription, Project } from './ProjectDescription'
 import { Badge } from "@/components/ui/badge"
-
+import H2 from './H2'
 interface AccordionSectionProps {
   projects: Project[]
-  title?: string
   type?: "single" | "multiple"
+  title: string
 }
 
 export function AccordionSection({ 
   projects, 
-  title = "Proyectos",
-  type = "single" 
+  type = "single",
+  title
 }: AccordionSectionProps) {
   const [defaultValueSingle, setDefaultValueSingle] = useState<string | undefined>(undefined)
   const [defaultValueMultiple, setDefaultValueMultiple] = useState<string[] | undefined>(undefined)
@@ -67,19 +67,10 @@ export function AccordionSection({
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pb-20 bg-gray-50" id="accordion-section">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          {title && (
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                {title}
-              </h2>
-              <div className="w-20 h-1 bg-primary mx-auto"></div>
-            </div>
-          )}
-
+          <H2 title={title} />
           {/* Accordion */}
           {type === "multiple" ? (
             <Accordion 
