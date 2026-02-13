@@ -27,8 +27,8 @@ export interface Project {
   idSection?: string
   description: string
   images: string[]
-  challenges: string
-  solutions: string
+  challenges: string | string[]
+  solutions: string | string[]
   results: string
 }
 
@@ -100,36 +100,66 @@ export function ProjectDescription({ project }: ProjectDescriptionProps) {
       </div>
 
       {/* Challenges, Solutions, Results - Full width below */}
-      <CardContent className="space-y-6">
-        {/* Challenges */}
-        <div className="bg-red-50 border-l-4 border-red-500 rounded-r-lg p-5">
-          <div className="flex items-start gap-3">
-            <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">Desafíos</h3>
-              <p className="text-gray-700 leading-relaxed">{project.challenges}</p>
+      <CardContent className="pt-6 pb-8 px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+          {/* Challenges */}
+          <div className="bg-gradient-to-br from-red-50 to-red-100/50 border border-red-200 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-red-500 rounded-lg shadow-sm">
+                <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 text-lg md:text-xl">Desafíos</h3>
+            </div>
+            <div className="space-y-2.5">
+              {Array.isArray(project.challenges) ? (
+                <ul className="space-y-2.5">
+                  {project.challenges.map((challenge, index) => (
+                    <li key={index} className="flex items-start gap-2.5 text-sm md:text-base text-gray-700 leading-relaxed">
+                      <span className="text-red-500 font-semibold mt-1.5 shrink-0">•</span>
+                      <span>{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">{project.challenges}</p>
+              )}
             </div>
           </div>
-        </div>
 
-        {/* Solutions */}
-        <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5">
-          <div className="flex items-start gap-3">
-            <Lightbulb className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">Soluciones</h3>
-              <p className="text-gray-700 leading-relaxed">{project.solutions}</p>
+          {/* Solutions */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-200 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-blue-500 rounded-lg shadow-sm">
+                <Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 text-lg md:text-xl">Soluciones</h3>
+            </div>
+            <div className="space-y-2.5">
+              {Array.isArray(project.solutions) ? (
+                <ul className="space-y-2.5">
+                  {project.solutions.map((solution, index) => (
+                    <li key={index} className="flex items-start gap-2.5 text-sm md:text-base text-gray-700 leading-relaxed">
+                      <span className="text-blue-500 font-semibold mt-1.5 shrink-0">•</span>
+                      <span>{solution}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">{project.solutions}</p>
+              )}
             </div>
           </div>
-        </div>
 
-        {/* Results */}
-        <div className="bg-green-50 border-l-4 border-green-500 rounded-r-lg p-5">
-          <div className="flex items-start gap-3">
-            <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="font-bold text-gray-900 mb-2 text-lg">Resultados</h3>
-              <p className="text-gray-700 leading-relaxed">{project.results}</p>
+          {/* Results */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-green-500 rounded-lg shadow-sm">
+                <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-900 text-lg md:text-xl">Resultados</h3>
+            </div>
+            <div className="space-y-2.5">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">{project.results}</p>
             </div>
           </div>
         </div>

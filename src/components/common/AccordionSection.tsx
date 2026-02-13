@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/accordion"
 import { ProjectDescription, Project } from './ProjectDescription'
 import { Badge } from "@/components/ui/badge"
+import { ChevronDown } from 'lucide-react'
 import H2 from './H2'
+import { cn } from '@/lib/utils'
 interface AccordionSectionProps {
   projects: Project[]
   type?: "single" | "multiple"
@@ -85,21 +87,18 @@ export function AccordionSection({
                   id={project.idSection || `project-${project.id}`}
                   className="bg-white rounded-lg border border-gray-200 px-6 shadow-md"
                 >
-                  <AccordionTrigger className="hover:no-underline py-6">
-                    <div className="flex items-center gap-4 w-full">
-                      <Badge 
-                        variant="secondary"
-                        className={`${
-                          project.category === 'Industrial' 
-                            ? 'bg-primary/80 text-white' 
-                            : 'bg-primary-400/80 text-white'
-                        }`}
-                      >
-                        {project.category}
-                      </Badge>
+                  <AccordionTrigger className="hover:no-underline py-6 [&>svg]:hidden group">
+                    <div className="flex items-center justify-between gap-4 w-full">
                       <span className="text-lg md:text-xl font-semibold text-gray-900 text-left">
                         {project.title}
                       </span>
+                      <Badge 
+                        variant="secondary"
+                        className="bg-primary-400/90 text-white flex items-center gap-1.5 shrink-0"
+                      >
+                        Ver más
+                        <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Badge>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pt-0 pb-6">
@@ -121,21 +120,18 @@ export function AccordionSection({
                   id={project.idSection || `project-${project.id}`}
                   className="bg-white rounded-lg border border-gray-200 px-6 shadow-md"
                 >
-                  <AccordionTrigger className="hover:no-underline py-6">
-                    <div className="flex items-center gap-4 w-full">
-                      <Badge 
-                        variant="secondary"
-                        className={`${
-                          project.category === 'Industrial' 
-                            ? 'bg-primary/80 text-white' 
-                            : 'bg-primary-400/80 text-white'
-                        }`}
-                      >
-                        {project.category}
-                      </Badge>
+                  <AccordionTrigger className="hover:no-underline py-6 [&>svg]:hidden group">
+                    <div className="flex items-center justify-between gap-4 w-full">
                       <span className="text-lg md:text-xl font-semibold text-gray-900 text-left">
                         {project.title}
                       </span>
+                      <Badge 
+                        variant="secondary"
+                        className="bg-primary-400/90 text-white flex items-center gap-1.5 shrink-0"
+                      >
+                        Ver más
+                        <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </Badge>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pt-0 pb-6">

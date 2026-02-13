@@ -14,8 +14,7 @@ export function ResumeSection() {
           {/* Main Content */}
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 md:p-8 shadow-md">
             <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">
-              Servicios de <strong className="text-primary-600">arenado industrial</strong> diseñados para intervenir sin afectar la continuidad operativa. Planificamos las tareas para reducir paradas de planta y cumplir plazos comprometidos, priorizando coordinación logística y tiempos previsibles.
-            </p>
+            Servicios de <strong className="text-primary-600">arenado industrial</strong> orientados a garantizar continuidad operativa y previsibilidad en cada intervención. Abordamos cada proyecto con criterios técnicos claros y planificación estructurada, alineando el grado de preparación de superficie con el sistema de recubrimiento posterior, bajo estándares de la norma <strong className="text-primary-600">ISO 8501</strong>.</p>
 
             {/* Benefit Highlight */}
             <div className="bg-white rounded-lg p-5 border-l-4 border-primary-500">
@@ -26,8 +25,7 @@ export function ResumeSection() {
                     Beneficio Principal
                   </h3>
                   <p className="text-base text-gray-700">
-                    Minimizar el <strong className="text-primary-600">downtime del activo</strong> y entregar una superficie lista para protección o revestimiento que garantice un resultado duradero.
-                  </p>
+                  Iniciamos con una <strong className="text-primary-600">visita técnica de evaluación</strong> para analizar el estado del sustrato y definir el alcance real del trabajo. A partir de ese diagnóstico, desarrollamos una planificación logística detallada que optimiza recursos, reduce tiempos de proceso y asegura el cumplimiento de los plazos acordados sin comprometer la operación.</p>
                 </div>
               </div>
             </div>

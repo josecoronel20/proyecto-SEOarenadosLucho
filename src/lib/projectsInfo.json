@@ -16,9 +16,20 @@
           "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG"
         ],
-        "challenges": "La nave presentaba desgaste generalizado por uso y exposición ambiental, con superficies deterioradas que requerían una intervención integral sin afectar la operatividad del entorno industrial. El desafío principal fue abordar una estructura de gran escala manteniendo orden, seguridad y continuidad del proyecto.",
-        "solutions": "Se planificó una ejecución por etapas, organizando el trabajo sobre distintos sectores de la estructura para avanzar de forma eficiente y controlada. El enfoque estuvo orientado a optimizar tiempos de intervención y facilitar la continuidad de las tareas posteriores dentro del cronograma del cliente.",
-        "results": "La estructura quedó preparada para nuevas aplicaciones de protección, mejorando su aspecto general y prolongando su vida útil operativa. El proyecto permitió al cliente continuar con su planificación de mantenimiento con una base sólida y uniforme."
+        "challenges": [
+  "Superficie con desgaste generalizado y deterioro visible.",
+  "Necesidad de intervención sin afectar la operatividad industrial.",
+  "Plazos de ejecución acotados.",
+  "Estructura de gran escala que requería trabajo sectorizado y controlado."
+],
+"solutions": [
+  "Evaluación técnica inicial del estado del sustrato.",
+  "Planificación de ejecución por etapas y sectores.",
+  "Coordinación logística para minimizar interferencias operativas.",
+  "Organización del frente de trabajo con foco en seguridad y cumplimiento de cronograma."
+],
+"results": "Estructura preparada para nuevo sistema de protección, permitiendo continuar el plan de mantenimiento en tiempo y forma."
+
       },
       {
         "id": 2,
@@ -39,9 +50,20 @@
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG"
         ],
-        "challenges": "La estructura presentaba desgaste por exposición constante al ambiente marítimo y al uso operativo, con zonas afectadas que requerían una intervención completa sin comprometer su funcionalidad ni sus tiempos de utilización dentro de la logística del cliente.",
-        "solutions": "Se organizó la intervención considerando la geometría del esqueleto metálico y sus puntos de apoyo, permitiendo avanzar de forma ordenada sobre cada sector y facilitando el acceso a todas las superficies sin interferir con otras tareas del entorno.",
-        "results": "La estructura quedó renovada y lista para recibir nuevos sistemas de protección, mejorando su aspecto general y asegurando condiciones adecuadas para continuar con operaciones de carga y traslado de veleros."
+       "challenges": [
+  "Desgaste por exposición constante a ambiente marítimo.",
+  "Humedad permanente con riesgo de contaminación superficial.",
+  "Necesidad de mantener operativa la estructura dentro de la logística naval.",
+  "Coordinación precisa por plazos ajustados y condiciones ambientales variables."
+],
+"solutions": [
+  "Evaluación técnica del estado del sustrato previo a la intervención.",
+  "Ejecución sectorizada según geometría y puntos de apoyo del esqueleto metálico.",
+  "Coordinación directa con el equipo de aplicación de revestimiento.",
+  "Arenado por sectores con aplicación inmediata del sistema de protección para evitar recontaminación por humedad."
+],
+"results": "Estructura preparada y protegida bajo condiciones controladas, asegurando continuidad operativa y mayor durabilidad en entorno marítimo."
+
       },{
         "id": 3,
         "title": "Arenado de Pasarela Metálica Urbana",
@@ -60,9 +82,20 @@
           "/images/services/arenadoIndustrial/Pasarela/IMG_2436.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG"
         ],
-        "challenges": "La pasarela presentaba desgaste propio del uso intensivo y de la exposición a condiciones ambientales, con superficies deterioradas que requerían una intervención eficaz sin afectar la circulación ni el entorno urbano.",
-        "solutions": "La ejecución se organizó por sectores, permitiendo avanzar de manera ordenada y segura dentro del espacio público. El trabajo se integró al contexto urbano, minimizando interferencias y respetando los tiempos definidos por el organismo responsable.",
-        "results": "La estructura quedó preparada para nuevas etapas de protección y mejora estética, contribuyendo a prolongar su vida útil y a mantener condiciones adecuadas de seguridad y funcionamiento dentro de la infraestructura urbana."
+       "challenges": [
+  "Desgaste por uso intensivo y exposición a condiciones ambientales.",
+  "Intervención en entorno urbano con restricciones de ruido y polvo.",
+  "Necesidad de mantener circulación peatonal segura.",
+  "Prioridad de habilitar rápidamente el sector más cercano al área urbana."
+],
+"solutions": [
+  "Planificación sectorizada priorizando el frente más próximo a zona urbana.",
+  "Organización del trabajo para reducir tiempos de intervención en áreas sensibles.",
+  "Ejecución controlada para minimizar dispersión de polvo e impacto sonoro.",
+  "Coordinación con el organismo responsable para cumplir plazos y condiciones operativas."
+],
+"results": "Pasarela preparada para nuevas etapas de protección, con rápida rehabilitación del sector crítico y continuidad segura de la infraestructura urbana."
+
       },{
         "id": 4,
         "title": "Arenado Exterior de Tanques Industriales",
@@ -78,9 +111,20 @@
           "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
           "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG"
         ],
-        "challenges": "Los tanques presentaban desgaste por uso prolongado y exposición ambiental, requiriendo una intervención completa sin interferir con la operación del sector productivo. El principal desafío fue reorganizar el trabajo fuera del área industrial manteniendo orden y eficiencia en el proceso.",
-        "solutions": "Se coordinó el traslado de las unidades hacia un espacio abierto y aislado dentro del predio, permitiendo ejecutar el arenado exterior en un entorno controlado y sin impacto directo sobre las actividades principales de la planta.",
-        "results": "Los tanques quedaron renovados y listos para recibir nuevos sistemas de protección, mejorando su condición general y permitiendo al cliente continuar con su planificación de mantenimiento sin afectar la operatividad del área industrial."
+       "challenges": [
+  "Desgaste exterior por uso prolongado y exposición ambiental.",
+  "Necesidad de renovación sin interferir con la operación productiva.",
+  "Requerimiento de intervención funcional, sin especificación de acabado premium.",
+  "Reorganización del trabajo fuera del área industrial principal."
+],
+"solutions": [
+  "Traslado de los tanques a un sector abierto y aislado dentro del predio.",
+  "Preparación superficial enfocada en zonas exteriores y en contacto con el suelo.",
+  "Intervención técnica orientada a condición funcional y protección adecuada.",
+  "Aplicación posterior de revestimiento acorde al nivel de exigencia definido."
+],
+"results": "Tanques exteriormente renovados y protegidos, con un acabado técnicamente aceptable y adecuados para continuar su vida operativa sin afectar la dinámica del área industrial."
+
       }
 
       
@@ -104,9 +148,20 @@
           "/images/services/arenadoParticular/Piletas/IMG_2478.PNG",
           "/images/services/arenadoParticular/Piletas/IMG_2479.PNG"
         ],
-        "challenges": "Muchas piletas presentan múltiples manos de pintura descascarada imposibles de reparar con métodos superficiales, acumulación de sarro y desgaste general que afecta tanto la estética como la durabilidad. En otros casos, el objetivo es renovar completamente la pileta para cambiar su terminación o modernizar su apariencia.",
-        "solutions": "Se realiza un arenado que elimina la mayor cantidad de pintura suelta y residuos acumulados, dejando la superficie preparada para una nueva mano de pintura con mejor adherencia. Cuando el objetivo es un cambio más profundo, el proceso permite retirar la capa superficial existente para luego aplicar revestimientos como venecita u otras terminaciones que no requieren pintura.",
-        "results": "La pileta queda con una base firme y uniforme, lista para repintado o revestimiento, mejorando la durabilidad del acabado final y permitiendo una renovación completa sin depender de soluciones temporales."
+        "challenges": [
+  "Múltiples capas de pintura descascarada sin posibilidad de reparación superficial.",
+  "Acumulación de sarro y residuos adheridos.",
+  "Desgaste general que afecta estética y durabilidad.",
+  "Necesidad de renovación total o cambio de terminación."
+],
+"solutions": [
+  "Arenado para eliminación controlada de pintura suelta y contaminantes.",
+  "Preparación de superficie uniforme para mejorar adherencia del nuevo sistema.",
+  "Remoción de capa superficial existente cuando se requiere cambio integral.",
+  "Base técnica adecuada para repintado o aplicación de revestimientos como venecita."
+],
+"results": "Superficie firme y homogénea, lista para repintado o nuevo revestimiento, asegurando mayor durabilidad y una renovación definitiva."
+
       },{
         "id": 2,
         "title": "Arenado de Chasis y Estructuras Vehiculares",
@@ -126,9 +181,20 @@
           "/images/services/arenadoParticular/Vehículos/IMG_2476.PNG",
           "/images/services/arenadoParticular/Vehículos/IMG_2477.PNG"
         ],
-        "challenges": "Los chasis y estructuras vehiculares suelen presentar óxido, pintura deteriorada y suciedad acumulada por uso prolongado, lo que dificulta cualquier reparación o repintado duradero si no se elimina completamente el material dañado.",
-        "solutions": "Mediante el arenado se retiran restos de pintura, óxido y contaminantes adheridos, dejando el metal limpio y con una superficie adecuada para la aplicación de nuevos recubrimientos protectores o trabajos de restauración.",
-        "results": "Las estructuras quedan recuperadas y listas para su protección posterior, mejorando la durabilidad del tratamiento aplicado y permitiendo una restauración más confiable y de mayor vida útil."
+       "challenges": [
+  "Presencia de óxido activo en chasis y estructuras.",
+  "Pintura deteriorada y múltiples capas acumuladas.",
+  "Suciedad y contaminantes adheridos por uso prolongado.",
+  "Necesidad de base confiable para reparación o repintado duradero."
+],
+"solutions": [
+  "Arenado para remoción completa de óxido, pintura suelta y contaminantes.",
+  "Limpieza profunda del metal base sin métodos invasivos.",
+  "Preparación superficial adecuada para nuevos recubrimientos protectores.",
+  "Condiciones técnicas óptimas para procesos de restauración."
+],
+"results": "Estructuras metálicas limpias y estabilizadas, listas para protección posterior, asegurando mayor durabilidad y confiabilidad en la restauración."
+
       },
       {
         "id": 3,
@@ -149,9 +215,20 @@
           "/images/services/arenadoParticular/Piezas/IMG_20250531_105459177_HDR.JPG",
           "/images/services/arenadoParticular/Piezas/IMG_20250531_111748159_HDR.JPG"
         ],
-        "challenges": "Muchas piezas metálicas presentan pintura deteriorada, óxido superficial o acumulación de suciedad que impide lograr un acabado uniforme. En trabajos de restauración también es común encontrar múltiples capas antiguas que dificultan cualquier intervención posterior.",
-        "solutions": "El arenado permite remover restos de pintura suelta, corrosión y contaminantes adheridos, dejando la superficie limpia y preparada para nuevos procesos de pintura, reparación o reutilización de la pieza.",
-        "results": "Las piezas quedan renovadas y listas para su tratamiento final, mejorando la adherencia de nuevos recubrimientos y extendiendo su vida útil sin depender de soluciones superficiales."
+      "challenges": [
+  "Pintura deteriorada y múltiples capas antiguas acumuladas.",
+  "Óxido superficial que compromete el acabado final.",
+  "Suciedad y contaminantes adheridos.",
+  "Dificultad para lograr base uniforme para nuevos tratamientos."
+],
+"solutions": [
+  "Arenado para remoción efectiva de pintura suelta y capas antiguas.",
+  "Eliminación de corrosión superficial y contaminantes.",
+  "Preparación de superficie homogénea para procesos posteriores.",
+  "Base técnica adecuada para pintura, reparación o reutilización."
+],
+"results": "Piezas metálicas limpias y uniformes, listas para su tratamiento final, con mejor adherencia y mayor durabilidad del recubrimiento aplicado."
+
       }
 
       

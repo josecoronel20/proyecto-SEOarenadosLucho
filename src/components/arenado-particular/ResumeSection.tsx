@@ -15,7 +15,9 @@ export function ResumeSection() {
           {/* Main Content */}
           <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-6 md:p-8 shadow-md">
             <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">
-              Servicios de <strong className="text-primary-600">arenado particular</strong> diseñados para ofrecer soluciones prácticas y rápidas. Ideal para limpiar, restaurar o renovar superficies metálicas, vehículos, piletas y fachadas con resultados profesionales y duraderos.
+            Servicios de <strong className="text-primary-600">arenado particular</strong> orientados a renovar superficies de manera rápida y efectiva. Recuperamos piletas, chasis, piezas metálicas y estructuras domésticas, eliminando desgaste, pintura vieja y suciedad para devolverles una nueva vida.
+
+
             </p>
 
             {/* Benefit Highlight */}
@@ -27,7 +29,9 @@ export function ResumeSection() {
                     Beneficio Principal
                   </h3>
                   <p className="text-base text-gray-700">
-                    Resultados <strong className="text-primary-600">profesionales y rápidos</strong> que restauran el aspecto de tus superficies, preparándolas para nuevas aplicaciones de protección o revestimiento.
+                  Un proceso ágil y profesional que deja cada elemento listo para su terminación final, logrando un cambio visible y duradero desde la primera intervención.
+
+
                   </p>
                 </div>
               </div>

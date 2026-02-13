@@ -1,20 +1,23 @@
 "use client"
 
+import Link from "next/link";
 import Image from "next/image";
+import { MessageCircle } from "lucide-react";
 import WppBtn from "../common/WppBtn";
+import { Button } from "../ui/button";
 
 export function HeroSection() {
+
   return (
     <section className="h-screen bg-white px-4 pb-4 pt-24">
       <div className="relative flex items-end h-full p-4">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          
           <Image 
             src="/images/services/arenadoParticular.JPG" 
-            alt="Arenado Particular" 
+            alt="Arenado Particular " 
             fill 
-            className="object-cover rounded-lg" 
+            className="object-cover rounded-lg object-top" 
           />
         </div>
 
@@ -29,17 +32,22 @@ export function HeroSection() {
               Arenado Particular
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl">
-              Soluciones prácticas para limpiar, restaurar y renovar superficies de forma rápida y profesional.
-            </p>
+            
 
-            {/* CTAs - Botones con bordes completamente redondeados */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-2xl mt-2">
-              {/* CTA Primaria - WhatsApp */}
-              <WppBtn type="CTASection" />
+            <ul className="flex flex-wrap gap-1 justify-center text-white/95 text-sm md:text-base font-medium">
+            <li>• Piletas de hormigón para repintado o cambio de revestimiento.</li>
+  <li>• Chasis y estructuras vehiculares.</li>
+  <li>• Piezas metálicas para restauración o reutilización.</li>
+  <li>• Rejas, portones y estructuras domésticas.</li>
+</ul>
 
-            </div>
+<Button                   className="border border-white/50 px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 text-white text-sm md:text-base lg:text-lg shadow-md hover:shadow-lg"
+><Link href="arenado-particular#proyectos">ver proyectos</Link></Button>
+
+              {/* CTA Primaria - Email */}
+              <WppBtn  type="CTASection" />
+
+
           </div>
         </div>
       </div>

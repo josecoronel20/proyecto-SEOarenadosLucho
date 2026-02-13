@@ -6,29 +6,26 @@ import H2 from '../common/H2'
 
 const steps = [
   {
-    number: 1,
-    title: "Evaluación y propuesta",
-    description: "Consulta inicial para entender tu proyecto, evaluación del estado de la superficie y entrega de presupuesto orientativo en 24 h.",
-    icon: FileText,
+    "number": 1,
+    "title": "Presupuesto rápido",
+    "description": "Nos enviás tu consulta desde la web con fotos y detalles básicos. Te respondemos a la brevedad con una propuesta clara y orientativa."
   },
   {
-    number: 2,
-    title: "Planificación del trabajo",
-    description: "Coordinamos fecha y horario según tu disponibilidad, organizamos el trabajo para minimizar molestias y optimizar tiempos.",
-    icon: Calendar,
+    "number": 2,
+    "title": "Coordinación",
+    "description": "Definimos si el trabajo se realiza en nuestro taller o en tu domicilio y acordamos fecha según disponibilidad."
   },
   {
-    number: 3,
-    title: "Ejecución profesional",
-    description: "Trabajo realizado con equipos profesionales: intervención de arenado, limpieza del área y preparación de la superficie para la siguiente etapa.",
-    icon: Wrench,
+    "number": 3,
+    "title": "Realizamos el arenado",
+    "description": "Ejecutamos el trabajo de forma prolija y eficiente, dejando la superficie lista para pintar, revestir o continuar con la restauración."
   },
   {
-    number: 4,
-    title: "Entrega y recomendaciones",
-    description: "Entrega con superficie lista y recomendaciones para repintado o revestimiento; seguimiento para asegurar el mejor resultado final.",
-    icon: CheckCircle2,
-  },
+    "number": 4,
+    "title": "Retiro o finalización",
+    "description": "Te entregamos la pieza o finalizamos el trabajo en el lugar, lista para su siguiente etapa."
+  }
+  
 ]
 
 export function ProcessSection() {
@@ -42,7 +39,7 @@ export function ProcessSection() {
           {/* Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {steps.map((step, index) => {
-              const IconComponent = step.icon
+
               return (
                 <div
                   key={step.number}
@@ -59,7 +56,6 @@ export function ProcessSection() {
                     {/* Content */}
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
-                        <IconComponent className="w-6 h-6 text-primary-500" />
                         <h3 className="text-xl font-bold text-gray-900">
                           Paso {step.number} — {step.title}
                         </h3>
