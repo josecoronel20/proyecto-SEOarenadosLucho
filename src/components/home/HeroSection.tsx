@@ -15,6 +15,9 @@ export function HeroSection() {
             muted
             playsInline
             className="w-full h-full object-cover rounded-lg"
+            preload="auto"
+            // @ts-ignore
+            webkit-playsinline="true"
           >
             <source src="/videos/heroVideo.mp4" type="video/mp4" />
           </video>

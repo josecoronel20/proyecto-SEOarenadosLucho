@@ -1,0 +1,128 @@
+# .cursorrules
+
+## CONTEXTO GENERAL DEL PROYECTO
+Proyecto: Sitio web para empresa de arenados industriales en Buenos Aires.
+Objetivo principal: Maximizar conversiones a LLAMADA (click-to-call o solicitud de llamada).
+Usuario objetivo: Encargados de obra, arquitectos, ingenieros, responsables de restauración y proyectos industriales.
+Ticket promedio: Alto. Decisión racional basada en riesgo, cumplimiento técnico y tiempos.
+
+---
+
+## REGLA SUPREMA
+Toda implementación (diseño, copy, estructura, feature, sección o funcionalidad) debe:
+1. Estar directamente alineada con aumentar la probabilidad de llamada.
+2. Reducir fricción en la decisión.
+3. Resolver objeciones típicas (tiempo, logística, polvo/ruido, calidad técnica, cumplimiento norma ISO 8501).
+4. Reforzar percepción de profesionalismo, capacidad técnica y cumplimiento de plazos.
+
+Si una implementación no impacta directa o indirectamente en la conversión a llamada, debe ser cuestionada o descartada.
+
+---
+
+## PRINCIPIOS DE DISEÑO
+- Diseño sobrio, industrial, profesional.
+- Evitar estética genérica corporativa sin sustancia técnica.
+- Priorizar claridad sobre creatividad.
+- Jerarquía visual enfocada en CTA telefónico.
+- Teléfono siempre visible en header.
+- CTA sticky en mobile.
+- Contraste alto en botones de llamada.
+- Mostrar pruebas reales (proyectos, fotos, métricas).
+
+---
+
+## PRINCIPIOS DE COPY
+El copy debe:
+- Ser directo, técnico y orientado a resultados.
+- Hablar en términos de riesgo, cronograma y cumplimiento.
+- Usar lenguaje profesional (no emocional ni exagerado).
+- Incluir métricas cuando sea posible.
+- Reforzar autoridad (norma ISO 8501, informes técnicos, planificación).
+
+Evitar:
+- Frases genéricas tipo “somos líderes”, “máxima calidad”, “servicio integral”.
+- Promesas vagas.
+- Tono informal.
+
+---
+
+## ESTRUCTURA OBLIGATORIA DE CADA SECCIÓN
+Cada sección importante debe incluir al menos uno de estos elementos:
+- Prueba técnica (normativa, proceso, evaluación).
+- Reducción de riesgo (cumplimiento de plazos, mitigación polvo/ruido).
+- Prueba social (caso real, proyecto ejecutado).
+- CTA claro hacia llamada.
+
+---
+
+## MANEJO DE OBJECIONES (SIEMPRE INTEGRAR)
+Las implementaciones deben contemplar:
+- Miedo a retrasos de obra.
+- Interferencia con otras tareas por polvo o ruido.
+- Dudas sobre adherencia del recubrimiento.
+- Riesgo estructural en restauraciones.
+- Sobrecostos inesperados.
+
+Cada página estratégica debe anticipar y responder al menos una objeción clave.
+
+---
+
+## CONVERSIÓN
+Siempre priorizar:
+- Click-to-call visible.
+- CTA de “Coordinar llamada técnica (15 min)”.
+- Formularios cortos (máximo 3-4 campos).
+- Microcopys que reduzcan fricción (“Respuesta en menos de 4h”).
+
+No priorizar:
+- Formularios largos.
+- Descargas innecesarias.
+- Contenido que distraiga del contacto.
+
+---
+
+## ELEMENTOS TÉCNICOS OBLIGATORIOS
+- Implementar call tracking.
+- GA4 configurado con eventos de llamada.
+- GTM para medición de conversiones.
+- Optimización mobile-first.
+- Velocidad de carga optimizada.
+- Botón de llamada sticky en mobile.
+
+---
+
+## ESTRUCTURA DE PÁGINAS
+Toda página debe cumplir:
+1. Titular claro orientado a beneficio concreto.
+2. Subtítulo que reduzca riesgo.
+3. Prueba (caso, dato o proceso).
+4. CTA visible.
+5. Sección de objeciones o confianza.
+6. CTA final fuerte.
+
+---
+
+## CRITERIOS PARA APROBAR UNA IMPLEMENTACIÓN
+Antes de considerar una tarea como completada, validar:
+- ¿Aumenta la percepción de profesionalismo?
+- ¿Reduce incertidumbre técnica?
+- ¿Facilita la llamada?
+- ¿Refuerza autoridad?
+- ¿Evita distracciones?
+
+Si la respuesta es no en alguno, iterar.
+
+---
+
+## PRIORIDAD ESTRATÉGICA
+1. Conversión a llamada.
+2. Autoridad técnica.
+3. Reducción de riesgo.
+4. Claridad estructural.
+5. Estética.
+
+Nunca invertir el orden.
+
+---
+
+FIN DE REGLAS
