@@ -15,13 +15,14 @@ import {
 export function Header() {
   const pages = [
     { name: "Inicio", href: "/" },
-    { name: "Arenado Industrial", href: "/arenado-industrial" },
-    { name: "Arenado Particular", href: "/arenado-particular" },
-    { name: "Presupuesto Rápido", href: "/presupuesto-rapido" },
+    { name: "Servicios", href: "/servicios" },
+    { name: "Casos de éxito", href: "/casos-de-exito" },
+    { name: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
+    { name: "Contactanos", href: "/contacto" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-sm">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200/80 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

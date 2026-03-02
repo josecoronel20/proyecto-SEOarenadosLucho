@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="h-screen bg-white px-4 pb-4 pt-24">
+    <section className="h-[calc(100vh-80px)] bg-white px-4 py-4">
       <div className="relative flex items-end h-full p-4">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
@@ -23,8 +23,7 @@ export function HeroSection() {
           </video>
         </div>
 
-        {/* Overlay Gradient - De abajo hacia arriba */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/80 to-transparent rounded-lg"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/80 to-transparent rounded-lg" />
 
         {/* Content - Compactado en la parte inferior */}
         <div className="container mx-auto relative z-20 w-full pb-8 md:pb-12 lg:pb-16">
@@ -45,36 +44,18 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl px-4">
-              Preparación y Limpieza de Superficies en Zona Norte, Oeste y CABA
+              Preparación y Limpieza de Superficies Industriales en Buenos Aires
             </p>
 
-            {/* Services List */}
-            <ul className="flex flex-wrap gap-3 md:gap-4 justify-center mb-4 md:mb-6">
-              <li>
-                <Link 
-                  href="/arenado-industrial" 
-                  className="border border-white/50 px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 text-white text-sm md:text-base lg:text-lg shadow-md hover:shadow-lg"
-                >
-                  Arenado Industrial
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/arenado-particular" 
-                  className="border border-white/50 px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 text-white text-sm md:text-base lg:text-lg shadow-md hover:shadow-lg"
-                >
-                  Arenado Particular
-                </Link>
-              </li>
-            </ul>
+            
 
             {/* CTA Button - Bordes completamente redondeados en la parte inferior */}
             <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">
               <Link 
-                href="/presupuesto-rapido"
+                href="/contacto"
                 className="block w-full px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 bg-primary-400 hover:bg-primary-500 text-white font-semibold text-base md:text-lg lg:text-xl rounded-full transition-all duration-300 hover:scale-105 shadow-xl text-center"
               >
-                Pedir Presupuesto
+                Contactanos
               </Link>
             </div>
           </div>

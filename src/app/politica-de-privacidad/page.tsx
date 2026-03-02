@@ -2,6 +2,13 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Shield, Mail, MapPin, FileText, Lock, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Política de Privacidad",
+  description:
+    "Política de Privacidad de Arenados Lucho. Protección de datos personales en Buenos Aires.",
+}
 
 export default function PoliticaPrivacidadPage() {
   return (

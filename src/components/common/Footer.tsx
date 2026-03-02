@@ -9,11 +9,24 @@ import EmailBtn from './EmailBtn'
 export function Footer() {
 
   const currentYear = new Date().getFullYear()
+  const address = 'Buenos Aires'
+  const navigation = [
+    { label: 'Inicio', href: '/' },
+    { label: 'Servicios', href: '/servicios' },
+    { label: 'Casos de éxito', href: '/casos-de-exito' },
+    { label: 'Preguntas frecuentes', href: '/preguntas-frecuentes' },
+    { label: 'Contactanos', href: '/contacto' },
+  ]
+
+  const privacyPolicy = [
+    { label: 'Política de Privacidad', href: '/politica-de-privacidad' },
+    { label: 'Términos y Condiciones', href: '/terminos-y-condiciones' },
+  ]
 
   return (
     <footer className="bg-primary-900 text-white">
       <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -30,79 +43,34 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-primary-200">
-              Servicios profesionales de arenado para proyectos industriales y particulares en Zona Norte, Oeste y CABA.
+              Servicios profesionales de arenado para proyectos industriales en Buenos Aires.
             </p>
           </div>
 
-          {/* Servicios */}
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Servicios</h4>
-            <div className="space-y-2 text-primary-200">
-              <Link 
-                href="/arenado-industrial" 
-                className="block hover:text-white transition-colors"
-              >
-                Arenado Industrial
-              </Link>
-              <Link 
-                href="/arenado-particular" 
-                className="block hover:text-white transition-colors"
-              >
-                Arenado Particular
-              </Link>
-              <Link 
-                href="/presupuesto-rapido" 
-                className="block hover:text-white transition-colors"
-              >
-                Presupuesto Rápido
-              </Link>
-            </div>
-          </div>
-
-          {/* Contacto */}
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Contacto</h4>
-            <div className="space-y-3 text-primary-200">
-              <WppBtn type="footer" />
-              <EmailBtn type="footer" />
-                
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Zona Norte, Oeste y CABA</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Navegación */}
-          <div>
+          {/* Navegación - Ocupa todo el ancho disponible en desktop */}
+          <div className="lg:col-span-3 flex flex-col h-full">
             <h4 className="font-semibold mb-4 text-lg">Navegación</h4>
-            <div className="space-y-2 text-primary-200">
-              <Link 
-                href="/" 
-                className="block hover:text-white transition-colors"
-              >
-                Inicio
-              </Link>
-              <Link 
-                href="/arenado-industrial" 
-                className="block hover:text-white transition-colors"
-              >
-                Arenado Industrial
-              </Link>
-              <Link 
-                href="/arenado-particular" 
-                className="block hover:text-white transition-colors"
-              >
-                Arenado Particular
-              </Link>
-              <Link 
-                href="/presupuesto-rapido" 
-                className="block hover:text-white transition-colors"
-              >
-                Presupuesto Rápido
-              </Link>
-             
-            </div>
+            <nav className="flex-1 flex">
+              <ul className="flex flex-col gap-y-2 w-full 
+                  lg:flex-row lg:gap-x-6 lg:gap-y-0 lg:w-full lg:justify-between">
+                {navigation.map((item, idx) => (
+                  <li 
+                    key={item.label}
+                    className="w-full lg:w-auto flex-1 text-center"
+                  >
+                    <Link
+                      href={item.href}
+                      className="inline-block w-full px-0 md:px-1 lg:px-2 py-1 md:py-1.5 rounded
+                        lg:text-base text-primary-200 hover:text-white hover:bg-primary-800/40 
+                        transition-colors font-medium lg:tracking-wide lg:w-auto
+                      "
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
 
@@ -113,13 +81,11 @@ export function Footer() {
               © {currentYear} Arenados Lucho. Todos los derechos reservados.
             </p>
             <div className="flex gap-4 text-sm text-primary-300">
-              <Link href="/contacto" className="hover:text-white transition-colors">
-                Política de Privacidad
-              </Link>
-              <span>|</span>
-              <Link href="/contacto" className="hover:text-white transition-colors">
-                Términos y Condiciones
-              </Link>
+              {privacyPolicy.map((item) => (
+                <Link key={item.label} href={item.href} className="block hover:text-white transition-colors">
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

@@ -7,16 +7,22 @@ const SITE_URL = "https://www.arenadoslucho.com.ar";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Arenado profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
-  description: "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
-  keywords: "arenado, sandblasting, preparación de superficies, arenado industrial, arenado particular, Zona Norte, Zona Oeste, CABA, Pilar",
+  title: {
+    default: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
+    template: "%s | Arenados Lucho",
+  },
+  description:
+    "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
+  keywords:
+    "arenado, sandblasting, preparación de superficies, arenado industrial, arenado particular, Buenos Aires",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Arenado profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
-    description: "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
+    title: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
+    description:
+      "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
     type: "website",
     locale: "es_AR",
     url: SITE_URL,
@@ -24,8 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arenado profesional en Zona Norte, Oeste y CABA | Arenados Lucho",
-    description: "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
+    title: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
+    description:
+      "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
   },
   robots: {
     index: true,
@@ -48,17 +55,16 @@ function generateStructuredData() {
       name: "Arenados Lucho",
       url: SITE_URL,
       logo: `${SITE_URL}/images/logo-solo-azul.png`,
-      description: "Empresa líder en servicios de arenado y sandblasting en Zona Norte, Oeste y CABA. Especialistas en arenado de piscinas, estructuras metálicas, vehículos y más.",
+      description: "Empresa líder en servicios de arenado y sandblasting en Buenos Aires. Especialistas en arenado de piscinas, estructuras metálicas, vehículos y más.",
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+5491123787750",
         contactType: "customer service",
         availableLanguage: "Spanish",
         areaServed: "AR",
       },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Pilar",
+        addressLocality: "Buenos Aires",
         addressRegion: "Buenos Aires",
         addressCountry: "AR",
       },
@@ -68,20 +74,17 @@ function generateStructuredData() {
       "@type": "LocalBusiness",
       name: "Arenados Lucho",
       image: `${SITE_URL}/images/logo-solo-azul.png`,
-      description: "Servicios profesionales de arenado y preparación de superficies en Zona Norte, Oeste y CABA",
+      description: "Servicios profesionales de arenado y preparación de superficies en Buenos Aires",
       url: SITE_URL,
-      telephone: "+5491123787750",
       email: "arenadoslucho@hotmail.com",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Pilar",
+        addressLocality: "Buenos Aires",
         addressRegion: "Buenos Aires",
         addressCountry: "AR",
       },
       areaServed: [
-        { "@type": "City", name: "Zona Norte" },
-        { "@type": "City", name: "Zona Oeste" },
-        { "@type": "Place", name: "CABA" },
+        { "@type": "City", name: "Buenos Aires" },
       ],
       openingHours: "Mo-Sa 08:00-18:00",
     },

@@ -9,16 +9,13 @@ declare global {
 import React, { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { FileText, Send, CheckCircle2 } from 'lucide-react'
-import Link from 'next/link';
-import WppBtn from '@/components/common/WppBtn';
-import EmailBtn from '@/components/common/EmailBtn';
+import { MessageSquare, Send, CheckCircle2 } from 'lucide-react'
 
-export default function PresupuestoRapidoPage() {
+export default function ContactoPage() {
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
-    details: ''
+    description: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -40,16 +37,15 @@ export default function PresupuestoRapidoPage() {
     const now = Date.now()
     const eventId = `form_submit_${now}_${Math.random().toString(36).substr(2, 9)}`
 
-    // Enviar evento a GTM / GA4 antes de enviar el formulario
     if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({ 
+      window.dataLayer.push({
         event: 'form_submit',
         event_category: 'Contact',
-        event_label: 'Presupuesto Rápido Form Submit',
-        event_id: eventId, // ID único para deduplicación en GA4
+        event_label: 'Contacto Form Submit',
+        event_id: eventId,
         value: 1,
         timestamp: now,
-        form_name: 'presupuesto_rapido'
+        form_name: 'contacto'
       })
     }
 
@@ -61,46 +57,42 @@ export default function PresupuestoRapidoPage() {
         },
         body: JSON.stringify({
           name: formData.name,
-          contact: formData.contact,
-          details: formData.details,
-          _subject: 'Nueva solicitud de presupuesto - Arenados Lucho'
+          contact: formData.contact || '(no indicado)',
+          description: formData.description,
+          _subject: 'Nueva solicitud de contacto - Arenados Lucho'
         }),
       })
 
       if (response.ok) {
-        // Enviar evento de éxito después de que el formulario se envió correctamente
         if (typeof window !== 'undefined' && window.dataLayer) {
-          window.dataLayer.push({ 
+          window.dataLayer.push({
             event: 'form_submit_success',
             event_category: 'Contact',
-            event_label: 'Presupuesto Rápido Form Success',
+            event_label: 'Contacto Form Success',
             event_id: `form_success_${now}_${Math.random().toString(36).substr(2, 9)}`,
             value: 1,
             timestamp: Date.now(),
-            form_name: 'presupuesto_rapido'
+            form_name: 'contacto'
           })
         }
-        
         setIsSubmitted(true)
-        setFormData({ name: '', contact: '', details: '' })
+        setFormData({ name: '', contact: '', description: '' })
       } else {
         throw new Error('Error al enviar el formulario')
       }
     } catch (err) {
-      // Enviar evento de error si falla el envío
       if (typeof window !== 'undefined' && window.dataLayer) {
-        window.dataLayer.push({ 
+        window.dataLayer.push({
           event: 'form_submit_error',
           event_category: 'Contact',
-          event_label: 'Presupuesto Rápido Form Error',
+          event_label: 'Contacto Form Error',
           event_id: `form_error_${now}_${Math.random().toString(36).substr(2, 9)}`,
           value: 0,
           timestamp: Date.now(),
-          form_name: 'presupuesto_rapido'
+          form_name: 'contacto'
         })
       }
-      
-      setError('Hubo un error al enviar el formulario. Por favor, intentá nuevamente o contactanos directamente.')
+      setError('Hubo un error al enviar el formulario. Por favor, intentá nuevamente.')
       console.error('Form submission error:', err)
     } finally {
       setIsSubmitting(false)
@@ -120,10 +112,10 @@ export default function PresupuestoRapidoPage() {
                   </div>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  ¡Formulario enviado con éxito!
+                  Solicitud enviada
                 </h2>
                 <p className="text-lg text-gray-700 mb-8">
-                  Gracias por contactarnos. Hemos recibido tu solicitud de presupuesto y nos pondremos en contacto contigo a la brevedad.
+                  Recibimos tu mensaje. Nos pondremos en contacto contigo a la brevedad.
                 </p>
                 <Button
                   onClick={() => setIsSubmitted(false)}
@@ -146,26 +138,25 @@ export default function PresupuestoRapidoPage() {
           <CardHeader className="text-center pb-6">
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center">
-                <FileText className="w-8 h-8 text-primary-600" />
+                <MessageSquare className="w-8 h-8 text-primary-600" />
               </div>
             </div>
             <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Solicitar Presupuesto Rápido
+              Contacto
             </CardTitle>
             <CardDescription className="text-base md:text-lg text-gray-600">
-              Completá el formulario con los detalles de tu proyecto y recibí una propuesta orientativa en breve.
+              Enviá tu solicitud con los datos del proyecto. Nos contactaremos a la brevedad.
             </CardDescription>
           </CardHeader>
 
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Nombre */}
               <div>
-                <label 
-                  htmlFor="name" 
+                <label
+                  htmlFor="name"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Nombre completo <span className="text-red-500">*</span>
+                  Nombre <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -175,17 +166,16 @@ export default function PresupuestoRapidoPage() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
-                  placeholder="Ingresá tu nombre completo"
+                  placeholder="Tu nombre"
                 />
               </div>
 
-              {/* Teléfono / Email */}
               <div>
-                <label 
-                  htmlFor="contact" 
+                <label
+                  htmlFor="contact"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Teléfono o Email <span className="text-red-500">*</span>
+                  Contacto <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -193,44 +183,42 @@ export default function PresupuestoRapidoPage() {
                   name="contact"
                   value={formData.contact}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
-                  placeholder="Teléfono o dirección de email"
+                  placeholder="Ej: 11 2345-6789 o email@ejemplo.com"
                 />
               </div>
 
-              {/* Detalle del trabajo */}
+             
+
               <div>
-                <label 
-                  htmlFor="details" 
+                <label
+                  htmlFor="description"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Detalle del trabajo <span className="text-red-500">*</span>
+                  Descripción del proyecto <span className="text-red-500">*</span>
                 </label>
                 <textarea
-                  id="details"
-                  name="details"
-                  value={formData.details}
+                  id="description"
+                  name="description"
+                  value={formData.description}
                   onChange={handleChange}
                   required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
-                  placeholder="Describí tu proyecto: tipo de superficie, dimensiones aproximadas, ubicación, fecha estimada, etc."
+                  placeholder="Describí tu proyecto: tipo de superficie, dimensiones, ubicación, plazos, etc."
                 />
               </div>
 
-              {/* Error message */}
               {error && (
                 <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
                   {error}
                 </div>
               )}
 
-              {/* Submit button */}
               <div className="pt-4">
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !formData.name || !formData.description || !formData.contact}
                   className="w-full bg-primary-400 hover:bg-primary-500 text-white font-semibold py-6 text-lg rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
@@ -241,20 +229,10 @@ export default function PresupuestoRapidoPage() {
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Enviar solicitud de presupuesto
+                      Enviar solicitud
                     </>
                   )}
                 </Button>
-              </div>
-
-              {/* Info adicional */}
-              <div className="text-center pt-4">
-                <p className="text-sm text-gray-600">
-                  También podés contactarnos directamente por{' '}
-                  <WppBtn type="PresupuestoRapido" />
-                  {' '}o{' '}
-                  <EmailBtn type="PresupuestoRapido" />
-                </p>
               </div>
             </form>
           </CardContent>
