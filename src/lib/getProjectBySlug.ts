@@ -32,7 +32,7 @@ export interface ProjectForDetail {
   valorDiferencial?: string[]
 }
 
-const data = projectsData as { industrialProjects?: ProjectForDetail[] }[]
+const data = projectsData as unknown as { industrialProjects?: ProjectForDetail[] }[]
 
 function getAllProjects(): ProjectForDetail[] {
   return data[0]?.industrialProjects ?? []
