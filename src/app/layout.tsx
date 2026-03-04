@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
+import WppBtn from "@/components/common/WppBtn";
 
 const SITE_URL = "https://www.arenadoslucho.com.ar";
 
@@ -150,6 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         
         <Header />
+        <WppBtn />
         {children}
         <Footer />
       </body>
