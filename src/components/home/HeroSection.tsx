@@ -44,10 +44,10 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl px-4">
-              Preparación y Limpieza de Superficies Industriales en Buenos Aires
+              Preparación y Limpieza de Superficies Industriales en Planta u Obra. 
             </p>
 
-            
+<span className="text-gray-400">Arenado In Situ con Equipos Móviles</span>            
 
             {/* CTA Button - Bordes completamente redondeados en la parte inferior */}
             <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">

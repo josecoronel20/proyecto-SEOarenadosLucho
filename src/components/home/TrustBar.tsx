@@ -1,11 +1,12 @@
 "use client"
 
-import { Shield, Award, Calendar, Briefcase } from "lucide-react"
+import { Shield, Award, Calendar, Briefcase, MapPin   } from "lucide-react"
 
 const items = [
   { icon: Shield, label: "Documentación vigente" },
   { icon: Award, label: "Equipo seguro" },
   { icon: Calendar, label: "Adaptabilidad a tu cronograma" },
+  { icon: MapPin , label: "Equipos Móviles" },
 ]
 
 export default function TrustBar() {
@@ -15,7 +16,7 @@ export default function TrustBar() {
       aria-label="Confianza"
     >
       <div className="container mx-auto px-4 lg:px-8 py-6 md:py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
           {items.map(({ icon: Icon, label }) => (
             <div
               key={label}
