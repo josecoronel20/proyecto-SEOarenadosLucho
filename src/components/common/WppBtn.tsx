@@ -8,7 +8,17 @@ declare global {
 
 import React from 'react'
 import { MessageCircle } from 'lucide-react'
-import Link from 'next/link'
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog'
 
 const WppBtn = () => {
   const whatsappNumberPart1 = "5491123" 
@@ -19,8 +29,7 @@ const WppBtn = () => {
   const phoneNumber = whatsappNumberPart1 + whatsappNumberPart2
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`
 
-  const handleClick = React.useCallback(
-    (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const handleConfirm = React.useCallback(() => {
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           event: 'contact_whatsapp',
@@ -30,21 +39,35 @@ const WppBtn = () => {
           timestamp: Date.now(),
         })
       }
-      // Permitir que el enlace abra WhatsApp, no bloqueamos el default
-    },
-    []
-  )
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+  }, [whatsappUrl])
 
   return (
-    <Link 
-      href={whatsappUrl}
-      target="_blank" 
-      rel="noopener noreferrer"
-      onClick={handleClick}
-      className="fixed bottom-6 right-6 flex items-center gap-2 hover:text-white transition-colors bg-green-600 rounded-full p-3 shadow-lg hover:shadow-xl z-20"
-    >
-      <MessageCircle className="w-6 h-6 text-white" />
-    </Link>
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <button
+          type="button"
+          aria-label="Abrir WhatsApp"
+          className="fixed bottom-6 right-6 flex items-center gap-2 hover:text-white transition-colors bg-green-600 rounded-full p-3 shadow-lg hover:shadow-xl z-50"
+        >
+          <MessageCircle className="w-6 h-6 text-white" />
+        </button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Se abrirá WhatsApp</AlertDialogTitle>
+          <AlertDialogDescription>
+            Al continuar, te redirigiremos a WhatsApp para iniciar una conversación.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancelar</AlertDialogCancel>
+          <AlertDialogAction onClick={handleConfirm}>
+            Continuar
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   )
 }
 
