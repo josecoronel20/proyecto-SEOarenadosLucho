@@ -31,8 +31,8 @@ export function Header() {
             <Image src="/images/logo-solo-azul.png" alt="Arenados Lucho" width={75} height={75} />
             </Link>
             <div className="hidden md:block">
-              <h1 className="text-xl font-bold text-primary">Arenados Lucho</h1>
-              <p className="text-xs text-primary">Preparación y Limpieza de Superficies</p>
+              <p className="text-xl font-bold text-primary-600">Arenados Lucho</p>
+              <p className="text-xs text-primary-600">Preparación y Limpieza de Superficies</p>
             </div>
           </div>
 

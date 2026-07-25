@@ -4,7 +4,7 @@ import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import WppBtn from "@/components/common/WppBtn";
 
-const SITE_URL = "https://www.arenadoslucho.com.ar";
+const SITE_URL = "https://www.arenadoslucho.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -56,7 +56,8 @@ function generateStructuredData() {
       name: "Arenados Lucho",
       url: SITE_URL,
       logo: `${SITE_URL}/images/logo-solo-azul.png`,
-      description: "Empresa líder en servicios de arenado y sandblasting en Buenos Aires. Especialistas en arenado de piscinas, estructuras metálicas, vehículos y más.",
+      description:
+        "Empresa especializada en arenado industrial y preparación de superficies metálicas en Buenos Aires. Planta, obra y estructuras de gran escala conforme ISO 8501.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
@@ -75,7 +76,8 @@ function generateStructuredData() {
       "@type": "LocalBusiness",
       name: "Arenados Lucho",
       image: `${SITE_URL}/images/logo-solo-azul.png`,
-      description: "Servicios profesionales de arenado y preparación de superficies en Buenos Aires",
+      description:
+        "Arenado industrial, metal blanco (Sa3) y coordinación en obra en Buenos Aires y AMBA.",
       url: SITE_URL,
       email: "arenadoslucho@hotmail.com",
       address: {

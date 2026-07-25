@@ -82,7 +82,6 @@ const ProjectsSection = () => {
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        unoptimized
                       />
                     </div>
                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
@@ -100,7 +99,7 @@ const ProjectsSection = () => {
                       </CardHeader>
                       <CardFooter className="pt-0 pb-6">
                         <Link
-                          href={project.idSection ? `/casos-de-exito/${project.idSection}` : "/arenado-industrial#proyectos"}
+                          href={project.idSection ? `/casos-de-exito/${project.idSection}` : "/casos-de-exito"}
                           className="w-full"
                           tabIndex={-1}
                         >
