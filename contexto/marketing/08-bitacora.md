@@ -22,7 +22,7 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
   - 📌 Registrado que la política "piloto automático" (25/07) **reemplaza** la previa "solo lectura + cambios a mano" del mismo día.
 - **Por qué / hipótesis:** operar creyendo que hay un tope de gasto que no existe es el mayor riesgo económico; antes de dar autonomía hay que arreglar la base y que la doc no sobrerreprese­nte el estado real.
 - **Resultado esperado y cuándo revisarlo:** al instalar el guardián endurecido + fijar el presupuesto diario nativo, el tope se comporta como red real. Falta commit + push del fix de dominio para que `/robots.txt` y `/sitemap.xml` dejen de dar 404 en producción.
-- **Resultado real:** _(completar)_
+- **Resultado real (25/07/2026):** ✅ fix de dominio commiteado y mergeado a `main` vía **PR #1** (merge commit `9307485`); deploy de Vercel propagado y **verificado en producción**: `https://www.arenadoslucho.com/robots.txt` → **200** (`text/plain`, `Allow: /` + sitemap `.com`) y `/sitemap.xml` → **200** (11 URLs, todas `.com`, 0 `.com.ar`). Antes ambos daban 404 → bloqueante SEO #1 cerrado. **Sigue pendiente:** el guardián endurecido y el resto de los scripts de Ads están en el repo pero **sin instalar** (requiere sesión de Chrome); importación de conversiones GA4→Ads sin verificar.
 
 ## 2026-07-25 (2) — Migración completada + modo autopilot **preparado** (pendiente de instalar)
 

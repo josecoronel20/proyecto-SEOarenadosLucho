@@ -50,7 +50,7 @@ La **estrategia y operación de marketing** (SEO + Google Ads) vive en `contexto
 - **Google Ads — scripts creados pero NO instalados todavía:** los scripts viven en `marketing/ads-scripts/` y el modelo aprobado es piloto automático con topes (autopilot + guardián de **ARS 300.000/mes**), pero **ninguno está instalado en la cuenta** (estado real en `marketing/09-automatizaciones.md`). Hasta instalarlos y verificar el trigger en la UI, **no hay autopilot corriendo ni tope de gasto real**. No comunicar "tope duro vigente" sin esa verificación. Política en `marketing/06-google-ads-scripts.md`; cambios estructurales, solo con el dueño al tanto.
 - **Automatizaciones vigentes** (scripts + auditoría SEO semanal programada): inventario y cómo frenarlas en `marketing/09-automatizaciones.md` — consultarlo antes de crear o tocar cualquier automatización.
 - **Todo cambio de marketing se registra en `marketing/08-bitacora.md`** (qué, por qué, resultado esperado). Sin bitácora no hay aprendizaje.
-- Pendiente inmediato al 25/07/2026: verificar tras el próximo deploy que `/robots.txt` y `/sitemap.xml` respondan 200 en producción (daban 404); luego pasos 2, 4 y 5 de `marketing/01-migracion-y-dominio.md`.
+- Al 25/07/2026 el fix de dominio `.com` está desplegado y **verificado**: `/robots.txt` y `/sitemap.xml` responden **200** en producción con `.com` (antes 404; resuelto vía PR #1). Próximo: enviar el sitemap en Google Search Console y pasos 2, 4 y 5 de `marketing/01-migracion-y-dominio.md` (sesión de Chrome para instalar/verificar los scripts de Ads).
 
 ## Arquitectura
 
