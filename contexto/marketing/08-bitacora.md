@@ -12,6 +12,21 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-07-26 — Sesión de Chrome: tope de gasto real + scripts instalados
+
+- **Qué se hizo (sesión supervisada en la cuenta de Ads 953-841-6905):**
+  - 🛡️ **Tope de gasto ACTIVADO:** presupuesto diario nativo de la campaña activa `busqueda-arenadoIndustrial` bajado de **25.000 → 10.000/día** (freno duro real). Antes estaba armada para ~750.000/mes (2,5× el tope).
+  - ✅ **Guardián (06)** instalado + programado diario; Vista previa OK (heartbeat: `Mes ARS 12.237/300.000`).
+  - ✅ **Scripts de lectura instalados:** `02-reporte-semanal`, `03-ngram-terminos`, `04-chequeo-urls`.
+  - ⏸️ **Autopilot (05) NO instalado** a propósito (falta importar/limpiar conversiones + URLs 200 + data).
+  - 🧹 **Conversiones:** "Lead form - Submit" pasada a secundaria. Las "Local actions" (Website visits, Other engagements) NO se pueden pasar a secundaria una por una (son "Alojada en Google") → se excluyen a nivel de campaña al relanzar.
+  - 🐞 Corregido bug en `01-auditoria-cuenta.js` (`LAST_90_DAYS` no es literal válido de GAQL → se usa rango `BETWEEN`).
+- **Auditoría de la cuenta (línea base):** cuenta con historial (la campaña activa gastó ~1,6M), casi todo REMOVED salvo `busqueda-arenadoIndustrial` (ENABLED) y `Leads-Performance Max-3` (PAUSED). Conversiones GA4→Ads YA existen (`contact_whatsapp`, `form_submit` primarias) pero conviven con basura primaria (visitas/engagements). URLs finales → `https://www.arenadoslucho.com/` (200, dominio correcto). Sin saldo actualmente.
+- **Por qué:** dejar el gasto topeado y el monitoreo corriendo ANTES de recargar saldo; sin autopilot hasta tener conversiones limpias.
+- **Pendiente antes de relanzar:** (1) limpiar conversiones a nivel campaña (optimizar solo hacia `form_submit_success` + WhatsApp + llamadas); (2) verificar que `form_submit` sea éxito y no intento (GTM/GA4); (3) recién ahí instalar autopilot (05) + recargar saldo.
+- **Resultado esperado:** con presupuesto 10.000/día, aunque se recargue saldo el gasto no supera ~300.000/mes.
+- **Resultado real:** _(completar tras relanzamiento)_
+
 ## 2026-07-25 (3) — Reconciliación de estado + endurecimiento del guardián (Claude Code)
 
 - **Qué se hizo:**

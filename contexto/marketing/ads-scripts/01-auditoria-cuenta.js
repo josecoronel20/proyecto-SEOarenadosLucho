@@ -3,21 +3,25 @@
  * Arenados Lucho — radiografía inicial de una cuenta abandonada.
  * Correr con "Vista previa" y copiar el log completo al chat de Claude.
  * Contexto: contexto/marketing/05-google-ads-operacion.md
+ *
+ * Nota: GAQL no acepta 'LAST_90_DAYS' en DURING; se usa un rango de fechas
+ * (BETWEEN) calculado desde CONFIG.DIAS.
  */
 
 var CONFIG = {
   // Opcional: si ponés un email, además del log te llega el reporte por correo.
   EMAIL: '',
-  PERIODO: 'LAST_90_DAYS' // ventana para métricas históricas
+  DIAS: 365 // ventana para métricas históricas (cuenta abandonada → mirar amplio)
 };
 
 function main() {
+  var RANGO = rangoFechas(CONFIG.DIAS);
   var out = [];
   out.push('=== AUDITORÍA GOOGLE ADS — ' + AdsApp.currentAccount().getName() +
            ' (' + AdsApp.currentAccount().getCustomerId() + ') ===');
   out.push('Moneda: ' + AdsApp.currentAccount().getCurrencyCode() +
            ' | Zona horaria: ' + AdsApp.currentAccount().getTimeZone());
-  out.push('Período de métricas: ' + CONFIG.PERIODO);
+  out.push('Ventana de métricas: últimos ' + CONFIG.DIAS + ' días (' + RANGO + ')');
   out.push('');
 
   // ---- 1. Campañas ----
@@ -27,7 +31,7 @@ function main() {
     'SELECT campaign.name, campaign.status, campaign.advertising_channel_type, ' +
     'campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks, ' +
     'metrics.impressions, metrics.conversions, metrics.conversions_value ' +
-    'FROM campaign WHERE segments.date DURING ' + CONFIG.PERIODO
+    'FROM campaign WHERE segments.date ' + RANGO
   ).rows();
   while (rows.hasNext()) {
     var r = rows.next();
@@ -46,7 +50,7 @@ function main() {
     'ad_group_criterion.keyword.match_type, ad_group_criterion.status, ' +
     'ad_group_criterion.quality_info.quality_score, metrics.cost_micros, ' +
     'metrics.clicks, metrics.conversions ' +
-    'FROM keyword_view WHERE segments.date DURING ' + CONFIG.PERIODO + ' ' +
+    'FROM keyword_view WHERE segments.date ' + RANGO + ' ' +
     'ORDER BY metrics.cost_micros DESC LIMIT 100'
   ).rows();
   while (kws.hasNext()) {
@@ -93,6 +97,15 @@ function main() {
   if (CONFIG.EMAIL) {
     MailApp.sendEmail(CONFIG.EMAIL, '[Ads] Auditoría inicial — Arenados Lucho', texto);
   }
+}
+
+// GAQL no soporta LAST_90_DAYS; construimos un rango BETWEEN 'desde' AND 'hoy'.
+function rangoFechas(dias) {
+  var tz = AdsApp.currentAccount().getTimeZone();
+  var hoy = new Date();
+  var desde = new Date(hoy.getTime() - dias * 24 * 60 * 60 * 1000);
+  var f = function (d) { return Utilities.formatDate(d, tz, 'yyyy-MM-dd'); };
+  return "BETWEEN '" + f(desde) + "' AND '" + f(hoy) + "'";
 }
 
 function micros(v) {
