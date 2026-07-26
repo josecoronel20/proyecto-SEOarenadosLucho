@@ -3,9 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { FileText } from 'lucide-react'
-import WppBtn from './WppBtn'
-import EmailBtn from './EmailBtn'
-
 const CTASection = () => {
   return (
     <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
@@ -16,6 +13,7 @@ const CTASection = () => {
           loop
           muted
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
         >
           <source src="/videos/ctaVideo.mp4" type="video/mp4" />

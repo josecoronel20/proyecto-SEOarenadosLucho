@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
-import { Target, AlertCircle, Lightbulb, CheckCircle2 } from "lucide-react"
+import { Target } from "lucide-react"
 
 // Agregamos el nuevo campo a la interfaz para la imagen.
 export interface CasoProject {
@@ -45,13 +46,13 @@ export function CasoCard({ project }: CasoCardProps) {
     <article className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
       {/* Imagen/prueba visual */}
       {project.images && (
-        <div className="w-full h-44 md:h-52 bg-gray-100 overflow-hidden flex items-center justify-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+        <div className="relative w-full h-44 md:h-52 bg-gray-100 overflow-hidden">
+          <Image
             src={project.images[0]}
             alt={project.title}
-            className="object-cover w-full h-full"
-            loading="lazy"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 400px"
           />
         </div>
       )}

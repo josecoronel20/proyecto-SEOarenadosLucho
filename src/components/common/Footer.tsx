@@ -3,9 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin } from 'lucide-react'
-import WppBtn from './WppBtn'
-import EmailBtn from './EmailBtn'
-
 export function Footer() {
 
   const currentYear = new Date().getFullYear()

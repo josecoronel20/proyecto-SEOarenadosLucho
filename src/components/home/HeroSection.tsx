@@ -15,7 +15,7 @@ export function HeroSection() {
             muted
             playsInline
             className="w-full h-full object-cover rounded-lg"
-            preload="auto"
+            preload="metadata"
             // @ts-ignore
             webkit-playsinline="true"
           >

@@ -111,7 +111,6 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
                         fill
                         className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 896px"
-                        unoptimized
                       />
                     </div>
                   </CarouselItem>

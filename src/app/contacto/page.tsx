@@ -17,6 +17,7 @@ export default function ContactoPage() {
     contact: '',
     description: ''
   })
+  const [honeypot, setHoneypot] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -31,8 +32,15 @@ export default function ContactoPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (honeypot.trim()) {
+      return
+    }
     setIsSubmitting(true)
     setError('')
+
+    const name = formData.name.trim()
+    const contact = formData.contact.trim()
+    const description = formData.description.trim()
 
     const now = Date.now()
     const eventId = `form_submit_${now}_${Math.random().toString(36).substr(2, 9)}`
@@ -56,10 +64,11 @@ export default function ContactoPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          contact: formData.contact || '(no indicado)',
-          description: formData.description,
-          _subject: 'Nueva solicitud de contacto - Arenados Lucho'
+          name,
+          contact: contact || '(no indicado)',
+          description,
+          _subject: 'Nueva solicitud de contacto - Arenados Lucho',
+          _gotcha: honeypot,
         }),
       })
 
@@ -150,7 +159,17 @@ export default function ContactoPage() {
           </CardHeader>
 
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 relative">
+              <input
+                type="text"
+                name="_gotcha"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute left-[-9999px] w-px h-px opacity-0 pointer-events-none"
+              />
               <div>
                 <label
                   htmlFor="name"
@@ -183,6 +202,7 @@ export default function ContactoPage() {
                   name="contact"
                   value={formData.contact}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
                   placeholder="Ej: 11 2345-6789 o email@ejemplo.com"
                 />

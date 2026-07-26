@@ -18,7 +18,7 @@ const services = [
     description:
       "Servicio orientado a empresas que necesitan preparación profesional de superficies metálicas para mantenimiento, restauración o procesos productivos. Enfocado en resultados uniformes, planificación clara y reducción de tiempos de parada.",
     image: "/images/services/arenadoIndustrial.PNG",
-    link: "/arenado-industrial",
+    link: "/servicios",
     badge: "Empresas",
   },
   {
@@ -26,7 +26,7 @@ const services = [
     description:
       "Solución práctica para personas que buscan limpiar, restaurar o renovar superficies de forma rápida y prolija. Ideal tanto para elementos piezas metálicas y vehículos como para piletas y fachadas.",
     image: "/images/services/arenadoParticular.JPG",
-    link: "/arenado-particular",
+    link: "/contacto",
     badge: "Particulares",
   },
 ]
@@ -52,7 +52,7 @@ const ServicesSection = () => {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="relative z-20 object-cover brightness-60  dark:brightness-40"
+                  className="relative z-20 object-cover brightness-60"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
@@ -66,11 +66,9 @@ const ServicesSection = () => {
               </CardHeader>
 
               <CardFooter>
-                <Link href={service.link} className="w-full" tabIndex={-1}>
-                  <Button className="w-full bg-primary-400" asChild>
-                    <span>Ver Servicio</span>
-                  </Button>
-                </Link>
+                <Button className="w-full bg-primary-400" asChild>
+                  <Link href={service.link}>Ver servicio</Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
