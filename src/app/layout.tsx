@@ -76,7 +76,6 @@ function generateStructuredData() {
         logo: BUSINESS.logo,
         image: BUSINESS.images,
         email: BUSINESS.email,
-        telephone: BUSINESS.telephone,
         description: BUSINESS.description,
         address: {
           "@type": "PostalAddress",
@@ -92,7 +91,6 @@ function generateStructuredData() {
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "customer service",
-          telephone: BUSINESS.telephone,
           email: BUSINESS.email,
           availableLanguage: "Spanish",
           areaServed: "AR",

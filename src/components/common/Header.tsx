@@ -16,6 +16,7 @@ export function Header() {
   const pages = [
     { name: "Inicio", href: "/" },
     { name: "Servicios", href: "/servicios" },
+    { name: "Piletas", href: "/arenado-de-piletas" },
     { name: "Casos de éxito", href: "/casos-de-exito" },
     { name: "Preguntas frecuentes", href: "/preguntas-frecuentes" },
     { name: "Contactanos", href: "/contacto" },

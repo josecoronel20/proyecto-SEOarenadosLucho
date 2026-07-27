@@ -10,6 +10,7 @@ export function Footer() {
   const navigation = [
     { label: 'Inicio', href: '/' },
     { label: 'Servicios', href: '/servicios' },
+    { label: 'Arenado de piletas', href: '/arenado-de-piletas' },
     { label: 'Casos de éxito', href: '/casos-de-exito' },
     { label: 'Preguntas frecuentes', href: '/preguntas-frecuentes' },
     { label: 'Contactanos', href: '/contacto' },
@@ -40,7 +41,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-primary-200">
-              Servicios profesionales de arenado para proyectos industriales en Buenos Aires.
+              Arenado en obra, industria y piletas en Buenos Aires y AMBA: dejamos la superficie lista para pintar o revestir.
             </p>
           </div>
 

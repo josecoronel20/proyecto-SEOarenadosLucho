@@ -6,12 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { faqs } from "@/lib/faqs"
+import { faqs, type Faq } from "@/lib/faqs"
 
-export function FaqAccordion() {
+export function FaqAccordion({ items = faqs }: { items?: Faq[] }) {
   return (
     <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-      {faqs.map((faq, i) => (
+      {items.map((faq, i) => (
         <AccordionItem key={i} value={`item-${i}`} className="border-gray-200 border-b px-0">
           <AccordionTrigger className="py-5 text-left font-semibold text-gray-900 hover:no-underline hover:text-primary-600">
             {faq.question}

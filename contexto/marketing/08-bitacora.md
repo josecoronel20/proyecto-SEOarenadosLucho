@@ -12,6 +12,35 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-07-27 (2) — Landing /arenado-de-piletas reconstruida al mapa ideal + WhatsApp inline (Claude Code)
+
+- **Qué se hizo:**
+  - **Mapa de la landing IDEAL** (`11-landing-piletas-ideal.md`): blueprint de referencia diseñado DESDE CERO (síntesis de 3 diseños independientes: dueño de casa/conversión · SEO/gap sin jerga · B2B contratista). 13 secciones con copy propio, keywords por bloque, schema y reglas de conversión.
+  - **Landing reconstruida** (`src/app/arenado-de-piletas/page.tsx`) alineada al mapa: hero por el problema · banda estacional (invierno, rotable) · selector de público · "¿qué es el arenado?" (analogía "lija potente") · bloque del **gap sin jerga** (sacar/quitar/despintar/decapar + "piscina") · galería antes/después (6 fotos) · 3 pasos in situ · qué incluye/qué no · **sección potente de contratistas** (precio por obra, turnos, varias/temporada) · "por qué confiar" · zonas AMBA · FAQ con schema **FAQPage (11 Q)** · CTA final.
+  - **WhatsApp prominente SIN romper invariantes:** nuevo componente `WhatsAppCTA` (inline) que replica el patrón de WppBtn — número **partido en 2 strings** (anti-scraping: no aparece contiguo en el HTML), evento `contact_whatsapp` **solo tras confirmar el AlertDialog**, `window.open`. NO es un segundo botón flotante (sigue habiendo uno solo). Mensajes pre-cargados distintos por público (dueño/contratista).
+  - **Nav:** se agregó **Piletas** al Header y al Footer (la landing estaba **huérfana** en el menú). Tagline del Footer a 3 focos (obra/industria/piletas).
+  - **FAQ parametrizable:** `FaqAccordion` acepta `items`; nuevas `faqsPiletas` en `src/lib/faqs.ts` alimentan el acordeón y el FAQPage de la landing (la FAQ general sigue intacta con sus 14).
+  - **Blindaje del número:** se sacó el `telephone` del schema JSON-LD (un cambio previo de Fase C lo exponía como texto plano en cada página). Verificado: el número ya NO aparece contiguo en el HTML de ninguna página.
+- **Verificación:** `npm run build` limpio (17 rutas); 1 `<h1>` por página; schema FAQPage/Service/BreadcrumbList OK; `contact_whatsapp`/Formspree intactos; cero jerga técnica ("granallado" solo en negativo). Sin regresión en `/preguntas-frecuentes`.
+- **⚠️ El tema Ads (aparte del sitio):** las **"llamadas por trabajo" cuando se mete plata en Ads NO son fuga del sitio** (el número no está expuesto). Casi seguro: la campaña vieja tiene **extensión de llamada** + concordancia amplia sin negativas de empleo → los que buscan "trabajo/empleo de arenado" ven el aviso con botón de llamar. Revisar en la cuenta (sesión guiada): sacar la extensión de llamada, pasar a frase/exacta, y **sumar negativas de empleo** (`vacante, personal, cv, curriculum, se busca, rrhh, empleado, puesto, changa, contratar`) a `03-keywords-maestro.md`.
+- **A verificar antes de publicar:** plazo "en el día" de una pileta estándar; zonas reales de cobertura; pares antes/después de las fotos.
+- **Resultado esperado y cuándo revisarlo:** más leads de piletas (dueño + contratista) y tráfico del gap sin jerga; medir en Search Console a las 4-6 semanas post-deploy.
+- **Resultado real:** _(completar)_
+
+## 2026-07-27 — Roadmap SEO + ejecución Fases A/C/E/D + landing de piletas (Claude Code)
+
+- **Qué se hizo:** auditoría SEO del código (8 lentes) → **roadmap de optimización SEO** integrado en `contexto/07-seo-tecnico.md` (7 fases A→G). Ejecutadas y verificadas (build limpio 17 rutas, invariantes GTM/`dataLayer`/Formspree **intactos**):
+  - **Fase A — fundaciones:** `canonical` self-referente por ruta, `next.config` (AVIF/WebP + headers de seguridad + `poweredByHeader:false`), `theme-color`, 404/error en español con `<h1>` y CTAs, sin `meta keywords` obsoleta.
+  - **Fase C — schema:** JSON-LD refactor a `@graph` con `@id` (`LocalBusiness`+`HomeAndConstructionBusiness` completa: `telephone` = número de WppBtn, `areaServed` AMBA, fotos reales; `WebSite`), `FAQPage`, `Service`, `BreadcrumbList`, `CreativeWork` en casos. Fuente única `src/lib/siteConfig.ts` + `src/lib/faqs.ts`.
+  - **Fase E — on-page:** `<h1>` semánticos (contacto/legales/home con keyword), `CardTitle` polimórfico, secciones de casos a `<h2>`, `<main>` landmark centralizado, OG/Twitter por página con imagen, alt text con zona.
+  - **Fase D — arquitectura/URLs:** **landing `/arenado-de-piletas` creada** (las 3 secciones obligatorias del plan + proceso en 3 pasos + zonas + qué no incluye + caso enlazado + schema `Service`/`BreadcrumbList` + alta en sitemap); **redirects 301** de rutas legacy (`/arenado-industrial`→`/servicios`, `/arenado-particular`→`/arenado-de-piletas`, `/presupuesto-rapido`→`/contacto`); componente `Breadcrumbs` (visible + JSON-LD) y enlazado interno (fin de callejones: "Seguir viendo" en casos, home→casos, card Particular→landing).
+  - Todo en el branch `seo/fase-a-fundaciones` → **[PR #2](https://github.com/josecoronel20/proyecto-SEOarenadosLucho/pull/2)** (3 commits). Preview de Vercel; sin mergear a `main` todavía.
+- **🔄 ROTACIÓN ESTACIONAL de la landing (registrar cada cambio):** la sección estacional de `/arenado-de-piletas` arranca en **modo INVIERNO** (27/07/2026): *"Anticipate: llegá al verano con la pileta lista — en invierno hay turno inmediato"*. **Próxima rotación → primavera/verano (~ago-sep):** cambiar a *"Llegá con la pileta lista: turnos de esta semana"*. El copy vive en `src/app/arenado-de-piletas/page.tsx` (bloque con ícono `CalendarClock`). **Cada rotación se anota acá.**
+- **Pendiente:** `apex→www` es config de dominio en **Vercel** (no código); **Fase B** = comprimir `heroVideo.mp4` (~25 MB, necesita el asset); **Fase G** = Search Console + Lighthouse post-merge; imagen social branded 1200×630 dedicada. El **copy de la landing lo generó Claude** → el dueño lo revisa/ajusta.
+- **Por qué / hipótesis:** el sitio ya estaba alineado al negocio (pivote de copy), pero sin fundaciones SEO técnicas ni la landing de la mejor keyword de conversión (piletas). Con schema + IA + landing propia + on-page mejora la elegibilidad en búsqueda/local y le da destino propio a la campaña de Ads de piletas.
+- **Resultado esperado y cuándo revisarlo:** tras merge + deploy, validar schema (Rich Results Test), redirects 301 activos y la landing indexada; medir en Search Console (impresiones "arenado de piletas", cobertura) en las primeras 4-6 semanas.
+- **Resultado real:** _(completar tras merge/deploy)_
+
 ## 2026-07-26 (7) — Pivote de copy del sitio EJECUTADO en el código (Claude Code)
 
 - **Qué se hizo:** ejecutados los **pasos 1 y 2 de Fase 1** del ROADMAP. Eliminada toda promesa técnica (Sa3, ISO 8501, metal blanco, perfil de anclaje, "normativa internacional") del sitio, metadata y JSON-LD, reencuadrando al mensaje **"arenado sin vueltas, in situ, listo para pintar o revestir"** con piletas y PYMEs/galpones visibles.

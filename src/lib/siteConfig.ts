@@ -13,8 +13,9 @@ export const BUSINESS = {
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo-solo-azul.png`,
   email: "arenadoslucho@hotmail.com",
-  // Mismo número que WppBtn.tsx (evento contact_whatsapp). No cambiar sin actualizar WppBtn.
-  telephone: "+5491123787750",
+  // ⚠️ El teléfono NO se publica en el sitio ni en el schema, a propósito (anti-scraping /
+  // anti-spam). El contacto va por WhatsApp vía WppBtn, que arma el número en runtime a
+  // partir de 2 strings separados para que NO aparezca como texto en el HTML.
   openingHours: "Mo-Sa 08:00-18:00",
   description:
     "Arenado industrial y particular in situ en Buenos Aires y AMBA: dejamos la superficie lista para pintar o revestir. Equipos propios, coordinación en obra y presupuesto sin costo.",
