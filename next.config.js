@@ -21,6 +21,14 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // Rutas legacy eliminadas → destinos vigentes (evita 404 + preserva link equity).
+      { source: "/arenado-industrial", destination: "/servicios", permanent: true },
+      { source: "/arenado-particular", destination: "/arenado-de-piletas", permanent: true },
+      { source: "/presupuesto-rapido", destination: "/contacto", permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;

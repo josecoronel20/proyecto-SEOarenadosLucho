@@ -117,6 +117,14 @@ const ProjectsSection = () => {
             <CarouselNext />
           </Carousel>
         </div>
+        <div className="text-center mt-10">
+          <Link
+            href="/casos-de-exito"
+            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold"
+          >
+            Ver todos los casos de arenado →
+          </Link>
+        </div>
       </div>
     </section>
   )

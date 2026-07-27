@@ -48,6 +48,13 @@ export function getAllSlugs(): string[] {
     .filter((s): s is string => Boolean(s))
 }
 
+/** Otros casos (para enlazado interno "seguir viendo") — excluye el slug actual. */
+export function getOtherProjects(slug: string, limit = 3): ProjectForDetail[] {
+  return getAllProjects()
+    .filter((p) => p.idSection && p.idSection !== slug)
+    .slice(0, limit)
+}
+
 /** Mapea el proyecto al formato legacy (description, challenges, solutions, results, images). */
 export function mapToLegacyProject(p: ProjectForDetail): {
   id: number

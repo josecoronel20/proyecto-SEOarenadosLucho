@@ -19,6 +19,7 @@ const services = [
       "Arenamos estructuras, tanques, hierros y fachadas en obra, en tu planta o en tu galpón. Vamos con equipos propios, trabajamos por sectores para no frenarte y te dejamos la superficie lista para pintar o revestir.",
     image: "/images/services/arenadoIndustrial.PNG",
     link: "/servicios",
+    cta: "Ver servicios de arenado",
     badge: "Empresas",
   },
   {
@@ -26,7 +27,8 @@ const services = [
     description:
       "Renovamos piletas, fachadas y trabajos chicos in situ: sacamos pintura vieja y óxido y te dejamos la superficie lista para repintar o revestir. Vamos con el equipo; no trasladás nada.",
     image: "/images/services/arenadoParticular.JPG",
-    link: "/contacto",
+    link: "/arenado-de-piletas",
+    cta: "Ver arenado de piletas",
     badge: "Particulares",
   },
 ]
@@ -67,7 +69,7 @@ const ServicesSection = () => {
 
               <CardFooter>
                 <Button className="w-full bg-primary-400" asChild>
-                  <Link href={service.link}>Ver servicio</Link>
+                  <Link href={service.link}>{service.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>

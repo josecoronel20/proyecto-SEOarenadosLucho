@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/siteConfig"
 const staticPaths = [
   "",
   "/servicios",
+  "/arenado-de-piletas",
   "/casos-de-exito",
   "/preguntas-frecuentes",
   "/contacto",
@@ -18,8 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified,
-    changeFrequency: path === "" || path === "/servicios" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/contacto" || path === "/servicios" ? 0.9 : 0.7,
+    changeFrequency:
+      path === "" || path === "/servicios" || path === "/arenado-de-piletas"
+        ? "weekly"
+        : "monthly",
+    priority:
+      path === ""
+        ? 1
+        : path === "/contacto" || path === "/servicios" || path === "/arenado-de-piletas"
+          ? 0.9
+          : 0.7,
   }))
 
   const caseEntries: MetadataRoute.Sitemap = getAllSlugs().map((slug) => ({
