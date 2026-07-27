@@ -91,7 +91,16 @@ Madera/muebles, piezas metálicas, vehículos chicos: **se aceptan si llegan** (
 
 ### Equipos / insumos / empleo (nivel cuenta)
 
-`alquiler de arenadora` · `venta de arenadora` · `comprar arenadora` · `máquina de arenar` · `arena para arenado` · `compresor` · `curso` · `empleo` · `trabajo de arenador` · `como hacer` · `casero` · `tutorial` · `barato` · `precio barato` · `hidrolavado`
+**Equipos/insumos:** `alquiler de arenadora` · `venta de arenadora` · `comprar arenadora` · `máquina de arenar` · `arena para arenado` · `compresor` · `hidrolavado`
+
+**Empleo (⚠️ CRÍTICO — ver nota):** `empleo` · `trabajo de arenador` · `busco trabajo` · `busco empleo` · `vacante` · `se busca personal` · `oferta laboral` · `oferta de trabajo` · `changa` · `changas` · `sueldo` · `cv` · `curriculum` · `rrhh` · `recursos humanos` · `empleado`
+
+**Formación/DIY:** `curso` · `como hacer` · `casero` · `tutorial` · `aprender`
+
+**Otras:** `barato` · `precio barato`
+
+> ⚠️ **Las de EMPLEO son críticas (dato del dueño, 27/07/2026):** cuando la campaña gasta, llegan muchas **llamadas pidiendo trabajo**. El número NO se filtra del sitio (está blindado) → lo muestra el **anuncio** vía la **extensión de llamada** a quien busca "trabajo/empleo de arenado". Sin estas negativas (en **frase/exacta**) se paga por mostrarle el aviso —con botón de llamar— a gente que busca laburo. Fix completo (incluida la extensión de llamada) en `05-google-ads-operacion.md`.
+> ⚠️ **Falsos positivos a evitar:** NO negativizar `contratar` / `personal` / `puesto` **solos** — los usa también el comprador ("contratar servicio de arenado", "arenado personal/particular"). Por eso arriba van como **frases** ("se busca personal", "oferta laboral").
 
 ⚠️ NO negativizar `arenadora` sola (en exacta convirtió barato) ni `zona norte` (bloquearía "arenado industrial zona norte").
 
