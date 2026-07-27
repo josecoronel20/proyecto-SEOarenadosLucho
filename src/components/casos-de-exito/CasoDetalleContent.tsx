@@ -46,10 +46,8 @@ const METODOLOGIA_LABELS: Record<string, string> = {
 }
 
 const PARAMETROS_LABELS: Record<string, string> = {
-  normativaReferencia: "Normativa de referencia",
-  gradoPreparacion: "Grado de preparación",
-  gradoPreparacionAlcanzado: "Grado de preparación alcanzado",
-  objetivoSuperficie: "Objetivo de superficie",
+  tipoIntervencion: "Tipo de intervención",
+  objetivoSuperficie: "Objetivo de la superficie",
   condicionFinal: "Condición final",
 }
 
@@ -83,9 +81,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {/* Overview */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <Target className="w-5 h-5 text-primary-600" />
-            Resumen del proyecto
+          <CardTitle asChild className="flex items-center gap-2 text-lg">
+            <h2>
+              <Target className="w-5 h-5 text-primary-600" />
+              Resumen del proyecto
+            </h2>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -97,7 +97,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {hasImages && (
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Galería</CardTitle>
+            <CardTitle asChild className="text-lg"><h2>Galería</h2></CardTitle>
           </CardHeader>
           <CardContent>
             <Carousel opts={{ align: "start", loop: project.images!.length > 1 }} className="w-full">
@@ -131,9 +131,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {project.context && (project.context.tipoEstructura || project.context.entornoTrabajo || project.context.objetivoCliente) && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Building2 className="w-5 h-5 text-primary-600" />
-              Contexto
+            <CardTitle asChild className="flex items-center gap-2 text-lg">
+              <h2>
+                <Building2 className="w-5 h-5 text-primary-600" />
+                Contexto
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -163,9 +165,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {project.alcanceTrabajo && project.alcanceTrabajo.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <ListChecks className="w-5 h-5 text-primary-600" />
-              Alcance del trabajo
+            <CardTitle asChild className="flex items-center gap-2 text-lg">
+              <h2>
+                <ListChecks className="w-5 h-5 text-primary-600" />
+                Alcance del trabajo
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -184,9 +188,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {/* Desafíos operativos */}
       <Card className="border-amber-200 bg-amber-50/30">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <AlertCircle className="w-5 h-5 text-amber-600" />
-            Desafíos operativos
+          <CardTitle asChild className="flex items-center gap-2 text-lg">
+            <h2>
+              <AlertCircle className="w-5 h-5 text-amber-600" />
+              Desafíos operativos
+            </h2>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -205,9 +211,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {metodologiaEntries.length > 0 && (
         <Card className="border-blue-200 bg-blue-50/30">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <ClipboardList className="w-5 h-5 text-blue-600" />
-              Metodología
+            <CardTitle asChild className="flex items-center gap-2 text-lg">
+              <h2>
+                <ClipboardList className="w-5 h-5 text-blue-600" />
+                Metodología
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -227,9 +235,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {parametros.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <FileCheck className="w-5 h-5 text-primary-600" />
-              Parámetros técnicos
+            <CardTitle asChild className="flex items-center gap-2 text-lg">
+              <h2>
+                <FileCheck className="w-5 h-5 text-primary-600" />
+                Ficha del trabajo
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -248,9 +258,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {/* Resultados */}
       <Card className="border-green-200 bg-green-50/30">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <CheckCircle2 className="w-5 h-5 text-green-600" />
-            Resultados
+          <CardTitle asChild className="flex items-center gap-2 text-lg">
+            <h2>
+              <CheckCircle2 className="w-5 h-5 text-green-600" />
+              Resultados
+            </h2>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -262,9 +274,11 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {project.valorDiferencial && project.valorDiferencial.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Sparkles className="w-5 h-5 text-primary-600" />
-              Valor diferencial
+            <CardTitle asChild className="flex items-center gap-2 text-lg">
+              <h2>
+                <Sparkles className="w-5 h-5 text-primary-600" />
+                Valor diferencial
+              </h2>
             </CardTitle>
           </CardHeader>
           <CardContent>

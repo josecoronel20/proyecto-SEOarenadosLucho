@@ -22,9 +22,7 @@ export interface ProjectForDetail {
   desafiosOperativos: string[]
   metodologia?: MetodologiaRecord
   parametrosTecnicos?: {
-    normativaReferencia?: string
-    gradoPreparacion?: string
-    gradoPreparacionAlcanzado?: string
+    tipoIntervencion?: string
     objetivoSuperficie?: string
     condicionFinal?: string
   }
@@ -48,6 +46,13 @@ export function getAllSlugs(): string[] {
   return projects
     .map((p) => p.idSection)
     .filter((s): s is string => Boolean(s))
+}
+
+/** Otros casos (para enlazado interno "seguir viendo") — excluye el slug actual. */
+export function getOtherProjects(slug: string, limit = 3): ProjectForDetail[] {
+  return getAllProjects()
+    .filter((p) => p.idSection && p.idSection !== slug)
+    .slice(0, limit)
 }
 
 /** Mapea el proyecto al formato legacy (description, challenges, solutions, results, images). */

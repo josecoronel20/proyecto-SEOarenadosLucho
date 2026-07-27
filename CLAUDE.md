@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es este proyecto
 
-Sitio de **marketing + conversión** para **Arenados Lucho**, empresa de arenado industrial en Buenos Aires. Toda decisión técnica se subordina a un objetivo de negocio: **maximizar contactos calificados** (formulario, WhatsApp, email). Ver `.cursorrules` para las reglas de producto/copy/CTA que gobiernan cualquier cambio de UI o contenido — no son opcionales.
+Sitio de **marketing + conversión** para **Arenados Lucho**, empresa de arenado en Buenos Aires. Toda decisión técnica se subordina a un objetivo de negocio: **maximizar contactos calificados** (formulario, WhatsApp, email). Ver `.cursorrules` para las reglas de producto/copy/CTA que gobiernan cualquier cambio de UI o contenido — no son opcionales.
+
+**Posicionamiento real (26/07/2026 — decisión del dueño):** el negocio hace arenado **"sin vueltas"** (obra, restauración, limpieza industrial básica, piletas, trabajos chicos). **NO hace arenado técnico medido** (Sa3, ISO 8501, metal blanco, perfil de anclaje) **ni granallado** — está **PROHIBIDO** prometer eso en copy, metadata, schema o anuncios. El sitio actual todavía lo promete: hay un **pivote de copy en curso** (`contexto/marketing/02-estrategia-seo.md` Fase 1). Negocio completo: `contexto/00-proyecto-general.md`.
 
 El `package.json` se llama genéricamente `nextjs-project`; el producto real es Arenados Lucho.
 
@@ -31,6 +33,7 @@ Next.js 16 (App Router) · React 19 · TypeScript 5.9 (strict) · Tailwind CSS 3
 
 | Tema | Archivo |
 |------|---------|
+| **Negocio real, servicios, cliente objetivo** | `contexto/00-proyecto-general.md` |
 | Rutas activas / eliminadas, App Router | `contexto/03-rutas-y-paginas.md` |
 | Formularios, WhatsApp, endpoints de conversión | `contexto/05-formularios-y-conversion.md` |
 | **GTM, `dataLayer`, eventos (crítico)** | `contexto/06-tracking-y-analytics.md` |
@@ -45,9 +48,9 @@ Si cambiás algo estructural (rutas, eventos, endpoints), **actualizá el archiv
 
 La **estrategia y operación de marketing** (SEO + Google Ads) vive en `contexto/marketing/`. Para cualquier tarea de marketing, empezar por `contexto/marketing/README.md` (índice) y `00-vision-y-objetivos.md` (estado actual y metas). Claves:
 
-- **Objetivo:** maximizar leads industriales calificados en Buenos Aires/AMBA. El dueño no es técnico y delegó la operación: proponer con criterio, ejecutar con topes, registrar todo.
-- **Keywords y negativas:** fuente única `marketing/03-keywords-maestro.md` (no duplicar listas en otros archivos).
-- **Google Ads — piloto automático con topes (parcialmente activo):** al 26/07/2026 están **instalados y corriendo** el guardián de presupuesto (06) y los scripts de lectura (02/03/04), y el **tope de gasto está activo** (presupuesto diario nativo **ARS 10.000/día** + guardián de **ARS 300.000/mes**). El **autopilot (05) NO está instalado** todavía, a propósito, hasta tener conversiones limpias fluyendo y URLs en 200. Estado real siempre en `marketing/09-automatizaciones.md`. Política en `marketing/06-google-ads-scripts.md`; cambios estructurales, solo con el dueño al tanto.
+- **Objetivo y transición:** hoy se toma casi cualquier arenado (piletas con protagonismo — el lead más barato del historial); el norte es crecer hacia **obra en construcción y restauración de edificios** (tickets altos sin requisitos técnicos). El dueño no es técnico y delegó la operación: proponer con criterio, ejecutar con topes, registrar todo.
+- **Keywords y negativas:** fuente única `marketing/03-keywords-maestro.md` (reescrito 26/07 con el historial real de la cuenta). Técnicas (granallado, sa3, iso 8501…) = negativas de cuenta; `pileta/piscina` **ya no es negativa** (es servicio core).
+- **Google Ads — piloto automático con topes (parcialmente activo):** al 26/07/2026 están **instalados y corriendo** el guardián de presupuesto (06) y los scripts de lectura (02/03/04), y el **tope de gasto está activo** (presupuesto diario nativo **ARS 10.000/día** + guardián de **ARS 300.000/mes**). El **autopilot (05) NO está instalado** todavía, a propósito, hasta tener conversiones limpias fluyendo y URLs en 200. Estado real siempre en `marketing/09-automatizaciones.md`. Política en `marketing/06-google-ads-scripts.md`; cambios estructurales, solo con el dueño al tanto. Plan de relanzamiento vigente: **3 campañas** (`marketing/05-google-ads-operacion.md` Fase 2 + dossier `marketing/10-cuenta-ads-auditoria.md` §6).
 - **Automatizaciones vigentes** (scripts + auditoría SEO semanal programada): inventario y cómo frenarlas en `marketing/09-automatizaciones.md` — consultarlo antes de crear o tocar cualquier automatización.
 - **Todo cambio de marketing se registra en `marketing/08-bitacora.md`** (qué, por qué, resultado esperado). Sin bitácora no hay aprendizaje.
 - Al 25/07/2026 el fix de dominio `.com` está desplegado y **verificado**: `/robots.txt` y `/sitemap.xml` responden **200** en producción con `.com` (antes 404; resuelto vía PR #1). Próximo: enviar el sitemap en Google Search Console y pasos 2, 4 y 5 de `marketing/01-migracion-y-dominio.md` (sesión de Chrome para instalar/verificar los scripts de Ads).
@@ -88,6 +91,7 @@ El tracking es la razón de ser del sitio y es frágil: cambiar un nombre de eve
 - **Formspree endpoint `https://formspree.io/f/xrgnqbod`** y los nombres de campo JSON (`name`, `contact`, `description`, `_subject`) — cambiar cualquiera rompe el inbox del cliente.
 - **No enviar PII** (email/teléfono) dentro de eventos `dataLayer`.
 - Un solo `WppBtn` flotante (global en el layout) — no agregar un segundo.
+- **Copy sin promesas técnicas:** prohibido introducir (o reintroducir) Sa3, ISO 8501, metal blanco, granallado o mediciones en cualquier texto del sitio, metadata o schema (decisión 26/07/2026 — ver `.cursorrules`).
 
 **Dominio de producción: `https://www.arenadoslucho.com`** (Vercel, migrado desde Framer el 25/07/2026). `SITE_URL` está hardcodeado en `layout.tsx`, `sitemap.ts` y `robots.ts`; si cambia el dominio, actualizá los tres. El `.com.ar` **nunca estuvo operativo** — si aparece en código o docs, es un error a corregir.
 
@@ -111,4 +115,4 @@ Detalle en `contexto/10-estilos-y-design-system.md`. Lo esencial:
 - El agente **no commitea** salvo pedido explícito.
 
 ### No introducir sin decisión explícita
-CMS o base de datos (Prisma/Supabase) · React Hook Form + Zod (no están en deps) · Pages Router · nuevas landings por rubro (`/servicios/arenado-*`) · Server Actions · fuentes web nuevas · `dangerouslySetInnerHTML` con input de usuario.
+CMS o base de datos (Prisma/Supabase) · React Hook Form + Zod (no están en deps) · Pages Router · nuevas landings por rubro (`/servicios/arenado-*`) — **excepción ya aprobada (26/07/2026): `/arenado-de-piletas`**, ver `contexto/marketing/04-plan-de-contenidos.md` · Server Actions · fuentes web nuevas · `dangerouslySetInnerHTML` con input de usuario.

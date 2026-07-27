@@ -38,7 +38,7 @@ dataLayer (eventos exactos) → GTM → Conversión en Ads
 | URL final | Archivo | Rol para Ads | CTA principal | Eventos conversión |
 |-----------|---------|--------------|---------------|-------------------|
 | `/` | `app/page.tsx` | **Genérica / marca** — hero industrial, servicios, casos | `Contactanos` → `/contacto` | Navegación + `contact_whatsapp` (flotante) |
-| `/servicios` | `app/servicios/page.tsx` | **B2B / intención alta** — Sa3, ISO 8501, logística, riesgo | `Contactanos` → `/contacto` | Igual + `CTASection` |
+| `/servicios` | `app/servicios/page.tsx` | **Intención alta** — obra, PYMEs, capacidad, logística (copy en pivote: sin Sa3/ISO) | `Contactanos` → `/contacto` | Igual + `CTASection` |
 | `/contacto` | `app/contacto/page.tsx` | **Conversión directa** — formulario corto | Enviar solicitud | `form_submit` → `form_submit_success` |
 | `/preguntas-frecuentes` | `app/preguntas-frecuentes/page.tsx` | **Objeciones** — plazos, polvo, norma | `Contactanos` al pie | Indirecta → contacto/WA |
 | `/casos-de-exito` | `app/casos-de-exito/page.tsx` | **Prueba social** — remarketing / consideración | Cards → detalle; `CTASection` | Indirecta |
@@ -82,7 +82,7 @@ La estructura de campañas, presupuesto (tope ARS 300.000/mes), fases de reactiv
 | Landing | Intención del usuario | Qué debe ver en 5 s | Objeción que resuelve |
 |---------|----------------------|---------------------|------------------------|
 | `/` | “¿Hacen arenado industrial en BA?” | Especialización planta/obra, CTA claro | ¿Son serios / escala? |
-| `/servicios` | “¿Cumplen norma, plazos, volumen?” | Sa3, ISO 8501, logística, mitigación riesgo | Retrasos, polvo, calidad |
+| `/servicios` | “¿Hacen esto? ¿Cumplen plazos?” | Superficie lista para pintar/revestir, ~100 m²/día, 2 equipos, in situ | Retrasos, polvo, resultado |
 | `/contacto` | “Quiero presupuesto / consulta” | Formulario corto (3 campos) | Fricción al contactar |
 | `/casos-de-exito` | “¿Tienen experiencia en mi tipo de obra?” | Proyectos reales medibles | Riesgo del proveedor |
 | `/casos-de-exito/{slug}` | “¿Hicieron algo como mi proyecto?” | Detalle técnico del caso | Prueba específica |
@@ -146,16 +146,17 @@ GA4 atribuye vía GTM/GA4 linker; mantener **un solo dominio** (`www`).
 
 Usar en titulares/descripciones para coincidir con la landing:
 
-| Mensaje | Dónde está en sitio |
-|---------|---------------------|
-| Arenado industrial / planta u obra | Hero home, `/servicios` |
-| Metal blanco Sa3, ISO 8501 | `/servicios`, FAQ |
-| ~100 m²/día por equipo | FAQ, bloques servicios |
-| Equipos propios, coordinación en obra | Introduction, servicios |
-| Visita técnica sin costo | FAQ |
-| Presupuesto / contacto rápido | Metadata layout, `/contacto` |
+| Mensaje | Estado |
+|---------|--------|
+| Arenado industrial / en obra / restauración | ✅ usar (hero home, `/servicios`) |
+| Superficie lista para pintar o revestir | ✅ usar (eje del pivote de copy) |
+| ~100 m²/día por equipo · 2 equipos propios | ✅ usar |
+| Coordinación en obra, contención de polvo | ✅ usar |
+| Visita y presupuesto sin costo | ✅ usar |
+| Arenado de piletas para repintar/revestir | ✅ usar (campaña piletas / landing nueva) |
+| ~~Metal blanco Sa3, ISO 8501, granallado~~ | ❌ **PROHIBIDO** (26/07/2026 — no hacemos arenado certificado ni granallado; el sitio se está reescribiendo para quitarlo) |
 
-Evitar en Ads promesas que el sitio no respalda (precios fijos, “todas las zonas” sin página de cobertura).
+Evitar en Ads promesas que el negocio no respalda: precios fijos, “todas las zonas” y — sobre todo — **normas/certificaciones técnicas o granallado** (servicio que no se presta).
 
 ---
 

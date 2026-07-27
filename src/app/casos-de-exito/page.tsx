@@ -24,7 +24,7 @@ export default function CasosDeExitoPage() {
   }, [projects, filtro])
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <CasosHero />
       <section className="py-8 md:py-10 border-b border-gray-200 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -46,6 +46,6 @@ export default function CasosDeExitoPage() {
         </div>
       </section>
       <CTASection />
-    </main>
+    </div>
   )
 }

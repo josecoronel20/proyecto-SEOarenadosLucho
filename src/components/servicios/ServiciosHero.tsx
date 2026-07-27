@@ -12,7 +12,7 @@ export function ServiciosHero() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/services/arenadoIndustrial.PNG"
-            alt="Arenado industrial"
+            alt="Arenado industrial de estructuras metálicas en Buenos Aires"
             fill
             className="object-cover rounded-lg object-top"
             priority
@@ -28,7 +28,7 @@ export function ServiciosHero() {
               Arenado industrial
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl">
-              Arenamos estructuras metálicas de forma eficiente y segura, cumpliendo con los plazos y garantizando la calidad de la obra.
+              Arenamos estructuras, tanques, fachadas y galpones in situ —vamos con el equipo, no trasladás nada—, rápido y prolijo, y te las dejamos listas para pintar o revestir.
             </p>
             <div className="mt-2">
               <Link

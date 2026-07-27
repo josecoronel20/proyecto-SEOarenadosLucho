@@ -1,22 +1,25 @@
 "use client";
 
 export default function Error({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h2 className="text-2xl font-bold mb-4 text-red-600">
-        Something went wrong!
-      </h2>
+    <div className="flex min-h-screen flex-col items-center justify-center p-8 text-center">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+        Algo salió mal
+      </h1>
+      <p className="mb-6 text-gray-600 max-w-md">
+        Ocurrió un error inesperado. Probá de nuevo; si el problema sigue,
+        escribinos por WhatsApp.
+      </p>
       <button
         onClick={() => reset()}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+        className="px-6 py-3 bg-primary-500 text-white font-semibold rounded-full hover:bg-primary-600 transition-colors"
       >
-        Try again
+        Reintentar
       </button>
     </div>
   );

@@ -76,6 +76,7 @@ export function CasoCard({ project }: CasoCardProps) {
 
         <Link
           href={project.idSection ? `/casos-de-exito/${project.idSection}` : project.url}
+          aria-label={`Ver caso completo: ${project.title}`}
           className="mt-4 inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold text-sm"
         >
           Ver caso completo →

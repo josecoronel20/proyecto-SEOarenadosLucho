@@ -17,48 +17,47 @@
           "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG"
         ],
-      
-        "overview": "Proyecto de preparación de superficie mediante arenado en estructura metálica de nave ferroviaria perteneciente a infraestructura de obra pública. La intervención tuvo como objetivo la remoción de óxido, contaminantes y recubrimientos deteriorados para permitir la correcta aplicación de un nuevo sistema de protección anticorrosiva, garantizando continuidad del plan de mantenimiento estructural.",
-      
+
+        "overview": "Proyecto de limpieza y preparación de superficie mediante arenado en estructura metálica de nave ferroviaria perteneciente a infraestructura de obra pública. La intervención tuvo como objetivo la remoción de óxido, contaminantes y recubrimientos deteriorados para permitir la correcta aplicación de un nuevo sistema de protección anticorrosiva, dejando la estructura lista para pintar y continuar el plan de mantenimiento.",
+
         "context": {
           "tipoEstructura": "Estructura metálica de gran escala con vigas, columnas y cerchas expuestas.",
           "entornoTrabajo": "Entorno industrial activo con restricciones operativas.",
-          "objetivoCliente": "Recuperar condición superficial y asegurar correcta adherencia del nuevo recubrimiento sin afectar cronograma general de obra."
+          "objetivoCliente": "Recuperar la superficie y dejarla lista para pintar sin afectar el cronograma general de obra."
         },
-      
+
         "alcanceTrabajo": [
           "Inspección inicial y relevamiento del estado del sustrato.",
-          "Determinación del grado de preparación requerido según especificación técnica del proyecto.",
+          "Definición del alcance de limpieza según el estado de la estructura y el objetivo del cliente.",
           "Arenado abrasivo en sectores definidos.",
           "Control visual de calidad posterior a la limpieza.",
-          "Entrega de superficie lista para aplicación de sistema protector."
+          "Entrega de superficie lista para aplicar el sistema protector."
         ],
-      
+
         "desafiosOperativos": [
           "Presencia de corrosión y deterioro generalizado en distintos puntos estructurales.",
           "Necesidad de sectorización para no interferir con otras tareas en obra.",
           "Plazos de ejecución ajustados dentro del cronograma general."
         ],
-      
+
         "metodologia": {
           "planificacion": "Organización del trabajo por etapas y sectores previamente coordinados con dirección de obra.",
           "coordinacion": "Trabajo conjunto con responsables del proyecto para definir ventanas de intervención y minimizar interferencias.",
-          "controlCalidad": "Verificación visual del grado de limpieza alcanzado conforme a criterios de la norma ISO 8501-1.",
+          "controlCalidad": "Control visual del resultado: chequeamos que la superficie quede limpia y pareja antes de liberarla.",
           "seguridad": "Implementación de procedimientos operativos y uso de equipos de protección adecuados para trabajo en altura y en estructura metálica."
         },
-      
+
         "parametrosTecnicos": {
-          "normativaReferencia": "ISO 8501-1",
-          "gradoPreparacionAlcanzado": "Preparación superficial acorde a especificación del proyecto (ej. grado Sa 2 cuando fue requerido).",
-          "objetivoSuperficie": "Condición apta para garantizar adherencia óptima del sistema de recubrimiento posterior."
+          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
+          "objetivoSuperficie": "Estructura libre de óxido, contaminantes y recubrimientos deteriorados, lista para aplicar el nuevo sistema anticorrosivo."
         },
-      
-        "resultados": "La estructura quedó técnicamente preparada para la aplicación del nuevo sistema anticorrosivo, permitiendo continuar las etapas posteriores del proyecto sin desvíos en el cronograma previsto. La ejecución sectorizada y coordinada redujo interferencias operativas y aseguró cumplimiento en tiempo y forma.",
-      
+
+        "resultados": "La estructura quedó limpia y preparada para la aplicación del nuevo sistema anticorrosivo, permitiendo continuar las etapas posteriores del proyecto sin desvíos en el cronograma previsto. La ejecución sectorizada y coordinada redujo interferencias operativas y aseguró cumplimiento en tiempo y forma.",
+
         "valorDiferencial": [
           "Enfoque orientado al cumplimiento de plazos de obra.",
           "Coordinación activa con dirección de proyecto.",
-          "Criterios técnicos alineados a normativa internacional.",
+          "Trabajo prolijo, enfocado en dejar la estructura lista para pintar.",
           "Organización operativa adaptada a entornos industriales activos."
         ]
       },
@@ -81,50 +80,49 @@
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG"
         ],
-      
-        "overview": "Intervención de preparación de superficie mediante arenado en estructura metálica destinada al soporte y traslado de veleros. El objetivo fue remover corrosión y contaminantes generados por exposición constante a ambiente marítimo, asegurando una condición superficial adecuada para la aplicación de un nuevo sistema de protección anticorrosiva.",
-      
+
+        "overview": "Intervención de limpieza y preparación de superficie mediante arenado en estructura metálica destinada al soporte y traslado de veleros. El objetivo fue remover corrosión y contaminantes generados por exposición constante a ambiente marítimo, dejando la superficie lista para aplicar un nuevo sistema de protección anticorrosiva.",
+
         "context": {
           "tipoEstructura": "Estructura metálica portante con múltiples puntos de apoyo y zonas de difícil acceso.",
           "entornoTrabajo": "Entorno naval con presencia constante de humedad y salinidad.",
-          "objetivoCliente": "Restablecer condiciones técnicas de la estructura sin afectar la operatividad logística del movimiento de embarcaciones."
+          "objetivoCliente": "Dejar la estructura limpia y lista para pintar sin afectar la operatividad logística del movimiento de embarcaciones."
         },
-      
+
         "alcanceTrabajo": [
           "Inspección visual inicial y relevamiento del grado de corrosión.",
-          "Determinación del nivel de preparación requerido según especificación del sistema de recubrimiento.",
+          "Definición del alcance de limpieza según el estado de la estructura y el recubrimiento a aplicar.",
           "Arenado abrasivo en superficies estructurales y puntos críticos.",
-          "Control visual del grado de limpieza alcanzado.",
-          "Liberación de superficie apta para aplicación inmediata del sistema protector."
+          "Control visual del resultado de la limpieza.",
+          "Liberación de superficie lista para aplicar el sistema protector."
         ],
-      
+
         "desafiosOperativos": [
           "Corrosión acelerada por exposición a ambiente marino.",
           "Riesgo de recontaminación superficial por humedad ambiental.",
           "Geometría estructural compleja con ángulos y refuerzos internos.",
           "Necesidad de coordinación precisa para no interrumpir operaciones portuarias."
         ],
-      
+
         "metodologia": {
           "planificacion": "Organización del trabajo por sectores definidos según geometría y puntos de carga.",
           "coordinacion": "Trabajo conjunto con responsables de logística naval y equipo aplicador del recubrimiento.",
-          "controlContaminacion": "Ejecución por etapas con aplicación posterior del sistema protector en ventanas controladas para minimizar riesgo de oxidación flash aplicando una última limpieza superficial rápida en las primeras zonas intervenidas ya alcanzadas por la oxidación flash al finalizar el proyecto.",
-          "controlCalidad": "Verificación visual del grado de preparación conforme a criterios establecidos en ISO 8501-1."
+          "controlContaminacion": "Ejecución por etapas con aplicación posterior del sistema protector en ventanas controladas para minimizar el riesgo de oxidación por humedad, dando una última limpieza rápida a las primeras zonas ya intervenidas al cierre del proyecto.",
+          "controlCalidad": "Control visual del resultado antes de liberar cada sector: superficie limpia y pareja."
         },
-      
+
         "parametrosTecnicos": {
-          "normativaReferencia": "ISO 8501-1",
-          "gradoPreparacion": "Preparación superficial acorde a especificación técnica del proyecto (ej. grado Sa 3 cuando fue requerido).",
-          "condicionFinal": "Superficie limpia, libre de óxido visible, cascarilla y contaminantes, apta para correcta adherencia del sistema anticorrosivo."
+          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
+          "condicionFinal": "Superficie limpia, libre de óxido, cascarilla y contaminantes, lista para aplicar el sistema anticorrosivo."
         },
-      
+
         "resultados": "La estructura quedó preparada bajo condiciones controladas, permitiendo la aplicación inmediata del sistema de protección y reduciendo riesgos de deterioro prematuro. La coordinación operativa evitó interrupciones en la logística de traslado de embarcaciones.",
-      
+
         "valorDiferencial": [
           "Experiencia en entornos de alta agresividad ambiental.",
           "Coordinación con equipos de recubrimiento para evitar recontaminación.",
           "Intervenciones planificadas sin afectar operatividad.",
-          "Enfoque técnico alineado a normativa internacional."
+          "Trabajo cuidado para entregar la superficie lista para pintar sin recontaminación."
         ]
       },
       {
@@ -145,50 +143,49 @@
           "/images/services/arenadoIndustrial/Pasarela/IMG_2436.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG"
         ],
-      
-        "overview": "Proyecto de preparación de superficie mediante arenado en pasarela metálica perteneciente a infraestructura urbana. La intervención estuvo orientada a la remoción de corrosión y recubrimientos deteriorados para permitir la aplicación de un nuevo sistema de protección, asegurando continuidad operativa y condiciones seguras para el tránsito peatonal.",
-      
+
+        "overview": "Proyecto de limpieza y preparación de superficie mediante arenado en pasarela metálica perteneciente a infraestructura urbana. La intervención estuvo orientada a la remoción de corrosión y recubrimientos deteriorados para dejar la estructura lista para aplicar un nuevo sistema de protección, asegurando continuidad operativa y condiciones seguras para el tránsito peatonal.",
+
         "context": {
           "tipoEstructura": "Pasarela metálica elevada con barandas, vigas estructurales y superficies expuestas al tránsito continuo.",
           "entornoTrabajo": "Zona urbana con circulación peatonal activa y proximidad a espacios públicos.",
-          "objetivoCliente": "Recuperar condiciones estructurales superficiales sin comprometer seguridad ni generar demoras en la rehabilitación del sector."
+          "objetivoCliente": "Recuperar la superficie de la estructura y dejarla lista para pintar sin comprometer la seguridad ni generar demoras en la rehabilitación del sector."
         },
-      
+
         "alcanceTrabajo": [
           "Relevamiento inicial del estado de corrosión y adherencia de recubrimientos existentes.",
-          "Determinación del nivel de preparación requerido según especificación técnica del mantenimiento.",
+          "Definición del alcance de limpieza según el estado de la pasarela y el plan de mantenimiento.",
           "Arenado abrasivo en sectores definidos de estructura portante y barandas.",
-          "Control visual del grado de limpieza alcanzado.",
-          "Liberación de superficie apta para aplicación del sistema protector."
+          "Control visual del resultado de la limpieza.",
+          "Liberación de superficie lista para aplicar el sistema protector."
         ],
-      
+
         "desafiosOperativos": [
           "Exposición prolongada a condiciones climáticas y desgaste por uso intensivo.",
           "Restricciones urbanas vinculadas a ruido y dispersión de partículas.",
           "Necesidad de mantener condiciones seguras para la circulación peatonal.",
           "Plazos ajustados para habilitación del sector intervenido."
         ],
-      
+
         "metodologia": {
           "sectorizacion": "Planificación por etapas priorizando los sectores críticos y de mayor exposición.",
           "coordinacionInstitucional": "Trabajo conjunto con el organismo responsable para definir ventanas de intervención y medidas preventivas.",
           "controlImpacto": "Organización operativa orientada a minimizar dispersión de polvo y reducir tiempos de exposición del área intervenida.",
-          "controlCalidad": "Verificación visual del grado de preparación superficial conforme a criterios de ISO 8501-1."
+          "controlCalidad": "Control visual del resultado en cada sector antes de habilitarlo."
         },
-      
+
         "parametrosTecnicos": {
-          "normativaReferencia": "ISO 8501-1",
-          "gradoPreparacion": "Preparación superficial acorde a especificación técnica del proyecto (ej. grado Sa 2 cuando fue requerido).",
-          "objetivoSuperficie": "Superficie libre de óxido visible y contaminantes, apta para correcta adherencia del sistema anticorrosivo."
+          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
+          "objetivoSuperficie": "Superficie libre de óxido y contaminantes, lista para aplicar el nuevo sistema de protección."
         },
-      
+
         "resultados": "La pasarela quedó preparada para la aplicación del nuevo sistema de protección dentro del cronograma establecido, permitiendo la rehabilitación progresiva del sector intervenido y manteniendo condiciones seguras para el entorno urbano.",
-      
+
         "valorDiferencial": [
           "Experiencia en intervenciones sobre infraestructura urbana activa.",
           "Planificación orientada a minimizar impacto en circulación peatonal.",
           "Cumplimiento de plazos en coordinación con organismos públicos.",
-          "Criterio técnico alineado a normativa internacional."
+          "Trabajo prolijo, orientado a dejar la estructura lista para pintar."
         ]
       },
       {
@@ -206,49 +203,103 @@
           "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
           "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG"
         ],
-        "overview": "Intervención de preparación superficial mediante arenado en tanques industriales, enfocada en la remoción de corrosión y recubrimientos deteriorados en su cara exterior. El objetivo fue restablecer condiciones funcionales de protección sin interferir en la operación productiva principal del establecimiento.",
-      
+        "overview": "Intervención de limpieza y preparación superficial mediante arenado en tanques industriales, enfocada en la remoción de corrosión y recubrimientos deteriorados en su cara exterior. El objetivo fue dejar la superficie lista para pintar y renovar la protección sin interferir en la operación productiva principal del establecimiento.",
+
         "context": {
           "tipoEstructura": "Tanques metálicos de almacenamiento con exposición directa a condiciones ambientales.",
           "entornoTrabajo": "Predio industrial activo con necesidad de mantener continuidad operativa.",
-          "objetivoCliente": "Renovar protección exterior con criterio funcional, priorizando eficiencia operativa y cumplimiento de plazos."
+          "objetivoCliente": "Renovar la protección exterior con criterio funcional, priorizando eficiencia operativa y cumplimiento de plazos."
         },
-      
+
         "alcanceTrabajo": [
           "Inspección visual inicial del estado de corrosión y adherencia del recubrimiento existente.",
-          "Definición del nivel de preparación requerido según especificación técnica del mantenimiento.",
+          "Definición del alcance de limpieza según el estado de los tanques y el objetivo del cliente.",
           "Arenado abrasivo en superficie exterior completa, incluyendo zonas críticas de apoyo.",
-          "Control visual del grado de limpieza alcanzado.",
-          "Liberación de superficie apta para aplicación de sistema protector."
+          "Control visual del resultado de la limpieza.",
+          "Liberación de superficie lista para aplicar el sistema protector."
         ],
-      
+
         "desafiosOperativos": [
           "Corrosión localizada en zonas de contacto con suelo y sectores inferiores.",
           "Necesidad de ejecutar trabajos sin afectar la dinámica productiva.",
           "Intervención con enfoque funcional más que estético.",
           "Optimización del espacio para permitir tareas en un sector aislado."
         ],
-      
+
         "metodologia": {
           "reubicacionControlada": "Traslado de los tanques a un área abierta y delimitada dentro del predio para aislar el proceso.",
           "sectorizacion": "Organización del trabajo por etapas para optimizar tiempos y recursos.",
           "controlImpacto": "Intervención en zona apartada para reducir dispersión de partículas y evitar interferencias operativas.",
-          "controlCalidad": "Verificación visual del grado de preparación superficial conforme a criterios de ISO 8501-1."
+          "controlCalidad": "Control visual del resultado antes de liberar la superficie."
         },
-      
+
         "parametrosTecnicos": {
-          "normativaReferencia": "ISO 8501-1",
-          "gradoPreparacion": "Preparación superficial acorde a especificación técnica del proyecto (ej. grado Sa 2 cuando fue requerido).",
-          "objetivoSuperficie": "Condición apta para correcta adherencia del sistema de protección anticorrosiva definido."
+          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
+          "objetivoSuperficie": "Superficie exterior libre de óxido y pintura deteriorada, lista para aplicar el sistema de protección."
         },
-      
+
         "resultados": "Los tanques quedaron exteriormente preparados y protegidos dentro del plazo previsto, permitiendo extender su vida útil operativa sin afectar la producción del establecimiento. La intervención aislada garantizó control logístico y eficiencia en la ejecución.",
-      
+
         "valorDiferencial": [
           "Experiencia en mantenimiento industrial sin detener operaciones.",
           "Organización operativa orientada a eficiencia y cumplimiento.",
-          "Criterio técnico alineado a normativa internacional.",
+          "Enfoque práctico, orientado a dejar la superficie lista para pintar.",
           "Enfoque funcional adaptado al nivel real de exigencia del proyecto."
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Arenado de Pileta para Repintar",
+        "category": "Particular",
+        "tipo": "restauracion-mantenimiento",
+        "url": "/casos-de-exito/arenado-pileta",
+        "idSection": "arenado-pileta",
+        "images": [
+          "/images/services/arenadoParticular/Piletas/IMG_2454.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2455.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2456.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2457.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2478.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2479.PNG"
+        ],
+
+        "overview": "Arenado de una pileta de hormigón con la pintura vieja descascarada. Fuimos con el equipo al domicilio y sacamos toda la pintura y el material flojo, dejando el hormigón limpio y parejo, listo para repintar o revestir. El pintado o revestimiento final no está incluido en el trabajo de arenado.",
+
+        "context": {
+          "tipoEstructura": "Pileta de hormigón con pintura y revestimiento deteriorados.",
+          "entornoTrabajo": "Domicilio particular, coordinando horarios y contención de polvo.",
+          "objetivoCliente": "Sacar toda la pintura vieja para poder repintar o revestir la pileta."
+        },
+
+        "alcanceTrabajo": [
+          "Revisión del estado de la pintura y el revestimiento existente.",
+          "Arenado de paredes y piso de la pileta para remover pintura y material flojo.",
+          "Limpieza final de la superficie.",
+          "Entrega de la pileta lista para repintar o revestir."
+        ],
+
+        "desafiosOperativos": [
+          "Pintura vieja muy adherida y descascarada en distintos sectores.",
+          "Trabajo en un domicilio, coordinando horarios y contención de polvo."
+        ],
+
+        "metodologia": {
+          "planificacion": "Coordinación de día y horario con el dueño de la casa.",
+          "controlImpacto": "Trabajo por sectores conteniendo el polvo para no afectar el resto de la casa.",
+          "controlCalidad": "Control visual de que no quede pintura floja antes de entregar la pileta."
+        },
+
+        "parametrosTecnicos": {
+          "tipoIntervencion": "Arenado para remover pintura y revestimiento viejo",
+          "objetivoSuperficie": "Hormigón limpio y parejo, listo para repintar o revestir."
+        },
+
+        "resultados": "El arenado de una pileta estándar es un trabajo rápido: dejamos el hormigón sin pintura vieja ni material flojo, limpio y parejo, listo para que el cliente lo repinte o revista. El tiempo final depende del tamaño y el estado de cada pileta. El pintado o revestimiento no está incluido.",
+
+        "valorDiferencial": [
+          "Trabajo in situ: fuimos con el equipo al domicilio.",
+          "Removimos toda la pintura vieja de una sola vez, sin lijado a mano.",
+          "Entrega rápida y superficie lista para repintar o revestir."
         ]
       }
     ]

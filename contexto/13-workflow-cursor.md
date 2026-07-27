@@ -138,9 +138,9 @@ Para este proyecto, **preferir Agent con pedidos chicos** antes que un Plan giga
 Orden de `.cursorrules` — el agente no debe invertirlo:
 
 1. **Conversión** (contacto, WhatsApp, formulario).
-2. **Autoridad técnica** (ISO 8501, plazos, casos).
-3. **Reducción de riesgo** (objeciones).
-4. **Claridad estructural**.
+2. **Confianza por prueba real** (fotos antes/después, casos, datos operativos — NUNCA normas/certificaciones: prohibido Sa3/ISO/granallado desde el 26/07/2026).
+3. **Reducción de riesgo** (plazos, polvo, resultado).
+4. **Claridad estructural** (qué hacemos / qué no).
 5. **Estética**.
 
 Si un cambio es “más bonito” pero resta claridad del CTA o alarga el formulario → **rechazarlo**.

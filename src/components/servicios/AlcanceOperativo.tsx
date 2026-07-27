@@ -3,10 +3,10 @@
 import { Users, LayoutGrid, Zap, Clock } from "lucide-react"
 
 const items = [
-  { icon: Users, text: "1–2 equipos operativos" },
-  { icon: LayoutGrid, text: "100 m² diarios por equipo en estructura metálica estándar" },
-  { icon: Zap, text: "Posibilidad de sumar equipos para acelerar plazos" },
-  { icon: Clock, text: "Turnos extendidos coordinables" },
+  { icon: Users, text: "2 equipos propios, con compresores propios" },
+  { icon: LayoutGrid, text: "Rápido: cada equipo cubre alrededor de 100 m² por día" },
+  { icon: Zap, text: "Si el trabajo es grande, sumamos equipos para acortar los tiempos" },
+  { icon: Clock, text: "Nos adaptamos a tu horario, con turnos extendidos si hace falta" },
 ]
 
 const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-gray-50"
@@ -28,8 +28,8 @@ export function AlcanceOperativo() {
     <section className={sectionClass} aria-label="Alcance operativo">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className={titleClass}>Alcance operativo</h2>
-          <p className={subtitleClass}>Capacidad diaria</p>
+          <h2 className={titleClass}>Arenado de estructuras y tanques: rápido y sin frenarte</h2>
+          <p className={subtitleClass}>Capacidad y equipos propios</p>
           <ul className="space-y-3 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-5">
             {items.map(({ icon: Icon, text }) => (
               <li key={text} className="flex items-start gap-4">

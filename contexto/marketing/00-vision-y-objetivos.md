@@ -1,80 +1,65 @@
 # Visión y objetivos — norte del proyecto
 
-## Visión
+> **Reescrito el 26/07/2026 con el contexto real del dueño.** Esta versión reemplaza el posicionamiento "técnico certificado" anterior, que no reflejaba el negocio.
 
-Convertir a **Arenados Lucho** en el proveedor de arenado industrial **más visible y con mejor conversión de Buenos Aires / AMBA** en Google, combinando SEO orgánico y Google Ads sobre un mismo sitio, un mismo mensaje y una misma medición.
+## Qué somos de verdad (y qué no)
 
-El sitio no es un folleto: es una **máquina de generar consultas calificadas B2B** (formulario, WhatsApp, email). Todo esfuerzo de marketing se evalúa contra una sola pregunta: **¿produce más leads industriales calificados por peso invertido?**
+**Arenados Lucho** hace **arenado "sin vueltas"**: limpieza y preparación de superficies rápida, prolija y a buen precio, con **2 equipos completos propios**. Paredes y fachadas para repintar, piletas para repintar o revestir, vigas y estructuras para un antióxido básico, tanques como limpieza, trabajos en obra y restauración de edificios antiguos.
 
-Detalle de negocio, clientes y propuesta de valor: `contexto/00-proyecto-general.md` (no duplicar acá).
+**NO hacemos arenado técnico medido**: nada de grado Sa3 certificado, ISO 8501, perfil de anclaje ni granallado. Cuando un trabajo pide certificaciones y mediciones (ej. naves ferroviarias), se rechaza — no es nuestro negocio y perseguir ese cliente cuesta plata y credibilidad.
 
----
+**El cliente objetivo:** el arquitecto que remodela una casa, el encargado de una empresa que quiere restaurar y repintar una zona de la fábrica por estética, la constructora con una obra que necesita superficies listas para pintar. Piden algo **sencillo, rápido y bien hecho — y pagan bien**. La hipótesis validada por el historial de Ads: este comprador también busca "arenado industrial" aunque no necesite nada técnico.
 
-## Estado actual (julio 2026)
+## La transición (estrategia de negocio)
+
+```
+HOY: necesitamos trabajo → tomamos casi todo
+  PYMEs con galpón = el mejor aliado (in situ, terreno grande sin quejas de
+    vecinos, camiones/tanques/hierros que se cobran bien)
+  piletas (protagonismo: el lead más barato del historial; estacional)
+  paredes/fachadas, trabajos chicos, piezas — bienvenidos (piezas: solo si
+    vale la pena — NO hay taller, preferir siempre in situ)
+
+MAÑANA: transicionar hacia →
+  obra en construcción · restauración de edificios · limpieza industrial básica
+  (tickets más altos, mismo esfuerzo comercial, sin requisitos técnicos)
+```
+
+El marketing mantiene **las dos puertas abiertas** con prioridad creciente en obra/restauración. Lo único cerrado: lo técnico medido y el granallado (negativas y cero menciones en copy — ver `03-keywords-maestro.md`).
+
+## Estado actual (26/07/2026)
 
 | Frente | Estado |
 |--------|--------|
-| Sitio vivo | ✅ Next.js (este repo) en **Vercel** bajo `www.arenadoslucho.com` — migrado el 25/07/2026; Framer dado de baja. El `.com.ar` jamás estuvo operativo: no usarlo |
-| ⚠️ Pendiente inmediato | Push del fix `SITE_URL` (.com.ar → .com, ya corregido en local) y verificar que `/robots.txt` y `/sitemap.xml` respondan 200 (daban 404). Luego pasos 2, 4 y 5 de `01-migracion-y-dominio.md` |
-| Google Ads | Cuenta con historial pero **abandonada**. Modo **autopilot** aprobado (tope ARS 300.000/mes); scripts listos en `ads-scripts/` — falta la sesión de setup en Chrome para instalarlos y relanzar. Ver `05-…` y `09-automatizaciones.md` |
-| Vigilancia automática | ✅ Auditoría SEO del sitio todos los **lunes 08:00** (tarea programada de Claude, avisa por push/email). Detalle: `09-automatizaciones.md` |
-| Tracking | GTM `GTM-W63ZV9D9` + eventos `dataLayer` implementados en el repo (`contexto/06-tracking-y-analytics.md`) |
-| SEO orgánico | Base técnica sólida en el repo (metadata, sitemap, robots, JSON-LD); autoridad y contenido por construir |
-
----
+| Sitio | ✅ Next.js en Vercel bajo `www.arenadoslucho.com`; robots/sitemap 200 (PR #1) |
+| ⚠️ Copy del sitio | **Desalineado**: promete Sa3/ISO 8501 en /servicios, FAQ y schema. Decisión del dueño: **reescribir todo** al posicionamiento real → backlog #1 en `02-estrategia-seo.md` |
+| Google Ads | Cuenta 953-841-6905 con historial (~2,9M ARS/365d), topeada a 10.000/día, sin saldo. Plan corregido en `10-cuenta-ads-auditoria.md` §6 |
+| Automatizaciones | Guardián + scripts de lectura instalados; autopilot pendiente (ver `09-automatizaciones.md`) |
+| Vigilancia SEO | Tarea programada lunes 08:00 |
 
 ## Objetivos
 
-### Horizonte 90 días (reactivación)
+### 90 días
+1. **Copy pivotado**: sitio completo sin promesas técnicas, con piletas, PYMEs/in situ y obra/restauración visibles.
+2. **Galería de casos armada con las fotos existentes** (hay muchas — un caso por rubro, costo cero).
+3. **Ads relanzado** a ~5.000/día (≈150.000/mes) con la estructura de 3 campañas (`05-google-ads-operacion.md`) y medición limpia → CPA base real. Escalar al tope de 300.000 recién con trabajos cobrados.
+4. **Landing `/arenado-de-piletas`** publicada y recibiendo la campaña de piletas.
+5. Línea base de KPIs registrada (`07-medicion-y-kpis.md`).
 
-1. **Migración limpia** Framer → Vercel en `.com` sin perder indexación (ver `01-migracion-y-dominio.md`).
-2. **Google Ads reactivado**: 1 campaña Search industrial funcionando con conversiones bien medidas y términos de búsqueda limpios.
-3. **Medición confiable**: GA4 + Ads + Search Console verificados y con datos coherentes entre sí.
-4. **Línea base documentada**: primeras métricas registradas en `07-medicion-y-kpis.md` para comparar después.
+### 12 meses
+1. Top 3 orgánico en "arenado de piletas" + "arenado industrial buenos aires" + variantes de obra/restauración.
+2. Mix de leads inclinándose hacia obra/restauración (medir % en el cruce mensual con el inbox).
+3. CPA conocido por campaña; presupuesto asignado por rentabilidad real, no por intuición.
+4. Casos de éxito publicados de los tres tipos: obra, pileta, limpieza industrial.
 
-### Horizonte 12 meses
+## KPIs norte (detalle en `07-medicion-y-kpis.md`)
 
-1. Top 3 orgánico en Buenos Aires para el cluster "arenado industrial" (ver `03-keywords-maestro.md`).
-2. Flujo estable de **leads industriales** mixto orgánico/pago, con CPA de Ads conocido y decreciente.
-3. Casos de éxito posicionando long-tail por tipo de obra (nave, tanque, estructura metálica).
-4. Operación de Ads semi-automatizada: scripts corriendo solos, Claude analizando reportes, cambios documentados.
-
----
-
-## Funnel y prioridades
-
-```
-Búsqueda (SEO / Ads)
-      ↓
-Landing correcta según intención  (/, /servicios, /casos-de-exito, /preguntas-frecuentes)
-      ↓
-CTA → /contacto · WhatsApp · email
-      ↓
-Evento dataLayer → GTM → GA4 / Ads      ← la medición ES el negocio
-      ↓
-Lead calificado (industrial) → presupuesto
-```
-
-**Prioridad de lead:** industrial/obra >> particular. Las campañas y el copy filtran activamente lo doméstico (muebles, rejas, autos) — ver negativas en `03-keywords-maestro.md`.
-
----
-
-## KPIs norte (resumen — detalle en `07-medicion-y-kpis.md`)
-
-| KPI | Fuente | Meta 90 días |
-|-----|--------|--------------|
-| Leads totales/mes (form + WhatsApp + email) | GA4 (eventos dataLayer) | Línea base + 30% |
-| % leads calificados (industrial) | Revisión manual del inbox | > 60% |
-| CPA en Google Ads | Google Ads | Establecer línea base |
-| Clics/impresiones orgánicas cluster industrial | Search Console | Recuperar niveles pre-migración |
-| Core Web Vitals de landings | PageSpeed / Search Console | Todo en verde |
-
----
+Leads/mes (form + WhatsApp + email) · % de leads de obra/restauración (la métrica de la transición) · CPA por campaña · clics orgánicos por cluster · CWV en verde.
 
 ## Principios de decisión
 
-1. **Message match**: keyword → anuncio/snippet → landing → CTA cuentan la misma historia.
-2. **Una intención por URL** (regla ya establecida en `contexto/07-seo-tecnico.md`).
-3. **No romper la medición**: los eventos `dataLayer` son intocables sin migración en GTM (`contexto/06-tracking-y-analytics.md`).
-4. **Primero conversión, después tráfico**: no escalar inversión ni contenido hasta que la landing y la medición estén sanas.
-5. **Todo cambio queda registrado** en `08-bitacora.md` — sin bitácora no hay aprendizaje.
+1. **Message match honesto**: keyword → anuncio → landing → lo que realmente hacemos. Nunca prometer mediciones ni normas.
+2. Una intención por URL (`contexto/07-seo-tecnico.md`).
+3. No romper la medición (`contexto/06-tracking-y-analytics.md`).
+4. Frase/exacta en Ads; amplia prohibida (el historial la condena).
+5. Todo cambio a `08-bitacora.md`.

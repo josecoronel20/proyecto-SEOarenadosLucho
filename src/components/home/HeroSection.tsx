@@ -37,17 +37,17 @@ export function HeroSection() {
                 height={100}
                 className="object-contain w-14 md:w-20 lg:w-24 xl:w-32 h-auto"
               />
-              <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+              <p className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                 Arenados Lucho
-              </h1>
+              </p>
             </div>
 
             {/* Subtitle */}
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl px-4">
-              Preparación y Limpieza de Superficies Industriales en Planta u Obra. 
-            </p>
+            <h1 className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl px-4">
+              Arenado sin vueltas: limpiamos y preparamos estructuras, tanques, fachadas y piletas, listas para pintar o revestir.
+            </h1>
 
-<span className="text-gray-400">Arenado In Situ con Equipos Móviles</span>            
+<span className="text-gray-400">In situ, con equipos propios · Buenos Aires y AMBA</span>
 
             {/* CTA Button - Bordes completamente redondeados en la parte inferior */}
             <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">

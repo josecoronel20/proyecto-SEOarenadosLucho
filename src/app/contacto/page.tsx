@@ -150,8 +150,8 @@ export default function ContactoPage() {
                 <MessageSquare className="w-8 h-8 text-primary-600" />
               </div>
             </div>
-            <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Contacto
+            <CardTitle asChild className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              <h1>Pedí tu presupuesto de arenado</h1>
             </CardTitle>
             <CardDescription className="text-base md:text-lg text-gray-600">
               Enviá tu solicitud con los datos del proyecto. Nos contactaremos a la brevedad.

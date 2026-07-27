@@ -14,20 +14,22 @@ import H2 from "../common/H2"
 
 const services = [
   {
-    title: "Arenado Industrial",
+    title: "Arenado en obra, industria y galpones",
     description:
-      "Servicio orientado a empresas que necesitan preparación profesional de superficies metálicas para mantenimiento, restauración o procesos productivos. Enfocado en resultados uniformes, planificación clara y reducción de tiempos de parada.",
+      "Arenamos estructuras, tanques, fachadas, camiones e hierros en obra, en tu planta o en tu galpón. Vamos con equipo propio, in situ, y te dejamos la superficie lista para pintar o revestir.",
     image: "/images/services/arenadoIndustrial.PNG",
     link: "/servicios",
-    badge: "Empresas",
+    cta: "Ver servicios de arenado",
+    badge: "Obra · Industria · PYME",
   },
   {
-    title: "Arenado Particular",
+    title: "Arenado de piletas",
     description:
-      "Solución práctica para personas que buscan limpiar, restaurar o renovar superficies de forma rápida y prolija. Ideal tanto para elementos piezas metálicas y vehículos como para piletas y fachadas.",
+      "Sacamos toda la pintura vieja de tu pileta o piscina y la dejamos lista para repintar o revestir. Vamos a tu casa con el equipo; no trasladás nada.",
     image: "/images/services/arenadoParticular.JPG",
-    link: "/contacto",
-    badge: "Particulares",
+    link: "/arenado-de-piletas",
+    cta: "Ver arenado de piletas",
+    badge: "Piletas y piscinas",
   },
 ]
 
@@ -50,7 +52,7 @@ const ServicesSection = () => {
               <div className="relative aspect-video w-full">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} en Buenos Aires y AMBA`}
                   fill
                   className="relative z-20 object-cover brightness-60"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -67,7 +69,7 @@ const ServicesSection = () => {
 
               <CardFooter>
                 <Button className="w-full bg-primary-400" asChild>
-                  <Link href={service.link}>Ver servicio</Link>
+                  <Link href={service.link}>{service.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>

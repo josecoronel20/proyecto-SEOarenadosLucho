@@ -8,7 +8,7 @@ export function CasosHero() {
           Casos de éxito
         </h1>
         <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-          Objetivo, retos, solución y resultado medible de cada proyecto. Filtre por tipo de obra.
+          Objetivo, retos, solución y resultado final de cada proyecto. Filtrá por tipo de obra.
         </p>
       </div>
     </section>

@@ -116,14 +116,16 @@ No cambiar copy ni rutas. npm run build. Resumir impacto esperado.
 ## ChatGPT — estrategia / copy (sin código)
 
 ```
-Contexto: sitio arenado industrial B2B en Buenos Aires (Arenados Lucho).
-Audiencia: encargados de obra, ingenieros. Objetivo: consulta calificada, no leads chicos.
-Tono: técnico, directo, sin "somos líderes".
+Contexto: sitio de arenado "sin vueltas" en Buenos Aires (Arenados Lucho): obra,
+restauración, PYMEs con galpón (in situ), piletas. NO arenado certificado ni granallado.
+Audiencia: arquitectos, encargados de PYMEs, constructoras, dueños de casa.
+Tono: directo, simple y concreto, sin "somos líderes".
 
 Tarea: [ej. reescribir subtítulo hero / 3 bullets de objeciones / FAQ nueva]
 
 Restricciones:
-- Mencionar ISO 8501 / Sa3 / plazos solo si es verdad del negocio
+- PROHIBIDO mencionar Sa3 / ISO 8501 / metal blanco / granallado (decisión 26/07/2026)
+- Usar solo datos verdaderos: 2 equipos propios, ~100 m²/día, in situ, visita sin costo
 - CTA implícito hacia contacto o WhatsApp
 - Español Argentina
 - Máximo [N] palabras
@@ -210,7 +212,7 @@ No renombrar eventos en código sin confirmar.
 
 Campaña: [Search industrial BA]
 URL final: https://www.arenadoslucho.com/servicios
-Keywords: [arenado industrial buenos aires, sa3, iso 8501]
+Keywords: [arenado industrial buenos aires, arenado en obra, arenado a domicilio — ver marketing/03-keywords-maestro.md; NUNCA sa3/iso/granallado]
 
 Revisar que la landing cumpla message match:
 - H1 y primer párrafo
@@ -278,8 +280,9 @@ npm run build al final.
 @contexto/18-decisiones-tecnicas.md
 
 Actualizar generateStructuredData() en layout.tsx:
-- Quitar referencias a piletas/particular como foco
-- Alinear description Organization/LocalBusiness a arenado industrial
+- Description Organization/LocalBusiness: arenado in situ para obra, restauración,
+  PYMEs y piletas — SIN normas técnicas (prohibido Sa3/ISO — decisión 26/07/2026)
+- Piletas SÍ puede mencionarse (es servicio core)
 - Mantener email y área Buenos Aires
 
 No cambiar GTM ni SITE_URL.

@@ -4,6 +4,8 @@
 >
 > Fuentes: script `ads-scripts/01-auditoria-cuenta.js` (corrido 26/07) + análisis multi-agente. Reglas de negocio en `.cursorrules`; keywords/negativas en `03-keywords-maestro.md`; operación en `05-google-ads-operacion.md`; estado de automatizaciones en `09-automatizaciones.md`.
 
+> ⚠️ **ACTUALIZACIÓN 26/07/2026 (tarde) — LEER ANTES DE EJECUTAR EL PLAN:** el dueño aportó el contexto real del negocio y **partes del §4 quedaron superadas**. Cambios vinculantes en **§6** (al final): se ELIMINA el grupo `norma-sa3-iso` y toda keyword técnica/granallado (no hacemos ese servicio), y **piletas pasa a campaña propia** con ~25% del presupuesto. Estructura vigente: `05-google-ads-operacion.md` Fase 2 · keywords/negativas vigentes: `03-keywords-maestro.md`.
+
 ---
 
 ## 1. Estado de la cuenta
@@ -229,13 +231,12 @@ https://www.arenadoslucho.com/  (x2 anuncios)  ← dominio correcto .com, respon
 
 | Grupo | → URL | Keywords (frase/exacta) |
 |-------|-------|-------------------------|
-| **arenado-industrial** | `/servicios` | arenado industrial, arenados industriales, empresa de arenado, arenado en obra, arenado in situ, arenado y granallado |
-| **estructuras-metalicas** | `/servicios` | arenado de metal, arenado de metales, arenado metal, arenar metal, arenado de piezas metálicas, arenado de estructuras metálicas, arenado de tanques industriales, granallado (frase), arenado de superficies |
-| **norma-sa3-iso** ⭐ (nuevo, sin historial) | `/servicios` | arenado sa3, grado sa3, arenado metal blanco, arenado iso 8501, preparación superficie iso 8501 |
+| **arenado-industrial** | `/servicios` | arenado industrial, arenados industriales, empresa de arenado, arenado en obra, arenado in situ ~~arenado y granallado~~ (§6) |
+| **estructuras-metalicas** | `/servicios` | arenado de metal, arenado de metales, arenado metal, arenar metal, arenado de piezas metálicas, arenado de estructuras metálicas, arenado de tanques industriales, arenado de superficies ~~granallado~~ (§6) |
 | **marca** | `/` | arenados lucho, arenado lucho, taller de arenado |
 
 ### 4.2 Keywords nuevas a sumar (gap del mapa maestro, no están en la cuenta)
-`sandblasting industrial`, `sandblasting`, `arenado de estructuras metálicas`, `arenado de tanques industriales`, `arenado in situ`, `arenado en obra`, `granallado in situ`, `preparación de superficies metálicas`, y **todo el grupo `norma-sa3-iso`** (Sa3/ISO 8501 — cluster premium sin historial = mayor oportunidad).
+`sandblasting`, `arenado de estructuras metálicas`, `arenado de tanques`, `arenado in situ`, `arenado en obra`, y (⭐ nuevo por §6) el cluster **obra/restauración**: `arenado de paredes`, `arenado de ladrillos`, `arenado de fachada`, `arenado para repintar`, `arenado restauración edificio`. ~~granallado in situ y grupo norma-sa3-iso~~ **eliminados** (§6: no ofrecemos granallado ni arenado certificado).
 *Para expansión posterior (con CPA validado):* `arenado de nave industrial`, `arenado estructura naval` → slugs de casos de éxito.
 
 ### 4.3 Negativas
@@ -247,7 +248,7 @@ https://www.arenadoslucho.com/  (x2 anuncios)  ← dominio correcto .com, respon
 - **Arranque:** "Maximizar clics" **con tope de CPC manual** (no descontrolar sin data limpia). NO usar "Maximizar conversiones" todavía (la medición está inflada).
 - **Presupuesto:** 10.000/día = ARS ~300.000/mes (borde del tope). ⚠️ El **tope duro de 300.000 NO está vigente** hasta verificar el guardián instalado en la UI → el control real de arranque es el **presupuesto diario nativo**.
 - **Migrar a "Maximizar conversiones"** solo con **≥15-30 conversiones/mes limpias**. Escalar presupuesto máx 20-30% por vez, un cambio cada 1-2 semanas, con CPA estable, todo en `08-bitacora.md`.
-- **Atacar el QS** del core (RSA alineado a `/servicios`: Sa3/ISO 8501, ~100 m²/día, visita técnica sin costo, mitigación de polvo) para bajar CPC antes de escalar.
+- **Atacar el QS** del core (RSA alineado a `/servicios`: superficie lista para pintar/revestir, ~100 m²/día, 2 equipos propios, visita sin costo, contención de polvo — **sin Sa3/ISO, ver §6**) para bajar CPC antes de escalar.
 
 ### 4.5 Conversiones (medición limpia — bloqueante)
 Dejar como **PRIMARIAS solo los leads reales**: `form_submit_success` + `contact_whatsapp` (evaluar `contact_email`). Degradar a **secundarias** todo lo que infla: Website visits, Other engagements, map directions y `form_submit` (intento). **Nunca** optimizar hacia `form_submit`. `clicks-to-call` **no** marcarla primaria hasta verificar call tracking real (hoy el sitio no tiene evento de llamada en el tracking). Verificar en GTM que los eventos exactos disparan y que no viaja PII en el dataLayer.
@@ -277,6 +278,19 @@ Dejar como **PRIMARIAS solo los leads reales**: `form_submit_success` + `contact
 
 ---
 
+## 6. Corrección definitiva (26/07/2026) — contexto real del dueño
+
+El dueño aclaró el negocio real y **esto manda sobre cualquier análisis anterior**:
+
+1. **NO hacemos arenado técnico medido ni granallado.** Nada de Sa3, ISO 8501, metal blanco, perfil de anclaje, informes. Los trabajos con esos requisitos se rechazan (pasó con naves ferroviarias). → Se **elimina** el grupo `norma-sa3-iso` del plan, se quita `granallado` de las keywords y **todo lo técnico pasa a NEGATIVA de cuenta** (`granallado`, `granalla`, `sa3`, `iso 8501`, `metal blanco`, `perfil de anclaje`, `rugosidad`). El comprador que busca así pide lo que no vendemos: ese clic es pérdida segura.
+2. **El comprador objetivo es el simple:** arquitecto en remodelación, encargado de fábrica que quiere repintar por estética, constructora. Busca "arenado industrial" sin ser técnico — por eso esa keyword fue la mejor del historial (frase, ~3.273/conv). El grupo core queda intacto.
+3. **Piletas deja de estar pausada → campaña propia (~25%).** Es el lead más barato del historial (exacta: 4 conv/2.156; campañas viejas: 14 conv/16.192) y el dueño confirma que es el pan de hoy. La negativa `pileta/piscina` va **solo dentro de la campaña industrial** (para rutear el tráfico), **jamás a nivel cuenta**.
+4. **Estrategia de transición:** hoy se toma casi todo (trabajos chicos incluidos — sin comprarles tráfico: chasis/madera tuvieron ROI malo); el norte es obra en construcción y restauración de edificios. La campaña de obra/industrial se lleva ~60% del presupuesto por eso.
+5. **Estructura vigente** (reemplaza §4.1): 3 campañas — `AR-Search-Obra-Industrial` ~6.000/día · `AR-Search-Piletas` ~2.500/día · `AR-Search-General-Marca` ~1.500/día. Detalle completo: `05-google-ads-operacion.md` Fase 2.
+6. **El sitio se reescribe** (decisión del dueño): fuera Sa3/ISO del copy, FAQ y schema; entra piletas y obra/restauración + landing `/arenado-de-piletas`. Hasta que el copy esté pivotado, los RSA nuevos NO deben prometer nada técnico aunque la landing todavía lo diga.
+
+---
+
 ## 5. Pendiente antes de reactivar gasto (checklist)
 - [ ] Medición limpia (primarias = form_submit_success + contact_whatsapp).
 - [ ] Verificar `form_submit` = éxito (no intento) en GTM/GA4.
@@ -284,4 +298,6 @@ Dejar como **PRIMARIAS solo los leads reales**: `form_submit_success` + `contact
 - [ ] Negativas cargadas.
 - [ ] Campaña + grupos + RSA armados (frase/exacta).
 - [ ] Instalar autopilot (05) para el tope duro real.
+- [ ] Copy del sitio pivotado (mínimo /servicios y FAQ sin Sa3/ISO) — evita message mismatch con los RSA nuevos.
+- [ ] Landing `/arenado-de-piletas` publicada (o campaña piletas apuntando a `/` mientras tanto).
 - [ ] Recargar saldo (último paso).

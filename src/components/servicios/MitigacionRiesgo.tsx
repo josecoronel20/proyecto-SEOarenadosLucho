@@ -1,6 +1,6 @@
 "use client"
 
-import { Calendar, Wind, Award } from "lucide-react"
+import { Calendar, Wind, Paintbrush } from "lucide-react"
 import Link from "next/link"
 
 const objeciones = [
@@ -15,9 +15,9 @@ const objeciones = [
     respuesta: "Trabajamos por zonas: intervenimos y liberamos el sector rápido.",
   },
   {
-    icon: Award,
-    pregunta: "¿Cumplen nivel técnico?",
-    respuesta: "Ejecutamos hasta Sa3 (metal blanco), máxima limpieza según ISO 8501.",
+    icon: Paintbrush,
+    pregunta: "¿Queda bien para pintar después?",
+    respuesta: "Sacamos óxido, pintura vieja y suciedad, y te dejamos la superficie pareja y lista para pintar o revestir.",
   },
 ]
 
@@ -54,7 +54,7 @@ export function MitigacionRiesgo() {
         </div>
 
         <div/>
-      <p className="text-gray-700 text-base leading-relaxed text-center"> ¿Ténes más dudas? visitá nuestra sección de <Link href="/preguntas-frecuentes" className="text-primary-700 font-semibold hover:underline">Preguntas frecuentes</Link> o <Link href="/contacto" className="text-primary-700 font-semibold hover:underline">contactanos</Link>.</p>
+      <p className="text-gray-700 text-base leading-relaxed text-center"> ¿Tenés más dudas? Visitá nuestra sección de<Link href="/preguntas-frecuentes" className="text-primary-700 font-semibold hover:underline">Preguntas frecuentes</Link> o <Link href="/contacto" className="text-primary-700 font-semibold hover:underline">contactanos</Link>.</p>
       </div>
     </section>
   )

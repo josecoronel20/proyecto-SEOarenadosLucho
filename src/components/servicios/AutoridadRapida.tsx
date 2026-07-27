@@ -5,7 +5,7 @@ import { Shield, Building2, CircleDot, Wrench } from "lucide-react"
 const items = [
   { icon: Shield, label: "Seguros vigentes" },
   { icon: Building2, label: "Ejecución en obras públicas" },
-  { icon: CircleDot, label: "Evaluación de acabado en base a objetivo" },
+  { icon: CircleDot, label: "Superficie lista para pintar o revestir" },
   { icon: Wrench, label: "Equipos propios" },
 ]
 

@@ -1,113 +1,106 @@
 # .cursorrules
 
 ## CONTEXTO GENERAL DEL PROYECTO
-Proyecto: Sitio web para empresa de arenados industriales en Buenos Aires.
-Objetivo principal: Maximizar conversiones a LLAMADA (click-to-call o solicitud de llamada).
-Usuario objetivo: Encargados de obra, arquitectos, ingenieros, responsables de restauración y proyectos industriales.
-Ticket promedio: Alto. Decisión racional basada en riesgo, cumplimiento técnico y tiempos.
+Proyecto: Sitio web para empresa de arenado ("sin vueltas") en Buenos Aires — obra, restauración, limpieza industrial básica y piletas.
+Objetivo principal: Maximizar conversiones a CONTACTO (WhatsApp, formulario o llamada).
+Usuario objetivo: Arquitectos, encargados de empresas/fábricas, constructoras y dueños que necesitan una superficie lista para pintar o revestir, SIN especificaciones técnicas.
+Ticket: Medio-alto en obra/restauración; medio en piletas y trabajos chicos. Decisión basada en rapidez, prolijidad, precio justo y confianza.
+
+REGLA DE POSICIONAMIENTO (26/07/2026 — decisión del dueño):
+El negocio NO hace arenado técnico medido (Sa3, ISO 8501, metal blanco, perfil de anclaje, informes) NI granallado.
+PROHIBIDO en copy, metadata, schema y anuncios: prometer normas, certificaciones, mediciones o granallado.
+Está BIEN decir explícitamente qué no hacemos: filtra al comprador técnico antes de que llame.
 
 ---
 
 ## REGLA SUPREMA
 Toda implementación (diseño, copy, estructura, feature, sección o funcionalidad) debe:
-1. Estar directamente alineada con aumentar la probabilidad de llamada.
+1. Estar directamente alineada con aumentar la probabilidad de contacto (WhatsApp/formulario/llamada).
 2. Reducir fricción en la decisión.
-3. Resolver objeciones típicas (tiempo, logística, polvo/ruido, calidad técnica, cumplimiento norma ISO 8501).
-4. Reforzar percepción de profesionalismo, capacidad técnica y cumplimiento de plazos.
+3. Resolver objeciones típicas (tiempo, polvo/suciedad, "¿queda bien para pintar?", precio, seriedad).
+4. Reforzar percepción de rapidez, prolijidad y confiabilidad — NO de laboratorio técnico.
 
-Si una implementación no impacta directa o indirectamente en la conversión a llamada, debe ser cuestionada o descartada.
+Si una implementación no impacta directa o indirectamente en la conversión, debe ser cuestionada o descartada.
 
 ---
 
 ## PRINCIPIOS DE DISEÑO
-- Diseño sobrio, industrial, profesional.
-- Evitar estética genérica corporativa sin sustancia técnica.
+- Diseño sobrio, de oficio, profesional — cercano, no corporativo frío.
+- Fotos REALES de trabajos (antes/después) valen más que cualquier texto.
 - Priorizar claridad sobre creatividad.
-- Jerarquía visual enfocada en CTA telefónico.
-- Teléfono siempre visible en header.
-- CTA sticky en mobile.
-- Contraste alto en botones de llamada.
-- Mostrar pruebas reales (proyectos, fotos, métricas).
+- Jerarquía visual enfocada en el CTA de contacto (WhatsApp primero).
+- Contacto siempre visible; CTA sticky en mobile.
+- Contraste alto en botones de contacto.
 
 ---
 
 ## PRINCIPIOS DE COPY
 El copy debe:
-- Ser directo, técnico y orientado a resultados.
-- Hablar en términos de riesgo, cronograma y cumplimiento.
-- Usar lenguaje profesional (no emocional ni exagerado).
-- Incluir métricas cuando sea posible.
-- Reforzar autoridad (norma ISO 8501, informes técnicos, planificación).
+- Ser directo, simple y concreto — como le hablarías a un arquitecto apurado.
+- Hablar de resultado visible: "queda lista para pintar/revestir", "en X días", "sin ensuciar todo".
+- Usar números reales cuando existan (2 equipos propios, ~100 m²/día, años de experiencia).
+- Español (Argentina).
 
 Evitar:
-- Frases genéricas tipo “somos líderes”, “máxima calidad”, “servicio integral”.
-- Promesas vagas.
-- Tono informal.
+- Jerga técnica y normas (Sa3, ISO 8501, anclaje, granallado) — PROHIBIDO.
+- Frases genéricas ("somos líderes", "máxima calidad", "servicio integral").
+- Promesas vagas o certificaciones que no damos.
+- Tono acartonado; mejor claro y de confianza.
 
 ---
 
 ## ESTRUCTURA OBLIGATORIA DE CADA SECCIÓN
 Cada sección importante debe incluir al menos uno de estos elementos:
-- Prueba técnica (normativa, proceso, evaluación).
-- Reducción de riesgo (cumplimiento de plazos, mitigación polvo/ruido).
-- Prueba social (caso real, proyecto ejecutado).
-- CTA claro hacia llamada.
+- Prueba real (foto de trabajo, caso, dato operativo verdadero).
+- Reducción de riesgo (plazos cumplidos, contención de polvo, visita sin costo).
+- Claridad de alcance (qué hacemos / qué no).
+- CTA claro hacia contacto.
 
 ---
 
 ## MANEJO DE OBJECIONES (SIEMPRE INTEGRAR)
-Las implementaciones deben contemplar:
-- Miedo a retrasos de obra.
-- Interferencia con otras tareas por polvo o ruido.
-- Dudas sobre adherencia del recubrimiento.
-- Riesgo estructural en restauraciones.
-- Sobrecostos inesperados.
-
-Cada página estratégica debe anticipar y responder al menos una objeción clave.
+- ¿Tardan mucho? ¿Me atrasan la obra? → plazos y capacidad reales.
+- ¿Hacen mucho polvo/suciedad? → cómo se contiene.
+- ¿Queda bien la superficie para pintar/revestir después? → resultado y fotos.
+- ¿Cuánto sale? → factores del precio + visita/presupuesto sin costo.
+- ¿Son serios? → casos reales, años de trabajo, equipos propios.
+- ¿Hacen granallado / arenado certificado? → NO, dicho explícito y amable.
 
 ---
 
 ## CONVERSIÓN
 Siempre priorizar:
-- Click-to-call visible.
-- CTA de “Coordinar llamada técnica (15 min)”.
-- Formularios cortos (máximo 3-4 campos).
-- Microcopys que reduzcan fricción (“Respuesta en menos de 4h”).
+- WhatsApp visible (canal #1 real del negocio).
+- Formulario corto (máximo 3-4 campos).
+- Microcopys que reduzcan fricción ("visita y presupuesto sin costo", "respuesta rápida").
 
 No priorizar:
-- Formularios largos.
-- Descargas innecesarias.
-- Contenido que distraiga del contacto.
+- Formularios largos, descargas, contenido que distraiga del contacto.
 
 ---
 
 ## ELEMENTOS TÉCNICOS OBLIGATORIOS
-- Implementar call tracking.
-- GA4 configurado con eventos de llamada.
-- GTM para medición de conversiones.
-- Optimización mobile-first.
-- Velocidad de carga optimizada.
-- Botón de llamada sticky en mobile.
+- GTM + GA4 con los eventos exactos del dataLayer (ver contexto/06-tracking-y-analytics.md) — INTOCABLES sin migración.
+- Optimización mobile-first y velocidad de carga.
+- No romper rutas usadas por Google Ads (ver contexto/08-google-ads-y-landings.md).
 
 ---
 
 ## ESTRUCTURA DE PÁGINAS
-Toda página debe cumplir:
-1. Titular claro orientado a beneficio concreto.
-2. Subtítulo que reduzca riesgo.
-3. Prueba (caso, dato o proceso).
+1. Titular claro orientado al resultado concreto.
+2. Subtítulo que reduzca una objeción.
+3. Prueba (foto/caso/dato real).
 4. CTA visible.
-5. Sección de objeciones o confianza.
+5. Sección de objeciones o alcance (qué sí / qué no).
 6. CTA final fuerte.
 
 ---
 
 ## CRITERIOS PARA APROBAR UNA IMPLEMENTACIÓN
-Antes de considerar una tarea como completada, validar:
-- ¿Aumenta la percepción de profesionalismo?
-- ¿Reduce incertidumbre técnica?
-- ¿Facilita la llamada?
-- ¿Refuerza autoridad?
+- ¿Facilita el contacto?
+- ¿Un arquitecto/encargado apurado lo entiende en 5 segundos?
+- ¿Muestra prueba real en vez de prometer?
+- ¿Evita jerga técnica y promesas de certificación?
 - ¿Evita distracciones?
 
 Si la respuesta es no en alguno, iterar.
@@ -115,10 +108,10 @@ Si la respuesta es no en alguno, iterar.
 ---
 
 ## PRIORIDAD ESTRATÉGICA
-1. Conversión a llamada.
-2. Autoridad técnica.
-3. Reducción de riesgo.
-4. Claridad estructural.
+1. Conversión a contacto.
+2. Confianza por prueba real (fotos, casos, datos operativos).
+3. Reducción de riesgo (plazos, polvo, resultado).
+4. Claridad estructural (qué hacemos / qué no).
 5. Estética.
 
 Nunca invertir el orden.
