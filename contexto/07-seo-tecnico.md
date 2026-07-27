@@ -2,8 +2,7 @@
 
 Metadata, indexación, structured data y reglas para no degradar posicionamiento al cambiar páginas.
 
-> ✅ **Pivote de copy aplicado en el código (26/07/2026):** el sitio ya NO promete Sa3/ISO 8501/metal blanco/granallado (ver `marketing/08-bitacora.md` (7)).
-> ⚠️ **Aviso de desfasaje:** algunas tablas de metadata/descriptions de más abajo todavía muestran valores **PRE-pivote** (con Sa3/ISO). Su refresco está agendado en el **🗺️ Roadmap de optimización SEO → Fase E** (al final de este archivo). El código ya tiene los textos nuevos.
+> ✅ **Pivote de copy + Fases A/C/E aplicadas (26/07/2026):** el sitio ya NO promete Sa3/ISO 8501/metal blanco/granallado; suma `canonical` por ruta, JSON-LD `@graph` completo (LocalBusiness/WebSite/FAQPage/Service/BreadcrumbList/CreativeWork), OG por página con imagen y `<h1>` semánticos. Las tablas de abajo están actualizadas al estado post-pivote (fuente de verdad = el código). Ver `marketing/08-bitacora.md` y el 🗺️ Roadmap al final de este archivo.
 
 **Dominio canónico:** `https://www.arenadoslucho.com`  
 **Constante en código:** `SITE_URL` en `src/app/layout.tsx`
@@ -38,10 +37,10 @@ Aplica a todas las rutas salvo override en `page.tsx` / `layout.tsx` hijo.
 | Ruta | Archivo | `title` (segmento) | Title renderizado (~) |
 |------|---------|-------------------|------------------------|
 | `/servicios` | `app/servicios/page.tsx` | `Servicios de arenado industrial` | Servicios de arenado industrial \| Arenados Lucho |
-| `/casos-de-exito` | `app/casos-de-exito/layout.tsx` | `Casos de éxito` | Casos de éxito \| Arenados Lucho |
+| `/casos-de-exito` | `app/casos-de-exito/layout.tsx` | `Casos de arenado en Buenos Aires y AMBA` | Casos de arenado en Buenos Aires y AMBA \| Arenados Lucho |
 | `/casos-de-exito/[slug]` | `app/casos-de-exito/[slug]/page.tsx` | `project.title` (dinámico) | {título caso} \| Arenados Lucho |
 | `/preguntas-frecuentes` | `app/preguntas-frecuentes/page.tsx` | `Preguntas frecuentes` | Preguntas frecuentes \| Arenados Lucho |
-| `/contacto` | `app/contacto/layout.tsx` | `Contacto` | Contacto \| Arenados Lucho |
+| `/contacto` | `app/contacto/layout.tsx` | `Contacto y presupuesto de arenado` | Contacto y presupuesto de arenado \| Arenados Lucho |
 | `/politica-de-privacidad` | `app/politica-de-privacidad/page.tsx` | `Política de Privacidad` | Política de Privacidad \| Arenados Lucho |
 | `/terminos-y-condiciones` | `app/terminos-y-condiciones/page.tsx` | `Términos y Condiciones` | Términos y Condiciones \| Arenados Lucho |
 
@@ -49,10 +48,10 @@ Aplica a todas las rutas salvo override en `page.tsx` / `layout.tsx` hijo.
 
 | Ruta | `description` |
 |------|----------------|
-| `/servicios` | Arenado hasta metal blanco (Sa3), coordinación con obra, hasta 100 m² diarios… ISO 8501. Buenos Aires. |
-| `/casos-de-exito` | Casos de éxito con resumen ejecutivo… Arenado industrial en Buenos Aires. |
+| `/servicios` | Arenado industrial y en obra en Buenos Aires: estructuras, tanques, fachadas y piletas listas para pintar o revestir. ~100 m²/día, coordinación en obra. |
+| `/casos-de-exito` | Casos de éxito de arenado: objetivo, retos, solución y resultado final. Estructuras, tanques, fachadas y piletas en Buenos Aires y AMBA. |
 | `/casos-de-exito/[slug]` | `project.overview` (dinámico desde `projectsInfo.json`) |
-| `/preguntas-frecuentes` | Plazos, ISO 8501, capacidad, polvo, coordinación en obra… |
+| `/preguntas-frecuentes` | Respuestas simples: plazos, polvo, trabajo in situ, piletas y para qué queda lista la superficie. Buenos Aires y AMBA. |
 | `/contacto` | Enviá tu solicitud con nombre, teléfono y descripción… WhatsApp. |
 | `/politica-de-privacidad` | Política de Privacidad… Protección de datos personales en Buenos Aires. |
 | `/terminos-y-condiciones` | Términos y condiciones de uso del sitio web de Arenados Lucho. |
@@ -65,6 +64,7 @@ Desde `src/lib/projectsInfo.json` → `idSection`:
 - `estructura-naval`
 - `pasarela-urbana`
 - `tanque-industrial`
+- `arenado-pileta`
 
 URLs: `/casos-de-exito/{idSection}`
 
@@ -74,10 +74,10 @@ URLs: `/casos-de-exito/{idSection}`
 
 | Estado | Detalle |
 |--------|---------|
-| **Explícito en código** | No hay `alternates.canonical` por página. |
-| **Comportamiento Next.js** | Con `metadataBase`, Next genera URLs absolutas para OG y metadatos; las páginas heredan la base del dominio. |
-| **Regla** | Una sola URL pública por contenido: preferir `www` (`SITE_URL` ya usa `www`). |
-| **Pendiente recomendado** | Añadir `alternates: { canonical: '/ruta' }` en metadata de páginas clave si se confirma duplicidad (ej. sin www vs con www en hosting). |
+| **Explícito en código** | ✅ Sí (Fase A, 26/07): `alternates.canonical` (relativo) en cada ruta — home, servicios, casos, casos/[slug], faq, contacto, legales. |
+| **Comportamiento Next.js** | Con `metadataBase`, el canonical relativo resuelve a absoluto con `www`. Verificado en el HTML: `<link rel="canonical" href="https://www.arenadoslucho.com/ruta">`. |
+| **Por qué importa** | El tráfico de Google Ads llega con UTMs; el canonical evita que las variantes con querystring se indexen como URLs distintas. |
+| **Regla** | Una sola URL pública por contenido: `www` (= `SITE_URL`). |
 
 **No romper:** no cambiar `metadataBase` sin redirecciones 301 en Vercel/DNS.
 
@@ -129,37 +129,30 @@ Todas las páginas hijas **heredan** indexación salvo que definan `robots: { in
 
 ## Schema (JSON-LD)
 
-**Ubicación:** `src/app/layout.tsx` → `<script type="application/ld+json">`  
-**Función:** `generateStructuredData()` — array con dos entidades.
+**Fuente de datos:** `src/lib/siteConfig.ts` (`BUSINESS`, `SITE_URL`, `BUSINESS_ID`, `OG_IMAGE`, helper `og()`).
+**Refactorizado a `@graph` (Fase C, 26/07/2026):** un solo objeto `{ "@context", "@graph": [...] }` con entidades enlazadas por `@id`. Sin promesas técnicas en el copy.
 
-### 1. `Organization`
+### Global (en `layout.tsx`, aplica a todas las rutas)
 
-| Campo | Valor |
-|-------|--------|
-| `@type` | `Organization` |
-| `name` | `Arenados Lucho` |
-| `url` | `SITE_URL` |
-| `logo` | `{SITE_URL}/images/logo-solo-azul.png` |
-| `contactPoint` | `ContactPoint`, `customer service`, `Spanish`, `areaServed: AR` |
-| `address` | Buenos Aires, AR |
+| Nodo | Detalle |
+|------|---------|
+| `WebSite` | `@id` `{SITE_URL}/#website`, `inLanguage: es-AR`, `publisher` → negocio |
+| `LocalBusiness` + `HomeAndConstructionBusiness` | `@id` `{SITE_URL}/#business`; `telephone` (= número de `WppBtn`), `email`, `logo`, `image` (fotos reales de obra), `openingHours`, `areaServed` = City Buenos Aires + AdministrativeArea "Gran Buenos Aires (AMBA)", `contactPoint` con teléfono/email |
 
-### 2. `LocalBusiness`
+### Por página
 
-| Campo | Valor |
-|-------|--------|
-| `@type` | `LocalBusiness` |
-| `email` | `arenadoslucho@hotmail.com` |
-| `openingHours` | `Mo-Sa 08:00-18:00` |
-| `areaServed` | City `Buenos Aires` |
+| Ruta | Schema |
+|------|--------|
+| `/preguntas-frecuentes` | `FAQPage` (14 Q&A desde `src/lib/faqs.ts`) |
+| `/servicios` | 2× `Service` (obra/industrial · piletas/particular, `provider` → negocio) + `BreadcrumbList` |
+| `/casos-de-exito/[slug]` | `BreadcrumbList` + `CreativeWork` (con `image` del caso) |
+| Todas | `openGraph`/`twitter` con imagen (helper `og()`; per-caso = foto del caso) |
 
-### Lo que **no** hay en schema hoy
+### Pendiente en schema (requiere dato real — NO inventar)
 
-- `FAQPage` en `/preguntas-frecuentes` (oportunidad: datos en `FaqAccordion.tsx`)
-- `Service` por página de servicios
-- `Article` / `Project` en detalle de casos
-- `BreadcrumbList`
-
-**Copy schema (26/07/2026):** descriptions de Organization y LocalBusiness reescritas SIN ISO/Sa3 (arenado "sin vueltas", in situ, listo para pintar o revestir). Refactor pendiente a `@graph` con `@id`, `telephone` y `areaServed` AMBA — ver **Roadmap Fase C**.
+- `geo` (lat/long), `sameAs` (Google Business Profile / redes), `priceRange`.
+- `aggregateRating` / `review`: **solo** con reseñas reales (inventarlas viola las guías de Google).
+- **NO** agregar `SearchAction` (no hay buscador on-site en el sitio).
 
 ---
 
@@ -195,8 +188,9 @@ Documentadas en `03-rutas-y-paginas.md`:
 
 ### Imágenes y assets
 
-- `next.config.js`: `images.domains` vacío; imágenes estáticas en `/public` (cuando existan en deploy).
-- OG: no hay `openGraph.images` definido en metadata → completar imagen social recomendada (1200×630).
+- `next.config.js` (Fase A): `images.formats` = AVIF + WebP; `poweredByHeader:false`; `headers()` de seguridad. Imágenes estáticas en `/public`.
+- OG: `openGraph.images` / `twitter.images` definidos (default = foto real vía `siteConfig.OG_IMAGE`; per-caso = foto del caso). **Ideal pendiente:** imagen branded 1200×630 dedicada.
+- **Assets pendientes:** favicon 293 KB → regenerar ~10 KB; borrar ~7 MB de JPGs sin usar en `arenadoParticular/Piezas/`; comprimir `heroVideo.mp4` (~25 MB, Fase B).
 
 ### Velocidad / mobile
 
@@ -252,9 +246,12 @@ Documentadas en `03-rutas-y-paginas.md`:
 | ~~`app/sitemap.ts`~~ | Hecho |
 | ~~`app/robots.ts`~~ | Hecho |
 | ~~Verificar `/robots.txt` y `/sitemap.xml`~~ — ✅ resuelto 25/07 (PR #1): ambos 200 con dominio `.com` | Hecho |
-| `openGraph.images` | Media |
-| FAQ `FAQPage` JSON-LD | Media |
-| Canonical explícito por ruta | Baja (si hay duplicados) |
+| ~~`openGraph.images`~~ — ✅ Fase A/E (default + per-caso; falta imagen branded 1200×630) | Hecho |
+| ~~FAQ `FAQPage` JSON-LD~~ — ✅ Fase C | Hecho |
+| ~~Canonical explícito por ruta~~ — ✅ Fase A | Hecho |
+| Reestructura de URLs + redirects 301 (legacy + apex→www) | Alta (Fase D) |
+| Comprimir `heroVideo.mp4` (~25 MB) | Alta (Fase B) |
+| `<main>` landmark, `<h1>` semánticos | Hecho (Fase E) |
 | ~~Enlaces rotos industriales / términos~~ | Hecho (mayo 2026) |
 | ~~JSON-LD industrial~~ | Hecho |
 

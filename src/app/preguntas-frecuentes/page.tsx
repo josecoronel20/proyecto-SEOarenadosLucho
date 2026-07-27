@@ -3,12 +3,17 @@ import Link from "next/link"
 import { FileText } from "lucide-react"
 import { FaqAccordion } from "@/components/preguntas-frecuentes/FaqAccordion"
 import { faqs } from "@/lib/faqs"
+import { og } from "@/lib/siteConfig"
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes",
   description:
     "Respuestas simples sobre arenado: cuánto tarda, el polvo, si trabajamos in situ, si hacemos piletas y para qué queda lista la superficie. Buenos Aires y AMBA.",
   alternates: { canonical: "/preguntas-frecuentes" },
+  openGraph: og(
+    "Preguntas frecuentes sobre arenado",
+    "Plazos, polvo, trabajo in situ, piletas y para qué queda lista la superficie. Lo que más nos preguntan."
+  ),
 }
 
 const faqSchema = {
@@ -23,7 +28,7 @@ const faqSchema = {
 
 export default function PreguntasFrecuentesPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -68,6 +73,6 @@ export default function PreguntasFrecuentesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

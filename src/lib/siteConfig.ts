@@ -27,3 +27,28 @@ export const BUSINESS = {
   // PENDIENTES de dato real del dueño (NO inventar): geo (lat/long), sameAs (Google
   // Business Profile / redes), priceRange, aggregateRating (solo con reseñas reales).
 }
+
+// Imagen social por defecto. IDEAL: reemplazar por una imagen branded 1200×630
+// dedicada (hoy usa una foto real de trabajo).
+export const OG_IMAGE = BUSINESS.images[0]
+
+/**
+ * openGraph completo por página. Next.js NO hace deep-merge de `openGraph`, así que
+ * cada página que quiera OG propio debe declararlo entero (título, descripción, imagen).
+ */
+export function og(title: string, description: string, image?: string) {
+  return {
+    title,
+    description,
+    type: "website" as const,
+    locale: "es_AR",
+    url: SITE_URL,
+    siteName: BUSINESS.name,
+    images: [
+      {
+        url: image ?? OG_IMAGE,
+        alt: "Arenado por Arenados Lucho en Buenos Aires y AMBA",
+      },
+    ],
+  }
+}

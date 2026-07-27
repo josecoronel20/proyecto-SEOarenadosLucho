@@ -8,13 +8,17 @@ import { RequisitosCliente } from "@/components/servicios/RequisitosCliente"
 import { MitigacionRiesgo } from "@/components/servicios/MitigacionRiesgo"
 import { CasoDestacado } from "@/components/servicios/CasoDestacado"
 import CTASection from "@/components/common/CTASection"
-import { SITE_URL, BUSINESS_ID } from "@/lib/siteConfig"
+import { SITE_URL, BUSINESS_ID, og } from "@/lib/siteConfig"
 
 export const metadata: Metadata = {
   title: "Servicios de arenado industrial",
   description:
     "Arenado industrial y en obra en Buenos Aires: preparamos estructuras, tanques, fachadas y piletas, listas para pintar o revestir. Equipos propios, ~100 m² por día y coordinación en obra.",
   alternates: { canonical: "/servicios" },
+  openGraph: og(
+    "Servicios de arenado industrial en Buenos Aires y AMBA",
+    "Arenado industrial y en obra: estructuras, tanques, fachadas y piletas listas para pintar o revestir. Equipos propios y coordinación en obra."
+  ),
 }
 
 const serviciosSchema = {
@@ -50,7 +54,7 @@ const serviciosSchema = {
 
 export default function ServiciosPage() {
   return (
-    <main>
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviciosSchema) }}
@@ -64,6 +68,6 @@ export default function ServiciosPage() {
       <RequisitosCliente />
       <MitigacionRiesgo />
       <CTASection/>
-    </main>
+    </div>
   )
 }

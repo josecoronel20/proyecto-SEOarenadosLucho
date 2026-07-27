@@ -5,7 +5,7 @@ import { getProjectBySlug, getAllSlugs } from "@/lib/getProjectBySlug"
 import { CasoDetalleContent } from "@/components/casos-de-exito/CasoDetalleContent"
 import type { Metadata } from "next"
 import CTASection from "@/components/common/CTASection"
-import { SITE_URL, BUSINESS_ID } from "@/lib/siteConfig"
+import { SITE_URL, BUSINESS_ID, og } from "@/lib/siteConfig"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: project.title,
     description: project.overview,
     alternates: { canonical: `/casos-de-exito/${slug}` },
+    openGraph: og(project.title, project.overview, project.images?.[0]),
   }
 }
 
@@ -57,7 +58,7 @@ export default async function CasoDetallePage({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 py-10 md:py-14">
+    <div className="min-h-screen bg-gray-50 py-10 md:py-14">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casoSchema) }}
@@ -74,6 +75,6 @@ export default async function CasoDetallePage({ params }: PageProps) {
       </div>
       <div className="container mx-auto pt-10  overflow-hidden">
       <CTASection /></div>
-    </main>
+    </div>
   )
 }

@@ -25,12 +25,19 @@ export const metadata: Metadata = {
     locale: "es_AR",
     url: SITE_URL,
     siteName: "Arenados Lucho",
+    images: [
+      {
+        url: BUSINESS.images[0],
+        alt: "Arenado por Arenados Lucho en Buenos Aires y AMBA",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
     description:
       "Arenado en Buenos Aires: dejamos estructuras, tanques, fachadas y piletas listas para pintar o revestir. Trabajamos in situ, con equipos propios y presupuesto sin costo.",
+    images: [BUSINESS.images[0]],
   },
   robots: {
     index: true,
@@ -155,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         <Header />
         <WppBtn />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

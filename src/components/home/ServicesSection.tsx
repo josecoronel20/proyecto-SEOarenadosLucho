@@ -50,7 +50,7 @@ const ServicesSection = () => {
               <div className="relative aspect-video w-full">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} en Buenos Aires y AMBA`}
                   fill
                   className="relative z-20 object-cover brightness-60"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

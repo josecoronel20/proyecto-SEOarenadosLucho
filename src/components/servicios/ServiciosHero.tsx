@@ -12,7 +12,7 @@ export function ServiciosHero() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/services/arenadoIndustrial.PNG"
-            alt="Arenado industrial"
+            alt="Arenado industrial de estructuras metálicas en Buenos Aires"
             fill
             className="object-cover rounded-lg object-top"
             priority
