@@ -28,7 +28,7 @@ export function ServiciosHero() {
               Arenado industrial
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl">
-              Arenamos estructuras, tanques y fachadas in situ, rápido y prolijo, y te las dejamos listas para pintar o revestir.
+              Arenamos estructuras, tanques, fachadas y galpones in situ —vamos con el equipo, no trasladás nada—, rápido y prolijo, y te las dejamos listas para pintar o revestir.
             </p>
             <div className="mt-2">
               <Link

@@ -12,6 +12,19 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-07-27 (3) — Home y /servicios alineadas al criterio del ideal (Claude Code)
+
+- **Qué se hizo:** se llevó home y /servicios al mismo criterio de la landing de piletas + los hallazgos de la auditoría (rutear por intención, lenguaje PYME no técnico, sin canibalización):
+  - **Home — `ServicesSection`:** las 2 cards ahora se rotulan por **TRABAJO**, no por tipo de comprador: "Arenado en obra, industria y galpones" (→`/servicios`) y "Arenado de piletas" (→`/arenado-de-piletas`). Se sacó "fachadas/trabajos chicos" de la card de piletas (arreglaba el mismatch: el botón iba a piletas pero prometía fachada) y se sumó "piscina".
+  - **Home — `IntroductionSection`:** el párrafo ahora **explica qué es el arenado** para el que no conoce el término ("es como una lija potente…"), arrancando por el problema (se descascara / óxido).
+  - **/servicios — nueva sección `QueArenamos`:** cubre el **aliado #1** (PYME con galpón: estructuras, tanques, camiones, acoplados, hierros, quitar óxido, in situ) y el **Cluster 1** de obra/restauración (paredes, ladrillo a la vista, fachadas, vigas); además **deriva la intención de piletas** a su landing con un link.
+  - **/servicios — sin canibalización:** metadata y schema ya **NO ofrecen piletas** (la landing dedicada gana esa consulta); se sumó galpón/camiones/PYME a la metadata.
+  - **/servicios — menos "licitación":** se bajó el tono de obra-grande en `ServiciosHero` (glosa llana de "in situ"), `AlcanceOperativo` (de ficha técnica a beneficio + H2 con keyword), `LogisticaCoordinacion` (lenguaje del dueño/PYME, no solo "encargado de obra/permisos"), `AutoridadRapida` ("evaluación de acabado en base a objetivo" → "lista para pintar o revestir") y `BloqueDiferencial` ("encargado de proyecto" → "hablás directo con quien hace el trabajo"). Se **eliminó el duplicado `RequisitosCliente`** (sus requisitos ya viven en Logística).
+- **Verificación:** `npm run build` limpio (17 rutas); 1 `<h1>` por página; /servicios con galpón/camiones/acoplados/fachada/ladrillo presentes; piletas fuera del schema de /servicios; cero jerga técnica.
+- **Por qué / hipótesis:** la home ruteaba mal por "tipo de comprador" (enterraba restauración y ocultaba piletas al contratista) y /servicios le hablaba a una obra grande, no al aliado #1 (PYME con galpón, el trabajo más rentable). Alinear ambas debería mejorar la comprensión por intención y captar mejor obra/PYME.
+- **Resultado esperado y cuándo revisarlo:** más leads de PYME/galpón y obra/restauración; medir en Search Console (impresiones de "arenado industrial / de camiones / de galpón / de fachada") y en el mix de leads a las 4-6 semanas.
+- **Resultado real:** _(completar)_
+
 ## 2026-07-27 (2) — Landing /arenado-de-piletas reconstruida al mapa ideal + WhatsApp inline (Claude Code)
 
 - **Qué se hizo:**

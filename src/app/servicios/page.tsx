@@ -4,7 +4,7 @@ import { AlcanceOperativo } from "@/components/servicios/AlcanceOperativo"
 import { BloqueDiferencial } from "@/components/servicios/BloqueDiferencial"
 import { AutoridadRapida } from "@/components/servicios/AutoridadRapida"
 import { LogisticaCoordinacion } from "@/components/servicios/LogisticaCoordinacion"
-import { RequisitosCliente } from "@/components/servicios/RequisitosCliente"
+import { QueArenamos } from "@/components/servicios/QueArenamos"
 import { MitigacionRiesgo } from "@/components/servicios/MitigacionRiesgo"
 import { CasoDestacado } from "@/components/servicios/CasoDestacado"
 import CTASection from "@/components/common/CTASection"
@@ -13,11 +13,11 @@ import { SITE_URL, BUSINESS_ID, og } from "@/lib/siteConfig"
 export const metadata: Metadata = {
   title: "Servicios de arenado industrial",
   description:
-    "Arenado industrial y en obra en Buenos Aires: preparamos estructuras, tanques, fachadas y piletas, listas para pintar o revestir. Equipos propios, ~100 m² por día y coordinación en obra.",
+    "Arenado industrial, en obra y para PYMEs en Buenos Aires y AMBA: estructuras, tanques, fachadas, galpones, camiones e hierros, listos para pintar o revestir. Equipos propios, in situ.",
   alternates: { canonical: "/servicios" },
   openGraph: og(
     "Servicios de arenado industrial en Buenos Aires y AMBA",
-    "Arenado industrial y en obra: estructuras, tanques, fachadas y piletas listas para pintar o revestir. Equipos propios y coordinación en obra."
+    "Arenado industrial, en obra y en tu galpón: estructuras, tanques, fachadas, camiones e hierros listos para pintar o revestir. In situ, con equipo propio."
   ),
 }
 
@@ -26,21 +26,21 @@ const serviciosSchema = {
   "@graph": [
     {
       "@type": "Service",
-      name: "Arenado industrial y en obra",
-      serviceType: "Arenado y preparación de superficies",
+      name: "Arenado industrial y en galpón",
+      serviceType: "Arenado de estructuras metálicas, tanques e hierros",
       provider: { "@id": BUSINESS_ID },
       areaServed: "Buenos Aires y AMBA",
       description:
-        "Arenamos estructuras, tanques, hierros y fachadas en obra, planta o galpón, y las dejamos listas para pintar o revestir.",
+        "Arenamos estructuras metálicas, tanques, camiones, acoplados e hierros en tu galpón o planta, in situ. Sacamos óxido y pintura vieja y dejamos el metal listo para revestir.",
     },
     {
       "@type": "Service",
-      name: "Arenado de piletas y trabajos particulares",
-      serviceType: "Arenado y preparación de superficies",
+      name: "Arenado en obra y restauración",
+      serviceType: "Arenado de paredes, fachadas y vigas",
       provider: { "@id": BUSINESS_ID },
       areaServed: "Buenos Aires y AMBA",
       description:
-        "Arenamos piletas, fachadas y trabajos chicos in situ; sacamos pintura vieja y óxido y dejamos la superficie lista para repintar o revestir.",
+        "Arenado de paredes, ladrillo a la vista, fachadas y vigas en obra o restauración, para dejarlas listas para pintar o revestir.",
     },
     {
       "@type": "BreadcrumbList",
@@ -60,12 +60,12 @@ export default function ServiciosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviciosSchema) }}
       />
       <ServiciosHero />
+      <QueArenamos />
       <BloqueDiferencial />
       <CasoDestacado />
       <AlcanceOperativo />
       <LogisticaCoordinacion />
       <AutoridadRapida />
-      <RequisitosCliente />
       <MitigacionRiesgo />
       <CTASection/>
     </div>

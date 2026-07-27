@@ -3,17 +3,17 @@
 import { CalendarCheck, MapPin, Zap, FileCheck, Target, DoorOpen, Fence, UserCheck } from "lucide-react"
 
 const requisitos = [
-  { icon: DoorOpen, text: "Accesos definidos" },
-  { icon: FileCheck, text: "Permisos de intervención" },
-  { icon: Fence, text: "Corte de área si se decide clausurar" },
-  { icon: UserCheck, text: "Coordinación con encargado de obra" },
+  { icon: DoorOpen, text: "Que podamos acceder al lugar" },
+  { icon: Fence, text: "Un espacio para ubicar el equipo" },
+  { icon: UserCheck, text: "Definir con quién coordinamos (vos o el encargado de obra)" },
+  { icon: FileCheck, text: "Permisos, si el lugar los requiere (obra o vía pública)" },
 ]
 
 const logistica = [
-  { icon: CalendarCheck, text: "Coordinamos fases con el encargado de obra" },
-  { icon: MapPin, text: "Clausuramos zonas estratégicamente para intervenir y liberar rápido" },
-  { icon: Zap, text: "Compresores propios (no dependemos de energía de obra)" },
-  { icon: FileCheck, text: "Accesos y permisos acordados antes de iniciar" },
+  { icon: CalendarCheck, text: "Coordinamos día y horario con vos" },
+  { icon: MapPin, text: "Trabajamos por zonas: intervenimos y liberamos rápido" },
+  { icon: Zap, text: "Compresores propios (no dependemos de la energía del lugar)" },
+  { icon: FileCheck, text: "Accesos y permisos acordados antes de empezar" },
 ]
 
 const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-white"
@@ -27,10 +27,10 @@ export function LogisticaCoordinacion() {
     <section className={sectionClass} aria-label="Logística y requisitos">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className={titleClass}>Logística y coordinación</h2>
-          
+          <h2 className={titleClass}>Coordinamos todo, sin frenar tu obra ni tu día</h2>
+
           <p className="text-gray-700 text-base leading-relaxed mb-6 text-center">
-            El mayor problema no es el arenado, sino el impacto en el cronograma. Por eso coordinamos todo con el encargado y trabajamos por zonas para intervenir y liberar lo antes posible.
+            Coordinamos el día y el horario que te sirva y trabajamos por zonas para intervenir y liberar lo antes posible —sin frenar tu obra, tu producción ni tu casa. Llevamos compresores propios, así que no dependemos de la energía del lugar.
           </p>
 
           <div className="rounded-xl border border-gray-200 bg-gray-50/50 p-5 md:p-6 mb-6">

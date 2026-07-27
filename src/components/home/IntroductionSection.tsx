@@ -24,7 +24,7 @@ export function IntroductionSection() {
         <div className="max-w-3xl mx-auto">
           {/* Párrafo de posicionamiento */}
           <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center mb-12 md:mb-14">
-            Hacemos arenado sin vueltas: limpiamos y preparamos superficies para dejarlas listas para pintar o revestir. Trabajamos in situ —en obra, en tu galpón o en tu casa— sobre estructuras, tanques, fachadas, hierros y piletas, con equipos propios y plazos claros.
+            ¿Se te descascara la pintura o tenés óxido y superficies viejas? El arenado es como una lija potente: saca de una toda la pintura vieja, el óxido y lo descascarado, y deja la superficie lista para pintar o revestir. Hacemos arenado sin vueltas, in situ —en obra, en tu galpón o en tu casa— sobre estructuras, tanques, fachadas, hierros y piletas, con equipo propio y plazos claros.
           </p>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">

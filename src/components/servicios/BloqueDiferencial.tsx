@@ -5,7 +5,7 @@ import { Zap, BadgeDollarSign, Handshake } from "lucide-react"
 const items = [
   { icon: Zap, text: "Podemos aumentar equipos para acortar tiempos." },
   { icon: BadgeDollarSign, text: "Precios competitivos frente al mercado." },
-  { icon: Handshake, text: "Coordinación directa con el encargado de proyecto." },
+  { icon: Handshake, text: "Hablás directo con quien hace el trabajo." },
 ]
 
 const sectionClass = "py-10 md:py-14 bg-gray-50"

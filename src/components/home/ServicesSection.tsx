@@ -14,22 +14,22 @@ import H2 from "../common/H2"
 
 const services = [
   {
-    title: "Arenado Industrial",
+    title: "Arenado en obra, industria y galpones",
     description:
-      "Arenamos estructuras, tanques, hierros y fachadas en obra, en tu planta o en tu galpón. Vamos con equipos propios, trabajamos por sectores para no frenarte y te dejamos la superficie lista para pintar o revestir.",
+      "Arenamos estructuras, tanques, fachadas, camiones e hierros en obra, en tu planta o en tu galpón. Vamos con equipo propio, in situ, y te dejamos la superficie lista para pintar o revestir.",
     image: "/images/services/arenadoIndustrial.PNG",
     link: "/servicios",
     cta: "Ver servicios de arenado",
-    badge: "Empresas",
+    badge: "Obra · Industria · PYME",
   },
   {
-    title: "Arenado Particular",
+    title: "Arenado de piletas",
     description:
-      "Renovamos piletas, fachadas y trabajos chicos in situ: sacamos pintura vieja y óxido y te dejamos la superficie lista para repintar o revestir. Vamos con el equipo; no trasladás nada.",
+      "Sacamos toda la pintura vieja de tu pileta o piscina y la dejamos lista para repintar o revestir. Vamos a tu casa con el equipo; no trasladás nada.",
     image: "/images/services/arenadoParticular.JPG",
     link: "/arenado-de-piletas",
     cta: "Ver arenado de piletas",
-    badge: "Particulares",
+    badge: "Piletas y piscinas",
   },
 ]
 
