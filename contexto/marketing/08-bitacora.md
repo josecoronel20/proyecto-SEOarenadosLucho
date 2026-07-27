@@ -12,6 +12,14 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-07-27 (4) — Guía de Google Business Profile (Claude Code)
+
+- **Qué se hizo:** guía completa de setup/optimización del GBP (`12-google-business-profile.md`), a medida de las decisiones del dueño (27/07): ① la ficha **ya existe → reclamar + optimizar**; ② **negocio a domicilio (SAB)** → sin dirección pública, zonas del AMBA; ③ teléfono público = **WhatsApp del negocio**. Incluye: reclamo/verificación, categorías (con las **prohibidas a evitar**: mantenimiento de piscinas/pintura/granallado), descripción lista para pegar, servicios por cluster, fotos, el **motor de reseñas** (pedir a cada cliente + plantilla de WhatsApp), posts estacionales y la conexión con el sitio.
+- **Pendiente (lo ejecuta el dueño / sesión de Chrome):** reclamar y optimizar la ficha; **avisar la URL** de la ficha para que Claude sume `sameAs` en `src/lib/siteConfig.ts` y conecte la entidad del sitio con el GBP.
+- **Por qué / hipótesis:** GBP + reseñas es la palanca #1 de SEO local; hoy la ficha no está optimizada ni conectada al sitio.
+- **Resultado esperado y cuándo revisarlo:** aparecer en Maps / paquete local por "arenado + zona"; llegar a **≥5 reseñas reales** (criterio de salida de la Fase 2 en `02-estrategia-seo.md`). Revisar en las Estadísticas del perfil (cruce mensual).
+- **Resultado real:** _(completar)_
+
 ## 2026-07-27 (3) — Home y /servicios alineadas al criterio del ideal (Claude Code)
 
 - **Qué se hizo:** se llevó home y /servicios al mismo criterio de la landing de piletas + los hallazgos de la auditoría (rutear por intención, lenguaje PYME no técnico, sin canibalización):
