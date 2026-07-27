@@ -2,12 +2,11 @@
 
 **Decisión tomada (jul 2026):** el sitio Next.js de este repo se publica en **Vercel** bajo **`https://www.arenadoslucho.com`** y el sitio Framer se da de baja. Este archivo es el checklist para no perder SEO en el proceso. **Nada de lo que sigue en SEO/Ads rinde hasta completar esto.**
 
-## Estado (actualizado 25/07/2026, tarde)
+## Estado (actualizado 26/07/2026)
 
-- ✅ **DNS migrado**: `www.arenadoslucho.com` ya apunta a Vercel y sirve el sitio Next.js. Framer fuera.
-- ✅ **`SITE_URL` corregido** a `.com` en `layout.tsx`, `sitemap.ts` y `robots.ts` (en la carpeta local — **falta commit + push**).
-- ⚠️ **`/robots.txt` y `/sitemap.xml` devuelven 404 en producción** — el deploy es anterior a esos archivos; el próximo push debería resolverlo. **Verificar tras el deploy.**
-- Pendientes: pasos **2** (redirects 301), **4** (post-corte: Search Console, GA4, Ads) y **5** (seguimiento) del checklist de abajo.
+- ✅ **DNS migrado**: `www.arenadoslucho.com` en Vercel sirviendo el sitio Next.js. Framer fuera.
+- ✅ **`SITE_URL` corregido, commiteado y desplegado** (PR #1, merge `9307485`): `/robots.txt` y `/sitemap.xml` **verificados 200 en producción**, sitemap con 11 URLs todas `.com`.
+- Pendientes: pasos **2** (redirects 301 del apex y rutas legacy), **4** (post-corte: verificar propiedad en Search Console + enviar sitemap, GA4/GTM en el sitio nuevo, revisar URLs de Ads) y **5** (seguimiento semanas 2-6) del checklist de abajo.
 - Dato histórico: `arenadoslucho.com.ar` (con y sin www) **nunca resolvió en DNS**; no usar ese dominio en ningún lado.
 
 ---

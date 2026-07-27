@@ -16,7 +16,7 @@ const services = [
   {
     title: "Arenado Industrial",
     description:
-      "Servicio orientado a empresas que necesitan preparación profesional de superficies metálicas para mantenimiento, restauración o procesos productivos. Enfocado en resultados uniformes, planificación clara y reducción de tiempos de parada.",
+      "Arenamos estructuras, tanques, hierros y fachadas en obra, en tu planta o en tu galpón. Vamos con equipos propios, trabajamos por sectores para no frenarte y te dejamos la superficie lista para pintar o revestir.",
     image: "/images/services/arenadoIndustrial.PNG",
     link: "/servicios",
     badge: "Empresas",
@@ -24,7 +24,7 @@ const services = [
   {
     title: "Arenado Particular",
     description:
-      "Solución práctica para personas que buscan limpiar, restaurar o renovar superficies de forma rápida y prolija. Ideal tanto para elementos piezas metálicas y vehículos como para piletas y fachadas.",
+      "Renovamos piletas, fachadas y trabajos chicos in situ: sacamos pintura vieja y óxido y te dejamos la superficie lista para repintar o revestir. Vamos con el equipo; no trasladás nada.",
     image: "/images/services/arenadoParticular.JPG",
     link: "/contacto",
     badge: "Particulares",

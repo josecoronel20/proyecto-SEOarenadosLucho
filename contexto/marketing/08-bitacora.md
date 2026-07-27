@@ -12,6 +12,69 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-07-26 (7) — Pivote de copy del sitio EJECUTADO en el código (Claude Code)
+
+- **Qué se hizo:** ejecutados los **pasos 1 y 2 de Fase 1** del ROADMAP. Eliminada toda promesa técnica (Sa3, ISO 8501, metal blanco, perfil de anclaje, "normativa internacional") del sitio, metadata y JSON-LD, reencuadrando al mensaje **"arenado sin vueltas, in situ, listo para pintar o revestir"** con piletas y PYMEs/galpones visibles.
+  - **Home:** hero, `IntroductionSection` (listas sí/no realizamos), `ValueBullets` (bullet ISO 8501/anclaje → in situ / rápido / listo para pintar), `ServicesSection` (2 cards reescritas; se quitó "vehículos/piezas" que contradecía la lista "no realizamos").
+  - **/servicios:** metadata, hero y `MitigacionRiesgo` (objeción "Sa3/ISO" → "¿queda bien para pintar?").
+  - **FAQ:** metadata, subtítulo y **14 preguntas nuevas** del comprador simple (in situ, piletas, polvo, precio, "¿qué es el arenado?", "¿granallado? no").
+  - **Casos:** 4 casos reescritos en `projectsInfo.json` (fuera ISO 8501/Sa 2/Sa 3/normativa), tipo `parametrosTecnicos` + labels del detalle (sección "Parámetros técnicos" → **"Ficha del trabajo"**), `CasosHero` y metadata de casos.
+  - **Caso nuevo publicado (paso 2):** `arenado-pileta` (id 5) con las **6 fotos** de `public/images/services/arenadoParticular/Piletas/` — texto simple (qué se hizo / tiempo / lista para repintar o revestir). Entra a sitemap, `/casos-de-exito`, filtro y home.
+  - **Verificación:** auditoría multi-agente (términos prohibidos, coherencia, QA pileta, invariantes) → **GTM/dataLayer/Formspree INTACTOS**; 6 hallazgos menores corregidos. `npm run build` limpio (16/16, 5 casos SSG).
+- **Por qué / hipótesis:** el sitio prometía lo que el negocio NO hace → leads no calificados y riesgo de reclamo. Alinear el copy es **bloqueante** del relanzamiento de Ads (Fase 3).
+- **Pendiente:** aún **NO commiteado** (a pedido del dueño). Fase 1 pasos 3 (landing `/arenado-de-piletas`), 4 (redirects 301) y 5 (commit+push+verificar) siguen abiertos. Dato a confirmar por el dueño: **plazo real de una pileta estándar** (se dejó cualitativo, sin número, para no fabricar el dato).
+- **Resultado esperado y cuándo revisarlo:** menos consultas técnicas/granallado, más obra/piletas; medir en el % de leads por rubro del cruce mensual.
+- **Resultado real:** _(completar)_
+
+## 2026-07-26 (6) — Auditoría de coherencia de TODA la carpeta contexto
+
+- **Qué se hizo:** revisión exhaustiva de los 22 archivos técnicos + 12 de marketing + scripts buscando contradicciones con las decisiones de este chat. Corregido:
+  - **Restos del posicionamiento técnico viejo:** `07-seo-tecnico` (regla "no diluir con piscinas/particular" ANULADA y reemplazada por la regla del pivote), `13-workflow` (prioridad "autoridad técnica ISO" → "confianza por prueba real"), `20-prompts` (3 plantillas pedían usar sa3/iso y quitar piletas — corregidas), `08-google-ads-y-landings` (2 filas con Sa3), `06-google-ads-scripts` (ejemplo con el grupo eliminado norma-sa3-iso).
+  - **Banners de "copy en pivote"** en `03-rutas` y `07-seo-tecnico`: sus tablas documentan el sitio ACTUAL (aún con Sa3/ISO) y se actualizan al pivotar cada página.
+  - **ADR-018 nuevo** en `18-decisiones-tecnicas`: registra el pivote y anula parcialmente ADR-002/ADR-013 (piletas ya no es "secundario"; `/arenado-de-piletas` aprobada).
+  - **Datos vencidos:** `01-migracion` (push hecho, robots/sitemap 200 vía PR #1), pendiente de robots en `07-seo-tecnico` marcado resuelto, `17-roadmap` (fila de landings actualizada a piletas/in-situ), nota de arranque a 5.000/día en `06-scripts` y `09-automatizaciones`.
+  - **KPI de transición:** `07-medicion` — "% calificados" redefinido como "% obra/PYME"; piletas y trabajos chicos son leads VÁLIDOS.
+  - `09-automatizaciones`: llamadas NO como conversión primaria hasta verificar call tracking (coherente con dossier §4.5); READMEs de contexto y marketing actualizados como routers.
+- **Decisión de estructura:** se MANTIENE el sistema de archivos por tema (no se fusionan) — cada archivo tiene un rol único y los asistentes navegan mejor así; el riesgo real era la incoherencia, no la cantidad. Los README de ambas carpetas quedan como routers.
+- **Resultado real:** carpeta congruente al 26/07/2026; próxima revisión de coherencia recomendada tras el pivote de copy del sitio.
+
+## 2026-07-26 (5) — Datos operativos finales: zona, fotos, rentabilidad y caja (respuestas del dueño)
+
+- **Contexto aportado (Q&A):**
+  - **Zona:** Buenos Aires/AMBA base; viajan lejos (La Plata, interior cercano) **si la plata lo vale** → geo de Ads: AMBA; radio ampliable solo en grupos de ticket alto (obra, pymes-in-situ).
+  - **Fotos:** hay MUCHAS reales de trabajos → la galería de casos se arma ya con material existente (acción inmediata en `04-plan-de-contenidos.md`).
+  - **Rentabilidad por día:** 1º galpón PYME (camiones/tanques/hierros) → el grupo `pymes-in-situ` recibe prioridad de puja dentro de la campaña 1.
+  - **Caja:** arranque a **~5.000/día (≈150.000/mes)**, escalando al tope de 300.000 recién cuando los leads se conviertan en trabajos cobrados. Reparto inicial: Obra-Industrial 3.000 · Piletas 1.250 · General-Marca 750. ⚠️ Al relanzar, bajar el presupuesto nativo de la campaña vieja (quedó en 10.000/día).
+- **Archivos tocados:** `00-proyecto-general` (datos operativos), `05-operacion` (presupuesto de arranque + geo + prioridad pymes), `04-plan-de-contenidos` (galería inmediata), `00-vision` (objetivos 90 días).
+- **Resultado real:** _(completar)_
+
+## 2026-07-26 (4) — PYMEs con galpón como aliado #1 + regla "todo in situ" (contexto del dueño)
+
+- **Contexto aportado:** (1) **no hay taller** — las piezas chicas se reciben en el domicilio y hay que conseguir terreno prestado para arenarlas → el negocio sano es **in situ** (casa, obra, galpón); (2) las **PYMEs con galpón son el mejor aliado hoy**: terreno grande (sin quejas de vecinos — queja frecuente en domicilios), muchas estructuras metálicas, piden restaurar camiones, carros, tanques y hierros grandes — se cobra bien y no piden nada técnico; (3) mentalidad de copy: el arenado es una "lija potente" — lo que se estropeó con el tiempo se arena y se reviste de nuevo.
+- **Qué se hizo:** Cluster 2 del mapa reescrito como "Industrial / PYMEs con galpón" con keywords nuevas (arenado a domicilio/in situ, quitar/sacar óxido, restaurar metal, arenado de camiones [prueba — chasis/carrocería siguen negativas], arenado de galpón); grupo nuevo `pymes-in-situ` en la campaña Obra-Industrial con RSA propio ("vamos con nuestro equipo a tu galpón"); `00-proyecto-general` con la restricción "no hay taller → todo in situ" y PYMEs como cliente prioritario de hoy; FAQ suma "¿vienen a domicilio?" y "¿arenan en mi galpón?"; backlog de contenidos suma landing "Arenado in situ / a domicilio" como candidata fuerte y caso PYME.
+- **Resultado esperado y cuándo revisarlo:** leads de PYMEs (camiones/tanques/estructuras en galpón) vía el grupo nuevo y las búsquedas "sin jerga" de óxido; validar en SQR en las primeras 4-6 semanas; si el grupo trae volumen, crear la landing in situ.
+- **Resultado real:** _(completar)_
+
+## 2026-07-26 (3) — Piletas afinado: estacionalidad, "sin jerga" y contratistas (contexto del dueño)
+
+- **Contexto aportado:** (1) es invierno y los trabajos de pileta son de verano → hoy hay poco trabajo, pero se puede **cazar la anticipación** (el previsor que la quiere lista antes de la temporada); (2) el dueño de casa muchas veces **no sabe qué es "arenado"** → busca el problema: "remover/sacar pintura de pileta"; (3) muchos contactos históricos de piletas eran **contratistas** que remodelan piletas (quitan pintura → revisten/pintan) — cliente recurrente.
+- **Qué se hizo:** Cluster 3 del mapa de keywords dividido en 3a (con jerga) y **3b (sin jerga — gap sin explotar)** + nota de estacionalidad operativa; campaña `AR-Search-Piletas` ahora con 2 grupos (pileta-arenado / pileta-sin-jerga), RSA en dos variantes (dueño de casa / contratistas) y regla estacional (invierno encendida con mensaje de anticipación, escalar desde ago-sep); landing `/arenado-de-piletas` con 3 secciones obligatorias (¿se te descascara la pintura?, trabajamos con contratistas, bloque estacional rotativo); FAQ suma "¿cómo saco la pintura vieja de la pileta?" y "¿conviene arenar en invierno?".
+- **Resultado esperado y cuándo revisarlo:** en invierno, leads de piletas de mejor calidad (previsores + contratistas) a CPC bajo; validar en el SQR que las búsquedas "sin jerga" existen y convierten (primeras 4-6 semanas de campaña).
+- **Resultado real:** _(completar)_
+
+## 2026-07-26 (2) — PIVOTE DE POSICIONAMIENTO: el negocio real (decisión del dueño)
+
+- **Contexto aportado por el dueño:** NO hacemos arenado técnico medido (Sa3, ISO 8501, anclaje, informes) **ni granallado** — por eso se rechazó el trabajo de naves ferroviarias pese a la plata. Hacemos arenado "sin vueltas": paredes/fachadas para repintar, **muchas piletas**, tanques como limpieza, vigas para antióxido básico. Hoy hay pocos trabajos → se toma casi todo; la **transición** apunta a obras en construcción y restauración de edificios (tickets altos sin requisitos técnicos). Cliente objetivo: arquitecto/encargado/constructora que busca algo sencillo, rápido y bien hecho — y que también busca "arenado industrial" (hipótesis validada por el historial: mejor keyword de la cuenta).
+- **Decisiones:**
+  - ✂️ **Copy del sitio: reescribir TODO** quitando Sa3/ISO/metal blanco (plan en `02-estrategia-seo.md` Fase 1). Hasta entonces, RSA nuevos sin promesas técnicas.
+  - 🏊 **Piletas: campaña propia (~25% del presupuesto)** + landing `/arenado-de-piletas` aprobada. `pileta/piscina` DEJA de ser negativa (solo se usa como negativa de campaña industrial para rutear).
+  - ⛔ **Negativas técnicas a nivel cuenta:** granallado, granalla, sa3, iso 8501, metal blanco, perfil de anclaje, rugosidad (+ ya cargadas en la lista negra del autopilot).
+  - 🔄 **Estructura Ads corregida:** 3 campañas (Obra-Industrial ~6.000/día · Piletas ~2.500 · General-Marca ~1.500) — se **elimina** el grupo `norma-sa3-iso` del plan del dossier (`10-…` §6).
+  - 🚪 Trabajos chicos (madera, piezas, vehículos): se **aceptan** si llegan pero no se les compra tráfico (ROI histórico malo); revisar por trimestre.
+- **Archivos realineados:** `00-proyecto-general`, `.cursorrules`, `marketing/00-vision`, `02-estrategia-seo`, `03-keywords-maestro` (reescrito con historial real), `04-plan-de-contenidos`, `05-operacion` (Fase 2 nueva), `10-auditoria` (§6), `08-google-ads-y-landings` (mensajes prohibidos), `ads-scripts/05-autopilot.js` (lista negra técnica).
+- **Resultado esperado y cuándo revisarlo:** leads mejor calificados (menos consultas técnicas, más obra/piletas) tras el pivote de copy + relanzamiento; medir con el % de leads por rubro en el cruce mensual.
+- **Resultado real:** _(completar)_
+
 ## 2026-07-26 — Sesión de Chrome: tope de gasto real + scripts instalados
 
 - **Qué se hizo (sesión supervisada en la cuenta de Ads 953-841-6905):**

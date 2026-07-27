@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next"
 import { getAllSlugs } from "@/lib/getProjectBySlug"
-
-const SITE_URL = "https://www.arenadoslucho.com"
+import { SITE_URL } from "@/lib/siteConfig"
 
 const staticPaths = [
   "",

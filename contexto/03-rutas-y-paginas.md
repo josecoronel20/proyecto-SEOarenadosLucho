@@ -1,6 +1,8 @@
 # Rutas y páginas
 
-Sitio: **https://www.arenadoslucho.com**  
+Sitio: **https://www.arenadoslucho.com**
+
+> ⚠️ **Pivote de copy en curso (26/07/2026):** las descripciones de objetivo/metadata de este archivo reflejan el sitio ACTUAL, que aún promete Sa3/ISO 8501. Por decisión del dueño ese copy se reescribe (sin promesas técnicas; piletas y PYMEs in situ visibles) — plan en `marketing/02-estrategia-seo.md` Fase 1. Al pivotar cada página, actualizar acá su descripción.  
 Nav principal (Header/Footer): Inicio, Servicios, Casos de éxito, Preguntas frecuentes, Contactanos.
 
 ---

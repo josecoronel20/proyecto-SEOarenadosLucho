@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import WppBtn from "@/components/common/WppBtn";
-
-const SITE_URL = "https://www.arenadoslucho.com";
+import { SITE_URL, BUSINESS, BUSINESS_ID } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -13,9 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Arenados Lucho",
   },
   description:
-    "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
-  keywords:
-    "arenado, sandblasting, preparación de superficies, arenado industrial, arenado particular, Buenos Aires",
+    "Arenado en Buenos Aires: dejamos estructuras, tanques, fachadas y piletas listas para pintar o revestir. Trabajamos in situ, con equipos propios y presupuesto sin costo.",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
@@ -23,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
     description:
-      "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
+      "Arenado en Buenos Aires: dejamos estructuras, tanques, fachadas y piletas listas para pintar o revestir. Trabajamos in situ, con equipos propios y presupuesto sin costo.",
     type: "website",
     locale: "es_AR",
     url: SITE_URL,
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Arenado industrial profesional en Buenos Aires | Arenados Lucho",
     description:
-      "Arenado profesional y preparación de superficies para pintura y revestimiento. Equipos propios. Presupuesto rápido y atención por WhatsApp.",
+      "Arenado en Buenos Aires: dejamos estructuras, tanques, fachadas y piletas listas para pintar o revestir. Trabajamos in situ, con equipos propios y presupuesto sin costo.",
   },
   robots: {
     index: true,
@@ -47,51 +44,55 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#18415A",
+};
+
 // Structured Data para SEO
 function generateStructuredData() {
-  return [
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Arenados Lucho",
-      url: SITE_URL,
-      logo: `${SITE_URL}/images/logo-solo-azul.png`,
-      description:
-        "Empresa especializada en arenado industrial y preparación de superficies metálicas en Buenos Aires. Planta, obra y estructuras de gran escala conforme ISO 8501.",
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        availableLanguage: "Spanish",
-        areaServed: "AR",
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: BUSINESS.name,
+        inLanguage: "es-AR",
+        publisher: { "@id": BUSINESS_ID },
       },
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Buenos Aires",
-        addressRegion: "Buenos Aires",
-        addressCountry: "AR",
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@id": BUSINESS_ID,
+        name: BUSINESS.name,
+        url: SITE_URL,
+        logo: BUSINESS.logo,
+        image: BUSINESS.images,
+        email: BUSINESS.email,
+        telephone: BUSINESS.telephone,
+        description: BUSINESS.description,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Buenos Aires",
+          addressRegion: "Buenos Aires",
+          addressCountry: "AR",
+        },
+        areaServed: [
+          { "@type": "City", name: "Buenos Aires" },
+          { "@type": "AdministrativeArea", name: "Gran Buenos Aires (AMBA)" },
+        ],
+        openingHours: BUSINESS.openingHours,
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          telephone: BUSINESS.telephone,
+          email: BUSINESS.email,
+          availableLanguage: "Spanish",
+          areaServed: "AR",
+        },
       },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Arenados Lucho",
-      image: `${SITE_URL}/images/logo-solo-azul.png`,
-      description:
-        "Arenado industrial, metal blanco (Sa3) y coordinación en obra en Buenos Aires y AMBA.",
-      url: SITE_URL,
-      email: "arenadoslucho@hotmail.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Buenos Aires",
-        addressRegion: "Buenos Aires",
-        addressCountry: "AR",
-      },
-      areaServed: [
-        { "@type": "City", name: "Buenos Aires" },
-      ],
-      openingHours: "Mo-Sa 08:00-18:00",
-    },
-  ];
+    ],
+  };
 }
 
 const structuredData = generateStructuredData();

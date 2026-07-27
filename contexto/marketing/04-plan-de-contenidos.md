@@ -1,47 +1,63 @@
 # Plan de contenidos
 
-Qué contenido crear, en qué orden y con qué criterio. El objetivo NO es "tener un blog": es cubrir intenciones del mapa de keywords (`03-keywords-maestro.md`) con el mínimo de páginas de máxima calidad.
+> Actualizado 26/07/2026 al posicionamiento real (obra/restauración + piletas + limpieza; sin promesas técnicas). Todo contenido ataca una keyword de `03-keywords-maestro.md` y termina en CTA (WhatsApp o `/contacto`).
 
-## Principios
+## Prioridad #1 — Landing `/arenado-de-piletas` (aprobada)
 
-1. **Casos de éxito > blog.** En este rubro, un caso con fotos reales y datos (m², plazo, norma) convence y posiciona más que diez artículos genéricos.
-2. Cada pieza ataca **una** keyword/intención del mapa maestro y termina en CTA (`/contacto` o WhatsApp).
-3. Nada de thin content (regla de `.cursorrules`): si no hay prueba técnica o social que aportar, no se publica.
-4. Copy en español (Argentina), tono técnico-directo, como el resto del sitio.
+La mejor keyword de conversión del historial de Ads y con búsqueda orgánica estable. Estructura sugerida: H1 "Arenado de piletas para repintar o revestir" · fotos antes/después reales · proceso en 3 pasos (llegamos con equipo propio → arenamos → queda lista para pintar/revestir) · plazos típicos (1 día para pileta estándar, si es verdad) · zonas (AMBA) · qué NO incluye (pintado) · CTA WhatsApp arriba y abajo. Recibe la campaña de Ads de piletas. Al publicarla: metadata propia, entrada en sitemap, caso de pileta enlazado.
 
-## Motor principal: casos de éxito (1–2 por mes)
+Tres secciones obligatorias (contexto del dueño, 26/07):
 
-Flujo por cada obra terminada:
+1. **"¿Se te descascara la pintura de la pileta?"** — para el dueño que NO sabe qué es arenado: explicar en dos líneas que el arenado es la forma más rápida de sacar toda la pintura vieja y dejar la pileta lista para repintar o revestir. Captura las búsquedas "remover/sacar pintura de pileta" (Cluster 3b).
+2. **"Trabajamos con contratistas"** — muchos clientes históricos remodelan piletas (quitan pintura → revisten/pintan): ofrecer tercerizar el arenado, precio por obra, turnos rápidos, varias piletas por temporada. Cliente recurrente = oro.
+3. **Bloque estacional (rotar el copy 2 veces al año):** invierno/otoño → "Anticipate: pileta lista antes del verano, sin apuro y con turno inmediato"; primavera/verano → "Llegá con la pileta lista: turnos de esta semana". Registrar cada rotación en bitácora.
 
-1. En obra: fotos antes/durante/después (horizontales, buena luz), datos: tipo de estructura, m², plazo, grado de limpieza (Sa2½/Sa3), desafío logístico.
-2. Cargar en `src/lib/projectsInfo.json` (`idSection` = slug único; ver `contexto/03-rutas-y-paginas.md`).
-3. Título del caso = keyword del Cluster 3 cuando sea posible (ej. "Arenado de tanque de 400 m² en planta alimenticia").
-4. Verificar checklist SEO de `contexto/07-seo-tecnico.md` y registrar en `08-bitacora.md`.
+## Prioridad #2 — Pivote del contenido existente
 
-**Backlog de casos** (completar con obras reales): silo agroindustrial · galpón/nave logística · estructura de puente · cañerías/piping · equipo pesado.
+Parte de la Fase 1 de `02-estrategia-seo.md` (reescritura sin Sa3/ISO). Incluye reencuadrar los casos de éxito actuales (nave, tanque, pasarela, estructura naval) como **limpieza y preparación** — cuidado: no presentarlos como trabajos certificados que sugieran que tomamos licitaciones técnicas.
 
-## Motor secundario: FAQ (crecimiento continuo)
+## Acción inmediata — la galería ya se puede armar (inventario verificado 26/07)
 
-Cada pregunta repetida por WhatsApp/formulario se convierte en entrada del FAQ (`FaqAccordion.tsx`). Prioridad inicial (Cluster 4): cuánto tarda un arenado · polvo y mitigación · qué es Sa3/ISO 8501 · arenado vs granallado vs hidrolavado · "¿cuánto cuesta?" respondida con los factores que definen el precio + CTA a visita técnica sin costo.
+**Las fotos ya están en el repo** (`public/images/services/`). Inventario real:
 
-Al ampliar el FAQ, implementar **schema FAQPage** (pendiente listado en `contexto/07-seo-tecnico.md`).
+| Carpeta | Fotos | Estado |
+|---------|-------|--------|
+| `arenadoIndustrial/` Nave · EstructuraNaval · Pasarela · Tanque | 7+10+9+6 | ✅ Publicadas como los 4 casos actuales — pero con **texto técnico a reescribir** (ver abajo) |
+| `arenadoParticular/Piletas/` | 6 | ⭐ **SIN PUBLICAR** — materia prima del caso de pileta Y de la landing `/arenado-de-piletas` |
+| `arenadoParticular/Piezas/` | 10 | Sin publicar — posible caso "trabajos puntuales" (prioridad baja: no incentivar piezas sin taller) |
+| `arenadoParticular/Vehículos/` | 10 | Sin publicar — usar solo si algún día se activa esa línea (hoy no se compra ese tráfico) |
 
-## Backlog condicional (requiere decisión explícita — regla de CLAUDE.md)
+⚠️ **Los 4 casos existentes en `src/lib/projectsInfo.json` están escritos en el lenguaje viejo**: campos `parametrosTecnicos` con "ISO 8501-1", "grado Sa 2/Sa 3", "normativaReferencia". La reescritura es parte del pivote de copy (Fase 1): reencuadrar como limpieza/preparación con resultado visible, eliminar los campos de norma (o reemplazarlos por datos simples: m², días, para qué quedó lista), y ajustar el componente de detalle de caso que renderiza esos campos. El dueño puede sumar fotos mejores del celular si las hay, pero **no hace falta esperar**: con lo que hay en el repo alcanza para arrancar.
 
-| Idea | Condición para hacerla |
-|------|------------------------|
-| Landings por rubro (`/servicios/arenado-tanques`, etc.) | Si Search Console/Ads muestran volumen real por rubro que `/servicios` no captura |
-| Landing "Arenado particular" dedicada | Si se decide invertir en la línea particular |
-| Página "Zonas de cobertura" | Si aparecen búsquedas "arenado + {localidad}" con volumen (La Plata, Zona Norte, etc.) |
-| Blog técnico | Solo tras agotar casos + FAQ; empezaría por comparativas de método |
+## Motor continuo — Casos de éxito reales (1-2/mes)
 
-## Calendario tipo (mes normal)
+Por cada trabajo terminado: fotos antes/durante/después + datos simples (tipo de superficie, m², días, para qué quedó lista). Backlog por rubro, en orden de la transición:
 
-| Semana | Acción |
-|--------|--------|
-| 1 | Publicar caso de éxito del mes |
-| 2 | Agregar 1–2 preguntas nuevas al FAQ desde consultas reales |
-| 3 | Revisar Search Console → oportunidades para el mapa de keywords |
-| 4 | Refrescar copy/metadata de UNA landing si los datos lo justifican |
+| Rubro | Ejemplos de casos a documentar | Keyword que ataca |
+|-------|-------------------------------|-------------------|
+| Obra/restauración | pared de ladrillo recuperada, fachada, edificio antiguo | arenado de paredes / fachada / restauración |
+| **PYME / galpón (in situ)** | camión o acoplado restaurado, tanque, hierros grandes en el galpón del cliente | arenado a domicilio / quitar óxido / arenado de camiones |
+| Piletas | pileta de hormigón lista para revestir | arenado de piletas |
+| Limpieza industrial | tanque, vigas con antióxido básico, estructura | limpieza de tanques / arenado de vigas |
+| Trabajos chicos | pieza o portón puntual (si sale uno lindo) | cola larga genérica |
 
-Todo lo publicado se registra en `08-bitacora.md`.
+Flujo técnico: `src/lib/projectsInfo.json` (slug único) → checklist `contexto/07-seo-tecnico.md` → bitácora.
+
+## Motor continuo — FAQ del comprador simple
+
+Cada pregunta repetida del WhatsApp entra al FAQ. Semilla (reemplaza a las de norma): ¿cuánto tarda? · ¿hacen mucho polvo? ¿molesta a los vecinos? (honesto: en domicilios coordinamos horarios y contención; en galpones/terrenos grandes no hay problema) · **¿vienen a domicilio? ¿tengo que llevar la pieza a un taller? → trabajamos IN SITU: vamos con el equipo a tu casa, obra o galpón** · ¿queda listo para pintar? · ¿hacen piletas? ¿la pintan también? (no — decir qué sigue después) · **¿cómo saco la pintura vieja de la pileta? / ¿qué es el arenado?** (la puerta de entrada del que no conoce la técnica — long-tail SEO puro) · ¿conviene arenar la pileta en invierno? (sí: turno inmediato y llegás al verano) · ¿arenan camiones/tanques/estructuras en mi galpón? (sí — el caso ideal) · ¿trabajan dentro de una obra en marcha? · ¿cuánto cuesta? (responder con factores + visita sin costo) · **¿hacen granallado o arenado certificado? → NO** (respuesta corta y amable: filtra al comprador técnico gratis, antes de que llame).
+
+Al superar ~8 preguntas: schema `FAQPage` (pendiente en `contexto/07-seo-tecnico.md`).
+
+## Backlog condicional (requiere decisión + bitácora)
+
+| Idea | Condición |
+|------|-----------|
+| Landing "Arenado in situ / a domicilio" (PYMEs y galpones) | Si el grupo `pymes-in-situ` de Ads muestra demanda — candidata fuerte: es EL diferencial operativo (no hay taller, vamos nosotros) |
+| Landing "Arenado para obras y constructoras" | Si la campaña de obra genera volumen y `/servicios` queda corta |
+| Página "Zonas" | Si aparecen búsquedas "arenado + localidad" en SQR/Search Console |
+| Landing trabajos chicos/piezas | Solo si el Cluster 5 muestra demanda rentable — ojo: sin taller, no incentivar piezas sueltas |
+
+## Calendario tipo mensual
+
+Semana 1: caso del mes · Semana 2: 1-2 FAQs nuevas del WhatsApp real · Semana 3: revisar Search Console y SQR → mapa de keywords · Semana 4: retocar UNA landing con datos. Todo a `08-bitacora.md`.

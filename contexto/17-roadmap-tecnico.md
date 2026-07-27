@@ -65,7 +65,8 @@ Prioridades técnicas alineadas a **conversión B2B industrial** y stack simple.
 |-------|------------|
 | API `/api/contact` + rate limit | Volumen spam / legal |
 | CMS para casos y copy | Frecuencia de edición sin dev |
-| Landings `/arenado-industrial` y particular | Estrategia Ads separada |
+| **Landing `/arenado-de-piletas`** | ✅ **DECISIÓN TOMADA (26/07/2026)** — prioridad de contenido #1, ver `marketing/04-plan-de-contenidos.md` |
+| Landing "arenado in situ / a domicilio" (PYMEs) | Si el grupo `pymes-in-situ` de Ads muestra demanda |
 | Blog industrial | Content marketing |
 | Página zonas de cobertura única | SEO local |
 | Click-to-call con número en schema + header | Datos de negocio |

@@ -19,7 +19,7 @@ Qué se mide, dónde se mira y con qué rutina. La implementación técnica del 
 | KPI | Definición exacta | Frecuencia |
 |-----|-------------------|------------|
 | **Leads/mes** | Suma de `form_submit_success` + `contact_whatsapp` + `contact_email` en GA4 | Mensual |
-| **% calificados** | Leads industriales / leads totales, contados a mano del inbox | Mensual |
+| **% obra/PYME (métrica de la transición)** | Leads de obra/restauración + PYMEs galpón / leads totales, contados a mano del inbox. Piletas y trabajos chicos cuentan como leads VÁLIDOS (hoy se toma casi todo) — lo que se mide es el avance de la transición, no "calidad" | Mensual |
 | **CPA Ads** | Costo / conversiones primarias en Google Ads | Semanal |
 | **Tasa de conversión de landing** | Leads / sesiones de `/servicios` y `/contacto` | Mensual |
 | **Impresiones y clics orgánicos** | Search Console, cluster industrial (queries del `03-keywords-maestro.md`) | Mensual |

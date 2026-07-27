@@ -1,20 +1,20 @@
 import { Check, X } from "lucide-react"
 
 const proyectosQueRealizamos = [
-  "Estructuras metálicas industriales",
-  "Plantas fabriles y depósitos",
-  "Tanques y silos",
-  "Obras en construcción y mantenimiento industrial",
-  "Infraestructura pública y privada",
-  "Proyectos de gran superficie y alto volumen",
+  "Arenado en obra y construcción",
+  "Estructuras metálicas, tanques y silos",
+  "Restauración de fachadas y paredes",
+  "Hierros, camiones y acoplados en tu galpón (in situ)",
+  "Piletas listas para repintar o revestir",
+  "Plantas, naves y trabajos de gran superficie",
 ]
 
 const trabajosQueNoRealizamos = [
   "Muebles",
-  "Portones domiciliarios",
-  "Rejas de hogar",
-  "Vehículos o llantas",
-  "Trabajos artesanales o pequeños",
+  "Portones y rejas de hogar",
+  "Autos y motos particulares",
+  "Trabajos artesanales o piezas sueltas chicas",
+  "Granallado o arenado certificado con normas",
 ]
 
 export function IntroductionSection() {
@@ -24,7 +24,7 @@ export function IntroductionSection() {
         <div className="max-w-3xl mx-auto">
           {/* Párrafo de posicionamiento */}
           <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center mb-12 md:mb-14">
-            Somos una empresa especializada en preparación de superficies industriales para obras, mantenimiento y recuperación estructural. Intervenimos en plantas, naves, estructuras metálicas y equipamiento de gran porte, cumpliendo estándares técnicos exigentes y plazos operativos definidos.
+            Hacemos arenado sin vueltas: limpiamos y preparamos superficies para dejarlas listas para pintar o revestir. Trabajamos in situ —en obra, en tu galpón o en tu casa— sobre estructuras, tanques, fachadas, hierros y piletas, con equipos propios y plazos claros.
           </p>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">

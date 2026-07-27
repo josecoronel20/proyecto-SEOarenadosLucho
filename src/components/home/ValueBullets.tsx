@@ -1,22 +1,22 @@
 "use client"
 
-import { Truck, FileCheck, Clock } from "lucide-react"
+import { Truck, Paintbrush, Clock } from "lucide-react"
 
 const bullets = [
   {
     icon: Truck,
-    title: "Coordinación logística",
-    text: "Planificación por etapas y sectores para no interferir con tu operación.",
+    title: "Trabajamos in situ",
+    text: "Vamos con nuestro equipo y compresores propios a tu obra, galpón o casa. No trasladás nada.",
   },
   {
     icon: Clock,
-    title: "Aumento de rendimiento",
-    text: "Capacidad de sumar equipos para cumplir con el cronograma.",
+    title: "Rápido y sin frenar tu obra",
+    text: "Trabajamos por sectores y podemos sumar equipos para cumplir con tu cronograma.",
   },
   {
-    icon: FileCheck,
-    title: "Preparación según ISO 8501",
-    text: "Determinamos el grado de limpieza y perfil de anclaje requerido para asegurar la correcta adherencia del recubrimiento.",
+    icon: Paintbrush,
+    title: "Listo para pintar o revestir",
+    text: "Sacamos óxido, pintura vieja y suciedad y te dejamos la superficie pareja, lista para pintar, antióxido o revestimiento.",
   },
 ]
 

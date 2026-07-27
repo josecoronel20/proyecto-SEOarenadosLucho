@@ -22,9 +22,7 @@ export interface ProjectForDetail {
   desafiosOperativos: string[]
   metodologia?: MetodologiaRecord
   parametrosTecnicos?: {
-    normativaReferencia?: string
-    gradoPreparacion?: string
-    gradoPreparacionAlcanzado?: string
+    tipoIntervencion?: string
     objetivoSuperficie?: string
     condicionFinal?: string
   }

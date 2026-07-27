@@ -28,7 +28,7 @@ export function ServiciosHero() {
               Arenado industrial
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl">
-              Arenamos estructuras metálicas de forma eficiente y segura, cumpliendo con los plazos y garantizando la calidad de la obra.
+              Arenamos estructuras, tanques y fachadas in situ, rápido y prolijo, y te las dejamos listas para pintar o revestir.
             </p>
             <div className="mt-2">
               <Link

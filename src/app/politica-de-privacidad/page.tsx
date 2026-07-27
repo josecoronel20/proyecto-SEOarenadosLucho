@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Política de Privacidad",
   description:
     "Política de Privacidad de Arenados Lucho. Protección de datos personales en Buenos Aires.",
+  alternates: { canonical: "/politica-de-privacidad" },
 }
 
 export default function PoliticaPrivacidadPage() {
@@ -21,8 +22,8 @@ export default function PoliticaPrivacidadPage() {
                 <Shield className="w-8 h-8 text-primary-600" />
               </div>
             </div>
-            <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Política de Privacidad
+            <CardTitle asChild className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              <h1>Política de Privacidad</h1>
             </CardTitle>
             <p className="text-base md:text-lg text-gray-600">
               En Arenados Lucho valoramos tu confianza. Esta política explica qué datos recopilamos, para qué los usamos, cómo los protegemos y qué derechos podés ejercer conforme a la normativa vigente en Argentina.

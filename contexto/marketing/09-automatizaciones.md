@@ -4,11 +4,11 @@ Inventario de todo lo que corre **solo** (sin intervención humana), cómo enter
 
 ## 1. Google Ads — scripts dentro de la cuenta
 
-Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automático con topes. **Estado real (26/07/2026):** instalados y programados el **guardián (06)** y los 3 de solo lectura (**02, 03, 04**), verificados en Vista previa (el guardián logueó su heartbeat OK). **Tope de gasto YA activo:** presupuesto diario nativo de la campaña activa fijado en **ARS 10.000/día** + guardián diario como red secundaria. El **autopilot (05) sigue SIN instalar** a propósito (recién con conversiones fluyendo y URLs en 200). Detalle y política: `06-google-ads-scripts.md`.
+Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automático con topes. **Estado real (26/07/2026):** instalados y programados el **guardián (06)** y los 3 de solo lectura (**02, 03, 04**), verificados en Vista previa (el guardián logueó su heartbeat OK). **Tope de gasto YA activo:** presupuesto diario nativo de la campaña activa fijado en **ARS 10.000/día** + guardián diario como red secundaria. ⚠️ Al relanzar con la estructura nueva, el presupuesto de arranque es **~5.000/día total** (ver `05-google-ads-operacion.md`). El **autopilot (05) sigue SIN instalar** a propósito (recién con conversiones fluyendo y URLs en 200). Detalle y política: `06-google-ads-scripts.md`.
 
 | Script | Frecuencia | Hace solo | Estado |
 |--------|------------|-----------|--------|
-| `05-autopilot.js` | Semanal (lun 07:00) | Negativas de lista negra, negativas exactas de términos que gastan sin convertir, pausa de keywords sangrantes. Máx. 25 negativas + 5 pausas por corrida; marca protegida; email de cada cambio | ⏳ **NO instalar aún** — recién con conversiones fluyendo + URLs 200 |
+| `05-autopilot.js` | Semanal (lun 07:00) | Negativas de lista negra (incluye términos técnicos: granallado, sa3, iso 8501 — actualizada 26/07 al pivote), negativas exactas de términos que gastan sin convertir, pausa de keywords sangrantes. Máx. 25 negativas + 5 pausas por corrida; marca protegida; email de cada cambio | ⏳ **NO instalar aún** — recién con conversiones fluyendo + URLs 200 |
 | `06-guardian-presupuesto.js` | **Diario** (06:00) | Red secundaria del tope **ARS 300.000/mes**: avisa al 80%, pausa todo al ~95% (margen por latencia), reactiva al cambiar el mes. Heartbeat + kill-switch. El freno duro por día es el **presupuesto nativo ≈ tope/30** (en la UI) | ✅ **Instalado y programado (diario)** — 26/07/2026; Vista previa OK (heartbeat) |
 | `02-reporte-semanal.js` | Semanal (lun) | Solo lee: reporte de rendimiento por email | ✅ **Instalado** — 26/07/2026 |
 | `03-ngram-terminos.js` | Semanal | Solo lee: análisis n-gram para negativas | ✅ **Instalado** — 26/07/2026 |
@@ -37,7 +37,7 @@ Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automátic
 
 ## 4. Pendientes para cerrar el círculo autónomo
 
-1. **Instalar el autopilot (05) + relanzar la campaña** (`05-google-ads-operacion.md`) — solo cuando: conversiones GA4→Ads limpias y verificadas (primarias = `form_submit_success` + `contact_whatsapp` + llamadas), URLs finales en 200, y ≥2-4 semanas de data. *(Los otros 4 scripts + auditoría inicial + tope de gasto: hechos el 26/07/2026.)*
+1. **Instalar el autopilot (05) + relanzar la campaña** (`05-google-ads-operacion.md` — estructura de 3 campañas, arranque ~5.000/día) — solo cuando: conversiones GA4→Ads limpias y verificadas (primarias = `form_submit_success` + `contact_whatsapp`; **llamadas NO como primaria** hasta verificar call tracking real — hoy el sitio no tiene evento de llamada), URLs finales en 200, y ≥2-4 semanas de data. *(Los otros 4 scripts + auditoría inicial + tope de gasto: hechos el 26/07/2026.)*
 2. **Token de GitHub** (fine-grained, solo este repo, Contents read/write): permite que Claude audite y corrija código en sesiones programadas sin la computadora del dueño prendida.
 3. Evaluar a futuro (decisión explícita + bitácora): reporte de Ads hacia una hoja de cálculo pública para que la revisión semanal de Claude lea datos de la cuenta sin intervención.
 

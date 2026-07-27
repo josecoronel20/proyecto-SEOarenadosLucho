@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Términos y Condiciones",
   description:
     "Términos y condiciones de uso del sitio web de Arenados Lucho. Buenos Aires.",
+  alternates: { canonical: "/terminos-y-condiciones" },
 }
 
 export default function TerminosYCondicionesPage() {
@@ -20,8 +21,8 @@ export default function TerminosYCondicionesPage() {
                 <FileText className="w-8 h-8 text-primary-600" />
               </div>
             </div>
-            <CardTitle className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Términos y Condiciones
+            <CardTitle asChild className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              <h1>Términos y Condiciones</h1>
             </CardTitle>
             <p className="text-base md:text-lg text-gray-600">
               Condiciones generales de uso de este sitio y de las consultas enviadas a Arenados Lucho.

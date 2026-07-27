@@ -208,6 +208,17 @@ Al decidir, mover a ADR numerado nuevo (ADR-017+).
 
 ## Plantilla para nuevas decisiones
 
+## ADR-018 — Pivote de posicionamiento: "arenado sin vueltas" (supera parcialmente ADR-002 y ADR-013)
+
+| Campo | Valor |
+|-------|--------|
+| **Fecha** | 2026-07-26 |
+| **Motivo** | El dueño aclaró el negocio real: NO se hace arenado técnico medido (Sa3/ISO 8501/anclaje) ni granallado; se hace arenado simple in situ para obra, restauración, PYMEs con galpón y piletas. El copy técnico atraía licitaciones que se rechazan y espantaba al cliente real |
+| **Impacto** | PROHIBIDO Sa3/ISO/metal blanco/granallado en copy, metadata, schema y anuncios. Piletas y PYMEs pasan a ser parte del mensaje (anula el "particular secundario" de ADR-013). Excepción aprobada a ADR-002: se crea `/arenado-de-piletas`. Reglas completas en `.cursorrules` y `contexto/00-proyecto-general.md` |
+| **Alternativas descartadas** | Mantener el posicionamiento técnico certificado (era falso); competir por trabajos con requerimientos de norma |
+
+---
+
 ```markdown
 ## ADR-0XX — Título corto
 

@@ -13,9 +13,14 @@ var CONFIG = {
 
   // --- Negativas automáticas ---
   // 1) Lista negra estructural (frase, a nivel campaña): rubros que jamás queremos.
+  // Actualizada 26/07/2026: incluye términos TÉCNICOS (no hacemos arenado
+  // certificado/medido ni granallado — decisión del dueño, ver 03-keywords-maestro.md).
+  // ⚠️ NUNCA agregar acá: pileta/piscina (es servicio core), arenadora sola, zona norte.
   LISTA_NEGRA: ['curso', 'empleo', 'trabajo de', 'alquiler', 'venta de arenadora',
     'comprar arenadora', 'arena para', 'compresor', 'segunda mano', 'usada',
-    'como hacer', 'casero', 'tutorial'],
+    'como hacer', 'casero', 'tutorial',
+    'granallado', 'granalla', 'shot blasting', 'sa3', 'iso 8501',
+    'metal blanco', 'perfil de anclaje', 'rugosidad', 'hidrolavado'],
   // 2) Términos exactos sangrantes: gastaron sin convertir → negativa EXACTA
   //    (bloquea solo esa búsqueda exacta; es la automatización más segura).
   NEG_COSTO_MIN: 8000,       // ARS gastados por el término en 30 días
