@@ -26,6 +26,8 @@ Complementa (no reemplaza) al sistema técnico `contexto/00-20`. Regla de oro: *
 | [10-cuenta-ads-auditoria.md](./10-cuenta-ads-auditoria.md) | **Dossier de la cuenta de Ads** (26/07): radiografía cruda + análisis + plan corregido (§6 = versión vigente) | Analizar la cuenta o preparar el relanzamiento (autocontenido para otro chat) |
 | [11-landing-piletas-ideal.md](./11-landing-piletas-ideal.md) | **Mapa de la landing IDEAL de piletas** (blueprint: estructura, copy propio, keywords por bloque, schema, reglas de conversión) | Diseñar o alinear la landing `/arenado-de-piletas` |
 | [12-google-business-profile.md](./12-google-business-profile.md) | **Setup/optimización del Google Business Profile** (reclamar ficha, SAB, categorías, descripción, reseñas) | Crear/optimizar la ficha de Google (SEO local) |
+| [13-modo-experto-ads.md](./13-modo-experto-ads.md) | **Modo experto de Ads** (principios, 8 áreas de análisis profundo, protocolo de datos, cadencia) | SIEMPRE, antes de cualquier trabajo sobre la cuenta de Ads |
+| [14-configuracion-objetivo-ads.md](./14-configuracion-objetivo-ads.md) + [ads-config/](./ads-config/) | **El mapa completo de la cuenta diseñada desde cero** (8 partes: fundaciones · conversiones · estructura · keywords · configuración · anuncios · pujas · implementación) | Construir o auditar la cuenta de Ads parte por parte |
 | [ads-scripts/](./ads-scripts/) | Scripts listos para pegar en Google Ads | Ver `06-google-ads-scripts.md` |
 
 ---
