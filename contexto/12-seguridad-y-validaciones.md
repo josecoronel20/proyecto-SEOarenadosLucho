@@ -150,7 +150,7 @@ Si alguna vez se agrega una entrada (buscador, filtro por URL, formulario), este
 - **El sitio no recolecta datos personales.** No hay formulario, no hay campos, no hay almacenamiento.
 - Los datos personales que llegan lo hacen **dentro de WhatsApp**, fuera del sitio y bajo los términos de Meta.
 - **Prohibido enviar PII** (nombre, teléfono, email) en el `dataLayer` — invariante de `CLAUDE.md`.
-- `/politica-de-privacidad` debe reflejar esto: ya **no** hay envío de nombre/contacto/descripción a un procesador tercero.
+- ✅ `/politica-de-privacidad` y `/terminos-y-condiciones` **actualizadas el 02/08/2026**: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre en WhatsApp (bajo políticas de Meta) y que las herramientas de medición no reciben nombre/teléfono/email.
 - No hay cookies propias en el código; GTM/GA4 pueden setear las suyas — el aviso de consentimiento se configura en GTM, fuera del repo.
 
 ---

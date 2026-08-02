@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Shield, Mail, MapPin, FileText, Lock, RefreshCw } from 'lucide-react'
-import Link from 'next/link'
+import { Shield, Mail, MapPin, FileText, Lock, RefreshCw, MessageCircle } from 'lucide-react'
 import { Metadata } from 'next'
+import { BUSINESS } from '@/lib/siteConfig'
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
@@ -47,8 +47,13 @@ export default function PoliticaPrivacidadPage() {
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-gray-900">Correo electrónico</span>
-                      
+                    <span className="font-semibold text-gray-900">Correo electrónico:</span>
+                    <a
+                      href={`mailto:${BUSINESS.email}`}
+                      className="text-primary-600 hover:text-primary-700 underline ml-2"
+                    >
+                      {BUSINESS.email}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -70,18 +75,29 @@ export default function PoliticaPrivacidadPage() {
                 </h2>
               </div>
               <div className="space-y-4">
+                <div className="bg-primary-50 border border-primary-100 rounded-lg p-5 flex items-start gap-3">
+                  <MessageCircle className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-semibold text-gray-900">Este sitio no tiene formularios y no te pide datos.</span>{' '}
+                    No hay campos que completar ni información que se envíe desde estas páginas. El contacto ocurre por WhatsApp, y los datos que nos compartas son los que decidas escribirnos en esa conversación.
+                  </p>
+                </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Recopilamos los siguientes datos personales a través de formularios y canales de contacto:
+                  En esa conversación solemos recibir, según lo que nos cuentes:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                  <li>Nombre y apellido.</li>
-                  <li>Teléfono de contacto.</li>
-                  <li>Correo electrónico.</li>
-                  <li>Localidad y zona de cobertura.</li>
-                  <li>Tipo de proyecto y detalles relacionados con el servicio solicitado.</li>
+                  <li>Tu nombre.</li>
+                  <li>El número de teléfono asociado a tu cuenta de WhatsApp.</li>
+                  <li>La localidad o zona donde está el trabajo.</li>
+                  <li>El tipo de trabajo, sus detalles y las fotos que nos mandes.</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-4">
-                  Además, utilizamos cookies y tecnologías de seguimiento para obtener datos de navegación agregados, como páginas visitadas, tiempo de permanencia y formularios completados. Estas herramientas se usan con fines estadísticos y pueden incluir servicios de terceros como Google Analytics y plataformas de formularios.
+                  El intercambio por WhatsApp se realiza dentro de esa aplicación y se rige también por las políticas de privacidad de Meta.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Por separado, utilizamos cookies y tecnologías de medición para obtener datos de navegación agregados, como páginas visitadas y tiempo de permanencia, con fines estadísticos y publicitarios. Esto se implementa mediante Google Tag Manager y puede incluir servicios de terceros como Google Analytics y Google Ads.{' '}
+                  <span className="font-semibold text-gray-900">Esas herramientas de medición no reciben tu nombre, tu teléfono ni tu correo electrónico:</span>{' '}
+                  registran que alguien inició una conversación de WhatsApp, no quién.
                 </p>
               </div>
             </section>
@@ -96,15 +112,15 @@ export default function PoliticaPrivacidadPage() {
               </div>
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  Utilizamos la información personal para:
+                  Utilizamos la información que nos compartís para:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                  <li>Responder consultas y solicitudes enviadas por potenciales clientes.</li>
-                  <li>Elaborar y enviar cotizaciones personalizadas.</li>
-                  <li>Realizar seguimiento comercial y brindar asesoramiento sobre nuestros servicios.</li>
+                  <li>Responder tu consulta y coordinar la visita.</li>
+                  <li>Elaborar y enviarte el presupuesto.</li>
+                  <li>Hacer el seguimiento del trabajo y responder dudas posteriores.</li>
                 </ul>
                 <p className="text-gray-700 leading-relaxed mt-4">
-                  No vendemos ni compartimos tus datos con terceros. Solo podemos compartirlos con proveedores técnicos que nos brindan servicios de infraestructura (alojamiento web, formularios, analítica) bajo acuerdos de confidencialidad y políticas de seguridad equivalentes.
+                  No vendemos tus datos ni los cedemos a terceros con fines comerciales. Solo intervienen los proveedores técnicos necesarios para operar: el alojamiento del sitio (Vercel), las herramientas de medición y publicidad (Google) y la mensajería (WhatsApp, de Meta), cada uno bajo sus propias políticas de privacidad.
                 </p>
               </div>
             </section>
@@ -119,8 +135,14 @@ export default function PoliticaPrivacidadPage() {
               </div>
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  Tenés derecho a acceder, actualizar, rectificar y eliminar tus datos personales. Podés ejercer estos derechos enviando un correo a nuestros email.{' '}
-                  
+                  Tenés derecho a acceder, actualizar, rectificar y eliminar tus datos personales. Podés ejercer estos derechos escribiéndonos por WhatsApp o enviando un correo a{' '}
+                  <a
+                    href={`mailto:${BUSINESS.email}`}
+                    className="text-primary-600 hover:text-primary-700 font-semibold underline"
+                  >
+                    {BUSINESS.email}
+                  </a>
+                  . Si querés que borremos la conversación y los datos que nos hayas compartido, pedínoslo y lo hacemos.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Si considerás que tus derechos no han sido atendidos, podés presentar un reclamo ante la Agencia de Acceso a la Información Pública (AAIP), autoridad de control en Argentina. Más información en{' '}
@@ -145,7 +167,7 @@ export default function PoliticaPrivacidadPage() {
                 </h2>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Implementamos medidas técnicas y organizativas razonables para proteger tus datos personales. El acceso a la información está restringido al personal autorizado y a proveedores tecnológicos que la necesitan para operar nuestros servicios. Todos ellos se comprometen a mantener la confidencialidad y proteger la información con estándares adecuados.
+                El sitio se sirve íntegramente por HTTPS y no almacena datos personales: no hay formularios, base de datos ni servidor propio donde guardarlos. Las conversaciones de WhatsApp quedan en el teléfono del negocio, con acceso restringido a las personas que atienden las consultas, y viajan cifradas de extremo a extremo por la propia aplicación.
               </p>
             </section>
 
@@ -162,7 +184,7 @@ export default function PoliticaPrivacidadPage() {
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  <strong>Fecha de última revisión:</strong> 7 de noviembre de 2025.
+                  <strong>Fecha de última revisión:</strong> 2 de agosto de 2026.
                 </p>
               </div>
             </section>

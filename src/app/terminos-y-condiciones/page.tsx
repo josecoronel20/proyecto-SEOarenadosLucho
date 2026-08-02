@@ -49,10 +49,11 @@ export default function TerminosYCondicionesPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">3. Consultas y formulario</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">3. Consultas</h2>
               <p>
-                Los datos enviados por formulario o correo se usan para responder consultas y
-                elaborar cotizaciones. Ver{" "}
+                Este sitio no tiene formularios. Las consultas se reciben por WhatsApp, y los datos
+                que nos compartas en esa conversación se usan para responderte y elaborar el
+                presupuesto. Ver{" "}
                 <Link href="/politica-de-privacidad" className="text-primary-600 hover:underline font-semibold">
                   Política de Privacidad
                 </Link>
@@ -80,16 +81,20 @@ export default function TerminosYCondicionesPage() {
             <section>
               <h2 className="text-xl font-bold text-gray-900 mb-2">6. Contacto</h2>
               <p>
-                Para consultas:{" "}
+                Para consultas, escribinos por WhatsApp desde la{" "}
                 <Link href="/contacto" className="text-primary-600 hover:underline font-semibold">
-                  formulario de contacto
+                  página de contacto
                 </Link>{" "}
-                o el correo indicado en el sitio.
+                o al correo indicado en la{" "}
+                <Link href="/politica-de-privacidad" className="text-primary-600 hover:underline font-semibold">
+                  Política de Privacidad
+                </Link>
+                .
               </p>
             </section>
 
             <p className="text-sm text-gray-500 pt-4 border-t">
-              Última actualización: mayo 2026. Arenados Lucho — Buenos Aires, Argentina.
+              Última actualización: agosto 2026. Arenados Lucho — Buenos Aires, Argentina.
             </p>
           </CardContent>
         </Card>
