@@ -165,11 +165,11 @@ export default function ArenadoDePiletasPage() {
                 Mandar foto por WhatsApp
               </WhatsAppCTA>
               <Link
-                href="/contacto"
+                href="/casos-de-exito/arenado-pileta"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/90 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
               >
                 <FileText className="w-5 h-5" />
-                Dejanos tus datos
+                Ver un trabajo real
               </Link>
             </div>
             <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/85">
@@ -453,18 +453,11 @@ export default function ArenadoDePiletasPage() {
             Sin costo y sin compromiso. Coordinamos la visita, te pasamos el precio y, si te cierra, la
             dejamos lista para que la disfrutes este verano.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex justify-center">
             <WhatsAppCTA message={WPP_DUENO} className={WPP_BTN_LG}>
               <MessageCircle className="w-5 h-5" />
               Escribinos por WhatsApp
             </WhatsAppCTA>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
-            >
-              <FileText className="w-5 h-5" />
-              Dejanos tus datos
-            </Link>
           </div>
           <p className="text-white/70 text-sm mt-5">Respondemos rápido · Visita y presupuesto sin costo · Buenos Aires y AMBA</p>
         </div>

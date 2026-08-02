@@ -46,7 +46,7 @@ const CTASection = () => {
               Contactanos
             </Link>
             <p className="text-sm text-white/90 mt-3 drop-shadow-md">
-              Enviá los detalles de tu proyecto y nos pondremos en contacto contigo a la brevedad.
+              Escribinos por WhatsApp: contanos qué necesitás o mandanos una foto y te respondemos rápido.
             </p>
           </div>
 
