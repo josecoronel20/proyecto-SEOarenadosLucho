@@ -14,17 +14,15 @@ Reglas técnicas concretas para código nuevo y cambios en el repo. Complementan
 | **`"use client"` solo si hace falta** | Estado, handlers, hooks, Radix interactivo, browser APIs (`window`, `sessionStorage`) |
 | **No convertir todo a client** | Varios bloques en `servicios/` y `home/` son client sin necesidad (deuda); **no replicar** el patrón en código nuevo |
 
-**Hoy el formulario de contacto es Client Component** (`contacto/page.tsx`) porque usa `useState` + `fetch` a Formspree. Correcto hasta que exista proxy server-side.
+**`/contacto` es Server Component** desde el 28/07/2026: al eliminar el formulario dejó de necesitar estado, y la única interactividad vive en `WhatsAppCTA` (client). Es el patrón a seguir: la página es servidor, el botón interactivo es un client component chico.
 
 ### Server Actions
 
 | Regla | Detalle |
 |-------|---------|
-| **No usar Server Actions** en este proyecto **por ahora** | No hay `"use server"` ni `actions` en el repo |
-| **Formulario** | `fetch` directo a Formspree desde el cliente (ver `09-api-y-servicios.md`) |
-| **Si se agregan** | Solo vía `/api/contact` o Server Action con validación + secret en servidor; **no** duplicar envío client + server |
-
-Preferir **Route Handler** (`app/api/.../route.ts`) si hace falta lógica servidor antes que Server Actions, salvo preferencia explícita del equipo.
+| **No usar Server Actions** en este proyecto | No hay `"use server"` ni `actions` en el repo, y no hay datos que enviar al servidor |
+| **Conversión** | `window.open` a `wa.me` desde el cliente + `dataLayer.push` (ver `05-formularios-y-conversion.md`) |
+| **Si alguna vez hace falta lógica de servidor** | Preferir **Route Handler** (`app/api/.../route.ts`) sobre Server Actions — pero un endpoint de contacto requiere decisión explícita del dueño (ADR-019) |
 
 ---
 
@@ -35,8 +33,8 @@ Preferir **Route Handler** (`app/api/.../route.ts`) si hace falta lógica servid
 | **No `useEffect` innecesario** | No usar para datos que pueden venir del servidor, derivar en render, o manejarse con eventos |
 | **`useEffect` aceptable** | Solo en primitivos que lo exigen (ej. `ui/carousel.tsx` — Embla) |
 | **No fetch en `useEffect`** para contenido estático | Casos en JSON → Server Component + `getProjectBySlug` |
-| **`useCallback`** | Solo en handlers pasados a hijos memoizados o con deps estables (`WppBtn`, `EmailBtn` — OK) |
-| **Estado mínimo** | Formulario: solo lo necesario (`formData`, `isSubmitting`, `isSubmitted`, `error`) |
+| **`useCallback`** | Solo en handlers pasados a hijos memoizados o con deps estables (`WppBtn`, `WhatsAppCTA` — OK) |
+| **Estado mínimo** | Solo lo necesario (filtros de casos, menú móvil). El estado de los modales lo maneja Radix |
 
 ---
 
@@ -111,14 +109,16 @@ Detalle: `10-estilos-y-design-system.md`.
 
 ---
 
-## Formulario y tracking
+## Conversión y tracking
 
 | Regla | Detalle |
 |-------|---------|
-| **No cambiar nombres de eventos** `dataLayer` sin aviso | `06-tracking-y-analytics.md` |
-| **Formspree** | Endpoint y campos JSON documentados en `05-formularios-y-conversion.md` |
-| **No PII en `dataLayer`** | No enviar email/teléfono en eventos |
-| **`isSubmitting`** | Mantener en submit del formulario |
+| **No cambiar el nombre del evento** `contact_whatsapp` sin aviso | `06-tracking-y-analytics.md` |
+| **Disparar solo tras confirmar el modal** | Nunca en el `onClick` del botón |
+| **No PII en `dataLayer`** | No enviar nombre/email/teléfono en eventos |
+| **Número partido y `window.open`** | Nunca contiguo, nunca en un `href`, nunca en el JSON-LD |
+| **Un solo `WppBtn` flotante** | Los CTAs inline usan `WhatsAppCTA` |
+| **Sin formularios** | No reintroducir formulario ni endpoint de contacto (ADR-019) |
 
 ---
 

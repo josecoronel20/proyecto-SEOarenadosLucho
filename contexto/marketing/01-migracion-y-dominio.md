@@ -37,7 +37,7 @@
 
 - [ ] Google Search Console: verificar propiedad **Dominio** `arenadoslucho.com` (si no existe), enviar `https://www.arenadoslucho.com/sitemap.xml`.
 - [ ] Inspeccionar y pedir indexación de las 6 URLs principales.
-- [ ] GA4/GTM: confirmar que `GTM-W63ZV9D9` dispara en el sitio nuevo y que los 5 eventos (`form_submit`, `form_submit_success`, `form_submit_error`, `contact_whatsapp`, `contact_email`) llegan (GTM Preview + GA4 DebugView).
+- [ ] GA4/GTM: confirmar que `GTM-W63ZV9D9` dispara en el sitio nuevo y que **`contact_whatsapp`** (el único evento vigente desde el 28/07/2026) llega (GTM Preview + GA4 DebugView).
 - [ ] Google Ads: actualizar URLs finales si alguna apuntaba a rutas del Framer; revisar que las conversiones sigan registrando (ventana 48–72 h).
 - [ ] Actualizar `contexto/07-seo-tecnico.md` y `contexto/19-deploy-y-entornos.md` con el dominio real.
 - [ ] Registrar el corte en `08-bitacora.md` con fecha exacta (marca el "antes/después" de todas las métricas).

@@ -2,7 +2,7 @@
 
 ## Resumen
 
-Sitio **marketing + conversión** en **Next.js (App Router)** con **TypeScript**, estilos con **Tailwind CSS** y componentes **shadcn/ui** (Radix). Contenido de casos en **JSON** en el repo. Formularios vía **Formspree**. Analytics con **Google Tag Manager**. Despliegue orientado a **Vercel**.
+Sitio **marketing + conversión** en **Next.js (App Router)** con **TypeScript**, estilos con **Tailwind CSS** y componentes **shadcn/ui** (Radix). Contenido de casos en **JSON** en el repo. **Conversión por WhatsApp** (canal único; sin formularios ni backend). Analytics con **Google Tag Manager**. Desplegado en **Vercel**.
 
 ---
 
@@ -44,8 +44,10 @@ Rutas principales actuales:
 
 ### Conversión y terceros
 
-- **Formspree** — `fetch` a `https://formspree.io/f/...` desde `/contacto` (cliente)
-- **GTM** — script en `src/app/layout.tsx`, `dataLayer` en formulario, WhatsApp y mail
+- **WhatsApp** — único canal: `WppBtn` (flotante global) y `WhatsAppCTA` (inline), vía `window.open` a `wa.me`
+- **GTM** — script en `src/app/layout.tsx`; el `dataLayer` solo emite `contact_whatsapp`
+
+> El sitio **no hace POST a ningún servicio**: Formspree y el formulario se eliminaron el 28/07/2026.
 
 ---
 
@@ -54,11 +56,11 @@ Rutas principales actuales:
 | Patrón | Dónde |
 |--------|--------|
 | **Server Components (default)** | Páginas y layouts sin `"use client"` |
-| **Client Components** | Header (Sheet móvil), Hero con video, formulario contacto, acordeón FAQ, filtros casos, botones Wpp/Email, varias secciones de servicios |
-| **Metadata estática** | `export const metadata` en páginas |
-| **JSON-LD** | Generado en `layout.tsx` (Organization, LocalBusiness) |
+| **Client Components** | Header (Sheet móvil), Hero con video, acordeón FAQ, filtros de casos, `WppBtn` y `WhatsAppCTA`, varias secciones de servicios |
+| **Metadata estática** | `export const metadata` en páginas + `canonical` self-referente |
+| **JSON-LD** | `@graph` con `@id` en `layout.tsx` (LocalBusiness, WebSite) + `FAQPage`/`Service`/`BreadcrumbList`/`CreativeWork` por página |
 
-No hay API Routes propias documentadas para negocio; el formulario sale directo al navegador → Formspree.
+No hay API Routes de negocio ni ningún envío de datos: la conversión abre WhatsApp desde el cliente.
 
 Imágenes: **next/image** donde aplica; hero con **`<video>`** local en `/public/videos/`.
 
@@ -70,7 +72,7 @@ Imágenes: **next/image** donde aplica; hero con **`<video>`** local en `/public
 - Build: `npm run build` → `next build`
 - Producción: `next start` o plataforma serverless de Vercel
 
-`next.config.js` actual: `reactStrictMode`, `images.domains` vacío (revisar si hace falta dominio remoto).
+`next.config.js` actual: `reactStrictMode`, `poweredByHeader: false`, `images.formats` (AVIF/WebP), **headers de seguridad** (`nosniff`, `Referrer-Policy`, `X-Frame-Options`, HSTS) y los **301 de rutas legacy**. Sin dominios remotos de imágenes.
 
 ---
 
@@ -79,7 +81,7 @@ Imágenes: **next/image** donde aplica; hero con **`<video>`** local en `/public
 **No hay base de datos** en el proyecto.
 
 - Contenido editable vía archivos en repo (JSON, TSX).
-- Formularios: envío externo (Formspree), sin persistencia en servidor propio.
+- No se recibe ni persiste ningún dato de usuario: el contacto ocurre dentro de WhatsApp.
 
 ---
 
@@ -103,7 +105,7 @@ Patrón actual:
 
 - **Layout raíz** (`src/app/layout.tsx`): `Header`, `Footer`, `WppBtn`, scripts GTM, structured data
 - **Sin** `ThemeProvider` obligatorio (estilos Tailwind + `globals.css`)
-- Estado local en Client Components (`useState` en contacto, filtros, etc.)
+- Estado local en Client Components (filtros de casos, menú móvil, acordeón)
 
 ---
 
@@ -113,7 +115,7 @@ Patrón actual:
 src/
 ├── app/              # App Router (páginas, layouts, globals.css)
 ├── components/
-│   ├── common/       # Header, Footer, CTAs, WppBtn, EmailBtn
+│   ├── common/       # Header, Footer, CTAs, WppBtn, WhatsAppCTA, Breadcrumbs, H2
 │   ├── home/         # Secciones home
 │   ├── servicios/    # Secciones /servicios
 │   ├── casos-de-exito/
@@ -132,9 +134,9 @@ contexto/             # documentación para IA
 - Tailwind + tokens/colores del proyecto (`primary`, etc. en `tailwind.config`)
 - Componentes `ui/` existentes antes de crear variantes nuevas
 - `next/image` para fotos optimizadas
-- `dataLayer.push` para eventos de conversión alineados a GTM
-- Formspree (o el endpoint ya configurado) para formularios
-- JSON en `lib/` para listados estáticos (casos)
+- `dataLayer.push` para el evento de conversión (`contact_whatsapp`) alineado a GTM
+- `WhatsAppCTA` para cualquier CTA de WhatsApp inline
+- JSON/TS en `lib/` para listados estáticos (casos, FAQs, datos del negocio)
 
 ---
 
@@ -144,15 +146,15 @@ contexto/             # documentación para IA
 |---------|--------|
 | **CMS headless** nuevo | No está en arquitectura; aumenta complejidad sin necesidad actual |
 | **Base de datos** (Prisma, Supabase, etc.) | No hay modelo de datos en servidor |
-| **Resend / Nodemailer en API Route** | Hoy el mail de contacto es Formspree + `mailto:` en botones |
-| **React Hook Form + Zod** | No están en dependencias directas del app; formulario contacto es controlado simple |
+| **Formulario de contacto de cualquier tipo** (Formspree, API Route, Server Action, Resend/Nodemailer) | **Eliminado el 28/07/2026 por decisión del dueño**: canal único WhatsApp. Reintroducirlo cambia la única conversión de la cuenta de Ads |
+| **React Hook Form + Zod** | No están en dependencias; además, sin formularios no hay nada que validar |
 | **Pages Router** (`pages/`) | Proyecto migrado/consolidado en `app/` |
-| **Múltiples landings por servicio** (`/servicios/arenado-*`) | Enfoque actual: **una** landing `/servicios` |
+| **Múltiples landings por servicio** (`/servicios/arenado-*`) | Enfoque actual: `/servicios` + la excepción aprobada `/arenado-de-piletas` |
 | **Landing de precios** (`/precios-arenados`) | Eliminada en refactor; precio vía consulta |
 | **Micro-sitios por zona** (`/zonas-de-cobertura/...`) | Si se retoma cobertura, preferir **una** página consolidada |
 | **Styled-components / CSS modules** masivos | Tailwind es el estándar del repo |
 | **jQuery / Bootstrap** | Stack moderno React only |
-| **Secrets en el repo** | API keys, tokens Formspree sensibles → env / panel Vercel |
+| **Secrets en el repo** | API keys y credenciales de paneles → env / panel de Vercel, nunca en git |
 
 ---
 

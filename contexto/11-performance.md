@@ -82,16 +82,16 @@ Actualizar tras cada deploy importante:
 
 | Problema | Ubicación | Efecto |
 |----------|-----------|--------|
-| **Muchos `"use client"`** | Hero, Header, Footer, carrusel, formulario, WppBtn, FAQ accordion | Más JS hidratado que un sitio mostly-static |
+| **Muchos `"use client"`** | Hero, Header, Footer, carrusel, `WppBtn`/`WhatsAppCTA`, FAQ accordion | Más JS hidratado que un sitio mostly-static |
 | **Carrusel + embla** | `ProjectsSection` + `ui/carousel` | JS extra en home |
-| **Imports no usados** | `CTASection` importa `WppBtn`, `EmailBtn` sin render | Bundle muerto menor |
+| **`HeroSecondaryCTA` sin montar** | `components/home/` | Código muerto (no entra al bundle, pero ensucia) |
 
 ### Red / terceros
 
 | Problema | Ubicación | Efecto |
 |----------|-----------|--------|
 | **GTM en `<head>`** | `layout.tsx` | JS adicional antes de interactividad; necesario para negocio |
-| **Sin `preconnect` a Formspree** | Solo GTM tiene preconnect | Menor; formulario solo en `/contacto` |
+| **Solo GTM tiene `preconnect`** | `layout.tsx` | Suficiente: es el único tercero que el sitio carga |
 
 ### Configuración
 

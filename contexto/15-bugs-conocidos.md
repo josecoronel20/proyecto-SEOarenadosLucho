@@ -36,7 +36,7 @@ Lista viva. Al corregir un ítem, cambiar **Estado** a `Corregido`.
 ### Imports no usados (`CTASection`, `Footer`)
 
 **Estado:** Corregido  
-**Cambio:** Eliminados imports de `WppBtn` / `EmailBtn`.
+**Cambio:** Eliminados imports de `WppBtn` / `EmailBtn` (este último ya no existe: se borró el 28/07/2026).
 
 ### Imágenes `unoptimized`
 
@@ -90,9 +90,7 @@ Lista viva. Al corregir un ítem, cambiar **Estado** a `Corregido`.
 
 ### Validación servidor / spam avanzado
 
-**Impacto:** Solo validación cliente + honeypot Formspree.  
-**Estado:** Mejorado (honeypot `_gotcha` en contacto); reCAPTCHA sigue opcional.  
-**Archivos:** `src/app/contacto/page.tsx`
+**Estado:** **Cerrado por diseño (28/07/2026).** Al eliminarse el formulario, el sitio no recibe input de usuario: no hay nada que validar ni un endpoint que proteger. El spam, si llega, llega al WhatsApp. Ver `12-seguridad-y-validaciones.md`.
 
 ---
 

@@ -262,8 +262,11 @@ Dejar como **PRIMARIAS solo los leads reales**: `form_submit_success` + `contact
 6. 🏷️ Considerar mover genéricos exactos (`arenado`, `arenados`) a `/servicios` (mejor página de conversión) en vez de la home.
 
 ### 4.7 Pasos ordenados del relanzamiento
-1. Verificar que TODA URL final responda **200** (`/servicios`, `/`, `/contacto`, `/preguntas-frecuentes`).
-2. **Limpiar la medición** (bloqueante): primarias = form_submit_success + contact_whatsapp; degradar la basura; confirmar eventos en GTM.
+
+> ⚠️ **Superado.** El plan de implementación vigente es el de **8 sesiones** en `ads-config/08-controles-implementacion.md` (29/07/2026). Esta lista se conserva como registro del análisis del 26/07; **el paso 6 (grupo Sa3/ISO) quedó anulado por §6**.
+
+1. Verificar que TODA URL final responda **200** (`/servicios`, `/`, `/contacto`, `/arenado-de-piletas`, `/preguntas-frecuentes`).
+2. **Limpiar la medición** (bloqueante): **una sola primaria, `contact_whatsapp`**; degradar todo el resto; confirmar el evento en GTM.
 3. Desactivar "Aplicación automática de recomendaciones" de Google.
 4. Cargar la **lista de negativas** (cuenta + bloque pileta solo en industrial) **antes** de encender.
 5. Crear `AR-Search-Industrial` con los grupos, RSA por grupo (mensajes clave) y extensiones (sitelinks, texto destacado, ubicación).
@@ -292,9 +295,9 @@ El dueño aclaró el negocio real y **esto manda sobre cualquier análisis anter
 ---
 
 ## 5. Pendiente antes de reactivar gasto (checklist)
-- [ ] Medición limpia (primarias = form_submit_success + contact_whatsapp).
-- [ ] Verificar `form_submit` = éxito (no intento) en GTM/GA4.
-- [ ] URLs finales 200 (verificado home; chequear `/servicios`, `/contacto`, `/preguntas-frecuentes`).
+- [ ] Medición limpia: **una sola acción primaria, `contact_whatsapp`** (canal único desde el 28/07/2026).
+- [ ] Degradar a secundaria la acción histórica `form_submit` — **obsoleta**: el formulario ya no existe en el sitio.
+- [ ] URLs finales 200 (verificado home; chequear `/servicios`, `/contacto`, `/arenado-de-piletas`, `/preguntas-frecuentes`).
 - [ ] Negativas cargadas.
 - [ ] Campaña + grupos + RSA armados (frase/exacta).
 - [ ] Instalar autopilot (05) para el tope duro real.

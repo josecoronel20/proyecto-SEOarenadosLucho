@@ -54,7 +54,7 @@ Copiá el contenido del archivo que aplique o pegá el índice + el archivo nece
 | GTM, GA4, `dataLayer`, eventos | `06-tracking-y-analytics.md` |
 | Metadata, sitemap, canonical, schema | `07-seo-tecnico.md` |
 | Landings de Ads, mensajes de campaña | `08-google-ads-y-landings.md` |
-| JSON de datos, Formspree, integraciones | `09-api-y-servicios.md` |
+| JSON de datos, servicios externos, integraciones | `09-api-y-servicios.md` |
 | Tailwind, colores, fuentes, UI | `10-estilos-y-design-system.md` |
 | Imágenes, LCP, build, velocidad | `11-performance.md` |
 | Validación, env, buenas prácticas | `12-seguridad-y-validaciones.md` |

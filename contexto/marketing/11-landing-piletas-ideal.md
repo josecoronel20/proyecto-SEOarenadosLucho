@@ -23,7 +23,7 @@
 
 ## Estructura ideal (orden arriba → abajo)
 
-1. Hero (hook por el problema + WhatsApp) · 2. Banda estacional (rotable) · 3. ¿Qué es el arenado? · 4. El problema / gap sin jerga · 5. Prueba antes/después · 6. Cómo trabajamos (3 pasos in situ) · 7. Qué incluye / qué NO · 8. Contratistas y pileteros (sección potente) · 9. Por qué confiar · 10. Zonas AMBA · 11. FAQ (FAQPage) · 12. CTA final + formulario · 13. Enlazado interno
+1. Hero (hook por el problema + WhatsApp) · 2. Banda estacional (rotable) · 3. ¿Qué es el arenado? · 4. El problema / gap sin jerga · 5. Prueba antes/después · 6. Cómo trabajamos (3 pasos in situ) · 7. Qué incluye / qué NO · 8. Contratistas y pileteros (sección potente) · 9. Por qué confiar · 10. Zonas AMBA · 11. FAQ (FAQPage) · 12. CTA final (WhatsApp) · 13. Enlazado interno
 
 *(Opcional, tras el hero: **selector de público** "¿Es tu pileta?" / "Trabajás con piletas?" que ancla al recorrido del dueño o a la sección de contratistas.)*
 
@@ -34,7 +34,7 @@
 - **Objetivo:** conversión.
 - **Headline (H1):** ¿Se te descascara la pintura de la pileta? La dejamos lista para repintar o revestir
 - **Copy:** "Sacamos **toda** la pintura o el revestimiento viejo de tu pileta o **piscina** de hormigón de una sola vez, sin lijar a mano, y te la dejamos limpia y pareja, lista para que la repintes o revistas. Vamos a tu casa con equipo propio, en Buenos Aires y todo el AMBA. **Mandanos una foto por WhatsApp** y te decimos qué necesita. La visita y el presupuesto son sin costo."
-- **Elementos:** botón WhatsApp GRANDE alto contraste ("Mandar foto por WhatsApp") · CTA secundario texto ("o dejanos tus datos y te llamamos" → formulario) · foto real de pileta (después) o antes/después · **barra de confianza** ("Equipo propio · Vamos a tu casa · Buenos Aires y AMBA · Presupuesto sin costo") · microcopy ("Respondemos rápido · No hace falta que sepas nada técnico") · **sticky WhatsApp en mobile** en todo el scroll.
+- **Elementos:** botón WhatsApp GRANDE alto contraste ("Mandar foto por WhatsApp") · foto real de pileta (después) o antes/después · **barra de confianza** ("Equipo propio · Vamos a tu casa · Buenos Aires y AMBA · Presupuesto sin costo") · microcopy ("Respondemos rápido · No hace falta que sepas nada técnico") · **sticky WhatsApp en mobile** en todo el scroll.
 - **CTA:** Mandar foto por WhatsApp
 - **Keywords:** arenado de piletas · arenado de piscinas · pileta descascarada · sacar pintura de pileta · arenado de pileta Buenos Aires
 
@@ -113,10 +113,12 @@
 - **Seed (respuestas cortas, cada una ataca una query):** ¿Cómo saco la pintura vieja de la pileta? · ¿Qué es el arenado de una piscina? · ¿Ustedes pintan o revisten después? (**no**) · ¿Cuánto tarda? · ¿Hacen mucho polvo? ¿molesta a los vecinos? · ¿Queda bien para pintar? · ¿Cuánto sale? · ¿Conviene arenar en invierno? · ¿Van a domicilio o tengo que llevar algo? · ¿Trabajan con contratistas/pileteros? · ¿Hacen granallado o arenado certificado? (**no**) · ¿Sirve para piscinas de material?
 - **Elementos:** accordion (patrón `FaqAccordion`) + **schema FAQPage**. Reutilizar/derivar de `src/lib/faqs.ts`.
 
-### 12. CTA final + formulario corto
+### 12. CTA final (solo WhatsApp)
 - **Headline:** Mandanos una foto de tu pileta y te decimos qué necesita
-- **Copy:** "Sin costo y sin compromiso. Escribinos por WhatsApp con una foto, o dejanos tus datos y te contactamos. Coordinamos la visita, te pasamos el precio y, si te cierra, la dejamos lista para que la disfrutes este verano."
-- **Elementos:** WhatsApp primario dominante · formulario corto **3 campos** (nombre, contacto, "¿qué necesitás?") → Formspree `xrgnqbod`, campos `name/contact/description/_subject` · microcopy ("Respondemos rápido · Visita y presupuesto sin costo") · barra de confianza repetida.
+- **Copy:** "Sin costo y sin compromiso. Escribinos por WhatsApp con una foto. Coordinamos la visita, te pasamos el precio y, si te cierra, la dejamos lista para que la disfrutes este verano."
+- **Elementos:** `WhatsAppCTA` dominante · microcopy ("Respondemos rápido · Visita y presupuesto sin costo") · barra de confianza repetida.
+
+> ⚠️ **Actualizado el 28/07/2026:** este bloque incluía un formulario corto de 3 campos a Formspree. **El formulario ya no existe en el sitio** (canal único WhatsApp). El bloque "Qué nos ayuda saber" cumple su función: le dice al usuario qué contar en el primer mensaje.
 
 ### 13. Enlazado interno (relacionados)
 - **Copy:** "¿Además de la pileta tenés algo más para arenar? Hacemos arenado de paredes y fachadas, estructuras y tanques, y trabajos en obra — siempre in situ, con equipo propio."
@@ -134,11 +136,11 @@
 ## Reglas de conversión (transversales)
 1. **WhatsApp = canal #1:** botón verde/alto contraste prominente en el hero (no solo el globito), repetido tras cada sección clave (5+ veces), **sticky en mobile** todo el scroll. **Mensaje pre-cargado por público** (dueño vs contratista). ⚠️ **Un solo `WppBtn` flotante global** — los CTA de sección enlazan al mismo `wa.me`, no duplicar el flotante.
 2. **Prueba real arriba** (sección 5), no al final.
-3. **Formulario = alternativa** (3 campos), nunca compite con WhatsApp.
+3. **Sin formulario ni canal alternativo** (decisión 28/07/2026): todo CTA es WhatsApp, vía el componente `WhatsAppCTA`.
 4. **Mobile-first estricto** (el dueño scrollea desde el celular con la foto de la pileta en la mano).
 5. **Microcopys de fricción cero** en cada CTA: "visita y presupuesto sin costo · respondemos rápido · sin compromiso".
 6. **Cero jerga técnica** en copy/metadata/schema (prohibido Sa3/ISO/metal blanco/granallado/mediciones). Decir explícito qué **NO** hacemos (no pintamos/revestimos; no granallado) filtra al comprador equivocado.
-7. **Tracking intocable:** eventos exactos vía `window.dataLayer` (`contact_whatsapp`, `form_submit`, `form_submit_success` solo tras `response.ok`, `form_submit_error`, `contact_email`); Formspree `xrgnqbod`; **sin PII** en el payload.
+7. **Tracking intocable:** un solo evento vía `window.dataLayer` — **`contact_whatsapp`**, y **solo tras confirmar el `AlertDialog`**; número partido en 2 strings; **sin PII** en el payload. Ver `contexto/06-tracking-y-analytics.md`.
 8. **Bloque estacional rotable** (sección 2): rotar 2×/año y **registrar cada rotación en `08-bitacora.md`**.
 
 ## Keywords cubiertas (checklist de cobertura)

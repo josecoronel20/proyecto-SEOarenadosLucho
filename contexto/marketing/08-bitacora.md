@@ -12,6 +12,59 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-02 — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
+
+- **Qué se hizo:** barrido completo de la deuda documental que dejó la decisión del 28/07 (canal único WhatsApp). El repo tenía **226 menciones a `form_submit*` / `contact_email` / Formspree / `EmailBtn` en 34 archivos**, muchas describiéndolos como **vigentes** — riesgo real de que un asistente futuro reconstruyera el formulario o reconfigurara Ads contra eventos muertos. Quedaron 48, todas marcadas como *eliminado/obsoleto* o dentro de registros históricos.
+  - **Reescritos completos:** `contexto/05-formularios-y-conversion.md` (ahora "Conversión y canales de contacto"), `06-tracking-y-analytics.md`, `09-api-y-servicios.md`, `12-seguridad-y-validaciones.md` y `03-rutas-y-paginas.md` (documentaba 4 casos, sin `/arenado-de-piletas`, con el banner de "pivote en curso" ya cumplido).
+  - **Correcciones puntuales** en `contexto/` 01, 02, 04, 07, 08, 10, 11, 13, 14, 15, 16, 17, 19, 20 y README; y en `marketing/` 01, 05, 07, 09, 10, 11, 13.
+  - **ADR-019 nuevo** en `18-decisiones-tecnicas.md`: "Canal único WhatsApp — se elimina el formulario", que **anula ADR-007** (Formspree). Es la fuente única de la decisión.
+  - **`ROADMAP.md` reconstruido:** Fase 1 estaba con los pasos 3, 4 y 5 sin tildar aunque ya estaban hechos y mergeados. Ahora Fase 1 = ✅ completa; Fase 2 (Search Console, conversiones limpias, GBP, apex→www) = AHORA; Fase 3 reescrita para apuntar a las **8 sesiones** de `ads-config/08-…` en vez del plan viejo.
+  - **Notas de "deuda documental"** de `ads-config/` 01, 02 §2.18, 03 y 08 marcadas como resueltas.
+- **Decisiones de criterio:** los **registros históricos no se reescriben** — las entradas viejas de esta bitácora y el volcado crudo de la cuenta en `10-cuenta-ads-auditoria.md` §4.5 conservan las menciones porque documentan lo que había, no lo que debe haber. §4.7 de ese dossier quedó marcada como superada por el plan de 8 sesiones.
+- **Hallazgos del barrido:** `HeroSecondaryCTA` sigue huérfano (no se monta en ningún lado); la política de privacidad todavía habla de datos que el sitio ya no recolecta; el bug "validación servidor / spam" se cerró **por diseño** (sin formulario no hay input que validar).
+- **Verificación:** `npm run build` limpio (17 rutas). Cambio 100% documental salvo lo que ya venía sin commitear.
+- **Por qué / hipótesis:** el sistema de contexto es el que gobierna lo que hace cualquier asistente sobre este proyecto. Documentación que describe como vigente algo que se eliminó es peor que no tener documentación: dirige el trabajo en la dirección equivocada con confianza.
+- **Resultado esperado:** que la próxima sesión de Ads (sesiones 1–8) y cualquier cambio de código arranquen desde un mapa que coincide con la realidad.
+
+## 2026-07-29 — Mapa completo de la cuenta de Ads diseñada DESDE CERO (Claude Code)
+
+- **Qué se hizo:** a pedido del dueño ("diseñá toda la configuración desde 0, como si la cuenta estuviera vacía, con criterio de paid media manager 2026"), se investigó el estado del arte de Google Ads 2026 (6 frentes: estructura, conversiones, pujas, configuración de campaña incl. **IA Max**, anuncios/recursos, controles) y se diseñó el **mapa completo de la cuenta objetivo**: `14-configuracion-objetivo-ads.md` (índice) + carpeta `ads-config/` con 8 partes (3.706 líneas).
+- **Contenido destacado:** medición antes que campañas · una sola conversión primaria (`contact_whatsapp`) · **105 titulares + 28 descripciones listos para pegar** con caracteres verificados y sin términos prohibidos · política de pinning como control de compliance · IA Max/personalización de texto/recursos automáticos **apagados** (con copy prohibido no se puede dejar escribir a Google) · pujas por fases con umbrales medibles · plan de implementación paso a paso + checklist pre-flight.
+- **Decisión de diseño:** se **conserva la cuenta 953-841-6905** (moneda ARS y zona horaria ya correctas = los únicos parámetros irreversibles) y se reconstruye toda la estructura adentro; las campañas viejas quedan pausadas como archivo. Se agrega **exclusión de datos** para el período de medición sucia.
+- **Hallazgo que cambia el plan:** la cuenta arrastra **11 acciones de conversión, 7 marcadas como primarias** (visitas al sitio, engagements, 4 de llamadas). Por eso **no hay línea base de CPA válida**: el CPA histórico (~8.790) y el tCPA cargado (8.204) hay que descartarlos, no ajustarlos.
+- **Verificación hecha:** conteo de caracteres de los 133 assets de anuncio (0 excesos), cero términos prohibidos en el copy (solo aparecen como negativa/advertencia), cero referencias a Formspree, y las acciones de conversión citadas contrastadas contra el dossier real.
+- **Pendiente antes de implementar:** bloqueantes listados en el índice (ID de GA4 y vínculo con Ads, etiquetado automático, partidos reales del GBA, si la cuenta arrastra `pileta/piscina` como negativa vieja, piletas de fibra vs hormigón, confirmar los ~100 m²/día del copy, ticket promedio y tasa de cierre).
+- **Resultado esperado:** construir la cuenta parte por parte (orden 1→8) con la mayor parte hecha **sin saldo cargado**, para que ningún error de configuración cueste plata.
+- **Resultado real:** _(completar a medida que se implemente cada parte)_
+
+## 2026-07-28 (2) — SOLO WhatsApp: formulario eliminado + auditoría de configuración de campaña
+
+- **Decisión del dueño:** el único canal de contacto es **WhatsApp** → se quitó el formulario del sitio.
+  - `/contacto` **se mantiene como ruta** (es landing de Ads, está en el sitemap y la enlazan home/landing/nav — borrarla sería 404 en los anuncios) y pasó a ser una **página WhatsApp-first**: CTA grande, "mandanos una foto", qué datos ayudan, sin formulario.
+  - Eliminados: formulario + integración **Formspree** (`xrgnqbod`) y el componente **`EmailBtn`** (era código muerto, no se renderizaba).
+  - **Eventos que dejan de existir:** `form_submit`, `form_submit_success`, `form_submit_error`, `contact_email`. **Único evento de conversión vigente: `contact_whatsapp`** (WppBtn + WhatsAppCTA). `CLAUDE.md` actualizado (los invariantes decían lo contrario).
+  - CTAs secundarios "Dejanos tus datos" de la landing reemplazados (uno por "Ver un trabajo real", el del cierre eliminado para dejar un solo CTA fuerte).
+- **⚠️ Impacto en Google Ads (a corregir en la cuenta):** en *Objetivos de conversión* de la campaña hay que **destildar también "Enviar formularios de clientes potenciales"** (ya no existe el form) además de "Clientes potenciales de llamada telefónica" → **debe quedar solo "Contactos"** (donde vive el WhatsApp). Y en *Objetivos → Conversiones*, la acción del formulario queda obsoleta.
+- **Auditoría de configuración de campaña `busqueda-arenadoIndustrial` (capturas del dueño) — hallazgos y estado:**
+  - 🔴 **Redes incluían Socios de búsqueda Y RED DE DISPLAY** en una campaña de búsqueda → ✅ **corregido** (destildadas).
+  - 🔴 **IA Max ACTIVADO** con *personalización de texto* y *expansión de URL final* → concordancia amplia encubierta, Google reescribiendo anuncios y mandando tráfico a URLs arbitrarias (en la captura aparecía `/blog`, **que no existe** → clics a 404) → ✅ **apagado**.
+  - 🔴 **Objetivo de conversión incluía "Clientes potenciales de llamada telefónica"** → la campaña le pedía llamadas a Google (la otra mitad del problema de las llamadas por trabajo, junto con la extensión ya quitada) → **a destildar**.
+  - 🔴 **Ubicación = "Provincia de Buenos Aires" (27,5M de alcance) con "Presencia O INTERÉS"** → excluye CABA, incluye toda la provincia (Mar del Plata, Bahía Blanca) y suma gente de cualquier lado "interesada" en BA → **cambiar a Presencia + radio ~60 km sobre Buenos Aires**.
+  - 🟠 **Puja tCPA $8.204** aprendiendo de conversiones sucias, ~3× el mejor CPA real histórico (`arenados` exacta ≈ $2.800) → revisar al final, con medición limpia.
+  - 🟡 Idiomas incluían **Inglés** → ✅ corregido a solo Español. Rotación "Optimizar" ✅ correcta.
+- **Por qué / hipótesis:** la campaña no solo tenía keywords caras — tenía **la configuración en contra**: Display + IA Max + objetivo de llamadas + geo mal armada. Corregido esto, el mismo presupuesto debería comprar tráfico mucho más calificado.
+- **Resultado esperado y cuándo revisarlo:** al reactivar el saldo, CPA más bajo y cero llamadas de empleo; revisar términos de búsqueda a los 7 días.
+- **Resultado real:** _(completar tras reactivar)_
+
+## 2026-07-28 — Extensión de llamada QUITADA + negativas de empleo cargadas + modo experto de Ads
+
+- **Qué se hizo (en la cuenta, ejecutado por el dueño con guía):**
+  - ❌ **Quitada la extensión/asset de llamada** (`011 2378-7750`, nivel campaña, 77 impresiones/1 clic) — era la vía por la que el aviso mostraba el número con botón "Llamar" a búsquedas de empleo. **Esta era la causa de las "llamadas pidiendo trabajo"** que aparecían al meter presupuesto (no una fuga del número del sitio, que está blindado).
+  - ✅ **Cargadas las negativas de empleo** en frase ("empleo", "trabajo de arenador", "busco trabajo/empleo", "vacante", "se busca personal", "oferta laboral/de trabajo", "changa(s)", "sueldo", "cv", "curriculum", "rrhh", "recursos humanos", "empleado", "curso", "tutorial", "como hacer", "casero").
+- **Decisión de modo de trabajo (dueño):** los fixes básicos no alcanzan → **modo experto de Ads**: Claude trabaja la cuenta como consultor senior (datos, estructura, QS, configuraciones, pujas). Playbook nuevo: `13-modo-experto-ads.md`; instrucción persistida en `CLAUDE.md` + memoria de Claude. Próximo paso: **Sesión de profundidad #1** (capturas de configuración de campaña, QS con 3 componentes, conversiones, RSAs — lista exacta en el playbook §Sesión #1) — ideal hacerla AHORA que la cuenta está sin saldo, antes de recargar.
+- **Resultado esperado y cuándo revisarlo:** llamadas por trabajo ≈ 0 en cuanto vuelva a gastar; revisar "Términos de búsqueda" a los 7 días de reactivar para cazar variantes de empleo que se cuelen.
+- **Resultado real:** _(completar tras reactivar el gasto)_
+
 ## 2026-07-27 (4) — Guía de Google Business Profile (Claude Code)
 
 - **Qué se hizo:** guía completa de setup/optimización del GBP (`12-google-business-profile.md`), a medida de las decisiones del dueño (27/07): ① la ficha **ya existe → reclamar + optimizar**; ② **negocio a domicilio (SAB)** → sin dirección pública, zonas del AMBA; ③ teléfono público = **WhatsApp del negocio**. Incluye: reclamo/verificación, categorías (con las **prohibidas a evitar**: mantenimiento de piscinas/pintura/granallado), descripción lista para pegar, servicios por cluster, fotos, el **motor de reseñas** (pedir a cada cliente + plantilla de WhatsApp), posts estacionales y la conexión con el sitio.

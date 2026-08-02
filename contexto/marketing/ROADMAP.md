@@ -9,37 +9,43 @@ Orden de ejecución de todo lo decidido. **Este archivo es el "¿qué sigue?"**:
 - [x] Cuenta de Ads auditada (dossier `10-…`); gasto topeado (10.000/día nativo + guardián); scripts de monitoreo instalados.
 - [x] Sistema de contexto completo y alineado al negocio real (pivote documentado).
 
-## 🔴 Fase 1 — Sitio alineado al negocio (AHORA — 🤖 Claude Code)
+## ✅ Fase 1 — Sitio alineado al negocio (COMPLETADA, jul 2026 — 🤖 Claude Code)
 
-> Bloqueante de todo lo demás: no se relanzan campañas contra un sitio que promete lo que no hacemos.
+> Era bloqueante de todo lo demás: no se relanzan campañas contra un sitio que promete lo que no hacemos.
 
-1. [x] **Pivote de copy** (`02-estrategia-seo.md` Fase 1): `/servicios`, FAQ, hero de home, JSON-LD y metadata **sin Sa3/ISO/granallado**; entra PYMEs/in situ, piletas y "listo para pintar o revestir". Incluye **reescribir los 4 casos de `projectsInfo.json`** (hoy dicen ISO 8501/Sa 2/Sa 3 en `parametrosTecnicos`) y el componente que muestra esos campos. Respetar `.cursorrules` y los eventos GTM intocables. — ✅ **Hecho 26/07/2026** (en el código, **sin commit aún**; build limpio, GTM/Formspree intactos — ver bitácora 26/07 (7)).
+1. [x] **Pivote de copy** (`02-estrategia-seo.md` Fase 1): `/servicios`, FAQ, hero de home, JSON-LD y metadata **sin Sa3/ISO/granallado**; entra PYMEs/in situ, piletas y "listo para pintar o revestir". Incluye **reescribir los 4 casos de `projectsInfo.json`** (hoy dicen ISO 8501/Sa 2/Sa 3 en `parametrosTecnicos`) y el componente que muestra esos campos. Respetar `.cursorrules` y los eventos GTM intocables. — ✅ **Hecho 26/07/2026** y mergeado en PR #2 (build limpio, tracking intacto — ver bitácora 26/07 (7)).
 2. [x] **Publicar los casos que faltan** con fotos YA presentes en el repo (`public/images/services/arenadoParticular/`): caso **pileta** (6 fotos, sin publicar — prioridad) y opcional piezas. Inventario completo en `04-plan-de-contenidos.md`. — ✅ **Hecho 26/07/2026**: caso `arenado-pileta` publicado (6 fotos). Piezas sigue opcional/pendiente.
-3. [ ] **Landing `/arenado-de-piletas`** con las 3 secciones obligatorias (`04-plan-de-contenidos.md`).
-4. [ ] **Redirects 301** del apex y rutas legacy en Vercel (`01-migracion-y-dominio.md` paso 2).
-5. [ ] `npm run build` limpio → commit + push (con permiso del dueño) → verificar en producción.
+3. [x] **Landing `/arenado-de-piletas`** — ✅ **27/07/2026**: creada y luego **reconstruida al mapa ideal** (`11-landing-piletas-ideal.md`), con FAQ propia, galería antes/después y sección de contratistas.
+4. [x] **Redirects 301** de las rutas legacy — ✅ **27/07/2026** en `next.config.js` (`/arenado-industrial`→`/servicios`, `/arenado-particular`→`/arenado-de-piletas`, `/presupuesto-rapido`→`/contacto`). ⚠️ El **apex→www** es config de dominio en Vercel, no código: sigue pendiente 👤.
+5. [x] `npm run build` limpio → commit + push → verificar — ✅ mergeado vía **PR #2** y **PR #3**.
+6. [x] **Canal único WhatsApp** (decisión del dueño 28/07): formulario, Formspree y `EmailBtn` eliminados; `/contacto` pasa a WhatsApp-first. Única conversión: `contact_whatsapp`.
 
-## 🟠 Fase 2 — Medición y presencia (en paralelo al final de Fase 1)
+## 🟠 Fase 2 — Medición y presencia (AHORA)
 
-6. [ ] **Google Search Console** 👤/🖥️: verificar propiedad del dominio + enviar `sitemap.xml` + pedir indexación de las URLs principales.
-7. [ ] **Limpiar conversiones de Ads** 🖥️: primarias solo `form_submit_success` + `contact_whatsapp`; degradar la basura (visitas/engagements/map); verificar eventos en GTM Preview (`10-…` §4.5).
-8. [ ] **Google Business Profile** 👤/🖥️: crear/reclamar ficha, fotos reales, zona AMBA; pedir reseña a cada cliente.
+7. [ ] **Google Search Console** 👤/🖥️: verificar propiedad del dominio + enviar `sitemap.xml` + pedir indexación de las URLs principales.
+8. [ ] **Limpiar conversiones de Ads** 🖥️: **una sola primaria, `contact_whatsapp`**; degradar todo el resto (visitas/engagements/map/`form_submit` obsoleta); verificar en GTM Preview. Detalle: `ads-config/02-conversiones.md`.
+9. [ ] **Google Business Profile** 👤/🖥️: reclamar y optimizar la ficha (guía completa en `12-google-business-profile.md`), fotos reales, zona AMBA; pedir reseña a cada cliente. Al tenerla, **avisar la URL** para sumar `sameAs` en `siteConfig.ts`.
+10. [ ] 👤 **Apex → www** en Vercel (config de dominio).
 
-## 🟡 Fase 3 — Relanzamiento de Google Ads (🖥️ sesión de Chrome)
+## 🟡 Fase 3 — Construcción de la cuenta de Ads (🖥️ sesión guiada)
 
-> Requisitos previos: Fase 1 pasos 1–3 + Fase 2 paso 7. Detalle completo: `05-google-ads-operacion.md` + `10-…` §6.
+> **El plan vigente es el mapa de 8 partes** diseñado desde cero el 29/07: `14-configuracion-objetivo-ads.md` + `ads-config/`. El plan de implementación paso a paso son las **8 sesiones** de `ads-config/08-controles-implementacion.md`. La mayor parte se construye **sin saldo cargado**.
 
-9. [ ] Cargar **negativas** (técnicas a nivel cuenta; pileta solo en campaña industrial) — `03-keywords-maestro.md`.
-10. [ ] Crear las **3 campañas** (~5.000/día total: Obra-Industrial 3.000 con prioridad `pymes-in-situ` · Piletas 1.250 · General-Marca 750), RSAs por grupo (2 variantes en piletas), extensiones, recomendaciones automáticas OFF, UTMs.
-11. [ ] Instalar el **autopilot (05)** — recién acá el círculo autónomo queda cerrado.
-12. [ ] 👤 **Recargar saldo** → encender → **no tocar 1–2 semanas** (fijar CPA base real).
+11. [ ] Responder los **bloqueantes** del índice de `14-…` (GA4, geo real, negativas heredadas, datos del copy, ticket promedio).
+12. [ ] Sesiones **1–2**: fundaciones de la cuenta + blindaje (auto-apply OFF, etiquetado automático ON, negativas de cuenta, listas compartidas).
+13. [ ] Sesión **3** ⭐: la conversión única (`contact_whatsapp`) — gobierna todo lo demás.
+14. [ ] Sesiones **4–6**: recursos, las 3 campañas en pausa, grupos + keywords + RSA.
+15. [ ] Sesión **7**: pre-flight completo (no se enciende con un ítem en rojo).
+16. [ ] Sesión **8**: 👤 recargar saldo → encender **General-Marca primero** → validar la medición a D+1 → activar el resto → **no tocar 1–2 semanas**.
+17. [ ] Instalar el **autopilot (05)** — recién con conversiones limpias fluyendo; ahí el círculo autónomo queda cerrado.
 
 ## 🟢 Fase 4 — Rutina de crecimiento (permanente)
 
-13. [ ] **Semanal:** llegan los emails de los scripts (lunes) → pegarlos en un chat de Claude → aplicar lo acordado. El informe SEO de los lunes marca la prioridad técnica de la semana.
-14. [ ] **Mensual:** completar KPIs en `07-medicion-y-kpis.md` (la línea base del primer mes es sagrada), cruzar leads del inbox (% obra/PYME = la métrica de la transición), publicar 1–2 casos nuevos, revisar Search Console → mapa de keywords.
-15. [ ] **Escalar:** con CPA estable y trabajos cobrados → subir presupuesto 20–30% por vez hacia el tope de 300.000/mes; ago–sep subir piletas por estacionalidad.
-16. [ ] **Trimestral:** revisar la transición (¿más obra/PYME en el mix?), el Cluster 5 (¿trabajos chicos rentables?) y las landings candidatas del backlog.
+18. [ ] **Semanal:** llegan los emails de los scripts (lunes) → pegarlos en un chat de Claude → aplicar lo acordado. El informe SEO de los lunes marca la prioridad técnica de la semana.
+19. [ ] **Mensual:** completar KPIs en `07-medicion-y-kpis.md` (la línea base del primer mes es sagrada), cruzar los **chats reales de WhatsApp** (% obra/PYME = la métrica de la transición), publicar 1–2 casos nuevos, revisar Search Console → mapa de keywords.
+20. [ ] **Escalar:** con CPA estable y trabajos cobrados → subir presupuesto 20–30% por vez hacia el tope de 300.000/mes; ago–sep subir piletas por estacionalidad.
+21. [ ] **Estacional:** rotar el bloque de invierno de `/arenado-de-piletas` a primavera/verano (~ago-sep) y registrarlo en la bitácora.
+22. [ ] **Trimestral:** revisar la transición (¿más obra/PYME en el mix?), el Cluster 5 (¿trabajos chicos rentables?) y las landings candidatas del backlog.
 
 ---
 

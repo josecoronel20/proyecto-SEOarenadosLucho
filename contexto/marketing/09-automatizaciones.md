@@ -37,7 +37,7 @@ Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automátic
 
 ## 4. Pendientes para cerrar el círculo autónomo
 
-1. **Instalar el autopilot (05) + relanzar la campaña** (`05-google-ads-operacion.md` — estructura de 3 campañas, arranque ~5.000/día) — solo cuando: conversiones GA4→Ads limpias y verificadas (primarias = `form_submit_success` + `contact_whatsapp`; **llamadas NO como primaria** hasta verificar call tracking real — hoy el sitio no tiene evento de llamada), URLs finales en 200, y ≥2-4 semanas de data. *(Los otros 4 scripts + auditoría inicial + tope de gasto: hechos el 26/07/2026.)*
+1. **Instalar el autopilot (05) + relanzar la campaña** (`05-google-ads-operacion.md` — estructura de 3 campañas, arranque ~5.000/día) — solo cuando: conversiones GA4→Ads limpias y verificadas (**una sola primaria: `contact_whatsapp`** — canal único desde el 28/07/2026; **llamadas NUNCA como primaria**: el sitio no expone el teléfono ni tiene evento de llamada, y la extensión de llamada está prohibida), URLs finales en 200, y ≥2-4 semanas de data. *(Los otros 4 scripts + auditoría inicial + tope de gasto: hechos el 26/07/2026.)*
 2. **Token de GitHub** (fine-grained, solo este repo, Contents read/write): permite que Claude audite y corrija código en sesiones programadas sin la computadora del dueño prendida.
 3. Evaluar a futuro (decisión explícita + bitácora): reporte de Ads hacia una hoja de cálculo pública para que la revisión semanal de Claude lea datos de la cuenta sin intervención.
 

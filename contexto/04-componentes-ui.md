@@ -21,7 +21,7 @@ Convenciones de interfaz, componentes reutilizables y reglas para no fragmentar 
 | Componente de sección | `PascalCase`, sufijo descriptivo | `ServiciosHero.tsx`, `AlcanceOperativo.tsx` |
 | Componente común | Carpeta `common/`, nombre corto | `WppBtn.tsx`, `CTASection.tsx` |
 | Primitivos shadcn | Minúscula en `ui/` | `button.tsx`, `card.tsx` |
-| Export | Named para secciones; **default** en `WppBtn`, `EmailBtn`, `CTASection`, `H2` | `export function Header` vs `export default WppBtn` |
+| Export | Named para secciones y `WhatsAppCTA`; **default** en `WppBtn`, `CTASection`, `H2` | `export function Header` vs `export default WppBtn` |
 
 **Imports:** alias `@/components/...`, `@/lib/utils`.
 
@@ -49,9 +49,12 @@ preguntas-frecuentes/
 | **Header** | `Header.tsx` | Nav + Sheet móvil |
 | **Footer** | `Footer.tsx` | Links, logo, legal |
 | **CTASection** | `CTASection.tsx` | Bloque final con video + CTA a `/contacto` |
-| **WppBtn** | `WppBtn.tsx` | WhatsApp flotante global (layout) |
-| **EmailBtn** | `EmailBtn.tsx` | Mail con tracking (`type` opcional) |
+| **WppBtn** | `WppBtn.tsx` | WhatsApp flotante global (layout) — **uno solo** |
+| **WhatsAppCTA** | `WhatsAppCTA.tsx` | CTA inline de WhatsApp (mensaje parametrizable) |
+| **Breadcrumbs** | `Breadcrumbs.tsx` | Migas visibles + JSON-LD |
 | **H2** | `H2.tsx` | Título de sección centrado con línea decorativa |
+
+> ⚠️ **`EmailBtn` fue eliminado el 28/07/2026** (canal único WhatsApp). No recrearlo: el evento `contact_email` ya no existe.
 
 ### Secciones por página (no importar en otras rutas sin motivo)
 
@@ -88,7 +91,7 @@ preguntas-frecuentes/
 </Button>
 ```
 
-**Usar en:** formulario `/contacto` (submit), acciones en cards si aplica.
+**Usar en:** acciones en cards y navegación a `/contacto`. (No hay formularios en el sitio.)
 
 ---
 
@@ -106,22 +109,20 @@ preguntas-frecuentes/
 
 ---
 
-### 3. `EmailBtn` — Email (canal de conversión)
+### 3. `WhatsAppCTA` — WhatsApp inline (canal de conversión)
 
-**Archivo:** `src/components/common/EmailBtn.tsx`
+**Archivo:** `src/components/common/WhatsAppCTA.tsx`
 
-**Props:** `type?: 'CTASection' | 'footer' | 'PresupuestoRapido'`
+**Props:** `message?: string` · `className?: string` · `children: ReactNode`
 
-| type | Render |
-|------|--------|
-| `CTASection` | Botón blanco con borde |
-| `footer` | Link en footer |
-| `PresupuestoRapido` | Link texto subrayado |
+- Mismo patrón que `WppBtn`: número **partido en 2 strings**, `AlertDialog` de confirmación, `window.open` (nunca `<a href>`).
+- Evento GTM: `contact_whatsapp` con `event_label: 'WhatsApp CTA Click'`, **solo tras confirmar**.
+- `message` permite pre-cargar el chat según el contexto (dueño de casa vs contratista en la landing de piletas).
+- No impone estilos: el diseño del botón viene por `className`.
 
-- Evento GTM: `contact_email` con `event_id` único.
-- Anti-doble-click: `sessionStorage` + debounce 2 s.
+**Regla:** para cualquier CTA de WhatsApp inline usar este componente. **No** es un segundo botón flotante — el flotante global sigue siendo único (`WppBtn`).
 
-**Regla:** Para mail con tracking, usar `EmailBtn`, no `mailto:` suelto sin evento.
+> **`EmailBtn` — ELIMINADO (28/07/2026).** Renderizaba un `mailto:` con evento `contact_email`. Se borró junto con el formulario al pasar a canal único WhatsApp; además era código muerto (no se renderizaba en ninguna página). No recrearlo.
 
 ---
 
@@ -151,11 +152,11 @@ En **HeroSection** y **FAQ** hay `<Link className="... bg-primary-400 ...">` inl
 
 | Componente | Uso en proyecto |
 |------------|-----------------|
-| `Button` | Formulario, acciones |
-| `Card` | Contacto, cards servicios/casos |
+| `Button` | Acciones y navegación |
+| `Card` | Cards de servicios/casos |
 | `Sheet` | Menú móvil (Header) |
-| `Accordion` | FAQ |
-| `AlertDialog` | Confirmación WhatsApp |
+| `Accordion` | FAQ (general y de piletas) |
+| `AlertDialog` | Confirmación WhatsApp (`WppBtn`, `WhatsAppCTA`) |
 | `Badge` | Etiquetas en cards |
 | `Carousel` | Carruseles si aplica |
 
@@ -175,7 +176,7 @@ Escala custom en `tailwind.config.ts`:
 Variables CSS en `globals.css` para shadcn (`--primary`, `--background`, etc.).
 
 **WhatsApp:** verde fijo `green-600` (solo en `WppBtn`).  
-**Éxito formulario:** `green-100` / `green-600` (estado success contacto).
+**Verde de WhatsApp:** `green-600` / hover `green-700` (botón flotante y CTAs inline), `green-100` de fondo para el ícono en `/contacto`.
 
 ---
 

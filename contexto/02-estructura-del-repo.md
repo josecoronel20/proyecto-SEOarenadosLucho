@@ -70,7 +70,7 @@ components/
 | `Footer.tsx` | Links, logo, legal |
 | `CTASection.tsx` | Bloque final de conversión (video + link `/contacto`) |
 | `WppBtn.tsx` | Botón flotante WhatsApp + evento GTM |
-| `EmailBtn.tsx` | Botón mail + `dataLayer` |
+| `WhatsAppCTA.tsx` | CTA inline de WhatsApp + `dataLayer` (`EmailBtn.tsx` fue eliminado el 28/07/2026) |
 | `H2.tsx` | Título de sección reutilizable |
 
 ### `components/home/`

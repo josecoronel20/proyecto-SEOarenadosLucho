@@ -1,179 +1,112 @@
-# Formularios y conversión
+# Conversión y canales de contacto
 
-Documentación crítica: canales de contacto, tracking y qué no romper al modificar código.
+Documentación crítica: cómo convierte el sitio y qué no romper al modificar código.
+
+> **Decisión del dueño (28/07/2026) — CANAL ÚNICO WHATSAPP.** Se eliminaron del sitio el **formulario de `/contacto`**, la integración con **Formspree** (`xrgnqbod`) y el componente **`EmailBtn`**. Ya **no existen** los eventos `form_submit`, `form_submit_success`, `form_submit_error` ni `contact_email`, ni ningún endpoint de formulario. **No reintroducir un formulario sin decisión explícita del dueño.** Registro: `contexto/marketing/08-bitacora.md` (28/07/2026).
 
 ---
 
 ## Objetivo de conversión
 
-Maximizar **consultas calificadas** vía:
+Maximizar **consultas calificadas por WhatsApp**. El sitio no captura datos: empuja a abrir una conversación, donde el dueño responde y coordina la visita.
 
-1. **Formulario** en `/contacto` (lead con contexto del proyecto)
-2. **WhatsApp** (respuesta rápida, diálogo previo)
-3. **Email** (`mailto:` con evento medible)
+Por qué un solo canal: el dueño atiende personalmente y el WhatsApp es donde efectivamente responde. Un formulario que nadie mira produce leads perdidos y una conversión falsa en Ads.
 
-Prioridad de negocio (`.cursorrules`): contacto con intención clara (obra industrial, volumen, plazos).
+Prioridad de negocio (`.cursorrules`): contacto con intención clara (obra, PYME con galpón, piletas).
 
 ---
 
 ## Canales de conversión (mapa)
 
-| Canal | Componente / página | Endpoint / destino |
-|-------|---------------------|-------------------|
-| Formulario web | `app/contacto/page.tsx` | `POST https://formspree.io/f/xrgnqbod` |
-| WhatsApp | `common/WppBtn.tsx` (global) | `https://wa.me/5491123787750?text=...` |
-| Email | `common/EmailBtn.tsx` | `mailto:arenadoslucho@hotmail.com` |
+| Canal | Componente / página | Destino |
+|-------|---------------------|---------|
+| WhatsApp flotante (global) | `common/WppBtn.tsx` — **uno solo**, en `layout.tsx` | `https://wa.me/<número>?text=...` vía `window.open` |
+| WhatsApp inline (CTAs) | `common/WhatsAppCTA.tsx` | Ídem, con `message` pre-cargado por contexto |
 | CTA navegación | Links → `/contacto` | Sin backend (solo routing) |
 
-**GTM:** `GTM-W63ZV9D9` en `app/layout.tsx` — `dataLayer` inicializado antes del script GTM.
+**GTM:** `GTM-W63ZV9D9` en `app/layout.tsx` — `dataLayer` inicializado **antes** del script GTM.
+
+**No hay:** API Routes de negocio, backend de formularios, servicio de email, base de datos.
 
 ---
 
-## Formulario existente: `/contacto`
+## `/contacto` — página WhatsApp-first (sin formulario)
 
-**Archivo:** `src/app/contacto/page.tsx`  
-**Tipo:** Client Component (`"use client"`).  
-**Backend:** Formspree (JSON POST, sin API Route propia).
+**Archivo:** `src/app/contacto/page.tsx`
+**Tipo:** **Server Component** (ya no necesita `"use client"`: la interactividad vive en `WhatsAppCTA`).
 
-### Campos
+Sigue existiendo como ruta porque **es landing de Google Ads**, está en el sitemap y la enlazan home, landing de piletas, Header y Footer: borrarla sería un 404 en los anuncios.
 
-| Campo | `name` | Validación UI | Notas |
-|-------|--------|---------------|-------|
-| Nombre | `name` | HTML `required` + disabled si vacío | |
-| Contacto | `contact` | **Obligatorio para enviar** (`disabled` si vacío); sin `required` HTML | Teléfono o email en un solo campo |
-| Descripción del proyecto | `description` | HTML `required` + disabled si vacío | `textarea`, 6 filas |
+Estructura: `<h1>` con la keyword · párrafo de promesa (visita y presupuesto sin costo) · **CTA grande de WhatsApp** · 3 puntos ("Mandanos una foto" / "Respondemos rápido" / "Buenos Aires y AMBA") · bloque "Qué nos ayuda saber" (qué arenar, tamaño, zona, plazo) · link a `/arenado-de-piletas`.
 
-**Payload enviado a Formspree:**
+El bloque "Qué nos ayuda saber" cumple la función que cumplía el formulario: le dice al usuario qué contar en el primer mensaje, sin pedirle que complete campos.
 
-```json
-{
-  "name": "...",
-  "contact": "...",
-  "description": "...",
-  "_subject": "Nueva solicitud de contacto - Arenados Lucho"
-}
+---
+
+## `WhatsAppCTA` — el CTA inline reutilizable
+
+**Archivo:** `src/components/common/WhatsAppCTA.tsx` (Client Component).
+
+```tsx
+<WhatsAppCTA message={WPP_MSG} className={WPP_BTN}>
+  <MessageCircle className="w-6 h-6" />
+  Escribinos por WhatsApp
+</WhatsAppCTA>
 ```
 
-Si `contact` vacío en lógica futura, el código actual envía `'(no indicado)'` — hoy el botón exige contacto.
+| Prop | Uso |
+|------|-----|
+| `message` | Texto pre-cargado en el chat. Se personaliza por contexto (dueño de casa vs contratista en la landing de piletas). Default: consulta por pileta |
+| `className` | Estilos del botón (el componente no impone diseño) |
+| `children` | Contenido del botón (ícono + texto) |
 
-### Estados del formulario
-
-| Estado | Variable | UI |
-|--------|----------|-----|
-| Enviando | `isSubmitting` | Botón disabled, texto "Enviando...", spinner |
-| Éxito | `isSubmitted` | Pantalla completa con check verde + mensaje |
-| Error | `error` | Banner rojo sobre el botón |
-
-### Mensajes de éxito (no cambiar sin motivo de producto)
-
-**Título:** `Solicitud enviada`  
-**Texto:** `Recibimos tu mensaje. Nos pondremos en contacto contigo a la brevedad.`  
-**Acción secundaria:** botón `Enviar otra solicitud` → resetea `isSubmitted`.
-
-### Mensajes de error
-
-`Hubo un error al enviar el formulario. Por favor, intentá nuevamente.`
+Replica el patrón de `WppBtn`: número partido, `AlertDialog` de confirmación, evento solo tras confirmar, `window.open`. **No es un segundo botón flotante** — el flotante global sigue siendo único.
 
 ---
 
-## Endpoint Formspree
+## Evento de tracking (`dataLayer`)
 
-```
-POST https://formspree.io/f/xrgnqbod
-Content-Type: application/json
-```
+**Un solo evento de conversión en todo el sitio: `contact_whatsapp`.** Detalle completo del payload en `06-tracking-y-analytics.md`.
 
-- **No mover** el ID del formulario sin actualizar panel Formspree y notificar al equipo.
-- **No** commitear API keys adicionales; este endpoint es público por diseño de Formspree.
-- Respuesta esperada: `response.ok` → éxito.
+| Evento | Dónde | Cuándo |
+|--------|-------|--------|
+| `contact_whatsapp` | `WppBtn.tsx` (`event_label: 'WhatsApp Button Click'`) | Al confirmar **Continuar** en el AlertDialog |
+| `contact_whatsapp` | `WhatsAppCTA.tsx` (`event_label: 'WhatsApp CTA Click'`) | Ídem |
 
-**Campos extra Formspree:** se puede agregar `_gotcha` (honeypot) o configuración en dashboard Formspree — **no implementado en código hoy**; anti-spam principal es validación cliente + rate limit de Formspree.
+Ambos hacen `window.dataLayer.push({ ... })` protegido por `typeof window !== 'undefined' && window.dataLayer`.
 
----
-
-## Eventos de tracking (`dataLayer`)
-
-Todos los eventos usan `window.dataLayer.push({ ... })` si `dataLayer` existe.
-
-### Formulario contacto
-
-| Evento | Cuándo | Campos clave |
-|--------|--------|--------------|
-| `form_submit` | Al iniciar submit (antes del fetch) | `event_category: 'Contact'`, `form_name: 'contacto'`, `event_id` único |
-| `form_submit_success` | `response.ok` | Mismos + `form_submit_success` |
-| `form_submit_error` | catch / error HTTP | `form_submit_error`, `value: 0` |
-
-**Importante para GTM/GA4:** mantener nombres de evento si hay tags configurados en el contenedor `GTM-W63ZV9D9`.
-
-### WhatsApp (`WppBtn`)
-
-| Evento | Cuándo |
-|--------|--------|
-| `contact_whatsapp` | Al confirmar en AlertDialog ("Continuar") |
-
-Campos: `event_category: 'Contact'`, `event_label: 'WhatsApp Button Click'`, `timestamp`.
-
-### Email (`EmailBtn`)
-
-| Evento | Cuándo |
-|--------|--------|
-| `contact_email` | Un click cada 2 s máximo (dedup) |
-
-Campos: `event_id` único para deduplicación en GA4.
+⚠️ **El evento va después de la confirmación, nunca en el click del botón.** Medir el click mide curiosidad; medir la confirmación mide intención — y es lo que Google Ads usa para pujar.
 
 ---
 
-## Validaciones (resumen)
+## Validaciones y anti-abuso
 
 | Área | Implementación |
 |------|----------------|
-| Formulario | HTML5 `required` (nombre, descripción); lógica JS en submit (`name`, `contact`, `description` no vacíos) |
-| Submit | `disabled` mientras `isSubmitting` o campos incompletos |
-| WhatsApp | Confirmación en modal antes de redirigir |
-| Email | `isProcessing` + `sessionStorage` clave `email_last_click` (2 s) |
-| Servidor | Sin validación server-side propia (depende de Formspree) |
+| WhatsApp | Confirmación en `AlertDialog` antes de redirigir (evita clicks accidentales y mide intención real) |
+| Número | Partido en 2 strings, armado en runtime, abierto con `window.open` — nunca contiguo en el HTML ni en un `href` |
+| Servidor | No aplica: no hay envío de datos desde el sitio |
 
-**No hay:** Zod, React Hook Form, API Route de validación.
+**No hay** (ni hace falta): Zod, React Hook Form, honeypot, reCAPTCHA, rate limiting. Todo eso servía al formulario eliminado.
 
----
-
-## Anti-spam y anti-abuso
-
-| Mecanismo | Dónde |
-|-----------|--------|
-| Botón disabled hasta campos completos | `/contacto` |
-| Un envío a la vez (`isSubmitting`) | `/contacto` |
-| Formspree rate limiting / spam filter | Servicio externo (dashboard) |
-| Debounce email 2 s | `EmailBtn` |
-| Modal confirmación WhatsApp | `WppBtn` |
-| Número WhatsApp partido en variables | Ofuscación mínima en código (no seguridad real) |
-
-**Implementado (mayo 2026):** campo honeypot oculto `_gotcha` en `/contacto` (bots no envían; Formspree filtra si está configurado en panel).
-
-**No implementado:** reCAPTCHA, hCaptcha.
+**El anti-spam real hoy es WhatsApp:** el spam llega al chat, no al sitio.
 
 ---
 
 ## WhatsApp — detalles técnicos
 
-**Componente:** `WppBtn.tsx`  
-**Número (en código):** `549` + `11` + `23787750` → `5491123787750`  
-**Mensaje default:** `Hola, me gustaría recibir asesoramiento sobre arenado.`
+**Número (en código):** `"5491123" + "787750"` → se arma en runtime.
+**Mensajes default:**
+- `WppBtn`: `Hola, me gustaría recibir asesoramiento sobre arenado.`
+- `WhatsAppCTA`: `Hola, quiero consultar por el arenado de mi pileta.` (o el `message` que reciba)
 
-Flujo: click → AlertDialog → Confirmar → `dataLayer` + `window.open(whatsappUrl)`.
+Flujo: click → `AlertDialog` → **Continuar** → `dataLayer.push` → `window.open(whatsappUrl, '_blank', 'noopener,noreferrer')`.
 
----
-
-## Email — detalles técnicos
-
-**Email (en código):** `arenados` + `lucho@hotmail.com`  
-**URL:** `mailto:arenadoslucho@hotmail.com`
-
-Tipos de render según `type` prop — ver `04-componentes-ui.md`.
+⚠️ **El número NUNCA se escribe contiguo** (anti-scraping): ni en el código, ni en el JSON-LD (`telephone` fue removido del schema), ni como texto visible en el sitio. Es la razón por la que se usa `window.open` y no un `<a href>`.
 
 ---
 
-## CTAs que llevan a conversión (sin formulario)
+## CTAs que llevan a conversión
 
 | Ubicación | Destino |
 |-----------|---------|
@@ -181,55 +114,48 @@ Tipos de render según `type` prop — ver `04-componentes-ui.md`.
 | `CTASection` | `/contacto` |
 | Header / Footer nav | `/contacto` (ítem "Contactanos") |
 | FAQ (bloque final) | `/contacto` |
+| Landing de piletas | `WhatsAppCTA` inline (varios bloques) |
 
-Estos **no disparan** eventos `form_*`; solo navegación. El embudo se mide en página de contacto + eventos globales Wpp/Email.
+Los links a `/contacto` **no disparan** eventos; solo navegación. El embudo se mide con `contact_whatsapp` desde cualquier página.
 
 ---
 
 ## Qué NO romper
 
-### Formspree y formulario
-
-1. **URL** `https://formspree.io/f/xrgnqbod` sin coordinar cambio en Formspree dashboard.
-2. Nombres de campos JSON (`name`, `contact`, `description`, `_subject`) — emails/notificaciones pueden depender de ellos.
-3. Flujo éxito/error: no eliminar `form_submit_success` / `form_submit_error` si GTM los usa en conversiones.
-4. No quitar `disabled` en submit durante `isSubmitting` (doble envío).
-5. No pasar el formulario a otro servicio sin migrar eventos GTM.
-
 ### Tracking
 
-1. **GTM ID** `GTM-W63ZV9D9` y script `dataLayer` en `<head>` antes de GTM.
-2. Nombres de eventos: `contact_whatsapp`, `contact_email`, `form_submit`, `form_submit_success`, `form_submit_error`.
-3. Declaración global `Window.dataLayer` en archivos client que hacen push.
+1. **GTM ID** `GTM-W63ZV9D9` y `dataLayer` inicializado en `<head>` **antes** del snippet GTM.
+2. **Nombre exacto del único evento vigente:** `contact_whatsapp`. Renombrarlo rompe GA4 y Google Ads sin que el build falle.
+3. `contact_whatsapp` **solo tras confirmar el AlertDialog** — no adelantarlo al click.
+4. **Sin PII** (teléfono, email, nombre) en el payload del `dataLayer`.
+5. Declaración global `Window.dataLayer` en los archivos client que hacen push.
 
-### WhatsApp / Email
+### WhatsApp
 
-1. Un solo **`WppBtn`** en layout — no agregar segundo flotante.
-2. Mantener **AlertDialog** en WhatsApp (evita clicks accidentales y permite medir intención).
-3. **EmailBtn:** conservar deduplicación de eventos si se toca el handler.
+1. **Un solo `WppBtn` flotante** (global en el layout) — no agregar un segundo.
+2. Mantener el **`AlertDialog`** en ambos componentes.
+3. **Nunca** escribir el número contiguo, ni ponerlo en un `href`, ni devolverlo al JSON-LD.
 
-### UX / copy legal
+### Ruta
 
-1. Mensaje de éxito en español argentino coherente con el tono del sitio.
-2. Placeholder del textarea orientado a obra (superficie, dimensiones, ubicación, plazos).
+1. **No borrar `/contacto`**: es landing de Ads y está enlazada en todo el sitio.
+2. **No reintroducir el formulario** (ni Formspree, ni un reemplazo) sin decisión explícita del dueño: cambiaría la única conversión de la cuenta de Ads.
 
 ---
 
 ## Checklist al modificar conversión
 
-- [ ] ¿Los eventos `dataLayer` siguen disparándose en el mismo orden?
-- [ ] ¿Formspree recibe el mismo shape de JSON?
-- [ ] ¿GTM en preview muestra los tags?
-- [ ] ¿WhatsApp y mail siguen funcionando en móvil?
-- [ ] ¿Submit no permite doble click?
-- [ ] ¿Actualicé este archivo si cambió endpoint o eventos?
+- [ ] ¿`contact_whatsapp` sigue disparándose **solo** tras confirmar el modal?
+- [ ] ¿Sigue habiendo un solo botón flotante?
+- [ ] ¿El número quedó partido y fuera del HTML? (buscar `5491123787750` en el HTML servido: no debe aparecer)
+- [ ] ¿GTM en preview muestra el tag?
+- [ ] ¿WhatsApp abre bien en móvil y desktop?
+- [ ] ¿Actualicé este archivo y `06-tracking-y-analytics.md` si cambió algo?
 
 ---
 
-## Mejoras futuras (no hacer sin plan)
+## Relacionado
 
-- Extraer `ContactForm` a `components/common/` reutilizable.
-- Honeypot + validación server opcional (API Route proxy a Formspree).
-- Unificar CTAs hero/FAQ con `Button asChild`.
-- Variable de entorno `NEXT_PUBLIC_FORMSPREE_ID` en lugar de URL hardcodeada.
-- Teléfono visible en header (`.cursorrules` lo menciona como objetivo).
+- Eventos y payloads exactos: `06-tracking-y-analytics.md`
+- Componentes y CTAs: `04-componentes-ui.md`
+- Configuración de la conversión en Google Ads: `contexto/marketing/ads-config/02-conversiones.md`
