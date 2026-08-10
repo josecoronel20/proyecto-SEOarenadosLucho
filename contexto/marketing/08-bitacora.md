@@ -12,6 +12,20 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-10 (4) — Sesión de profundidad #1: diagnóstico de la cuenta (Claude Code)
+
+- **Qué se hizo:** el dueño aportó **14 capturas + el informe de términos de búsqueda** (126 páginas, 10 dic 2025 – 10 ago 2026). Diagnóstico completo en **`17-diagnostico-cuenta-10-08.md`** (nuevo), que **reemplaza al dossier `10-…` como foto vigente** de la cuenta.
+- **🔴 Hallazgo #1 — Auto-apply de OFERTAS está ENCENDIDO:** 4 recomendaciones tildadas en "Expande tu empresa", todas de la familia Ofertas (Maximizar conversiones, Max conv. con CPA objetivo, Establecer un CPA objetivo, Ajustar objetivos de CPA). **Google puede cambiar la estrategia de puja y el CPA solo.** Nunca habíamos auditado esta pantalla. Explica de dónde salió el tCPA de 8.204,88: lo puso Google, no el dueño — y lo va a volver a poner mientras sigan tildadas.
+- **🔴 Hallazgo #2 — Medición podrida:** 9 de 10 acciones de conversión son **Principales**, con **3 objetivos predeterminados de cuenta** activos. **6 de las 7 conversiones del último mes son `Local actions - Other engagements`** (86% ruido). `contact_whatsapp` existe y está en Principal pero **nunca registró una conversión** — es la única conversión del proyecto y no hay evidencia de que dispare.
+- **🔴 Hallazgo #3 — IA Max hizo el 45% de los términos:** 277 de 609 filas vinieron por "Coincidencias expandidas de IA Max" — concordancia amplia encubierta, con prueba empírica. Trajo **granallado (15 términos)**, **técnicos (metal blanco, ISO 8501, shot blasting)**, **pintura industrial** y **decapado químico**: todos servicios que el negocio NO presta. Está apagado desde el 28/07, pero **todo el aprendizaje de puja se construyó sobre ese tráfico**.
+- **🔴 Correcciones a nuestra propia bitácora:** el 28/07 registramos "idiomas ✅ corregido a solo Español" — **está en "Inglés y Español"**, no se aplicó o se revirtió. Y el inglés + IA Max trajo consultas en inglés (`industrial coatings`, `industrial cleaning`). También sigue **ENCENDIDO** `Informes de llamadas` (tercera puerta del teléfono).
+- **🟠 Hallazgo de calidad, el más accionable:** **"Experiencia con la página de destino: Inferior al promedio" en el 100% de las keywords**, mientras "Relevancia del anuncio" es "Superior" en casi todas. Los anuncios están bien; **el destino está mal**: todo hereda la URL de campaña, que apunta a la **home**. Con `/servicios` y `/arenado-de-piletas` ya construidas, **rutear por grupo es el fix de mayor retorno de todo el diagnóstico**.
+- **🟢 Oportunidades encontradas:** hay **demanda real de piletas cayendo en la campaña industrial** (`arenado de piletas`, `arenado de piletas precio`) — y `pileta` no está bloqueada a nivel campaña. Y **15 términos de PRECIO** (`arenado precio`, `cuanto sale arenar`, `valor m2 de arenado`): la consulta más comercial que existe, sin ninguna respuesta en el sitio.
+- **Nuance importante:** `decapado` **no se puede negativizar a secas** — el decapado químico/pasivado es servicio equivocado, pero "decapar la pileta" es parte del gap sin jerga. Van negativas de frase específicas.
+- **Decisión que queda confirmada:** la campaña `busqueda-arenadoIndustrial` **se pausa** (Fase 3 del roadmap). Arrastra tCPA puesto por Google, idiomas mal, geo mal, negativas que no se heredan y aprendizaje construido sobre tráfico de IA Max. Limpiarla cuesta más que construir.
+- **Pendiente:** 5 capturas (negativas de **cuenta** ← bloqueante, opciones de ubicación, fila de DSA, historial de auto-apply, los 2 borradores) y **reexportar los términos en CSV** para poder rankear por gasto.
+- **Resultado real:** _(completar tras la sesión de correcciones)_
+
 ## 2026-08-10 (3) — Roadmap maestro de implementación de Ads (Claude Code)
 
 - **Qué se hizo:** `16-roadmap-implementacion-ads.md` (nuevo) — el secuenciador de las **11 fases** de la cuenta. No duplica el detalle (que vive en `ads-config/08` y `14-…`): lo **ordena contra el estado real**, con estado, dependencias, duración y quién hace cada cosa.

@@ -30,6 +30,7 @@ Complementa (no reemplaza) al sistema técnico `contexto/00-20`. Regla de oro: *
 | [14-configuracion-objetivo-ads.md](./14-configuracion-objetivo-ads.md) + [ads-config/](./ads-config/) | **El mapa completo de la cuenta diseñada desde cero** (8 partes: fundaciones · conversiones · estructura · keywords · configuración · anuncios · pujas · implementación) | Construir o auditar la cuenta de Ads parte por parte |
 | [15-sitio-ideal.md](./15-sitio-ideal.md) | **El sitio ideal diseñado desde cero** + gap contra el actual + qué se ejecutó (10/08/2026) | Antes de tocar la estructura, el orden de secciones o los CTAs de cualquier página |
 | [16-roadmap-implementacion-ads.md](./16-roadmap-implementacion-ads.md) | **El "¿qué sigue?" de la cuenta de Ads**: 11 fases, qué ya está hecho, qué bloquea qué, quién hace cada cosa | **Al empezar cualquier sesión sobre la cuenta de Ads** |
+| [17-diagnostico-cuenta-10-08.md](./17-diagnostico-cuenta-10-08.md) | **Foto vigente de la cuenta** (10/08): auto-apply de ofertas ON, medición podrida, IA Max en el 45% de los términos, landing experience en Inferior | Antes de tocar la cuenta — **reemplaza al dossier `10-…` como estado actual** |
 | [ads-scripts/](./ads-scripts/) | Scripts listos para pegar en Google Ads | Ver `06-google-ads-scripts.md` |
 
 ---
