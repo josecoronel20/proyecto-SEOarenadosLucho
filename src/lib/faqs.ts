@@ -22,6 +22,42 @@ export const faqs: Faq[] = [
   { question: "¿Hacen granallado o arenado certificado con normas?", answer: "No. Hacemos arenado sin vueltas para dejar la superficie lista para pintar o revestir. No trabajamos con granallado ni con arenado certificado bajo normas o mediciones técnicas." },
 ]
 
+/**
+ * Selecciona un subconjunto de `faqs` respetando el orden pedido.
+ *
+ * Lanza si una pregunta no existe: si alguien edita el texto de una FAQ, el build
+ * falla ruidosamente en vez de renderizar 4 de 6 en silencio — y, sobre todo, en
+ * vez de dejar el JSON-LD `FAQPage` desalineado con lo visible (Google penaliza
+ * el schema que no coincide con la página).
+ */
+function pick(questions: string[]): Faq[] {
+  return questions.map((q) => {
+    const found = faqs.find((f) => f.question === q)
+    if (!found) throw new Error(`FAQ inexistente: "${q}" (ver src/lib/faqs.ts)`)
+    return found
+  })
+}
+
+/** FAQ de la home: las 6 dudas de entrada, en el orden en que aparecen en la cabeza. */
+export const faqsHome: Faq[] = pick([
+  "¿Qué es el arenado y para qué sirve?",
+  "¿Vienen a domicilio o tengo que llevar algo a un taller?",
+  "¿Cuánto cuesta?",
+  "¿Cuánto tardan?",
+  "¿Queda lista para pintar o revestir?",
+  "¿Hacen granallado o arenado certificado con normas?",
+])
+
+/** FAQ de /servicios: las objeciones de PYME con galpón y de obra en marcha. */
+export const faqsServicios: Faq[] = pick([
+  "¿Arenan camiones, tanques o estructuras en mi galpón?",
+  "¿Trabajan dentro de una obra en marcha?",
+  "¿Cuánto tardan?",
+  "¿Hacen mucho polvo? ¿Molesta a los vecinos?",
+  "¿Pueden trabajar fines de semana o turnos extendidos?",
+  "¿Hacen granallado o arenado certificado con normas?",
+])
+
 // FAQs específicas de la landing /arenado-de-piletas (dueño de casa + contratista).
 // Alimentan el acordeón y el JSON-LD FAQPage de esa página.
 export const faqsPiletas: Faq[] = [

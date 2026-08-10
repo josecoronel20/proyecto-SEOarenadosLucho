@@ -46,9 +46,13 @@ Build de referencia: **17 rutas** (incluye `robots.txt`, `sitemap.xml`, `_not-fo
 | **Intención SEO** | Arenado Buenos Aires / AMBA; in situ; quitar óxido y pintura; listo para pintar o revestir. |
 | **Conversiones** | WhatsApp flotante (`WppBtn`) desde cualquier scroll; clicks a `/contacto`. |
 
-**Secciones (en orden):** `HeroSection` (video), `TrustBar`, `IntroductionSection`, `ProjectsSection`, `ServicesSection`, `ValueBullets`, `CTASection`. (`HeroSecondaryCTA` existe pero **no se monta** — código muerto, ver `15-bugs-conocidos.md`.)
+**Secciones (en orden):** `HeroSection`, `TrustBar`, `QueNecesitasArenar`, `IntroductionSection`, `ProjectsSection`, `ComoTrabajamos`, `ZonasCobertura`, `FaqCorta`, `CTASection`. Declara **schema `FAQPage`** con `faqsHome`.
 
-⚠️ Las 2 cards se rotulan por **trabajo**, no por tipo de comprador (decisión 27/07): rotularlas "Industrial vs Particular" enterraba restauración y le ocultaba las piletas al contratista.
+**El orden sigue el recorrido mental del visitante** (rediseño 10/08/2026, ver `marketing/15-sitio-ideal.md`): promesa → confianza → "esto es lo mío" (ruteo) → "ah, eso es el arenado" → prueba → cómo se contrata → dónde → objeciones → conversión.
+
+⚠️ **`QueNecesitasArenar` rutea por TRABAJO, no por tipo de comprador** (decisión 27/07): rotular "Industrial vs Particular" enterraba restauración y le ocultaba las piletas al contratista. Su **tercera opción ("¿es otra cosa?") va directo a WhatsApp**, no a una página: captura todo lo que no encaja sin crearle una landing.
+
+⚠️ **El hero no usa el video.** `heroVideo.mp4` pesa 24,3 MB sin comprimir y dejaba la home en blanco varios segundos en 4G. El fondo es una foto real con `priority`. Vuelve cuando el video pese < 3 MB.
 
 ---
 
@@ -64,7 +68,9 @@ Build de referencia: **17 rutas** (incluye `robots.txt`, `sitemap.xml`, `_not-fo
 
 **Metadata:** title `Servicios de arenado industrial`; description con galpón/camiones/PYME e in situ. **Sin** Sa3/ISO/metal blanco.
 
-**Secciones (en orden):** `ServiciosHero`, `QueArenamos`, `BloqueDiferencial`, `CasoDestacado`, `AlcanceOperativo`, `LogisticaCoordinacion`, `AutoridadRapida`, `MitigacionRiesgo`, `CTASection`. (`RequisitosCliente` fue eliminado el 27/07: duplicaba Logística.)
+**Secciones (en orden):** `ServiciosHero`, `QueArenamos`, `CasoDestacado`, `AlcanceOperativo`, `ComoTrabajamos`, `LogisticaCoordinacion`, `BloqueDiferencial`, `AutoridadRapida`, `ZonasCobertura`, `MitigacionRiesgo`, `FaqCorta`, `CTASection`. Declara **schema `FAQPage`** con `faqsServicios`.
+
+⚠️ `QueArenamos` lleva un **CTA de WhatsApp por grupo** (obra / galpón) con su mensaje pre-cargado: el CTA está donde la persona se reconoce. `MitigacionRiesgo` se muestra como **"Lo que siempre nos preguntan"** — el título anterior, "Mitigación de riesgo", era jerga de pliego.
 
 ⚠️ **Sin canibalización:** la metadata y el schema de `/servicios` **no ofrecen piletas** — esa consulta la gana la landing dedicada.
 
@@ -167,7 +173,7 @@ Slugs generados desde `projectsInfo.json` (campo `idSection`):
 | **CTA principal** | Ninguno comercial. |
 | **Conversiones** | Ninguna (solo el flotante global). |
 
-✅ **Actualizadas el 02/08/2026** al canal único WhatsApp: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp y que la medición no recibe PII. La política además tenía un **bug de render** (el bloque "Correo electrónico" del responsable mostraba la etiqueta sin valor) — corregido leyendo `BUSINESS.email` de `siteConfig.ts`.
+✅ **Actualizadas el 10/08/2026** al canal único WhatsApp: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp y que la medición no recibe PII. La política además tenía un **bug de render** (el bloque "Correo electrónico" del responsable mostraba la etiqueta sin valor) — corregido leyendo `BUSINESS.email` de `siteConfig.ts`.
 
 ---
 

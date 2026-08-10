@@ -51,8 +51,16 @@ preguntas-frecuentes/
 | **CTASection** | `CTASection.tsx` | Bloque final con video + CTA a `/contacto` |
 | **WppBtn** | `WppBtn.tsx` | WhatsApp flotante global (layout) — **uno solo** |
 | **WhatsAppCTA** | `WhatsAppCTA.tsx` | CTA inline de WhatsApp (mensaje parametrizable) |
+| **CTASection** | `CTASection.tsx` | Cierre de página: **abre WhatsApp** + bloque "qué nos ayuda saber". Props: `message`, `title`, `subtitle` |
+| **ComoTrabajamos** | `ComoTrabajamos.tsx` | Los 3 pasos del servicio. Prop: `className` (fondo) |
+| **ZonasCobertura** | `ZonasCobertura.tsx` | Zonas en texto (SEO local sin páginas delgadas). Prop: `className` |
+| **FaqCorta** | `FaqCorta.tsx` | FAQ para páginas que no son `/preguntas-frecuentes`. Props: `items`, `title`, `className` |
 | **Breadcrumbs** | `Breadcrumbs.tsx` | Migas visibles + JSON-LD |
 | **H2** | `H2.tsx` | Título de sección centrado con línea decorativa |
+
+⚠️ **`FaqCorta` no declara el schema.** El `FAQPage` lo declara la **página** que lo monta, con **exactamente las mismas preguntas** que renderiza: Google penaliza el schema que no coincide con lo visible. Los subconjuntos viven en `src/lib/faqs.ts` (`faqsHome`, `faqsServicios`) y se arman con un helper que **lanza en build** si una pregunta no existe.
+
+**Estilos y mensajes de los CTAs de WhatsApp: `src/lib/wpp.ts`** — fuente única de las clases (`WPP_BTN`, `WPP_BTN_LG`, `WPP_BTN_SM`, `WPP_BTN_ON_DARK`) y de los **mensajes pre-cargados por intención** (`WPP_MSG.general/obra/galpon/pileta/contratista/otro`). Usar el mensaje del contexto, no el genérico: el primer mensaje del cliente es lo único que tiene el dueño para cotizar.
 
 > ⚠️ **`EmailBtn` fue eliminado el 28/07/2026** (canal único WhatsApp). No recrearlo: el evento `contact_email` ya no existe.
 

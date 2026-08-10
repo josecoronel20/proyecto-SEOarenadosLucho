@@ -1,5 +1,3 @@
-"use client"
-
 import { Zap, BadgeDollarSign, Handshake } from "lucide-react"
 
 const items = [

@@ -202,7 +202,7 @@ Activarlo **igual**, aunque hoy **no aporte nada**: el sitio no captura email ni
 **Verificación de cierre (24-48 h después del primer clic pago):**
 `Objetivos → Conversiones → Resumen` → la acción debe decir **"Registrando conversiones"** y la conversión debe aparecer en la columna **Conversiones** (no solo en "Todas las conv."). Si a los 15 días sigue en "Sin actividad reciente" con clics acumulados, la etiqueta no dispara: **frenar todo** y revisar GTM antes de gastar otro peso.
 
-✅ **Deuda documental resuelta el 02/08/2026:** `13-modo-experto-ads.md`, `09-automatizaciones.md` y el resto de los archivos que listaban `form_submit_success` como primaria ya fueron corregidos. La decisión quedó registrada como **ADR-019** en `contexto/18-decisiones-tecnicas.md`.
+✅ **Deuda documental resuelta el 10/08/2026:** `13-modo-experto-ads.md`, `09-automatizaciones.md` y el resto de los archivos que listaban `form_submit_success` como primaria ya fueron corregidos. La decisión quedó registrada como **ADR-019** en `contexto/18-decisiones-tecnicas.md`.
 
 ---
 

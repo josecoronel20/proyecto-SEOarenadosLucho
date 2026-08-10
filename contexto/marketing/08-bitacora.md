@@ -12,7 +12,25 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
-## 2026-08-02 — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
+## 2026-08-10 (2) — El sitio rediseñado desde cero y ejecutado (Claude Code)
+
+- **Qué se pidió:** "creá la estructura perfecta del sitio perfecto en base a nuestro objetivo y contexto, olvidá el sitio actual; después compará y editalo por completo".
+- **Método:** blueprint desde la hoja en blanco → auditoría del sitio actual contra él → ejecución. Todo en `15-sitio-ideal.md` (nuevo).
+- **El hallazgo de fondo:** la **arquitectura de rutas ya era la correcta** — el problema era la ejecución. El sitio estaba construido como **folleto institucional** (hero gigante, secciones informativas, "contactanos" al final) cuando el negocio necesita una **máquina de abrir WhatsApp**.
+- **Los 5 problemas que más costaban plata:**
+  1. **El CTA de cierre de 3 páginas prometía WhatsApp y no abría WhatsApp**: botón "Contactanos" con ícono de documento que iba a `/contacto`, con el texto de abajo diciendo "Escribinos por WhatsApp". Mismo patrón roto en `/preguntas-frecuentes`.
+  2. **Ninguna página fuera de piletas y contacto tenía un CTA de WhatsApp** — la única conversión del proyecto dependía del botón flotante.
+  3. **La home no explicaba qué es el arenado antes del fold** (hero a `100vh`), justo el segmento que no conoce la palabra.
+  4. **Ruteo sin salida:** todo lo que no era galpón ni pileta se perdía.
+  5. **El `<h1>` de la home era un subtítulo en `text-base`** mientras la marca era un `<p>` de `text-7xl`.
+- **Qué se ejecutó:** `CTASection` abre WhatsApp con mensaje por página + bloque "qué nos ayuda saber" · CTA de WhatsApp en Header (desktop y mobile) y Footer · **`src/lib/wpp.ts` nuevo** con 6 mensajes pre-cargados por intención · home reordenada al recorrido del visitante con `QueNecesitasArenar` (ruteo por trabajo, con salida a WhatsApp para "otra cosa") · `TrustBar` con hechos en vez de lenguaje de pliego · componentes nuevos reutilizables `ComoTrabajamos`, `ZonasCobertura`, `FaqCorta` · **`FAQPage` en home y `/servicios`** · `/servicios` con h1 con keyword+zona y CTA por grupo · "Mitigación de riesgo" → "Lo que siempre nos preguntan" · 7 componentes a Server Component · 3 archivos muertos eliminados.
+- **Decisión de performance (reversible):** el **video del hero (24,3 MB, sin comprimir) salió del camino crítico** — el fondo ahora es una foto real con `priority`. En 4G la home quedaba en blanco varios segundos con tráfico pago rebotando antes de ver nada. **Vuelve cuando pese < 3 MB.**
+- **Decisión de arquitectura:** **no se crearon rutas nuevas.** Una landing por partido sería un *doorway* delgado que diluye la autoridad de las 3 páginas que importan; la señal local se cubre con una sección de zonas en texto + el GBP. Se nombran **agrupaciones, no partidos**: prometer zonas que después se rechazan quema leads.
+- **Verificación:** `npm run build` limpio (17 rutas) · un solo `<h1>` por página, todos con keyword · `contact_whatsapp` y GTM intactos · **el número no aparece contiguo en ningún HTML generado** · HTML servido revisado página por página.
+- **Resultado esperado y cuándo revisarlo:** más `contact_whatsapp` por sesión (el CTA dejó de estar a un salto de página) y mejor calidad de lead (mensaje pre-cargado por intención). Medir a las 2–4 semanas post-deploy; con Ads encendido, mirar también la tasa de conversión de `/servicios`.
+- **Resultado real:** _(completar)_
+
+## 2026-08-10 (1) — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
 
 - **Qué se hizo:** barrido completo de la deuda documental que dejó la decisión del 28/07 (canal único WhatsApp). El repo tenía **226 menciones a `form_submit*` / `contact_email` / Formspree / `EmailBtn` en 34 archivos**, muchas describiéndolos como **vigentes** — riesgo real de que un asistente futuro reconstruyera el formulario o reconfigurara Ads contra eventos muertos. Quedaron 48, todas marcadas como *eliminado/obsoleto* o dentro de registros históricos.
   - **Reescritos completos:** `contexto/05-formularios-y-conversion.md` (ahora "Conversión y canales de contacto"), `06-tracking-y-analytics.md`, `09-api-y-servicios.md`, `12-seguridad-y-validaciones.md` y `03-rutas-y-paginas.md` (documentaba 4 casos, sin `/arenado-de-piletas`, con el banner de "pivote en curso" ya cumplido).

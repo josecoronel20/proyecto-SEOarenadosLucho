@@ -1,5 +1,3 @@
-"use client"
-
 import { Users, LayoutGrid, Zap, Clock } from "lucide-react"
 
 const items = [

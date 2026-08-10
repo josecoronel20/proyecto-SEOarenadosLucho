@@ -1,44 +1,65 @@
-"use client"
-
-import Link from "next/link"
 import Image from "next/image"
-import { Phone } from "lucide-react"
+import { MessageCircle, ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { Breadcrumbs } from "@/components/common/Breadcrumbs"
+import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
+import { WPP_BTN_ON_DARK, WPP_MSG } from "@/lib/wpp"
 
+/**
+ * Hero de /servicios. Igual que en la home: fuera el `100vh` (empujaba todo el
+ * contenido fuera de pantalla) y el `<h1>` pasa a llevar keyword + zona — antes
+ * era "Arenado industrial" a secas, tirando "buenos aires"/"amba" justo del
+ * elemento que más pesa para la consulta local.
+ */
 export function ServiciosHero() {
   return (
-    <section className="h-[calc(100vh-80px)] flex flex-col  bg-white px-4 py-4">
-      <div className="relative flex items-end h-full p-4">
-        {/* Background */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/services/arenadoIndustrial.PNG"
-            alt="Arenado industrial de estructuras metálicas en Buenos Aires"
-            fill
-            className="object-cover rounded-lg object-top"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-transparent rounded-lg" />
+    <section className="relative bg-primary-900">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/services/arenadoIndustrial.PNG"
+          alt="Arenado de estructuras metálicas en un galpón de Buenos Aires"
+          fill
+          className="object-cover object-top opacity-45"
+          priority
+          sizes="100vw"
+        />
+      </div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-primary-900/55" />
 
-        {/* Content */}
-        <div className="container mx-auto relative z-20 w-full pb-8 md:pb-20">
-          <div className="max-w-3xl lg:max-w-4xl mx-auto flex flex-col gap-4 md:gap-7 lg:gap-8 items-center text-center px-2 sm:px-0">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-300 leading-tight drop-shadow-lg">
-              Arenado industrial
-            </h1>
-            <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed font-medium drop-shadow-md max-w-3xl">
-              Arenamos estructuras, tanques, fachadas y galpones in situ —vamos con el equipo, no trasladás nada—, rápido y prolijo, y te las dejamos listas para pintar o revestir.
-            </p>
-            <div className="mt-2">
-              <Link
-                href="/contacto"
-                className="inline-flex items-center gap-2 px-8 py-4 md:px-10 md:py-5 bg-white text-primary-700 font-semibold text-lg rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200 border-2 border-white/90"
-              >
-                
-                Contactanos
-              </Link>
-            </div>
+      <div className="container mx-auto px-4 lg:px-8 relative z-20 py-14 md:py-24">
+        <div className="max-w-3xl">
+          <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Servicios" }]} />
+
+          <p className="text-primary-200 font-semibold text-sm md:text-base mb-3">
+            Obra · Industria · Galpones · Buenos Aires y AMBA
+          </p>
+
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight drop-shadow-lg">
+            Arenado industrial y en obra en Buenos Aires y AMBA
+          </h1>
+
+          <p className="mt-5 text-base md:text-xl text-white/95 leading-relaxed max-w-2xl drop-shadow-md">
+            Arenamos estructuras metálicas, tanques, silos, camiones, hierros, paredes y fachadas
+            <strong className="font-semibold"> en tu obra, tu planta o tu galpón</strong>. Vamos con
+            equipo y compresores propios: no trasladás nada y no dependemos de la energía del lugar.
+          </p>
+
+          <p className="mt-3 text-white/90 font-medium">
+            Sacamos óxido y pintura vieja y te lo dejamos listo para pintar o revestir.
+          </p>
+
+          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+            <WhatsAppCTA message={WPP_MSG.obra} className={WPP_BTN_ON_DARK}>
+              <MessageCircle className="w-5 h-5" />
+              Pedir presupuesto por WhatsApp
+            </WhatsAppCTA>
+            <Link
+              href="/casos-de-exito"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/90 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+            >
+              Ver trabajos reales
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>

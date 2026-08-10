@@ -1,6 +1,11 @@
 import Link from "next/link"
-import { Building2, Warehouse, Waves, ArrowRight, CheckCircle2 } from "lucide-react"
+import { Building2, Warehouse, Waves, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
+import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
+import { WPP_BTN, WPP_MSG } from "@/lib/wpp"
 
+// Cada grupo lleva su propio mensaje pre-cargado: el CTA está justo donde la
+// persona se reconoce ("esto es lo mío"), y el chat arranca con el trabajo ya
+// nombrado en vez de un "hola" genérico que obliga a repreguntar todo.
 const grupos = [
   {
     icon: Building2,
@@ -11,6 +16,8 @@ const grupos = [
       "Fachadas y frentes de edificio",
       "Vigas e hierros (antióxido)",
     ],
+    message: WPP_MSG.obra,
+    cta: "Consultar por un trabajo en obra",
   },
   {
     icon: Warehouse,
@@ -21,6 +28,8 @@ const grupos = [
       "Camiones, acoplados e hierros",
       "Quitar óxido y pintura vieja",
     ],
+    message: WPP_MSG.galpon,
+    cta: "Consultar por mi galpón",
   },
 ]
 
@@ -40,8 +49,11 @@ export function QueArenamos() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {grupos.map(({ icon: Icon, title, text, items }) => (
-            <div key={title} className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
+          {grupos.map(({ icon: Icon, title, text, items, message, cta }) => (
+            <div
+              key={title}
+              className="flex flex-col rounded-xl border border-gray-200 bg-gray-50/50 p-6"
+            >
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2.5 rounded-lg bg-primary-100 text-primary-700">
                   <Icon className="w-6 h-6" />
@@ -49,7 +61,7 @@ export function QueArenamos() {
                 <h3 className="text-lg font-bold text-gray-900">{title}</h3>
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">{text}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-1">
                 {items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-gray-700 text-sm md:text-base">
                     <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
@@ -57,6 +69,12 @@ export function QueArenamos() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-6">
+                <WhatsAppCTA message={message} className={`${WPP_BTN} w-full`}>
+                  <MessageCircle className="w-5 h-5" />
+                  {cta}
+                </WhatsAppCTA>
+              </div>
             </div>
           ))}
         </div>

@@ -64,7 +64,7 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 bg-white max-w-7xl mx-auto">
       <div className="container mx-auto px-4 lg:px-8">
-        <H2 title="Proyectos Destacados" />
+        <H2 title="Mirá cómo queda: trabajos reales" />
 
         <div className="relative px-12 md:px-16">
           <Carousel className="w-full">
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
                           tabIndex={-1}
                         >
                           <Button className="w-full bg-primary-400" asChild>
-                            <span>Ver Proyecto</span>
+                            <span>Ver el trabajo</span>
                           </Button>
                         </Link>
                       </CardFooter>

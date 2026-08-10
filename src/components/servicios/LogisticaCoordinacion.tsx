@@ -1,5 +1,3 @@
-"use client"
-
 import { CalendarCheck, MapPin, Zap, FileCheck, Target, DoorOpen, Fence, UserCheck } from "lucide-react"
 
 const requisitos = [

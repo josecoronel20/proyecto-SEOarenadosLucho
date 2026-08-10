@@ -8,7 +8,9 @@ Pendientes **no urgentes**. Bugs P0 corregidos en mayo 2026 — ver `15-bugs-con
 
 | Ítem | Por qué sigue | Referencia |
 |------|----------------|------------|
-| Exceso de `"use client"` en secciones estáticas | Más JS del necesario | `14-reglas-de-implementacion.md` |
+| **`heroVideo.mp4` sin comprimir (24,3 MB)** | Ya **no está en el camino crítico** (el hero usa una foto con `priority`), pero sigue en el repo y no se puede reponer hasta comprimirlo | `marketing/15-sitio-ideal.md` §5 |
+| `arenadoParticular.JPG` (4,5 MB) | Ya no se sirve en la home; sigue en el repo | ídem |
+| Casos en lenguaje de pliego | `projectsInfo.json` sigue con "relevamiento del sustrato", "procedimientos operativos" — contradice el pivote de copy. Los tiene que validar quien hizo los trabajos | ídem |
 | `SITE_URL` y GTM ID hardcodeados | Sin `NEXT_PUBLIC_*`; `SITE_URL` está duplicado en 3 archivos | `19-deploy-y-entornos.md` |
 | Video del hero sin comprimir (~25 MB) | Fase B del roadmap SEO; necesita el asset original | `11-performance.md` |
 | Mapeo GTM/GA4 solo en panel (no en repo) | Riesgo al cambiar eventos | `06-tracking-y-analytics.md` |
