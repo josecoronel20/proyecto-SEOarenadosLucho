@@ -29,14 +29,14 @@ Orden de ejecución de todo lo decidido. **Este archivo es el "¿qué sigue?"**:
 
 ## 🟡 Fase 3 — Construcción de la cuenta de Ads (🖥️ sesión guiada)
 
-> **El plan vigente es el mapa de 8 partes** diseñado desde cero el 29/07: `14-configuracion-objetivo-ads.md` + `ads-config/`. El plan de implementación paso a paso son las **8 sesiones** de `ads-config/08-controles-implementacion.md`. La mayor parte se construye **sin saldo cargado**.
+> **Fuente única del orden: [`16-roadmap-implementacion-ads.md`](./16-roadmap-implementacion-ads.md)** — 11 fases con estado, dependencias y puertas duras. El detalle paso a paso está en `ads-config/08-controles-implementacion.md` y el diseño completo en `14-configuracion-objetivo-ads.md`. La construcción entera (≈5 h) se hace **sin saldo cargado**.
 
-11. [ ] Responder los **bloqueantes** del índice de `14-…` (GA4, geo real, negativas heredadas, datos del copy, ticket promedio).
-12. [ ] Sesiones **1–2**: fundaciones de la cuenta + blindaje (auto-apply OFF, etiquetado automático ON, negativas de cuenta, listas compartidas).
-13. [ ] Sesión **3** ⭐: la conversión única (`contact_whatsapp`) — gobierna todo lo demás.
-14. [ ] Sesiones **4–6**: recursos, las 3 campañas en pausa, grupos + keywords + RSA.
-15. [ ] Sesión **7**: pre-flight completo (no se enciende con un ítem en rojo).
-16. [ ] Sesión **8**: 👤 recargar saldo → encender **General-Marca primero** → validar la medición a D+1 → activar el resto → **no tocar 1–2 semanas**.
+11. [ ] **Fase 1** — responder los **10 datos bloqueantes** (GA4, GTM, geo real, negativas heredadas, datos del copy, ticket promedio).
+12. [ ] **Fase 2** — Sesión de profundidad #1: 7 capturas → diagnóstico del estado actual (el dossier es del 26/07 y la cuenta cambió el 28/07).
+13. [ ] **Fase 3** — decidir qué pasa con la campaña vieja `busqueda-arenadoIndustrial` (recomendación: pausarla como archivo).
+14. [ ] **Fases 4–8** — las 8 sesiones: fundaciones · blindaje · **la conversión única ⭐** · recursos · campañas · grupos y RSA · pre-flight.
+15. [ ] **Fase 9** — 👤 recargar saldo → encender **General-Marca primero** → validar la medición a D+1 → activar el resto.
+16. [ ] **Fase 10** — **no tocar 14 días** (se fija el CPA base real); a la semana 4–5, evaluar Maximizar conversiones si hay ≥15 conversiones limpias.
 17. [ ] Instalar el **autopilot (05)** — recién con conversiones limpias fluyendo; ahí el círculo autónomo queda cerrado.
 
 ## 🟢 Fase 4 — Rutina de crecimiento (permanente)

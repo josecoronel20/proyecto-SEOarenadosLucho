@@ -12,6 +12,17 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-10 (3) — Roadmap maestro de implementación de Ads (Claude Code)
+
+- **Qué se hizo:** `16-roadmap-implementacion-ads.md` (nuevo) — el secuenciador de las **11 fases** de la cuenta. No duplica el detalle (que vive en `ads-config/08` y `14-…`): lo **ordena contra el estado real**, con estado, dependencias, duración y quién hace cada cosa.
+- **Por qué hacía falta:** existían el diseño (8 partes) y el paso a paso (8 sesiones), pero **ninguno reconciliaba con lo ya hecho en la cuenta** el 26 y 28/07. Sin eso el riesgo era rehacer trabajo o, peor, tocar sueltos los 3 pendientes del 28/07 sobre una campaña que quizás se pause.
+- **Reconciliación (Fase 0):** ya están hechos el tope de gasto, los 3 scripts de lectura + guardián, la extensión de llamada quitada, las negativas de empleo, Display/Socios OFF, AI Max OFF e idiomas. **Siguen abiertos:** los objetivos de conversión de la campaña (destildar llamadas **y** formularios), la geo ("Provincia de Buenos Aires" con "presencia **o interés**") y el tCPA sucio de 8.204.
+- **Decisión que queda planteada (Fase 3):** qué pasa con `busqueda-arenadoIndustrial`, que sigue ENABLED y recibió arreglos el 28/07 aunque el plan del 29/07 dice construir 3 campañas nuevas. **Recomendación: pausarla como archivo** — el historial de calidad vive a nivel cuenta y dominio, no de campaña, y esa campaña mezcla intenciones que el plan separa a propósito. **A confirmar con el dueño.**
+- **Camino crítico identificado:** los **10 datos bloqueantes** (Fase 1) y la **sesión de capturas** (Fase 2). El dossier es del 26/07 y la cuenta cambió el 28/07: se construye sobre una foto vieja si no se actualiza.
+- **Contexto que cambió a favor:** el sitio se rediseñó el mismo día (entrada anterior). La **experiencia con la página de destino** —uno de los 3 componentes del Nivel de calidad— debería medir mejor que en el dossier: hay CTA de WhatsApp en todas las páginas, FAQ con schema en home y `/servicios`, y el video de 24 MB salió del camino crítico.
+- **Resultado esperado:** construir la cuenta entera (≈5 h de sesión guiada) **sin saldo cargado**, para que ningún error de configuración cueste plata.
+- **Resultado real:** _(completar a medida que se ejecute cada fase)_
+
 ## 2026-08-10 (2) — El sitio rediseñado desde cero y ejecutado (Claude Code)
 
 - **Qué se pidió:** "creá la estructura perfecta del sitio perfecto en base a nuestro objetivo y contexto, olvidá el sitio actual; después compará y editalo por completo".

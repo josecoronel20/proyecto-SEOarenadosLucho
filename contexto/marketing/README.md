@@ -29,6 +29,7 @@ Complementa (no reemplaza) al sistema técnico `contexto/00-20`. Regla de oro: *
 | [13-modo-experto-ads.md](./13-modo-experto-ads.md) | **Modo experto de Ads** (principios, 8 áreas de análisis profundo, protocolo de datos, cadencia) | SIEMPRE, antes de cualquier trabajo sobre la cuenta de Ads |
 | [14-configuracion-objetivo-ads.md](./14-configuracion-objetivo-ads.md) + [ads-config/](./ads-config/) | **El mapa completo de la cuenta diseñada desde cero** (8 partes: fundaciones · conversiones · estructura · keywords · configuración · anuncios · pujas · implementación) | Construir o auditar la cuenta de Ads parte por parte |
 | [15-sitio-ideal.md](./15-sitio-ideal.md) | **El sitio ideal diseñado desde cero** + gap contra el actual + qué se ejecutó (10/08/2026) | Antes de tocar la estructura, el orden de secciones o los CTAs de cualquier página |
+| [16-roadmap-implementacion-ads.md](./16-roadmap-implementacion-ads.md) | **El "¿qué sigue?" de la cuenta de Ads**: 11 fases, qué ya está hecho, qué bloquea qué, quién hace cada cosa | **Al empezar cualquier sesión sobre la cuenta de Ads** |
 | [ads-scripts/](./ads-scripts/) | Scripts listos para pegar en Google Ads | Ver `06-google-ads-scripts.md` |
 
 ---
