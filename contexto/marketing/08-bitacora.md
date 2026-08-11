@@ -12,6 +12,24 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-10 (6) — Sesión de medición: una sola conversión limpia (ejecutado por el dueño)
+
+- **Datos confirmados:** propiedad GA4 `516818828` · **vinculada a Ads** ✅ · etiquetado automático ON ✅ · acceso de publicación a GTM ✅.
+- **Decisión de diseño (reemplaza el paso 14 del plan):** **no se creó una acción de conversión nueva.** La cuenta ya tenía `Arenados Lucho SEO (web) contact_whatsapp` importada de GA4 y funcionando; crear una segunda etiqueta para el mismo clic habría producido **doble conteo** — la señal de alarma #13 del propio plan. Se conservó la existente y se le corrigieron los parámetros. Fundamento y contras en `17-diagnostico-cuenta-10-08.md`.
+- **Qué se ejecutó:**
+  1. Objetivo **"Clientes potenciales de llamada telefónica" → Cuenta predeterminada: Desactivado**.
+  2. Objetivo **"Enviar formularios de clientes potenciales" → Desactivado**.
+  3. Objetivo **"Contactos" → se mantiene Activado** (es donde vive el WhatsApp).
+  4. `contact_whatsapp`: **ventana post-clic 90 → 30 días**; categoría Contacto.
+  5. **GA4:** desmarcados como evento clave `form_submit`, `close_convert_lead` y `qualify_lead` — no existen en el código del sitio. Queda **`contact_whatsapp` como único evento clave con datos**.
+- **🔧 Limitación de la UI, confirmada y documentada:** las acciones con fuente **"Alojada en Google"** y **"Llamadas desde anuncios"** (`Clicks to call`, `Smart campaign map clicks to call`, `Smart campaign ad clicks to call`) **no se pueden pasar a Secundaria**: el desplegable queda gris. Ya había pasado el 26/07 con las de "Local actions". **Tampoco se puede degradar la única acción de un objetivo** (Google exige ≥1 principal por objetivo) — de ahí que la salida sea **apagar el objetivo entero**, no la acción.
+- **Por qué igual queda limpio:** el objetivo "Contactos" está acotado a *sitio web + llamadas desde anuncios*, y la columna "Incluida en los objetivos de cuenta" muestra **No** para las dos acciones "Alojada en Google". La única incluida además de `contact_whatsapp` es `Smart campaign ad clicks to call`, que **solo se dispara desde campañas inteligentes** — no hay ninguna y no se van a crear. Sumado a la extensión de llamada quitada y a Informes de llamadas en OFF, **no queda vía por la que entre una llamada**.
+- **Protección definitiva:** las 3 campañas nuevas se crean **sin ningún recurso de llamada** (ya es regla del diseño).
+- **Decisión: se descarta la exclusión de datos** (paso 19 del plan). Tenía sentido para reutilizar la campaña vieja; como se pausa y se construyen campañas nuevas —que arrancan sin historial y con *Maximizar clics*, no con puja automática— el aprendizaje sucio no se hereda. Agregarla solo sumaría superficie de error.
+- **⚠️ Pendiente de verificación:** captura de la pestaña **Objetivos** completa.
+- **Resultado esperado:** cuando entre saldo, Google optimiza hacia **gente que escribe por WhatsApp** y nada más.
+- **Resultado real:** _(completar al verificar)_
+
 ## 2026-08-10 (5) — Sesión 0: blindaje de la cuenta (ejecutado por el dueño)
 
 - **Verificado antes de ejecutar:** `Administrador → Config. de la cuenta → Palabras clave negativas` estaba **VACÍA**. ✅ `pileta`/`piscina` **nunca estuvieron bloqueadas** (peor escenario descartado). 🔴 Pero tampoco había ninguna protección permanente, y las 20 negativas de empleo del 28/07 viven **solo dentro de la campaña vieja** — se perderían al pausarla.
