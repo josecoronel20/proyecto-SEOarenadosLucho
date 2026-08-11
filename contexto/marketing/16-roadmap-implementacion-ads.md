@@ -15,19 +15,31 @@
 | Fase | Qué | Quién | Estado |
 |---|---|---|---|
 | **0** | Reconciliación: qué ya está hecho | — | ✅ Cerrada |
-| **1** | Destrabar los 10 datos bloqueantes | 👤 Dueño | 🔴 **AHORA** |
-| **2** | Sesión de profundidad #1: capturas → diagnóstico | 🖥️ Guiada | 🔴 **AHORA** (en paralelo) |
-| **3** | Decisión: qué pasa con la campaña vieja | 👤 + 🤖 | ⏸️ Depende de F2 |
-| **4** | Sesiones 1–2: fundaciones + blindaje | 🖥️ Guiada | ⏸️ Depende de F1 |
-| **5** | Sesión 3 ⭐: la conversión única | 🖥️ Guiada | ⏸️ Depende de F1 (GA4/GTM) |
-| **6** | Sesión 4: recursos y copy | 🤖 + 🖥️ | ⏸️ Depende de F1 (datos del copy) |
-| **7** | Sesiones 5–6: campañas, grupos, keywords, RSA | 🖥️ Guiada | ⏸️ Depende de F4, F5, F6 |
+| **1** | Destrabar los 10 datos bloqueantes | 👤 Dueño | ✅ **Cerrada 10/08** |
+| **2** | Sesión de profundidad #1: capturas → diagnóstico | 🖥️ Guiada | ✅ **Cerrada 10/08** → `17-diagnostico-cuenta-10-08.md` |
+| **3** | Decisión: qué pasa con la campaña vieja | 👤 + 🤖 | ✅ **Pausada 11/08** |
+| **4** | Sesiones 1–2: fundaciones + blindaje | 🖥️ Guiada | ✅ Sesión 1 · 🟠 **Sesión 2 a medias** |
+| **5** | Sesión 3 ⭐: la conversión única | 🖥️ Guiada | ✅ **Cerrada 10/08** |
+| **6** | Sesión 4: recursos y copy | 🤖 + 🖥️ | 🔴 **AHORA** (lo redacta Claude) |
+| **7** | Sesiones 5–6: campañas, grupos, keywords, RSA | 🖥️ Guiada | ⏸️ Depende de F4 y F6 |
 | **8** | Sesión 7: pre-flight | 🖥️ Guiada | ⏸️ Depende de F7 |
 | **9** | Sesión 8: encendido escalonado | 👤 + 🖥️ | ⏸️ Depende de F8 |
 | **10** | Primeras 4 semanas: validar y fijar la línea base | 🖥️ Guiada | ⏸️ |
 | **11** | Cadencia permanente | 🖥️ + 👤 | ⏸️ |
 
-**Tiempo de construcción (fases 4–8): ≈ 5 horas de sesión guiada**, todas **sin saldo cargado**.
+**Tiempo de construcción restante: ≈ 3 horas de sesión guiada**, todas **sin saldo cargado**.
+
+### Lo que falta de la Sesión 2 (blindaje)
+
+Hecho el 10/08 en la "Sesión 0": auto-apply OFF · negativas de cuenta (37) · etiquetado automático ON · informes de llamadas OFF.
+
+**Pendiente:**
+1. **Recursos automatizados a nivel de cuenta → OFF.** 🟢 **Momento ideal: ahora.** El plan advierte que apagarlos sin cargar los manuales cuesta superficie en la SERP — pero **no hay ninguna campaña activa**, así que hoy el costo es cero.
+2. **Las 3 listas de negativas compartidas:** `NEG-EQUIPOS-DIY` (+ `callone`, `magal` del informe de términos), `NEG-DATA`, `RUTEO-PILETAS`.
+
+### Trámites que dejaron de bloquear
+
+✅ **Verificación de anunciante: COMPLETA** desde el 07/11/2025 (verificado 11/08/2026). Era el único ítem con semanas de espera. El recurso de nombre y logo queda habilitado.
 
 ---
 

@@ -12,6 +12,15 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 — Sesión 1: fundaciones de la cuenta (ejecutado por el dueño)
+
+- **🟢 Hallazgo que acorta el plan: la verificación de anunciante YA ESTÁ COMPLETA.** Verificado por captura: las 4 tareas cerradas entre el 31/10 y el 07/11/2025, y el panel muestra **"Advertiser identity verified"**. Era **el único trámite del plan con semanas de espera** y bloqueaba el recurso de nombre y logo del negocio. **Deja de ser camino crítico.**
+- **Detalle registrado:** el anunciante figura como **"Jose Coronel"** (persona física), ubicación AR — no como "Arenados Lucho". Quien toque "Acerca de este anunciante" en un aviso verá el nombre personal. **Se deja así a propósito:** cambiarlo exigiría rehacer la verificación como organización (semanas + documentación societaria) para un beneficio cosmético. ⛔ **Nunca tocar "Restablecer verificación".**
+- **Resto de la sesión (reportado por el dueño, sin captura):** campaña `busqueda-arenadoIndustrial` **pausada**; moneda **ARS** y zona horaria **Buenos Aires** confirmadas (los dos únicos parámetros irreversibles); accesos sin usuarios ni MCC desconocidos; 2FA en la cuenta de Google.
+- **Menor, abierto:** los **"2 borradores en curso"** que aparecían en la vista de Campañas siguen sin identificar. No bloquean nada; revisar antes de crear las campañas nuevas para no confundirlos con las nuevas.
+- **Estado del plan tras esta sesión:** de las 8 sesiones de construcción, **quedan cerradas la 1 (fundaciones), la 2 parcialmente (blindaje) y la 3 (medición)**. La cuenta ya no puede gastar mal: sin campañas activas, sin permisos de Google sobre las pujas, con una sola conversión limpia y 37 negativas permanentes.
+- **Resultado real:** _(completar al construir las campañas)_
+
 ## 2026-08-10 (6) — Sesión de medición: una sola conversión limpia (ejecutado por el dueño)
 
 - **Datos confirmados:** propiedad GA4 `516818828` · **vinculada a Ads** ✅ · etiquetado automático ON ✅ · acceso de publicación a GTM ✅.
