@@ -12,6 +12,22 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (2) — Copy de Ads aprobado + los dos datos de plazo resueltos (Claude Code)
+
+- **Qué se hizo:** `18-copy-ads.md` (nuevo) — fuente única del copy publicado, versionada fuera de Google. Consolida y **revisa** el borrador del 29/07 contra el sitio rediseñado y contra el informe de términos.
+- **Bloqueantes resueltos midiendo los archivos del repo:**
+  - **Logo:** `public/images/favicon.png` es el logo en **1906×1911** (supera el recomendado de 1200×1200). Los `logo-solo-*` son 423×226, apaisados, no servían. El recurso de nombre y logo queda desbloqueado.
+  - **Fotos:** las de trabajo son **828×828** — por encima del mínimo de Google (300×300). Usables. Hay material de alta resolución (3148×3148 y 3472×4624) si hiciera falta recortar con calidad.
+- **⭐ Dato del dueño que cambió una decisión — los ~100 m²/día son CONDICIONALES:** *"es un número en condiciones óptimas… una superficie plana y no estructuras metálicas complejas; tampoco revestimientos demasiado resistentes, en esos casos se dilata más."*
+  - **Decisión: va en el SITIO con la condición, y NO en los anuncios.** En 30 caracteres no entra la aclaración, y **el segmento donde no aplica —estructuras metálicas complejas— es justo el más rentable** (PYME con galpón). Sería prometer velocidad a quien menos se le puede garantizar.
+  - Aplicado en `AlcanceOperativo` de `/servicios` y en la FAQ "¿Cuánto tardan?", separando explícitamente superficie plana de estructura compleja.
+  - **Beneficio lateral:** pre-califica. El que tiene una estructura compleja llega al WhatsApp con la expectativa correcta.
+- **Pileta = un día: confirmado y SÍ va al anuncio.** Dato limpio, sin condición. Se suma el titular "Tu pileta lista en el día" a `ag_pileta-jerga`, **sin fijar**. No se suma a `ag_pileta-sin-jerga`: ahí el visitante no conoce la palabra "arenado" y el mensaje tiene que ser el problema, no el plazo.
+- **Otras dos revisiones del copy:** se agregó un **titular de precio** en 3 RSA (el informe mostró 15 consultas de precio sin respuesta), y el grupo de **genéricos pasa a apuntar a `/servicios`** en vez de a la home — es exactamente lo que Google penalizaba como "experiencia con la página de destino inferior".
+- **Verificación:** script sobre el archivo → **cero términos prohibidos** en el copy y conteo de caracteres correcto en las 90 filas. `npm run build` limpio tras los cambios del sitio.
+- **Resultado esperado:** anuncios que prometen solo lo que el negocio sostiene, y una página que responde exactamente lo que el anuncio dice — el componente de calidad que estaba en "Inferior al promedio" en el 100% de las keywords.
+- **Resultado real:** _(completar tras el encendido)_
+
 ## 2026-08-11 — Sesión 1: fundaciones de la cuenta (ejecutado por el dueño)
 
 - **🟢 Hallazgo que acorta el plan: la verificación de anunciante YA ESTÁ COMPLETA.** Verificado por captura: las 4 tareas cerradas entre el 31/10 y el 07/11/2025, y el panel muestra **"Advertiser identity verified"**. Era **el único trámite del plan con semanas de espera** y bloqueaba el recurso de nombre y logo del negocio. **Deja de ser camino crítico.**

@@ -10,7 +10,8 @@
 
 | # | Cambio | Motivo |
 |---|---|---|
-| 1 | ⛔ **Eliminado el "~100 m² por día por equipo"** de todos los titulares y descripciones | Es un **dato afirmado, nunca medido**, y seguía sin confirmar. No se publica una promesa de rendimiento sin respaldo. Reemplazado por capacidad verificable ("2 equipos propios", "sumamos equipos"). **Si el dueño lo confirma, se repone** |
+| 1 | ⛔ **Eliminado el "~100 m² por día por equipo"** de todos los titulares y descripciones | Confirmado por el dueño el 11/08, **pero es condicional**: vale para superficies planas, no para estructuras metálicas complejas ni revestimientos duros — justo el trabajo más rentable. En 30 caracteres no entra la condición. **Vive en el sitio con la aclaración** (§10) |
+| 1b | ✅ **Agregado "Tu pileta lista en el día"** a RSA 4 | Plazo confirmado por el dueño el 11/08. Dato limpio, sin condición, y diferencial fuerte (§10) |
 | 2 | ✅ **Agregado un titular de precio** en los 3 RSA que lo permitían | El informe de términos mostró **15 consultas de precio** (`arenado precio`, `cuanto sale arenar`, `valor m2 de arenado`) sin ninguna respuesta. Es la consulta más comercial que existe |
 | 3 | ✅ **Bloqueante del logo resuelto** | `public/images/favicon.png` es el logo en **1906×1911** — supera el recomendado de 1200×1200 |
 | 4 | ✅ **Bloqueante de fotos resuelto** | Las fotos de trabajo son **828×828**, por encima del mínimo de 300×300 de Google. Usables |
@@ -295,7 +296,7 @@ Se acepta **Eficacia "Buena"** (o "Media") y se frena ahí: la Eficacia **no ent
 | 12 | Visita y presupuesto sin costo | 30 | **2** |
 | 13 | Presupuesto por WhatsApp | 24 | — |
 | 14 | **Precio cerrado por pileta** | 25 | — |
-| 15 | Coordinamos turno enseguida | 27 | — |
+| 15 | **Tu pileta lista en el día** | 25 | — |
 
 | # | Descripción | Car. | Pin |
 |---|---|---|---|
@@ -389,14 +390,35 @@ pintamos (salvo en "no pintamos") · revestimos (salvo en "no revestimos")
 
 ---
 
-## 10. Lo único que sigue sin confirmar
+## 10. Los dos datos de plazo — resueltos el 11/08/2026
 
-| Dato | Estado | Qué pasa si se confirma |
-|---|---|---|
-| **~100 m² por día por equipo** | ❌ Sin confirmar → **eliminado del copy** | Se repone como titular en RSA 1, 2 y 5 y en una descripción. Es un argumento de capacidad fuerte y hoy no lo estamos usando |
-| **Plazo de una pileta estándar** | ❌ Sin confirmar → no aparece ningún plazo | Se podría sumar "Lista en el día" a RSA 3 y 4, que sería un diferencial potente |
+### ~100 m² por día por equipo — **confirmado, pero CONDICIONAL → no va en los anuncios**
 
-⛔ Ninguno de los dos se publica hasta que el dueño lo confirme. Un anuncio es una promesa.
+Palabras del dueño: *"es un número en condiciones óptimas, es decir, una superficie cómoda de arenar como puede ser una superficie plana y no estructuras metálicas complejas; tampoco deben estar con revestimientos demasiado resistentes, en esos casos se dilata más."*
+
+**Decisión: se publica en el SITIO con la condición, y NO en los anuncios.** Tres motivos:
+
+1. **En 30 caracteres no entra la condición.** "Unos 100 m² por día por equipo" se lee como una promesa lisa.
+2. **El segmento donde NO aplica es el más rentable.** Las estructuras metálicas complejas y los revestimientos duros son exactamente el trabajo de la PYME con galpón —el aliado #1— y el de obra pesada. Prometer ese ritmo ahí es prometerle velocidad a quien menos se le puede garantizar.
+3. **Donde sí aplica —paredes, fachadas, piletas— la velocidad no es la objeción principal**; la objeción es el polvo y si queda listo para pintar.
+
+**Dónde vive ahora, con la condición explícita:**
+- `/servicios` → `AlcanceOperativo`: "En superficies planas y parejas —paredes, fachadas— cada equipo cubre alrededor de 100 m² por día" + una línea aparte para estructuras complejas.
+- FAQ (`¿Cuánto tardan?`) → misma distinción, y cierra en "en la visita te damos el plazo concreto".
+
+Beneficio lateral: **pre-califica**. El que tiene una estructura compleja llega al WhatsApp con la expectativa correcta, y eso evita la conversación incómoda después.
+
+### Pileta estándar: **un día** — confirmado ✅ → **sí va en los anuncios**
+
+Es un dato limpio, sin condición, y un diferencial fuerte. La landing ya lo matiza correctamente para los casos grandes ("Una pileta familiar estándar suele quedar lista en el día; las más grandes o muy descascaradas pueden llevar más"), así que el anuncio puede decirlo y la página sostiene el detalle.
+
+**Se agrega un titular a RSA 4** (`ag_pileta-jerga`), **sin fijar**, para que sea una combinación más y no la promesa central:
+
+| Titular | Car. |
+|---|---|
+| Tu pileta lista en el día | 25 |
+
+⚠️ **No** se agrega a RSA 3 (`ag_pileta-sin-jerga`): ahí el visitante todavía no sabe qué es el arenado, y el mensaje tiene que ser el problema ("se te descascara la pintura"), no el plazo.
 
 ---
 
