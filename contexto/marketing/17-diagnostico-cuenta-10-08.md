@@ -52,13 +52,29 @@ Hay **3 objetivos predeterminados de cuenta activos** (debería haber uno): *Env
 
 Cuatro acciones siguen usando **recuento "Todas"**, que mide clics repetidos en vez de personas.
 
-### 3. 🔴 `contact_whatsapp` NUNCA registró una conversión
+### 3. 🟢 `contact_whatsapp` SÍ funciona — el problema es la importación a Ads
 
-La acción existe, es de GA4, está en Principal y está incluida en los objetivos de cuenta. Pero su estado de seguimiento dice **"No hay conversiones recientes"** y tiene **0,00 conversiones**.
+En Ads la acción figura con **"No hay conversiones recientes"** y **0,00 conversiones**, lo que hacía temer que el evento no disparara.
 
-**Es la única conversión del proyecto y no hay ninguna evidencia de que dispare.** Puede ser simplemente que no hubo tráfico pago (la cuenta está sin saldo), pero **no podemos asumirlo**: hay que probarlo end-to-end antes de encender nada.
+**Verificado en GA4 el 10/08/2026 (propiedad `516818828`, "Arenados Lucho"):** `contact_whatsapp` está marcado como **evento clave** y tiene **flujo de datos activo en los últimos 28 días**. ✅
 
-⚠️ Además su **ventana de conversión es de 90 días**; el diseño pide **30**.
+**Conclusión: el tracking del sitio funciona.** El problema está aguas abajo — o no hubo tráfico pago que atribuir (la cuenta está sin saldo, que es lo más probable), o la importación GA4 → Ads no está trayendo los datos. **Se verifica en la Sesión 3.**
+
+⚠️ Sigue pendiente: la **ventana de conversión es de 90 días** y el diseño pide **30**.
+
+### 3 bis. 🟠 Eventos clave fantasma en GA4
+
+La propiedad tiene **5 eventos clave**, y **3 no existen en el sitio**:
+
+| Evento | Estado | Qué hacer |
+|---|---|---|
+| **`contact_whatsapp`** | ✅ Clave, **con datos** | Es el único válido. No tocar |
+| `form_submit` | Clave, sin datos | **Desmarcar** — el formulario se eliminó el 28/07 (ADR-019) |
+| `close_convert_lead` | Clave, sin datos | Investigar origen y desmarcar |
+| `qualify_lead` | Clave, sin datos | Ídem |
+| `purchase` | No clave, sin datos | Dejar como está |
+
+Ninguno de los tres fantasma existe en el código del sitio (`06-tracking-y-analytics.md`: el único evento es `contact_whatsapp`). Probablemente vienen de una configuración vieja o de una plantilla. **Mientras sigan marcados como clave pueden importarse a Ads y volver a ensuciar la medición.**
 
 ### 4. 🔴 Informes de llamadas: ACTIVADO
 

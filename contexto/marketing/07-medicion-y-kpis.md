@@ -6,7 +6,7 @@ Qué se mide, dónde se mira y con qué rutina. La implementación técnica del 
 
 | Dato | Fuente | Acceso |
 |------|--------|--------|
-| Leads (WhatsApp) | GA4 — evento **`contact_whatsapp`** (el único del sitio desde el 28/07/2026) | _completar propiedad GA4_ |
+| Leads (WhatsApp) | GA4 — evento **`contact_whatsapp`** (el único del sitio desde el 28/07/2026) | **Propiedad GA4 `516818828`** ("Arenados Lucho") — verificado 10/08/2026: es **evento clave** y tiene flujo activo |
 | Leads reales recibidos | **Chats de WhatsApp del dueño** (canal único) | Manual |
 | Rendimiento orgánico | Google Search Console | _verificar propiedad tras migración_ |
 | Rendimiento pago | Google Ads (+ scripts de `ads-scripts/`) | _completar ID cuenta_ |

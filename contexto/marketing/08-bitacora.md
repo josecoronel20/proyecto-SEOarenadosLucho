@@ -26,7 +26,11 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
   - `curso`, `tutorial`, `casero`, `arenadoras en venta` y familia van en la lista compartida `NEG-EQUIPOS-DIY` (Sesión 2), no a nivel cuenta.
 - **⚠️ Pendiente de verificación por captura.** No se da por hecho hasta verlo: el 28/07 registramos "idiomas corregido a solo Español" y el 10/08 apareció en "Inglés y Español". Este es el modo de falla concreto de esta cuenta.
 - **Resultado esperado:** ninguna campaña —presente o futura— puede volver a comprar tráfico de granallado, normas técnicas ni empleo; y Google pierde el permiso para tocar la estrategia de puja.
-- **Resultado real:** _(completar al verificar las capturas)_
+- **✅ Resultado real (verificado por captura el 10/08/2026):**
+  - `Palabras clave negativas: **37 de 1.000**` — cargadas.
+  - `Anuncios de llamada: **Informes de llamadas desactivados**` — cerrada la tercera puerta del teléfono.
+  - `Aplicación automática → Ofertas`: **las 10 casillas de la familia Ofertas destildadas**, incluidas las 4 que estaban activas. Google ya no puede tocar la estrategia de puja ni el CPA.
+  - Dato extra visible: `Condiciones de Clic para llamar: Rechazada` (correcto, no se habilita).
 
 ## 2026-08-10 (4) — Sesión de profundidad #1: diagnóstico de la cuenta (Claude Code)
 
