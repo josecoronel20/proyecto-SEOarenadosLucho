@@ -12,6 +12,18 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (4) — Campaña 1 creada + la QUINTA puerta del teléfono
+
+- **Ejecutado:** 3 listas de negativas compartidas creadas (`NEG-EQUIPOS-DIY`, `NEG-DATA`, `RUTEO-PILETAS` en frase) y **`AR-Search-Obra-Industrial` creada y pausada**, con el grupo `ag_pymes-galpon-in-situ` (18 keywords, frase y exacta), su RSA de 15 titulares y 4 descripciones con el pinning por pools, y la URL final en **`/servicios`** — no en la home, que era la causa raíz del "experiencia con la página de destino: inferior".
+- **🔴🔴 Hallazgo — el teléfono tenía CINCO puertas.** La vista previa del anuncio mostró **botón "Llamar", botón "Ruta", la dirección "Del Viso · Abella Caprile 1246", el horario ("Open") y la categoría "Servicio de limpieza por chorro de arena"**. Nada de eso lo cargó nadie: **lo inyecta el Perfil de Empresa de Google vinculado a la cuenta de Ads**.
+  - Es la puerta más difícil de ver porque **no es un asset propio**: no aparece en `Recursos` como algo que cargaste.
+  - Apagar "Ubicaciones automáticas" en recursos automatizados (hecho el 11/08) **no la cierra**.
+  - Contradice además el dossier del 26/07, que daba la ficha por **"sin reclamar"**: tiene dirección, horario y categoría cargadas.
+  - **Acción pendiente:** desvincular el Perfil de Empresa en `Administrador → Vinculación de datos` y verificar `Recursos → Tipo: Ubicación`. Desvincular **no afecta la ficha**: sigue existiendo para Maps y para el orgánico.
+- **Trampas del asistente de creación, documentadas:** (a) la pantalla "Generación de palabras clave y recursos" (BETA) es **otra vía de generación automática de texto** — no usarla; si el campo de descripción es obligatorio, llenarlo con un texto que **declare los NO** (no pintamos, no granallado) para acotar lo que la IA pueda extrapolar; (b) las keywords sugeridas por Google incluían **"pintura industrial"** y "recubrimientos industriales", servicios que el negocio no presta; (c) la URL final venía por defecto en la **home** en las tres pantallas; (d) aparecen **5 sitelinks heredados a nivel cuenta** de la cuenta vieja, a auditar.
+- **Sobre la "Calidad del anuncio: deficiente":** esperado y aceptado. No entra en el Ad Rank ni en el Nivel de calidad (documentado por Google), y baja por el pinning deliberado. **Además faltan cargar los recursos**, que suman al cálculo: debería subir al cargarlos. Se prefiere garantizar que el aviso diga "no pintamos" y "visita sin costo" antes que la barrita.
+- **Resultado real:** _(completar al cerrar la vinculación del GBP)_
+
 ## 2026-08-11 (3) — Recursos automatizados apagados + DOS puertas nuevas descubiertas
 
 - **Qué se ejecutó:** apagados 6 de los 10 recursos automatizados a nivel de cuenta.
