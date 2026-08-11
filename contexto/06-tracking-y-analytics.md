@@ -124,8 +124,20 @@ Se dispara cuando:
 
 ## Conversiones Google Ads
 
-- **No hay** snippet de conversión (`gtag('event', 'conversion', ...)`) en el código.
-- Flujo: tag **Google Ads Conversion Tracking** en GTM disparado por el custom event `contact_whatsapp`, **o** importación desde GA4.
+| Dato | Valor |
+|------|-------|
+| Cuenta de Ads | `953-841-6905` |
+| **ID de conversiones (Google tag)** | `AW-11151875862` |
+| Propiedad GA4 | `516818828` ("Arenados Lucho"), **vinculada a Ads** |
+
+⛔ **La etiqueta `gtag.js` de Ads NO está instalada en el sitio, y es a propósito.** Google la ofrece en el asistente de campaña ("Instalar manualmente"). No se pega por dos motivos:
+
+1. El sitio ya carga **GTM** (`GTM-W63ZV9D9`) con el `dataLayer` inicializado antes. Una segunda etiqueta de Google en la misma página rompe ese orden.
+2. **Produciría doble conteo.** La conversión ya llega a Ads **importada desde GA4** (`Arenados Lucho SEO (web) contact_whatsapp`). Medir el mismo clic por dos vías es la señal de alarma #13 del plan de Ads. Fundamento completo: `contexto/marketing/17-diagnostico-cuenta-10-08.md` §"Decisión de medición".
+
+Si algún día el volumen justificara una etiqueta directa (menor latencia para pujas automáticas), se migra **eliminando la importada en el mismo movimiento** — nunca conviviendo — y se despliega **desde GTM**, no pegando `gtag.js` en el código.
+
+- Flujo vigente: evento `contact_whatsapp` → GA4 (evento clave) → importación a Ads.
 
 **Estado objetivo de la cuenta:** una sola acción **Principal** llamada `WhatsApp - contacto confirmado`, categoría **Contacto**, recuento **Una**, ventana 30 días. Todo el historial sucio (visitas al sitio, engagements, llamadas, formulario) degradado a **Secundaria**. Detalle y verificación: `contexto/marketing/ads-config/02-conversiones.md`.
 
