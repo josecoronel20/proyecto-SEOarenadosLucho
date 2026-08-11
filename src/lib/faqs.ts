@@ -17,7 +17,7 @@ export const faqs: Faq[] = [
   { question: "¿Trabajan dentro de una obra en marcha?", answer: "Sí. Coordinamos con el encargado de obra, trabajamos por sectores y liberamos cada zona lo antes posible para no frenar el resto de las tareas." },
   { question: "¿Cuánto cuesta?", answer: "El precio depende de la superficie, el estado y el acceso. Hacemos una visita sin costo, lo vemos en persona y te pasamos un presupuesto claro." },
   { question: "¿Hacen visita antes de presupuestar?", answer: "Sí, la visita y el presupuesto son sin costo. Vamos, lo evaluamos y te enviamos el presupuesto en 1 a 2 días." },
-  { question: "¿Cuánta experiencia tienen?", answer: "Años arenando estructuras industriales, obras, restauraciones, galpones y piletas, con dos equipos propios completos." },
+  { question: "¿Cuánta experiencia tienen?", answer: "El oficio viene de familia: se aprendió trabajando, no en un curso. Uno de los arenadores del equipo lleva más de 20 años haciendo esto. Hoy trabajamos con dos equipos propios completos en obras, restauraciones, galpones, estructuras industriales y piletas." },
   { question: "¿Pueden trabajar fines de semana o turnos extendidos?", answer: "Sí. Si el plazo es ajustado coordinamos turnos fuera del horario habitual, respetando los permisos de obra y municipales." },
   { question: "¿Hacen granallado o arenado certificado con normas?", answer: "No. Hacemos arenado sin vueltas para dejar la superficie lista para pintar o revestir. No trabajamos con granallado ni con arenado certificado bajo normas o mediciones técnicas." },
 ]

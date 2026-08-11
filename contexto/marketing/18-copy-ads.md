@@ -19,6 +19,24 @@
 
 ---
 
+## 0 bis. ⛔ Recursos HEREDADOS a nivel cuenta — borrar antes de cargar los nuestros
+
+`Campañas → Recursos → filtro "Nivel" = Cuenta`
+
+La cuenta arrastra recursos de su configuración anterior que **se aplican solos a cualquier campaña, incluidas las nuevas**. Nadie los cargó a propósito y **contradicen el negocio real**:
+
+| Heredado | Problema |
+|---|---|
+| **"+20 años de experiencia"** | **Falso como antigüedad de la empresa** (~8 años). Ver la nota de la §4 |
+| "Servicio de arenado móvil" · "Limpieza profunda" · "Resultado profesional" | Genéricos, no aprobados, y "preparación de superficie" aparecía en minúscula a mitad de frase |
+| **5 sitelinks**, uno de ellos a **"Política de privacidad"** | Ocupa uno de los pocos espacios del aviso con una página legal. Nadie contrata desde ahí |
+
+**Borrarlos todos.** No se pierde nada: los nuestros van a nivel campaña, escritos y contados uno por uno.
+
+**Lección:** un recurso heredado no aparece como algo que cargaste, pero se publica igual. Auditar el nivel Cuenta es obligatorio antes de encender.
+
+---
+
 ## 1. Listas de negativas compartidas
 
 `Herramientas → Biblioteca compartida → Listas de exclusión → pestaña "Listas de palabras clave negativas" → +`
@@ -148,6 +166,20 @@ arenado de motor
 | CABA y Gran Bs. As. | Trabajamos con pileteros | CABA y Gran Bs. As. |
 | Turnos rápidos | Turnos rápidos | Turnos rápidos |
 | Precio por trabajo | Mandá una foto | Precio por trabajo |
+| **20 años de oficio** | **20 años de oficio** | **20 años de oficio** |
+
+### ⚠️ Sobre "20 años de oficio" — leer antes de tocarlo
+
+La cuenta tenía heredado un texto destacado que decía **"+20 años de experiencia"**. **Es falso como antigüedad de la empresa: el negocio tiene ~8 años.** Estuvo corriendo en todos los anuncios sin que nadie lo supiera.
+
+**Pero la experiencia existe** (dato del dueño, 11/08/2026): el oficio viene del padre, que trabajó de esto muchos años y hoy no está activo, y **uno de los arenadores del equipo trabajó con él y lleva más de 20 años en el rubro**.
+
+**Por eso se dice "20 años de OFICIO" y nunca "de experiencia" ni "en el mercado":**
+
+- "+20 años de experiencia" en un aviso **se lee como antigüedad de la empresa**. Con 8 años de razón social, hay que salir a explicarlo — y si un competidor lo reporta, Google puede pedir respaldo.
+- **"20 años de oficio" habla de la gente que hace el trabajo**, que es verificable y cierto.
+
+⛔ **No revertir a "experiencia", "en el mercado" ni "desde 200X".**
 
 ## 5. Fragmentos estructurados
 
@@ -352,7 +384,7 @@ Se acepta **Eficacia "Buena"** (o "Media") y se frena ahí: la Eficacia **no ent
 | 12 | Visita y presupuesto sin costo | 30 | **2** |
 | 13 | Escribinos por WhatsApp | 23 | — |
 | 14 | Mirá los trabajos que hicimos | 29 | — |
-| 15 | Contestamos rápido | 18 | — |
+| 15 | **Oficio aprendido en familia** | 27 | — |
 
 | # | Descripción | Car. | Pin |
 |---|---|---|---|

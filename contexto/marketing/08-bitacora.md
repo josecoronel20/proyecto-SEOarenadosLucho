@@ -12,6 +12,19 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (5) — Recursos heredados: una antigüedad falsa corriendo en todos los anuncios
+
+- **Hallazgo:** la vista previa mostró texto que nadie del proyecto escribió — **"+20 años de experiencia"**, "Servicio de arenado móvil", "Limpieza profunda", "Resultado profesional" — más 5 sitelinks heredados, uno de ellos a **"Política de privacidad"**. Son **recursos a nivel CUENTA** heredados de la configuración anterior: se aplican solos a cualquier campaña, incluidas las nuevas.
+- **🔴 El problema real: la antigüedad era falsa.** El dueño confirmó que **el negocio tiene ~8 años, no 20**. Estuvo corriendo en todos los anuncios sin que nadie lo supiera. ✅ **Verificado que el sitio nunca lo dijo:** la FAQ decía "años arenando…" sin número.
+- **Contexto que aportó el dueño:** el oficio **viene del padre**, que trabajó de esto muchos años y hoy no está activo, y **uno de los arenadores del equipo trabajó con él y lleva más de 20 años en el rubro**. La experiencia existe; lo que no existe es la antigüedad de la empresa.
+- **Decisión de copy:** se usa **"20 años de oficio"**, nunca "de experiencia" ni "en el mercado".
+  - "+20 años de experiencia" **se lee como antigüedad de la empresa**: con 8 años de razón social hay que salir a explicarlo, y si un competidor lo reporta Google puede pedir respaldo.
+  - **"20 años de oficio" habla de la gente que hace el trabajo** — verificable y cierto.
+- **Se aprovecha la historia, que es mejor argumento que el número:** titular nuevo **"Oficio aprendido en familia"** en el RSA de marca (reemplaza a "Contestamos rápido"), y la FAQ del sitio "¿Cuánta experiencia tienen?" pasa de un genérico a contar el linaje: *"El oficio viene de familia: se aprendió trabajando, no en un curso. Uno de los arenadores del equipo lleva más de 20 años haciendo esto."* Ningún competidor puede copiar eso; "+20 años de experiencia" lo escribe cualquiera.
+- **Acción pendiente:** borrar **todos** los recursos de nivel Cuenta (`Campañas → Recursos → filtro Nivel = Cuenta`).
+- **Lección de método, la tercera del día:** un recurso heredado **no figura como algo que cargaste**, pero se publica igual. Es el mismo patrón que las conversiones basura y que la ficha vinculada: la cuenta arrastraba cosas que nadie puso a propósito y que **contradicen lo que el negocio hace**. **Auditar el nivel Cuenta es obligatorio antes de encender.**
+- **Verificación:** `npm run build` limpio tras el cambio de la FAQ.
+
 ## 2026-08-11 (4) — Campaña 1 creada + la QUINTA puerta del teléfono
 
 - **Ejecutado:** 3 listas de negativas compartidas creadas (`NEG-EQUIPOS-DIY`, `NEG-DATA`, `RUTEO-PILETAS` en frase) y **`AR-Search-Obra-Industrial` creada y pausada**, con el grupo `ag_pymes-galpon-in-situ` (18 keywords, frase y exacta), su RSA de 15 titulares y 4 descripciones con el pinning por pools, y la URL final en **`/servicios`** — no en la home, que era la causa raíz del "experiencia con la página de destino: inferior".
