@@ -12,6 +12,17 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (3) — Recursos automatizados apagados + DOS puertas nuevas descubiertas
+
+- **Qué se ejecutó:** apagados 6 de los 10 recursos automatizados a nivel de cuenta.
+- **🔴🔴 Hallazgo 1 — el teléfono tenía CUATRO puertas, no tres.** Al abrir la pantalla real apareció **"Llamadas dinámicas: Activado"**: Google **crea recursos de llamada por su cuenta**, además de la extensión (quitada el 28/07), los informes de llamadas (apagados el 10/08) y el recurso de ubicación. Teníamos el problema documentado como "cerrado" con tres puertas y faltaba una. **Apagada.**
+- **🔴🔴 Hallazgo 2 — una vía de generación de texto fuera de AI Max.** **"Títulos de anuncio más extensos: Activado"**: Google **escribe y alarga titulares**. El proyecto tenía identificados tres lugares de generación automática (AI Max, recursos automatizados, auto-apply) y este vivía dentro del segundo sin estar enumerado. Era una vía real para que se colara "granallado" o "metal blanco". **Apagada.**
+- **Apagadas también:** fragmentos estructurados dinámicos, imágenes dinámicas, ubicaciones automáticas y aplicaciones automáticas (no hay app).
+- **Dejadas encendidas a propósito:** *Calificaciones del vendedor* (estrellas de reseñas verificadas por Google — no puede inventar nada y suma cuando haya reseñas) y *Nombres y logotipos de empresas dinámicos* (identidad, no copy; además el asset manual manda por encima). *Vínculos dinámicos a sitios* ya estaba en OFF.
+- **Criterio que queda como regla:** se apaga **todo lo que pueda escribir texto, mostrar el teléfono o elegir imágenes**; se deja lo que solo muestra identidad o reseñas verificadas.
+- **Lección de método:** la lista de recursos automatizados que teníamos documentada (del diseño de julio) **estaba incompleta** frente a la pantalla real. Corregido `ads-config/06-anuncios-recursos.md` §6.5 con los 10 tipos reales y el checklist mensual con las 4 puertas del teléfono. **No dar por buena una enumeración de la UI de Google sin verla en la cuenta.**
+- **Resultado esperado:** Google no puede agregar botones de llamada, escribir titulares, elegir imágenes ni mostrar la dirección.
+
 ## 2026-08-11 (2) — Copy de Ads aprobado + los dos datos de plazo resueltos (Claude Code)
 
 - **Qué se hizo:** `18-copy-ads.md` (nuevo) — fuente única del copy publicado, versionada fuera de Google. Consolida y **revisa** el borrador del 29/07 contra el sitio rediseñado y contra el informe de términos.

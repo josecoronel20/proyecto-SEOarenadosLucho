@@ -314,7 +314,26 @@ AI Max agrupa tres funciones que se encienden **juntas** con un solo toggle: *Co
 
 #### (2) Recursos automatizados a nivel de CUENTA
 
-Función separada de AI Max, **encendida por defecto**. Genera sola: vínculos a sitios dinámicos, textos destacados dinámicos, fragmentos estructurados dinámicos, imágenes dinámicas (extraídas de la landing), información dinámica del negocio y "visitas al sitio".
+Función separada de AI Max, **encendida por defecto**.
+
+> ⚠️ **CORREGIDO el 11/08/2026 con la pantalla real de esta cuenta.** La lista que este documento anticipaba estaba **incompleta**: la cuenta tenía **10 tipos**, y dos de ellos son de los más peligrosos del proyecto y no estaban contemplados en ningún lado.
+
+**Lista real y decisión tomada (11/08/2026):**
+
+| Tipo | Estado hallado | Decisión | Por qué |
+|---|---|---|---|
+| **Llamadas dinámicas** | Activado | 🔴 **APAGAR** | **La CUARTA puerta del teléfono.** El proyecto tenía identificadas tres (extensión de llamada, informes de llamadas, recurso de ubicación). Google además **crea recursos de llamada por su cuenta** |
+| **Títulos de anuncio más extensos** | Activado | 🔴 **APAGAR** | **Google escribe y alarga titulares.** Es generación automática de texto fuera de AI Max — la vía por la que se puede colar "granallado" o "metal blanco" |
+| Fragmentos estructurados dinámicos | Activado | APAGAR | Los cargamos nosotros |
+| Imágenes dinámicas | Activado | APAGAR | Extrae imágenes de la landing; cargamos las nuestras |
+| Ubicaciones automáticas | Activado | APAGAR | Muestra el teléfono de la ficha |
+| Aplicaciones automáticas | Activado | APAGAR | No hay app: es superficie inútil |
+| Vínculos dinámicos a sitios | Desactivado | mantener OFF | Cargamos 6 sitelinks propios por campaña |
+| **Calificaciones del vendedor** | Activado | ✅ **DEJAR** | Son estrellas de reseñas reales verificadas por Google: **no puede inventar nada** y suma el día que haya reseñas. Riesgo cero |
+| **Nombres de empresas dinámicos** | Activado | ✅ **DEJAR** | Es identidad, no copy de venta. Además el asset manual manda por encima |
+| **Logotipos de empresas dinámicos** | Activado | ✅ **DEJAR** | Ídem |
+
+**El criterio, en una línea:** se apaga **todo lo que pueda escribir texto, mostrar el teléfono o elegir imágenes**; se deja lo que solo muestra identidad o reseñas verificadas.
 
 - **Ruta:** `Campañas → Recursos → pestaña "Asociaciones" → menú ⋮ (arriba a la derecha) → "Recursos automatizados a nivel de cuenta" → ⋮ → "Configuración avanzada"` → desactivar por tipo (Google pide seleccionar un motivo y un comentario) → Guardar.
 - **Apagar:** vínculos dinámicos, textos destacados dinámicos, fragmentos estructurados dinámicos, imágenes dinámicas y **ubicación**.
@@ -336,10 +355,14 @@ Google puede aplicar sola recomendaciones que agregan keywords, pasan todo a amp
 |---|---|---|
 | AI Max en las 3 campañas | Configuración → AI Max | OFF |
 | AI Max en cada grupo | Grupos de anuncios → Configuración del grupo | OFF |
-| Recursos automatizados de cuenta | Recursos → Asociaciones → ⋮ | Dinámicos OFF |
+| **Llamadas dinámicas** | Recursos → Asociaciones → ⋮ → Recursos automatizados | **OFF** |
+| **Títulos de anuncio más extensos** | Ídem | **OFF** |
+| Fragmentos, imágenes, ubicaciones y apps dinámicas | Ídem | OFF |
 | Aplicación automática | Recomendaciones → Aplicación automática | Todo destildado |
-| Recurso de llamada | Recursos → filtro tipo "Llamada" | Vacío |
+| **Las 4 puertas del teléfono** | Recursos (filtro "Llamada") · Config. cuenta → Informes de llamadas · Recursos automatizados → Llamadas dinámicas · Recurso de ubicación | Las 4 cerradas |
 | Anuncios con estado limitado | Anuncios → columna "Detalles de la política" | Sin rechazos |
+
+⚠️ **El teléfono tiene CUATRO puertas, no tres.** Cerrar tres y suponer que quedó blindado fue exactamente el error que se cometió hasta el 11/08/2026.
 
 ---
 
