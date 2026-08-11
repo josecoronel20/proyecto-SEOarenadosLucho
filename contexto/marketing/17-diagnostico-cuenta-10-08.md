@@ -265,6 +265,27 @@ Para sumar a lo que ya define `03-keywords-maestro.md`:
 
 ⛔ **Nunca:** `decapar` a secas, `pileta`/`piscina` a nivel cuenta, `arenadora` sola, `precio` (es alta intención, no basura).
 
+---
+
+## Decisión de medición — se REEMPLAZA el paso 14 del plan
+
+**Datos confirmados el 10/08/2026:** propiedad GA4 `516818828` · **vinculada a Ads** ✅ · **etiquetado automático ON** ✅ · acceso de publicación a GTM ✅ · `contact_whatsapp` es **evento clave con flujo activo** ✅.
+
+El diseño del 29/07 (`ads-config/02-conversiones.md`, paso 14) mandaba **crear una acción nueva** `WhatsApp - contacto confirmado` con etiqueta propia de Ads vía GTM. **Eso ya no corresponde.**
+
+**Por qué:** la cuenta **ya tiene** `Arenados Lucho SEO (web) contact_whatsapp`, importada de GA4, marcada Principal e incluida en los objetivos de cuenta. Crear una segunda acción que mida el mismo clic produciría **doble conteo** — que es exactamente la señal de alarma #13 del propio plan ("Ads/GA4 reportan muchas más conversiones que chats reales → no optimizar nada hasta resolverlo").
+
+**Qué se hace en su lugar:** conservar la acción importada de GA4 y **corregirle los parámetros**:
+
+| Parámetro | Estado actual | Objetivo |
+|---|---|---|
+| Optimización | Principal ✅ | Principal |
+| Recuento | Una ✅ | Una |
+| **Ventana post-clic** | **90 días** 🔴 | **30 días** |
+| Categoría | a verificar | **Contacto** |
+
+**Contra de esta decisión (aceptada):** la importación desde GA4 tiene latencia (hasta ~24-48 h) y pierde algunas conversiones por modelado y consentimiento, frente a una etiqueta directa de Ads que es casi en tiempo real. Con el volumen de esta cuenta (~15 conv/mes esperadas) esa diferencia no mueve la aguja, y **evitar el doble conteo vale más que la latencia**. Si algún día el volumen justifica bidding fino, se migra a etiqueta directa **eliminando la importada en el mismo movimiento**, nunca conviviendo.
+
 ## Qué cambia en el plan
 
 1. **Nueva Sesión 0, antes que todo:** destildar los 4 auto-apply de ofertas. Mientras sigan ON, cualquier configuración de puja es provisoria.
