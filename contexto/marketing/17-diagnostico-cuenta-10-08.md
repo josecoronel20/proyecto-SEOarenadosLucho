@@ -66,9 +66,15 @@ La acción existe, es de GA4, está en Principal y está incluida en los objetiv
 
 Es **la tercera puerta** por la que puede volver a aparecer el teléfono (las otras dos —extensión de llamada y recurso de ubicación— ya están cerradas). Con esto encendido Google puede usar un número de reenvío.
 
-### 5. 🔴 Falta la captura más importante
+### 5. ✅/🔴 Negativas de cuenta: la lista está VACÍA
 
-La lista que mandaste es de negativas **a nivel campaña**. **Sigue sin verificarse si a nivel CUENTA hay `pileta`/`piscina`** — la ruta es `Administrador → Configuración de la cuenta → Palabras clave negativas`. Si estuvieran ahí, estarían apagando el servicio más rentable del historial en silencio.
+`Administrador → Configuración de la cuenta → Palabras clave negativas` → **"No tiene ninguna palabra clave negativa"** (verificado 10/08/2026).
+
+- ✅ **`pileta`/`piscina` NO están bloqueadas.** El peor escenario posible queda descartado: el servicio más rentable del historial nunca estuvo apagado.
+- 🔴 **Pero no hay ninguna protección permanente.** Las negativas técnicas (`granallado`, `sa3`, `iso 8501`, `metal blanco`, `shot blasting`) que el diseño exige a nivel cuenta **no existen** — y el informe de términos muestra que ese tráfico entró igual (P0 bis §13).
+- 🔴 Los 20 términos de empleo del 28/07 viven **solo dentro de `busqueda-arenadoIndustrial`**. Al pausarla, **se pierden**.
+
+**Acción:** cargar el bloque permanente a nivel cuenta **ya**, antes de construir nada. Es lo único que protege a cualquier campaña que exista, presente o futura.
 
 ---
 

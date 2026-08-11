@@ -12,6 +12,22 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-10 (5) — Sesión 0: blindaje de la cuenta (ejecutado por el dueño)
+
+- **Verificado antes de ejecutar:** `Administrador → Config. de la cuenta → Palabras clave negativas` estaba **VACÍA**. ✅ `pileta`/`piscina` **nunca estuvieron bloqueadas** (peor escenario descartado). 🔴 Pero tampoco había ninguna protección permanente, y las 20 negativas de empleo del 28/07 viven **solo dentro de la campaña vieja** — se perderían al pausarla.
+- **Qué se ejecutó (reportado por el dueño):**
+  1. **37 negativas cargadas a nivel CUENTA**: bloque técnicas (granallado y familia, shot blasting, sa3, iso 8501, metal blanco, perfil de anclaje, rugosidad, st 2), bloque servicio equivocado (decapado químico/electrolítico/pasivado) y bloque empleo (16 términos).
+  2. **Informes de llamadas → Desactivado.** Última de las tres puertas por las que podía volver a aparecer el teléfono.
+  3. **Auto-apply de ofertas → 4 destildadas** (Maximizar conversiones · Max conv. con CPA objetivo · Establecer un CPA objetivo · Ajustar objetivos de CPA). Debe quedar 0 de 14 y 0 de 7.
+- **Decisiones de criterio del listado:**
+  - ⛔ **`pileta`/`piscina` jamás** a nivel cuenta.
+  - ⛔ **`decapado` a secas, NO** — solo las frases de decapado químico. "Decapar la pileta" es parte del gap sin jerga del negocio.
+  - ⛔ **`pintores` NO se bloqueó**, aunque aparecía en el informe de términos: un pintor que busca quién le arene antes de pintar es el mismo perfil de aliado recurrente que el piletero o el contratista. Bloquearlo cerraría una puerta buena.
+  - `curso`, `tutorial`, `casero`, `arenadoras en venta` y familia van en la lista compartida `NEG-EQUIPOS-DIY` (Sesión 2), no a nivel cuenta.
+- **⚠️ Pendiente de verificación por captura.** No se da por hecho hasta verlo: el 28/07 registramos "idiomas corregido a solo Español" y el 10/08 apareció en "Inglés y Español". Este es el modo de falla concreto de esta cuenta.
+- **Resultado esperado:** ninguna campaña —presente o futura— puede volver a comprar tráfico de granallado, normas técnicas ni empleo; y Google pierde el permiso para tocar la estrategia de puja.
+- **Resultado real:** _(completar al verificar las capturas)_
+
 ## 2026-08-10 (4) — Sesión de profundidad #1: diagnóstico de la cuenta (Claude Code)
 
 - **Qué se hizo:** el dueño aportó **14 capturas + el informe de términos de búsqueda** (126 páginas, 10 dic 2025 – 10 ago 2026). Diagnóstico completo en **`17-diagnostico-cuenta-10-08.md`** (nuevo), que **reemplaza al dossier `10-…` como foto vigente** de la cuenta.
