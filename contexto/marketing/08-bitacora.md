@@ -12,6 +12,24 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (6) — ✅ Las 3 campañas construidas (ejecutado por el dueño)
+
+- **Estructura completa, en pausa y sin saldo:**
+
+| Campaña | Presup./día | Grupos | Keywords | Landing |
+|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 3.000 | `ag_pymes-galpon-in-situ` · `ag_obra-restauracion-estructuras` | 42 | `/servicios` |
+| `AR-Search-Piletas` | 1.250 | `ag_pileta-jerga` · `ag_pileta-sin-jerga` | 30 | `/arenado-de-piletas` |
+| `AR-Search-General-Marca` | 750 | `ag_genericos` · `ag_marca` | 10 | `/servicios` y `/` |
+
+- **6 RSA cargados** con el pinning por pools (3 titulares a posición 1, 3 a posición 2, 1 descripción fijada), copy de `18-copy-ads.md`.
+- **Listas de negativas aplicadas con el ruteo correcto:** `NEG-EQUIPOS-DIY` y `NEG-DATA` a las 3 · **`RUTEO-PILETAS` solo a Obra-Industrial y General-Marca**. Verificado por la columna "Campañas" de la biblioteca compartida: **3 / 3 / 2**. El "2" es la prueba de que Piletas quedó afuera — aplicarla ahí habría apagado la campaña entera sin dar ningún error.
+- **Cada grupo con su URL final explícita**, no heredando la home. Es el fix del componente "experiencia con la página de destino", que el diagnóstico encontró en **"Inferior al promedio" en el 100% de las keywords**.
+- **Configuración de las 3:** redes destildadas · radio 60 km desde CABA en **Presencia** · solo español · AI Max OFF en campaña **y** en los 6 grupos · Maximizar clics con tope de CPC 350 · objetivos de la cuenta (solo Contactos) · sufijo UTM · exclusión de IP.
+- **Decisión de puja registrada:** se arranca con **Maximizar clics + tope**, no con puja automática, porque no hay línea base de CPA válida. Se evalúa migrar a Maximizar conversiones recién con **≥15 conversiones limpias en 30 días**.
+- **Estado:** las 3 **pausadas** y la cuenta **sin saldo**. Falta el pre-flight (`19-checklist-encendido.md` Parte B) y el encendido escalonado.
+- **⭐ Bloqueante del encendido:** probar `contact_whatsapp` **de punta a punta**. Funciona en GA4 pero **nunca registró una conversión en Ads** por falta de tráfico pago. No se carga saldo sin esa prueba.
+
 ## 2026-08-11 (5) — Recursos heredados: una antigüedad falsa corriendo en todos los anuncios
 
 - **Hallazgo:** la vista previa mostró texto que nadie del proyecto escribió — **"+20 años de experiencia"**, "Servicio de arenado móvil", "Limpieza profunda", "Resultado profesional" — más 5 sitelinks heredados, uno de ellos a **"Política de privacidad"**. Son **recursos a nivel CUENTA** heredados de la configuración anterior: se aplican solos a cualquier campaña, incluidas las nuevas.

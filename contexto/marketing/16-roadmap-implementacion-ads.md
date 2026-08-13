@@ -20,10 +20,10 @@
 | **3** | Decisión: qué pasa con la campaña vieja | 👤 + 🤖 | ✅ **Pausada 11/08** |
 | **4** | Sesiones 1–2: fundaciones + blindaje | 🖥️ Guiada | ✅ Sesión 1 · 🟠 **Sesión 2 a medias** |
 | **5** | Sesión 3 ⭐: la conversión única | 🖥️ Guiada | ✅ **Cerrada 10/08** |
-| **6** | Sesión 4: recursos y copy | 🤖 + 🖥️ | 🔴 **AHORA** (lo redacta Claude) |
-| **7** | Sesiones 5–6: campañas, grupos, keywords, RSA | 🖥️ Guiada | ⏸️ Depende de F4 y F6 |
-| **8** | Sesión 7: pre-flight | 🖥️ Guiada | ⏸️ Depende de F7 |
-| **9** | Sesión 8: encendido escalonado | 👤 + 🖥️ | ⏸️ Depende de F8 |
+| **6** | Sesión 4: recursos y copy | 🤖 + 🖥️ | ✅ **Cerrada 11/08** → `18-copy-ads.md` |
+| **7** | Sesiones 5–6: campañas, grupos, keywords, RSA | 🖥️ Guiada | ✅ **Cerrada 11/08** — 3 campañas, 6 grupos, 82 keywords, 6 RSA |
+| **8** | Sesión 7: pre-flight | 🖥️ Guiada | 🔴 **AHORA** → `19-checklist-encendido.md` Parte B |
+| **9** | Sesión 8: encendido escalonado | 👤 + 🖥️ | ⏸️ Depende del pre-flight |
 | **10** | Primeras 4 semanas: validar y fijar la línea base | 🖥️ Guiada | ⏸️ |
 | **11** | Cadencia permanente | 🖥️ + 👤 | ⏸️ |
 
