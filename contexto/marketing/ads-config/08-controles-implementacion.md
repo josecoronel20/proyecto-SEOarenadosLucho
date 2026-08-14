@@ -592,7 +592,7 @@ Chequeo rápido de todas de una (PowerShell, opcional):
 
 ## Notas de higiene documental
 
-✅ **Resuelto el 10/08/2026.** Varios archivos del repo nombraban `form_submit_success` y `contact_email` como conversiones primarias — desactualizado tras la decisión del 28/07/2026 (canal único WhatsApp). Se corrigieron **todos** los archivos afectados de `contexto/` y `contexto/marketing/`, y se agregó el **ADR-019** en `contexto/18-decisiones-tecnicas.md` como fuente única de la decisión.
+✅ **Resuelto el 02/08/2026.** Varios archivos del repo nombraban `form_submit_success` y `contact_email` como conversiones primarias — desactualizado tras la decisión del 28/07/2026 (canal único WhatsApp). Se corrigieron **todos** los archivos afectados de `contexto/` y `contexto/marketing/`, y se agregó el **ADR-019** en `contexto/18-decisiones-tecnicas.md` como fuente única de la decisión.
 
 **Regla vigente:** la única conversión del sitio es **`contact_whatsapp`**. Si un archivo del repo dice otra cosa, está desactualizado: corregirlo y anotarlo en `08-bitacora.md`.
 

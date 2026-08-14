@@ -184,7 +184,7 @@ export default function PoliticaPrivacidadPage() {
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  <strong>Fecha de última revisión:</strong> 10 de agosto de 2026.
+                  <strong>Fecha de última revisión:</strong> 2 de agosto de 2026.
                 </p>
               </div>
             </section>

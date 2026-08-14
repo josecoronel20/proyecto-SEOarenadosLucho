@@ -12,6 +12,28 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 — 🚀 TODO EL TRABAJO DESPLEGADO A PRODUCCIÓN (PR #4 mergeado)
+
+- **🔴 Hallazgo del dueño, y grave:** *"quitamos el form pero en la página de contacto aún está el form"*. Tenía razón. **Ninguno de los 22 commits estaba publicado.** Producción seguía sirviendo el deploy del **27/07** (PR #3): formulario y Formspree activos, home vieja con el video de 24 MB, `/servicios` sin FAQ ni CTA de WhatsApp, y nada del copy nuevo.
+- **Por qué era un bloqueante del encendido:** las 3 campañas apuntan a `/servicios` y `/arenado-de-piletas` esperando las páginas nuevas. Encender contra las viejas habría reproducido exactamente el problema que el diagnóstico marcó como **"experiencia con la página de destino: Inferior al promedio" en el 100% de las keywords** — el arreglo de mayor retorno de todo el trabajo.
+- **Lección de método:** durante toda la sesión se verificó producción para el **tracking** (GTM, bundle, evento) y nunca se verificó que **los cambios propios estuvieran desplegados**. `npm run build` limpio y commits pusheados **no son** un deploy. **Verificar en producción lo que se cambió, no solo lo que se consulta.**
+- **Ejecutado:** PR #4 mergeado a `main` (22 commits) → deploy de Vercel → **verificado en producción**:
+
+| Verificación | Resultado |
+|---|---|
+| Formulario en `/contacto` | ✅ **eliminado** (sin `<form>`, sin honeypot, sin campos) |
+| Bloque "Qué nos ayuda saber" | ✅ presente |
+| Home: `<h1>` y orden de secciones | ✅ el h1 con keyword+zona y las 7 secciones en el orden del blueprint |
+| `FAQPage` en home y `/servicios` | ✅ |
+| `/servicios`: `<h1>` con keyword y zona | ✅ |
+| Los ~100 m² con la condición | ✅ "En superficies planas y parejas…" en vivo |
+| 11 rutas | ✅ todas **200** |
+| 301 legacy | ✅ **308** a `/servicios`, `/arenado-de-piletas` y `/contacto`, **conservando la query string** (`gclid` intacto) |
+| Número de WhatsApp contiguo | ✅ **no aparece en ninguna ruta** |
+
+- **🔧 Corrección de fechas en el registro:** durante la sesión se "corrigieron" a 10/08 varias fechas que estaban bien en 02/08. El historial de git es la fuente: ese trabajo se hizo el **02/08**. Revertido en la bitácora, en los 4 archivos de `ads-config/`, en `contexto/03` y `12`, y en la fecha de revisión de la política de privacidad.
+- **Estado:** el sitio en producción **es el que las campañas esperan**. Pre-flight de URLs y redirects ✅ cerrado.
+
 ## 2026-08-11 (7) — ✅ Medición verificada de punta a punta (el bloqueante del encendido)
 
 - **Disparador:** la prueba manual de `contact_whatsapp` no aparecía en Tiempo real de GA4. Hipótesis inicial del dueño: *"el evento debe estar todavía atado a Framer"*.
@@ -197,7 +219,7 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 - **Resultado esperado y cuándo revisarlo:** más `contact_whatsapp` por sesión (el CTA dejó de estar a un salto de página) y mejor calidad de lead (mensaje pre-cargado por intención). Medir a las 2–4 semanas post-deploy; con Ads encendido, mirar también la tasa de conversión de `/servicios`.
 - **Resultado real:** _(completar)_
 
-## 2026-08-10 (1) — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
+## 2026-08-02 — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
 
 - **Qué se hizo:** barrido completo de la deuda documental que dejó la decisión del 28/07 (canal único WhatsApp). El repo tenía **226 menciones a `form_submit*` / `contact_email` / Formspree / `EmailBtn` en 34 archivos**, muchas describiéndolos como **vigentes** — riesgo real de que un asistente futuro reconstruyera el formulario o reconfigurara Ads contra eventos muertos. Quedaron 48, todas marcadas como *eliminado/obsoleto* o dentro de registros históricos.
   - **Reescritos completos:** `contexto/05-formularios-y-conversion.md` (ahora "Conversión y canales de contacto"), `06-tracking-y-analytics.md`, `09-api-y-servicios.md`, `12-seguridad-y-validaciones.md` y `03-rutas-y-paginas.md` (documentaba 4 casos, sin `/arenado-de-piletas`, con el banner de "pivote en curso" ya cumplido).
