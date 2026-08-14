@@ -22,15 +22,15 @@ export function CasoDestacado() {
     >
       <div className="container mx-auto px-5 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <p className="text-sm font-semibold text-tinta uppercase tracking-wide mb-2">
+          <p className="ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700 mb-2">
             Caso destacado
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-6">
+          <h2 className="text-3xl md:text-[2.5rem] font-bold tracking-tight leading-[1.1] text-tinta mb-8">
             {caso.title}
           </h2>
 
-          <div className="rounded-sm overflow-hidden border border-papel-linea bg-papel">
-            <div className="grid md:grid-cols-2 gap-0">
+          <div className="border-t-2 border-tinta pt-6">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-10">
               <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[280px]">
                 <Image
                   src={imageSrc}
@@ -39,13 +39,13 @@ export function CasoDestacado() {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-papel/95 text-tinta-70 text-sm font-medium">
-                  <MapPin className="w-4 h-4 text-tinta" />
+                <div className="absolute bottom-0 left-0 flex items-center gap-1.5 px-3 py-1.5 bg-tinta text-papel text-sm font-medium">
+                  
                   {LOCATION_NAVE_FERROVIARIA}
                 </div>
               </div>
 
-              <div className="p-6 md:p-8 flex flex-col justify-center">
+              <div className="flex flex-col justify-center">
                 
                 <ul className="space-y-2.5 mb-6">
                   {highlights.map((item: string) => (

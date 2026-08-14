@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                   key={project.id} 
                   className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="relative h-[500px] md:h-[600px] overflow-hidden border-0 group">
+                  <Card className="relative h-[500px] md:h-[600px] overflow-hidden border-0 rounded-none bg-tinta group">
                     <div className="absolute inset-0 z-0">
                       <Image
                         src={project.images![0]}

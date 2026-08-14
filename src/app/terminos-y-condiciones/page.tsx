@@ -13,23 +13,17 @@ export const metadata: Metadata = {
 export default function TerminosYCondicionesPage() {
   return (
     <div className="min-h-screen bg-papel py-16 md:py-24 px-5 lg:px-8">
-      <div className="container mx-auto max-w-4xl">
-        <Card className="">
-          <CardHeader className="text-center pb-6 border-b">
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 rounded-full bg-papel-alt flex items-center justify-center">
-                <FileText className="w-8 h-8 text-tinta" />
-              </div>
-            </div>
-            <CardTitle asChild className="text-3xl md:text-4xl font-bold text-tinta mb-3">
+      <div className="container mx-auto max-w-[72ch]">
+        <header className="border-b border-papel-linea pb-8">
+          <div className="text-3xl md:text-4xl font-bold text-tinta mb-3">
               <h1>Términos y Condiciones</h1>
-            </CardTitle>
-            <p className="text-base md:text-lg text-tinta-70">
+            </div>
+            <p className="text-base md:text-lg text-tinta-70 leading-relaxed">
               Condiciones generales de uso de este sitio y de las consultas enviadas a Arenados Lucho.
             </p>
-          </CardHeader>
+          </header>
 
-          <CardContent className="pt-8 space-y-6 text-tinta-70 leading-relaxed">
+          <div className="pt-10 space-y-8 text-tinta-70 leading-relaxed">
             <section>
               <h2 className="text-xl font-bold text-tinta mb-2">1. Objeto</h2>
               <p>
@@ -93,11 +87,10 @@ export default function TerminosYCondicionesPage() {
               </p>
             </section>
 
-            <p className="text-sm text-tinta-70 pt-4 border-t">
+            <p className="text-sm text-tinta-70 pt-4 border-t border-papel-linea">
               Última actualización: agosto 2026. Arenados Lucho — Buenos Aires, Argentina.
             </p>
-          </CardContent>
-        </Card>
+        </div>
       </div>
     </div>
   )

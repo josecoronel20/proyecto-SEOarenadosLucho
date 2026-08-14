@@ -30,21 +30,17 @@ export function ServiciosHero() {
         <div className="max-w-3xl">
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Servicios" }]} />
 
-          <p className="text-tinta-20 font-semibold text-sm md:text-base mb-3">
-            Obra · Industria · Galpones · Buenos Aires y AMBA
-          </p>
-
-          <h1 className="text-3xl md:text-5xl font-bold text-papel leading-tight drop-">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-papel">
             Arenado industrial y en obra en Buenos Aires y AMBA
           </h1>
 
-          <p className="mt-5 text-base md:text-xl text-white/95 leading-relaxed max-w-2xl drop-">
+          <p className="mt-5 text-base md:text-xl text-tinta-20 leading-relaxed max-w-[60ch]">
             Arenamos estructuras metálicas, tanques, silos, camiones, hierros, paredes y fachadas
             <strong className="font-semibold"> en tu obra, tu planta o tu galpón</strong>. Vamos con
             equipo y compresores propios: no trasladás nada y no dependemos de la energía del lugar.
           </p>
 
-          <p className="mt-3 text-white/90 font-medium">
+          <p className="mt-3 text-tinta-20 font-medium">
             Sacamos óxido y pintura vieja y te lo dejamos listo para pintar o revestir.
           </p>
 
