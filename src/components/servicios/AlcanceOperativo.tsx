@@ -1,12 +1,22 @@
-"use client"
-
 import { Users, LayoutGrid, Zap, Clock } from "lucide-react"
 
+// ⚠️ El rendimiento de ~100 m²/día es real pero CONDICIONAL (dato del dueño,
+// 11/08/2026): aplica a superficies cómodas y planas —paredes, fachadas, piletas—.
+// En estructuras metálicas complejas o con revestimientos muy resistentes se dilata.
+// Se publica siempre CON la condición: sin ella sería una promesa que el trabajo
+// más rentable (galpón, estructuras) no puede sostener. Por eso tampoco va en el
+// copy de Ads, donde no entra la aclaración (`marketing/18-copy-ads.md` §10).
 const items = [
   { icon: Users, text: "2 equipos propios, con compresores propios" },
-  { icon: LayoutGrid, text: "Rápido: cada equipo cubre alrededor de 100 m² por día" },
+  {
+    icon: LayoutGrid,
+    text: "En superficies planas y parejas —paredes, fachadas— cada equipo cubre alrededor de 100 m² por día",
+  },
+  {
+    icon: Clock,
+    text: "En estructuras metálicas complejas o con revestimientos muy duros lleva más: te damos el plazo en la visita",
+  },
   { icon: Zap, text: "Si el trabajo es grande, sumamos equipos para acortar los tiempos" },
-  { icon: Clock, text: "Nos adaptamos a tu horario, con turnos extendidos si hace falta" },
 ]
 
 const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-gray-50"

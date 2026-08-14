@@ -265,7 +265,7 @@ Documentadas en `03-rutas-y-paginas.md`:
 
 ### Reglas del roadmap (no romper)
 
-1. **Invariantes intocables** (`06-tracking-y-analytics.md`): eventos `form_submit`, `form_submit_success`, `form_submit_error`, `contact_whatsapp`, `contact_email`; `GTM-W63ZV9D9`; init de `dataLayer` antes de GTM; Formspree endpoint `xrgnqbod` y campos `name`/`contact`/`description`/`_subject`; un solo `WppBtn` global.
+1. **Invariantes intocables** (`06-tracking-y-analytics.md`): el evento **`contact_whatsapp`** (el único vigente), disparado solo tras confirmar el `AlertDialog`; `GTM-W63ZV9D9`; init de `dataLayer` antes de GTM; el número partido en 2 strings y fuera del HTML; un solo `WppBtn` global; **sin PII** en el payload.
 2. **No romper rutas que usa Google Ads.** Todo cambio de URL va con **301** y se monitorea en Search Console (cobertura + inspección de URL).
 3. `SITE_URL` sincronizado en `layout.tsx`, `sitemap.ts`, `robots.ts`.
 4. **Sin promesas técnicas** (Sa3/ISO 8501/metal blanco/perfil de anclaje/granallado) en copy, metadata ni schema (`.cursorrules`).
@@ -296,7 +296,7 @@ Impacto (SEO + conversión) × esfuerzo. **Severidad:** 🔴 crítico · 🟠 al
 |------|-----|-----|----------------------|--------|
 | **Hero video 25 MB** | 🔴 | M | `public/videos/heroVideo.mp4` ≈ **24,9 MB** en autoplay/loop sin `poster` en el hero de la home (= landing #1 de Ads). Re-encodear a ~720p, `<2-3 MB` (H.264 + opc. WebM/AV1); agregar `poster` (JPG/WebP ~30-80 KB) para pintado inmediato; en mobile `preload="none"` o solo poster. Igual a `ctaVideo.mp4`. `HeroSection.tsx`, `CTASection.tsx` | Above-the-fold de Ads: QA que autoplay muted + `playsInline` siga OK en iOS; mantener ruta del archivo |
 | Imágenes fuente pesadas | 🟠 | M | `public/images/services/arenadoParticular.JPG` = **4,5 MB** servida en home → recomprimir a ~200-400 KB (mismo path). Fotos de casos son PNG de cámara → pasar fuente a JPG/WebP manteniendo paths de `projectsInfo.json` | Mantener nombres/rutas exactos (los usan `ServicesSection` y `projectsInfo.json`/sitemap) |
-| `use client` innecesario | 🟡 | M | `HeroSection`, `CTASection`, `ServiciosHero`, `CasoCard` son `"use client"` sin estado/hooks/handlers → pasarlos a Server Components (menos JS/hidratación above-the-fold). **NO** tocar los que sí lo necesitan: `ProjectsSection`/`CasoDetalleContent` (embla), `FaqAccordion`, `Header` (Sheet), `WppBtn`/`EmailBtn`/`contacto` (dataLayer) | Verificar build; no tocar componentes con eventos GTM |
+| `use client` innecesario | 🟡 | M | `HeroSection`, `CTASection`, `ServiciosHero`, `CasoCard` son `"use client"` sin estado/hooks/handlers → pasarlos a Server Components (menos JS/hidratación above-the-fold). **NO** tocar los que sí lo necesitan: `ProjectsSection`/`CasoDetalleContent` (embla), `FaqAccordion`, `Header` (Sheet), `WppBtn`/`WhatsAppCTA` (dataLayer) | Verificar build; no tocar componentes con eventos GTM |
 
 ### Fase C — Datos estructurados (schema) — refactor a `@graph`
 
@@ -394,7 +394,7 @@ Impacto (SEO + conversión) × esfuerzo. **Severidad:** 🔴 crítico · 🟠 al
 
 - **Creación de contenido**: blog/guías, nuevas landings por keyword, más casos, copy de `/arenado-de-piletas` → `marketing/04-plan-de-contenidos.md`.
 - **Google Business Profile** (crear/reclamar, fotos, reseñas) → tarea externa, `marketing/ROADMAP.md` Fase 2.
-- **Cualquier cambio a eventos GTM / Formspree**: prohibido sin migración.
+- **Cualquier cambio al evento `contact_whatsapp` o al contenedor GTM**: prohibido sin migración coordinada.
 - **Landings por rubro/localidad** (`/servicios/arenado-*`, `/zonas`): requieren demanda verificada + decisión + bitácora.
 
 ---

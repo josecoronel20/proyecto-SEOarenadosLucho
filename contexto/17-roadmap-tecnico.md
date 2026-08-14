@@ -22,12 +22,12 @@ Prioridades técnicas alineadas a **conversión B2B industrial** y stack simple.
 
 | Tarea | Entregable | Notas |
 |-------|------------|-------|
-| **Mejorar tracking** (documentado + verificado) | Mapeo estable `generate_lead` desde `form_submit_success` y `contact_whatsapp` | No renombrar eventos sin checklist `06` |
-| **CTAs coherentes** | Todos los primarios → `/contacto`; WhatsApp solo `WppBtn` global | `04-componentes-ui` |
-| **Teléfono / contacto visible** | Header o barra sticky (pendiente `.cursorrules`) | Diseño + evento si aplica |
+| **Verificar tracking end-to-end** | Mapeo estable `generate_lead` ← **`contact_whatsapp`**, validado en GTM Preview y GA4 DebugView | No renombrar el evento sin el checklist de `06` |
+| **CTAs coherentes** | Primarios → `/contacto` o `WhatsAppCTA`; un solo `WppBtn` flotante | `04-componentes-ui` |
+| ~~**Teléfono visible en header**~~ | **Descartado** — el número va blindado (ADR-019, `12-seguridad`) |
 | ~~**Página términos**~~ | Hecho |
 | ~~**Actualizar JSON-LD**~~ | Hecho |
-| ~~**Anti-spam básico (honeypot)**~~ | Hecho |
+| ~~**Anti-spam básico (honeypot)**~~ | Sin objeto: no hay formulario (ADR-019) |
 | Completar **URLs finales Ads** | Tabla campaña ↔ URL en `08-google-ads-y-landings` | Marketing + dev |
 
 ---
@@ -88,7 +88,7 @@ Prioridades técnicas alineadas a **conversión B2B industrial** y stack simple.
 
 | Área | Señal de “hecho” |
 |------|------------------|
-| Conversión | Leads en Formspree + eventos `form_submit_success` estables en GA4 |
+| Conversión | Chats reales de WhatsApp + eventos `contact_whatsapp` estables en GA4, con proporción coherente entre ambos |
 | Ads | URLs finales 200; conversiones importadas sin caída |
 | SEO | Sitemap enviado en GSC; 0 enlaces internos 404 críticos |
 | Performance | LCP mobile &lt; 2,5 s en `/` (PSI) o mejora documentada |

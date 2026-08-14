@@ -21,7 +21,7 @@ Con la cuenta abierta (o con el CSV del script de auditoría, ver `06-google-ads
 
 - [ ] **Campañas**: cuáles existen, estado, últimas fechas con tráfico, gasto histórico, conversiones históricas.
 - [ ] **URLs finales**: ¿apuntan al sitio Framer o a rutas legacy muertas? (lista de rutas prohibidas en `contexto/08-google-ads-y-landings.md`). Nada se activa hasta que toda URL final responda 200 en el sitio nuevo.
-- [ ] **Conversiones**: qué acciones existen, cuáles son primarias, si siguen recibiendo pings. Objetivo final: primarias = `form_submit_success` (como `generate_lead` de GA4) y `contact_whatsapp`; secundaria = `contact_email`.
+- [ ] **Conversiones**: qué acciones existen, cuáles son primarias, si siguen recibiendo pings. Objetivo final: **una sola primaria, `contact_whatsapp`** (mapeada a `generate_lead` en GA4); todo el resto a secundaria. Detalle: `ads-config/02-conversiones.md`.
 - [ ] **Vinculaciones**: GA4 vinculado; Search Console vinculado; etiquetado automático (gclid) activo.
 - [ ] **Términos de búsqueda históricos**: exportar y correr n-gram → primera lista de negativas real.
 - [ ] **Keywords**: concordancias usadas (¿amplia sin negativas? = plata quemada), QS histórico.
@@ -83,7 +83,7 @@ Configuración común: solo Red de Búsqueda (sin Display ni partners) · AMBA p
 
 Anuncios (RSA) — mensajes permitidos: superficie lista para pintar/revestir · ~100 m²/día · 2 equipos propios · coordinación en obra · contención de polvo · visita y presupuesto sin costo. **PROHIBIDO: Sa3, ISO 8501, metal blanco, granallado.** Extensiones: sitelinks (/servicios, /arenado-de-piletas, /casos-de-exito, /preguntas-frecuentes, /contacto), texto destacado, ubicación (cuando exista GBP). **❌ Extensión/asset de LLAMADA: NO usar** (ver ⚠️ abajo).
 
-> ⚠️ **Llamadas por trabajo = extensión de llamada (diagnóstico 27/07/2026).** Síntoma: cuando la campaña **gasta**, llegan muchas **llamadas pidiendo empleo**, aunque el número esté blindado en el sitio. Causa probable: la campaña vieja muestra el número vía **extensión/asset de llamada** a búsquedas de empleo (amplia, sin negativas de empleo) → el que busca laburo ve el aviso con botón de "Llamar". **Fix:** (1) **quitar la extensión de llamada** y rutear todo a WhatsApp/formulario del sitio; (2) concordancia **frase/exacta**; (3) cargar las **negativas de empleo** de `03-keywords-maestro.md`. Registrar en `08-bitacora.md` al aplicarlo.
+> ⚠️ **Llamadas por trabajo = extensión de llamada (diagnóstico 27/07/2026).** Síntoma: cuando la campaña **gasta**, llegan muchas **llamadas pidiendo empleo**, aunque el número esté blindado en el sitio. Causa probable: la campaña vieja muestra el número vía **extensión/asset de llamada** a búsquedas de empleo (amplia, sin negativas de empleo) → el que busca laburo ve el aviso con botón de "Llamar". **Fix:** (1) **quitar la extensión de llamada** y rutear todo al WhatsApp del sitio; (2) concordancia **frase/exacta**; (3) cargar las **negativas de empleo** de `03-keywords-maestro.md`. ✅ **Ejecutado el 28/07/2026** (extensión quitada + negativas cargadas) — ver `08-bitacora.md`.
 
 **Expansión posterior** (solo con CPA limpio validado): campaña por tipo de obra → slugs de casos; remarketing; grupo de trabajos chicos (Cluster 5) en exacta con puja mínima.
 
@@ -95,12 +95,12 @@ Anuncios (RSA) — mensajes permitidos: superficie lista para pintar/revestir ·
 | Semanal | Reporte de rendimiento (gasto, CPA, QS, URLs rotas) | Script auditoría + Claude |
 | Quincenal | Pausar keywords sin impresiones/conversiones; ajustar pujas | Datos del script |
 | Mensual | Revisar RSAs (fuerza del anuncio, combinaciones), probar titulares | Claude redacta variantes |
-| Mensual | Cruzar Ads vs GA4 vs inbox real (¿los leads son calificados?) | `07-medicion-y-kpis.md` |
+| Mensual | Cruzar Ads vs GA4 vs **chats reales de WhatsApp** (¿los leads son calificados?) | `07-medicion-y-kpis.md` |
 
 ## Reglas duras
 
 1. **Nunca** activar campañas con URLs finales que no respondan 200.
-2. No optimizar hacia `form_submit` (intento) — solo `form_submit_success` y `contact_whatsapp` son leads.
+2. **Una sola conversión primaria: `contact_whatsapp`.** Todo lo demás (visitas, engagements, llamadas, el `form_submit` histórico) va a secundaria: optimizar contra conversiones sucias es peor que no optimizar.
 3. Un cambio estructural por vez, con 1–2 semanas de datos antes del siguiente. Todo a `08-bitacora.md`.
 4. Presupuesto: subir máximo 20–30% por vez y solo con CPA estable.
 5. Ignorar las "recomendaciones automáticas" de Google (y la aplicación automática de recomendaciones debe estar **desactivada**) salvo análisis propio.

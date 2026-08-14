@@ -8,7 +8,7 @@ export interface Faq {
 export const faqs: Faq[] = [
   { question: "¿Qué es el arenado y para qué sirve?", answer: "Es la forma más rápida de sacar óxido, pintura vieja y suciedad de una superficie. Lanzamos arena a presión y dejamos el material limpio y parejo, listo para pintar o revestir." },
   { question: "¿Vienen a domicilio o tengo que llevar algo a un taller?", answer: "Trabajamos in situ: vamos con nuestro equipo a tu casa, obra, galpón o fábrica. No hace falta que traslades nada; llevamos compresores propios." },
-  { question: "¿Cuánto tardan?", answer: "Depende del tamaño y el estado de la superficie. Cada equipo avanza alrededor de 100 m² por día y podemos sumar equipos para acortar los tiempos. En la visita te damos un plazo estimado." },
+  { question: "¿Cuánto tardan?", answer: "Depende del tamaño, el estado y la forma de la superficie. En superficies cómodas y planas —paredes, fachadas, piletas— cada equipo cubre alrededor de 100 m² por día. En estructuras metálicas complejas o con revestimientos muy resistentes lleva más tiempo. Si el trabajo es grande sumamos equipos, y en la visita te damos el plazo concreto." },
   { question: "¿Hacen mucho polvo? ¿Molesta a los vecinos?", answer: "En galpones, obras y terrenos amplios no es un problema. En domicilios coordinamos horarios y trabajamos por zonas, conteniendo el polvo e interviniendo un sector a la vez para liberarlo rápido." },
   { question: "¿Queda lista para pintar o revestir?", answer: "Sí, ese es el objetivo. Te entregamos la superficie limpia y pareja, lista para que apliques pintura, antióxido o revestimiento." },
   { question: "¿Hacen piletas? ¿La pintan ustedes también?", answer: "Sí, arenamos piletas para sacar toda la pintura o el revestimiento viejo y dejarlas listas para repintar o revestir. El pintado o revestimiento final no lo hacemos nosotros: te la entregamos preparada." },
@@ -17,10 +17,46 @@ export const faqs: Faq[] = [
   { question: "¿Trabajan dentro de una obra en marcha?", answer: "Sí. Coordinamos con el encargado de obra, trabajamos por sectores y liberamos cada zona lo antes posible para no frenar el resto de las tareas." },
   { question: "¿Cuánto cuesta?", answer: "El precio depende de la superficie, el estado y el acceso. Hacemos una visita sin costo, lo vemos en persona y te pasamos un presupuesto claro." },
   { question: "¿Hacen visita antes de presupuestar?", answer: "Sí, la visita y el presupuesto son sin costo. Vamos, lo evaluamos y te enviamos el presupuesto en 1 a 2 días." },
-  { question: "¿Cuánta experiencia tienen?", answer: "Años arenando estructuras industriales, obras, restauraciones, galpones y piletas, con dos equipos propios completos." },
+  { question: "¿Cuánta experiencia tienen?", answer: "El oficio viene de familia: se aprendió trabajando, no en un curso. Uno de los arenadores del equipo lleva más de 20 años haciendo esto. Hoy trabajamos con dos equipos propios completos en obras, restauraciones, galpones, estructuras industriales y piletas." },
   { question: "¿Pueden trabajar fines de semana o turnos extendidos?", answer: "Sí. Si el plazo es ajustado coordinamos turnos fuera del horario habitual, respetando los permisos de obra y municipales." },
   { question: "¿Hacen granallado o arenado certificado con normas?", answer: "No. Hacemos arenado sin vueltas para dejar la superficie lista para pintar o revestir. No trabajamos con granallado ni con arenado certificado bajo normas o mediciones técnicas." },
 ]
+
+/**
+ * Selecciona un subconjunto de `faqs` respetando el orden pedido.
+ *
+ * Lanza si una pregunta no existe: si alguien edita el texto de una FAQ, el build
+ * falla ruidosamente en vez de renderizar 4 de 6 en silencio — y, sobre todo, en
+ * vez de dejar el JSON-LD `FAQPage` desalineado con lo visible (Google penaliza
+ * el schema que no coincide con la página).
+ */
+function pick(questions: string[]): Faq[] {
+  return questions.map((q) => {
+    const found = faqs.find((f) => f.question === q)
+    if (!found) throw new Error(`FAQ inexistente: "${q}" (ver src/lib/faqs.ts)`)
+    return found
+  })
+}
+
+/** FAQ de la home: las 6 dudas de entrada, en el orden en que aparecen en la cabeza. */
+export const faqsHome: Faq[] = pick([
+  "¿Qué es el arenado y para qué sirve?",
+  "¿Vienen a domicilio o tengo que llevar algo a un taller?",
+  "¿Cuánto cuesta?",
+  "¿Cuánto tardan?",
+  "¿Queda lista para pintar o revestir?",
+  "¿Hacen granallado o arenado certificado con normas?",
+])
+
+/** FAQ de /servicios: las objeciones de PYME con galpón y de obra en marcha. */
+export const faqsServicios: Faq[] = pick([
+  "¿Arenan camiones, tanques o estructuras en mi galpón?",
+  "¿Trabajan dentro de una obra en marcha?",
+  "¿Cuánto tardan?",
+  "¿Hacen mucho polvo? ¿Molesta a los vecinos?",
+  "¿Pueden trabajar fines de semana o turnos extendidos?",
+  "¿Hacen granallado o arenado certificado con normas?",
+])
 
 // FAQs específicas de la landing /arenado-de-piletas (dueño de casa + contratista).
 // Alimentan el acordeón y el JSON-LD FAQPage de esa página.

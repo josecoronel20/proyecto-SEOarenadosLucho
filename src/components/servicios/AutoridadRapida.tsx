@@ -1,5 +1,3 @@
-"use client"
-
 import { Shield, Building2, CircleDot, Wrench } from "lucide-react"
 
 const items = [

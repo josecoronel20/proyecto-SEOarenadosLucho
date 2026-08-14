@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { FileText } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 import { FaqAccordion } from "@/components/preguntas-frecuentes/FaqAccordion"
+import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
 import { faqs } from "@/lib/faqs"
 import { og } from "@/lib/siteConfig"
+import { WPP_BTN_LG, WPP_MSG } from "@/lib/wpp"
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes",
@@ -60,17 +61,13 @@ export default function PreguntasFrecuentesPage() {
             ¿Tu pregunta no está en la lista?
           </h2>
           <p className="text-white/90 mb-6">
-            Coordinamos una visita sin costo y te pasamos el presupuesto rápido.
+            Escribinos y te la sacamos. Coordinamos una visita sin costo y te pasamos el
+            presupuesto rápido.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
-            >
-              <FileText className="w-5 h-5" />
-              Contactanos
-            </Link>
-          </div>
+          <WhatsAppCTA message={WPP_MSG.general} className={WPP_BTN_LG}>
+            <MessageCircle className="w-5 h-5" />
+            Preguntanos por WhatsApp
+          </WhatsAppCTA>
         </div>
       </section>
     </div>

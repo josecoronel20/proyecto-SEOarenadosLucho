@@ -42,10 +42,10 @@ npm run lint
 ```
 git push → branch
     → Vercel Preview URL (staging)
-    → revisar formulario, CTAs, mobile
+    → revisar CTAs de WhatsApp, mobile (375px) y desktop
     → merge a main
     → deploy producción automático
-    → validar GTM / Formspree en dominio real
+    → validar GTM (`contact_whatsapp`) en el dominio real
 ```
 
 ### Qué sube Vercel
@@ -68,10 +68,13 @@ git push → branch
 
 ### Checklist post-deploy producción
 
-- [ ] Home y `/servicios` cargan video/imágenes
-- [ ] `/contacto` envía a Formspree y muestra éxito
-- [ ] WhatsApp flotante abre número correcto
-- [ ] GTM Preview en URL de **producción** (eventos `form_submit_success`, `contact_whatsapp`)
+- [ ] Home, `/servicios` y `/arenado-de-piletas` cargan video/imágenes
+- [ ] `/contacto` muestra el CTA de WhatsApp y abre el chat correcto
+- [ ] WhatsApp flotante abre el número correcto (y es **uno solo**)
+- [ ] GTM Preview en la URL de **producción**: `contact_whatsapp` dispara **solo tras confirmar el modal**
+- [ ] El número **no** aparece contiguo en el HTML servido
+- [ ] `/robots.txt` y `/sitemap.xml` responden 200
+- [ ] Los 301 legacy funcionan (`/arenado-industrial`, `/arenado-particular`, `/presupuesto-rapido`)
 - [ ] Sin enlaces internos 404 críticos (ver `15-bugs-conocidos.md`)
 - [ ] `npm run build` ya pasó en CI/Vercel
 
@@ -92,7 +95,7 @@ Cada **push a una branch** o **Pull Request** en Vercel genera una URL única:
 |------------------|----------------------|
 | Probar UI, responsive, copy | Conversiones Ads atribuidas a preview |
 | Probar build y rutas nuevas | GTM de producción sin filtro (puede ensuciar datos) |
-| QA formulario (Formspree suele aceptar envíos de prueba) | Indexación Google de URL preview |
+| QA de los CTAs de WhatsApp | Indexación de la URL de preview en Google |
 
 ### GTM / analytics en staging
 
@@ -104,9 +107,9 @@ Cada **push a una branch** o **Pull Request** en Vercel genera una URL única:
 
 **Hoy:** GTM carga en **todos** los deploys (mismo snippet en `layout.tsx`).
 
-### Formspree en preview
+### WhatsApp en preview
 
-El endpoint `https://formspree.io/f/xrgnqbod` es el mismo → los tests de formulario **envían emails reales** al inbox configurado. Marcar envíos como prueba en el asunto o usar modo test de Formspree si está disponible.
+⚠️ El número es el mismo en preview y en producción. Confirmar el `AlertDialog` **dispara el evento y abre `wa.me`** con el mensaje pre-cargado — pero **no lo envía**: hay que apretar enviar en WhatsApp. Para QA: confirmar (así se valida el evento en GTM Preview) y **cerrar sin enviar**. Si se envía, le llega un chat real al dueño; avisarle antes.
 
 ---
 
@@ -141,8 +144,8 @@ Actualizar en sync:
 
 | Variable | En código hoy | En Vercel |
 |----------|---------------|-----------|
-| Formspree ID | Hardcodeado `xrgnqbod` en `contacto/page.tsx` | No requerida |
 | GTM ID | Hardcodeado `GTM-W63ZV9D9` en `layout.tsx` | No requerida |
+| `SITE_URL` | Hardcodeado en `layout.tsx`, `sitemap.ts` y `robots.ts` (**los tres**) | No requerida |
 | `.env.local` | Ignorado por git (`.gitignore`) | — |
 
 ### Variables recomendadas (futuro)
@@ -151,15 +154,13 @@ Configurar en **Vercel → Project → Settings → Environment Variables**:
 
 | Variable | Entornos | Público | Uso |
 |----------|----------|---------|-----|
-| `NEXT_PUBLIC_SITE_URL` | Production, Preview | Sí | Reemplazar `SITE_URL` fijo |
-| `NEXT_PUBLIC_FORMSPREE_ID` | Production, Preview | Sí | `xrgnqbod` — formulario |
+| `NEXT_PUBLIC_SITE_URL` | Production, Preview | Sí | Reemplazar el `SITE_URL` fijo de los 3 archivos |
 | `NEXT_PUBLIC_GTM_ID` | Production, Preview | Sí | Opcional; hoy hardcodeado |
-| `FORMSPREE_API_KEY` | Production only | **No** | Solo si hay `/api/contact` server-side |
 
 **Reglas:**
 
 - Prefijo `NEXT_PUBLIC_` → visible en el bundle del navegador (no secrets).
-- **Nunca** commitear `.env`, `.env.local`, tokens admin Formspree.
+- **Nunca** commitear `.env`, `.env.local` ni credenciales de ningún panel.
 - En Preview y Production pueden usarse los mismos valores públicos; secrets solo Production si aplica.
 
 ### Archivo local (desarrolladores)
@@ -169,7 +170,6 @@ Crear `.env.local` (no subir a git):
 ```env
 # .env.local — ejemplo, no commitear
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_FORMSPREE_ID=xrgnqbod
 # NEXT_PUBLIC_GTM_ID=GTM-W63ZV9D9
 ```
 
@@ -208,7 +208,7 @@ No hay `staging` permanente con dominio propio en repo — el staging es **Previ
 
 1. Vercel → Deployments → deployment anterior → **Promote to Production**
 2. O `git revert` en `main` + push
-3. Verificar Formspree y GTM tras rollback (si el revert tocó `layout` o contacto)
+3. Verificar GTM y el CTA de WhatsApp tras el rollback (si el revert tocó `layout`, `WppBtn` o `WhatsAppCTA`)
 
 ---
 
@@ -226,7 +226,7 @@ Recomendación: no mergear a `main` si `npm run build` falla localmente.
 ## Seguridad en deploy
 
 - No exponer secrets en `NEXT_PUBLIC_*`
-- Rotar keys en panel Formspree si hubo leak
+- Rotar credenciales en el panel del proveedor si hubo leak (no alcanza con cambiar el código)
 - Restringir acceso al proyecto Vercel al equipo necesario
 - Preview URLs son públicas si alguien tiene el link — no poner datos sensibles en copy de prueba
 

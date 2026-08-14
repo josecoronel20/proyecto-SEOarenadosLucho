@@ -17,7 +17,7 @@ Plantillas listas para copiar en **Cursor** o **ChatGPT**. Ajustá el texto entr
 
 ## Alcance
 - Archivos: [ej. solo src/components/home/HeroSection.tsx]
-- No tocar: GTM, layout.tsx, Formspree, otros componentes
+- No tocar: GTM, layout.tsx, WppBtn/WhatsAppCTA, otros componentes
 
 ## Criterio de listo
 - npm run build sin errores
@@ -62,20 +62,20 @@ Actualizar 15-bugs marcando corregidos.
 
 ---
 
-## Cursor — formulario / conversión
+## Cursor — conversión (WhatsApp)
 
 ```
 @contexto/05-formularios-y-conversion.md
 @contexto/12-seguridad-y-validaciones.md
 
-[ej. Añadir honeypot Formspree al formulario de contacto]
+[ej. Sumar un WhatsAppCTA al cierre de /servicios con mensaje pre-cargado de obra]
 
 No cambiar:
-- URL formspree.io/f/xrgnqbod
-- Nombres de campos JSON: name, contact, description, _subject
-- Eventos dataLayer form_submit*
+- El evento contact_whatsapp ni el momento en que dispara (solo tras confirmar el AlertDialog)
+- El número partido en 2 strings ni el window.open (nunca un <a href>)
+- La cantidad de botones flotantes (hay UNO solo: WppBtn en el layout)
 
-Avisar si el payload cambia.
+Prohibido: reintroducir un formulario o un endpoint de contacto (ADR-019).
 ```
 
 ---
@@ -90,8 +90,9 @@ Necesito [describir cambio].
 
 IMPORTANTE:
 - Listar eventos dataLayer afectados antes de editar
-- No renombrar form_submit_success, contact_whatsapp sin plan de migración GTM
+- No renombrar contact_whatsapp (evento único) sin plan de migración GTM
 - No cambiar GTM-W63ZV9D9 sin aviso
+- Nunca mandar PII (nombre/teléfono/email) en el dataLayer
 
 Si solo es documentación GTM (panel), decir qué tags/triggers configurar sin tocar código.
 ```
@@ -139,7 +140,7 @@ Restricciones:
 Te paso una propuesta de cambio para un sitio Next.js de arenado industrial.
 Evaluá si:
 1) Aumenta conversión B2B
-2) Rompe ADR: una landing /servicios, sin CMS, Formspree, GTM dataLayer
+2) Rompe algún ADR: sin CMS ni backend, canal único WhatsApp (sin formularios), GTM + dataLayer, copy sin promesas técnicas
 3) Introduce deuda innecesaria
 
 Propuesta:
@@ -165,20 +166,21 @@ Al final: npm run build debe pasar.
 
 ---
 
-## Debugging — formulario no envía
+## Debugging — el CTA de WhatsApp no abre / no convierte
 
 ```
 @contexto/05-formularios-y-conversion.md
-@contexto/09-api-y-servicios.md
+@contexto/06-tracking-y-analytics.md
 
-Problema: [no llega email / error rojo / botón disabled]
+Problema: [no abre WhatsApp / abre sin mensaje / no aparece el evento]
 
-Revisar src/app/contacto/page.tsx:
-- fetch a formspree.io/f/xrgnqbod
-- campos name, contact, description
-- isSubmitting / response.ok
+Revisar WppBtn.tsx y WhatsAppCTA.tsx:
+- El AlertDialog confirma antes de abrir
+- El número se arma partido en 2 strings
+- window.open(url, '_blank', 'noopener,noreferrer')
+- dataLayer.push('contact_whatsapp') SOLO en handleConfirm
 
-No cambiar nombres de eventos GTM sin aviso.
+No cambiar el nombre del evento ni exponer el número contiguo.
 Indicar causa y fix concreto.
 ```
 
@@ -189,7 +191,7 @@ Indicar causa y fix concreto.
 ```
 @contexto/06-tracking-y-analytics.md
 
-El evento [form_submit_success / contact_whatsapp] no se ve en GA4.
+El evento contact_whatsapp no se ve en GA4.
 
 Checklist:
 1) ¿dataLayer.push en código con nombre exacto?
@@ -315,10 +317,10 @@ Actualizar 06-tracking-y-analytics.md.
 
 Generar checklist manual para validar en producción:
 - GTM Preview pasos
-- form_submit → form_submit_success
-- contact_whatsapp tras modal
+- contact_whatsapp SOLO tras confirmar el modal (no en el click)
+- El número no aparece contiguo en el HTML servido
 - Qué ver en GA4 DebugView
-- Qué no romper en Google Ads import
+- Qué no romper en la importación a Google Ads
 ```
 
 ---
@@ -334,8 +336,8 @@ Voy a mergear [branch] a main.
 Lista de verificación:
 - build local
 - assets en public/
-- Formspree
-- enlaces 404
+- CTAs de WhatsApp (flotante + inline)
+- enlaces 404 y 301 legacy
 - preview vs producción GTM
 
 Resumir riesgos en 5 bullets.

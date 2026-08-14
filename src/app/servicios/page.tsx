@@ -7,8 +7,13 @@ import { LogisticaCoordinacion } from "@/components/servicios/LogisticaCoordinac
 import { QueArenamos } from "@/components/servicios/QueArenamos"
 import { MitigacionRiesgo } from "@/components/servicios/MitigacionRiesgo"
 import { CasoDestacado } from "@/components/servicios/CasoDestacado"
+import { ComoTrabajamos } from "@/components/common/ComoTrabajamos"
+import { ZonasCobertura } from "@/components/common/ZonasCobertura"
+import { FaqCorta } from "@/components/common/FaqCorta"
 import CTASection from "@/components/common/CTASection"
 import { SITE_URL, BUSINESS_ID, og } from "@/lib/siteConfig"
+import { faqsServicios } from "@/lib/faqs"
+import { WPP_MSG } from "@/lib/wpp"
 
 export const metadata: Metadata = {
   title: "Servicios de arenado industrial",
@@ -49,6 +54,15 @@ const serviciosSchema = {
         { "@type": "ListItem", position: 2, name: "Servicios", item: `${SITE_URL}/servicios` },
       ],
     },
+    // Mismas preguntas que renderiza <FaqCorta> más abajo (schema y visible deben coincidir).
+    {
+      "@type": "FAQPage",
+      mainEntity: faqsServicios.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
   ],
 }
 
@@ -61,13 +75,20 @@ export default function ServiciosPage() {
       />
       <ServiciosHero />
       <QueArenamos />
-      <BloqueDiferencial />
       <CasoDestacado />
       <AlcanceOperativo />
+      <ComoTrabajamos className="bg-white border-b border-gray-200" />
       <LogisticaCoordinacion />
+      <BloqueDiferencial />
       <AutoridadRapida />
+      <ZonasCobertura className="bg-white border-b border-gray-200" />
       <MitigacionRiesgo />
-      <CTASection/>
+      <FaqCorta items={faqsServicios} className="bg-gray-50" />
+      <CTASection
+        message={WPP_MSG.obra}
+        title="¿Tenés un trabajo en obra, planta o galpón?"
+        subtitle="Contanos qué hay que arenar, el tamaño aproximado y la zona. Vamos, lo vemos y te pasamos el presupuesto sin costo."
+      />
     </div>
   )
 }

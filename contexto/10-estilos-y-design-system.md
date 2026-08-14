@@ -182,7 +182,7 @@ No se usa `sm:` de forma sistemática; está bien añadirlo solo si hace falta u
 
 ### Touch / móvil
 
-- Botones CTA: `w-full` en hero home; `sm:w-auto` en `EmailBtn`
+- Botones CTA: `w-full` en el hero de home; el CTA de WhatsApp de `/contacto` usa `inline-flex` con `px-8 py-4` y `rounded-full`
 - WhatsApp: `fixed bottom-6 right-6 z-50`
 - `overflow-x: hidden` en `body` (`globals.css`)
 - `scroll-behavior: smooth` en `html` y `body`

@@ -2,8 +2,9 @@
 
 Sitio: **https://www.arenadoslucho.com**
 
-> ⚠️ **Pivote de copy en curso (26/07/2026):** las descripciones de objetivo/metadata de este archivo reflejan el sitio ACTUAL, que aún promete Sa3/ISO 8501. Por decisión del dueño ese copy se reescribe (sin promesas técnicas; piletas y PYMEs in situ visibles) — plan en `marketing/02-estrategia-seo.md` Fase 1. Al pivotar cada página, actualizar acá su descripción.  
-Nav principal (Header/Footer): Inicio, Servicios, Casos de éxito, Preguntas frecuentes, Contactanos.
+Nav principal (Header/Footer): Inicio, Servicios, **Piletas**, Casos de éxito, Preguntas frecuentes, Contactanos.
+
+> **Estado (28/07/2026):** el **pivote de copy está ejecutado** — ninguna página promete Sa3/ISO 8501/metal blanco/granallado. El posicionamiento vigente es "arenado sin vueltas, in situ, listo para pintar o revestir" con obra/PYMEs y piletas visibles. Y desde el 28/07 el sitio tiene **canal único WhatsApp**: no hay formulario en ninguna ruta.
 
 ---
 
@@ -13,20 +14,25 @@ Nav principal (Header/Footer): Inicio, Servicios, Casos de éxito, Preguntas fre
 |------|------|--------|
 | `/` | Estática | Sí |
 | `/servicios` | Estática | Sí |
+| `/arenado-de-piletas` | Estática | Sí |
 | `/casos-de-exito` | Estática | Sí |
 | `/casos-de-exito/[slug]` | SSG (`generateStaticParams`) | No (detalle) |
 | `/preguntas-frecuentes` | Estática | Sí |
-| `/contacto` | Client (formulario) | Sí (destacado) |
+| `/contacto` | **Estática (Server Component)** | Sí (destacado) |
 | `/politica-de-privacidad` | Estática | Footer |
 | `/terminos-y-condiciones` | Estática | Footer |
 
-### Rutas legacy (no usar en Ads; redirigir si hay tráfico externo)
+Build de referencia: **17 rutas** (incluye `robots.txt`, `sitemap.xml`, `_not-found` y los 5 casos SSG).
 
-| Ruta | Estado |
-|------|--------|
-| `/arenado-industrial` | **Eliminada** — usar `/servicios` o `/casos-de-exito/[slug]` |
-| `/arenado-particular` | **Eliminada** — usar `/contacto` o `/servicios` |
-| `/presupuesto-rapido` | **Eliminada** — usar `/contacto` |
+### Rutas legacy — **301 activos** en `next.config.js`
+
+| Ruta legacy | Redirige a |
+|-------------|-----------|
+| `/arenado-industrial` | `/servicios` |
+| `/arenado-particular` | `/arenado-de-piletas` |
+| `/presupuesto-rapido` | `/contacto` |
+
+⛔ **No usarlas en anuncios ni en assets de Ads**: un asset nunca debe apuntar a un redirect. Enlazar siempre el destino final.
 
 ---
 
@@ -34,76 +40,96 @@ Nav principal (Header/Footer): Inicio, Servicios, Casos de éxito, Preguntas fre
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Posicionar marca industrial, filtrar alcance (qué sí / qué no), mostrar casos y llevar a contacto. |
-| **CTA principal** | Botón **「Contactanos」** → `/contacto` (hero). |
-| **CTAs secundarios** | `CTASection` al final; `ServicesSection` → `/servicios` y `/contacto`; `ProjectsSection` → casos. |
-| **Intención SEO** | Arenado industrial / preparación de superficies Buenos Aires; empresa especializada planta y obra. |
-| **Conversiones** | Click `/contacto`; scroll hasta CTA final; WhatsApp flotante (`WppBtn` global); posible click casos. |
+| **Objetivo** | Explicar qué es el arenado a quien no conoce el término, mostrar prueba real y rutear **por tipo de trabajo**. |
+| **CTA principal** | **Contactanos** → `/contacto` (hero). |
+| **CTAs secundarios** | `ServicesSection` (2 cards: obra/industria/galpones → `/servicios`; piletas → `/arenado-de-piletas`); `ProjectsSection` → casos; `CTASection` al final. |
+| **Intención SEO** | Arenado Buenos Aires / AMBA; in situ; quitar óxido y pintura; listo para pintar o revestir. |
+| **Conversiones** | WhatsApp flotante (`WppBtn`) desde cualquier scroll; clicks a `/contacto`. |
 
-**Secciones:** Hero (video), TrustBar, IntroductionSection, ProjectsSection, ValueBullets, ServicesSection, CTASection.
+**Secciones (en orden):** `HeroSection`, `TrustBar`, `QueNecesitasArenar`, `IntroductionSection`, `ProjectsSection`, `ComoTrabajamos`, `ZonasCobertura`, `FaqCorta`, `CTASection`. Declara **schema `FAQPage`** con `faqsHome`.
+
+**El orden sigue el recorrido mental del visitante** (rediseño 10/08/2026, ver `marketing/15-sitio-ideal.md`): promesa → confianza → "esto es lo mío" (ruteo) → "ah, eso es el arenado" → prueba → cómo se contrata → dónde → objeciones → conversión.
+
+⚠️ **`QueNecesitasArenar` rutea por TRABAJO, no por tipo de comprador** (decisión 27/07): rotular "Industrial vs Particular" enterraba restauración y le ocultaba las piletas al contratista. Su **tercera opción ("¿es otra cosa?") va directo a WhatsApp**, no a una página: captura todo lo que no encaja sin crearle una landing.
+
+⚠️ **El hero no usa el video.** `heroVideo.mp4` pesa 24,3 MB sin comprimir y dejaba la home en blanco varios segundos en 4G. El fondo es una foto real con `priority`. Vuelve cuando el video pese < 3 MB.
 
 ---
 
-## `/servicios` — Servicios (landing única)
+## `/servicios` — Obra, industria y galpones
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Convencer al decisor B2B con capacidad operativa, normas (ISO 8501), logística y mitigación de riesgos. |
-| **CTA principal** | `CTASection` → **Contactanos** (`/contacto`). |
-| **CTAs secundarios** | Enlaces internos a bloques; caso destacado puede enlazar detalle de caso. |
-| **Intención SEO** | `Servicios de arenado industrial`; metal blanco Sa3, m²/día, Buenos Aires. |
-| **Conversiones** | Misma que home: formulario, WhatsApp, mail (`EmailBtn` si aparece en CTA). |
+| **Objetivo** | Captar el **aliado #1** (PYME con galpón: estructuras, tanques, camiones, acoplados, hierros) y el cluster de obra/restauración, en lenguaje llano. |
+| **CTA principal** | `CTASection` → `/contacto`. |
+| **CTAs secundarios** | `CasoDestacado` → detalle de caso; link a `/arenado-de-piletas` para derivar la intención de piletas. |
+| **Intención SEO** | `Servicios de arenado industrial`, arenado in situ / a domicilio, galpón, camiones, fachada, ladrillo a la vista. |
+| **Conversiones** | WhatsApp flotante; navegación a `/contacto`. |
 
-**Metadata:** title `Servicios de arenado industrial`; description con Sa3, 100 m²/día, ISO 8501.
+**Metadata:** title `Servicios de arenado industrial`; description con galpón/camiones/PYME e in situ. **Sin** Sa3/ISO/metal blanco.
 
-**Secciones:** ServiciosHero, BloqueDiferencial, CasoDestacado, AlcanceOperativo, LogisticaCoordinacion, AutoridadRapida, RequisitosCliente, MitigacionRiesgo, CTASection.
+**Secciones (en orden):** `ServiciosHero`, `QueArenamos`, `CasoDestacado`, `AlcanceOperativo`, `ComoTrabajamos`, `LogisticaCoordinacion`, `BloqueDiferencial`, `AutoridadRapida`, `ZonasCobertura`, `MitigacionRiesgo`, `FaqCorta`, `CTASection`. Declara **schema `FAQPage`** con `faqsServicios`.
+
+⚠️ `QueArenamos` lleva un **CTA de WhatsApp por grupo** (obra / galpón) con su mensaje pre-cargado: el CTA está donde la persona se reconoce. `MitigacionRiesgo` se muestra como **"Lo que siempre nos preguntan"** — el título anterior, "Mitigación de riesgo", era jerga de pliego.
+
+⚠️ **Sin canibalización:** la metadata y el schema de `/servicios` **no ofrecen piletas** — esa consulta la gana la landing dedicada.
 
 ---
 
-## `/arenado-industrial` y `/arenado-particular`
+## `/arenado-de-piletas` — Landing de piletas
 
 | Campo | Detalle |
 |-------|---------|
-| **Estado** | **No implementadas** en `src/app/`. Solo existen como `href` en cards de la home. |
-| **Objetivo previsto** | Landings por línea de negocio (B2B vs particular). |
-| **Recomendación** | Redirigir a `/servicios` o anclas en `/servicios` hasta tener página propia. |
+| **Objetivo** | Ganar la mejor keyword de conversión del historial, cubriendo también el **gap sin jerga** (el dueño de casa no sabe qué es "arenado": busca "sacar la pintura de la pileta"). |
+| **CTA principal** | **`WhatsAppCTA` inline** en varios bloques, con mensaje pre-cargado distinto según público. |
+| **CTAs secundarios** | Link al caso `arenado-pileta`; galería antes/después. |
+| **Intención SEO** | `arenado de piletas/piscinas`, + variantes sin jerga (sacar/quitar/despintar/decapar pintura de pileta). |
+| **Conversiones** | `contact_whatsapp` desde los CTAs inline y desde el flotante. |
+
+**Metadata:** title `Arenado de piletas y piscinas en Buenos Aires`.
+
+**Bloques:** hero por el problema · **banda estacional rotable** · selector de público · "¿qué es el arenado?" · gap sin jerga · galería antes/después (6 fotos) · 3 pasos in situ · qué incluye / qué no · **sección de contratistas y pileteros** · por qué confiar · zonas AMBA · **FAQ con schema `FAQPage` (11 Q)** · CTA final.
+
+🔄 **Rotación estacional:** el bloque con ícono `CalendarClock` arranca en **modo INVIERNO** (desde 27/07/2026: "Anticipate: llegá al verano con la pileta lista"). Próxima rotación → primavera/verano (~ago-sep). **Cada rotación se anota en `marketing/08-bitacora.md`.** Blueprint completo: `marketing/11-landing-piletas-ideal.md`.
 
 ---
 
-## `/casos-de-exito` — Listado de casos
+## `/casos-de-exito` — Listado
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Prueba social: proyectos reales (naves, estructuras, tanques) con filtro por tipo. |
-| **CTA principal** | Cards → detalle `/casos-de-exito/{slug}`; al final suele repetirse conversión vía layout global + CTA en detalle. |
-| **CTAs secundarios** | Filtro por tipo (`FiltroTipo`); volver desde detalle. |
-| **Intención SEO** | Casos de éxito arenado industrial Buenos Aires; credibilidad técnica. |
-| **Conversiones** | Indirecta: confianza → `/contacto` o WhatsApp después de leer caso. |
+| **Objetivo** | Prueba social con trabajos reales y filtro por tipo. |
+| **CTA principal** | Cards → detalle `/casos-de-exito/{slug}`. |
+| **CTAs secundarios** | `FiltroTipo`; WhatsApp flotante. |
+| **Intención SEO** | Casos de arenado en Buenos Aires y AMBA; credibilidad por prueba, no por norma. |
+| **Conversiones** | Indirecta: confianza → `/contacto` o WhatsApp. |
 
-**Metadata (layout):** title `Casos de éxito`; description con resumen ejecutivo y resultado medible.
+**Metadata:** title `Casos de arenado en Buenos Aires y AMBA`.
 
 ---
 
-## `/casos-de-exito/[slug]` — Detalle de caso
+## `/casos-de-exito/[slug]` — Detalle
 
-Slugs generados desde `projectsInfo.json` (`idSection`):
+Slugs generados desde `projectsInfo.json` (campo `idSection`):
 
-| Slug | Título (referencia) |
-|------|---------------------|
-| `nave-ferroviaria` | Arenado de Nave Ferroviaria |
-| `estructura-naval` | Estructura naval (ver JSON) |
+| Slug | Referencia |
+|------|------------|
+| `nave-ferroviaria` | Nave ferroviaria |
+| `estructura-naval` | Estructura naval |
 | `pasarela-urbana` | Pasarela urbana |
 | `tanque-industrial` | Tanque industrial |
+| `arenado-pileta` | **Pileta** (publicado 26/07/2026, 6 fotos) |
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Profundizar en un proyecto: contexto, alcance, desafíos, metodología, resultados. |
-| **CTA principal** | `CTASection` al pie del detalle. |
-| **CTAs secundarios** | Link «volver» a `/casos-de-exito`. |
-| **Intención SEO** | Long-tail por tipo de obra (nave, tanque, pasarela); title = nombre del caso. |
+| **Objetivo** | Profundizar en un trabajo: contexto, alcance, cómo se hizo, resultado. |
+| **CTA principal** | `CTASection` al pie. |
+| **CTAs secundarios** | Breadcrumbs y bloque "Seguir viendo" (evita callejones sin salida). |
 | **Conversiones** | Post-lectura → `/contacto` o WhatsApp. |
 
-**Build:** `generateStaticParams` + `generateMetadata` por proyecto.
+**Build:** `generateStaticParams` + `generateMetadata` por proyecto. Schema `CreativeWork` + `BreadcrumbList`.
+
+⚠️ La sección del detalle se llama **"Ficha del trabajo"** (antes "Parámetros técnicos") y ya no incluye normas ni mediciones.
 
 ---
 
@@ -111,47 +137,52 @@ Slugs generados desde `projectsInfo.json` (`idSection`):
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Resolver objeciones (plazos, ISO 8501, polvo, coordinación en obra) sin llamada inicial. |
-| **CTA principal** | Bloque al final con link a **Contactanos** / formulario (ver `page.tsx`). |
-| **CTAs secundarios** | Accordion solo informativo. |
-| **Intención SEO** | Preguntas frecuentes arenado industrial Buenos Aires; plazos, normativa, capacidad. |
+| **Objetivo** | Resolver las objeciones del comprador simple: qué es el arenado, in situ, polvo, precio, piletas, "¿hacen granallado?" (no). |
+| **CTA principal** | Bloque final con link a `/contacto`. |
+| **CTAs secundarios** | Accordion informativo; WhatsApp flotante. |
+| **Intención SEO** | Preguntas frecuentes de arenado en Buenos Aires; lenguaje sin jerga. |
 | **Conversiones** | Usuario informado → `/contacto` o WhatsApp. |
 
-**Metadata:** plazos, ISO 8501, polvo, coordinación en obra.
+**Contenido:** 14 preguntas en `src/lib/faqs.ts` + schema `FAQPage`. La landing de piletas usa un set aparte (`faqsPiletas`) sobre el mismo `FaqAccordion` parametrizable.
 
 ---
 
-## `/contacto` — Contacto
+## `/contacto` — Landing WhatsApp-first
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Capturar lead: nombre, contacto, descripción del proyecto. |
-| **CTA principal** | **Enviar formulario** → Formspree (`https://formspree.io/f/...`). |
-| **CTAs secundarios** | WhatsApp y mail vía botones globales / página. |
-| **Intención SEO** | Contacto arenado industrial; solicitud de presupuesto/consulta. |
-| **Conversiones** | **Principal:** `form_submit` + envío Formspree. **GTM:** eventos en `dataLayer` al enviar. WhatsApp/email en paralelo. |
+| **Objetivo** | Convertir a WhatsApp. **Es landing de Google Ads** — por eso la ruta se mantiene aunque ya no haya formulario. |
+| **CTA principal** | **`WhatsAppCTA`** grande ("Escribinos por WhatsApp"). |
+| **CTAs secundarios** | Link a `/arenado-de-piletas`; WhatsApp flotante. |
+| **Intención SEO** | Contacto / presupuesto de arenado. |
+| **Conversiones** | `contact_whatsapp` (única conversión del sitio). |
 
-**Nota:** Página `"use client"`; validación básica en cliente.
+**Metadata:** title `Contacto y presupuesto de arenado`.
+
+**Contenido:** `<h1>` con keyword · promesa (visita y presupuesto sin costo) · CTA de WhatsApp · 3 puntos (foto / respuesta rápida / zona) · bloque "Qué nos ayuda saber".
+
+⛔ **No borrar esta ruta** (está en el sitemap, la enlazan home, landing, Header y Footer, y es destino de anuncios) y **no reintroducir el formulario** sin decisión del dueño.
 
 ---
 
-## `/politica-de-privacidad`
+## `/politica-de-privacidad` y `/terminos-y-condiciones`
 
 | Campo | Detalle |
 |-------|---------|
-| **Objetivo** | Cumplimiento legal; confianza. |
+| **Objetivo** | Cumplimiento legal y confianza. |
 | **CTA principal** | Ninguno comercial. |
-| **Intención SEO** | Baja prioridad; `noindex` opcional si se desea. |
-| **Conversiones** | Ninguna. |
+| **Conversiones** | Ninguna (solo el flotante global). |
+
+✅ **Actualizadas el 10/08/2026** al canal único WhatsApp: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp y que la medición no recibe PII. La política además tenía un **bug de render** (el bloque "Correo electrónico" del responsable mostraba la etiqueta sin valor) — corregido leyendo `BUSINESS.email` de `siteConfig.ts`.
 
 ---
 
 ## Páginas de sistema
 
-| Ruta | Objetivo |
-|------|----------|
-| `not-found.tsx` | 404 amigable |
-| `error.tsx` | Error de runtime |
+| Archivo | Objetivo |
+|---------|----------|
+| `not-found.tsx` | 404 en español con `<h1>` y CTAs |
+| `error.tsx` | Error de runtime en español |
 | `loading.tsx` | Estado de carga |
 
 ---
@@ -160,18 +191,32 @@ Slugs generados desde `projectsInfo.json` (`idSection`):
 
 | Mecanismo | Ubicación | Evento / acción |
 |-----------|-----------|-----------------|
-| **WhatsApp flotante** | `layout.tsx` → `WppBtn` | `contact_whatsapp` en `dataLayer` |
-| **Header** | Link **Contactanos** → `/contacto` | Navegación |
-| **Footer** | Links + legal | Navegación |
+| **WhatsApp flotante** | `layout.tsx` → `WppBtn` (**uno solo**) | `contact_whatsapp` tras confirmar el modal |
+| **CTAs inline de WhatsApp** | `WhatsAppCTA` en `/contacto` y `/arenado-de-piletas` | `contact_whatsapp` tras confirmar el modal |
+| **Header / Footer** | Link **Contactanos** → `/contacto` | Navegación |
 
 ---
 
-## Flujo de conversión recomendado
+## Flujo de conversión
 
 ```
-Ads / SEO → / o /servicios
-    → Confianza (casos, FAQ)
-    → /contacto (formulario)  OR  WhatsApp (WppBtn)
+Ads / SEO → / · /servicios · /arenado-de-piletas
+    → Confianza (casos, FAQ, antes/después)
+    → WhatsApp (WppBtn o WhatsAppCTA)   ← la conversión
+       ó → /contacto → WhatsApp
 ```
 
-Prioridad de negocio (`.cursorrules`): maximizar contacto calificado (llamada / WhatsApp / formulario con contexto de obra).
+Prioridad de negocio (`.cursorrules`): maximizar el contacto calificado por WhatsApp, con foco en obra/restauración y PYME con galpón (la transición) sin resignar piletas (el lead más barato del historial).
+
+---
+
+## Al agregar una ruta
+
+1. `src/app/{ruta}/page.tsx` (Server Component por default).
+2. Un solo `<h1>`; `H2` para el resto.
+3. Metadata + `canonical` self-referente + OG/Twitter.
+4. Alta en `sitemap.ts` si es indexable.
+5. Enlazarla desde Header/Footer o desde una página relevante (nada huérfano).
+6. **Actualizar este archivo.**
+
+⚠️ Nuevas landings por rubro (`/servicios/arenado-*`) **no se crean sin decisión explícita** (`CLAUDE.md`). La excepción aprobada fue `/arenado-de-piletas`.

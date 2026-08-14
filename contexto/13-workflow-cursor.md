@@ -44,7 +44,7 @@ Que cualquier sesión en Cursor:
 1. **`npm run build`** — obligatorio en cambios de código (salvo solo docs).
 2. Si falla TypeScript o lint, **arreglar** antes de cerrar.
 3. No commitear salvo que el usuario lo pida.
-4. Si cambió rutas, eventos GTM, Formspree o diseño global → **avisar** qué actualizar en `contexto/`.
+4. Si cambió rutas, el evento GTM o el diseño global → **avisar** qué actualizar en `contexto/`.
 
 ---
 
@@ -53,8 +53,8 @@ Que cualquier sesión en Cursor:
 | Área | Regla |
 |------|--------|
 | **Tracking** | **No tocar** `dataLayer`, nombres de eventos, GTM ID, orden de scripts en `layout.tsx` **sin avisar** al usuario. Si hay que cambiar, listar impacto en GA4/Ads/Meta |
-| **Formspree** | No cambiar endpoint `xrgnqbod` ni nombres de campos sin aviso |
-| **WhatsApp / email** | No cambiar número/mail sin aviso (afecta conversión y schema) |
+| **Formulario** | **No reintroducir** un formulario ni un endpoint de contacto (ADR-019): requiere decisión del dueño |
+| **WhatsApp** | No cambiar el número ni exponerlo contiguo/en un `href` (anti-scraping); no agregar un segundo botón flotante |
 | **Rutas públicas** | No eliminar `/servicios`, `/contacto`, etc. sin redirecciones y aviso Ads/SEO |
 | **`.cursorrules`** | No reescribir sin pedido |
 | **Secrets** | Nunca commitear `.env` ni pegar tokens en chat |
@@ -90,7 +90,7 @@ Que cualquier sesión en Cursor:
 | Google Ads landing | `08`, `03`, `07` |
 | Estilos / colores | `10`, `04` |
 | Performance / video | `11`, `10` |
-| API / Formspree | `09`, `12` |
+| Servicios externos / seguridad | `09`, `12` |
 | Build roto | `01`, `15` |
 
 Índice completo: `contexto/README.md`.
@@ -123,11 +123,11 @@ Para este proyecto, **preferir Agent con pedidos chicos** antes que un Plan giga
 
 ## Alcance
 - Archivos permitidos: [ej. solo HeroSection.tsx]
-- No tocar: tracking, layout GTM, Formspree
+- No tocar: tracking, layout GTM, WppBtn/WhatsAppCTA
 
 ## Criterio de listo
 - [ ] npm run build OK
-- [ ] CTA sigue a /contacto
+- [ ] El CTA sigue llevando a /contacto o al WhatsApp
 - [ ] Mobile OK
 ```
 
@@ -164,7 +164,7 @@ Si un cambio es “más bonito” pero resta claridad del CTA o alarga el formul
 |-------------------|-------------|
 | Nueva ruta o se eliminó una | `03`, `07`, `08` |
 | Nuevo evento `dataLayer` | `06`, `05`, `08` |
-| Cambio Formspree / API | `09`, `12`, `05` |
+| Cambio en servicios externos / seguridad | `09`, `12`, `05` |
 | Decisión de producto (“una sola landing servicios”) | `18` |
 | Bug recurrente | `15` |
 | Deuda aceptada | `16` |
@@ -189,9 +189,9 @@ Si un cambio es “más bonito” pero resta claridad del CTA o alarga el formul
 - [ ] Cambio alineado a conversión / reglas de negocio
 - [ ] Solo archivos necesarios modificados
 - [ ] `npm run build` ejecutado y OK (si hubo código)
-- [ ] Tracking/form no tocados **o** usuario avisado explícitamente
+- [ ] Tracking y componentes de WhatsApp no tocados **o** usuario avisado explícitamente
 - [ ] Rutas enlazadas existen (no nuevos 404 desde nav)
-- [ ] Usuario informado de deuda si quedó (ej. honeypot pendiente)
+- [ ] Usuario informado de la deuda si quedó alguna
 
 ---
 
@@ -208,7 +208,7 @@ Si un cambio es “más bonito” pero resta claridad del CTA o alarga el formul
 
 1. *“En home, cambiar subtítulo del hero a [texto]. No tocar video ni GTM. @contexto/00 @contexto/10”*
 2. *“Corregir link de ServicesSection de `/arenado-industrial` a `/servicios`. Build al final. @contexto/03 @contexto/15”*
-3. *“Añadir honeypot al formulario contacto según 12-seguridad; avisar si cambia payload Formspree. @contexto/12 @contexto/05”*
+3. *"Sumar un `WhatsAppCTA` al cierre de `/servicios` con mensaje pre-cargado de obra; no tocar el flotante ni el evento. @contexto/05 @contexto/04"*
 
 ---
 

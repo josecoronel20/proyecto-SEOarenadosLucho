@@ -6,22 +6,24 @@ Qué se mide, dónde se mira y con qué rutina. La implementación técnica del 
 
 | Dato | Fuente | Acceso |
 |------|--------|--------|
-| Leads (form, WhatsApp, email) | GA4 — eventos `form_submit_success`, `contact_whatsapp`, `contact_email` | _completar propiedad GA4_ |
-| Leads reales recibidos | Inbox Formspree (`arenadoslucho@hotmail.com`) + WhatsApp | Manual |
+| Leads (WhatsApp) | GA4 — evento **`contact_whatsapp`** (el único del sitio desde el 28/07/2026) | **Propiedad GA4 `516818828`** ("Arenados Lucho") — verificado 10/08/2026: es **evento clave** y tiene flujo activo |
+| Leads reales recibidos | **Chats de WhatsApp del dueño** (canal único) | Manual |
 | Rendimiento orgánico | Google Search Console | _verificar propiedad tras migración_ |
 | Rendimiento pago | Google Ads (+ scripts de `ads-scripts/`) | _completar ID cuenta_ |
 | Velocidad / CWV | PageSpeed Insights, informe CWV de Search Console | Público |
 
-**Regla de coherencia:** GA4, Ads y el inbox nunca van a coincidir exacto; lo que importa es que las **tendencias** coincidan. Si GA4 dice 20 leads y el inbox tiene 4, hay un problema de medición o de spam — investigar antes de optimizar nada.
+**Regla de coherencia:** GA4, Ads y los chats nunca van a coincidir exacto; lo que importa es que las **tendencias** coincidan. Si GA4 dice 20 leads y llegaron 4 chats, hay un problema de medición — investigar antes de optimizar nada.
+
+⚠️ **Brecha estructural del canal único:** `contact_whatsapp` se dispara al confirmar el modal, no al enviar el mensaje. Siempre va a haber más eventos que chats (gente que confirma y no escribe). Es esperable; lo que hay que vigilar es que la **proporción** se mantenga estable.
 
 ## KPIs y definiciones
 
 | KPI | Definición exacta | Frecuencia |
 |-----|-------------------|------------|
-| **Leads/mes** | Suma de `form_submit_success` + `contact_whatsapp` + `contact_email` en GA4 | Mensual |
+| **Leads/mes** | Eventos **`contact_whatsapp`** en GA4 (canal único). Cruzar siempre contra los chats reales: el evento mide "confirmó abrir WhatsApp", no "escribió" | Mensual |
 | **% obra/PYME (métrica de la transición)** | Leads de obra/restauración + PYMEs galpón / leads totales, contados a mano del inbox. Piletas y trabajos chicos cuentan como leads VÁLIDOS (hoy se toma casi todo) — lo que se mide es el avance de la transición, no "calidad" | Mensual |
 | **CPA Ads** | Costo / conversiones primarias en Google Ads | Semanal |
-| **Tasa de conversión de landing** | Leads / sesiones de `/servicios` y `/contacto` | Mensual |
+| **Tasa de conversión de landing** | Leads / sesiones de `/servicios`, `/arenado-de-piletas` y `/contacto` | Mensual |
 | **Impresiones y clics orgánicos** | Search Console, cluster industrial (queries del `03-keywords-maestro.md`) | Mensual |
 | **Posición media keywords core** | Search Console, filtrado por las keywords del Cluster 1 | Mensual |
 | **Términos basura filtrados** | Negativas agregadas ese mes (del ciclo n-gram) | Semanal |

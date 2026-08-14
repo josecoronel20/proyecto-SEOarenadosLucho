@@ -23,8 +23,8 @@ dataLayer (eventos exactos) → GTM → Conversión en Ads
 |------|------------|
 | URL de destino | Rutas en `src/app/` |
 | Mensaje / prueba social | Componentes por página (`home/`, `servicios/`, etc.) |
-| Conversión primaria | `/contacto` + `form_submit_success` |
-| Conversión secundaria | `contact_whatsapp`, `contact_email` |
+| **Conversión primaria (única)** | **`contact_whatsapp`** — desde cualquier página (canal único, 28/07/2026) |
+| Conversión secundaria | Ninguna en el sitio. En Ads, todo el historial va a Secundaria |
 | Importación a Ads | GA4 `generate_lead` o tag de conversión en GTM (no en código) |
 
 **No hay** campañas ni keywords guardadas en el repositorio. La tabla de campañas abajo es **plantilla operativa** — completar nombres reales desde Google Ads y mantener sincronizada.
@@ -38,9 +38,10 @@ dataLayer (eventos exactos) → GTM → Conversión en Ads
 | URL final | Archivo | Rol para Ads | CTA principal | Eventos conversión |
 |-----------|---------|--------------|---------------|-------------------|
 | `/` | `app/page.tsx` | **Genérica / marca** — hero industrial, servicios, casos | `Contactanos` → `/contacto` | Navegación + `contact_whatsapp` (flotante) |
-| `/servicios` | `app/servicios/page.tsx` | **Intención alta** — obra, PYMEs, capacidad, logística (copy en pivote: sin Sa3/ISO) | `Contactanos` → `/contacto` | Igual + `CTASection` |
-| `/contacto` | `app/contacto/page.tsx` | **Conversión directa** — formulario corto | Enviar solicitud | `form_submit` → `form_submit_success` |
-| `/preguntas-frecuentes` | `app/preguntas-frecuentes/page.tsx` | **Objeciones** — plazos, polvo, norma | `Contactanos` al pie | Indirecta → contacto/WA |
+| `/servicios` | `app/servicios/page.tsx` | **Intención alta** — obra, PYMEs con galpón, capacidad, logística (copy pivotado: sin Sa3/ISO) | `Contactanos` → `/contacto` | Igual + `CTASection` |
+| `/arenado-de-piletas` | `app/arenado-de-piletas/page.tsx` | **Conversión directa** — landing de la campaña de Piletas (incluye el gap sin jerga) | `WhatsAppCTA` inline | **`contact_whatsapp`** |
+| `/contacto` | `app/contacto/page.tsx` | **Conversión directa** — página WhatsApp-first (**sin formulario** desde el 28/07/2026) | `WhatsAppCTA` "Escribinos por WhatsApp" | **`contact_whatsapp`** |
+| `/preguntas-frecuentes` | `app/preguntas-frecuentes/page.tsx` | **Objeciones** — plazos, polvo, precio, "¿granallado?" (no) | `Contactanos` al pie | Indirecta → contacto/WA |
 | `/casos-de-exito` | `app/casos-de-exito/page.tsx` | **Prueba social** — remarketing / consideración | Cards → detalle; `CTASection` | Indirecta |
 | `/casos-de-exito/{slug}` | `app/casos-de-exito/[slug]/page.tsx` | **Long-tail por obra** (nave, tanque, etc.) | `CTASection` | Indirecta |
 
@@ -102,24 +103,24 @@ Fuente única de keywords por cluster, mapeo keyword ↔ URL y lista de negativa
 
 | Acción en Ads | Origen técnico | Evento / trigger |
 |---------------|----------------|------------------|
-| **Lead - Formulario** (primaria) | Importar desde GA4 o GTM | `form_submit_success` → mapear a **`generate_lead`** en GA4 |
-| **Lead - WhatsApp** (primaria o secundaria) | GA4 / GTM | `contact_whatsapp` |
-| **Contacto - Email** (secundaria) | GA4 / GTM | `contact_email` |
-| **Envío formulario (intento)** (opcional, funnel) | GA4 | `form_submit` |
-| **Error formulario** (diagnóstico) | No optimizar | `form_submit_error` |
+| **`WhatsApp - contacto confirmado`** (**única primaria**) | Tag de conversión en GTM (o importada de GA4) | `contact_whatsapp` → mapear a **`generate_lead`** en GA4 |
+| Todo el historial de la cuenta | — | → **Secundaria** (visitas al sitio, engagements, llamadas, el `form_submit` obsoleto) |
 
-### Nombres exactos en `dataLayer` (no renombrar sin actualizar Ads)
+Configuración exacta de la acción (categoría, recuento, ventana, atribución) y cómo verificarla: `contexto/marketing/ads-config/02-conversiones.md`.
 
-`form_submit` · `form_submit_success` · `form_submit_error` · `contact_whatsapp` · `contact_email`
+⛔ **No crear** en Ads: formulario de clientes potenciales, acción de llamadas ni conversión por vista de página. El lead de un formulario de Google **no llega al WhatsApp** del dueño y **no dispara `contact_whatsapp`**.
 
-Detalle de payloads: `06-tracking-y-analytics.md`.
+### Nombre exacto en `dataLayer` (no renombrar sin actualizar Ads)
 
-### URL de conversión “destino”
+**`contact_whatsapp`** — el único evento del sitio.
 
-Si se usa conversión por **página de destino** en Ads (menos recomendado que eventos):
+Detalle del payload: `06-tracking-y-analytics.md`.
 
-- Destino: `https://www.arenadoslucho.com/contacto`
-- Solo cuenta si el usuario llega tras enviar — preferir **evento** `form_submit_success`.
+⚠️ Los eventos `form_submit`, `form_submit_success`, `form_submit_error` y `contact_email` **fueron eliminados el 28/07/2026**. Si una acción de conversión de Ads todavía los escucha, está huérfana.
+
+### URL de conversión "destino"
+
+**No usar** conversión por página de destino: no hay una URL de "gracias" (el flujo termina en WhatsApp, fuera del sitio). La conversión se mide **solo por evento**.
 
 ---
 
@@ -154,7 +155,9 @@ Usar en titulares/descripciones para coincidir con la landing:
 | Coordinación en obra, contención de polvo | ✅ usar |
 | Visita y presupuesto sin costo | ✅ usar |
 | Arenado de piletas para repintar/revestir | ✅ usar (campaña piletas / landing nueva) |
-| ~~Metal blanco Sa3, ISO 8501, granallado~~ | ❌ **PROHIBIDO** (26/07/2026 — no hacemos arenado certificado ni granallado; el sitio se está reescribiendo para quitarlo) |
+| Presupuesto por WhatsApp · Mandanos una foto | ✅ usar (canal único desde el 28/07/2026) |
+| ~~Metal blanco Sa3, ISO 8501, granallado~~ | ❌ **PROHIBIDO** (26/07/2026 — no hacemos arenado certificado ni granallado; el copy del sitio ya fue reescrito) |
+| ~~Dejanos tus datos / completá el formulario~~ | ❌ **PROHIBIDO** (28/07/2026 — no hay formulario) |
 
 Evitar en Ads promesas que el negocio no respalda: precios fijos, “todas las zonas” y — sobre todo — **normas/certificaciones técnicas o granallado** (servicio que no se presta).
 
@@ -163,8 +166,8 @@ Evitar en Ads promesas que el negocio no respalda: precios fijos, “todas las z
 ## Checklist: cambio en repo que afecta Ads
 
 - [ ] ¿La URL final del anuncio sigue existiendo (200)?
-- [ ] ¿El CTA del anuncio coincide con el botón de la landing (ej. “Contactanos” → `/contacto`)?
-- [ ] ¿Los eventos GTM siguen disparando en Preview?
+- [ ] ¿El CTA del anuncio coincide con el botón de la landing (ej. "Presupuesto por WhatsApp" → `WhatsAppCTA`)?
+- [ ] ¿`contact_whatsapp` sigue disparando en GTM Preview (tras confirmar el modal)?
 - [ ] ¿Conversiones en Ads sin caída 48–72 h post-deploy?
 - [ ] ¿Enlaces rotos (`/arenado-industrial`, etc.) corregidos o redirigidos 301?
 - [ ] ¿UTMs actualizados si cambió nombre de campaña?
@@ -174,10 +177,10 @@ Evitar en Ads promesas que el negocio no respalda: precios fijos, “todas las z
 ## Flujo recomendado por tipo de campaña
 
 ```
-Search industrial  →  /servicios  →  /contacto  (form)  →  form_submit_success
-Search marca       →  /           →  /contacto o WhatsApp
-Remarketing        →  /casos-de-exito  →  /contacto
-Duda técnica       →  /preguntas-frecuentes  →  /contacto
+Obra / PYME galpón →  /servicios            →  WhatsApp  →  contact_whatsapp
+Piletas            →  /arenado-de-piletas   →  WhatsApp  →  contact_whatsapp
+Marca / genéricos  →  / o /servicios        →  WhatsApp (o vía /contacto)
+Duda / objeción    →  /preguntas-frecuentes →  /contacto →  WhatsApp
 ```
 
 ---

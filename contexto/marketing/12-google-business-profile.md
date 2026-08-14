@@ -1,3 +1,9 @@
+> ⚠️ **CORRECCIÓN 11/08/2026 — la ficha YA ESTÁ RECLAMADA.** Este documento arranca por "reclamar la ficha"; ese paso **ya está hecho**. Verificado desde el Administrador de ubicaciones de Google Ads: el perfil está bajo **`jossemaaria20@gmail.com`**, con **dirección** (Del Viso, Abella Caprile 1246), **horario** y **categoría** ("Servicio de limpieza por chorro de arena") cargados.
+>
+> **Dos consecuencias:**
+> 1. El plan de este archivo se retoma desde **optimizar**, no desde reclamar. Y ojo: la ficha tiene **dirección pública** cargada, cuando la decisión del 27/07 era **negocio a domicilio (SAB) sin dirección visible**. Hay que corregirlo en la ficha.
+> 2. La ficha estaba **vinculada a Google Ads** e inyectaba en los anuncios el botón "Llamar", la dirección y el horario — la quinta puerta del teléfono. **Desvinculada el 11/08.** Reclamar y optimizar la ficha para orgánico es correcto; **volver a vincularla a Ads es una decisión aparte y explícita**.
+
 # Google Business Profile (GBP) — setup y optimización
 
 > **Guía de ejecución (27/07/2026).** El GBP se crea/gestiona en Google **con la cuenta del dueño** (verificación por teléfono/video/postal), así que **estos pasos los ejecuta el dueño** (o sesión guiada de Chrome). Claude prepara el plan + el lado del sitio.

@@ -34,6 +34,24 @@ export const BUSINESS = {
 export const OG_IMAGE = BUSINESS.images[0]
 
 /**
+ * Zonas de cobertura para la señal de SEO local (sección de zonas + copy).
+ * A propósito se nombran AGRUPACIONES, no partidos: el dueño viaja según el
+ * ticket y no hay una lista cerrada confirmada. Prometer partidos que después
+ * se rechazan quema leads y reseñas. La lista fina de partidos es un pendiente
+ * del dueño (ver `marketing/14-configuracion-objetivo-ads.md`, bloqueantes).
+ */
+export const ZONAS = [
+  "CABA",
+  "Zona Norte",
+  "Zona Oeste",
+  "Zona Sur",
+  "Gran Buenos Aires",
+] as const
+
+/** Base de operaciones (ya declarada en la política de privacidad). */
+export const BASE = "Pilar, Provincia de Buenos Aires"
+
+/**
  * openGraph completo por página. Next.js NO hace deep-merge de `openGraph`, así que
  * cada página que quiera OG propio debe declararlo entero (título, descripción, imagen).
  */

@@ -4,11 +4,11 @@ import { og } from "@/lib/siteConfig"
 export const metadata: Metadata = {
   title: "Contacto y presupuesto de arenado",
   description:
-    "Enviá tu solicitud con nombre, teléfono y descripción del proyecto. Nos contactamos por WhatsApp.",
+    "Escribinos por WhatsApp y te pasamos el presupuesto sin costo. Contanos qué necesitás arenar o mandanos una foto. Buenos Aires y AMBA.",
   alternates: { canonical: "/contacto" },
   openGraph: og(
     "Contacto y presupuesto de arenado",
-    "Contanos tu proyecto y te pasamos presupuesto sin costo. Respondemos por WhatsApp."
+    "Escribinos por WhatsApp: contanos tu proyecto o mandanos una foto y te pasamos presupuesto sin costo."
   ),
 }
 

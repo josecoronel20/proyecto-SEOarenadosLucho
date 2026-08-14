@@ -12,6 +12,245 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (7) — ✅ Medición verificada de punta a punta (el bloqueante del encendido)
+
+- **Disparador:** la prueba manual de `contact_whatsapp` no aparecía en Tiempo real de GA4. Hipótesis inicial del dueño: *"el evento debe estar todavía atado a Framer"*.
+- **Diagnóstico, paso por paso:**
+
+| Eslabón | Cómo se verificó | Resultado |
+|---|---|---|
+| El sitio dispara el evento | `contact_whatsapp` y el número partido, encontrados **dentro del bundle JS publicado** en Vercel | ✅ |
+| El sitio carga GTM | `GTM-W63ZV9D9` presente 4 veces + `dataLayer` inicializado, **y ningún otro analytics** (ni resto de Framer) | ✅ |
+| El contenedor está publicado | Versión **5** (`form+emailConvertion`), publicada el **15/02/2026** | ✅ |
+| El activador matchea | **Vista previa de GTM**: el evento llega y `GA4 – Evento contact_whatsapp` figura en *Etiquetas activadas — Activado 1 vez* | ✅ |
+| La etiqueta apunta a la propiedad correcta | `Google Tag – GA4 Base` y la etiqueta de evento: ambas en **`G-3FPFJH0ZL3`**, que es el ID de medición del flujo de la propiedad **516818828** (la vinculada a Ads) | ✅ |
+| GA4 lo registra como **evento clave** | Informe de eventos: `contact_whatsapp` = **2 eventos, 2 eventos clave (100%)** | ✅ |
+
+- **Por qué no aparecía en Tiempo real:** con la **Vista previa de GTM activa, los eventos van a DebugView**, no a Tiempo real. Es una particularidad de GA4 que hace parecer rota una medición sana. La verificación correcta es DebugView (con vista previa) o `Informes → Interacción → Eventos` con rango "Hoy".
+- **Dos hipótesis descartadas por el camino:** (1) que el contenedor nunca se hubiera publicado — el historial de actividades mostraba una sola línea, pero la pestaña Versiones probó que hay 5 versiones publicadas; (2) que el evento siguiera atado a Framer — el bundle publicado y la vista previa lo desmintieron.
+- **🟠 Cabo suelto, no bloqueante:** la vista previa detectó **una segunda etiqueta de Google en la página, `G-S1N9PL0G40`**, que **no sale de ninguna de las dos etiquetas del contenedor**. Es una propiedad de GA4 recolectando en paralelo, probablemente resto de Framer. No afecta la medición de Ads (el evento va a `G-3FPFJH0ZL3`), pero hay que identificarla y sacarla en `GA4 → Administrador → Etiquetas de Google`.
+- **Estado del pre-flight:** ✅ el bloqueante de medición queda **cerrado**. Falta el resto de la Parte B de `19-checklist-encendido.md` (URLs, cero amplia, nivel Cuenta vacío) y después el encendido escalonado.
+- ⚠️ **Lo que esto todavía NO prueba:** que la conversión **llegue a Google Ads**. Eso solo se ve con tráfico pago, en el chequeo **D+1** — la conversión tiene que aparecer en la columna **"Conversiones"**, no solo en "Todas las conv.".
+
+## 2026-08-11 (6) — ✅ Las 3 campañas construidas (ejecutado por el dueño)
+
+- **Estructura completa, en pausa y sin saldo:**
+
+| Campaña | Presup./día | Grupos | Keywords | Landing |
+|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 3.000 | `ag_pymes-galpon-in-situ` · `ag_obra-restauracion-estructuras` | 42 | `/servicios` |
+| `AR-Search-Piletas` | 1.250 | `ag_pileta-jerga` · `ag_pileta-sin-jerga` | 30 | `/arenado-de-piletas` |
+| `AR-Search-General-Marca` | 750 | `ag_genericos` · `ag_marca` | 10 | `/servicios` y `/` |
+
+- **6 RSA cargados** con el pinning por pools (3 titulares a posición 1, 3 a posición 2, 1 descripción fijada), copy de `18-copy-ads.md`.
+- **Listas de negativas aplicadas con el ruteo correcto:** `NEG-EQUIPOS-DIY` y `NEG-DATA` a las 3 · **`RUTEO-PILETAS` solo a Obra-Industrial y General-Marca**. Verificado por la columna "Campañas" de la biblioteca compartida: **3 / 3 / 2**. El "2" es la prueba de que Piletas quedó afuera — aplicarla ahí habría apagado la campaña entera sin dar ningún error.
+- **Cada grupo con su URL final explícita**, no heredando la home. Es el fix del componente "experiencia con la página de destino", que el diagnóstico encontró en **"Inferior al promedio" en el 100% de las keywords**.
+- **Configuración de las 3:** redes destildadas · radio 60 km desde CABA en **Presencia** · solo español · AI Max OFF en campaña **y** en los 6 grupos · Maximizar clics con tope de CPC 350 · objetivos de la cuenta (solo Contactos) · sufijo UTM · exclusión de IP.
+- **Decisión de puja registrada:** se arranca con **Maximizar clics + tope**, no con puja automática, porque no hay línea base de CPA válida. Se evalúa migrar a Maximizar conversiones recién con **≥15 conversiones limpias en 30 días**.
+- **Estado:** las 3 **pausadas** y la cuenta **sin saldo**. Falta el pre-flight (`19-checklist-encendido.md` Parte B) y el encendido escalonado.
+- **⭐ Bloqueante del encendido:** probar `contact_whatsapp` **de punta a punta**. Funciona en GA4 pero **nunca registró una conversión en Ads** por falta de tráfico pago. No se carga saldo sin esa prueba.
+
+## 2026-08-11 (5) — Recursos heredados: una antigüedad falsa corriendo en todos los anuncios
+
+- **Hallazgo:** la vista previa mostró texto que nadie del proyecto escribió — **"+20 años de experiencia"**, "Servicio de arenado móvil", "Limpieza profunda", "Resultado profesional" — más 5 sitelinks heredados, uno de ellos a **"Política de privacidad"**. Son **recursos a nivel CUENTA** heredados de la configuración anterior: se aplican solos a cualquier campaña, incluidas las nuevas.
+- **🔴 El problema real: la antigüedad era falsa.** El dueño confirmó que **el negocio tiene ~8 años, no 20**. Estuvo corriendo en todos los anuncios sin que nadie lo supiera. ✅ **Verificado que el sitio nunca lo dijo:** la FAQ decía "años arenando…" sin número.
+- **Contexto que aportó el dueño:** el oficio **viene del padre**, que trabajó de esto muchos años y hoy no está activo, y **uno de los arenadores del equipo trabajó con él y lleva más de 20 años en el rubro**. La experiencia existe; lo que no existe es la antigüedad de la empresa.
+- **Decisión de copy:** se usa **"20 años de oficio"**, nunca "de experiencia" ni "en el mercado".
+  - "+20 años de experiencia" **se lee como antigüedad de la empresa**: con 8 años de razón social hay que salir a explicarlo, y si un competidor lo reporta Google puede pedir respaldo.
+  - **"20 años de oficio" habla de la gente que hace el trabajo** — verificable y cierto.
+- **Se aprovecha la historia, que es mejor argumento que el número:** titular nuevo **"Oficio aprendido en familia"** en el RSA de marca (reemplaza a "Contestamos rápido"), y la FAQ del sitio "¿Cuánta experiencia tienen?" pasa de un genérico a contar el linaje: *"El oficio viene de familia: se aprendió trabajando, no en un curso. Uno de los arenadores del equipo lleva más de 20 años haciendo esto."* Ningún competidor puede copiar eso; "+20 años de experiencia" lo escribe cualquiera.
+- **Acción pendiente:** borrar **todos** los recursos de nivel Cuenta (`Campañas → Recursos → filtro Nivel = Cuenta`).
+- **Lección de método, la tercera del día:** un recurso heredado **no figura como algo que cargaste**, pero se publica igual. Es el mismo patrón que las conversiones basura y que la ficha vinculada: la cuenta arrastraba cosas que nadie puso a propósito y que **contradicen lo que el negocio hace**. **Auditar el nivel Cuenta es obligatorio antes de encender.**
+- **Verificación:** `npm run build` limpio tras el cambio de la FAQ.
+
+## 2026-08-11 (4) — Campaña 1 creada + la QUINTA puerta del teléfono
+
+- **Ejecutado:** 3 listas de negativas compartidas creadas (`NEG-EQUIPOS-DIY`, `NEG-DATA`, `RUTEO-PILETAS` en frase) y **`AR-Search-Obra-Industrial` creada y pausada**, con el grupo `ag_pymes-galpon-in-situ` (18 keywords, frase y exacta), su RSA de 15 titulares y 4 descripciones con el pinning por pools, y la URL final en **`/servicios`** — no en la home, que era la causa raíz del "experiencia con la página de destino: inferior".
+- **🔴🔴 Hallazgo — el teléfono tenía CINCO puertas.** La vista previa del anuncio mostró **botón "Llamar", botón "Ruta", la dirección "Del Viso · Abella Caprile 1246", el horario ("Open") y la categoría "Servicio de limpieza por chorro de arena"**. Nada de eso lo cargó nadie: **lo inyecta el Perfil de Empresa de Google vinculado a la cuenta de Ads**.
+  - Es la puerta más difícil de ver porque **no es un asset propio**: no aparece en `Recursos` como algo que cargaste.
+  - Apagar "Ubicaciones automáticas" en recursos automatizados (hecho el 11/08) **no la cierra**.
+  - Contradice además el dossier del 26/07, que daba la ficha por **"sin reclamar"**: tiene dirección, horario y categoría cargadas.
+  - **✅ Resuelto el 11/08 desde `Herramientas → Biblioteca compartida → Administrador de ubicaciones`** (la ruta `Administrador → Vinculación de datos` no existía en esta versión de la UI). La pestaña **Configuración** mostraba la fuente: *"Perfil de negocio: jossemaaria20@gmail.com — Se seleccionaron todos los lugares"*. **Ubicación quitada.**
+  - ⚠️ **Corrección al dossier del 26/07:** decía que el Google Business Profile estaba **"sin reclamar"**. Es falso — está reclamado bajo `jossemaaria20@gmail.com`, con dirección (Del Viso, Abella Caprile 1246), horario y categoría cargadas, y **vinculado a Ads**. Esto cambia también el plan de `12-google-business-profile.md`, que arranca por "reclamar la ficha": ese paso ya está hecho.
+
+- **🔴 Hallazgo extra en la misma pantalla — la SEXTA puerta: "Rich media propiedad de Google" estaba TILDADO.** Permite que Google **inserte fotos y videos de su propio banco de imágenes** en los anuncios de la cuenta.
+  - Es especialmente dañino para **este** negocio: todo el argumento de venta es *"mirá cómo quedó, son fotos reales de trabajos que hicimos"*. Una foto de stock genérica destruye esa credibilidad y además genera una expectativa que el trabajo real no tiene por qué coincidir.
+  - **Destildado el 11/08.** (La casilla vecina, "Fotos del comercio del Perfil de Negocio", ya estaba destildada.)
+- **Trampas del asistente de creación, documentadas:** (a) la pantalla "Generación de palabras clave y recursos" (BETA) es **otra vía de generación automática de texto** — no usarla; si el campo de descripción es obligatorio, llenarlo con un texto que **declare los NO** (no pintamos, no granallado) para acotar lo que la IA pueda extrapolar; (b) las keywords sugeridas por Google incluían **"pintura industrial"** y "recubrimientos industriales", servicios que el negocio no presta; (c) la URL final venía por defecto en la **home** en las tres pantallas; (d) aparecen **5 sitelinks heredados a nivel cuenta** de la cuenta vieja, a auditar.
+- **Sobre la "Calidad del anuncio: deficiente":** esperado y aceptado. No entra en el Ad Rank ni en el Nivel de calidad (documentado por Google), y baja por el pinning deliberado. **Además faltan cargar los recursos**, que suman al cálculo: debería subir al cargarlos. Se prefiere garantizar que el aviso diga "no pintamos" y "visita sin costo" antes que la barrita.
+- **Resultado real:** _(completar al cerrar la vinculación del GBP)_
+
+## 2026-08-11 (3) — Recursos automatizados apagados + DOS puertas nuevas descubiertas
+
+- **Qué se ejecutó:** apagados 6 de los 10 recursos automatizados a nivel de cuenta.
+- **🔴🔴 Hallazgo 1 — el teléfono tenía CUATRO puertas, no tres.** Al abrir la pantalla real apareció **"Llamadas dinámicas: Activado"**: Google **crea recursos de llamada por su cuenta**, además de la extensión (quitada el 28/07), los informes de llamadas (apagados el 10/08) y el recurso de ubicación. Teníamos el problema documentado como "cerrado" con tres puertas y faltaba una. **Apagada.**
+- **🔴🔴 Hallazgo 2 — una vía de generación de texto fuera de AI Max.** **"Títulos de anuncio más extensos: Activado"**: Google **escribe y alarga titulares**. El proyecto tenía identificados tres lugares de generación automática (AI Max, recursos automatizados, auto-apply) y este vivía dentro del segundo sin estar enumerado. Era una vía real para que se colara "granallado" o "metal blanco". **Apagada.**
+- **Apagadas también:** fragmentos estructurados dinámicos, imágenes dinámicas, ubicaciones automáticas y aplicaciones automáticas (no hay app).
+- **Dejadas encendidas a propósito:** *Calificaciones del vendedor* (estrellas de reseñas verificadas por Google — no puede inventar nada y suma cuando haya reseñas) y *Nombres y logotipos de empresas dinámicos* (identidad, no copy; además el asset manual manda por encima). *Vínculos dinámicos a sitios* ya estaba en OFF.
+- **Criterio que queda como regla:** se apaga **todo lo que pueda escribir texto, mostrar el teléfono o elegir imágenes**; se deja lo que solo muestra identidad o reseñas verificadas.
+- **Lección de método:** la lista de recursos automatizados que teníamos documentada (del diseño de julio) **estaba incompleta** frente a la pantalla real. Corregido `ads-config/06-anuncios-recursos.md` §6.5 con los 10 tipos reales y el checklist mensual con las 4 puertas del teléfono. **No dar por buena una enumeración de la UI de Google sin verla en la cuenta.**
+- **Resultado esperado:** Google no puede agregar botones de llamada, escribir titulares, elegir imágenes ni mostrar la dirección.
+
+## 2026-08-11 (2) — Copy de Ads aprobado + los dos datos de plazo resueltos (Claude Code)
+
+- **Qué se hizo:** `18-copy-ads.md` (nuevo) — fuente única del copy publicado, versionada fuera de Google. Consolida y **revisa** el borrador del 29/07 contra el sitio rediseñado y contra el informe de términos.
+- **Bloqueantes resueltos midiendo los archivos del repo:**
+  - **Logo:** `public/images/favicon.png` es el logo en **1906×1911** (supera el recomendado de 1200×1200). Los `logo-solo-*` son 423×226, apaisados, no servían. El recurso de nombre y logo queda desbloqueado.
+  - **Fotos:** las de trabajo son **828×828** — por encima del mínimo de Google (300×300). Usables. Hay material de alta resolución (3148×3148 y 3472×4624) si hiciera falta recortar con calidad.
+- **⭐ Dato del dueño que cambió una decisión — los ~100 m²/día son CONDICIONALES:** *"es un número en condiciones óptimas… una superficie plana y no estructuras metálicas complejas; tampoco revestimientos demasiado resistentes, en esos casos se dilata más."*
+  - **Decisión: va en el SITIO con la condición, y NO en los anuncios.** En 30 caracteres no entra la aclaración, y **el segmento donde no aplica —estructuras metálicas complejas— es justo el más rentable** (PYME con galpón). Sería prometer velocidad a quien menos se le puede garantizar.
+  - Aplicado en `AlcanceOperativo` de `/servicios` y en la FAQ "¿Cuánto tardan?", separando explícitamente superficie plana de estructura compleja.
+  - **Beneficio lateral:** pre-califica. El que tiene una estructura compleja llega al WhatsApp con la expectativa correcta.
+- **Pileta = un día: confirmado y SÍ va al anuncio.** Dato limpio, sin condición. Se suma el titular "Tu pileta lista en el día" a `ag_pileta-jerga`, **sin fijar**. No se suma a `ag_pileta-sin-jerga`: ahí el visitante no conoce la palabra "arenado" y el mensaje tiene que ser el problema, no el plazo.
+- **Otras dos revisiones del copy:** se agregó un **titular de precio** en 3 RSA (el informe mostró 15 consultas de precio sin respuesta), y el grupo de **genéricos pasa a apuntar a `/servicios`** en vez de a la home — es exactamente lo que Google penalizaba como "experiencia con la página de destino inferior".
+- **Verificación:** script sobre el archivo → **cero términos prohibidos** en el copy y conteo de caracteres correcto en las 90 filas. `npm run build` limpio tras los cambios del sitio.
+- **Resultado esperado:** anuncios que prometen solo lo que el negocio sostiene, y una página que responde exactamente lo que el anuncio dice — el componente de calidad que estaba en "Inferior al promedio" en el 100% de las keywords.
+- **Resultado real:** _(completar tras el encendido)_
+
+## 2026-08-11 — Sesión 1: fundaciones de la cuenta (ejecutado por el dueño)
+
+- **🟢 Hallazgo que acorta el plan: la verificación de anunciante YA ESTÁ COMPLETA.** Verificado por captura: las 4 tareas cerradas entre el 31/10 y el 07/11/2025, y el panel muestra **"Advertiser identity verified"**. Era **el único trámite del plan con semanas de espera** y bloqueaba el recurso de nombre y logo del negocio. **Deja de ser camino crítico.**
+- **Detalle registrado:** el anunciante figura como **"Jose Coronel"** (persona física), ubicación AR — no como "Arenados Lucho". Quien toque "Acerca de este anunciante" en un aviso verá el nombre personal. **Se deja así a propósito:** cambiarlo exigiría rehacer la verificación como organización (semanas + documentación societaria) para un beneficio cosmético. ⛔ **Nunca tocar "Restablecer verificación".**
+- **Resto de la sesión (reportado por el dueño, sin captura):** campaña `busqueda-arenadoIndustrial` **pausada**; moneda **ARS** y zona horaria **Buenos Aires** confirmadas (los dos únicos parámetros irreversibles); accesos sin usuarios ni MCC desconocidos; 2FA en la cuenta de Google.
+- **Menor, abierto:** los **"2 borradores en curso"** que aparecían en la vista de Campañas siguen sin identificar. No bloquean nada; revisar antes de crear las campañas nuevas para no confundirlos con las nuevas.
+- **Estado del plan tras esta sesión:** de las 8 sesiones de construcción, **quedan cerradas la 1 (fundaciones), la 2 parcialmente (blindaje) y la 3 (medición)**. La cuenta ya no puede gastar mal: sin campañas activas, sin permisos de Google sobre las pujas, con una sola conversión limpia y 37 negativas permanentes.
+- **Resultado real:** _(completar al construir las campañas)_
+
+## 2026-08-10 (6) — Sesión de medición: una sola conversión limpia (ejecutado por el dueño)
+
+- **Datos confirmados:** propiedad GA4 `516818828` · **vinculada a Ads** ✅ · etiquetado automático ON ✅ · acceso de publicación a GTM ✅.
+- **Decisión de diseño (reemplaza el paso 14 del plan):** **no se creó una acción de conversión nueva.** La cuenta ya tenía `Arenados Lucho SEO (web) contact_whatsapp` importada de GA4 y funcionando; crear una segunda etiqueta para el mismo clic habría producido **doble conteo** — la señal de alarma #13 del propio plan. Se conservó la existente y se le corrigieron los parámetros. Fundamento y contras en `17-diagnostico-cuenta-10-08.md`.
+- **Qué se ejecutó:**
+  1. Objetivo **"Clientes potenciales de llamada telefónica" → Cuenta predeterminada: Desactivado**.
+  2. Objetivo **"Enviar formularios de clientes potenciales" → Desactivado**.
+  3. Objetivo **"Contactos" → se mantiene Activado** (es donde vive el WhatsApp).
+  4. `contact_whatsapp`: **ventana post-clic 90 → 30 días**; categoría Contacto.
+  5. **GA4:** desmarcados como evento clave `form_submit`, `close_convert_lead` y `qualify_lead` — no existen en el código del sitio. Queda **`contact_whatsapp` como único evento clave con datos**.
+- **🔧 Limitación de la UI, confirmada y documentada:** las acciones con fuente **"Alojada en Google"** y **"Llamadas desde anuncios"** (`Clicks to call`, `Smart campaign map clicks to call`, `Smart campaign ad clicks to call`) **no se pueden pasar a Secundaria**: el desplegable queda gris. Ya había pasado el 26/07 con las de "Local actions". **Tampoco se puede degradar la única acción de un objetivo** (Google exige ≥1 principal por objetivo) — de ahí que la salida sea **apagar el objetivo entero**, no la acción.
+- **Por qué igual queda limpio:** el objetivo "Contactos" está acotado a *sitio web + llamadas desde anuncios*, y la columna "Incluida en los objetivos de cuenta" muestra **No** para las dos acciones "Alojada en Google". La única incluida además de `contact_whatsapp` es `Smart campaign ad clicks to call`, que **solo se dispara desde campañas inteligentes** — no hay ninguna y no se van a crear. Sumado a la extensión de llamada quitada y a Informes de llamadas en OFF, **no queda vía por la que entre una llamada**.
+- **Protección definitiva:** las 3 campañas nuevas se crean **sin ningún recurso de llamada** (ya es regla del diseño).
+- **Decisión: se descarta la exclusión de datos** (paso 19 del plan). Tenía sentido para reutilizar la campaña vieja; como se pausa y se construyen campañas nuevas —que arrancan sin historial y con *Maximizar clics*, no con puja automática— el aprendizaje sucio no se hereda. Agregarla solo sumaría superficie de error.
+- **⚠️ Pendiente de verificación:** captura de la pestaña **Objetivos** completa.
+- **Resultado esperado:** cuando entre saldo, Google optimiza hacia **gente que escribe por WhatsApp** y nada más.
+- **Resultado real:** _(completar al verificar)_
+
+## 2026-08-10 (5) — Sesión 0: blindaje de la cuenta (ejecutado por el dueño)
+
+- **Verificado antes de ejecutar:** `Administrador → Config. de la cuenta → Palabras clave negativas` estaba **VACÍA**. ✅ `pileta`/`piscina` **nunca estuvieron bloqueadas** (peor escenario descartado). 🔴 Pero tampoco había ninguna protección permanente, y las 20 negativas de empleo del 28/07 viven **solo dentro de la campaña vieja** — se perderían al pausarla.
+- **Qué se ejecutó (reportado por el dueño):**
+  1. **37 negativas cargadas a nivel CUENTA**: bloque técnicas (granallado y familia, shot blasting, sa3, iso 8501, metal blanco, perfil de anclaje, rugosidad, st 2), bloque servicio equivocado (decapado químico/electrolítico/pasivado) y bloque empleo (16 términos).
+  2. **Informes de llamadas → Desactivado.** Última de las tres puertas por las que podía volver a aparecer el teléfono.
+  3. **Auto-apply de ofertas → 4 destildadas** (Maximizar conversiones · Max conv. con CPA objetivo · Establecer un CPA objetivo · Ajustar objetivos de CPA). Debe quedar 0 de 14 y 0 de 7.
+- **Decisiones de criterio del listado:**
+  - ⛔ **`pileta`/`piscina` jamás** a nivel cuenta.
+  - ⛔ **`decapado` a secas, NO** — solo las frases de decapado químico. "Decapar la pileta" es parte del gap sin jerga del negocio.
+  - ⛔ **`pintores` NO se bloqueó**, aunque aparecía en el informe de términos: un pintor que busca quién le arene antes de pintar es el mismo perfil de aliado recurrente que el piletero o el contratista. Bloquearlo cerraría una puerta buena.
+  - `curso`, `tutorial`, `casero`, `arenadoras en venta` y familia van en la lista compartida `NEG-EQUIPOS-DIY` (Sesión 2), no a nivel cuenta.
+- **⚠️ Pendiente de verificación por captura.** No se da por hecho hasta verlo: el 28/07 registramos "idiomas corregido a solo Español" y el 10/08 apareció en "Inglés y Español". Este es el modo de falla concreto de esta cuenta.
+- **Resultado esperado:** ninguna campaña —presente o futura— puede volver a comprar tráfico de granallado, normas técnicas ni empleo; y Google pierde el permiso para tocar la estrategia de puja.
+- **✅ Resultado real (verificado por captura el 10/08/2026):**
+  - `Palabras clave negativas: **37 de 1.000**` — cargadas.
+  - `Anuncios de llamada: **Informes de llamadas desactivados**` — cerrada la tercera puerta del teléfono.
+  - `Aplicación automática → Ofertas`: **las 10 casillas de la familia Ofertas destildadas**, incluidas las 4 que estaban activas. Google ya no puede tocar la estrategia de puja ni el CPA.
+  - Dato extra visible: `Condiciones de Clic para llamar: Rechazada` (correcto, no se habilita).
+
+## 2026-08-10 (4) — Sesión de profundidad #1: diagnóstico de la cuenta (Claude Code)
+
+- **Qué se hizo:** el dueño aportó **14 capturas + el informe de términos de búsqueda** (126 páginas, 10 dic 2025 – 10 ago 2026). Diagnóstico completo en **`17-diagnostico-cuenta-10-08.md`** (nuevo), que **reemplaza al dossier `10-…` como foto vigente** de la cuenta.
+- **🔴 Hallazgo #1 — Auto-apply de OFERTAS está ENCENDIDO:** 4 recomendaciones tildadas en "Expande tu empresa", todas de la familia Ofertas (Maximizar conversiones, Max conv. con CPA objetivo, Establecer un CPA objetivo, Ajustar objetivos de CPA). **Google puede cambiar la estrategia de puja y el CPA solo.** Nunca habíamos auditado esta pantalla. Explica de dónde salió el tCPA de 8.204,88: lo puso Google, no el dueño — y lo va a volver a poner mientras sigan tildadas.
+- **🔴 Hallazgo #2 — Medición podrida:** 9 de 10 acciones de conversión son **Principales**, con **3 objetivos predeterminados de cuenta** activos. **6 de las 7 conversiones del último mes son `Local actions - Other engagements`** (86% ruido). `contact_whatsapp` existe y está en Principal pero **nunca registró una conversión** — es la única conversión del proyecto y no hay evidencia de que dispare.
+- **🔴 Hallazgo #3 — IA Max hizo el 45% de los términos:** 277 de 609 filas vinieron por "Coincidencias expandidas de IA Max" — concordancia amplia encubierta, con prueba empírica. Trajo **granallado (15 términos)**, **técnicos (metal blanco, ISO 8501, shot blasting)**, **pintura industrial** y **decapado químico**: todos servicios que el negocio NO presta. Está apagado desde el 28/07, pero **todo el aprendizaje de puja se construyó sobre ese tráfico**.
+- **🔴 Correcciones a nuestra propia bitácora:** el 28/07 registramos "idiomas ✅ corregido a solo Español" — **está en "Inglés y Español"**, no se aplicó o se revirtió. Y el inglés + IA Max trajo consultas en inglés (`industrial coatings`, `industrial cleaning`). También sigue **ENCENDIDO** `Informes de llamadas` (tercera puerta del teléfono).
+- **🟠 Hallazgo de calidad, el más accionable:** **"Experiencia con la página de destino: Inferior al promedio" en el 100% de las keywords**, mientras "Relevancia del anuncio" es "Superior" en casi todas. Los anuncios están bien; **el destino está mal**: todo hereda la URL de campaña, que apunta a la **home**. Con `/servicios` y `/arenado-de-piletas` ya construidas, **rutear por grupo es el fix de mayor retorno de todo el diagnóstico**.
+- **🟢 Oportunidades encontradas:** hay **demanda real de piletas cayendo en la campaña industrial** (`arenado de piletas`, `arenado de piletas precio`) — y `pileta` no está bloqueada a nivel campaña. Y **15 términos de PRECIO** (`arenado precio`, `cuanto sale arenar`, `valor m2 de arenado`): la consulta más comercial que existe, sin ninguna respuesta en el sitio.
+- **Nuance importante:** `decapado` **no se puede negativizar a secas** — el decapado químico/pasivado es servicio equivocado, pero "decapar la pileta" es parte del gap sin jerga. Van negativas de frase específicas.
+- **Decisión que queda confirmada:** la campaña `busqueda-arenadoIndustrial` **se pausa** (Fase 3 del roadmap). Arrastra tCPA puesto por Google, idiomas mal, geo mal, negativas que no se heredan y aprendizaje construido sobre tráfico de IA Max. Limpiarla cuesta más que construir.
+- **Pendiente:** 5 capturas (negativas de **cuenta** ← bloqueante, opciones de ubicación, fila de DSA, historial de auto-apply, los 2 borradores) y **reexportar los términos en CSV** para poder rankear por gasto.
+- **Resultado real:** _(completar tras la sesión de correcciones)_
+
+## 2026-08-10 (3) — Roadmap maestro de implementación de Ads (Claude Code)
+
+- **Qué se hizo:** `16-roadmap-implementacion-ads.md` (nuevo) — el secuenciador de las **11 fases** de la cuenta. No duplica el detalle (que vive en `ads-config/08` y `14-…`): lo **ordena contra el estado real**, con estado, dependencias, duración y quién hace cada cosa.
+- **Por qué hacía falta:** existían el diseño (8 partes) y el paso a paso (8 sesiones), pero **ninguno reconciliaba con lo ya hecho en la cuenta** el 26 y 28/07. Sin eso el riesgo era rehacer trabajo o, peor, tocar sueltos los 3 pendientes del 28/07 sobre una campaña que quizás se pause.
+- **Reconciliación (Fase 0):** ya están hechos el tope de gasto, los 3 scripts de lectura + guardián, la extensión de llamada quitada, las negativas de empleo, Display/Socios OFF, AI Max OFF e idiomas. **Siguen abiertos:** los objetivos de conversión de la campaña (destildar llamadas **y** formularios), la geo ("Provincia de Buenos Aires" con "presencia **o interés**") y el tCPA sucio de 8.204.
+- **Decisión que queda planteada (Fase 3):** qué pasa con `busqueda-arenadoIndustrial`, que sigue ENABLED y recibió arreglos el 28/07 aunque el plan del 29/07 dice construir 3 campañas nuevas. **Recomendación: pausarla como archivo** — el historial de calidad vive a nivel cuenta y dominio, no de campaña, y esa campaña mezcla intenciones que el plan separa a propósito. **A confirmar con el dueño.**
+- **Camino crítico identificado:** los **10 datos bloqueantes** (Fase 1) y la **sesión de capturas** (Fase 2). El dossier es del 26/07 y la cuenta cambió el 28/07: se construye sobre una foto vieja si no se actualiza.
+- **Contexto que cambió a favor:** el sitio se rediseñó el mismo día (entrada anterior). La **experiencia con la página de destino** —uno de los 3 componentes del Nivel de calidad— debería medir mejor que en el dossier: hay CTA de WhatsApp en todas las páginas, FAQ con schema en home y `/servicios`, y el video de 24 MB salió del camino crítico.
+- **Resultado esperado:** construir la cuenta entera (≈5 h de sesión guiada) **sin saldo cargado**, para que ningún error de configuración cueste plata.
+- **Resultado real:** _(completar a medida que se ejecute cada fase)_
+
+## 2026-08-10 (2) — El sitio rediseñado desde cero y ejecutado (Claude Code)
+
+- **Qué se pidió:** "creá la estructura perfecta del sitio perfecto en base a nuestro objetivo y contexto, olvidá el sitio actual; después compará y editalo por completo".
+- **Método:** blueprint desde la hoja en blanco → auditoría del sitio actual contra él → ejecución. Todo en `15-sitio-ideal.md` (nuevo).
+- **El hallazgo de fondo:** la **arquitectura de rutas ya era la correcta** — el problema era la ejecución. El sitio estaba construido como **folleto institucional** (hero gigante, secciones informativas, "contactanos" al final) cuando el negocio necesita una **máquina de abrir WhatsApp**.
+- **Los 5 problemas que más costaban plata:**
+  1. **El CTA de cierre de 3 páginas prometía WhatsApp y no abría WhatsApp**: botón "Contactanos" con ícono de documento que iba a `/contacto`, con el texto de abajo diciendo "Escribinos por WhatsApp". Mismo patrón roto en `/preguntas-frecuentes`.
+  2. **Ninguna página fuera de piletas y contacto tenía un CTA de WhatsApp** — la única conversión del proyecto dependía del botón flotante.
+  3. **La home no explicaba qué es el arenado antes del fold** (hero a `100vh`), justo el segmento que no conoce la palabra.
+  4. **Ruteo sin salida:** todo lo que no era galpón ni pileta se perdía.
+  5. **El `<h1>` de la home era un subtítulo en `text-base`** mientras la marca era un `<p>` de `text-7xl`.
+- **Qué se ejecutó:** `CTASection` abre WhatsApp con mensaje por página + bloque "qué nos ayuda saber" · CTA de WhatsApp en Header (desktop y mobile) y Footer · **`src/lib/wpp.ts` nuevo** con 6 mensajes pre-cargados por intención · home reordenada al recorrido del visitante con `QueNecesitasArenar` (ruteo por trabajo, con salida a WhatsApp para "otra cosa") · `TrustBar` con hechos en vez de lenguaje de pliego · componentes nuevos reutilizables `ComoTrabajamos`, `ZonasCobertura`, `FaqCorta` · **`FAQPage` en home y `/servicios`** · `/servicios` con h1 con keyword+zona y CTA por grupo · "Mitigación de riesgo" → "Lo que siempre nos preguntan" · 7 componentes a Server Component · 3 archivos muertos eliminados.
+- **Decisión de performance (reversible):** el **video del hero (24,3 MB, sin comprimir) salió del camino crítico** — el fondo ahora es una foto real con `priority`. En 4G la home quedaba en blanco varios segundos con tráfico pago rebotando antes de ver nada. **Vuelve cuando pese < 3 MB.**
+- **Decisión de arquitectura:** **no se crearon rutas nuevas.** Una landing por partido sería un *doorway* delgado que diluye la autoridad de las 3 páginas que importan; la señal local se cubre con una sección de zonas en texto + el GBP. Se nombran **agrupaciones, no partidos**: prometer zonas que después se rechazan quema leads.
+- **Verificación:** `npm run build` limpio (17 rutas) · un solo `<h1>` por página, todos con keyword · `contact_whatsapp` y GTM intactos · **el número no aparece contiguo en ningún HTML generado** · HTML servido revisado página por página.
+- **Resultado esperado y cuándo revisarlo:** más `contact_whatsapp` por sesión (el CTA dejó de estar a un salto de página) y mejor calidad de lead (mensaje pre-cargado por intención). Medir a las 2–4 semanas post-deploy; con Ads encendido, mirar también la tasa de conversión de `/servicios`.
+- **Resultado real:** _(completar)_
+
+## 2026-08-10 (1) — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
+
+- **Qué se hizo:** barrido completo de la deuda documental que dejó la decisión del 28/07 (canal único WhatsApp). El repo tenía **226 menciones a `form_submit*` / `contact_email` / Formspree / `EmailBtn` en 34 archivos**, muchas describiéndolos como **vigentes** — riesgo real de que un asistente futuro reconstruyera el formulario o reconfigurara Ads contra eventos muertos. Quedaron 48, todas marcadas como *eliminado/obsoleto* o dentro de registros históricos.
+  - **Reescritos completos:** `contexto/05-formularios-y-conversion.md` (ahora "Conversión y canales de contacto"), `06-tracking-y-analytics.md`, `09-api-y-servicios.md`, `12-seguridad-y-validaciones.md` y `03-rutas-y-paginas.md` (documentaba 4 casos, sin `/arenado-de-piletas`, con el banner de "pivote en curso" ya cumplido).
+  - **Correcciones puntuales** en `contexto/` 01, 02, 04, 07, 08, 10, 11, 13, 14, 15, 16, 17, 19, 20 y README; y en `marketing/` 01, 05, 07, 09, 10, 11, 13.
+  - **ADR-019 nuevo** en `18-decisiones-tecnicas.md`: "Canal único WhatsApp — se elimina el formulario", que **anula ADR-007** (Formspree). Es la fuente única de la decisión.
+  - **`ROADMAP.md` reconstruido:** Fase 1 estaba con los pasos 3, 4 y 5 sin tildar aunque ya estaban hechos y mergeados. Ahora Fase 1 = ✅ completa; Fase 2 (Search Console, conversiones limpias, GBP, apex→www) = AHORA; Fase 3 reescrita para apuntar a las **8 sesiones** de `ads-config/08-…` en vez del plan viejo.
+  - **Notas de "deuda documental"** de `ads-config/` 01, 02 §2.18, 03 y 08 marcadas como resueltas.
+- **Decisiones de criterio:** los **registros históricos no se reescriben** — las entradas viejas de esta bitácora y el volcado crudo de la cuenta en `10-cuenta-ads-auditoria.md` §4.5 conservan las menciones porque documentan lo que había, no lo que debe haber. §4.7 de ese dossier quedó marcada como superada por el plan de 8 sesiones.
+- **Páginas legales actualizadas (mismo día):** `/politica-de-privacidad` y `/terminos-y-condiciones` describían la recolección de datos por formulario y la cesión a un procesador tercero — **falso desde el 28/07**. Ahora declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp (bajo las políticas de Meta), que la medición no recibe nombre/teléfono/email, y que se puede pedir el borrado de la conversación. De paso se corrigió un **bug de render**: el bloque "Correo electrónico" del responsable mostraba la etiqueta **sin ningún valor**, y en "Derechos" la frase cortaba en "enviando un correo a nuestros email." Ambos ahora leen `BUSINESS.email` de `siteConfig.ts`. Fechas de revisión actualizadas. ⚠️ **El dueño debería dar una lectura final**: es texto legal y lo escribió Claude.
+- **Otros hallazgos del barrido:** `HeroSecondaryCTA` sigue huérfano (no se monta en ningún lado); el bug "validación servidor / spam" se cerró **por diseño** (sin formulario no hay input que validar); **`npm run lint` está roto** con Next 16 (`next lint` fue removido) — la verificación real hoy es `npm run build`.
+- **Verificación:** `npm run build` limpio (17 rutas). Cambio 100% documental salvo lo que ya venía sin commitear.
+- **Por qué / hipótesis:** el sistema de contexto es el que gobierna lo que hace cualquier asistente sobre este proyecto. Documentación que describe como vigente algo que se eliminó es peor que no tener documentación: dirige el trabajo en la dirección equivocada con confianza.
+- **Resultado esperado:** que la próxima sesión de Ads (sesiones 1–8) y cualquier cambio de código arranquen desde un mapa que coincide con la realidad.
+
+## 2026-07-29 — Mapa completo de la cuenta de Ads diseñada DESDE CERO (Claude Code)
+
+- **Qué se hizo:** a pedido del dueño ("diseñá toda la configuración desde 0, como si la cuenta estuviera vacía, con criterio de paid media manager 2026"), se investigó el estado del arte de Google Ads 2026 (6 frentes: estructura, conversiones, pujas, configuración de campaña incl. **IA Max**, anuncios/recursos, controles) y se diseñó el **mapa completo de la cuenta objetivo**: `14-configuracion-objetivo-ads.md` (índice) + carpeta `ads-config/` con 8 partes (3.706 líneas).
+- **Contenido destacado:** medición antes que campañas · una sola conversión primaria (`contact_whatsapp`) · **105 titulares + 28 descripciones listos para pegar** con caracteres verificados y sin términos prohibidos · política de pinning como control de compliance · IA Max/personalización de texto/recursos automáticos **apagados** (con copy prohibido no se puede dejar escribir a Google) · pujas por fases con umbrales medibles · plan de implementación paso a paso + checklist pre-flight.
+- **Decisión de diseño:** se **conserva la cuenta 953-841-6905** (moneda ARS y zona horaria ya correctas = los únicos parámetros irreversibles) y se reconstruye toda la estructura adentro; las campañas viejas quedan pausadas como archivo. Se agrega **exclusión de datos** para el período de medición sucia.
+- **Hallazgo que cambia el plan:** la cuenta arrastra **11 acciones de conversión, 7 marcadas como primarias** (visitas al sitio, engagements, 4 de llamadas). Por eso **no hay línea base de CPA válida**: el CPA histórico (~8.790) y el tCPA cargado (8.204) hay que descartarlos, no ajustarlos.
+- **Verificación hecha:** conteo de caracteres de los 133 assets de anuncio (0 excesos), cero términos prohibidos en el copy (solo aparecen como negativa/advertencia), cero referencias a Formspree, y las acciones de conversión citadas contrastadas contra el dossier real.
+- **Pendiente antes de implementar:** bloqueantes listados en el índice (ID de GA4 y vínculo con Ads, etiquetado automático, partidos reales del GBA, si la cuenta arrastra `pileta/piscina` como negativa vieja, piletas de fibra vs hormigón, confirmar los ~100 m²/día del copy, ticket promedio y tasa de cierre).
+- **Resultado esperado:** construir la cuenta parte por parte (orden 1→8) con la mayor parte hecha **sin saldo cargado**, para que ningún error de configuración cueste plata.
+- **Resultado real:** _(completar a medida que se implemente cada parte)_
+
+## 2026-07-28 (2) — SOLO WhatsApp: formulario eliminado + auditoría de configuración de campaña
+
+- **Decisión del dueño:** el único canal de contacto es **WhatsApp** → se quitó el formulario del sitio.
+  - `/contacto` **se mantiene como ruta** (es landing de Ads, está en el sitemap y la enlazan home/landing/nav — borrarla sería 404 en los anuncios) y pasó a ser una **página WhatsApp-first**: CTA grande, "mandanos una foto", qué datos ayudan, sin formulario.
+  - Eliminados: formulario + integración **Formspree** (`xrgnqbod`) y el componente **`EmailBtn`** (era código muerto, no se renderizaba).
+  - **Eventos que dejan de existir:** `form_submit`, `form_submit_success`, `form_submit_error`, `contact_email`. **Único evento de conversión vigente: `contact_whatsapp`** (WppBtn + WhatsAppCTA). `CLAUDE.md` actualizado (los invariantes decían lo contrario).
+  - CTAs secundarios "Dejanos tus datos" de la landing reemplazados (uno por "Ver un trabajo real", el del cierre eliminado para dejar un solo CTA fuerte).
+- **⚠️ Impacto en Google Ads (a corregir en la cuenta):** en *Objetivos de conversión* de la campaña hay que **destildar también "Enviar formularios de clientes potenciales"** (ya no existe el form) además de "Clientes potenciales de llamada telefónica" → **debe quedar solo "Contactos"** (donde vive el WhatsApp). Y en *Objetivos → Conversiones*, la acción del formulario queda obsoleta.
+- **Auditoría de configuración de campaña `busqueda-arenadoIndustrial` (capturas del dueño) — hallazgos y estado:**
+  - 🔴 **Redes incluían Socios de búsqueda Y RED DE DISPLAY** en una campaña de búsqueda → ✅ **corregido** (destildadas).
+  - 🔴 **IA Max ACTIVADO** con *personalización de texto* y *expansión de URL final* → concordancia amplia encubierta, Google reescribiendo anuncios y mandando tráfico a URLs arbitrarias (en la captura aparecía `/blog`, **que no existe** → clics a 404) → ✅ **apagado**.
+  - 🔴 **Objetivo de conversión incluía "Clientes potenciales de llamada telefónica"** → la campaña le pedía llamadas a Google (la otra mitad del problema de las llamadas por trabajo, junto con la extensión ya quitada) → **a destildar**.
+  - 🔴 **Ubicación = "Provincia de Buenos Aires" (27,5M de alcance) con "Presencia O INTERÉS"** → excluye CABA, incluye toda la provincia (Mar del Plata, Bahía Blanca) y suma gente de cualquier lado "interesada" en BA → **cambiar a Presencia + radio ~60 km sobre Buenos Aires**.
+  - 🟠 **Puja tCPA $8.204** aprendiendo de conversiones sucias, ~3× el mejor CPA real histórico (`arenados` exacta ≈ $2.800) → revisar al final, con medición limpia.
+  - 🟡 Idiomas incluían **Inglés** → ✅ corregido a solo Español. Rotación "Optimizar" ✅ correcta.
+- **Por qué / hipótesis:** la campaña no solo tenía keywords caras — tenía **la configuración en contra**: Display + IA Max + objetivo de llamadas + geo mal armada. Corregido esto, el mismo presupuesto debería comprar tráfico mucho más calificado.
+- **Resultado esperado y cuándo revisarlo:** al reactivar el saldo, CPA más bajo y cero llamadas de empleo; revisar términos de búsqueda a los 7 días.
+- **Resultado real:** _(completar tras reactivar)_
+
+## 2026-07-28 — Extensión de llamada QUITADA + negativas de empleo cargadas + modo experto de Ads
+
+- **Qué se hizo (en la cuenta, ejecutado por el dueño con guía):**
+  - ❌ **Quitada la extensión/asset de llamada** (`011 2378-7750`, nivel campaña, 77 impresiones/1 clic) — era la vía por la que el aviso mostraba el número con botón "Llamar" a búsquedas de empleo. **Esta era la causa de las "llamadas pidiendo trabajo"** que aparecían al meter presupuesto (no una fuga del número del sitio, que está blindado).
+  - ✅ **Cargadas las negativas de empleo** en frase ("empleo", "trabajo de arenador", "busco trabajo/empleo", "vacante", "se busca personal", "oferta laboral/de trabajo", "changa(s)", "sueldo", "cv", "curriculum", "rrhh", "recursos humanos", "empleado", "curso", "tutorial", "como hacer", "casero").
+- **Decisión de modo de trabajo (dueño):** los fixes básicos no alcanzan → **modo experto de Ads**: Claude trabaja la cuenta como consultor senior (datos, estructura, QS, configuraciones, pujas). Playbook nuevo: `13-modo-experto-ads.md`; instrucción persistida en `CLAUDE.md` + memoria de Claude. Próximo paso: **Sesión de profundidad #1** (capturas de configuración de campaña, QS con 3 componentes, conversiones, RSAs — lista exacta en el playbook §Sesión #1) — ideal hacerla AHORA que la cuenta está sin saldo, antes de recargar.
+- **Resultado esperado y cuándo revisarlo:** llamadas por trabajo ≈ 0 en cuanto vuelva a gastar; revisar "Términos de búsqueda" a los 7 días de reactivar para cazar variantes de empleo que se cuelen.
+- **Resultado real:** _(completar tras reactivar el gasto)_
+
 ## 2026-07-27 (4) — Guía de Google Business Profile (Claude Code)
 
 - **Qué se hizo:** guía completa de setup/optimización del GBP (`12-google-business-profile.md`), a medida de las decisiones del dueño (27/07): ① la ficha **ya existe → reclamar + optimizar**; ② **negocio a domicilio (SAB)** → sin dirección pública, zonas del AMBA; ③ teléfono público = **WhatsApp del negocio**. Incluye: reclamo/verificación, categorías (con las **prohibidas a evitar**: mantenimiento de piscinas/pintura/granallado), descripción lista para pegar, servicios por cluster, fotos, el **motor de reseñas** (pedir a cada cliente + plantilla de WhatsApp), posts estacionales y la conexión con el sitio.
