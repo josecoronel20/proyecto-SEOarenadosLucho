@@ -168,6 +168,17 @@ arenado de motor
 | Precio por trabajo | Mandá una foto | Precio por trabajo |
 | **20 años de oficio** | **20 años de oficio** | **20 años de oficio** |
 
+### ⛔ Límite de piletas — confirmado el 14/08/2026
+
+**Se arena pintura sobre hormigón. Nada más.**
+
+- ⛔ **No** se remueven revestimientos adheridos (venecitas, mosaico).
+- ⛔ **No** se trabajan piletas de **fibra de vidrio**.
+
+El copy anterior decía *"sacamos toda la pintura **o el revestimiento viejo**"* y estaba **publicado en producción**. Era una promesa falsa: corregida en el sitio, en el caso de éxito y acá.
+
+⛔ **Nunca reintroducir "revestimiento viejo" como algo que se remueve.** Sí es correcto decir **"lista para pintar o revestir"** — eso describe lo que hace el cliente después, no lo que hacemos nosotros.
+
 ### ⚠️ Sobre "20 años de oficio" — leer antes de tocarlo
 
 La cuenta tenía heredado un texto destacado que decía **"+20 años de experiencia"**. **Es falso como antigüedad de la empresa: el negocio tiene ~8 años.** Estuvo corriendo en todos los anuncios sin que nadie lo supiera.
@@ -334,7 +345,7 @@ Se acepta **Eficacia "Buena"** (o "Media") y se frena ahí: la Eficacia **no ent
 |---|---|---|---|
 | 1 | Arenado de piletas y piscinas de hormigón. Queda lista para repintar o revestir. | 80 | **1** |
 | 2 | Vamos a tu casa con equipo y compresores propios. Vos no movés ni preparás nada. | 80 | — |
-| 3 | Sacamos toda la pintura y el revestimiento viejo. No pintamos ni revestimos. | 76 | — |
+| 3 | Sacamos toda la pintura vieja del hormigón. No pintamos ni revestimos. | 70 | — |
 | 4 | Visita y presupuesto sin costo en CABA y el AMBA. Coordinamos por WhatsApp. | 75 | — |
 
 ### RSA 5 — `ag_genericos` → `/servicios`

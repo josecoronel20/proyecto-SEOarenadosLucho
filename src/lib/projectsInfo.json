@@ -266,13 +266,13 @@
         "overview": "Arenado de una pileta de hormigón con la pintura vieja descascarada. Fuimos con el equipo al domicilio y sacamos toda la pintura y el material flojo, dejando el hormigón limpio y parejo, listo para repintar o revestir. El pintado o revestimiento final no está incluido en el trabajo de arenado.",
 
         "context": {
-          "tipoEstructura": "Pileta de hormigón con pintura y revestimiento deteriorados.",
+          "tipoEstructura": "Pileta de hormigón pintada, con la pintura descascarada.",
           "entornoTrabajo": "Domicilio particular, coordinando horarios y contención de polvo.",
           "objetivoCliente": "Sacar toda la pintura vieja para poder repintar o revestir la pileta."
         },
 
         "alcanceTrabajo": [
-          "Revisión del estado de la pintura y el revestimiento existente.",
+          "Revisión del estado de la pintura existente.",
           "Arenado de paredes y piso de la pileta para remover pintura y material flojo.",
           "Limpieza final de la superficie.",
           "Entrega de la pileta lista para repintar o revestir."
@@ -290,7 +290,7 @@
         },
 
         "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para remover pintura y revestimiento viejo",
+          "tipoIntervencion": "Arenado para remover la pintura vieja",
           "objetivoSuperficie": "Hormigón limpio y parejo, listo para repintar o revestir."
         },
 

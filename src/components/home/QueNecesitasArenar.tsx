@@ -26,7 +26,7 @@ const destinos = [
   {
     icon: Waves,
     title: "Una pileta o piscina",
-    text: "Sacamos toda la pintura o el revestimiento viejo del hormigón y te la dejamos lista para repintar o revestir.",
+    text: "Sacamos toda la pintura vieja de tu pileta de hormigón y te la dejamos lista para repintar o revestir.",
     href: "/arenado-de-piletas",
     cta: "Ver arenado de piletas",
   },

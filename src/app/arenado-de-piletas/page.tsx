@@ -64,7 +64,7 @@ const pageSchema = {
       provider: { "@id": BUSINESS_ID },
       areaServed: "Buenos Aires y AMBA",
       description:
-        "Arenado de piletas y piscinas de hormigón: removemos la pintura y el revestimiento viejo y dejamos el hormigón limpio, listo para repintar o revestir. No incluye el pintado ni el revestimiento final.",
+        "Arenado de piletas y piscinas de hormigón pintadas: removemos toda la pintura vieja y dejamos el hormigón limpio, listo para repintar o revestir. No incluye el pintado ni el revestimiento final, no removemos revestimientos adheridos como venecitas o mosaico, y no trabajamos piletas de fibra de vidrio.",
     },
     {
       "@type": "BreadcrumbList",
@@ -152,7 +152,7 @@ export default function ArenadoDePiletasPage() {
               ¿Se te descascara la pintura de la pileta? La dejamos lista para repintar o revestir
             </h1>
             <p className="mt-5 text-base md:text-xl text-white/95 leading-relaxed max-w-2xl drop-shadow-md">
-              Sacamos toda la pintura o el revestimiento viejo de tu pileta o piscina de hormigón
+              Sacamos toda la pintura vieja de tu pileta o piscina de hormigón
               de una sola vez, sin lijar a mano, y te la dejamos limpia y pareja, lista para que la
               repintes o revistas. Vamos a tu casa con equipo propio.
             </p>
@@ -231,10 +231,10 @@ export default function ArenadoDePiletasPage() {
             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
               Si la pintura de tu pileta se descascara, lijarla a mano es interminable y nunca queda
               pareja. El arenado hace ese trabajo en serio: lanzamos arena a presión sobre las paredes
-              y el piso, y en una pasada saca toda la pintura vieja, el revestimiento flojo y lo
-              descascarado. Debajo queda el hormigón limpio, parejo y firme, listo para pintura o
-              revestimiento nuevo que agarre parejo y dure —sin capas viejas abajo que lo hagan saltar
-              el año que viene. Lo mismo vale si le decís pileta o <strong>piscina</strong>.
+              y el piso, y en una pasada saca toda la pintura vieja y lo que está flojo. Debajo queda
+              el hormigón limpio, parejo y firme, listo para pintura o revestimiento nuevo que agarre
+              parejo y dure —sin capas viejas abajo que lo hagan saltar el año que viene. Lo mismo
+              vale si le decís pileta o <strong>piscina</strong>.
             </p>
           </div>
         </div>
@@ -251,9 +251,9 @@ export default function ArenadoDePiletasPage() {
               <p className="text-gray-700 leading-relaxed mb-5">
                 Si la pintura se salta, se levanta o se descascara, <strong>no sirve pintar encima</strong>:
                 la nueva se cae igual en una temporada. Primero hay que sacar toda la pintura vieja — y eso
-                es exactamente lo que hacemos. Nos llaman para sacar la pintura vieja de la pileta, remover o
-                quitar el revestimiento descascarado, despintar y decapar la piscina, y dejar el hormigón
-                preparado para revestir. En una sola visita te sacamos todo lo viejo, sin que rasques un metro a mano.
+                es exactamente lo que hacemos. Nos llaman para sacar la pintura vieja de la pileta,
+                despintar y decapar la piscina, y dejar el hormigón preparado para pintar o revestir.
+                En una sola visita te sacamos toda la pintura, sin que rasques un metro a mano.
               </p>
               <WhatsAppCTA message={WPP_DUENO} className={WPP_BTN}>
                 <MessageCircle className="w-5 h-5" />
@@ -264,9 +264,9 @@ export default function ArenadoDePiletasPage() {
               <p className="font-semibold text-gray-900">¿Te pasa alguna de estas?</p>
               {[
                 "La pintura se descascara y salta en pedazos",
-                "El revestimiento viejo está flojo o hueco",
+                "La pintura está hueca o se levanta sola",
                 "Pintaste encima y se volvió a caer",
-                "Querés cambiar de color o de revestimiento",
+                "Querés cambiar de color o de terminación",
                 "No sabés cómo sacar la pintura sin romper la pileta",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-700">
@@ -348,11 +348,12 @@ export default function ArenadoDePiletasPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-xl border border-green-200 bg-green-50/40 p-6">
                 <p className="font-bold text-gray-900 mb-3 flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-600" /> Lo que sí hacemos</p>
-                <p className="text-gray-700 leading-relaxed">Sacamos toda la pintura y el revestimiento viejo, y dejamos el hormigón limpio, parejo y listo para su próxima terminación.</p>
+                <p className="text-gray-700 leading-relaxed">Sacamos toda la pintura vieja y lo que esté flojo, y dejamos el hormigón limpio, parejo y listo para su próxima terminación.</p>
               </div>
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-6">
                 <p className="font-bold text-gray-900 mb-3 flex items-center gap-2"><X className="w-5 h-5 text-gray-500" /> Lo que no hacemos</p>
-                <p className="text-gray-700 leading-relaxed">No pintamos ni revestimos la pileta —ese paso lo hacés vos, tu pintor o tu piletero—. Tampoco hacemos granallado ni arenado con normas o mediciones: hacemos arenado sin vueltas.</p>
+                <p className="text-gray-700 leading-relaxed mb-3">No pintamos ni revestimos la pileta —ese paso lo hacés vos, tu pintor o tu piletero—. Tampoco hacemos granallado ni arenado con normas o mediciones: hacemos arenado sin vueltas.</p>
+                <p className="text-gray-700 leading-relaxed">Y dos límites concretos: <strong>no sacamos revestimientos pegados</strong> como venecitas o mosaico, y <strong>no trabajamos piletas de fibra de vidrio</strong>. Trabajamos hormigón pintado. Si no sabés cuál es la tuya, mandanos una foto y te lo decimos enseguida.</p>
               </div>
             </div>
           </div>
@@ -370,7 +371,7 @@ export default function ArenadoDePiletasPage() {
             <p className="text-white/85 leading-relaxed mb-8 max-w-3xl">
               Si trabajás con piletas —piletero, remodelador, constructor— el arenado es la etapa que te
               come días y te ensucia la obra. Tercerizala con nosotros: llegamos con equipo propio, sacamos
-              todo lo viejo y te devolvemos la pileta lista para que revistas o pintes. Vos ponés la
+              toda la pintura vieja y te devolvemos la pileta lista para que revistas o pintes. Vos ponés la
               terminación y el cliente; nosotros ponemos el arenado, temporada tras temporada.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">

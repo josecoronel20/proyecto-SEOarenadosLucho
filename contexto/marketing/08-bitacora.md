@@ -12,6 +12,26 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 (2) — Impeccable instalado + una tercera promesa falsa encontrada
+
+- **Instalado `impeccable`** (npm, de Paul Bakaus, Apache-2.0): skills de diseño y detector de anti-patrones de UI para agentes. Quedó en `.claude/skills/impeccable/`. ⚠️ El paquete pide **Node ≥22.18** y el entorno tiene **20.16**; el instalador corrió igual, pero los scripts del detector pueden fallar.
+- **Ejecutado `/impeccable init`** → **`PRODUCT.md` nuevo en la raíz**: la verdad de producto durable (usuarios, propósito, posicionamiento, contexto operativo, capacidades y límites, compromisos de marca, evidencia disponible, principios). Es la fuente que van a leer los comandos de diseño.
+- **Tres datos confirmados por el dueño en la entrevista del init:**
+
+| Pregunta | Respuesta | Consecuencia |
+|---|---|---|
+| ¿Qué saca el arenado en piletas? | **Solo pintura sobre hormigón** | 🔴 Ver abajo |
+| ¿Hasta dónde viajan? | **CABA y GBA, radio ~60 km** | ✅ Confirma la geo que ya se cargó en las 3 campañas |
+| ¿Quién contesta el WhatsApp? | **Hay alguien dedicado** | ✅ La promesa "respondemos rápido" se sostiene; es además un diferencial usable |
+
+- **🔴 Tercera promesa falsa publicada, encontrada por la entrevista:** el sitio decía *"sacamos toda la pintura **o el revestimiento viejo**"*. **Falso**: no se remueven revestimientos adheridos (venecitas, mosaico) ni se trabajan piletas de **fibra de vidrio**. Estaba **en producción**, en 6 lugares del sitio, 2 del caso de éxito y 2 del copy de anuncios.
+  - **Corregido** en `faqs.ts` (4), `arenado-de-piletas/page.tsx` (6, incluido el schema `Service`), `QueNecesitasArenar.tsx`, `projectsInfo.json` (3), `18-copy-ads.md` y `ads-config/06`.
+  - **Se aprovechó para convertir el límite en filtro:** la sección "qué no hacemos" de la landing ahora declara los dos límites explícitos y cierra con *"si no sabés cuál es la tuya, mandanos una foto"* — el límite pasa a ser una invitación a escribir.
+  - ⛔ **Regla:** nunca reintroducir "revestimiento viejo" como algo que se remueve. ✅ Sí es correcto "lista para pintar o revestir": describe lo que hace el cliente después.
+- **Patrón, la tercera vez en esta cuenta:** una afirmación que nadie verificó, publicada, que el negocio no puede cumplir. Antes fueron las conversiones basura y los "+20 años de experiencia". **La entrevista de producto encontró en tres preguntas lo que ninguna auditoría de código iba a encontrar**, porque el código era coherente: decía consistentemente algo que era falso.
+- **Verificación:** `npm run build` limpio. Los dos matches que quedan en `faqs.ts` son correctos ("el revestimiento **final** no lo hacemos", "el revestimiento **nuevo** necesita agarrar").
+- ⚠️ **Pendiente de deploy:** estos cambios están en el branch, **no en producción**. Van con el próximo merge.
+
 ## 2026-08-14 — 🚀 TODO EL TRABAJO DESPLEGADO A PRODUCCIÓN (PR #4 mergeado)
 
 - **🔴 Hallazgo del dueño, y grave:** *"quitamos el form pero en la página de contacto aún está el form"*. Tenía razón. **Ninguno de los 22 commits estaba publicado.** Producción seguía sirviendo el deploy del **27/07** (PR #3): formulario y Formspree activos, home vieja con el video de 24 MB, `/servicios` sin FAQ ni CTA de WhatsApp, y nada del copy nuevo.
