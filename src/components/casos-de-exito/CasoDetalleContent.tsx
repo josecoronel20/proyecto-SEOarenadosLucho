@@ -69,7 +69,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
       {/* Encabezado */}
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <Badge className="mb-3 bg-primary/90 text-papel">
+          <Badge className="mb-3 bg-maquina-500 text-tinta rounded-sm">
             {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
           </Badge>
           <h1 className="text-2xl md:text-4xl font-bold text-tinta leading-tight">

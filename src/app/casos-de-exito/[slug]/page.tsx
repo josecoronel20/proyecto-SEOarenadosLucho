@@ -60,12 +60,12 @@ export default async function CasoDetallePage({ params }: PageProps) {
   const otherProjects = getOtherProjects(slug, 3)
 
   return (
-    <div className="min-h-screen bg-papel-alt py-10 md:py-14">
+    <div className="min-h-screen bg-papel-alt py-12 md:py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casoSchema) }}
       />
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-5 lg:px-8">
         <Breadcrumbs
           items={[
             { name: "Inicio", href: "/" },
@@ -77,7 +77,7 @@ export default async function CasoDetallePage({ params }: PageProps) {
       </div>
 
       {/* Seguir viendo — enlazado interno (evita callejones sin salida) */}
-      <div className="container mx-auto px-4 lg:px-8 mt-12">
+      <div className="container mx-auto px-5 lg:px-8 mt-12">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-tinta mb-4">Seguir viendo</h2>
           <div className="flex flex-wrap gap-3">

@@ -1,72 +1,64 @@
-import { CalendarCheck, MapPin, Zap, FileCheck, Target, DoorOpen, Fence, UserCheck } from "lucide-react"
+import { Section, SectionHead, MEDIDA } from "@/components/common/system"
 
 const requisitos = [
-  { icon: DoorOpen, text: "Que podamos acceder al lugar" },
-  { icon: Fence, text: "Un espacio para ubicar el equipo" },
-  { icon: UserCheck, text: "Definir con quién coordinamos (vos o el encargado de obra)" },
-  { icon: FileCheck, text: "Permisos, si el lugar los requiere (obra o vía pública)" },
+  "Que podamos acceder al lugar",
+  "Un espacio para ubicar el equipo",
+  "Definir con quién coordinamos (vos o el encargado de obra)",
+  "Permisos, si el lugar los requiere (obra o vía pública)",
 ]
 
 const logistica = [
-  { icon: CalendarCheck, text: "Coordinamos día y horario con vos" },
-  { icon: MapPin, text: "Trabajamos por zonas: intervenimos y liberamos rápido" },
-  { icon: Zap, text: "Compresores propios (no dependemos de la energía del lugar)" },
-  { icon: FileCheck, text: "Accesos y permisos acordados antes de empezar" },
+  "Coordinamos día y horario con vos",
+  "Trabajamos por zonas: intervenimos y liberamos rápido",
+  "Compresores propios (no dependemos de la energía del lugar)",
+  "Accesos y permisos acordados antes de empezar",
 ]
 
-const sectionClass = "py-10 md:py-14 border-b border-papel-linea bg-papel"
-const titleClass = "text-2xl md:text-3xl font-bold text-tinta mb-6 text-center"
-const iconBoxClass = "flex-shrink-0 p-2 rounded-sm bg-papel-alt text-tinta mt-0.5"
-const iconSizeClass = "w-5 h-5"
-const textClass = "text-tinta-70 text-base leading-relaxed pt-1"
+/**
+ * Dos columnas de requisitos, tabuladas.
+ *
+ * Antes eran dos cajas con borde, y adentro de cada una cada renglón llevaba su
+ * ícono en otro cuadradito con fondo: una caja adentro de una caja adentro de
+ * una sección. El detector lo marcaba doce veces en esta página sola. Ahora es
+ * una tabla de dos columnas: rótulo arriba, renglones separados por filete.
+ */
+const rotulo =
+  "ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700 mb-4"
+
+function Columna({ titulo, items }: { titulo: string; items: string[] }) {
+  return (
+    <div>
+      <h3 className={rotulo}>{titulo}</h3>
+      <ul className="border-t border-papel-linea">
+        {items.map((item) => (
+          <li
+            key={item}
+            className="border-b border-papel-linea py-4 text-tinta leading-relaxed"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 export function LogisticaCoordinacion() {
   return (
-    <section className={sectionClass} aria-label="Logística y requisitos">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className={titleClass}>Coordinamos todo, sin frenar tu obra ni tu día</h2>
+    <Section fondo="papel" aria-label="Logística y requisitos">
+      <SectionHead
+        titulo="Coordinamos todo, sin frenar tu obra ni tu día"
+        intro="Coordinamos el día y el horario que te sirva y trabajamos por zonas para intervenir y liberar lo antes posible —sin frenar tu obra, tu producción ni tu casa. Llevamos compresores propios, así que no dependemos de la energía del lugar."
+      />
 
-          <p className="text-tinta-70 text-base leading-relaxed mb-6 text-center">
-            Coordinamos el día y el horario que te sirva y trabajamos por zonas para intervenir y liberar lo antes posible —sin frenar tu obra, tu producción ni tu casa. Llevamos compresores propios, así que no dependemos de la energía del lugar.
-          </p>
-
-          <div className="rounded-sm border border-papel-linea bg-papel-alt/50 p-5 md:p-6 mb-6">
-            <p className="font-semibold text-tinta mb-4">Para iniciar necesitamos:</p>
-            <ul className="space-y-3">
-              {requisitos.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-4">
-                  <div className={iconBoxClass}>
-                    <Icon className={iconSizeClass} />
-                  </div>
-                  <span className={textClass}>{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="rounded-sm border border-papel-linea bg-papel-alt/50 p-5 md:p-6 mb-6">
-            <p className="font-semibold text-tinta mb-4">Cómo trabajamos:</p>
-            <ul className="space-y-3">
-              {logistica.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-4">
-                  <div className={iconBoxClass}>
-                    <Icon className={iconSizeClass} />
-                  </div>
-                  <span className={textClass}>{text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex items-start gap-3 rounded-sm border border-papel-linea bg-papel-alt/50 p-4">
-            <Target className="w-5 h-5 text-tinta flex-shrink-0 mt-0.5" />
-            <p className="text-tinta font-semibold text-base leading-relaxed">
-              Objetivo: intervenir, terminar y liberar el sector lo antes posible.
-            </p>
-          </div>
-        </div>
+      <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+        <Columna titulo="Para iniciar necesitamos" items={requisitos} />
+        <Columna titulo="Cómo trabajamos" items={logistica} />
       </div>
-    </section>
+
+      <p className={`mt-10 border-l-2 border-maquina-500 pl-5 text-lg font-semibold text-tinta ${MEDIDA}`}>
+        Objetivo: intervenir, terminar y liberar el sector lo antes posible.
+      </p>
+    </Section>
   )
 }

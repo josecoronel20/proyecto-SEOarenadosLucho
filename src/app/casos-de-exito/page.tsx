@@ -27,12 +27,12 @@ export default function CasosDeExitoPage() {
     <div className="min-h-screen bg-papel-alt">
       <CasosHero />
       <section className="py-8 md:py-10 border-b border-papel-linea bg-papel">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-5 lg:px-8">
           <FiltroTipo value={filtro} onChange={setFiltro} />
         </div>
       </section>
       <section className="py-8 md:py-12">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {filtered.map((project) => (
               <CasoCard key={project.id} project={project} />

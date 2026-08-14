@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
-import { Target } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 // Agregamos el nuevo campo a la interfaz para la imagen.
 export interface CasoProject {
@@ -41,10 +40,13 @@ export function CasoCard({ project }: CasoCardProps) {
   const metodologiaValues = project.metodologia ? Object.values(project.metodologia).filter(Boolean) : []
 
   return (
-    <article className="rounded-sm border border-papel-linea bg-papel overflow-hidden hover: transition-shadow flex flex-col h-full">
-      {/* Imagen/prueba visual */}
+    // Ficha de catálogo, no tarjeta: la foto arriba a sangre, y debajo el rótulo
+    // de tipo en versalita —no una píldora de color— más el título y el objetivo.
+    // Sin caja alrededor ni sombra; separa el filete superior. El ícono de diana
+    // que iba pegado al objetivo se fue: no decía nada que el texto no dijera.
+    <article className="flex flex-col h-full border-t-2 border-tinta pt-4 group">
       {project.images && (
-        <div className="relative w-full h-44 md:h-52 bg-papel-alt overflow-hidden">
+        <div className="relative w-full h-44 md:h-52 bg-papel-alt overflow-hidden mb-4">
           <Image
             src={project.images[0]}
             alt={project.title}
@@ -54,32 +56,27 @@ export function CasoCard({ project }: CasoCardProps) {
           />
         </div>
       )}
-      <div className="p-4 md:p-5 flex flex-col flex-1">
-        <div className="flex items-center justify-between gap-2 mb-3">
-          <h2 className="text-lg font-bold text-tinta line-clamp-2">
-            {project.title}
-          </h2>
-          <Badge className="bg-primary/90 text-papel shrink-0">
-            {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
-          </Badge>
-        </div>
 
-        {/* Objetivo / Overview */}
-        <div className="mb-3">
-          <p className="flex items-start gap-2 text-sm text-tinta-70">
-            <Target className="w-4 h-4 text-tinta flex-shrink-0 mt-0.5" />
-            <span className="line-clamp-3">{project.overview}</span>
-          </p>
-        </div>
+      <p className="ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700">
+        {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
+      </p>
 
-        <Link
-          href={project.idSection ? `/casos-de-exito/${project.idSection}` : project.url}
-          aria-label={`Ver caso completo: ${project.title}`}
-          className="mt-4 inline-flex items-center text-tinta hover:text-tinta font-semibold text-sm"
-        >
-          Ver caso completo →
-        </Link>
-      </div>
+      <h2 className="mt-2 text-lg font-bold leading-snug text-tinta">
+        {project.title}
+      </h2>
+
+      <p className="mt-2 text-sm leading-relaxed text-tinta-70 line-clamp-3 flex-1">
+        {project.overview}
+      </p>
+
+      <Link
+        href={project.idSection ? `/casos-de-exito/${project.idSection}` : project.url}
+        aria-label={`Ver caso completo: ${project.title}`}
+        className="mt-4 inline-flex items-center gap-1.5 font-semibold text-sm text-maquina-700 hover:text-maquina-600"
+      >
+        Ver caso completo
+        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+      </Link>
     </article>
   )
 }

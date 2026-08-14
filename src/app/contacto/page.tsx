@@ -9,17 +9,14 @@ const WPP_MSG = WPP_MSGS.general
 
 const puntos = [
   {
-    icon: Camera,
     title: "Mandanos una foto",
     text: "Con una foto de lo que hay que arenar ya te podemos orientar. No hace falta que sepas nada técnico.",
   },
   {
-    icon: Clock,
     title: "Respondemos rápido",
     text: "Te contestamos por WhatsApp y coordinamos la visita el día que te sirva.",
   },
   {
-    icon: MapPin,
     title: "Buenos Aires y AMBA",
     text: "Vamos con equipo propio a tu obra, galpón o casa. No trasladás nada.",
   },
@@ -27,60 +24,60 @@ const puntos = [
 
 export default function ContactoPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 py-16 md:py-24 px-4">
-      <div className="container mx-auto max-w-3xl">
-        <div className="text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-              <MessageCircle className="w-8 h-8 text-green-600" />
-            </div>
-          </div>
+    <div className="bg-papel py-16 md:py-24 px-5 lg:px-8">
+      <div className="container mx-auto max-w-4xl">
+        {/* Sin el círculo verde con el globito adentro arriba del título: era
+            decoración pura y además ponía un ícono flotando sobre el h1, que es
+            justo lo que hace que una landing se lea como plantilla. */}
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-tinta">
+          Pedí tu presupuesto de arenado
+        </h1>
+        <p className="mt-6 text-base md:text-lg leading-relaxed text-tinta-70 max-w-[62ch]">
+          Escribinos por WhatsApp y te respondemos rápido. Contanos qué necesitás
+          arenar —o mandanos una foto— y coordinamos una visita. La visita y el
+          presupuesto son sin costo y sin compromiso.
+        </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-tinta mb-4">
-            Pedí tu presupuesto de arenado
-          </h1>
-          <p className="text-base md:text-lg text-tinta-70 max-w-2xl mx-auto mb-8">
-            Escribinos por WhatsApp y te respondemos rápido. Contanos qué necesitás arenar
-            —o mandanos una foto— y coordinamos una visita. La visita y el presupuesto son
-            sin costo y sin compromiso.
-          </p>
-
+        <div className="mt-8">
           <WhatsAppCTA message={WPP_MSG} className={WPP_BTN}>
-            <MessageCircle className="w-6 h-6" />
+            <MessageCircle className="w-6 h-6" aria-hidden="true" />
             Escribinos por WhatsApp
           </WhatsAppCTA>
-
-          <p className="text-sm text-tinta-70 mt-4">
-            Visita y presupuesto sin costo · Respondemos rápido
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4 mt-14">
-          {puntos.map(({ icon: Icon, title, text }) => (
+        <p className="text-sm text-tinta-70 mt-4">
+          Visita y presupuesto sin costo · Respondemos rápido
+        </p>
+
+        {/* Los tres puntos pasan a renglones tabulados. Antes eran tres tarjetas
+            centradas con el ícono en un cuadradito arriba del título. */}
+        <div className="mt-14 border-t border-papel-linea">
+          {puntos.map(({ title, text }) => (
             <div
               key={title}
-              className="rounded-sm border border-papel-linea bg-papel p-6 text-center"
+              className="grid gap-x-10 gap-y-1 border-b border-papel-linea py-5 md:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]"
             >
-              <div className="inline-flex p-3 rounded-sm bg-papel-alt text-tinta mb-3">
-                <Icon className="w-6 h-6" />
-              </div>
-              <h2 className="font-semibold text-tinta mb-1">{title}</h2>
-              <p className="text-sm text-tinta-70 leading-relaxed">{text}</p>
+              <h2 className="font-semibold text-tinta">{title}</h2>
+              <p className="text-tinta-70 leading-relaxed max-w-[62ch]">{text}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 rounded-sm border border-papel-linea bg-papel/70 p-6">
-          <h2 className="font-semibold text-tinta mb-3">Qué nos ayuda saber</h2>
-          <ul className="grid sm:grid-cols-2 gap-2">
+        <div className="mt-12">
+          <h2 className="ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700 mb-4">
+            Qué nos ayuda saber
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-x-10 border-t border-papel-linea">
             {[
               "Qué hay que arenar (pileta, estructura, fachada, camión…)",
               "Tamaño aproximado o metros",
               "En qué zona está",
               "Para cuándo lo necesitás",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2 text-tinta-70 text-sm">
-                <CheckCircle2 className="w-4 h-4 text-tinta flex-shrink-0 mt-0.5" />
+              <li
+                key={item}
+                className="border-b border-papel-linea py-4 text-tinta-70"
+              >
                 {item}
               </li>
             ))}

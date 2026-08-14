@@ -27,7 +27,7 @@ import { H1 } from "@/components/common/system"
  */
 export function HeroSection() {
   return (
-    <section className="relative bg-tinta border-b-4 border-maquina-500">
+    <section className="relative bg-tinta border-b-2 border-maquina-500">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/services/arenadoIndustrial/Nave/IMG_2419.PNG"

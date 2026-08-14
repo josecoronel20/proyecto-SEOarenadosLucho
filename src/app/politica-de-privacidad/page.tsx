@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PoliticaPrivacidadPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 py-20 px-4">
+    <div className="min-h-screen bg-papel py-16 md:py-24 px-5 lg:px-8">
       <div className="container mx-auto max-w-4xl">
         <Card className="">
           <CardHeader className="text-center pb-6 border-b">

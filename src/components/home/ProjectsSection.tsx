@@ -51,8 +51,8 @@ const ProjectsSection = () => {
 
   if (allProjects.length === 0) {
     return (
-      <section className="py-20 bg-papel">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24 bg-papel">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="text-center py-12 text-tinta-70">
             No hay proyectos disponibles
           </div>
@@ -62,8 +62,8 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-papel max-w-7xl mx-auto">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-16 md:py-24 bg-papel">
+      <div className="container mx-auto px-5 lg:px-8">
         <H2 title="Mirá cómo queda: trabajos reales" />
 
         <div className="relative px-12 md:px-16">
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                     <div className="absolute inset-0 z-20 flex flex-col justify-end">
                       <CardHeader className="text-papel pb-4">
-                        <Badge variant="secondary" className="mb-3 w-fit bg-primary/80 text-papel border-primary">
+                        <Badge variant="secondary" className="mb-3 w-fit bg-maquina-500 text-tinta border-maquina-500 rounded-sm">
                           {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
                         </Badge>
                         <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-papel">

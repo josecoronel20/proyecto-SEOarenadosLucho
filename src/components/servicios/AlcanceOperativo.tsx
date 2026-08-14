@@ -1,4 +1,4 @@
-import { Users, LayoutGrid, Zap, Clock } from "lucide-react"
+import { Section, SectionHead } from "@/components/common/system"
 
 // ⚠️ El rendimiento de ~100 m²/día es real pero CONDICIONAL (dato del dueño,
 // 11/08/2026): aplica a superficies cómodas y planas —paredes, fachadas, piletas—.
@@ -6,52 +6,60 @@ import { Users, LayoutGrid, Zap, Clock } from "lucide-react"
 // Se publica siempre CON la condición: sin ella sería una promesa que el trabajo
 // más rentable (galpón, estructuras) no puede sostener. Por eso tampoco va en el
 // copy de Ads, donde no entra la aclaración (`marketing/18-copy-ads.md` §10).
+//
+// Va como tabla de capacidad —concepto a la izquierda, cifra a la derecha—, que
+// es exactamente la forma en la que un manual publica un rendimiento. Los cuatro
+// íconos en cuadradito se fueron: no había nada que un reloj o un rayo
+// explicaran mejor que la propia línea.
 const items = [
-  { icon: Users, text: "2 equipos propios, con compresores propios" },
   {
-    icon: LayoutGrid,
-    text: "En superficies planas y parejas —paredes, fachadas— cada equipo cubre alrededor de 100 m² por día",
+    concepto: "Equipos",
+    detalle: "Dos equipos propios, cada uno con su compresor",
+    cifra: "2",
   },
   {
-    icon: Clock,
-    text: "En estructuras metálicas complejas o con revestimientos muy duros lleva más: te damos el plazo en la visita",
+    concepto: "Superficie plana y pareja",
+    detalle: "Paredes, fachadas, piletas: cada equipo cubre alrededor de",
+    cifra: "100 m²/día",
   },
-  { icon: Zap, text: "Si el trabajo es grande, sumamos equipos para acortar los tiempos" },
+  {
+    concepto: "Estructuras complejas o revestimientos muy duros",
+    detalle: "Lleva más tiempo. El plazo te lo damos en la visita, con el trabajo a la vista",
+    cifra: "A medir",
+  },
+  {
+    concepto: "Trabajos grandes",
+    detalle: "Sumamos equipos en paralelo para acortar los tiempos",
+    cifra: "Escalable",
+  },
 ]
-
-const sectionClass = "py-10 md:py-14 border-b border-papel-linea bg-papel-alt"
-const titleClass = "text-2xl md:text-3xl font-bold text-tinta mb-2 text-center"
-const subtitleClass = "text-tinta font-semibold text-base mb-6 text-center"
-
-// Ajustes de layout para desktop (Tailwind utility classes)
-// - max-w-3xl a max-w-4xl para mayor balance visual y aire en desktop
-// - "ul" pasa a grid md:grid-cols-2 gap-x-8 gap-y-5 (espaciado horizontal + agrupación visual)
-// - text-base md:text-lg pt-1 md:pt-0.5 para aprovechar mejor el espacio visual en desktop
-// - iconBox: agrega md:p-3 para mejor escala y presencia de íconos en desktop
-
-const iconBoxClass = "flex-shrink-0 p-2 md:p-3 rounded-sm bg-papel-alt text-tinta mt-0.5"
-const iconSizeClass = "w-5 h-5 md:w-6 md:h-6"
-const textClass = "text-tinta-70 text-base md:text-lg leading-relaxed pt-1 md:pt-0.5"
 
 export function AlcanceOperativo() {
   return (
-    <section className={sectionClass} aria-label="Alcance operativo">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className={titleClass}>Arenado de estructuras y tanques: rápido y sin frenarte</h2>
-          <p className={subtitleClass}>Capacidad y equipos propios</p>
-          <ul className="space-y-3 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-5">
-            {items.map(({ icon: Icon, text }) => (
-              <li key={text} className="flex items-start gap-4">
-                <div className={iconBoxClass}>
-                  <Icon className={iconSizeClass} />
-                </div>
-                <span className={textClass}>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
+    <Section fondo="alt" aria-label="Alcance operativo">
+      <SectionHead
+        titulo="Arenado de estructuras y tanques: rápido y sin frenarte"
+        intro="Capacidad y equipos propios. Los rendimientos de abajo son reales, con la condición que los acompaña: no todo se arena al mismo ritmo."
+      />
+
+      <dl className="border-t border-papel-linea">
+        {items.map(({ concepto, detalle, cifra }) => (
+          <div
+            key={concepto}
+            className="grid gap-x-6 gap-y-1 border-b border-papel-linea py-5 md:grid-cols-[minmax(0,1fr)_9rem]"
+          >
+            <dt>
+              <span className="block font-semibold text-tinta">{concepto}</span>
+              <span className="mt-1 block text-tinta-70 leading-relaxed max-w-[60ch]">
+                {detalle}
+              </span>
+            </dt>
+            <dd className="ficha-num font-bold text-tinta md:text-right md:text-lg">
+              {cifra}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
   )
 }

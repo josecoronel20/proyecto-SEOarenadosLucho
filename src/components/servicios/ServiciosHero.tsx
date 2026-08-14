@@ -24,9 +24,9 @@ export function ServiciosHero() {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-primary-900/55" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-tinta via-tinta/90 to-tinta/75" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-20 py-14 md:py-24">
+      <div className="container mx-auto px-5 lg:px-8 relative z-20 py-16 md:py-24">
         <div className="max-w-3xl">
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Servicios" }]} />
 

@@ -20,7 +20,7 @@ export function CasoDestacado() {
       className="py-12 md:py-16 bg-papel-alt border-b border-papel-linea"
       aria-label="Caso destacado"
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-5 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm font-semibold text-tinta uppercase tracking-wide mb-2">
             Caso destacado

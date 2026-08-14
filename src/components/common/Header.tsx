@@ -29,7 +29,7 @@ export function Header() {
   return (
     // Filete en vez de sombra: en el sistema de catálogo las capas se separan
     // con una línea, no con una elevación difusa.
-    <header className="sticky top-0 left-0 right-0 z-50 bg-papel/95 backdrop-blur-sm border-b border-papel-linea">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-papel border-b border-papel-linea">
       <div className="container mx-auto px-5 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}

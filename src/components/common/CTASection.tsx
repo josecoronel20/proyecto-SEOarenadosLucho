@@ -27,7 +27,7 @@ const CTASection = ({
   subtitle = "Mandanos una foto por WhatsApp y te decimos qué necesita. La visita y el presupuesto son sin costo y sin compromiso.",
 }: CTASectionProps) => {
   return (
-    <section className="bg-tinta text-papel border-t-4 border-maquina-500">
+    <section className="bg-tinta text-papel border-t-2 border-maquina-500">
       <div className="container mx-auto px-5 lg:px-8 py-16 md:py-24">
         <h2 className={H2}>{title}</h2>
 

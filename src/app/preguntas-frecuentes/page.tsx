@@ -36,7 +36,7 @@ export default function PreguntasFrecuentesPage() {
       />
       {/* Hero */}
       <section className="py-12 md:py-16 bg-papel border-b border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl mx-auto">
+        <div className="container mx-auto px-5 lg:px-8 text-center max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-tinta mb-3">
             Preguntas frecuentes
           </h1>
@@ -47,8 +47,8 @@ export default function PreguntasFrecuentesPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="py-10 md:py-14">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-5 lg:px-8">
           <h2 className="sr-only">Preguntas y respuestas sobre arenado</h2>
           <FaqAccordion />
         </div>
@@ -56,7 +56,7 @@ export default function PreguntasFrecuentesPage() {
 
       {/* CTA */}
       <section className="py-12 md:py-16 bg-tinta">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl mx-auto">
+        <div className="container mx-auto px-5 lg:px-8 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-papel mb-3">
             ¿Tu pregunta no está en la lista?
           </h2>

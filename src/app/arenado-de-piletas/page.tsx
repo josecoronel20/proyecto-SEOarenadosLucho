@@ -135,8 +135,8 @@ export default function ArenadoDePiletasPage() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-primary-900/50" />
-        <div className="container mx-auto px-4 lg:px-8 relative z-20 py-14 md:py-24">
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-tinta via-tinta/90 to-tinta/75" />
+        <div className="container mx-auto px-5 lg:px-8 relative z-20 py-16 md:py-24">
           <div className="max-w-3xl">
             <Breadcrumbs
               items={[
@@ -184,7 +184,7 @@ export default function ArenadoDePiletasPage() {
 
       {/* 2. BANDA ESTACIONAL (rotable — HOY: invierno) */}
       <section className="bg-tinta">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
+        <div className="container mx-auto px-5 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
             <CalendarClock className="w-9 h-9 text-tinta-20 flex-shrink-0" />
             <div className="flex-1">
@@ -201,16 +201,16 @@ export default function ArenadoDePiletasPage() {
 
       {/* 3. SELECTOR DE PÚBLICO */}
       <section className="py-12 md:py-16 border-b border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4">
-            <a href="#que-es" className="group flex items-start gap-4 p-6 rounded-sm border border-papel-linea hover:border-tinta hover: transition-all">
+            <a href="#que-es" className="group flex items-start gap-4 p-6 rounded-sm border border-papel-linea hover:border-tinta transition-all">
               <div className="p-2.5 rounded-sm bg-papel-alt text-tinta flex-shrink-0"><Home className="w-6 h-6" /></div>
               <div>
                 <p className="font-bold text-tinta group-hover:text-tinta">Es mi pileta</p>
                 <p className="text-tinta-70 text-sm">Te explicamos simple qué es el arenado y te la dejamos lista para que tu pintor la termine.</p>
               </div>
             </a>
-            <a href="#contratistas" className="group flex items-start gap-4 p-6 rounded-sm border border-papel-linea hover:border-tinta hover: transition-all">
+            <a href="#contratistas" className="group flex items-start gap-4 p-6 rounded-sm border border-papel-linea hover:border-tinta transition-all">
               <div className="p-2.5 rounded-sm bg-papel-alt text-tinta flex-shrink-0"><HardHat className="w-6 h-6" /></div>
               <div>
                 <p className="font-bold text-tinta group-hover:text-tinta">Trabajo con piletas</p>
@@ -222,8 +222,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 4. ¿QUÉ ES EL ARENADO? */}
-      <section id="que-es" className="py-14 md:py-20 scroll-mt-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section id="que-es" className="py-16 md:py-24 scroll-mt-24">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-4">
               El arenado es como una lija potente para tu pileta
@@ -241,8 +241,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 5. EL PROBLEMA / GAP SIN JERGA */}
-      <section className="py-14 md:py-20 bg-papel-alt border-y border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24 bg-papel-alt border-y border-papel-linea">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-4">
@@ -280,8 +280,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 6. ANTES / DESPUÉS (prueba real) */}
-      <section className="py-14 md:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <p className="text-sm font-semibold text-tinta uppercase tracking-wide mb-2">Trabajos reales</p>
             <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-2">
@@ -318,8 +318,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 7. CÓMO TRABAJAMOS — 3 pasos in situ */}
-      <section className="py-14 md:py-20 bg-papel-alt border-y border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24 bg-papel-alt border-y border-papel-linea">
+        <div className="container mx-auto px-5 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-2 text-center">
             Vos no movés nada. Nosotros vamos con todo el equipo
           </h2>
@@ -341,8 +341,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 8. QUÉ INCLUYE / QUÉ NO */}
-      <section className="py-14 md:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-6">Qué hacemos y qué no (para que no haya sorpresas)</h2>
             <div className="grid md:grid-cols-2 gap-4">
@@ -361,8 +361,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 9. CONTRATISTAS (sección potente) */}
-      <section id="contratistas" className="py-14 md:py-20 bg-tinta scroll-mt-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section id="contratistas" className="py-16 md:py-24 bg-tinta scroll-mt-24">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2.5 rounded-sm bg-tinta text-papel"><HardHat className="w-6 h-6" /></div>
@@ -395,8 +395,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 10. POR QUÉ CONFIAR */}
-      <section className="py-14 md:py-20 border-b border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24 border-b border-papel-linea">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-3">Somos un equipo de oficio, no una promesa</h2>
             <p className="text-tinta-70 leading-relaxed mb-6">
@@ -415,8 +415,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 11. ZONAS AMBA */}
-      <section className="py-14 md:py-20 bg-papel-alt border-b border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24 bg-papel-alt border-b border-papel-linea">
+        <div className="container mx-auto px-5 lg:px-8">
           <div className="max-w-3xl mx-auto flex items-start gap-4">
             <div className="p-2.5 rounded-sm bg-papel-alt text-tinta flex-shrink-0"><MapPin className="w-6 h-6" /></div>
             <div>
@@ -435,8 +435,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 12. FAQ */}
-      <section className="py-14 md:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-5 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-8 text-center">
             Preguntas frecuentes sobre el arenado de piletas y piscinas
           </h2>
@@ -445,8 +445,8 @@ export default function ArenadoDePiletasPage() {
       </section>
 
       {/* 13. CTA FINAL */}
-      <section className="py-14 md:py-20 bg-tinta">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl mx-auto">
+      <section className="py-16 md:py-24 bg-tinta">
+        <div className="container mx-auto px-5 lg:px-8 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-papel mb-4">
             Mandanos una foto de tu pileta y te decimos qué necesita
           </h2>
@@ -466,7 +466,7 @@ export default function ArenadoDePiletasPage() {
 
       {/* 14. ENLAZADO INTERNO */}
       <section className="py-10 border-t border-papel-linea">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+        <div className="container mx-auto px-5 lg:px-8 text-center">
           <p className="text-tinta-70">
             ¿Además de la pileta tenés algo más para arenar? Hacemos{" "}
             <Link href="/servicios" className="text-tinta hover:underline font-medium">arenado en obra, industria y galpones</Link>

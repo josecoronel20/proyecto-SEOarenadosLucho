@@ -22,7 +22,7 @@ const items = [
 export default function TrustBar() {
   return (
     <section className="bg-papel" aria-label="Por qué trabajar con nosotros">
-      <div className="container mx-auto px-5 lg:px-8 py-10 md:py-14">
+      <div className="container mx-auto px-5 lg:px-8 py-12 md:py-16">
         <FranjaDatos items={items} />
       </div>
     </section>
