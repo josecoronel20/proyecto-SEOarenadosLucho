@@ -12,6 +12,26 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-11 (7) — ✅ Medición verificada de punta a punta (el bloqueante del encendido)
+
+- **Disparador:** la prueba manual de `contact_whatsapp` no aparecía en Tiempo real de GA4. Hipótesis inicial del dueño: *"el evento debe estar todavía atado a Framer"*.
+- **Diagnóstico, paso por paso:**
+
+| Eslabón | Cómo se verificó | Resultado |
+|---|---|---|
+| El sitio dispara el evento | `contact_whatsapp` y el número partido, encontrados **dentro del bundle JS publicado** en Vercel | ✅ |
+| El sitio carga GTM | `GTM-W63ZV9D9` presente 4 veces + `dataLayer` inicializado, **y ningún otro analytics** (ni resto de Framer) | ✅ |
+| El contenedor está publicado | Versión **5** (`form+emailConvertion`), publicada el **15/02/2026** | ✅ |
+| El activador matchea | **Vista previa de GTM**: el evento llega y `GA4 – Evento contact_whatsapp` figura en *Etiquetas activadas — Activado 1 vez* | ✅ |
+| La etiqueta apunta a la propiedad correcta | `Google Tag – GA4 Base` y la etiqueta de evento: ambas en **`G-3FPFJH0ZL3`**, que es el ID de medición del flujo de la propiedad **516818828** (la vinculada a Ads) | ✅ |
+| GA4 lo registra como **evento clave** | Informe de eventos: `contact_whatsapp` = **2 eventos, 2 eventos clave (100%)** | ✅ |
+
+- **Por qué no aparecía en Tiempo real:** con la **Vista previa de GTM activa, los eventos van a DebugView**, no a Tiempo real. Es una particularidad de GA4 que hace parecer rota una medición sana. La verificación correcta es DebugView (con vista previa) o `Informes → Interacción → Eventos` con rango "Hoy".
+- **Dos hipótesis descartadas por el camino:** (1) que el contenedor nunca se hubiera publicado — el historial de actividades mostraba una sola línea, pero la pestaña Versiones probó que hay 5 versiones publicadas; (2) que el evento siguiera atado a Framer — el bundle publicado y la vista previa lo desmintieron.
+- **🟠 Cabo suelto, no bloqueante:** la vista previa detectó **una segunda etiqueta de Google en la página, `G-S1N9PL0G40`**, que **no sale de ninguna de las dos etiquetas del contenedor**. Es una propiedad de GA4 recolectando en paralelo, probablemente resto de Framer. No afecta la medición de Ads (el evento va a `G-3FPFJH0ZL3`), pero hay que identificarla y sacarla en `GA4 → Administrador → Etiquetas de Google`.
+- **Estado del pre-flight:** ✅ el bloqueante de medición queda **cerrado**. Falta el resto de la Parte B de `19-checklist-encendido.md` (URLs, cero amplia, nivel Cuenta vacío) y después el encendido escalonado.
+- ⚠️ **Lo que esto todavía NO prueba:** que la conversión **llegue a Google Ads**. Eso solo se ve con tráfico pago, en el chequeo **D+1** — la conversión tiene que aparecer en la columna **"Conversiones"**, no solo en "Todas las conv.".
+
 ## 2026-08-11 (6) — ✅ Las 3 campañas construidas (ejecutado por el dueño)
 
 - **Estructura completa, en pausa y sin saldo:**

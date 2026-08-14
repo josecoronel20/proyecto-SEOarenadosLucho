@@ -138,16 +138,15 @@ Abrí en una ventana de incógnito: `/` · `/servicios` · `/arenado-de-piletas`
 Y una con parámetros, para confirmar que no se rompen:
 `https://www.arenadoslucho.com/arenado-de-piletas?utm_source=google&utm_medium=cpc&gclid=TEST123`
 
-## B2. ⭐ Probar la conversión de punta a punta
+## B2. ⭐ Probar la conversión de punta a punta — ✅ HECHO el 11/08/2026
 
-**Es el punto más importante de todo el checklist.** `contact_whatsapp` funciona en Analytics pero **nunca registró una conversión en Ads**, porque nunca hubo tráfico pago.
+Verificado eslabón por eslabón: el sitio dispara el evento (encontrado en el bundle publicado) · GTM lo recibe y la etiqueta se activa (Vista previa) · apunta a `G-3FPFJH0ZL3`, la propiedad vinculada a Ads · **GA4 lo registra como evento clave** (2 eventos, 100%).
 
-1. Entrá al sitio desde el celular.
-2. Tocá un botón de WhatsApp y **confirmá el cartel**.
-3. Se tiene que abrir WhatsApp con el mensaje escrito.
-4. En Analytics, `Informes → Tiempo real`, tiene que aparecer `contact_whatsapp` en minutos.
+⚠️ **Si hay que repetirlo alguna vez, no lo busques en Tiempo real.** Con la **Vista previa de GTM activa los eventos van a DebugView**, no a Tiempo real — parece roto y no lo está. Verificá en:
+- `Administrador → DebugView` (con vista previa activa), o
+- `Informes → Interacción → Eventos`, rango **Hoy** (tarda más, no falla)
 
-Si no aparece, **frenamos todo**: gastar sin medir es peor que no gastar.
+⚠️ **Esto NO prueba que la conversión llegue a Ads.** Eso solo se ve con tráfico pago: es el chequeo **C3**, a las 24–48 h del encendido.
 
 ## B3. Repasar el blindaje con captura
 
