@@ -27,8 +27,10 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200/80 shadow-sm">
-      <div className="container mx-auto px-4 lg:px-8">
+    // Filete en vez de sombra: en el sistema de catálogo las capas se separan
+    // con una línea, no con una elevación difusa.
+    <header className="sticky top-0 left-0 right-0 z-50 bg-papel border-b border-papel-linea">
+      <div className="container mx-auto px-5 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
@@ -36,8 +38,8 @@ export function Header() {
             <Image src="/images/logo-solo-azul.png" alt="Arenados Lucho" width={75} height={75} />
             </Link>
             <div className="hidden md:block">
-              <p className="text-xl font-bold text-primary-600">Arenados Lucho</p>
-              <p className="text-xs text-primary-600">Preparación y Limpieza de Superficies</p>
+              <p className="text-lg font-bold tracking-tight text-tinta">Arenados Lucho</p>
+              <p className="text-xs text-tinta-70">Preparación y limpieza de superficies</p>
             </div>
           </div>
 
@@ -45,10 +47,10 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-6">
             <ul className="flex items-center gap-4">
               {pages.map((page) => (
-                <li key={page.href} className="hover:scale-105 transition-all duration-300">
+                <li key={page.href}>
                   <Link
                     href={page.href}
-                    className="text-primary-600 hover:text-primary-400 transition-colors"
+                    className="text-sm font-medium text-tinta-70 hover:text-maquina-700 transition-colors"
                   >
                     {page.name}
                   </Link>
@@ -71,20 +73,22 @@ export function Header() {
             <Sheet>
               <SheetTrigger asChild>
                 <button className="p-2" aria-label="Abrir menú">
-                  <Menu className="w-6 h-6 text-primary-600" />
+                  <Menu className="w-6 h-6 text-tinta" />
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <SheetHeader>
-                  <SheetTitle className="text-left text-primary-600">Menú</SheetTitle>
+                  <SheetTitle className="text-left text-tinta">Menú</SheetTitle>
                 </SheetHeader>
                 <nav className="mt-8">
-                  <div className="flex flex-col gap-2">
+                  {/* Alineado a la izquierda y separado por filete: un menú
+                      centrado obliga a saltar el ojo en cada renglón. */}
+                  <div className="flex flex-col border-t border-papel-linea">
                     {pages.map((page) => (
                       <SheetClose key={page.href} asChild>
                         <Link
                           href={page.href}
-                          className="text-primary-600 hover:text-primary-400 transition-colors px-4 py-3 text-center font-medium hover:bg-primary-50 rounded"
+                          className="text-tinta hover:text-maquina-700 transition-colors py-3.5 font-medium border-b border-papel-linea"
                         >
                           {page.name}
                         </Link>
@@ -92,7 +96,7 @@ export function Header() {
                     ))}
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="mt-6">
                     <WhatsAppCTA
                       message={WPP_MSG.general}
                       className={`${WPP_BTN} w-full`}
@@ -100,7 +104,7 @@ export function Header() {
                       <MessageCircle className="w-5 h-5" />
                       Escribinos por WhatsApp
                     </WhatsAppCTA>
-                    <p className="text-xs text-gray-500 text-center mt-3">
+                    <p className="text-xs text-tinta-70 text-center mt-3">
                       Visita y presupuesto sin costo
                     </p>
                   </div>

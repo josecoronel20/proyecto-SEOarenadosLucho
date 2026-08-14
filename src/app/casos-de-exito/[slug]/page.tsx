@@ -60,12 +60,12 @@ export default async function CasoDetallePage({ params }: PageProps) {
   const otherProjects = getOtherProjects(slug, 3)
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 md:py-14">
+    <div className="min-h-screen bg-papel-alt py-12 md:py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casoSchema) }}
       />
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-5 lg:px-8">
         <Breadcrumbs
           items={[
             { name: "Inicio", href: "/" },
@@ -77,19 +77,19 @@ export default async function CasoDetallePage({ params }: PageProps) {
       </div>
 
       {/* Seguir viendo — enlazado interno (evita callejones sin salida) */}
-      <div className="container mx-auto px-4 lg:px-8 mt-12">
+      <div className="container mx-auto px-5 lg:px-8 mt-12">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Seguir viendo</h2>
+          <h2 className="text-xl font-bold text-tinta mb-4">Seguir viendo</h2>
           <div className="flex flex-wrap gap-3">
             <Link
               href="/servicios"
-              className="inline-flex items-center px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-600 transition-colors text-sm font-medium"
+              className="inline-flex items-center px-4 py-2 rounded-full border border-papel-linea text-tinta-70 hover:border-tinta hover:text-tinta transition-colors text-sm font-medium"
             >
               Ver servicios de arenado
             </Link>
             <Link
               href="/arenado-de-piletas"
-              className="inline-flex items-center px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-600 transition-colors text-sm font-medium"
+              className="inline-flex items-center px-4 py-2 rounded-full border border-papel-linea text-tinta-70 hover:border-tinta hover:text-tinta transition-colors text-sm font-medium"
             >
               Arenado de piletas
             </Link>
@@ -97,7 +97,7 @@ export default async function CasoDetallePage({ params }: PageProps) {
               <Link
                 key={p.id}
                 href={`/casos-de-exito/${p.idSection}`}
-                className="inline-flex items-center px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-600 transition-colors text-sm font-medium"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-papel-linea text-tinta-70 hover:border-tinta hover:text-tinta transition-colors text-sm font-medium"
               >
                 {p.title}
               </Link>
@@ -105,7 +105,7 @@ export default async function CasoDetallePage({ params }: PageProps) {
           </div>
         </div>
       </div>
-      <div className="container mx-auto pt-10  overflow-hidden">
+      <div className="container mx-auto pt-10 overflow-hidden">
       <CTASection /></div>
     </div>
   )

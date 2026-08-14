@@ -7,19 +7,29 @@
 //
 // ⚠️ El número NO vive acá: lo arma `WhatsAppCTA` partido en 2 strings (anti-scraping).
 
-/** CTA principal: verde WhatsApp, alto contraste. */
+// ⚠️ El verde es `green-700` (#15803d), no `green-600`. El 600 daba **3,3:1** con
+// texto blanco y WCAG AA pide 4,5:1 para texto normal — lo detectó el escáner de
+// Impeccable el 14/08/2026, repetido en todas las páginas. El 700 da **5,0:1**.
+// Es el botón de conversión del proyecto: no bajarlo de tono por estética.
+
+// Forma: bloque de esquina apenas redondeada, sin sombra. En un sitio que imita
+// un catálogo impreso la píldora flotante desentona; además el verde de WhatsApp
+// es acá el único color ajeno al sistema de dos tintas, y eso es a propósito —
+// el naranja es el mundo, el verde es la acción, y se distinguen de un vistazo.
+
+/** CTA principal: verde WhatsApp, contraste AA. */
 export const WPP_BTN =
-  "inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-colors shadow-lg"
+  "inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-green-700 hover:bg-green-800 text-papel font-semibold rounded-sm transition-colors"
 
 /** Variante grande para heros y cierres de página. */
 export const WPP_BTN_LG = `${WPP_BTN} md:text-lg px-8 py-4`
 
 /** Variante compacta para el header. */
 export const WPP_BTN_SM =
-  "inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm rounded-full transition-colors"
+  "inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-green-700 hover:bg-green-800 text-papel font-semibold text-sm rounded-sm transition-colors"
 
-/** Variante sobre fondo oscuro (video, hero primary-900). */
-export const WPP_BTN_ON_DARK = `${WPP_BTN_LG} ring-2 ring-white/30`
+/** Variante sobre fondo oscuro (hero, cierre en tinta). */
+export const WPP_BTN_ON_DARK = `${WPP_BTN_LG} ring-1 ring-white/25`
 
 /** Mensajes pre-cargados por intención. */
 export const WPP_MSG = {

@@ -1,14 +1,14 @@
 import Link from "next/link"
-import { Building2, Warehouse, Waves, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
 import { WPP_BTN, WPP_MSG } from "@/lib/wpp"
+import { Section, SectionHead, H3, MEDIDA } from "@/components/common/system"
 
 // Cada grupo lleva su propio mensaje pre-cargado: el CTA está justo donde la
 // persona se reconoce ("esto es lo mío"), y el chat arranca con el trabajo ya
 // nombrado en vez de un "hola" genérico que obliga a repreguntar todo.
 const grupos = [
   {
-    icon: Building2,
     title: "En obra y restauración",
     text: "Recuperamos superficies viejas o descascaradas y las dejamos listas para repintar o revestir, sin frenar la obra.",
     items: [
@@ -20,7 +20,6 @@ const grupos = [
     cta: "Consultar por un trabajo en obra",
   },
   {
-    icon: Warehouse,
     title: "Industria y galpones (PYME)",
     text: "Vamos con el equipo a tu galpón o predio: no trasladás nada. Sacamos el óxido y la pintura vieja y dejamos el metal listo para el nuevo revestimiento.",
     items: [
@@ -35,72 +34,75 @@ const grupos = [
 
 export function QueArenamos() {
   return (
-    <section className="py-12 md:py-16 bg-white border-b border-gray-200" aria-label="Qué arenamos">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            Arenado para obra, industria y galpones
-          </h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            Arenamos casi cualquier superficie que haya que dejar limpia y lista para pintar o
-            revestir — <strong>in situ, con equipo propio</strong>: vamos a tu obra, planta, galpón
-            o domicilio y no trasladás nada a ningún taller.
-          </p>
-        </div>
+    // Dos fichas tabuladas, no dos tarjetas. Antes cada grupo era una caja con
+    // un ícono dentro de otro cuadradito: una caja adentro de otra caja, que es
+    // el anidado que más delata plantilla. Ahora cada grupo es un bloque de
+    // catálogo separado por filete, con su lista de superficies como
+    // especificación y su CTA propio al pie.
+    <Section fondo="papel" aria-label="Qué arenamos">
+      <SectionHead
+        titulo="Arenado para obra, industria y galpones"
+        intro={
+          <>
+            Arenamos casi cualquier superficie que haya que dejar limpia y lista
+            para pintar o revestir —{" "}
+            <strong className="font-semibold text-tinta">in situ, con equipo propio</strong>:
+            vamos a tu obra, planta, galpón o domicilio y no trasladás nada a
+            ningún taller.
+          </>
+        }
+      />
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {grupos.map(({ icon: Icon, title, text, items, message, cta }) => (
-            <div
-              key={title}
-              className="flex flex-col rounded-xl border border-gray-200 bg-gray-50/50 p-6"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2.5 rounded-lg bg-primary-100 text-primary-700">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900">{title}</h3>
-              </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">{text}</p>
-              <ul className="space-y-2 flex-1">
+      <div className="ficha-lista border-y border-papel-linea">
+        {grupos.map(({ title, text, items, message, cta }, i) => (
+          <div key={title} className="py-8 md:py-10 md:grid md:grid-cols-[3rem_minmax(0,1fr)] md:gap-x-6">
+            <span className="ficha-num text-sm font-medium text-maquina-700 hidden md:block md:pt-1">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div>
+              <h3 className={H3}>{title}</h3>
+              <p className={`mt-2 leading-relaxed text-tinta-70 ${MEDIDA}`}>{text}</p>
+
+              <ul className="mt-5 grid sm:grid-cols-3 gap-px bg-papel-linea border border-papel-linea">
                 {items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-gray-700 text-sm md:text-base">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                  <li key={item} className="bg-papel px-4 py-3 text-sm text-tinta">
                     {item}
                   </li>
                 ))}
               </ul>
+
               <div className="mt-6">
-                <WhatsAppCTA message={message} className={`${WPP_BTN} w-full`}>
-                  <MessageCircle className="w-5 h-5" />
+                <WhatsAppCTA message={message} className={WPP_BTN}>
+                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
                   {cta}
                 </WhatsAppCTA>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Deriva la intención de piletas a su landing dedicada */}
-        <div className="max-w-4xl mx-auto mt-6">
-          <Link
-            href="/arenado-de-piletas"
-            className="flex items-center justify-between gap-4 rounded-xl border border-primary-200 bg-primary-50/50 p-5 hover:border-primary-400 transition-colors group"
-          >
-            <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-primary-100 text-primary-700">
-                <Waves className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="font-bold text-gray-900">¿Es una pileta o piscina?</p>
-                <p className="text-gray-600 text-sm">Tenemos una página dedicada al arenado de piletas.</p>
-              </div>
-            </div>
-            <span className="inline-flex items-center gap-1.5 text-primary-600 font-semibold group-hover:text-primary-700 flex-shrink-0">
-              Ver arenado de piletas
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </Link>
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+
+      {/* Deriva la intención de piletas a su landing dedicada */}
+      <Link
+        href="/arenado-de-piletas"
+        className="group mt-8 flex flex-wrap items-center justify-between gap-4 border-b border-papel-linea pb-6"
+      >
+        <div>
+          <p className="font-semibold text-tinta group-hover:text-maquina-700 transition-colors">
+            ¿Es una pileta o piscina?
+          </p>
+          <p className="text-tinta-70 text-sm mt-1">
+            Tenemos una página dedicada al arenado de piletas.
+          </p>
+        </div>
+        <span className="inline-flex items-center gap-1.5 font-semibold text-maquina-700">
+          Ver arenado de piletas
+          <ArrowRight
+            className="w-4 h-4 transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </span>
+      </Link>
+    </Section>
   )
 }

@@ -173,7 +173,7 @@ Slugs generados desde `projectsInfo.json` (campo `idSection`):
 | **CTA principal** | Ninguno comercial. |
 | **Conversiones** | Ninguna (solo el flotante global). |
 
-✅ **Actualizadas el 10/08/2026** al canal único WhatsApp: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp y que la medición no recibe PII. La política además tenía un **bug de render** (el bloque "Correo electrónico" del responsable mostraba la etiqueta sin valor) — corregido leyendo `BUSINESS.email` de `siteConfig.ts`.
+✅ **Actualizadas el 02/08/2026** al canal único WhatsApp: declaran que el sitio no tiene formularios ni pide datos, que el contacto ocurre dentro de WhatsApp y que la medición no recibe PII. La política además tenía un **bug de render** (el bloque "Correo electrónico" del responsable mostraba la etiqueta sin valor) — corregido leyendo `BUSINESS.email` de `siteConfig.ts`.
 
 ---
 

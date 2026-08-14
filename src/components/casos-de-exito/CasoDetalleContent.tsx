@@ -65,14 +65,14 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
   const hasImages = project.images && project.images.length > 0
 
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
+    <div className="space-y-8 max-w-[72ch] mx-auto">
       {/* Encabezado */}
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <Badge className="mb-3 bg-primary/90 text-white">
+          <Badge className="mb-3 bg-maquina-500 text-tinta rounded-sm">
             {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
           </Badge>
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-bold text-tinta leading-tight">
             {project.title}
           </h1>
         </div>
@@ -83,13 +83,13 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
         <CardHeader>
           <CardTitle asChild className="flex items-center gap-2 text-lg">
             <h2>
-              <Target className="w-5 h-5 text-primary-600" />
+              <Target className="w-5 h-5 text-tinta" />
               Resumen del proyecto
             </h2>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-gray-700 leading-relaxed">{project.overview}</p>
+          <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{project.overview}</p>
         </CardContent>
       </Card>
 
@@ -104,7 +104,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
               <CarouselContent className="-ml-0">
                 {project.images!.map((src, i) => (
                   <CarouselItem key={i} className="pl-0 basis-full">
-                    <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-100">
+                    <div className="relative aspect-video w-full rounded-sm overflow-hidden bg-papel-alt">
                       <Image
                         src={src}
                         alt={`${project.title} - Imagen ${i + 1}`}
@@ -133,7 +133,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardHeader>
             <CardTitle asChild className="flex items-center gap-2 text-lg">
               <h2>
-                <Building2 className="w-5 h-5 text-primary-600" />
+                <Building2 className="w-5 h-5 text-tinta" />
                 Contexto
               </h2>
             </CardTitle>
@@ -141,20 +141,20 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardContent className="space-y-4">
             {project.context.tipoEstructura && (
               <div>
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Tipo de estructura</p>
-                <p className="text-gray-700">{project.context.tipoEstructura}</p>
+                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Tipo de estructura</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.tipoEstructura}</p>
               </div>
             )}
             {project.context.entornoTrabajo && (
               <div>
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Entorno de trabajo</p>
-                <p className="text-gray-700">{project.context.entornoTrabajo}</p>
+                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Entorno de trabajo</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.entornoTrabajo}</p>
               </div>
             )}
             {project.context.objetivoCliente && (
               <div>
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Objetivo del cliente</p>
-                <p className="text-gray-700">{project.context.objetivoCliente}</p>
+                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Objetivo del cliente</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.objetivoCliente}</p>
               </div>
             )}
           </CardContent>
@@ -167,7 +167,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardHeader>
             <CardTitle asChild className="flex items-center gap-2 text-lg">
               <h2>
-                <ListChecks className="w-5 h-5 text-primary-600" />
+                <ListChecks className="w-5 h-5 text-tinta" />
                 Alcance del trabajo
               </h2>
             </CardTitle>
@@ -175,8 +175,8 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardContent>
             <ul className="space-y-2">
               {project.alcanceTrabajo.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-700">
-                  <span className="text-primary-600 mt-1.5">•</span>
+                <li key={i} className="flex items-start gap-2 text-tinta-70">
+                  <span className="text-tinta mt-1.5">•</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -198,7 +198,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
         <CardContent>
           <ul className="space-y-2">
             {project.desafiosOperativos.map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-gray-700">
+              <li key={i} className="flex items-start gap-2 text-tinta-70">
                 <span className="text-amber-600 mt-1.5">•</span>
                 <span>{item}</span>
               </li>
@@ -221,10 +221,10 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardContent className="space-y-4">
             {metodologiaEntries.map(([key, value]) => (
               <div key={key}>
-                <p className="text-sm font-semibold text-gray-700 mb-1">
+                <p className="text-sm font-semibold text-tinta-70 mb-1">
                   {METODOLOGIA_LABELS[key] ?? key}
                 </p>
-                <p className="text-gray-700 leading-relaxed">{value}</p>
+                <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{value}</p>
               </div>
             ))}
           </CardContent>
@@ -237,7 +237,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardHeader>
             <CardTitle asChild className="flex items-center gap-2 text-lg">
               <h2>
-                <FileCheck className="w-5 h-5 text-primary-600" />
+                <FileCheck className="w-5 h-5 text-tinta" />
                 Ficha del trabajo
               </h2>
             </CardTitle>
@@ -245,10 +245,10 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardContent className="space-y-3">
             {parametros.map(([key, value]) => (
               <div key={key}>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-sm font-semibold text-tinta-70">
                   {PARAMETROS_LABELS[key] ?? key}
                 </p>
-                <p className="text-gray-700">{value}</p>
+                <p className="text-tinta-70 max-w-[68ch]">{value}</p>
               </div>
             ))}
           </CardContent>
@@ -266,7 +266,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-gray-800 leading-relaxed">{project.resultados}</p>
+          <p className="text-tinta leading-relaxed max-w-[68ch]">{project.resultados}</p>
         </CardContent>
       </Card>
 
@@ -276,7 +276,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardHeader>
             <CardTitle asChild className="flex items-center gap-2 text-lg">
               <h2>
-                <Sparkles className="w-5 h-5 text-primary-600" />
+                <Sparkles className="w-5 h-5 text-tinta" />
                 Valor diferencial
               </h2>
             </CardTitle>
@@ -284,7 +284,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           <CardContent>
             <ul className="space-y-2">
               {project.valorDiferencial.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-700">
+                <li key={i} className="flex items-start gap-2 text-tinta-70">
                   <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </li>

@@ -1,35 +1,22 @@
-import { Shield, Building2, CircleDot, Wrench } from "lucide-react"
+import { FranjaDatos } from "@/components/common/system"
 
+/**
+ * Los cuatro hechos que dan respaldo, en la misma franja tabulada que usa la
+ * home. Antes eran cuatro cajas, cada una con su ícono en otro cuadradito
+ * adentro: caja dentro de caja, y ningún ícono aportaba información.
+ */
 const items = [
-  { icon: Shield, label: "Seguros vigentes" },
-  { icon: Building2, label: "Ejecución en obras públicas" },
-  { icon: CircleDot, label: "Superficie lista para pintar o revestir" },
-  { icon: Wrench, label: "Equipos propios" },
+  { dato: "Seguros", detalle: "Vigentes, para poder entrar a obra o planta" },
+  { dato: "Obra pública", detalle: "Trabajos ejecutados para el Estado" },
+  { dato: "Equipos propios", detalle: "Con sus compresores: no dependemos del lugar" },
+  { dato: "Lista para pintar", detalle: "Te entregamos la superficie limpia y pareja" },
 ]
-
-const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-gray-50"
-const iconBoxClass = "flex-shrink-0 p-2 rounded-lg bg-primary-100 text-primary-700"
-const iconSizeClass = "w-5 h-5"
 
 export function AutoridadRapida() {
   return (
-    <section className={sectionClass} aria-label="Autoridad técnica">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-          {items.map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-white"
-            >
-              <div className={iconBoxClass}>
-                <Icon className={iconSizeClass} />
-              </div>
-              <span className="text-sm md:text-base font-semibold text-gray-800">
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
+    <section className="bg-papel-alt" aria-label="Autoridad técnica">
+      <div className="container mx-auto px-5 lg:px-8 py-12 md:py-16">
+        <FranjaDatos items={items} />
       </div>
     </section>
   )

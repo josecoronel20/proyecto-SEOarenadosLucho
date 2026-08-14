@@ -77,13 +77,13 @@ export default function ServiciosPage() {
       <QueArenamos />
       <CasoDestacado />
       <AlcanceOperativo />
-      <ComoTrabajamos className="bg-white border-b border-gray-200" />
+      <ComoTrabajamos fondo="alt" />
       <LogisticaCoordinacion />
       <BloqueDiferencial />
       <AutoridadRapida />
-      <ZonasCobertura className="bg-white border-b border-gray-200" />
+      <ZonasCobertura fondo="papel" />
       <MitigacionRiesgo />
-      <FaqCorta items={faqsServicios} className="bg-gray-50" />
+      <FaqCorta items={faqsServicios} fondo="alt" />
       <CTASection
         message={WPP_MSG.obra}
         title="¿Tenés un trabajo en obra, planta o galpón?"

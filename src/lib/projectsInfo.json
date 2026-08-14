@@ -3,7 +3,7 @@
     "industrialProjects": [
       {
         "id": 1,
-        "title": "Arenado de Nave Ferroviaria",
+        "title": "Arenado de una nave ferroviaria",
         "category": "Industrial",
         "tipo": "obra-publica",
         "url": "/casos-de-exito/nave-ferroviaria",
@@ -17,53 +17,45 @@
           "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG"
         ],
-
-        "overview": "Proyecto de limpieza y preparación de superficie mediante arenado en estructura metálica de nave ferroviaria perteneciente a infraestructura de obra pública. La intervención tuvo como objetivo la remoción de óxido, contaminantes y recubrimientos deteriorados para permitir la correcta aplicación de un nuevo sistema de protección anticorrosiva, dejando la estructura lista para pintar y continuar el plan de mantenimiento.",
-
+        "overview": "Una nave ferroviaria de estructura metálica, con óxido y pintura vieja por todos lados. Fuimos a arenarla para sacarle todo eso y dejarla limpia y pareja, lista para que le dieran el antióxido y la pintura nueva. Es obra pública: se trabajó por sectores, coordinando con la dirección de obra para no cruzarnos con las otras tareas.",
         "context": {
-          "tipoEstructura": "Estructura metálica de gran escala con vigas, columnas y cerchas expuestas.",
-          "entornoTrabajo": "Entorno industrial activo con restricciones operativas.",
-          "objetivoCliente": "Recuperar la superficie y dejarla lista para pintar sin afectar el cronograma general de obra."
+          "tipoEstructura": "Nave metálica grande, con vigas, columnas y cerchas a la vista.",
+          "entornoTrabajo": "Obra en marcha, con otras tareas ocurriendo al mismo tiempo.",
+          "objetivoCliente": "Dejar la estructura lista para pintar sin atrasar el resto de la obra."
         },
-
         "alcanceTrabajo": [
-          "Inspección inicial y relevamiento del estado del sustrato.",
-          "Definición del alcance de limpieza según el estado de la estructura y el objetivo del cliente.",
-          "Arenado abrasivo en sectores definidos.",
-          "Control visual de calidad posterior a la limpieza.",
-          "Entrega de superficie lista para aplicar el sistema protector."
+          "Fuimos a verla y revisamos cómo estaba.",
+          "Definimos con el cliente hasta dónde había que limpiar.",
+          "Arenamos los sectores acordados.",
+          "Revisamos el resultado sector por sector.",
+          "Entregamos la superficie lista para pintar."
         ],
-
         "desafiosOperativos": [
-          "Presencia de corrosión y deterioro generalizado en distintos puntos estructurales.",
-          "Necesidad de sectorización para no interferir con otras tareas en obra.",
-          "Plazos de ejecución ajustados dentro del cronograma general."
+          "Óxido y pintura descascarada repartidos por toda la estructura.",
+          "Había otras tareas en marcha: no podíamos ocupar todo al mismo tiempo.",
+          "Los plazos de la obra eran ajustados."
         ],
-
         "metodologia": {
-          "planificacion": "Organización del trabajo por etapas y sectores previamente coordinados con dirección de obra.",
-          "coordinacion": "Trabajo conjunto con responsables del proyecto para definir ventanas de intervención y minimizar interferencias.",
-          "controlCalidad": "Control visual del resultado: chequeamos que la superficie quede limpia y pareja antes de liberarla.",
-          "seguridad": "Implementación de procedimientos operativos y uso de equipos de protección adecuados para trabajo en altura y en estructura metálica."
+          "planificacion": "Dividimos el trabajo en sectores y acordamos con la obra en qué orden íbamos.",
+          "coordinacion": "Hablamos con los responsables para definir qué días y horarios entrábamos a cada sector.",
+          "controlCalidad": "Antes de liberar un sector lo miramos: que no quede pintura floja ni óxido, y que la superficie esté pareja.",
+          "seguridad": "Trabajo en altura sobre estructura metálica, con los elementos de protección que corresponden."
         },
-
         "parametrosTecnicos": {
-          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
-          "objetivoSuperficie": "Estructura libre de óxido, contaminantes y recubrimientos deteriorados, lista para aplicar el nuevo sistema anticorrosivo."
+          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
+          "objetivoSuperficie": "Estructura sin óxido ni pintura descascarada, limpia y pareja, lista para que le apliquen el antióxido y la pintura."
         },
-
-        "resultados": "La estructura quedó limpia y preparada para la aplicación del nuevo sistema anticorrosivo, permitiendo continuar las etapas posteriores del proyecto sin desvíos en el cronograma previsto. La ejecución sectorizada y coordinada redujo interferencias operativas y aseguró cumplimiento en tiempo y forma.",
-
+        "resultados": "La estructura quedó limpia y lista para pintar, y la obra siguió con lo suyo sin atrasarse. Trabajar por sectores fue la clave: mientras arenábamos uno, ellos avanzaban en otro.",
         "valorDiferencial": [
-          "Enfoque orientado al cumplimiento de plazos de obra.",
-          "Coordinación activa con dirección de proyecto.",
-          "Trabajo prolijo, enfocado en dejar la estructura lista para pintar.",
-          "Organización operativa adaptada a entornos industriales activos."
+          "Nos organizamos alrededor del cronograma de la obra, no al revés.",
+          "Coordinamos día a día con la dirección de obra.",
+          "Trabajo prolijo: la estructura se entrega lista para pintar.",
+          "Estamos acostumbrados a trabajar con la obra en funcionamiento."
         ]
       },
       {
         "id": 2,
-        "title": "Arenado de Estructura de Carga para Veleros",
+        "title": "Arenado de una estructura de carga de veleros",
         "category": "Industrial",
         "tipo": "restauracion-mantenimiento",
         "url": "/casos-de-exito/estructura-naval",
@@ -80,54 +72,46 @@
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG"
         ],
-
-        "overview": "Intervención de limpieza y preparación de superficie mediante arenado en estructura metálica destinada al soporte y traslado de veleros. El objetivo fue remover corrosión y contaminantes generados por exposición constante a ambiente marítimo, dejando la superficie lista para aplicar un nuevo sistema de protección anticorrosiva.",
-
+        "overview": "Una estructura metálica que se usa para sostener y mover veleros, comida por el óxido de estar siempre al lado del agua salada. La arenamos para sacarle la corrosión y la suciedad y dejarla lista para pintar. Como el ambiente es húmedo, el óxido vuelve rápido: coordinamos con el que pintaba para que fuera pintando atrás nuestro.",
         "context": {
-          "tipoEstructura": "Estructura metálica portante con múltiples puntos de apoyo y zonas de difícil acceso.",
-          "entornoTrabajo": "Entorno naval con presencia constante de humedad y salinidad.",
-          "objetivoCliente": "Dejar la estructura limpia y lista para pintar sin afectar la operatividad logística del movimiento de embarcaciones."
+          "tipoEstructura": "Estructura metálica de carga, con varios puntos de apoyo y zonas incómodas de alcanzar.",
+          "entornoTrabajo": "Zona naval, con humedad y salitre todo el tiempo.",
+          "objetivoCliente": "Dejar la estructura lista para pintar sin frenar el movimiento de embarcaciones."
         },
-
         "alcanceTrabajo": [
-          "Inspección visual inicial y relevamiento del grado de corrosión.",
-          "Definición del alcance de limpieza según el estado de la estructura y el recubrimiento a aplicar.",
-          "Arenado abrasivo en superficies estructurales y puntos críticos.",
-          "Control visual del resultado de la limpieza.",
-          "Liberación de superficie lista para aplicar el sistema protector."
+          "Fuimos a verla y revisamos cuánto óxido tenía.",
+          "Definimos con el cliente hasta dónde había que limpiar.",
+          "Arenamos la estructura y los puntos más comprometidos.",
+          "Revisamos el resultado.",
+          "Entregamos la superficie lista para pintar."
         ],
-
         "desafiosOperativos": [
-          "Corrosión acelerada por exposición a ambiente marino.",
-          "Riesgo de recontaminación superficial por humedad ambiental.",
-          "Geometría estructural compleja con ángulos y refuerzos internos.",
-          "Necesidad de coordinación precisa para no interrumpir operaciones portuarias."
+          "El aire salado oxida rápido: todo lo que se limpia hay que pintarlo pronto.",
+          "Con esa humedad, una superficie recién arenada se puede volver a manchar sola.",
+          "La estructura tiene ángulos y refuerzos internos difíciles de alcanzar.",
+          "Había que entrar sin frenar el movimiento de los barcos."
         ],
-
         "metodologia": {
-          "planificacion": "Organización del trabajo por sectores definidos según geometría y puntos de carga.",
-          "coordinacion": "Trabajo conjunto con responsables de logística naval y equipo aplicador del recubrimiento.",
-          "controlContaminacion": "Ejecución por etapas con aplicación posterior del sistema protector en ventanas controladas para minimizar el riesgo de oxidación por humedad, dando una última limpieza rápida a las primeras zonas ya intervenidas al cierre del proyecto.",
-          "controlCalidad": "Control visual del resultado antes de liberar cada sector: superficie limpia y pareja."
+          "planificacion": "Dividimos la estructura por sectores según su forma y los puntos donde apoya la carga.",
+          "coordinacion": "Coordinamos con los responsables del movimiento de barcos y con el equipo que pintaba.",
+          "controlContaminacion": "Fuimos por etapas y el pintor iba atrás nuestro, para que nada quedara mucho tiempo a la intemperie. A las primeras zonas les dimos una pasada rápida al final, antes de cerrar.",
+          "controlCalidad": "Antes de liberar cada sector lo revisamos: limpio, parejo y sin material flojo."
         },
-
         "parametrosTecnicos": {
-          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
-          "condicionFinal": "Superficie limpia, libre de óxido, cascarilla y contaminantes, lista para aplicar el sistema anticorrosivo."
+          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
+          "condicionFinal": "Superficie limpia, sin óxido, sin cascarilla y sin suciedad, lista para pintar."
         },
-
-        "resultados": "La estructura quedó preparada bajo condiciones controladas, permitiendo la aplicación inmediata del sistema de protección y reduciendo riesgos de deterioro prematuro. La coordinación operativa evitó interrupciones en la logística de traslado de embarcaciones.",
-
+        "resultados": "La estructura quedó lista y se pudo pintar enseguida, que era lo importante para que no se volviera a oxidar. Y el movimiento de embarcaciones no se frenó en ningún momento.",
         "valorDiferencial": [
-          "Experiencia en entornos de alta agresividad ambiental.",
-          "Coordinación con equipos de recubrimiento para evitar recontaminación.",
-          "Intervenciones planificadas sin afectar operatividad.",
-          "Trabajo cuidado para entregar la superficie lista para pintar sin recontaminación."
+          "Sabemos trabajar donde el óxido vuelve rápido.",
+          "Nos coordinamos con el que pinta para que no se pierda lo hecho.",
+          "Entramos sin frenar la operación del lugar.",
+          "Entregamos la superficie lista para pintar y sin volver a ensuciarse."
         ]
       },
       {
         "id": 3,
-        "title": "Arenado de Pasarela Metálica Urbana",
+        "title": "Arenado de una pasarela peatonal",
         "category": "Industrial",
         "tipo": "obra-publica",
         "url": "/casos-de-exito/pasarela-urbana",
@@ -143,54 +127,46 @@
           "/images/services/arenadoIndustrial/Pasarela/IMG_2436.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG"
         ],
-
-        "overview": "Proyecto de limpieza y preparación de superficie mediante arenado en pasarela metálica perteneciente a infraestructura urbana. La intervención estuvo orientada a la remoción de corrosión y recubrimientos deteriorados para dejar la estructura lista para aplicar un nuevo sistema de protección, asegurando continuidad operativa y condiciones seguras para el tránsito peatonal.",
-
+        "overview": "Una pasarela metálica en plena calle, oxidada y con la pintura vieja saltada de años de sol y lluvia. La arenamos para dejarla lista para pintar de nuevo. Lo complicado no era el metal: era que abajo pasaba gente todo el día, así que hubo que trabajar por tramos y cuidar el polvo.",
         "context": {
-          "tipoEstructura": "Pasarela metálica elevada con barandas, vigas estructurales y superficies expuestas al tránsito continuo.",
-          "entornoTrabajo": "Zona urbana con circulación peatonal activa y proximidad a espacios públicos.",
-          "objetivoCliente": "Recuperar la superficie de la estructura y dejarla lista para pintar sin comprometer la seguridad ni generar demoras en la rehabilitación del sector."
+          "tipoEstructura": "Pasarela metálica elevada, con barandas y vigas expuestas al uso diario.",
+          "entornoTrabajo": "Zona urbana, con gente circulando y espacios públicos al lado.",
+          "objetivoCliente": "Dejar la pasarela lista para pintar sin cortar el paso ni demorar la habilitación."
         },
-
         "alcanceTrabajo": [
-          "Relevamiento inicial del estado de corrosión y adherencia de recubrimientos existentes.",
-          "Definición del alcance de limpieza según el estado de la pasarela y el plan de mantenimiento.",
-          "Arenado abrasivo en sectores definidos de estructura portante y barandas.",
-          "Control visual del resultado de la limpieza.",
-          "Liberación de superficie lista para aplicar el sistema protector."
+          "Revisamos cómo estaban el óxido y la pintura existente.",
+          "Definimos con el cliente hasta dónde había que limpiar.",
+          "Arenamos la estructura portante y las barandas, por tramos.",
+          "Revisamos el resultado de cada tramo.",
+          "Entregamos la superficie lista para pintar."
         ],
-
         "desafiosOperativos": [
-          "Exposición prolongada a condiciones climáticas y desgaste por uso intensivo.",
-          "Restricciones urbanas vinculadas a ruido y dispersión de partículas.",
-          "Necesidad de mantener condiciones seguras para la circulación peatonal.",
-          "Plazos ajustados para habilitación del sector intervenido."
+          "Años de sol, lluvia y uso: óxido y pintura saltada en casi toda la estructura.",
+          "En plena zona urbana hay que cuidar el ruido y que el polvo no se vaya para cualquier lado.",
+          "Abajo seguía pasando gente: la seguridad primero.",
+          "Los plazos para devolver el sector habilitado eran cortos."
         ],
-
         "metodologia": {
-          "sectorizacion": "Planificación por etapas priorizando los sectores críticos y de mayor exposición.",
-          "coordinacionInstitucional": "Trabajo conjunto con el organismo responsable para definir ventanas de intervención y medidas preventivas.",
-          "controlImpacto": "Organización operativa orientada a minimizar dispersión de polvo y reducir tiempos de exposición del área intervenida.",
-          "controlCalidad": "Control visual del resultado en cada sector antes de habilitarlo."
+          "sectorizacion": "Fuimos por tramos, empezando por los que estaban peor y más expuestos.",
+          "coordinacionInstitucional": "Coordinamos con el organismo a cargo qué días entrábamos y qué había que vallar.",
+          "controlImpacto": "Trabajamos conteniendo el polvo y dejando cada tramo el menor tiempo posible fuera de servicio.",
+          "controlCalidad": "Revisamos cada tramo antes de habilitarlo de nuevo."
         },
-
         "parametrosTecnicos": {
-          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
-          "objetivoSuperficie": "Superficie libre de óxido y contaminantes, lista para aplicar el nuevo sistema de protección."
+          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
+          "objetivoSuperficie": "Superficie sin óxido ni suciedad, limpia y pareja, lista para pintar."
         },
-
-        "resultados": "La pasarela quedó preparada para la aplicación del nuevo sistema de protección dentro del cronograma establecido, permitiendo la rehabilitación progresiva del sector intervenido y manteniendo condiciones seguras para el entorno urbano.",
-
+        "resultados": "La pasarela quedó lista para pintar dentro del plazo, y se fue habilitando por tramos a medida que avanzábamos. En ningún momento se cortó el paso de la gente.",
         "valorDiferencial": [
-          "Experiencia en intervenciones sobre infraestructura urbana activa.",
-          "Planificación orientada a minimizar impacto en circulación peatonal.",
-          "Cumplimiento de plazos en coordinación con organismos públicos.",
-          "Trabajo prolijo, orientado a dejar la estructura lista para pintar."
+          "Estamos acostumbrados a trabajar en la vía pública, con gente alrededor.",
+          "Organizamos el trabajo para molestar lo menos posible a los que circulan.",
+          "Cumplimos los plazos acordados con el organismo.",
+          "Trabajo prolijo: la estructura se entrega lista para pintar."
         ]
       },
       {
         "id": 4,
-        "title": "Arenado Exterior de Tanques Industriales",
+        "title": "Arenado de tanques industriales por fuera",
         "category": "Industrial",
         "tipo": "restauracion-mantenimiento",
         "url": "/casos-de-exito/tanque-industrial",
@@ -203,48 +179,41 @@
           "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
           "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG"
         ],
-        "overview": "Intervención de limpieza y preparación superficial mediante arenado en tanques industriales, enfocada en la remoción de corrosión y recubrimientos deteriorados en su cara exterior. El objetivo fue dejar la superficie lista para pintar y renovar la protección sin interferir en la operación productiva principal del establecimiento.",
-
+        "overview": "Tanques de una planta, oxidados y con la pintura vieja saltada por fuera. Los arenamos por afuera para dejarlos listos para pintar y que aguanten unos cuantos años más. Los movimos a un sector apartado del predio para poder trabajar tranquilos sin frenar la producción.",
         "context": {
-          "tipoEstructura": "Tanques metálicos de almacenamiento con exposición directa a condiciones ambientales.",
-          "entornoTrabajo": "Predio industrial activo con necesidad de mantener continuidad operativa.",
-          "objetivoCliente": "Renovar la protección exterior con criterio funcional, priorizando eficiencia operativa y cumplimiento de plazos."
+          "tipoEstructura": "Tanques metálicos de almacenamiento, a la intemperie.",
+          "entornoTrabajo": "Planta industrial en funcionamiento, que no podía parar.",
+          "objetivoCliente": "Renovar la protección de afuera con criterio práctico, sin frenar la producción y cumpliendo el plazo."
         },
-
         "alcanceTrabajo": [
-          "Inspección visual inicial del estado de corrosión y adherencia del recubrimiento existente.",
-          "Definición del alcance de limpieza según el estado de los tanques y el objetivo del cliente.",
-          "Arenado abrasivo en superficie exterior completa, incluyendo zonas críticas de apoyo.",
-          "Control visual del resultado de la limpieza.",
-          "Liberación de superficie lista para aplicar el sistema protector."
+          "Revisamos cómo estaban el óxido y la pintura existente.",
+          "Definimos con el cliente hasta dónde había que limpiar.",
+          "Arenamos toda la cara exterior, incluidas las zonas de apoyo.",
+          "Revisamos el resultado.",
+          "Entregamos la superficie lista para pintar."
         ],
-
         "desafiosOperativos": [
-          "Corrosión localizada en zonas de contacto con suelo y sectores inferiores.",
-          "Necesidad de ejecutar trabajos sin afectar la dinámica productiva.",
-          "Intervención con enfoque funcional más que estético.",
-          "Optimización del espacio para permitir tareas en un sector aislado."
+          "El óxido estaba concentrado abajo, donde el tanque toca el piso.",
+          "Había que hacerlo sin frenar la producción de la planta.",
+          "El objetivo era que durara, no que quedara lindo: se trabajó con ese criterio.",
+          "Hubo que acomodar el espacio para poder trabajar en un sector aislado."
         ],
-
         "metodologia": {
-          "reubicacionControlada": "Traslado de los tanques a un área abierta y delimitada dentro del predio para aislar el proceso.",
-          "sectorizacion": "Organización del trabajo por etapas para optimizar tiempos y recursos.",
-          "controlImpacto": "Intervención en zona apartada para reducir dispersión de partículas y evitar interferencias operativas.",
-          "controlCalidad": "Control visual del resultado antes de liberar la superficie."
+          "reubicacionControlada": "Movimos los tanques a un sector abierto y delimitado del predio para trabajar aparte.",
+          "sectorizacion": "Fuimos por etapas para aprovechar el tiempo y los equipos.",
+          "controlImpacto": "Al estar apartados, el polvo no molestaba al resto de la planta.",
+          "controlCalidad": "Revisamos el resultado antes de entregar cada tanque."
         },
-
         "parametrosTecnicos": {
-          "tipoIntervencion": "Limpieza y preparación de superficie por arenado",
-          "objetivoSuperficie": "Superficie exterior libre de óxido y pintura deteriorada, lista para aplicar el sistema de protección."
+          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
+          "objetivoSuperficie": "Cara exterior sin óxido ni pintura saltada, limpia y pareja, lista para pintar."
         },
-
-        "resultados": "Los tanques quedaron exteriormente preparados y protegidos dentro del plazo previsto, permitiendo extender su vida útil operativa sin afectar la producción del establecimiento. La intervención aislada garantizó control logístico y eficiencia en la ejecución.",
-
+        "resultados": "Los tanques quedaron listos para pintar en el plazo previsto y la planta no paró un día. Trabajar aparte fue lo que lo hizo posible.",
         "valorDiferencial": [
-          "Experiencia en mantenimiento industrial sin detener operaciones.",
-          "Organización operativa orientada a eficiencia y cumplimiento.",
-          "Enfoque práctico, orientado a dejar la superficie lista para pintar.",
-          "Enfoque funcional adaptado al nivel real de exigencia del proyecto."
+          "Trabajamos en plantas en funcionamiento sin hacerlas parar.",
+          "Nos organizamos para cumplir el plazo que se acordó.",
+          "Criterio práctico: la superficie se entrega lista para pintar.",
+          "Ajustamos el trabajo a lo que el cliente realmente necesitaba."
         ]
       },
       {
@@ -262,40 +231,32 @@
           "/images/services/arenadoParticular/Piletas/IMG_2478.PNG",
           "/images/services/arenadoParticular/Piletas/IMG_2479.PNG"
         ],
-
         "overview": "Arenado de una pileta de hormigón con la pintura vieja descascarada. Fuimos con el equipo al domicilio y sacamos toda la pintura y el material flojo, dejando el hormigón limpio y parejo, listo para repintar o revestir. El pintado o revestimiento final no está incluido en el trabajo de arenado.",
-
         "context": {
-          "tipoEstructura": "Pileta de hormigón con pintura y revestimiento deteriorados.",
+          "tipoEstructura": "Pileta de hormigón pintada, con la pintura descascarada.",
           "entornoTrabajo": "Domicilio particular, coordinando horarios y contención de polvo.",
           "objetivoCliente": "Sacar toda la pintura vieja para poder repintar o revestir la pileta."
         },
-
         "alcanceTrabajo": [
-          "Revisión del estado de la pintura y el revestimiento existente.",
+          "Revisión del estado de la pintura existente.",
           "Arenado de paredes y piso de la pileta para remover pintura y material flojo.",
           "Limpieza final de la superficie.",
           "Entrega de la pileta lista para repintar o revestir."
         ],
-
         "desafiosOperativos": [
           "Pintura vieja muy adherida y descascarada en distintos sectores.",
           "Trabajo en un domicilio, coordinando horarios y contención de polvo."
         ],
-
         "metodologia": {
           "planificacion": "Coordinación de día y horario con el dueño de la casa.",
           "controlImpacto": "Trabajo por sectores conteniendo el polvo para no afectar el resto de la casa.",
           "controlCalidad": "Control visual de que no quede pintura floja antes de entregar la pileta."
         },
-
         "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para remover pintura y revestimiento viejo",
+          "tipoIntervencion": "Arenado para remover la pintura vieja",
           "objetivoSuperficie": "Hormigón limpio y parejo, listo para repintar o revestir."
         },
-
         "resultados": "El arenado de una pileta estándar es un trabajo rápido: dejamos el hormigón sin pintura vieja ni material flojo, limpio y parejo, listo para que el cliente lo repinte o revista. El tiempo final depende del tamaño y el estado de cada pileta. El pintado o revestimiento no está incluido.",
-
         "valorDiferencial": [
           "Trabajo in situ: fuimos con el equipo al domicilio.",
           "Removimos toda la pintura vieja de una sola vez, sin lijado a mano.",

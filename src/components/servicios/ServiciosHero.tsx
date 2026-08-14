@@ -13,7 +13,7 @@ import { WPP_BTN_ON_DARK, WPP_MSG } from "@/lib/wpp"
  */
 export function ServiciosHero() {
   return (
-    <section className="relative bg-primary-900">
+    <section className="relative bg-tinta">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/services/arenadoIndustrial.PNG"
@@ -24,27 +24,23 @@ export function ServiciosHero() {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-primary-900/55" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-tinta via-tinta/90 to-tinta/75" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-20 py-14 md:py-24">
+      <div className="container mx-auto px-5 lg:px-8 relative z-20 py-16 md:py-24">
         <div className="max-w-3xl">
           <Breadcrumbs items={[{ name: "Inicio", href: "/" }, { name: "Servicios" }]} />
 
-          <p className="text-primary-200 font-semibold text-sm md:text-base mb-3">
-            Obra · Industria · Galpones · Buenos Aires y AMBA
-          </p>
-
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-papel">
             Arenado industrial y en obra en Buenos Aires y AMBA
           </h1>
 
-          <p className="mt-5 text-base md:text-xl text-white/95 leading-relaxed max-w-2xl drop-shadow-md">
+          <p className="mt-5 text-base md:text-xl text-tinta-20 leading-relaxed max-w-[60ch]">
             Arenamos estructuras metálicas, tanques, silos, camiones, hierros, paredes y fachadas
             <strong className="font-semibold"> en tu obra, tu planta o tu galpón</strong>. Vamos con
             equipo y compresores propios: no trasladás nada y no dependemos de la energía del lugar.
           </p>
 
-          <p className="mt-3 text-white/90 font-medium">
+          <p className="mt-3 text-tinta-20 font-medium">
             Sacamos óxido y pintura vieja y te lo dejamos listo para pintar o revestir.
           </p>
 
@@ -55,7 +51,7 @@ export function ServiciosHero() {
             </WhatsAppCTA>
             <Link
               href="/casos-de-exito"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/90 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/90 text-papel font-semibold rounded-full hover:bg-papel/10 transition-colors"
             >
               Ver trabajos reales
               <ArrowRight className="w-4 h-4" />

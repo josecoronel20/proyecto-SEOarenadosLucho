@@ -28,8 +28,8 @@ export function FiltroTipo({ value, onChange }: FiltroTipoProps) {
           onClick={() => onChange(opt.value)}
           className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             value === opt.value
-              ? "bg-primary-600 text-white"
-              : "bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+              ? "bg-tinta text-papel"
+              : "bg-papel border border-papel-linea text-tinta-70 hover:bg-papel-alt"
           }`}
         >
           {opt.label}

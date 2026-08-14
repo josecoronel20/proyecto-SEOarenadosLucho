@@ -1,3 +1,9 @@
+> ⛔ **CORRECCIÓN 14/08/2026 — el alcance real es más chico que el que describe este blueprint.** Confirmado por el dueño: **se arena pintura sobre hormigón y nada más**. No se remueven revestimientos adheridos (venecitas, mosaico) ni se trabajan piletas de fibra de vidrio.
+>
+> Este documento dice en varios lugares "sacar toda la pintura **y el revestimiento viejo**". **Es falso** y estuvo publicado. Ya se corrigió en la landing, en la FAQ, en el caso de éxito y en el copy de anuncios; el blueprint se conserva como referencia de **estructura**, no de alcance.
+>
+> ✅ Sigue siendo correcto decir "lista para pintar o revestir": describe lo que hace el cliente después, no lo que hacemos nosotros.
+
 # Mapa de la landing IDEAL — `/arenado-de-piletas`
 
 > **Blueprint de referencia (27/07/2026).** Diseñado **DESDE CERO** — NO parte de la landing actual. Es el **norte** para después comparar la implementación contra este mapa y alinearla. Síntesis de 3 diseños independientes (conversión-dueño de casa · SEO/long-tail del gap sin jerga · B2B contratista), que convergieron fuerte.

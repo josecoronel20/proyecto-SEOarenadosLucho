@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { FaqAccordion } from "@/components/preguntas-frecuentes/FaqAccordion"
+import { Section, SectionHead } from "@/components/common/system"
 import type { Faq } from "@/lib/faqs"
 
 interface FaqCortaProps {
   items: Faq[]
   title?: string
-  className?: string
+  fondo?: "papel" | "alt"
 }
 
 /**
@@ -23,27 +24,23 @@ interface FaqCortaProps {
 export function FaqCorta({
   items,
   title = "Preguntas frecuentes",
-  className = "bg-white",
+  fondo = "papel",
 }: FaqCortaProps) {
   return (
-    <section className={`py-14 md:py-20 ${className}`} aria-labelledby="faq">
-      <div className="container mx-auto px-4 lg:px-8">
-        <h2 id="faq" className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-          {title}
-        </h2>
+    <Section fondo={fondo} aria-labelledby="faq">
+      <SectionHead id="faq" titulo={title} />
 
-        <FaqAccordion items={items} />
+      <FaqAccordion items={items} />
 
-        <div className="text-center mt-8">
-          <Link
-            href="/preguntas-frecuentes"
-            className="inline-flex items-center gap-1.5 text-primary-600 hover:text-primary-700 font-semibold"
-          >
-            Ver todas las preguntas frecuentes
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+      <div className="mt-10">
+        <Link
+          href="/preguntas-frecuentes"
+          className="inline-flex items-center gap-1.5 font-semibold text-maquina-700 hover:text-maquina-600 underline underline-offset-4"
+        >
+          Ver todas las preguntas frecuentes
+          <ArrowRight className="w-4 h-4" aria-hidden="true" />
+        </Link>
       </div>
-    </section>
+    </Section>
   )
 }

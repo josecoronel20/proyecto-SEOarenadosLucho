@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="text-lg text-gray-600">Loading...</div>
+      <div className="text-lg text-tinta-70">Loading...</div>
     </div>
   );
 }

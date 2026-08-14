@@ -12,6 +12,79 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 (4) — Rediseño visual completo: el sitio deja de parecer una plantilla
+
+- **Qué se hizo:** se reemplazó **todo el sistema visual** del sitio, a pedido del dueño ("que el estilo en todo el sitio sea uniforme… auditoría completa por cada página"). Cuatro permisos dados de entrada: rediseño visual completo, tipografía a criterio, reescribir los textos de los casos, y mergear y desplegar al terminar.
+- **El diagnóstico:** auditadas las 9 páginas con motor de navegador, escritorio y celular. **Convivían tres lenguajes visuales**: seis alturas de sección distintas, tres escalas de titular y tres formas de tarjeta. El denominador común eran **tarjetas de ícono + título + texto en cuadrícula** — el patrón que sale de cualquier generador. Para un negocio que vende **oficio**, leerse como hecho a máquina resta: es exactamente lo contrario de lo que se está vendiendo.
+- **El mundo nuevo: catálogo de repuestos / manual de mantenimiento industrial.** Papel técnico frío, dos tintas y todo tabulado con filetes. La regla que lo gobierna: **se separa con filetes, no con cajas**. Entra más información en la misma pantalla y se lee como el papel que este oficio de verdad genera.
+- **Tipografía: Archivo, de Omnibus-Type — una fundición de Buenos Aires.** Auto-alojada con `next/font`: sin pedido a Google, sin salto de texto y sin latencia de tercero. Antes la voz de display era la fuente del sistema, que para una página de marca es un default, no una decisión.
+- **Color con contrastes MEDIDOS, no estimados** (la lección de la entrada anterior). La regla que no se negocia: **sobre naranja va texto tinta, nunca blanco** — blanco da 3,75:1 y AA pide 4,5:1; tinta sobre el mismo naranja da 4,85:1. El verde de WhatsApp queda como **único color ajeno al sistema, a propósito**: el naranja es el mundo, el verde es la acción.
+- **Resultado del detector: de 116 hallazgos a 8 reales** (escritorio). Desaparecieron por completo `low-contrast` (26), `icon-tile-stack` (6), `side-tab` (4) y `nested-cards` (17).
+- **Hallazgos que valían plata, no solo estética:**
+  - El **header** tenía fondo semitransparente con desenfoque: el nombre de la marca medía **1,2:1** contra lo que pasara por detrás. Pasó a opaco.
+  - El **carrusel de la home** tenía texto blanco sobre tarjeta blanca, legible solo gracias a la foto de fondo. Si la imagen tardaba o fallaba, quedaba invisible.
+  - Se sacaron **1,1 MB de video decorativo** que se descargaban en el cierre de cada página.
+  - Las **páginas legales** llegaban a **106 caracteres por renglón** — el hallazgo más repetido del sitio.
+- **Copy: los cuatro casos industriales pasaron a criollo.** Estaban en lenguaje de pliego ("intervención de limpieza y preparación de superficie", "sustrato", "continuidad operativa"). Los casos son la prueba social que mira el que ya está decidiendo, y estaban escritos para un evaluador de licitación que no existe. **No se cambió ningún hecho**, y se verificó que no entraran promesas técnicas (cero menciones de sa3, iso 8501, metal blanco, granallado, certificado, garantizamos).
+- **Invariantes intactos, verificados:** `contact_whatsapp` sigue siendo el único evento y sigue disparándose solo tras confirmar el diálogo; el número sigue partido en dos strings; un solo botón flotante; ninguna URL se movió (los slugs de los casos no cambiaron).
+- **Documentación:** el sistema quedó en **`DESIGN.md`** en la raíz (fuente de verdad), el contrato de dirección como comentario en el `<body>` del layout (sobrevive en producción), y `CLAUDE.md` + `contexto/10` apuntando ahí. El `contexto/10` viejo quedó marcado como historia: **documentaba como patrón correcto un CTA que no pasaba contraste**.
+- **Falsos positivos evaluados, no deuda:** 37 `cramped-padding` son todos el mismo caso — el detector marca cada ítem del acordeón de FAQ como texto pegado al filete; medido en el navegador, el disparador tiene **20px de padding arriba y abajo**. La regla mira el padding del contenedor y no el del hijo. Y 1 `clipped-overflow` es el `overflow-hidden` que Embla necesita para funcionar.
+- **Resultado esperado y cuándo revisarlo:** el objetivo no es estético sino de conversión — que el sitio se lea como un oficio serio y que ninguna barrera de legibilidad frene el paso a WhatsApp. **Revisar a las 4 semanas de que las campañas estén encendidas**, comparando tasa de `contact_whatsapp` sobre sesiones contra el período previo. Ojo: no es un test limpio (las campañas arrancan en paralelo), así que la lectura es direccional.
+- **Resultado real:** (completar)
+
+## 2026-08-14 (3) — Escaneo de diseño: el botón de conversión no pasaba contraste
+
+- **Herramienta:** detector de Impeccable con motor de navegador (puppeteer, `--save-dev`), sobre las páginas reales, en **escritorio y celular (390×844)**. Es el primer análisis del sitio **renderizado** de todo el proyecto: hasta ahora se había diseñado leyendo código.
+- ⚠️ **El escaneo estático no alcanzaba:** sobre los archivos daba **cero hallazgos**. Verificado con un archivo de control con defectos a propósito: detectó 1 de 5. Sin navegador solo ve patrones de texto; contraste, jerarquía y render necesitan el motor real. **Un "cero" estático no es evidencia de nada.**
+- **🔴 Hallazgo principal — el CTA de WhatsApp no pasaba WCAG AA.** Blanco sobre `green-600` (`#16a34a`) = **3,3:1**, y AA pide 4,5:1. Es **el botón de conversión del proyecto**, repetido en todas las páginas. → `green-700` (`#15803d`) = **5,0:1**.
+- **🔴 Segundo contraste — el botón de los casos.** Blanco sobre `primary-400` (`#4787AF`) = **3,8:1**. → `primary-500` (`#18415A`) = **10,8:1**. ⚠️ `primary-400` como fondo de CTA **estaba documentado como el patrón correcto** en `contexto/10-estilos-y-design-system.md`: la guía producía botones que no pasaban. Corregida.
+- **Otros arreglos:** el patrón *ícono en cuadradito arriba del título* (×5) — el detector lo marca como plantilla de generador de IA, y en un negocio que vende oficio leerse como hecho a máquina resta; pasó a **ícono al costado del título** · zoom en imágenes al pasar el mouse (×5), otra firma de UI generada, eliminado · medida de línea de hasta **96 caracteres** acotada a ~70 · aire en el acordeón de FAQ · degradado del hero reforzado (el píxel más claro pasó de 2,2:1 a 3,1:1, mediana 11,7).
+- **Verificación (una tanda, una confirmación, y parar):** re-escaneo en escritorio y celular → **cero ocurrencias** de los cuatro problemas arreglados.
+- **Lo que queda, evaluado y no tocado:** `#ffffff on #ffffff` (falsos positivos: texto sobre imagen, donde el análisis por píxel sí da bien) · `overused-font: roboto` (es el *system stack*, resuelve distinto por sistema operativo, y no cargar fuentes web es decisión tomada por LCP) · `nested-cards` (sin selector; sondeé el DOM y no encontré anidamiento real) · `cramped-padding` (el borde está en el contenedor y el aire lo ponen los hijos: sumar padding ahí duplicaría el espaciado).
+- **Nota de entorno:** Impeccable pide **Node ≥22.18** y el entorno tiene **20.16**. Funcionó igual. `puppeteer` quedó como **devDependency** — no afecta el build de producción.
+
+## 2026-08-14 (2) — Impeccable instalado + una tercera promesa falsa encontrada
+
+- **Instalado `impeccable`** (npm, de Paul Bakaus, Apache-2.0): skills de diseño y detector de anti-patrones de UI para agentes. Quedó en `.claude/skills/impeccable/`. ⚠️ El paquete pide **Node ≥22.18** y el entorno tiene **20.16**; el instalador corrió igual, pero los scripts del detector pueden fallar.
+- **Ejecutado `/impeccable init`** → **`PRODUCT.md` nuevo en la raíz**: la verdad de producto durable (usuarios, propósito, posicionamiento, contexto operativo, capacidades y límites, compromisos de marca, evidencia disponible, principios). Es la fuente que van a leer los comandos de diseño.
+- **Tres datos confirmados por el dueño en la entrevista del init:**
+
+| Pregunta | Respuesta | Consecuencia |
+|---|---|---|
+| ¿Qué saca el arenado en piletas? | **Solo pintura sobre hormigón** | 🔴 Ver abajo |
+| ¿Hasta dónde viajan? | **CABA y GBA, radio ~60 km** | ✅ Confirma la geo que ya se cargó en las 3 campañas |
+| ¿Quién contesta el WhatsApp? | **Hay alguien dedicado** | ✅ La promesa "respondemos rápido" se sostiene; es además un diferencial usable |
+
+- **🔴 Tercera promesa falsa publicada, encontrada por la entrevista:** el sitio decía *"sacamos toda la pintura **o el revestimiento viejo**"*. **Falso**: no se remueven revestimientos adheridos (venecitas, mosaico) ni se trabajan piletas de **fibra de vidrio**. Estaba **en producción**, en 6 lugares del sitio, 2 del caso de éxito y 2 del copy de anuncios.
+  - **Corregido** en `faqs.ts` (4), `arenado-de-piletas/page.tsx` (6, incluido el schema `Service`), `QueNecesitasArenar.tsx`, `projectsInfo.json` (3), `18-copy-ads.md` y `ads-config/06`.
+  - **Se aprovechó para convertir el límite en filtro:** la sección "qué no hacemos" de la landing ahora declara los dos límites explícitos y cierra con *"si no sabés cuál es la tuya, mandanos una foto"* — el límite pasa a ser una invitación a escribir.
+  - ⛔ **Regla:** nunca reintroducir "revestimiento viejo" como algo que se remueve. ✅ Sí es correcto "lista para pintar o revestir": describe lo que hace el cliente después.
+- **Patrón, la tercera vez en esta cuenta:** una afirmación que nadie verificó, publicada, que el negocio no puede cumplir. Antes fueron las conversiones basura y los "+20 años de experiencia". **La entrevista de producto encontró en tres preguntas lo que ninguna auditoría de código iba a encontrar**, porque el código era coherente: decía consistentemente algo que era falso.
+- **Verificación:** `npm run build` limpio. Los dos matches que quedan en `faqs.ts` son correctos ("el revestimiento **final** no lo hacemos", "el revestimiento **nuevo** necesita agarrar").
+- ⚠️ **Pendiente de deploy:** estos cambios están en el branch, **no en producción**. Van con el próximo merge.
+
+## 2026-08-14 — 🚀 TODO EL TRABAJO DESPLEGADO A PRODUCCIÓN (PR #4 mergeado)
+
+- **🔴 Hallazgo del dueño, y grave:** *"quitamos el form pero en la página de contacto aún está el form"*. Tenía razón. **Ninguno de los 22 commits estaba publicado.** Producción seguía sirviendo el deploy del **27/07** (PR #3): formulario y Formspree activos, home vieja con el video de 24 MB, `/servicios` sin FAQ ni CTA de WhatsApp, y nada del copy nuevo.
+- **Por qué era un bloqueante del encendido:** las 3 campañas apuntan a `/servicios` y `/arenado-de-piletas` esperando las páginas nuevas. Encender contra las viejas habría reproducido exactamente el problema que el diagnóstico marcó como **"experiencia con la página de destino: Inferior al promedio" en el 100% de las keywords** — el arreglo de mayor retorno de todo el trabajo.
+- **Lección de método:** durante toda la sesión se verificó producción para el **tracking** (GTM, bundle, evento) y nunca se verificó que **los cambios propios estuvieran desplegados**. `npm run build` limpio y commits pusheados **no son** un deploy. **Verificar en producción lo que se cambió, no solo lo que se consulta.**
+- **Ejecutado:** PR #4 mergeado a `main` (22 commits) → deploy de Vercel → **verificado en producción**:
+
+| Verificación | Resultado |
+|---|---|
+| Formulario en `/contacto` | ✅ **eliminado** (sin `<form>`, sin honeypot, sin campos) |
+| Bloque "Qué nos ayuda saber" | ✅ presente |
+| Home: `<h1>` y orden de secciones | ✅ el h1 con keyword+zona y las 7 secciones en el orden del blueprint |
+| `FAQPage` en home y `/servicios` | ✅ |
+| `/servicios`: `<h1>` con keyword y zona | ✅ |
+| Los ~100 m² con la condición | ✅ "En superficies planas y parejas…" en vivo |
+| 11 rutas | ✅ todas **200** |
+| 301 legacy | ✅ **308** a `/servicios`, `/arenado-de-piletas` y `/contacto`, **conservando la query string** (`gclid` intacto) |
+| Número de WhatsApp contiguo | ✅ **no aparece en ninguna ruta** |
+
+- **🔧 Corrección de fechas en el registro:** durante la sesión se "corrigieron" a 10/08 varias fechas que estaban bien en 02/08. El historial de git es la fuente: ese trabajo se hizo el **02/08**. Revertido en la bitácora, en los 4 archivos de `ads-config/`, en `contexto/03` y `12`, y en la fecha de revisión de la política de privacidad.
+- **Estado:** el sitio en producción **es el que las campañas esperan**. Pre-flight de URLs y redirects ✅ cerrado.
+
 ## 2026-08-11 (7) — ✅ Medición verificada de punta a punta (el bloqueante del encendido)
 
 - **Disparador:** la prueba manual de `contact_whatsapp` no aparecía en Tiempo real de GA4. Hipótesis inicial del dueño: *"el evento debe estar todavía atado a Framer"*.
@@ -197,7 +270,7 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 - **Resultado esperado y cuándo revisarlo:** más `contact_whatsapp` por sesión (el CTA dejó de estar a un salto de página) y mejor calidad de lead (mensaje pre-cargado por intención). Medir a las 2–4 semanas post-deploy; con Ads encendido, mirar también la tasa de conversión de `/servicios`.
 - **Resultado real:** _(completar)_
 
-## 2026-08-10 (1) — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
+## 2026-08-02 — Higiene documental: el repo alineado al canal único WhatsApp (Claude Code)
 
 - **Qué se hizo:** barrido completo de la deuda documental que dejó la decisión del 28/07 (canal único WhatsApp). El repo tenía **226 menciones a `form_submit*` / `contact_email` / Formspree / `EmailBtn` en 34 archivos**, muchas describiéndolos como **vigentes** — riesgo real de que un asistente futuro reconstruyera el formulario o reconfigurara Ads contra eventos muertos. Quedaron 48, todas marcadas como *eliminado/obsoleto* o dentro de registros históricos.
   - **Reescritos completos:** `contexto/05-formularios-y-conversion.md` (ahora "Conversión y canales de contacto"), `06-tracking-y-analytics.md`, `09-api-y-servicios.md`, `12-seguridad-y-validaciones.md` y `03-rutas-y-paginas.md` (documentaba 4 casos, sin `/arenado-de-piletas`, con el banner de "pivote en curso" ya cumplido).

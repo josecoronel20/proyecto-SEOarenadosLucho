@@ -413,7 +413,7 @@ Nada de esto se da por hecho. **Cada paso se verifica con captura y se archiva e
 
 ---
 
-### 2.18 Higiene documental — ✅ CERRADA (10/08/2026)
+### 2.18 Higiene documental — ✅ CERRADA (02/08/2026)
 
 Varios documentos del repositorio describían como vigente un evento que ya no existe. **Todos fueron corregidos** a `contact_whatsapp` como único evento y única conversión primaria:
 

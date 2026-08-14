@@ -99,14 +99,24 @@ El tracking es la razón de ser del sitio y es frágil: cambiar un nombre de eve
 
 ## Design system
 
-Detalle en `contexto/10-estilos-y-design-system.md`. Lo esencial:
+**Fuente de verdad: [`DESIGN.md`](DESIGN.md) en la raíz.** Leerlo antes de tocar
+cualquier UI. `contexto/10-estilos-y-design-system.md` quedó como historia del
+sistema anterior — no seguir sus recomendaciones.
 
-- **Escala de marca `primary-50…900`** (hex, en `tailwind.config.ts`) para CTAs y títulos. CTA principal = `bg-primary-400 hover:bg-primary-500`, `rounded-full` en marketing.
-- **Gotcha — doble sistema `primary`:** las clases `primary-400`/`primary-600` (escala hex azul, correcta para landings) **no son lo mismo** que `text-primary`/`bg-primary` (tokens HSL de shadcn que apuntan a casi negro). Para títulos de sección y CTAs usá la escala hex o el componente `H2`; reservá `text-primary`/`bg-primary` para donde ya está (Header, primitivos shadcn).
-- Contenedor de sección: `container mx-auto px-4 lg:px-8`. Mobile-first; breakpoints usados `md:`/`lg:`/`xl:` (no `sm:` sistemático).
-- Tipografía = **system UI stack** (en `globals.css`). No cargar Google Fonts sin evaluar LCP.
+Sistema reemplazado por completo el 14/08/2026. El mundo es un **catálogo de
+repuestos / manual de mantenimiento industrial**: papel técnico frío, dos tintas
+y todo tabulado. Lo mínimo que hay que saber:
+
+- **Se separa con filetes, no con cajas.** Prohibidas las tarjetas de ícono + título + texto en cuadrícula (era el patrón dominante del sitio viejo) y cualquier caja dentro de otra caja.
+- **Prohibido el copete** (renglón chico arriba de un titular), las sombras, y el filete de color de 4px+ de un solo lado. El filete de marca es de 2px.
+- **Color:** `tinta` / `papel` / `maquina` (naranja), con contrastes **medidos** en `tailwind.config.ts`. **Sobre naranja va texto tinta, nunca blanco** (blanco da 3,75:1 y no pasa AA). La escala azul `primary-*` está **muerta**.
+- **CTA de WhatsApp: `green-700`**, único color ajeno al sistema, a propósito. Estilos en `src/lib/wpp.ts` — no duplicar clases de botón en las páginas.
+- **Tipografía:** Archivo (Omnibus-Type), auto-alojada con `next/font`. No cargar Google Fonts por `<link>`.
+- **Primitivos en `src/components/common/system.tsx`** (`Section`, `SectionHead`, `FichaLista`/`Ficha`, `FranjaDatos`). Una página compone, no inventa: dos ritmos verticales y un solo margen lateral (`px-5 lg:px-8`) para todo el sitio.
+- **Gotcha que sigue:** `text-primary`/`bg-primary` (tokens HSL de shadcn) apuntan a casi negro y siguen usados dentro de `components/ui/`. No confundir con la escala hex muerta.
 - `darkMode: ["class"]` existe pero **no hay toggle de tema** — no agregar variantes `dark:`.
 - Imágenes con `next/image`; iconos solo `lucide-react`; combinar clases con `cn()`.
+- **Verificar siempre con motor de navegador** (`.claude/skills/impeccable/scripts/detect.mjs <url>`), escritorio y celular. El escaneo estático da cero y no significa nada.
 
 ## Convenciones de código
 

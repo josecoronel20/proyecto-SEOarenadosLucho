@@ -185,7 +185,7 @@ Esta sección entrega el copy **listo para pegar** de los 7 anuncios de búsqued
 |---|---|---|---|
 | 1 | Arenado de piletas y piscinas de hormigón. Queda lista para repintar o revestir. | 80 | **1** |
 | 2 | Vamos a tu casa con equipo y compresores propios. Vos no movés ni preparás nada. | 80 | — |
-| 3 | Sacamos toda la pintura y el revestimiento viejo. No pintamos ni revestimos. | 76 | — |
+| 3 | Sacamos toda la pintura vieja del hormigón. No pintamos ni revestimos. | 70 | — | ⚠️ corregido 14/08: no se remueve revestimiento |
 | 4 | Visita y presupuesto sin costo en CABA y el AMBA. Coordinamos por WhatsApp. | 75 | — |
 
 **Rutas de visualización:** `arenado` / `de-piletas`
