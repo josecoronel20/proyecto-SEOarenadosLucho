@@ -1,12 +1,11 @@
 import Link from "next/link"
 import { MessageCircle, Clock, MapPin, CheckCircle2, Camera } from "lucide-react"
 import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
+// Fuente única de estilos y mensajes: antes estaban duplicados acá con
+// `green-600`, que no llegaba al contraste AA.
+import { WPP_BTN_LG as WPP_BTN, WPP_MSG as WPP_MSGS } from "@/lib/wpp"
 
-const WPP_MSG =
-  "Hola, quiero pedir un presupuesto de arenado. Te cuento qué necesito:"
-
-const WPP_BTN =
-  "inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg rounded-full transition-colors shadow-lg"
+const WPP_MSG = WPP_MSGS.general
 
 const puntos = [
   {

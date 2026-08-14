@@ -26,12 +26,15 @@ export function HeroSection() {
           src="/images/services/arenadoIndustrial/Nave/IMG_2419.PNG"
           alt="Arenado de una estructura metálica en Buenos Aires"
           fill
-          className="object-cover opacity-45"
+          className="object-cover opacity-40"
           priority
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/85 to-primary-900/55" />
+      {/* El escáner midió 2,2:1 en los píxeles más claros de la foto (mediana 10,1).
+          Se sube el piso del degradado para que ningún punto del texto quede por
+          debajo de AA, sin tapar la imagen. */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-900 via-primary-900/90 to-primary-900/75" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-20 py-14 md:py-24">
         <div className="max-w-3xl">

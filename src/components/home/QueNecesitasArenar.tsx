@@ -55,10 +55,10 @@ export function QueNecesitasArenar() {
               href={href}
               className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 hover:border-primary-400 hover:shadow-md transition-all"
             >
-              <div className="p-3 rounded-lg bg-primary-100 text-primary-700 w-fit mb-4">
-                <Icon className="w-7 h-7" />
+              <div className="flex items-center gap-3 mb-3">
+                <Icon className="w-7 h-7 text-primary-600 flex-shrink-0" />
+                <h3 className="text-lg md:text-xl font-bold text-gray-900">{title}</h3>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-700 leading-relaxed flex-1">{text}</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-primary-600 font-semibold group-hover:text-primary-700">
                 {cta}
@@ -71,9 +71,7 @@ export function QueNecesitasArenar() {
         {/* Salida para todo lo que no entra en las dos cards: convierte sin landing propia. */}
         <div className="max-w-4xl mx-auto mt-5">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 rounded-xl border border-primary-200 bg-primary-50/60 p-6">
-            <div className="p-3 rounded-lg bg-primary-100 text-primary-700 w-fit flex-shrink-0">
-              <HelpCircle className="w-7 h-7" />
-            </div>
+            <HelpCircle className="w-7 h-7 text-primary-600 flex-shrink-0" />
             <div className="flex-1">
               <h3 className="text-lg font-bold text-gray-900 mb-1">
                 ¿Es otra cosa? ¿No sabés si se puede arenar?

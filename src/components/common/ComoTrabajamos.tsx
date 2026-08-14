@@ -33,17 +33,20 @@ export function ComoTrabajamos({ className = "bg-white" }: { className?: string 
         >
           Cómo trabajamos
         </h2>
-        <p className="text-gray-700 text-base md:text-lg text-center mb-10 max-w-2xl mx-auto">
+        <p className="text-gray-700 text-base md:text-lg text-center mb-10 max-w-xl mx-auto">
           Tres pasos, sin vueltas. No hace falta que sepas nada técnico.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Ícono al lado del título, no en un cuadradito encima: esa pila
+              (tile redondeado + h3 debajo) es la plantilla que sale de todos los
+              generadores y hace que el sitio se lea como hecho a máquina. */}
           {pasos.map(({ icon: Icon, title, text }) => (
             <div key={title} className="rounded-xl border border-gray-200 bg-gray-50/50 p-6">
-              <div className="p-3 rounded-lg bg-primary-100 text-primary-700 w-fit mb-4">
-                <Icon className="w-6 h-6" />
+              <div className="flex items-center gap-3 mb-3">
+                <Icon className="w-6 h-6 text-primary-600 flex-shrink-0" />
+                <h3 className="font-bold text-gray-900">{title}</h3>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">{text}</p>
             </div>
           ))}

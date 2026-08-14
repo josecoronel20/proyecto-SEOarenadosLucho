@@ -38,9 +38,9 @@ const PILETA_IMAGES = [
 const WPP_DUENO = "Hola, quiero arenar mi pileta. Te paso una foto para que me digas qué necesita."
 const WPP_CONTRATISTA = "Hola, soy contratista/piletero y quiero tercerizar arenado de piletas."
 
-const WPP_BTN =
-  "inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition-colors shadow-lg"
-const WPP_BTN_LG = WPP_BTN + " md:text-lg px-8 py-4"
+// Estilos compartidos: antes estaban duplicados acá con `green-600`, que no
+// llegaba al contraste AA. Fuente única en `src/lib/wpp.ts`.
+import { WPP_BTN, WPP_BTN_LG } from "@/lib/wpp"
 
 export const metadata: Metadata = {
   title: "Arenado de piletas y piscinas en Buenos Aires",

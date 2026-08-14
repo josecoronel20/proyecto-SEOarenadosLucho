@@ -16,7 +16,7 @@ export function ZonasCobertura({ className = "bg-gray-50" }: { className?: strin
   return (
     <section className={`py-12 md:py-16 ${className}`} aria-labelledby="zonas">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 id="zonas" className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
             Dónde trabajamos
           </h2>

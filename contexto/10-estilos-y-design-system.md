@@ -21,8 +21,8 @@ Definida en `tailwind.config.ts` — preferir estos tokens sobre grises genéric
 | `primary-50` | `#E8F0F5` | Fondos suaves (contacto, legal) |
 | `primary-100` | `#D1E1EB` | Iconos en círculo (`TrustBar`, bloques servicios) |
 | `primary-200`–`300` | — | Hover suaves, acentos claros |
-| **`primary-400`** | `#4787AF` | **CTA principal** (botones, header “Contactanos”) |
-| **`primary-500`** | `#18415A` | Hover de CTA `primary-400` |
+| **`primary-400`** | `#4787AF` | Bordes, íconos y acentos claros. ⛔ **NO como fondo de texto blanco** |
+| **`primary-500`** | `#18415A` | **Fondo de CTA con texto blanco** |
 | `primary-600` | `#133448` | Títulos de sección (`H2`), links |
 | `primary-700` | `#0E2736` | Iconos trust, texto sobre claro |
 | **`primary-800`** | `#0A1A24` | Footer, bloques FAQ CTA |
@@ -195,7 +195,8 @@ No se usa `sm:` de forma sistemática; está bien añadirlo solo si hace falta u
 
 | Tipo | Estilo estándar |
 |------|-----------------|
-| **CTA primario (marketing)** | `bg-primary-400 hover:bg-primary-500 text-white font-semibold rounded-full` + `px-8 py-4` (ajustar tamaño) |
+| **CTA primario (marketing)** | `bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-full` + `px-8 py-4`. ⚠️ **Antes decía `primary-400`: daba 3,8:1 y no llega a AA** |
+| **CTA de conversión (WhatsApp)** | Usar las constantes de `src/lib/wpp.ts` (`green-700`, 5,0:1). Nunca `green-600`: da 3,3:1 |
 | **CTA sobre blanco (servicios hero)** | `bg-white text-primary-700 rounded-full border-2 border-white/90` |
 | **CTA outline FAQ** | `border-2 border-white text-white rounded-full hover:bg-white/10` |
 | **shadcn Button** | `variant` default/outline; en cards a menudo `className="w-full bg-primary-400"` |

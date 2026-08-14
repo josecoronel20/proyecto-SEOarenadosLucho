@@ -30,7 +30,9 @@ export function IntroductionSection() {
   return (
     <section className="py-14 md:py-20 bg-white border-b border-gray-200" aria-labelledby="que-es">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        {/* max-w-2xl ≈ 70 caracteres por línea. Con 3xl la medida se iba a ~96 y
+            el ojo pierde el renglón al volver. */}
+        <div className="max-w-2xl mx-auto">
           <h2
             id="que-es"
             className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center"

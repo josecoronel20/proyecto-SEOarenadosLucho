@@ -12,6 +12,17 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 (3) — Escaneo de diseño: el botón de conversión no pasaba contraste
+
+- **Herramienta:** detector de Impeccable con motor de navegador (puppeteer, `--save-dev`), sobre las páginas reales, en **escritorio y celular (390×844)**. Es el primer análisis del sitio **renderizado** de todo el proyecto: hasta ahora se había diseñado leyendo código.
+- ⚠️ **El escaneo estático no alcanzaba:** sobre los archivos daba **cero hallazgos**. Verificado con un archivo de control con defectos a propósito: detectó 1 de 5. Sin navegador solo ve patrones de texto; contraste, jerarquía y render necesitan el motor real. **Un "cero" estático no es evidencia de nada.**
+- **🔴 Hallazgo principal — el CTA de WhatsApp no pasaba WCAG AA.** Blanco sobre `green-600` (`#16a34a`) = **3,3:1**, y AA pide 4,5:1. Es **el botón de conversión del proyecto**, repetido en todas las páginas. → `green-700` (`#15803d`) = **5,0:1**.
+- **🔴 Segundo contraste — el botón de los casos.** Blanco sobre `primary-400` (`#4787AF`) = **3,8:1**. → `primary-500` (`#18415A`) = **10,8:1**. ⚠️ `primary-400` como fondo de CTA **estaba documentado como el patrón correcto** en `contexto/10-estilos-y-design-system.md`: la guía producía botones que no pasaban. Corregida.
+- **Otros arreglos:** el patrón *ícono en cuadradito arriba del título* (×5) — el detector lo marca como plantilla de generador de IA, y en un negocio que vende oficio leerse como hecho a máquina resta; pasó a **ícono al costado del título** · zoom en imágenes al pasar el mouse (×5), otra firma de UI generada, eliminado · medida de línea de hasta **96 caracteres** acotada a ~70 · aire en el acordeón de FAQ · degradado del hero reforzado (el píxel más claro pasó de 2,2:1 a 3,1:1, mediana 11,7).
+- **Verificación (una tanda, una confirmación, y parar):** re-escaneo en escritorio y celular → **cero ocurrencias** de los cuatro problemas arreglados.
+- **Lo que queda, evaluado y no tocado:** `#ffffff on #ffffff` (falsos positivos: texto sobre imagen, donde el análisis por píxel sí da bien) · `overused-font: roboto` (es el *system stack*, resuelve distinto por sistema operativo, y no cargar fuentes web es decisión tomada por LCP) · `nested-cards` (sin selector; sondeé el DOM y no encontré anidamiento real) · `cramped-padding` (el borde está en el contenedor y el aire lo ponen los hijos: sumar padding ahí duplicaría el espaciado).
+- **Nota de entorno:** Impeccable pide **Node ≥22.18** y el entorno tiene **20.16**. Funcionó igual. `puppeteer` quedó como **devDependency** — no afecta el build de producción.
+
 ## 2026-08-14 (2) — Impeccable instalado + una tercera promesa falsa encontrada
 
 - **Instalado `impeccable`** (npm, de Paul Bakaus, Apache-2.0): skills de diseño y detector de anti-patrones de UI para agentes. Quedó en `.claude/skills/impeccable/`. ⚠️ El paquete pide **Node ≥22.18** y el entorno tiene **20.16**; el instalador corrió igual, pero los scripts del detector pueden fallar.

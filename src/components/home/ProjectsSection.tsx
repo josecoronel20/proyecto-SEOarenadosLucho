@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                         src={project.images![0]}
                         alt={project.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
@@ -103,7 +103,8 @@ const ProjectsSection = () => {
                           className="w-full"
                           tabIndex={-1}
                         >
-                          <Button className="w-full bg-primary-400" asChild>
+                          {/* primary-400 con texto blanco daba 3,8:1 (AA pide 4,5). El 500 da 10,8:1. */}
+                          <Button className="w-full bg-primary-500 hover:bg-primary-600" asChild>
                             <span>Ver el trabajo</span>
                           </Button>
                         </Link>
