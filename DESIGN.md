@@ -4,9 +4,13 @@ Sistema visual del sitio, reemplazado por completo el **14/08/2026**. Este
 archivo es la fuente de verdad: si algo que vas a escribir lo contradice, está
 mal el código, no el documento.
 
-El contrato de dirección (tesis, mundo, historia, primer viewport, forma) vive
-como comentario HTML al inicio de `<body>` en [layout.tsx](src/app/layout.tsx) y
-sobrevive en producción. Acá está la parte operativa.
+El contrato de dirección (tesis, mundo, historia, primer viewport, forma) vive al
+inicio de `<body>` en [layout.tsx](src/app/layout.tsx). **Es un comentario JSX:
+React no lo emite al HTML**, así que se lee en el código y no en el navegador.
+Fue deliberado — mandarlo al HTML costaría ~2,5 KB en cada carga de cada página,
+para cero valor del visitante, en un sitio del que justo se acaban de sacar
+1,1 MB de video decorativo. Quien lo necesita es quien edita el layout, y ahí
+está. Acá está la parte operativa.
 
 ---
 
