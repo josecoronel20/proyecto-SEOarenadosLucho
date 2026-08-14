@@ -7,10 +7,33 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
+/* La familia la fija Tailwind (`font-sans` → var(--font-archivo), auto-alojada
+ * con next/font en el layout). Acá no se declara una pila de sistema: el piso
+ * de calidad prohíbe que la cara del sistema sea la voz de una página de marca. */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-archivo), system-ui, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+ * Retícula de catálogo — los filetes que reemplazan a las tarjetas.
+ *
+ * El sistema viejo separaba bloques metiéndolos en cajas con borde y sombra.
+ * Acá se separan con líneas, como una tabla impresa: una sola línea de 1px
+ * entre ítems, sin caja alrededor. Es lo que hace que la página se lea como
+ * ficha y no como panel de administración.
+ * ------------------------------------------------------------------------ */
+@layer components {
+  /* Lista tabulada: filete entre ítems, ninguno arriba del primero. */
+  .ficha-lista > * + * {
+    border-top: 1px solid theme('colors.papel.linea');
+  }
+  /* Numeración de ítem al margen, como en un despiece. */
+  .ficha-num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.06em;
+  }
 }
 
 @layer utilities {

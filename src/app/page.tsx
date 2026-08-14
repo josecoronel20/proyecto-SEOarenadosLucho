@@ -47,9 +47,11 @@ export default function Home() {
       <QueNecesitasArenar />
       <IntroductionSection />
       <ProjectsSection />
-      <ComoTrabajamos className="bg-gray-50" />
-      <ZonasCobertura className="bg-white border-y border-gray-200" />
-      <FaqCorta items={faqsHome} />
+      {/* El fondo alterna papel / papel-alt para dar ritmo. Es la única señal
+          de separación entre secciones: ni bordes por página ni sombras. */}
+      <ComoTrabajamos fondo="alt" />
+      <ZonasCobertura fondo="papel" />
+      <FaqCorta items={faqsHome} fondo="alt" />
       <CTASection message={WPP_MSG.general} />
     </>
   );

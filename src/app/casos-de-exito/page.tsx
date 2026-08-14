@@ -24,9 +24,9 @@ export default function CasosDeExitoPage() {
   }, [projects, filtro])
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-papel-alt">
       <CasosHero />
-      <section className="py-8 md:py-10 border-b border-gray-200 bg-white">
+      <section className="py-8 md:py-10 border-b border-papel-linea bg-papel">
         <div className="container mx-auto px-4 lg:px-8">
           <FiltroTipo value={filtro} onChange={setFiltro} />
         </div>
@@ -39,7 +39,7 @@ export default function CasosDeExitoPage() {
             ))}
           </div>
           {filtered.length === 0 && (
-            <p className="text-center text-gray-500 py-12">
+            <p className="text-center text-tinta-70 py-12">
               No hay casos para el filtro seleccionado.
             </p>
           )}

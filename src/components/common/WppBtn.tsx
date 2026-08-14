@@ -48,9 +48,9 @@ const WppBtn = () => {
         <button
           type="button"
           aria-label="Abrir WhatsApp"
-          className="fixed bottom-6 right-6 flex items-center gap-2 transition-colors bg-green-700 hover:bg-green-800 rounded-full p-3 shadow-lg hover:shadow-xl z-50"
+          className="fixed bottom-6 right-6 flex items-center gap-2 transition-colors bg-green-700 hover:bg-green-800 rounded-full p-3 hover: z-50"
         >
-          <MessageCircle className="w-6 h-6 text-white" />
+          <MessageCircle className="w-6 h-6 text-papel" />
         </button>
       </AlertDialogTrigger>
       <AlertDialogContent>

@@ -1,5 +1,5 @@
-import { MapPin } from "lucide-react"
 import { ZONAS } from "@/lib/siteConfig"
+import { Section, SectionHead, MEDIDA } from "@/components/common/system"
 
 /**
  * Señal de SEO local **sin páginas delgadas**.
@@ -11,38 +11,44 @@ import { ZONAS } from "@/lib/siteConfig"
  *
  * Se nombran agrupaciones, no partidos: prometer zonas que después se rechazan
  * quema leads y reseñas.
+ *
+ * Los alfileres de mapa que había al lado de cada zona se fueron: repetían en
+ * ícono lo que la palabra ya decía, y en un listado de seis eso es ruido.
  */
-export function ZonasCobertura({ className = "bg-gray-50" }: { className?: string }) {
+export function ZonasCobertura({ fondo = "alt" }: { fondo?: "papel" | "alt" }) {
   return (
-    <section className={`py-12 md:py-16 ${className}`} aria-labelledby="zonas">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 id="zonas" className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            Dónde trabajamos
-          </h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
-            Hacemos arenado a domicilio en <strong>Buenos Aires y todo el AMBA</strong>. Vamos con
-            nuestros equipos y compresores: no dependemos de la energía del lugar ni tenés que
-            trasladar nada.
-          </p>
+    <Section fondo={fondo} ritmo="compacto" aria-labelledby="zonas">
+      <SectionHead
+        id="zonas"
+        titulo="Dónde trabajamos"
+        intro={
+          <>
+            Hacemos arenado a domicilio en{" "}
+            <strong className="font-semibold text-tinta">
+              Buenos Aires y todo el AMBA
+            </strong>
+            . Vamos con nuestros equipos y compresores: no dependemos de la energía
+            del lugar ni tenés que trasladar nada.
+          </>
+        }
+      />
 
-          <ul className="flex flex-wrap justify-center gap-2.5 mb-6">
-            {ZONAS.map((zona) => (
-              <li
-                key={zona}
-                className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm md:text-base font-medium text-gray-800"
-              >
-                <MapPin className="w-4 h-4 text-primary-600" />
-                {zona}
-              </li>
-            ))}
-          </ul>
+      {/* Tabulado con filete, como una tabla de cobertura de un manual: entra
+          todo en dos renglones y se lee de un vistazo. */}
+      <ul className="grid grid-cols-2 md:grid-cols-3 gap-px bg-papel-linea border border-papel-linea">
+        {ZONAS.map((zona) => (
+          <li
+            key={zona}
+            className="bg-papel px-4 py-4 md:px-6 font-medium text-tinta"
+          >
+            {zona}
+          </li>
+        ))}
+      </ul>
 
-          <p className="text-gray-600 text-sm md:text-base">
-            ¿Estás más lejos? Consultanos igual: según el trabajo, viajamos.
-          </p>
-        </div>
-      </div>
-    </section>
+      <p className={`mt-6 text-tinta-70 ${MEDIDA}`}>
+        ¿Estás más lejos? Consultanos igual: según el trabajo, viajamos.
+      </p>
+    </Section>
   )
 }

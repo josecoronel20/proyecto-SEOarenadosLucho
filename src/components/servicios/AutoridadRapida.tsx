@@ -7,8 +7,8 @@ const items = [
   { icon: Wrench, label: "Equipos propios" },
 ]
 
-const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-gray-50"
-const iconBoxClass = "flex-shrink-0 p-2 rounded-lg bg-primary-100 text-primary-700"
+const sectionClass = "py-10 md:py-14 border-b border-papel-linea bg-papel-alt"
+const iconBoxClass = "flex-shrink-0 p-2 rounded-sm bg-papel-alt text-tinta"
 const iconSizeClass = "w-5 h-5"
 
 export function AutoridadRapida() {
@@ -19,12 +19,12 @@ export function AutoridadRapida() {
           {items.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-white"
+              className="flex items-center gap-3 p-4 rounded-sm border border-papel-linea bg-papel"
             >
               <div className={iconBoxClass}>
                 <Icon className={iconSizeClass} />
               </div>
-              <span className="text-sm md:text-base font-semibold text-gray-800">
+              <span className="text-sm md:text-base font-semibold text-tinta">
                 {label}
               </span>
             </div>

@@ -19,9 +19,9 @@ const items = [
   { icon: Zap, text: "Si el trabajo es grande, sumamos equipos para acortar los tiempos" },
 ]
 
-const sectionClass = "py-10 md:py-14 border-b border-gray-200 bg-gray-50"
-const titleClass = "text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center"
-const subtitleClass = "text-primary-600 font-semibold text-base mb-6 text-center"
+const sectionClass = "py-10 md:py-14 border-b border-papel-linea bg-papel-alt"
+const titleClass = "text-2xl md:text-3xl font-bold text-tinta mb-2 text-center"
+const subtitleClass = "text-tinta font-semibold text-base mb-6 text-center"
 
 // Ajustes de layout para desktop (Tailwind utility classes)
 // - max-w-3xl a max-w-4xl para mayor balance visual y aire en desktop
@@ -29,9 +29,9 @@ const subtitleClass = "text-primary-600 font-semibold text-base mb-6 text-center
 // - text-base md:text-lg pt-1 md:pt-0.5 para aprovechar mejor el espacio visual en desktop
 // - iconBox: agrega md:p-3 para mejor escala y presencia de íconos en desktop
 
-const iconBoxClass = "flex-shrink-0 p-2 md:p-3 rounded-lg bg-primary-100 text-primary-700 mt-0.5"
+const iconBoxClass = "flex-shrink-0 p-2 md:p-3 rounded-sm bg-papel-alt text-tinta mt-0.5"
 const iconSizeClass = "w-5 h-5 md:w-6 md:h-6"
-const textClass = "text-gray-700 text-base md:text-lg leading-relaxed pt-1 md:pt-0.5"
+const textClass = "text-tinta-70 text-base md:text-lg leading-relaxed pt-1 md:pt-0.5"
 
 export function AlcanceOperativo() {
   return (

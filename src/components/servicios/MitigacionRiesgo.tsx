@@ -38,13 +38,13 @@ const objeciones = [
 export function MitigacionRiesgo() {
   return (
     <section
-      className="py-14 md:py-20 border-b border-gray-200 bg-white"
+      className="py-14 md:py-20 border-b border-papel-linea bg-papel"
       aria-labelledby="objeciones"
     >
       <div className="container mx-auto px-4 lg:px-8">
         <h2
           id="objeciones"
-          className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center"
+          className="text-2xl md:text-3xl font-bold text-tinta mb-8 text-center"
         >
           Lo que siempre nos preguntan
         </h2>
@@ -53,28 +53,28 @@ export function MitigacionRiesgo() {
           {objeciones.map(({ icon: Icon, pregunta, respuesta }) => (
             <div
               key={pregunta}
-              className="rounded-xl border border-gray-200 bg-gray-50/50 p-5"
+              className="rounded-sm border border-papel-linea bg-papel-alt/50 p-5"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-2 rounded-lg bg-primary-100 text-primary-700">
+                <div className="flex-shrink-0 p-2 rounded-sm bg-papel-alt text-tinta">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">
+                  <p className="font-semibold text-tinta mb-1">
                     &ldquo;{pregunta}&rdquo;
                   </p>
-                  <p className="text-gray-700 text-base leading-relaxed">{respuesta}</p>
+                  <p className="text-tinta-70 text-base leading-relaxed">{respuesta}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-gray-700 text-base leading-relaxed text-center mt-8">
+        <p className="text-tinta-70 text-base leading-relaxed text-center mt-8">
           ¿Tenés otra duda? Mirá las{" "}
           <Link
             href="/preguntas-frecuentes"
-            className="text-primary-600 font-semibold hover:underline"
+            className="text-tinta font-semibold hover:underline"
           >
             preguntas frecuentes
           </Link>{" "}

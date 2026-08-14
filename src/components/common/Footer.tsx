@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { MessageCircle, MapPin } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import { WhatsAppCTA } from '@/components/common/WhatsAppCTA'
 import { WPP_BTN, WPP_MSG } from '@/lib/wpp'
 import { ZONAS } from '@/lib/siteConfig'
 
 // Server Component: antes era "use client" solo por getFullYear(), que se resuelve
 // igual en el servidor (el footer se re-renderiza en cada build/deploy).
+//
+// El pie es la contratapa del catálogo: fondo tinta, columnas separadas por
+// filete y encabezados chicos en versalita. Los alfileres de mapa al lado de
+// cada zona se fueron —repetían en dibujo lo que la palabra ya decía.
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -20,14 +24,19 @@ export function Footer() {
   ]
 
   const privacyPolicy = [
-    { label: 'Política de Privacidad', href: '/politica-de-privacidad' },
-    { label: 'Términos y Condiciones', href: '/terminos-y-condiciones' },
+    { label: 'Política de privacidad', href: '/politica-de-privacidad' },
+    { label: 'Términos y condiciones', href: '/terminos-y-condiciones' },
   ]
 
+  /** Encabezado de columna: chico, en caja alta y espaciado, como el rótulo de
+   *  una tabla impresa. No compite con los títulos de la página. */
+  const rotulo =
+    'ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-400 mb-4'
+
   return (
-    <footer className="bg-primary-900 text-white">
-      <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer className="bg-tinta text-papel">
+      <div className="container mx-auto px-5 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Marca */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
@@ -39,22 +48,24 @@ export function Footer() {
                 className="object-contain"
               />
               <div>
-                <p className="text-xl font-bold">Arenados Lucho</p>
-                <p className="text-xs text-primary-200">Preparación y Limpieza de Superficies</p>
+                <p className="text-xl font-bold tracking-tight">Arenados Lucho</p>
+                <p className="text-xs text-tinta-20">
+                  Preparación y limpieza de superficies
+                </p>
               </div>
             </div>
-            <p className="text-sm text-primary-200 max-w-md">
-              Arenado in situ en obra, industria, galpones y piletas. Sacamos óxido y pintura
-              vieja y dejamos la superficie lista para pintar o revestir. Vamos con equipo propio:
-              no trasladás nada.
+            <p className="text-sm leading-relaxed text-tinta-20 max-w-[52ch]">
+              Arenado in situ en obra, industria, galpones y piletas. Sacamos óxido
+              y pintura vieja y dejamos la superficie lista para pintar o revestir.
+              Vamos con equipo propio: no trasladás nada.
             </p>
 
-            <div className="mt-5">
+            <div className="mt-6">
               <WhatsAppCTA message={WPP_MSG.general} className={WPP_BTN}>
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 Escribinos por WhatsApp
               </WhatsAppCTA>
-              <p className="text-xs text-primary-300 mt-2">
+              <p className="text-xs text-tinta-20 mt-3">
                 Visita y presupuesto sin costo · Respondemos rápido
               </p>
             </div>
@@ -62,13 +73,13 @@ export function Footer() {
 
           {/* Navegación */}
           <nav aria-label="Navegación del pie">
-            <p className="font-semibold mb-4 text-lg">Navegación</p>
-            <ul className="flex flex-col gap-2">
+            <p className={rotulo}>Navegación</p>
+            <ul className="flex flex-col">
               {navigation.map((item) => (
-                <li key={item.label}>
+                <li key={item.label} className="border-t border-white/10">
                   <Link
                     href={item.href}
-                    className="text-primary-200 hover:text-white transition-colors text-sm"
+                    className="block py-2.5 text-sm text-tinta-20 hover:text-papel transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -79,32 +90,34 @@ export function Footer() {
 
           {/* Zonas — señal de SEO local sin crear páginas delgadas por partido */}
           <div>
-            <p className="font-semibold mb-4 text-lg">Dónde trabajamos</p>
-            <ul className="flex flex-col gap-2">
+            <p className={rotulo}>Dónde trabajamos</p>
+            <ul className="flex flex-col">
               {ZONAS.map((zona) => (
-                <li key={zona} className="flex items-center gap-2 text-sm text-primary-200">
-                  <MapPin className="w-4 h-4 flex-shrink-0 text-primary-300" />
+                <li
+                  key={zona}
+                  className="border-t border-white/10 py-2.5 text-sm text-tinta-20"
+                >
                   {zona}
                 </li>
               ))}
             </ul>
-            <p className="text-xs text-primary-300 mt-3 leading-relaxed">
+            <p className="text-xs text-tinta-20 mt-4 leading-relaxed">
               ¿Estás más lejos? Consultanos igual: según el trabajo viajamos.
             </p>
           </div>
         </div>
 
-        <div className="border-t border-primary-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-300 text-center md:text-left">
+        <div className="border-t border-white/20 mt-12 pt-6">
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <p className="text-sm text-tinta-20">
               © {currentYear} Arenados Lucho. Todos los derechos reservados.
             </p>
-            <div className="flex gap-4 text-sm text-primary-300">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-tinta-20">
               {privacyPolicy.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-papel transition-colors"
                 >
                   {item.label}
                 </Link>

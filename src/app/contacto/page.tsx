@@ -36,10 +36,10 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-tinta mb-4">
             Pedí tu presupuesto de arenado
           </h1>
-          <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          <p className="text-base md:text-lg text-tinta-70 max-w-2xl mx-auto mb-8">
             Escribinos por WhatsApp y te respondemos rápido. Contanos qué necesitás arenar
             —o mandanos una foto— y coordinamos una visita. La visita y el presupuesto son
             sin costo y sin compromiso.
@@ -50,7 +50,7 @@ export default function ContactoPage() {
             Escribinos por WhatsApp
           </WhatsAppCTA>
 
-          <p className="text-sm text-gray-600 mt-4">
+          <p className="text-sm text-tinta-70 mt-4">
             Visita y presupuesto sin costo · Respondemos rápido
           </p>
         </div>
@@ -59,19 +59,19 @@ export default function ContactoPage() {
           {puntos.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="rounded-xl border border-gray-200 bg-white p-6 text-center"
+              className="rounded-sm border border-papel-linea bg-papel p-6 text-center"
             >
-              <div className="inline-flex p-3 rounded-lg bg-primary-100 text-primary-700 mb-3">
+              <div className="inline-flex p-3 rounded-sm bg-papel-alt text-tinta mb-3">
                 <Icon className="w-6 h-6" />
               </div>
-              <h2 className="font-semibold text-gray-900 mb-1">{title}</h2>
-              <p className="text-sm text-gray-600 leading-relaxed">{text}</p>
+              <h2 className="font-semibold text-tinta mb-1">{title}</h2>
+              <p className="text-sm text-tinta-70 leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 rounded-xl border border-gray-200 bg-white/70 p-6">
-          <h2 className="font-semibold text-gray-900 mb-3">Qué nos ayuda saber</h2>
+        <div className="mt-12 rounded-sm border border-papel-linea bg-papel/70 p-6">
+          <h2 className="font-semibold text-tinta mb-3">Qué nos ayuda saber</h2>
           <ul className="grid sm:grid-cols-2 gap-2">
             {[
               "Qué hay que arenar (pileta, estructura, fachada, camión…)",
@@ -79,17 +79,17 @@ export default function ContactoPage() {
               "En qué zona está",
               "Para cuándo lo necesitás",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2 text-gray-700 text-sm">
-                <CheckCircle2 className="w-4 h-4 text-primary-600 flex-shrink-0 mt-0.5" />
+              <li key={item} className="flex items-start gap-2 text-tinta-70 text-sm">
+                <CheckCircle2 className="w-4 h-4 text-tinta flex-shrink-0 mt-0.5" />
                 {item}
               </li>
             ))}
           </ul>
-          <p className="text-sm text-gray-600 mt-4">
+          <p className="text-sm text-tinta-70 mt-4">
             ¿Es una pileta?{" "}
             <Link
               href="/arenado-de-piletas"
-              className="text-primary-600 hover:underline font-medium"
+              className="text-tinta hover:underline font-medium"
             >
               Mirá cómo trabajamos las piletas
             </Link>

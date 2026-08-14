@@ -35,13 +35,13 @@ const grupos = [
 
 export function QueArenamos() {
   return (
-    <section className="py-12 md:py-16 bg-white border-b border-gray-200" aria-label="Qué arenamos">
+    <section className="py-12 md:py-16 bg-papel border-b border-papel-linea" aria-label="Qué arenamos">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-3">
             Arenado para obra, industria y galpones
           </h2>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+          <p className="text-tinta-70 text-base md:text-lg leading-relaxed">
             Arenamos casi cualquier superficie que haya que dejar limpia y lista para pintar o
             revestir — <strong>in situ, con equipo propio</strong>: vamos a tu obra, planta, galpón
             o domicilio y no trasladás nada a ningún taller.
@@ -52,19 +52,19 @@ export function QueArenamos() {
           {grupos.map(({ icon: Icon, title, text, items, message, cta }) => (
             <div
               key={title}
-              className="flex flex-col rounded-xl border border-gray-200 bg-gray-50/50 p-6"
+              className="flex flex-col rounded-sm border border-papel-linea bg-papel-alt/50 p-6"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-2.5 rounded-lg bg-primary-100 text-primary-700">
+                <div className="p-2.5 rounded-sm bg-papel-alt text-tinta">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">{title}</h3>
+                <h3 className="text-lg font-bold text-tinta">{title}</h3>
               </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">{text}</p>
+              <p className="text-tinta-70 mb-4 leading-relaxed">{text}</p>
               <ul className="space-y-2 flex-1">
                 {items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-gray-700 text-sm md:text-base">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                  <li key={item} className="flex items-start gap-2 text-tinta-70 text-sm md:text-base">
+                    <CheckCircle2 className="w-5 h-5 text-tinta flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -83,18 +83,18 @@ export function QueArenamos() {
         <div className="max-w-4xl mx-auto mt-6">
           <Link
             href="/arenado-de-piletas"
-            className="flex items-center justify-between gap-4 rounded-xl border border-primary-200 bg-primary-50/50 p-5 hover:border-primary-400 transition-colors group"
+            className="flex items-center justify-between gap-4 rounded-sm border border-papel-linea bg-papel-alt/50 p-5 hover:border-tinta transition-colors group"
           >
             <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-primary-100 text-primary-700">
+              <div className="p-2.5 rounded-sm bg-papel-alt text-tinta">
                 <Waves className="w-6 h-6" />
               </div>
               <div>
-                <p className="font-bold text-gray-900">¿Es una pileta o piscina?</p>
-                <p className="text-gray-600 text-sm">Tenemos una página dedicada al arenado de piletas.</p>
+                <p className="font-bold text-tinta">¿Es una pileta o piscina?</p>
+                <p className="text-tinta-70 text-sm">Tenemos una página dedicada al arenado de piletas.</p>
               </div>
             </div>
-            <span className="inline-flex items-center gap-1.5 text-primary-600 font-semibold group-hover:text-primary-700 flex-shrink-0">
+            <span className="inline-flex items-center gap-1.5 text-tinta font-semibold group-hover:text-tinta flex-shrink-0">
               Ver arenado de piletas
               <ArrowRight className="w-4 h-4" />
             </span>

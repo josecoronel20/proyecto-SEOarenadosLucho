@@ -51,9 +51,9 @@ const ProjectsSection = () => {
 
   if (allProjects.length === 0) {
     return (
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-papel">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12 text-tinta-70">
             No hay proyectos disponibles
           </div>
         </div>
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-white max-w-7xl mx-auto">
+    <section className="py-20 bg-papel max-w-7xl mx-auto">
       <div className="container mx-auto px-4 lg:px-8">
         <H2 title="Mirá cómo queda: trabajos reales" />
 
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
                   key={project.id} 
                   className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="relative h-[500px] md:h-[600px] overflow-hidden border-0 shadow-lg group">
+                  <Card className="relative h-[500px] md:h-[600px] overflow-hidden border-0 group">
                     <div className="absolute inset-0 z-0">
                       <Image
                         src={project.images![0]}
@@ -86,11 +86,11 @@ const ProjectsSection = () => {
                     </div>
                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                     <div className="absolute inset-0 z-20 flex flex-col justify-end">
-                      <CardHeader className="text-white pb-4">
-                        <Badge variant="secondary" className="mb-3 w-fit bg-primary/80 text-white border-primary">
+                      <CardHeader className="text-papel pb-4">
+                        <Badge variant="secondary" className="mb-3 w-fit bg-primary/80 text-papel border-primary">
                           {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
                         </Badge>
-                        <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-white">
+                        <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-papel">
                           {project.title}
                         </CardTitle>
                         <CardDescription className="text-white/90 text-base md:text-lg leading-relaxed line-clamp-3">
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
                           tabIndex={-1}
                         >
                           {/* primary-400 con texto blanco daba 3,8:1 (AA pide 4,5). El 500 da 10,8:1. */}
-                          <Button className="w-full bg-primary-500 hover:bg-primary-600" asChild>
+                          <Button className="w-full bg-tinta hover:bg-tinta" asChild>
                             <span>Ver el trabajo</span>
                           </Button>
                         </Link>
@@ -121,7 +121,7 @@ const ProjectsSection = () => {
         <div className="text-center mt-10">
           <Link
             href="/casos-de-exito"
-            className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold"
+            className="inline-flex items-center gap-2 text-tinta hover:text-tinta font-semibold"
           >
             Ver todos los casos de arenado →
           </Link>

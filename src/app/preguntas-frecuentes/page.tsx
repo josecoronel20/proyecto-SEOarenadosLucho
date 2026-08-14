@@ -29,18 +29,18 @@ const faqSchema = {
 
 export default function PreguntasFrecuentesPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-papel-alt">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero */}
-      <section className="py-12 md:py-16 bg-white border-b border-gray-200">
+      <section className="py-12 md:py-16 bg-papel border-b border-papel-linea">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h1 className="text-3xl md:text-4xl font-bold text-tinta mb-3">
             Preguntas frecuentes
           </h1>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+          <p className="text-tinta-70 text-base md:text-lg leading-relaxed">
             Lo que más nos preguntan antes de arrancar: plazos, polvo, si vamos a tu casa u obra y cómo queda la superficie. Si tu duda no está acá, coordinamos una visita sin costo.
           </p>
         </div>
@@ -55,9 +55,9 @@ export default function PreguntasFrecuentesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-primary-800">
+      <section className="py-12 md:py-16 bg-tinta">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-papel mb-3">
             ¿Tu pregunta no está en la lista?
           </h2>
           <p className="text-white/90 mb-6">
