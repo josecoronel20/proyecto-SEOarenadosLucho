@@ -12,6 +12,26 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 (4) — Rediseño visual completo: el sitio deja de parecer una plantilla
+
+- **Qué se hizo:** se reemplazó **todo el sistema visual** del sitio, a pedido del dueño ("que el estilo en todo el sitio sea uniforme… auditoría completa por cada página"). Cuatro permisos dados de entrada: rediseño visual completo, tipografía a criterio, reescribir los textos de los casos, y mergear y desplegar al terminar.
+- **El diagnóstico:** auditadas las 9 páginas con motor de navegador, escritorio y celular. **Convivían tres lenguajes visuales**: seis alturas de sección distintas, tres escalas de titular y tres formas de tarjeta. El denominador común eran **tarjetas de ícono + título + texto en cuadrícula** — el patrón que sale de cualquier generador. Para un negocio que vende **oficio**, leerse como hecho a máquina resta: es exactamente lo contrario de lo que se está vendiendo.
+- **El mundo nuevo: catálogo de repuestos / manual de mantenimiento industrial.** Papel técnico frío, dos tintas y todo tabulado con filetes. La regla que lo gobierna: **se separa con filetes, no con cajas**. Entra más información en la misma pantalla y se lee como el papel que este oficio de verdad genera.
+- **Tipografía: Archivo, de Omnibus-Type — una fundición de Buenos Aires.** Auto-alojada con `next/font`: sin pedido a Google, sin salto de texto y sin latencia de tercero. Antes la voz de display era la fuente del sistema, que para una página de marca es un default, no una decisión.
+- **Color con contrastes MEDIDOS, no estimados** (la lección de la entrada anterior). La regla que no se negocia: **sobre naranja va texto tinta, nunca blanco** — blanco da 3,75:1 y AA pide 4,5:1; tinta sobre el mismo naranja da 4,85:1. El verde de WhatsApp queda como **único color ajeno al sistema, a propósito**: el naranja es el mundo, el verde es la acción.
+- **Resultado del detector: de 116 hallazgos a 8 reales** (escritorio). Desaparecieron por completo `low-contrast` (26), `icon-tile-stack` (6), `side-tab` (4) y `nested-cards` (17).
+- **Hallazgos que valían plata, no solo estética:**
+  - El **header** tenía fondo semitransparente con desenfoque: el nombre de la marca medía **1,2:1** contra lo que pasara por detrás. Pasó a opaco.
+  - El **carrusel de la home** tenía texto blanco sobre tarjeta blanca, legible solo gracias a la foto de fondo. Si la imagen tardaba o fallaba, quedaba invisible.
+  - Se sacaron **1,1 MB de video decorativo** que se descargaban en el cierre de cada página.
+  - Las **páginas legales** llegaban a **106 caracteres por renglón** — el hallazgo más repetido del sitio.
+- **Copy: los cuatro casos industriales pasaron a criollo.** Estaban en lenguaje de pliego ("intervención de limpieza y preparación de superficie", "sustrato", "continuidad operativa"). Los casos son la prueba social que mira el que ya está decidiendo, y estaban escritos para un evaluador de licitación que no existe. **No se cambió ningún hecho**, y se verificó que no entraran promesas técnicas (cero menciones de sa3, iso 8501, metal blanco, granallado, certificado, garantizamos).
+- **Invariantes intactos, verificados:** `contact_whatsapp` sigue siendo el único evento y sigue disparándose solo tras confirmar el diálogo; el número sigue partido en dos strings; un solo botón flotante; ninguna URL se movió (los slugs de los casos no cambiaron).
+- **Documentación:** el sistema quedó en **`DESIGN.md`** en la raíz (fuente de verdad), el contrato de dirección como comentario en el `<body>` del layout (sobrevive en producción), y `CLAUDE.md` + `contexto/10` apuntando ahí. El `contexto/10` viejo quedó marcado como historia: **documentaba como patrón correcto un CTA que no pasaba contraste**.
+- **Falsos positivos evaluados, no deuda:** 37 `cramped-padding` son todos el mismo caso — el detector marca cada ítem del acordeón de FAQ como texto pegado al filete; medido en el navegador, el disparador tiene **20px de padding arriba y abajo**. La regla mira el padding del contenedor y no el del hijo. Y 1 `clipped-overflow` es el `overflow-hidden` que Embla necesita para funcionar.
+- **Resultado esperado y cuándo revisarlo:** el objetivo no es estético sino de conversión — que el sitio se lea como un oficio serio y que ninguna barrera de legibilidad frene el paso a WhatsApp. **Revisar a las 4 semanas de que las campañas estén encendidas**, comparando tasa de `contact_whatsapp` sobre sesiones contra el período previo. Ojo: no es un test limpio (las campañas arrancan en paralelo), así que la lectura es direccional.
+- **Resultado real:** (completar)
+
 ## 2026-08-14 (3) — Escaneo de diseño: el botón de conversión no pasaba contraste
 
 - **Herramienta:** detector de Impeccable con motor de navegador (puppeteer, `--save-dev`), sobre las páginas reales, en **escritorio y celular (390×844)**. Es el primer análisis del sitio **renderizado** de todo el proyecto: hasta ahora se había diseñado leyendo código.

@@ -65,7 +65,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
   const hasImages = project.images && project.images.length > 0
 
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
+    <div className="space-y-8 max-w-[72ch] mx-auto">
       {/* Encabezado */}
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
@@ -89,7 +89,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-tinta-70 leading-relaxed">{project.overview}</p>
+          <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{project.overview}</p>
         </CardContent>
       </Card>
 
@@ -142,19 +142,19 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
             {project.context.tipoEstructura && (
               <div>
                 <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Tipo de estructura</p>
-                <p className="text-tinta-70">{project.context.tipoEstructura}</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.tipoEstructura}</p>
               </div>
             )}
             {project.context.entornoTrabajo && (
               <div>
                 <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Entorno de trabajo</p>
-                <p className="text-tinta-70">{project.context.entornoTrabajo}</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.entornoTrabajo}</p>
               </div>
             )}
             {project.context.objetivoCliente && (
               <div>
                 <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Objetivo del cliente</p>
-                <p className="text-tinta-70">{project.context.objetivoCliente}</p>
+                <p className="text-tinta-70 max-w-[68ch]">{project.context.objetivoCliente}</p>
               </div>
             )}
           </CardContent>
@@ -224,7 +224,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
                 <p className="text-sm font-semibold text-tinta-70 mb-1">
                   {METODOLOGIA_LABELS[key] ?? key}
                 </p>
-                <p className="text-tinta-70 leading-relaxed">{value}</p>
+                <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{value}</p>
               </div>
             ))}
           </CardContent>
@@ -248,7 +248,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
                 <p className="text-sm font-semibold text-tinta-70">
                   {PARAMETROS_LABELS[key] ?? key}
                 </p>
-                <p className="text-tinta-70">{value}</p>
+                <p className="text-tinta-70 max-w-[68ch]">{value}</p>
               </div>
             ))}
           </CardContent>
@@ -266,7 +266,7 @@ export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-tinta leading-relaxed">{project.resultados}</p>
+          <p className="text-tinta leading-relaxed max-w-[68ch]">{project.resultados}</p>
         </CardContent>
       </Card>
 
