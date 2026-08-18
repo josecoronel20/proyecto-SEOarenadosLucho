@@ -19,7 +19,7 @@ Estado real del proyecto: sitio **estático/marketing** sin API propia, sin base
 | Downgrade a HTTP | `Strict-Transport-Security` (1 año, `includeSubDomains`) | Cubierto |
 | Fuga de referrer | `Referrer-Policy: strict-origin-when-cross-origin` | Cubierto |
 | Filtración de secretos | No hay `.env` ni claves en el repo | OK si se mantiene |
-| **Scraping del teléfono** | Número partido en 2 strings, armado en runtime, fuera del JSON-LD y de todo `href` | **Mitigación deliberada** |
+| **Scraping del teléfono** | Número como array de dígitos unido en runtime, fuera del JSON-LD y de todo `href` | **Mitigación deliberada** — verificada en el bundle, no solo en el código |
 | Scraping / bots genéricos | Sin WAF propio | Hosting (Vercel) |
 
 ---
@@ -47,7 +47,7 @@ Además: `poweredByHeader: false` (no se anuncia Next.js).
 
 Es la única mitigación "activa" del sitio y es una **decisión de producto**, no un detalle de implementación:
 
-1. El número **nunca se escribe contiguo** en el código: `"5491123" + "787750"`, concatenado en runtime.
+1. El número **nunca queda contiguo en el bundle**: array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Hasta el 14/08/2026 el patrón era `"5491123" + "787750"` y **no funcionaba**: el minificador pliega la concatenación de dos literales en build, así que el número salía entero en producción. La lección: una mitigación se verifica en el artefacto compilado, no en el código fuente.
 2. Se abre con **`window.open`**, no con un `<a href="wa.me/...">` — un `href` dejaría el número completo en el DOM y en el HTML servido.
 3. **No va en el JSON-LD** (`telephone` fue removido del schema) ni como texto visible en ninguna página.
 4. `layout.tsx` emite `<meta name="format-detection" content="telephone=no">`.

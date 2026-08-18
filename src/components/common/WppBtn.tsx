@@ -19,17 +19,16 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
+import { urlWpp } from '@/lib/wppNumero'
 
 const WppBtn = () => {
-  const whatsappNumberPart1 = "5491123" 
-  const whatsappNumberPart2 = "787750"
-  const whatsappMessage = encodeURIComponent(
-    "Hola, me gustaría recibir asesoramiento sobre arenado."
-  )
-  const phoneNumber = whatsappNumberPart1 + whatsappNumberPart2
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`
-
+  // La URL se arma DENTRO del handler: antes se calculaba en el cuerpo del
+  // componente, así que el número quedaba armado en cada render sin que nadie
+  // hubiera tocado el botón.
   const handleConfirm = React.useCallback(() => {
+      const whatsappUrl = urlWpp(
+        "Hola, me gustaría recibir asesoramiento sobre arenado."
+      )
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           event: 'contact_whatsapp',
@@ -40,7 +39,7 @@ const WppBtn = () => {
         })
       }
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
-  }, [whatsappUrl])
+  }, [])
 
   return (
     <AlertDialog>

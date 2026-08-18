@@ -161,8 +161,10 @@ pero rompe conversiones en silencio. Detalle en
   el `AlertDialog`** — nunca al click
 - GTM `GTM-W63ZV9D9`; el `dataLayer` se inicializa antes del snippet
 - **Nunca PII** dentro de un evento
-- El número de WhatsApp va **partido en dos strings** y se abre con
-  `window.open`. Nunca en un `href`, nunca en el JSON-LD, nunca como texto
+- El número de WhatsApp vive como **array de dígitos** en `src/lib/wppNumero.ts`
+  y se une en runtime (concatenar dos strings no servía: el minificador lo
+  plegaba en build). Se abre con `window.open`. Nunca en un `href`, nunca en el
+  JSON-LD, nunca como texto
 - **Un solo** `WppBtn` flotante, global en el layout
 - Copy sin promesas técnicas: prohibido Sa3, ISO 8501, metal blanco,
   granallado, mediciones, "certificado", "garantizamos"

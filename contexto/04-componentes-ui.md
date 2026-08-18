@@ -123,7 +123,7 @@ preguntas-frecuentes/
 
 **Props:** `message?: string` · `className?: string` · `children: ReactNode`
 
-- Mismo patrón que `WppBtn`: número **partido en 2 strings**, `AlertDialog` de confirmación, `window.open` (nunca `<a href>`).
+- Mismo patrón que `WppBtn`: número armado en runtime con `urlWpp()` de `src/lib/wppNumero.ts`, `AlertDialog` de confirmación, `window.open` (nunca `<a href>`).
 - Evento GTM: `contact_whatsapp` con `event_label: 'WhatsApp CTA Click'`, **solo tras confirmar**.
 - `message` permite pre-cargar el chat según el contexto (dueño de casa vs contratista en la landing de piletas).
 - No impone estilos: el diseño del botón viene por `className`.
