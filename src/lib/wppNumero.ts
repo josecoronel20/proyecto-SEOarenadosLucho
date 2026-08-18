@@ -8,7 +8,7 @@
  * `contexto/`. **No funcionaba.** El minificador pliega la concatenación de dos
  * literales en tiempo de build: en el bundle de producción el número aparecía
  * entero y contiguo (`wa.me/5491123787750`). Verificado contra producción el
- * 14/08/2026 — la medida nunca hizo lo que decía hacer.
+ * 18/08/2026 — la medida nunca hizo lo que decía hacer.
  *
  * `Array.prototype.join` no es plegable en build: ni Terser ni SWC evalúan un
  * método de instancia sobre un array. Los dígitos quedan separados en el bundle

@@ -47,7 +47,7 @@ Además: `poweredByHeader: false` (no se anuncia Next.js).
 
 Es la única mitigación "activa" del sitio y es una **decisión de producto**, no un detalle de implementación:
 
-1. El número **nunca queda contiguo en el bundle**: array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Hasta el 14/08/2026 el patrón era `"5491123" + "787750"` y **no funcionaba**: el minificador pliega la concatenación de dos literales en build, así que el número salía entero en producción. La lección: una mitigación se verifica en el artefacto compilado, no en el código fuente.
+1. El número **nunca queda contiguo en el bundle**: array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Hasta el 18/08/2026 el patrón era `"5491123" + "787750"` y **no funcionaba**: el minificador pliega la concatenación de dos literales en build, así que el número salía entero en producción. La lección: una mitigación se verifica en el artefacto compilado, no en el código fuente.
 2. Se abre con **`window.open`**, no con un `<a href="wa.me/...">` — un `href` dejaría el número completo en el DOM y en el HTML servido.
 3. **No va en el JSON-LD** (`telephone` fue removido del schema) ni como texto visible en ninguna página.
 4. `layout.tsx` emite `<meta name="format-detection" content="telephone=no">`.

@@ -12,7 +12,7 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
-## 2026-08-14 (5) — El anuncio prometía algo que la landing no decía
+## 2026-08-18 — El anuncio prometía algo que la landing no decía
 
 - **Qué se hizo:** antes de encender, se cruzó **cada promesa del copy de Ads contra lo que dicen hoy las landings en producción**. Nueve afirmaciones chequeadas en las 5 páginas de destino. Ocho coincidían. Dos no, y una de las dos caía justo en la campaña que se iba a encender primero.
 - **🔴 El hallazgo:** el RSA del grupo `ag_marca` lleva el titular **"Oficio aprendido en familia"** y va a `/`. La home **no contaba esa historia en ninguna parte**. El texto destacado **"20 años de oficio"** tampoco estaba ni en `/` ni en `/servicios` — los destinos de las 3 campañas. El respaldo existía, pero publicado **solo en la FAQ**. Alguien que busca "arenados lucho" veía un aviso sobre oficio heredado y aterrizaba en una página que no lo mencionaba.

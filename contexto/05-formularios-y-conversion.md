@@ -95,7 +95,7 @@ Ambos hacen `window.dataLayer.push({ ... })` protegido por `typeof window !== 'u
 
 ## WhatsApp — detalles técnicos
 
-**Número (en código):** array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Antes eran dos strings concatenados y **el minificador los plegaba en build**: en producción el número salía entero. Corregido el 14/08/2026.
+**Número (en código):** array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Antes eran dos strings concatenados y **el minificador los plegaba en build**: en producción el número salía entero. Corregido el 18/08/2026.
 **Mensajes default:**
 - `WppBtn`: `Hola, me gustaría recibir asesoramiento sobre arenado.`
 - `WhatsAppCTA`: `Hola, quiero consultar por el arenado de mi pileta.` (o el `message` que reciba)
