@@ -8,7 +8,7 @@ import { FranjaDatos } from "@/components/common/system"
 const items = [
   { dato: "Seguros", detalle: "Vigentes, para poder entrar a obra o planta" },
   { dato: "Obra pública", detalle: "Trabajos ejecutados para el Estado" },
-  { dato: "Equipos propios", detalle: "Con sus compresores: no dependemos del lugar" },
+  { dato: "2 equipos", detalle: "Propios, con sus compresores: no dependemos del lugar" },
   { dato: "Lista para pintar", detalle: "Te entregamos la superficie limpia y pareja" },
 ]
 

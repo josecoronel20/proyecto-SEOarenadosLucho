@@ -4,6 +4,7 @@ import TrustBar from "@/components/home/TrustBar";
 import { QueNecesitasArenar } from "@/components/home/QueNecesitasArenar";
 import { IntroductionSection } from "@/components/home/IntroductionSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
+import { OficioFamilia } from "@/components/common/OficioFamilia";
 import { ComoTrabajamos } from "@/components/common/ComoTrabajamos";
 import { ZonasCobertura } from "@/components/common/ZonasCobertura";
 import { FaqCorta } from "@/components/common/FaqCorta";
@@ -44,6 +45,9 @@ export default function Home() {
       />
       <HeroSection />
       <TrustBar />
+      {/* El linaje va alto: el tráfico de marca busca confirmación de que sos
+          confiable, y es justo lo que promete el anuncio que cae acá. */}
+      <OficioFamilia fondo="papel" />
       <QueNecesitasArenar />
       <IntroductionSection />
       <ProjectsSection />
