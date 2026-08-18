@@ -7,6 +7,7 @@ import { LogisticaCoordinacion } from "@/components/servicios/LogisticaCoordinac
 import { QueArenamos } from "@/components/servicios/QueArenamos"
 import { MitigacionRiesgo } from "@/components/servicios/MitigacionRiesgo"
 import { CasoDestacado } from "@/components/servicios/CasoDestacado"
+import { OficioFamilia } from "@/components/common/OficioFamilia"
 import { ComoTrabajamos } from "@/components/common/ComoTrabajamos"
 import { ZonasCobertura } from "@/components/common/ZonasCobertura"
 import { FaqCorta } from "@/components/common/FaqCorta"
@@ -81,7 +82,8 @@ export default function ServiciosPage() {
       <LogisticaCoordinacion />
       <BloqueDiferencial />
       <AutoridadRapida />
-      <ZonasCobertura fondo="papel" />
+      <OficioFamilia fondo="papel" />
+      <ZonasCobertura fondo="alt" />
       <MitigacionRiesgo />
       <FaqCorta items={faqsServicios} fondo="alt" />
       <CTASection

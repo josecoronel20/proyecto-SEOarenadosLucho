@@ -12,6 +12,19 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-14 (5) — El anuncio prometía algo que la landing no decía
+
+- **Qué se hizo:** antes de encender, se cruzó **cada promesa del copy de Ads contra lo que dicen hoy las landings en producción**. Nueve afirmaciones chequeadas en las 5 páginas de destino. Ocho coincidían. Dos no, y una de las dos caía justo en la campaña que se iba a encender primero.
+- **🔴 El hallazgo:** el RSA del grupo `ag_marca` lleva el titular **"Oficio aprendido en familia"** y va a `/`. La home **no contaba esa historia en ninguna parte**. El texto destacado **"20 años de oficio"** tampoco estaba ni en `/` ni en `/servicios` — los destinos de las 3 campañas. El respaldo existía, pero publicado **solo en la FAQ**. Alguien que busca "arenados lucho" veía un aviso sobre oficio heredado y aterrizaba en una página que no lo mencionaba.
+- **Por qué importa más de lo que parece:** el diagnóstico de la cuenta encontró el componente **"experiencia con la página de destino" en "Inferior al promedio" en el 100% de las keywords**. Un desajuste entre lo que promete el aviso y lo que dice la página es exactamente lo que ese componente mide. Y pasaba en el tráfico **más barato** de la cuenta, el de marca, que es gente que ya te busca por nombre y solo necesita confirmación de que sos confiable.
+- **Segundo desajuste, autoinfligido ese mismo día:** al rehacer `/servicios` en el rediseño visual, la franja de datos pasó de **"2 equipos propios"** a **"Equipos propios"** — se perdió el número que el texto destacado del anuncio sí dice. Restaurado.
+- **La solución:** nuevo componente `OficioFamilia` montado en **`/` y en `/servicios`**, con el **texto aprobado el 11/08, casi literal de la FAQ** — no se amplió ni se adornó. Incluye la cifra "20 años / de oficio" tabulada, que es la que hace juego con el texto destacado.
+- ⛔ **Guardarraíl que queda en el código:** el componente lleva escrito por qué **nunca** se dice "20 años de experiencia", "en el mercado" ni "desde 200X". La cuenta tenía heredado "+20 años de experiencia", que es **falso** como antigüedad de la empresa (~8 años) y estuvo corriendo en todos los anuncios. "De oficio" habla de la gente que hace el trabajo y es verificable.
+- **Verificación:** build limpio · el bloque renderiza en las dos páginas · detector con navegador en escritorio y celular sin hallazgos nuevos (los 13 que quedan son los dos falsos positivos ya evaluados) · confirmado en producción.
+- ⚠️ **Nota de método:** el primer escaneo dio **0 hallazgos** y era mentira — el dev server se había caído y el detector leyó la nada. Se detectó porque 0 era sospechoso contra los 7 conocidos de la home. **Un cero siempre se contrasta con la corrida anterior antes de creerlo.**
+- **Resultado esperado y cuándo revisarlo:** mejor "experiencia con la página de destino" en el componente de calidad, sobre todo en `ag_marca` y `ag_genericos`. **Revisar a los 30 días de encender**, en Calidad por componente. Ojo: el componente tarda en actualizarse y necesita volumen, así que antes de 30 días no dice nada.
+- **Resultado real:** (completar)
+
 ## 2026-08-14 (4) — Rediseño visual completo: el sitio deja de parecer una plantilla
 
 - **Qué se hizo:** se reemplazó **todo el sistema visual** del sitio, a pedido del dueño ("que el estilo en todo el sitio sea uniforme… auditoría completa por cada página"). Cuatro permisos dados de entrada: rediseño visual completo, tipografía a criterio, reescribir los textos de los casos, y mergear y desplegar al terminar.
