@@ -86,7 +86,7 @@ Carga tags de terceros (GA4, Ads, Meta Pixel) **sin** código adicional en el re
 | Campo | Valor |
 |-------|--------|
 | **Componentes** | `src/components/common/WppBtn.tsx` (flotante, único) · `src/components/common/WhatsAppCTA.tsx` (inline) |
-| **Número** | Se arma en runtime: `"5491123" + "787750"` — **nunca contiguo en el código ni en el HTML** |
+| **Número** | Array de dígitos unido en runtime (`src/lib/wppNumero.ts`) — **nunca contiguo en el bundle ni en el HTML**. Concatenar dos strings no alcanzaba: el minificador lo plegaba |
 | **URL** | `https://wa.me/<número>?text=...` abierta con `window.open` (no `<a href>`) |
 | **Mensaje default** | `WppBtn`: "Hola, me gustaría recibir asesoramiento sobre arenado." · `WhatsAppCTA`: parametrizable por `message` |
 | **API** | Ninguna; apertura en nueva pestaña |
@@ -166,7 +166,7 @@ Dominios a permitir en CSP/firewall si aplica: `googletagmanager.com`, `google-a
 
 1. **GTM** cargado antes de cualquier `dataLayer.push` en páginas nuevas.
 2. **`contact_whatsapp`** solo tras la confirmación del modal — es la única conversión de la cuenta.
-3. **El número partido en 2 strings** y abierto con `window.open`; nunca en un `href` ni en el JSON-LD.
+3. **El número como array de dígitos unido en runtime** y abierto con `window.open`; nunca en un `href` ni en el JSON-LD.
 4. **`projectsInfo.json`**: `idSection` único por caso (romperlo rompe las URLs estáticas).
 5. **No agregar un endpoint de contacto** sin decisión del dueño (ver arriba).
 

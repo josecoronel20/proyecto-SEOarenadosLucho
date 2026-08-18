@@ -72,7 +72,7 @@ Actualizar 15-bugs marcando corregidos.
 
 No cambiar:
 - El evento contact_whatsapp ni el momento en que dispara (solo tras confirmar el AlertDialog)
-- El número partido en 2 strings ni el window.open (nunca un <a href>)
+- El número armado en runtime con `urlWpp()` ni el window.open (nunca un <a href>)
 - La cantidad de botones flotantes (hay UNO solo: WppBtn en el layout)
 
 Prohibido: reintroducir un formulario o un endpoint de contacto (ADR-019).
@@ -176,7 +176,7 @@ Problema: [no abre WhatsApp / abre sin mensaje / no aparece el evento]
 
 Revisar WppBtn.tsx y WhatsAppCTA.tsx:
 - El AlertDialog confirma antes de abrir
-- El número se arma partido en 2 strings
+- El número se arma en runtime desde un array de dígitos (`src/lib/wppNumero.ts`)
 - window.open(url, '_blank', 'noopener,noreferrer')
 - dataLayer.push('contact_whatsapp') SOLO en handleConfirm
 

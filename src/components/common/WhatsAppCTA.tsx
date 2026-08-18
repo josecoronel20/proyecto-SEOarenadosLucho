@@ -12,6 +12,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import { urlWpp } from "@/lib/wppNumero"
 
 interface WhatsAppCTAProps {
   /** Mensaje pre-cargado en WhatsApp (ej. distinto para dueño vs contratista). */
@@ -22,18 +23,17 @@ interface WhatsAppCTAProps {
 
 /**
  * CTA inline que abre WhatsApp, con el MISMO patrón que WppBtn:
- * - El número va PARTIDO en 2 strings → NO aparece contiguo en el HTML (anti-scraping).
+ * - El número lo arma `urlWpp()` en runtime desde un array de dígitos, para que
+ *   no quede contiguo en el bundle (ver el porqué en `src/lib/wppNumero.ts`).
  * - Dispara `contact_whatsapp` SOLO tras confirmar el AlertDialog (invariante de tracking).
  * - window.open, no un <a href> (para no dejar el número en el DOM).
  * NO es el botón flotante global: ese sigue siendo único (WppBtn en el layout).
  */
 export function WhatsAppCTA({ message, className, children }: WhatsAppCTAProps) {
   const handleConfirm = React.useCallback(() => {
-    const phone = "5491123" + "787750"
-    const text = encodeURIComponent(
+    const url = urlWpp(
       message ?? "Hola, quiero consultar por el arenado de mi pileta."
     )
-    const url = `https://wa.me/${phone}?text=${text}`
     if (typeof window !== "undefined" && window.dataLayer) {
       window.dataLayer.push({
         event: "contact_whatsapp",

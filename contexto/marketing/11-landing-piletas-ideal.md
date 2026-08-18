@@ -146,7 +146,7 @@
 4. **Mobile-first estricto** (el dueño scrollea desde el celular con la foto de la pileta en la mano).
 5. **Microcopys de fricción cero** en cada CTA: "visita y presupuesto sin costo · respondemos rápido · sin compromiso".
 6. **Cero jerga técnica** en copy/metadata/schema (prohibido Sa3/ISO/metal blanco/granallado/mediciones). Decir explícito qué **NO** hacemos (no pintamos/revestimos; no granallado) filtra al comprador equivocado.
-7. **Tracking intocable:** un solo evento vía `window.dataLayer` — **`contact_whatsapp`**, y **solo tras confirmar el `AlertDialog`**; número partido en 2 strings; **sin PII** en el payload. Ver `contexto/06-tracking-y-analytics.md`.
+7. **Tracking intocable:** un solo evento vía `window.dataLayer` — **`contact_whatsapp`**, y **solo tras confirmar el `AlertDialog`**; número armado en runtime, nunca contiguo en el bundle; **sin PII** en el payload. Ver `contexto/06-tracking-y-analytics.md`.
 8. **Bloque estacional rotable** (sección 2): rotar 2×/año y **registrar cada rotación en `08-bitacora.md`**.
 
 ## Keywords cubiertas (checklist de cobertura)

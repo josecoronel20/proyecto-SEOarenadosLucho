@@ -4,9 +4,13 @@ Sistema visual del sitio, reemplazado por completo el **14/08/2026**. Este
 archivo es la fuente de verdad: si algo que vas a escribir lo contradice, está
 mal el código, no el documento.
 
-El contrato de dirección (tesis, mundo, historia, primer viewport, forma) vive
-como comentario HTML al inicio de `<body>` en [layout.tsx](src/app/layout.tsx) y
-sobrevive en producción. Acá está la parte operativa.
+El contrato de dirección (tesis, mundo, historia, primer viewport, forma) vive al
+inicio de `<body>` en [layout.tsx](src/app/layout.tsx). **Es un comentario JSX:
+React no lo emite al HTML**, así que se lee en el código y no en el navegador.
+Fue deliberado — mandarlo al HTML costaría ~2,5 KB en cada carga de cada página,
+para cero valor del visitante, en un sitio del que justo se acaban de sacar
+1,1 MB de video decorativo. Quien lo necesita es quien edita el layout, y ahí
+está. Acá está la parte operativa.
 
 ---
 
@@ -157,8 +161,10 @@ pero rompe conversiones en silencio. Detalle en
   el `AlertDialog`** — nunca al click
 - GTM `GTM-W63ZV9D9`; el `dataLayer` se inicializa antes del snippet
 - **Nunca PII** dentro de un evento
-- El número de WhatsApp va **partido en dos strings** y se abre con
-  `window.open`. Nunca en un `href`, nunca en el JSON-LD, nunca como texto
+- El número de WhatsApp vive como **array de dígitos** en `src/lib/wppNumero.ts`
+  y se une en runtime (concatenar dos strings no servía: el minificador lo
+  plegaba en build). Se abre con `window.open`. Nunca en un `href`, nunca en el
+  JSON-LD, nunca como texto
 - **Un solo** `WppBtn` flotante, global en el layout
 - Copy sin promesas técnicas: prohibido Sa3, ISO 8501, metal blanco,
   granallado, mediciones, "certificado", "garantizamos"

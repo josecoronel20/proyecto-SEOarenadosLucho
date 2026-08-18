@@ -84,7 +84,7 @@ Ambos hacen `window.dataLayer.push({ ... })` protegido por `typeof window !== 'u
 | Área | Implementación |
 |------|----------------|
 | WhatsApp | Confirmación en `AlertDialog` antes de redirigir (evita clicks accidentales y mide intención real) |
-| Número | Partido en 2 strings, armado en runtime, abierto con `window.open` — nunca contiguo en el HTML ni en un `href` |
+| Número | Array de dígitos en `src/lib/wppNumero.ts`, unido en runtime, abierto con `window.open` — nunca contiguo en el bundle ni en un `href` |
 | Servidor | No aplica: no hay envío de datos desde el sitio |
 
 **No hay** (ni hace falta): Zod, React Hook Form, honeypot, reCAPTCHA, rate limiting. Todo eso servía al formulario eliminado.
@@ -95,7 +95,7 @@ Ambos hacen `window.dataLayer.push({ ... })` protegido por `typeof window !== 'u
 
 ## WhatsApp — detalles técnicos
 
-**Número (en código):** `"5491123" + "787750"` → se arma en runtime.
+**Número (en código):** array de dígitos en `src/lib/wppNumero.ts`, unido con `.join("")` en runtime. ⚠️ Antes eran dos strings concatenados y **el minificador los plegaba en build**: en producción el número salía entero. Corregido el 14/08/2026.
 **Mensajes default:**
 - `WppBtn`: `Hola, me gustaría recibir asesoramiento sobre arenado.`
 - `WhatsAppCTA`: `Hola, quiero consultar por el arenado de mi pileta.` (o el `message` que reciba)

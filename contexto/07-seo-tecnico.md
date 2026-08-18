@@ -265,7 +265,7 @@ Documentadas en `03-rutas-y-paginas.md`:
 
 ### Reglas del roadmap (no romper)
 
-1. **Invariantes intocables** (`06-tracking-y-analytics.md`): el evento **`contact_whatsapp`** (el único vigente), disparado solo tras confirmar el `AlertDialog`; `GTM-W63ZV9D9`; init de `dataLayer` antes de GTM; el número partido en 2 strings y fuera del HTML; un solo `WppBtn` global; **sin PII** en el payload.
+1. **Invariantes intocables** (`06-tracking-y-analytics.md`): el evento **`contact_whatsapp`** (el único vigente), disparado solo tras confirmar el `AlertDialog`; `GTM-W63ZV9D9`; init de `dataLayer` antes de GTM; el número como array de dígitos unido en runtime y fuera del HTML; un solo `WppBtn` global; **sin PII** en el payload.
 2. **No romper rutas que usa Google Ads.** Todo cambio de URL va con **301** y se monitorea en Search Console (cobertura + inspección de URL).
 3. `SITE_URL` sincronizado en `layout.tsx`, `sitemap.ts`, `robots.ts`.
 4. **Sin promesas técnicas** (Sa3/ISO 8501/metal blanco/perfil de anclaje/granallado) en copy, metadata ni schema (`.cursorrules`).

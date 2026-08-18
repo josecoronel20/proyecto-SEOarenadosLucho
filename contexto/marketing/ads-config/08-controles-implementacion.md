@@ -369,7 +369,7 @@ Se cargan antes de crear las campañas para no dejar huecos de superficie cuando
 
 **25.** **4–6 imágenes** reales de trabajo, sin texto ni marca de agua: cuadrada 1:1 (1200×1200) obligatoria + 1.91:1 (1200×628) opcional. Antes/después de pileta, ladrillo a la vista recuperado, estructura sin óxido, equipo en galpón.
 
-**26.** ⛔ **Cero** recursos de **llamada**, **formulario de clientes potenciales**, **precio** y **ubicación**. El de ubicación queda bloqueado además porque el Google Business Profile **está sin reclamar**, y cuando se active mostraría el teléfono — reabriendo exactamente el problema de las llamadas de empleo y exponiendo el número que el sitio protege partido en dos strings.
+**26.** ⛔ **Cero** recursos de **llamada**, **formulario de clientes potenciales**, **precio** y **ubicación**. El de ubicación queda bloqueado además porque el Google Business Profile **está sin reclamar**, y cuando se active mostraría el teléfono — reabriendo exactamente el problema de las llamadas de empleo y exponiendo el número que el sitio protege del scraping.
 
 **27.** Pasar **todo** el texto por la lista de bloqueo antes de aprobarlo: `granallado`, `granalla`, `shot blasting`, `sa3`, `sa 2`, `sa 2.5`, `iso`, `8501`, `metal blanco`, `perfil de anclaje`, `rugosidad`, `micras`, `espesor`, `certific-`, `norma`, `pintamos`, `revestimos`, `garantizamos`.
 

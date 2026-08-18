@@ -368,7 +368,7 @@ Se detallan en la sección de anuncios y recursos. Lo que corresponde fijar **ac
 | Imagen | ✅ opcional, fotos reales |
 | **Llamada** | ❌ **PROHIBIDO** — verificar en los 3 niveles (recurso, recursos automatizados de cuenta, e **Informes de llamadas OFF** en Administrador → Configuración de la cuenta) |
 | **Formulario de clientes potenciales** | ❌ **PROHIBIDO** |
-| **Ubicación** | ❌ **No activar todavía** — requiere GBP reclamado, y además **muestra el teléfono**, lo que reabre el problema de los llamados de empleo y expone el número que el sitio protege partido en 2 strings |
+| **Ubicación** | ❌ **No activar todavía** — requiere GBP reclamado, y además **muestra el teléfono**, lo que reabre el problema de los llamados de empleo y expone el número que el sitio protege del scraping |
 | Precio | ❌ No usar (el arenado se cotiza por m², estado y accesibilidad) |
 | Promoción | ⚠️ Solo en Piletas y solo si el dueño sostiene la oferta |
 

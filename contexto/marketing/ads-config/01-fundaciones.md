@@ -150,7 +150,7 @@ El "Modo inteligente" (Smart mode) es la interfaz simplificada que Google ofrece
 | **YouTube** | ❌ No aplica hoy | Solo si algún día se hace video (fuera de alcance) |
 | **Data Manager / cargas offline** | ⏸️ Más adelante | Solo cuando se implemente la conversión offline "Trabajo cobrado" |
 
-⚠️ **Advertencia específica sobre GBP:** el recurso de ubicación de Ads **muestra públicamente el teléfono de la ficha**, que según lo decidido es el WhatsApp del negocio. Eso (a) reabre el problema de las llamadas de gente buscando empleo —la razón por la que se sacó la extensión de llamada— y (b) expone el número que el sitio protege partido en dos strings contra scraping. **Reclamar la ficha sí (sirve para SEO local); activar el recurso de ubicación en Ads, no.** Verificar además que "Ubicación" esté apagada en los recursos automatizados de cuenta (F7).
+⚠️ **Advertencia específica sobre GBP:** el recurso de ubicación de Ads **muestra públicamente el teléfono de la ficha**, que según lo decidido es el WhatsApp del negocio. Eso (a) reabre el problema de las llamadas de gente buscando empleo —la razón por la que se sacó la extensión de llamada— y (b) expone el número que el sitio protege del scraping. **Reclamar la ficha sí (sirve para SEO local); activar el recurso de ubicación en Ads, no.** Verificar además que "Ubicación" esté apagada en los recursos automatizados de cuenta (F7).
 
 **Test de 5 minutos antes de seguir (crítico y barato):** abrir `https://www.arenadoslucho.com/servicios?gclid=TEST123` y confirmar que el parámetro sobrevive la navegación. Repetir con las rutas legacy que tienen 301 (`/arenado-industrial`, `/arenado-particular`, `/presupuesto-rapido`): un 301 que descarta la query string rompe la atribución completa y no lo avisa nadie.
 

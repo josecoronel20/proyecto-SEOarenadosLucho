@@ -479,7 +479,7 @@ Requiere el Perfil de Empresa (GBP) reclamado y verificado, y hoy la ficha exist
 
 **Ruta (cuando corresponda):** `Herramientas → Cuentas vinculadas → Perfil de Empresa`, luego `Herramientas → Biblioteca compartida → Administrador de ubicaciones`.
 
-Aunque se reclame la ficha, **hay dos razones propias de este negocio para no encenderlo de inmediato**: (1) el recurso de ubicación **muestra el teléfono** de la ficha, lo que reabre el problema de las llamadas de gente buscando empleo — el motivo exacto por el que se quitó la extensión de llamada — y expone públicamente un número que el sitio protege partido en 2 strings contra scraping; (2) Arenados Lucho trabaja **in situ**: no hay local que el cliente visite, la dirección no aporta valor comercial. Reclamar la ficha sí (sirve para orgánico y pack local); activar el asset de ubicación en Ads es una decisión posterior y explícita del dueño.
+Aunque se reclame la ficha, **hay dos razones propias de este negocio para no encenderlo de inmediato**: (1) el recurso de ubicación **muestra el teléfono** de la ficha, lo que reabre el problema de las llamadas de gente buscando empleo — el motivo exacto por el que se quitó la extensión de llamada — y expone públicamente un número que el sitio protege del scraping; (2) Arenados Lucho trabaja **in situ**: no hay local que el cliente visite, la dirección no aporta valor comercial. Reclamar la ficha sí (sirve para orgánico y pack local); activar el asset de ubicación en Ads es una decisión posterior y explícita del dueño.
 
 #### 6.6.7 Sufijo de URL final (una vez, a nivel campaña)
 
