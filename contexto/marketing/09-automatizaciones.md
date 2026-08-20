@@ -4,7 +4,9 @@ Inventario de todo lo que corre **solo** (sin intervención humana), cómo enter
 
 ## 1. Google Ads — scripts dentro de la cuenta
 
-Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automático con topes. **Estado real (26/07/2026):** instalados y programados el **guardián (06)** y los 3 de solo lectura (**02, 03, 04**), verificados en Vista previa (el guardián logueó su heartbeat OK). **Tope de gasto YA activo:** presupuesto diario nativo de la campaña activa fijado en **ARS 10.000/día** + guardián diario como red secundaria. ⚠️ Al relanzar con la estructura nueva, el presupuesto de arranque es **~5.000/día total** (ver `05-google-ads-operacion.md`). El **autopilot (05) sigue SIN instalar** a propósito (recién con conversiones fluyendo y URLs en 200). Detalle y política: `06-google-ads-scripts.md`.
+Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automático con topes. **Estado real (20/08/2026):** las **3 campañas nuevas están activas** y la medición quedó verificada (chequeo C3, ver `08-bitacora.md`). El presupuesto de la campaña vieja se bajó de 10.000 a **500/día** el 18/08 — sigue pausada, pero con 10.000 un encendido accidental se comía la caja en 10 días. Tope vigente: **5.000/día** repartido entre las 3 + guardián de **ARS 300.000/mes**.
+
+**Estado anterior (26/07/2026):** instalados y programados el **guardián (06)** y los 3 de solo lectura (**02, 03, 04**), verificados en Vista previa (el guardián logueó su heartbeat OK). **Tope de gasto YA activo:** presupuesto diario nativo de la campaña activa fijado en **ARS 10.000/día** + guardián diario como red secundaria. ⚠️ Al relanzar con la estructura nueva, el presupuesto de arranque es **~5.000/día total** (ver `05-google-ads-operacion.md`). El **autopilot (05) sigue SIN instalar** a propósito (recién con conversiones fluyendo y URLs en 200). Detalle y política: `06-google-ads-scripts.md`.
 
 | Script | Frecuencia | Hace solo | Estado |
 |--------|------------|-----------|--------|
