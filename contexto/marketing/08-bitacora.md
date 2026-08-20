@@ -12,6 +12,41 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-20 — ✅ Encendido: la medición llega a Ads y las 3 campañas quedan activas
+
+- **Qué se hizo:** el 18/08 se cargaron **ARS 100.000** y se encendió **solo `AR-Search-General-Marca`** (750/día). El 20/08, tras 48 h, se verificó el chequeo **C3** y se encendieron las otras dos: `AR-Search-Obra-Industrial` (3.000/día) y `AR-Search-Piletas` (1.250/día). **Las 3 activas desde el 20/08.**
+- **⭐ C3 APROBADO — la conversión llega a Google Ads.** Es el chequeo que no se podía hacer sin gastar, y que estuvo bloqueando el encendido desde el 11/08:
+  - En la tabla de la campaña, la columna **"Conversiones" = 1.00** (no solo "Todas las conv."). Esa es la prueba.
+  - `contact_whatsapp`: **Estado "Activa"** · **Optimización "Principales"** (primaria) · **incluida en los objetivos de cuenta: Sí** · **Recuento "Una"** · ventana **30 días**. Todo como se había configurado.
+  - Circuito completo y cerrado: sitio → GTM → GA4 → Ads.
+- **Duda del dueño, resuelta:** *"entró un mensaje pero no puedo saber si fue por Ads u orgánico"*. **Si aparece en la columna "Conversiones", vino de Ads**: Google solo cuenta ahí lo que puede atar a un clic pago. Un contacto orgánico no tiene cómo aparecer.
+- **Primeros números (18–20/08, solo General-Marca):**
+
+| Métrica | Valor |
+|---|---|
+| Impresiones | 48 |
+| Clics | 2 · CTR **4,17%** |
+| CPC promedio | ARS 73,48 |
+| Costo | ARS 146,97 |
+| Conversiones | **1** · Costo/conv. ARS 146,97 |
+| % impresiones (parte superior) | 29,27% |
+
+- **Lecturas, con la cautela que corresponde:**
+  - **Gastó el 10% del presupuesto** (146,97 de 1.500 en dos días). Es lo esperado con concordancia exacta: hay poco volumen, no es que algo falle.
+  - **El clic vino del grupo `ag_genericos`, no de `ag_marca`.** El anuncio de marca tuvo **0 impresiones**: nadie buscó "arenados lucho" en 48 h. Estaba previsto (`19-checklist-encendido.md`: *"ag_marca va a gastar poquísimo. Está bien"*).
+  - ⚠️ **El costo por contacto de ARS 146,97 no significa nada todavía.** Es **una** conversión. La línea base real se lee a los 30 días.
+  - **Calidad del anuncio pasó de "Deficiente" a "Promedio"** desde que se cargaron los recursos — el pinning por pools sin assets era la causa.
+- **🔴 Hallazgo abierto — una conversión de llamada colgada de los objetivos de cuenta.** `Smart campaign ad clicks to call` (fuente: *Llamadas desde anuncios*) figura en **"Configuración incorrecta"** y en **0.00**, pero está **incluida en los objetivos a nivel de cuenta: Sí**. Hoy no cuenta nada; si alguna vez se arreglara, Ads empezaría a optimizar hacia **llamadas** — exactamente lo que se cerró con las seis puertas del teléfono, porque los llamados que entran son de gente buscando empleo. `Smart campaign map clicks to call` ya está en **No** y no molesta. **Pendiente: sacarla de los objetivos de cuenta.**
+- **⛔ Congelamiento: del 20/08 al 03/09 no se toca nada** — ni pujas, ni presupuestos, ni keywords, ni textos. Lo único permitido: **agregar negativas**. Cada cambio reinicia el aprendizaje.
+- **Caja:** con 5.000/día de techo entre las 3, los 100.000 dan para ~20 días en el peor caso. El guardián (tope 300.000/mes) corrió OK el 18 y el 20.
+- **Agenda:** **lunes 24/08** llegan los primeros mails de los scripts **con datos reales** (hasta ahora corrían sobre una cuenta sin gasto y decían "finalizó sin cambios"). De ahí salen las negativas de la semana.
+- **Para septiembre, después del congelamiento:**
+  1. Sacar `Smart campaign ad clicks to call` de los objetivos de cuenta (si el candado lo permite).
+  2. **Rutas del anuncio genérico:** muestra `www.arenadoslucho.com` pelado; le faltan las rutas `arenados` / `buenos-aires` que sí tiene el de marca. Es una palanca de CTR gratis.
+  3. **Distinguir WhatsApp de Ads vs orgánico sin depender de Google:** hacer que el mensaje pre-cargado varíe según el origen, para que el dueño lo vea en su propio celular. Hoy no hay forma de auditar el número de Google contra la realidad, y la regla del proyecto es que **el único juez son los chats que llegan**.
+- **Resultado esperado y cuándo revisarlo:** primera lectura seria de CPA y de calidad por componente el **19/09** (30 días). Antes de esa fecha ningún número es concluyente.
+- **Resultado real:** (completar)
+
 ## 2026-08-18 — El anuncio prometía algo que la landing no decía
 
 - **Qué se hizo:** antes de encender, se cruzó **cada promesa del copy de Ads contra lo que dicen hoy las landings en producción**. Nueve afirmaciones chequeadas en las 5 páginas de destino. Ocho coincidían. Dos no, y una de las dos caía justo en la campaña que se iba a encender primero.
