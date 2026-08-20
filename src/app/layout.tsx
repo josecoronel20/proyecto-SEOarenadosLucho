@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import WppBtn from "@/components/common/WppBtn";
+import { MarcarOrigen } from "@/components/common/MarcarOrigen";
 import { SITE_URL, BUSINESS, BUSINESS_ID } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -232,6 +233,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        
+        <MarcarOrigen />
         
         <Header />
         <WppBtn />

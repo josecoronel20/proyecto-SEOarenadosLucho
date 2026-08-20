@@ -20,6 +20,8 @@
  *
  * Si alguna vez hay que cambiar el número, se cambia acá y en ningún otro lado.
  */
+import { mensajeSegunOrigen } from "@/lib/origenTrafico"
+
 const DIGITOS = ["5", "4", "9", "1", "1", "2", "3", "7", "8", "7", "7", "5", "0"]
 
 /** Devuelve el número en formato internacional, sin `+` ni separadores. */
@@ -34,5 +36,9 @@ export function numeroWpp(): string {
  * no queda armado en memoria antes de que la persona confirme el diálogo.
  */
 export function urlWpp(mensaje: string): string {
-  return `https://wa.me/${numeroWpp()}?text=${encodeURIComponent(mensaje)}`
+  // El mensaje se adapta según de dónde vino la persona: si llegó por un
+  // anuncio, arranca con “vi su anuncio en Google”. Es el único punto por el que
+  // pasan todos los botones del sitio, así que alcanza con hacerlo acá.
+  const texto = mensajeSegunOrigen(mensaje)
+  return `https://wa.me/${numeroWpp()}?text=${encodeURIComponent(texto)}`
 }
