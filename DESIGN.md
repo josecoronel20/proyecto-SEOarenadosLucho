@@ -104,12 +104,18 @@ H1     text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]
 H2     text-3xl md:text-[2.5rem] font-bold tracking-tight leading-[1.1]
 H3     text-lg md:text-xl font-semibold leading-snug
 rótulo ficha-num text-xs font-semibold uppercase tracking-wider   (encabezado de columna/tabla)
-MEDIDA max-w-[68ch]   ← medida de lectura. Más de ~70 caracteres y el ojo pierde el renglón
+MEDIDA max-w-[58ch]   ← medida de lectura, ~75 caracteres por renglón
 ```
+
+⚠️ **El valor de `MEDIDA` no es la cantidad de caracteres.** `ch` mide el ancho
+del glifo “0”, de los más anchos de Archivo, así que la prosa entra bastante más
+holgada: **68ch daban ~88 caracteres reales** y el detector los marcaba. Medido
+en el navegador el 26/08/2026.
 
 `.ficha-num` (en `globals.css`) da `tabular-nums` + tracking: es para números de
 ítem, cifras y rótulos. **No** es "monoespaciada como disfraz de técnico" — se
-usa donde hay dato o medición real.
+usa donde hay dato o medición real. **No va en frases**: el detector marca el
+tracking en texto de cuerpo, y tiene razón — es para rótulos cortos y cifras.
 
 ---
 
