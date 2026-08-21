@@ -9,15 +9,15 @@
         "url": "/casos-de-exito/nave-ferroviaria",
         "idSection": "nave-ferroviaria",
         "images": [
-          "/images/services/arenadoIndustrial/Nave/IMG_2419.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2423.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2424.PNG",
+          "/images/services/arenadoIndustrial/Nave/IMG_2419.PNG",
           "/images/services/arenadoIndustrial/Nave/IMG_2425.PNG",
-          "/images/services/arenadoIndustrial/Nave/IMG_2426.PNG",
-          "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
-          "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG"
+          "/images/services/arenadoIndustrial/Nave/IMG_2426.PNG"
         ],
-        "overview": "Una nave ferroviaria de estructura metálica, con óxido y pintura vieja por todos lados. Fuimos a arenarla para sacarle todo eso y dejarla limpia y pareja, lista para que le dieran el antióxido y la pintura nueva. Es obra pública: se trabajó por sectores, coordinando con la dirección de obra para no cruzarnos con las otras tareas.",
+        "overview": "Una estructura metálica ferroviaria con años de pintura vieja y óxido, arenada mientras la estación seguía funcionando y con otras cuadrillas trabajando al mismo tiempo. Se avanzó columna por columna, por sectores, para no ocupar todo a la vez. Quedó lista para pintar.",
         "context": {
           "tipoEstructura": "Nave metálica grande, con vigas, columnas y cerchas a la vista.",
           "entornoTrabajo": "Obra en marcha, con otras tareas ocurriendo al mismo tiempo.",
@@ -47,6 +47,64 @@
           "Coordinamos día a día con la dirección de obra.",
           "Trabajo prolijo: la estructura se entrega lista para pintar.",
           "Estamos acostumbrados a trabajar con la obra en funcionamiento."
+        ],
+        "fotos": [
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2427.PNG",
+            "pie": "El lugar: el andén con toda su cubierta metálica a la vista, y el equipo apoyado sobre la plataforma, al lado del trabajo. La estación seguía en funcionamiento."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2428.PNG",
+            "pie": "Así trabaja el equipo: la tolva al pie, un ayudante atendiéndola abajo y el arenador arriba, sobre la torre de andamio."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2423.PNG",
+            "pie": "Arenando una columna. Atrás, sobre el mismo andén, se ve a otras cuadrillas trabajando: se avanza por sectores para no ocupar todo al mismo tiempo."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2424.PNG",
+            "pie": "La misma columna desde abajo. Se va sacando la pintura vieja de a partes, de arriba hacia abajo."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2419.PNG",
+            "pie": "Buena parte del trabajo es en altura, sobre andamio: casco, arnés con cabo de vida y máscara para el polvo."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2425.PNG",
+            "pie": "La arena usada se junta al pie de la columna. Al terminar se retira; el polvillo fino sigue asentándose unos días."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Nave/IMG_2426.PNG",
+            "pie": "El hierro ya sin la pintura vieja, listo para que le den antióxido y pintura. Se ven las zonas donde el óxido había avanzado más."
+          }
+        ],
+        "comoSuele": [
+          {
+            "concepto": "Cuánta gente",
+            "detalle": "Un arenador con uno o dos ayudantes, según la complejidad. Si el plazo aprieta, va un segundo equipo igual. Dos equipos es el tope: no prometemos más de lo que podemos poner."
+          },
+          {
+            "concepto": "Cuánto lleva",
+            "detalle": "Depende del tamaño de la estructura, del acceso y de cuánto haya que subir a andamio. El plazo te lo damos en la visita, con el trabajo a la vista."
+          },
+          {
+            "concepto": "Con la obra en marcha",
+            "detalle": "Se trabaja por sectores: se interviene una zona, se libera y se sigue con la siguiente. Así conviven varias cuadrillas sin pisarse."
+          },
+          {
+            "concepto": "Trabajo en altura",
+            "detalle": "Sobre andamio, con casco, arnés con cabo de vida y máscara. Es parte del oficio y va incluido."
+          },
+          {
+            "concepto": "Cómo queda",
+            "detalle": "Hierro limpio y parejo, listo para antióxido y pintura. Donde el óxido había avanzado, el metal queda picado: el arenado lo limpia, no lo rellena."
+          }
+        ],
+        "queNecesitamos": [
+          "El cerramiento. Nosotros no armamos cerramientos: si hay equipos, instalaciones o zonas que no pueden recibir polvo, el cerramiento lo ponés vos. En la visita definimos qué tapar y hasta dónde llega.",
+          "Un espacio para el compresor y la tolva, cerca del sector que se arena: la arena se carga al hombro desde el equipo.",
+          "Acceso al sector y definir con quién coordinamos las ventanas de trabajo.",
+          "Los permisos que pida el lugar, sobre todo si el polvo puede salir a la vía o a la calle."
         ]
       },
       {
