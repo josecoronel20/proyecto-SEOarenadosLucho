@@ -12,12 +12,12 @@ const objeciones = [
   {
     pregunta: "¿Me van a frenar la obra?",
     respuesta:
-      "Coordinamos el cronograma con vos y trabajamos por sectores: intervenimos una zona y la liberamos. Si el plazo aprieta, sumamos equipos.",
+      "Coordinamos el cronograma con vos y trabajamos por sectores: intervenimos una zona y la liberamos. Si el plazo aprieta sumamos un segundo equipo en paralelo — un arenador con uno o dos ayudantes. Dos equipos es el tope: no prometemos más de lo que podemos poner.",
   },
   {
     pregunta: "El polvo me complica las otras tareas",
     respuesta:
-      "Por eso trabajamos por zonas y coordinamos horarios. En galpones y predios amplios no suele ser problema; en obra en marcha intervenimos un sector a la vez.",
+      "Coordinamos horarios y trabajamos por zonas: intervenimos un sector y lo liberamos. Lo que sí conviene saber de entrada: no armamos cerramientos. Si hay máquinas o materiales que no pueden recibir polvo, el cerramiento lo ponés vos y en la visita definimos qué tapar.",
   },
   {
     pregunta: "¿Queda bien para pintar después?",

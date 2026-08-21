@@ -89,7 +89,7 @@ const pasos = [
   },
   {
     title: "Vamos a tu casa con el equipo",
-    text: "Llegamos con compresores y equipo propio. No trasladás ni preparás nada: protegemos la zona y arenamos.",
+    text: "Llegamos con compresores y equipo propio: no trasladás nada. La mayor parte de la arena queda adentro de la pileta; si hay algo cerca que no quieras ensuciar, tapalo antes y te decimos qué conviene.",
   },
   {
     title: "Te la entregamos lista",
