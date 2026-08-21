@@ -55,6 +55,7 @@ export const faqsServicios: Faq[] = pick([
   "¿Trabajan dentro de una obra en marcha?",
   "¿Cuánto tardan?",
   "¿Hacen mucho polvo? ¿Molesta a los vecinos?",
+  "¿Qué espacio necesitan para el equipo?",
   "¿Pueden trabajar fines de semana o turnos extendidos?",
   "¿Hacen granallado o arenado certificado con normas?",
 ])
