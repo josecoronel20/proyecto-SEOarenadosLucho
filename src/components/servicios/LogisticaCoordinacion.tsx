@@ -2,7 +2,7 @@ import { Section, SectionHead, MEDIDA } from "@/components/common/system"
 
 const requisitos = [
   "Que podamos acceder al lugar",
-  "Un espacio para ubicar el equipo",
+  "Un espacio para el compresor y la tolva, cerca del trabajo: la arena se carga al hombro",
   "Definir con quién coordinamos (vos o el encargado de obra)",
   "Permisos, si el lugar los requiere (obra o vía pública)",
 ]

@@ -60,6 +60,7 @@ Copiá el contenido del archivo que aplique o pegá el índice + el archivo nece
 | Validación, env, buenas prácticas | `12-seguridad-y-validaciones.md` |
 | Cómo pedirle cosas al agente en Cursor | `13-workflow-cursor.md` |
 | Estándares al escribir código | `14-reglas-de-implementacion.md` |
+| **Voy a escribir copy, una FAQ, un caso o un anuncio** | **`21-realidad-operativa.md`** ← empezar SIEMPRE por acá |
 | Error conocido o regresión | `15-bugs-conocidos.md` |
 | Refactors pendientes, legacy | `16-deuda-tecnica.md` |
 | Próximos pasos del producto/técnico | `17-roadmap-tecnico.md` |

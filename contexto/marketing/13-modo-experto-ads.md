@@ -1,4 +1,6 @@
 # Modo experto — gestión profesional de Google Ads
+> ⚠️ **Antes de escribir o aprobar cualquier texto de anuncio, leer [`contexto/21-realidad-operativa.md`](../21-realidad-operativa.md).** Un anuncio promete en 30 caracteres lo que después hay que cumplir en el lugar. Ahí está qué se hace, qué no, y qué datos no entran en un aviso porque no entra su condición.
+
 
 > **Decisión del dueño (28/07/2026):** Claude trabaja sobre la cuenta como un **consultor senior de Google Ads**, al lado del dueño. No alcanza con fixes básicos (negativas, quitar un asset): se trabaja **en profundidad** — análisis de datos reales, estructura, configuraciones, calidad, pujas y medición — buscando el mejor rendimiento posible. Este archivo define QUÉ significa eso en la práctica. Se carga vía `CLAUDE.md` para toda tarea de marketing/Ads.
 

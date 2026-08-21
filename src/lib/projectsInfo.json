@@ -41,10 +41,6 @@
           "controlCalidad": "Antes de liberar un sector lo miramos: que no quede pintura floja ni óxido, y que la superficie esté pareja.",
           "seguridad": "Trabajo en altura sobre estructura metálica, con los elementos de protección que corresponden."
         },
-        "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
-          "objetivoSuperficie": "Estructura sin óxido ni pintura descascarada, limpia y pareja, lista para que le apliquen el antióxido y la pintura."
-        },
         "resultados": "La estructura quedó limpia y lista para pintar, y la obra siguió con lo suyo sin atrasarse. Trabajar por sectores fue la clave: mientras arenábamos uno, ellos avanzaban en otro.",
         "valorDiferencial": [
           "Nos organizamos alrededor del cronograma de la obra, no al revés.",
@@ -97,10 +93,6 @@
           "controlContaminacion": "Fuimos por etapas y el pintor iba atrás nuestro, para que nada quedara mucho tiempo a la intemperie. A las primeras zonas les dimos una pasada rápida al final, antes de cerrar.",
           "controlCalidad": "Antes de liberar cada sector lo revisamos: limpio, parejo y sin material flojo."
         },
-        "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
-          "condicionFinal": "Superficie limpia, sin óxido, sin cascarilla y sin suciedad, lista para pintar."
-        },
         "resultados": "La estructura quedó lista y se pudo pintar enseguida, que era lo importante para que no se volviera a oxidar. Y el movimiento de embarcaciones no se frenó en ningún momento.",
         "valorDiferencial": [
           "Sabemos trabajar donde el óxido vuelve rápido.",
@@ -152,10 +144,6 @@
           "controlImpacto": "Trabajamos conteniendo el polvo y dejando cada tramo el menor tiempo posible fuera de servicio.",
           "controlCalidad": "Revisamos cada tramo antes de habilitarlo de nuevo."
         },
-        "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
-          "objetivoSuperficie": "Superficie sin óxido ni suciedad, limpia y pareja, lista para pintar."
-        },
         "resultados": "La pasarela quedó lista para pintar dentro del plazo, y se fue habilitando por tramos a medida que avanzábamos. En ningún momento se cortó el paso de la gente.",
         "valorDiferencial": [
           "Estamos acostumbrados a trabajar en la vía pública, con gente alrededor.",
@@ -166,20 +154,12 @@
       },
       {
         "id": 4,
-        "title": "Arenado de tanques industriales por fuera",
+        "title": "Arenado exterior de un tanque en una planta",
         "category": "Industrial",
         "tipo": "restauracion-mantenimiento",
         "url": "/casos-de-exito/tanque-industrial",
         "idSection": "tanque-industrial",
-        "images": [
-          "/images/services/arenadoIndustrial/Tanque/IMG_2438.PNG",
-          "/images/services/arenadoIndustrial/Tanque/IMG_2439.PNG",
-          "/images/services/arenadoIndustrial/Tanque/IMG_2440.PNG",
-          "/images/services/arenadoIndustrial/Tanque/IMG_2441.PNG",
-          "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
-          "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG"
-        ],
-        "overview": "Tanques de una planta, oxidados y con la pintura vieja saltada por fuera. Los arenamos por afuera para dejarlos listos para pintar y que aguanten unos cuantos años más. Los movimos a un sector apartado del predio para poder trabajar tranquilos sin frenar la producción.",
+        "overview": "Un tanque con años de óxido y pintura saltada. Se arenó por fuera, al aire libre, en un sector del predio apartado del galpón. Al trabajarse afuera, la planta no tuvo que parar. Quedó limpio y parejo, listo para pintar.",
         "context": {
           "tipoEstructura": "Tanques metálicos de almacenamiento, a la intemperie.",
           "entornoTrabajo": "Planta industrial en funcionamiento, que no podía parar.",
@@ -204,16 +184,71 @@
           "controlImpacto": "Al estar apartados, el polvo no molestaba al resto de la planta.",
           "controlCalidad": "Revisamos el resultado antes de entregar cada tanque."
         },
-        "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para sacar óxido y pintura vieja",
-          "objetivoSuperficie": "Cara exterior sin óxido ni pintura saltada, limpia y pareja, lista para pintar."
-        },
         "resultados": "Los tanques quedaron listos para pintar en el plazo previsto y la planta no paró un día. Trabajar aparte fue lo que lo hizo posible.",
         "valorDiferencial": [
           "Trabajamos en plantas en funcionamiento sin hacerlas parar.",
           "Nos organizamos para cumplir el plazo que se acordó.",
           "Criterio práctico: la superficie se entrega lista para pintar.",
           "Ajustamos el trabajo a lo que el cliente realmente necesitaba."
+        ],
+        "fotos": [
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
+            "pie": "El sector donde se trabajó: pasto abierto, al costado del galpón. Llegamos con la tolva, las mangueras y el compresor en la camioneta."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2438.PNG",
+            "pie": "El óxido antes de empezar: toda la superficie tomada y la pintura vieja saltada en placas."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2440.PNG",
+            "pie": "Arenando. El polvo que se ve es la razón por la que estos trabajos van a un sector apartado."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2441.PNG",
+            "pie": "Cuerpo terminado, patas todavía sin hacer. Se avanza por partes."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG",
+            "pie": "Terminado, patas incluidas."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Tanque/IMG_2439.PNG",
+            "pie": "El detalle del final. El metal quedó limpio y parejo, y se ve picado: esos hoyos son donde el óxido había comido el hierro. El arenado saca el óxido, no rellena el metal — por eso un tanque viejo queda sano para pintar, no como nuevo."
+          }
+        ],
+        "comoSuele": [
+          {
+            "concepto": "Cuánta gente",
+            "detalle": "Un arenador con uno o dos ayudantes, según la complejidad. Si necesitás terminarlo rápido, va un segundo equipo igual. Dos equipos es el tope: no prometemos más de lo que podemos poner."
+          },
+          {
+            "concepto": "Cuánto lleva",
+            "detalle": "Un trabajo de este tamaño lleva más de un día. El plazo exacto te lo damos en la visita, con el trabajo a la vista."
+          },
+          {
+            "concepto": "Dónde conviene",
+            "detalle": "Lo ideal es un lugar amplio y, si se puede, techado y ventilado. Es un trabajo físico y pesado: al rayo del sol en un campo abierto se hace muy duro, y en un lugar cerrado sin ventilación hay que trabajar con mucha protección."
+          },
+          {
+            "concepto": "Cómo queda",
+            "detalle": "Metal limpio y parejo, listo para que le des antióxido o pintura. El picado que dejó el óxido se sigue viendo: el arenado lo limpia, no lo rellena."
+          }
+        ],
+        "queNecesitamos": [
+          "El cerramiento. Nosotros no armamos cerramientos: vos conocés tu lugar y sabés qué no puede ensuciarse. En la visita te decimos exactamente qué tapar y hasta dónde llega el polvo.",
+          "Un espacio para el compresor y la tolva, cerca del trabajo: la arena se carga al hombro desde el equipo hasta donde se arena.",
+          "Acceso al lugar, y definir con quién coordinamos.",
+          "Puede que haya que correr o mover objetos de la zona.",
+          "Si el lugar da a la calle, puede hacer falta un permiso. También te lo decimos en la visita."
+        ],
+        "images": [
+          "/images/services/arenadoIndustrial/Tanque/IMG_2442.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2438.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2440.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2441.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2443.PNG",
+          "/images/services/arenadoIndustrial/Tanque/IMG_2439.PNG"
         ]
       },
       {
@@ -251,10 +286,6 @@
           "planificacion": "Coordinación de día y horario con el dueño de la casa.",
           "controlImpacto": "Trabajo por sectores conteniendo el polvo para no afectar el resto de la casa.",
           "controlCalidad": "Control visual de que no quede pintura floja antes de entregar la pileta."
-        },
-        "parametrosTecnicos": {
-          "tipoIntervencion": "Arenado para remover la pintura vieja",
-          "objetivoSuperficie": "Hormigón limpio y parejo, listo para repintar o revestir."
         },
         "resultados": "El arenado de una pileta estándar es un trabajo rápido: dejamos el hormigón sin pintura vieja ni material flojo, limpio y parejo, listo para que el cliente lo repinte o revista. El tiempo final depende del tamaño y el estado de cada pileta. El pintado o revestimiento no está incluido.",
         "valorDiferencial": [
