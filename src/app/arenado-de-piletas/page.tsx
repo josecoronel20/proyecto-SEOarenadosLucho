@@ -11,6 +11,7 @@ import {
   CalendarClock,
   FileText,
 } from "lucide-react"
+import { EsquemaEquipo } from "@/components/common/EsquemaEquipo"
 import { Breadcrumbs } from "@/components/common/Breadcrumbs"
 import { WhatsAppCTA } from "@/components/common/WhatsAppCTA"
 import { FaqAccordion } from "@/components/preguntas-frecuentes/FaqAccordion"
@@ -271,7 +272,7 @@ export default function ArenadoDePiletasPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-tinta mb-2">
               Piletas reales que dejamos listas para revestir
             </h2>
-            <p className="text-tinta-70 mb-6 max-w-2xl">
+            <p className="text-tinta-70 mb-6 max-w-[58ch]">
               Piletas de verdad, de clientes del AMBA. Así queda el hormigón después del arenado: limpio,
               parejo y listo para pintar o revestir. Trabajos nuestros, no fotos de catálogo.
             </p>
@@ -357,6 +358,9 @@ export default function ArenadoDePiletasPage() {
         </div>
       </section>
 
+      <EsquemaEquipo fondo="alt" />
+
+
       {/* 9. CONTRATISTAS (sección potente) */}
       <section id="contratistas" className="py-16 md:py-24 bg-tinta scroll-mt-24">
         <div className="container mx-auto px-5 lg:px-8">
@@ -364,7 +368,7 @@ export default function ArenadoDePiletasPage() {
             <div className="mb-4">
               <h2 className="text-3xl md:text-[2.5rem] font-bold tracking-tight leading-[1.1] text-papel">¿Remodelás o mantenés piletas? Dejános la parte sucia y lenta</h2>
             </div>
-            <p className="text-tinta-20 leading-relaxed mb-8 max-w-3xl">
+            <p className="text-tinta-20 leading-relaxed mb-8 max-w-[58ch]">
               Si trabajás con piletas —piletero, remodelador, constructor— el arenado es la etapa que te
               come días y te ensucia la obra. Tercerizala con nosotros: llegamos con equipo propio, sacamos
               toda la pintura vieja y te devolvemos la pileta lista para que revistas o pintes. Vos ponés la

@@ -21,9 +21,9 @@ const items = [
   },
 ]
 
-export function BloqueDiferencial() {
+export function BloqueDiferencial({ fondo = "alt" }: { fondo?: "papel" | "alt" }) {
   return (
-    <Section fondo="alt" aria-label="Bloque diferencial">
+    <Section fondo={fondo} aria-label="Bloque diferencial">
       <SectionHead titulo="¿Por qué elegirnos?" />
 
       <FichaLista>

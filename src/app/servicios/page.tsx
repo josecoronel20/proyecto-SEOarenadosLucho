@@ -7,6 +7,7 @@ import { LogisticaCoordinacion } from "@/components/servicios/LogisticaCoordinac
 import { QueArenamos } from "@/components/servicios/QueArenamos"
 import { MitigacionRiesgo } from "@/components/servicios/MitigacionRiesgo"
 import { CasoDestacado } from "@/components/servicios/CasoDestacado"
+import { EsquemaEquipo } from "@/components/common/EsquemaEquipo"
 import { OficioFamilia } from "@/components/common/OficioFamilia"
 import { ComoTrabajamos } from "@/components/common/ComoTrabajamos"
 import { ZonasCobertura } from "@/components/common/ZonasCobertura"
@@ -80,7 +81,8 @@ export default function ServiciosPage() {
       <AlcanceOperativo />
       <ComoTrabajamos fondo="alt" />
       <LogisticaCoordinacion />
-      <BloqueDiferencial />
+      <EsquemaEquipo fondo="alt" />
+      <BloqueDiferencial fondo="papel" />
       <AutoridadRapida />
       <OficioFamilia fondo="papel" />
       <ZonasCobertura fondo="alt" />
