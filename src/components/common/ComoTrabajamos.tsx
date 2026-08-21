@@ -18,7 +18,7 @@ const pasos = [
   },
   {
     title: "Vamos con nuestro equipo",
-    text: "Llegamos con compresores y equipo propio a tu obra, galpón o casa. No trasladás ni preparás nada: protegemos la zona y arenamos.",
+    text: "Llegamos con compresores y equipo propio a tu obra, galpón o casa: no trasladás nada. Como el arenado levanta polvo, antes de empezar definimos con vos qué hay que correr o tapar.",
     dato: "Equipo propio",
   },
   {

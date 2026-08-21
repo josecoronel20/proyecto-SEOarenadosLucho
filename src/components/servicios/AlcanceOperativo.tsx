@@ -14,7 +14,7 @@ import { Section, SectionHead } from "@/components/common/system"
 const items = [
   {
     concepto: "Equipos",
-    detalle: "Dos equipos propios, cada uno con su compresor",
+    detalle: "Cada equipo es un arenador con uno o dos ayudantes, con su compresor",
     cifra: "2",
   },
   {
@@ -29,8 +29,8 @@ const items = [
   },
   {
     concepto: "Trabajos grandes",
-    detalle: "Sumamos equipos en paralelo para acortar los tiempos",
-    cifra: "Escalable",
+    detalle: "Va un segundo equipo en paralelo. Dos es el tope: no prometemos más",
+    cifra: "Tope: 2",
   },
 ]
 
