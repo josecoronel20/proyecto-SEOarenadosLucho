@@ -21,13 +21,23 @@ export interface ProjectForDetail {
   alcanceTrabajo?: string[]
   desafiosOperativos: string[]
   metodologia?: MetodologiaRecord
-  parametrosTecnicos?: {
-    tipoIntervencion?: string
-    objetivoSuperficie?: string
-    condicionFinal?: string
-  }
   resultados: string
   valorDiferencial?: string[]
+
+  /**
+   * Fotos con pie, en orden de proceso. Cuando existe, reemplaza a la galería
+   * suelta: el que mira un caso quiere ver cómo fue el trabajo, no un carrusel.
+   *
+   * ⚠️ Cada pie describe SOLO lo que se ve en su cuadro. No afirma que dos fotos
+   * sean del mismo recipiente ni deduce nada que no esté a la vista.
+   */
+  fotos?: { src: string; pie: string }[]
+
+  /** Cómo suele ser un trabajo de este tipo. Generalidades, no datos del caso. */
+  comoSuele?: { concepto: string; detalle: string }[]
+
+  /** Lo que pone el cliente. Ver `contexto/21-realidad-operativa.md`. */
+  queNecesitamos?: string[]
 }
 
 const data = projectsData as unknown as { industrialProjects?: ProjectForDetail[] }[]

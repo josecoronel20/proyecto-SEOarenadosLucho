@@ -1,31 +1,24 @@
-"use client"
-
 import Image from "next/image"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import {
-  Building2,
-  Target,
-  ListChecks,
-  AlertCircle,
-  ClipboardList,
-  FileCheck,
-  CheckCircle2,
-  Sparkles,
-} from "lucide-react"
 import type { ProjectForDetail } from "@/lib/getProjectBySlug"
+import { H2, H3, MEDIDA } from "@/components/common/system"
+
+/**
+ * El detalle de un caso.
+ *
+ * **Para quién está escrito.** No para un evaluador de licitación: para el
+ * encargado de una PYME que tiene un tanque oxidado y está haciendo un
+ * simulacro mental —*"si los llamo, ¿qué pasa el lunes en mi planta?"*—. Por eso
+ * el orden es el del cliente, no el del proveedor: qué había, cómo se trabajó,
+ * cómo quedó, y qué tiene que poner él.
+ *
+ * **Se fue la sección "Parámetros técnicos".** Le ponía nombre técnico a un
+ * servicio que justamente no lo es: el negocio hace arenado sin vueltas y tiene
+ * prohibido prometer trabajo medido con normas. Al que sabe le sugería
+ * especificaciones que no existen; al que no sabe lo asustaba.
+ *
+ * En forma sigue el sistema del sitio: filetes, no tarjetas. Antes cada bloque
+ * era una `Card` con su ícono, incluido un `Card` verde para "Resultados".
+ */
 
 const TIPO_LABEL: Record<string, string> = {
   "restauracion-mantenimiento": "Restauración y mantenimiento",
@@ -45,10 +38,56 @@ const METODOLOGIA_LABELS: Record<string, string> = {
   reubicacionControlada: "Reubicación controlada",
 }
 
-const PARAMETROS_LABELS: Record<string, string> = {
-  tipoIntervencion: "Tipo de intervención",
-  objetivoSuperficie: "Objetivo de la superficie",
-  condicionFinal: "Condición final",
+/** Encabezado de bloque: chico, en caja alta, como el rótulo de una tabla. */
+const ROTULO =
+  "ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700 mb-4"
+
+function Bloque({
+  titulo,
+  children,
+}: {
+  titulo: string
+  children: React.ReactNode
+}) {
+  return (
+    <section className="border-t border-papel-linea pt-8">
+      <h2 className={ROTULO}>{titulo}</h2>
+      {children}
+    </section>
+  )
+}
+
+/** Lista tabulada: un renglón por ítem, separados por filete. */
+function Lista({ items }: { items: string[] }) {
+  return (
+    <ul className="border-t border-papel-linea">
+      {items.map((item, i) => (
+        <li
+          key={i}
+          className="border-b border-papel-linea py-3.5 leading-relaxed text-tinta-70"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+/** Tabla concepto → detalle. */
+function Tabla({ filas }: { filas: { concepto: string; detalle: string }[] }) {
+  return (
+    <dl className="border-t border-papel-linea">
+      {filas.map(({ concepto, detalle }) => (
+        <div
+          key={concepto}
+          className="grid gap-x-8 gap-y-1 border-b border-papel-linea py-4 md:grid-cols-[minmax(0,13rem)_minmax(0,1fr)]"
+        >
+          <dt className="font-semibold text-tinta">{concepto}</dt>
+          <dd className="leading-relaxed text-tinta-70">{detalle}</dd>
+        </div>
+      ))}
+    </dl>
+  )
 }
 
 interface CasoDetalleContentProps {
@@ -56,242 +95,132 @@ interface CasoDetalleContentProps {
 }
 
 export function CasoDetalleContent({ project }: CasoDetalleContentProps) {
-  const metodologiaEntries = project.metodologia
-    ? Object.entries(project.metodologia).filter(([, v]) => v)
+  const metodologia = project.metodologia
+    ? Object.entries(project.metodologia)
+        .filter(([, v]) => v)
+        .map(([k, v]) => ({ concepto: METODOLOGIA_LABELS[k] ?? k, detalle: v }))
     : []
-  const parametros = project.parametrosTecnicos
-    ? Object.entries(project.parametrosTecnicos).filter(([, v]) => v)
+
+  const contexto = project.context
+    ? [
+        { concepto: "Qué era", detalle: project.context.tipoEstructura },
+        { concepto: "Dónde", detalle: project.context.entornoTrabajo },
+        { concepto: "Qué buscaba el cliente", detalle: project.context.objetivoCliente },
+      ].filter((f): f is { concepto: string; detalle: string } => Boolean(f.detalle))
     : []
-  const hasImages = project.images && project.images.length > 0
 
   return (
-    <div className="space-y-8 max-w-[72ch] mx-auto">
+    <div className="max-w-[58ch] mx-auto space-y-10">
       {/* Encabezado */}
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <Badge className="mb-3 bg-maquina-500 text-tinta rounded-sm">
-            {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
-          </Badge>
-          <h1 className="text-2xl md:text-4xl font-bold text-tinta leading-tight">
-            {project.title}
-          </h1>
-        </div>
-      </div>
+      <header>
+        <p className="ficha-num text-xs font-semibold uppercase tracking-wider text-maquina-700">
+          {project.tipo ? TIPO_LABEL[project.tipo] ?? project.tipo : project.category}
+        </p>
+        <h1 className={`mt-2 ${H2}`}>{project.title}</h1>
+        <p className={`mt-5 text-base md:text-lg leading-relaxed text-tinta-70 ${MEDIDA}`}>
+          {project.overview}
+        </p>
+      </header>
 
-      {/* Overview */}
-      <Card>
-        <CardHeader>
-          <CardTitle asChild className="flex items-center gap-2 text-lg">
-            <h2>
-              <Target className="w-5 h-5 text-tinta" />
-              Resumen del proyecto
-            </h2>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{project.overview}</p>
-        </CardContent>
-      </Card>
-
-      {/* Galería de imágenes */}
-      {hasImages && (
-        <Card>
-          <CardHeader>
-            <CardTitle asChild className="text-lg"><h2>Galería</h2></CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Carousel opts={{ align: "start", loop: project.images!.length > 1 }} className="w-full">
-              <CarouselContent className="-ml-0">
-                {project.images!.map((src, i) => (
-                  <CarouselItem key={i} className="pl-0 basis-full">
-                    <div className="relative aspect-video w-full rounded-sm overflow-hidden bg-papel-alt">
-                      <Image
-                        src={src}
-                        alt={`${project.title} - Imagen ${i + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 896px"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {project.images!.length > 1 && (
-                <>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </>
-              )}
-            </Carousel>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Contexto */}
-      {project.context && (project.context.tipoEstructura || project.context.entornoTrabajo || project.context.objetivoCliente) && (
-        <Card>
-          <CardHeader>
-            <CardTitle asChild className="flex items-center gap-2 text-lg">
-              <h2>
-                <Building2 className="w-5 h-5 text-tinta" />
-                Contexto
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {project.context.tipoEstructura && (
-              <div>
-                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Tipo de estructura</p>
-                <p className="text-tinta-70 max-w-[68ch]">{project.context.tipoEstructura}</p>
-              </div>
-            )}
-            {project.context.entornoTrabajo && (
-              <div>
-                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Entorno de trabajo</p>
-                <p className="text-tinta-70 max-w-[68ch]">{project.context.entornoTrabajo}</p>
-              </div>
-            )}
-            {project.context.objetivoCliente && (
-              <div>
-                <p className="text-sm font-semibold text-tinta-70 uppercase tracking-wide mb-1">Objetivo del cliente</p>
-                <p className="text-tinta-70 max-w-[68ch]">{project.context.objetivoCliente}</p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Alcance del trabajo */}
-      {project.alcanceTrabajo && project.alcanceTrabajo.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle asChild className="flex items-center gap-2 text-lg">
-              <h2>
-                <ListChecks className="w-5 h-5 text-tinta" />
-                Alcance del trabajo
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2">
-              {project.alcanceTrabajo.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-tinta-70">
-                  <span className="text-tinta mt-1.5">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Desafíos operativos */}
-      <Card className="border-amber-200 bg-amber-50/30">
-        <CardHeader>
-          <CardTitle asChild className="flex items-center gap-2 text-lg">
-            <h2>
-              <AlertCircle className="w-5 h-5 text-amber-600" />
-              Desafíos operativos
-            </h2>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            {project.desafiosOperativos.map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-tinta-70">
-                <span className="text-amber-600 mt-1.5">•</span>
-                <span>{item}</span>
+      {/* Fotos con pie, en orden de proceso. Es lo que el visitante vino a ver:
+          cómo fue el trabajo. Cuando el caso todavía no tiene pies escritos,
+          cae a la galería suelta de abajo. */}
+      {project.fotos && project.fotos.length > 0 && (
+        <Bloque titulo="Cómo fue el trabajo">
+          <ol className="space-y-8">
+            {project.fotos.map(({ src, pie }, i) => (
+              <li key={src}>
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-papel-alt">
+                  <Image
+                    src={src}
+                    alt={pie}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 700px"
+                  />
+                </div>
+                <p className="mt-3 flex gap-3 text-sm leading-relaxed text-tinta-70">
+                  <span className="ficha-num font-medium text-maquina-700">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {pie}
+                </p>
               </li>
             ))}
-          </ul>
-        </CardContent>
-      </Card>
-
-      {/* Metodología */}
-      {metodologiaEntries.length > 0 && (
-        <Card className="border-blue-200 bg-blue-50/30">
-          <CardHeader>
-            <CardTitle asChild className="flex items-center gap-2 text-lg">
-              <h2>
-                <ClipboardList className="w-5 h-5 text-blue-600" />
-                Metodología
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {metodologiaEntries.map(([key, value]) => (
-              <div key={key}>
-                <p className="text-sm font-semibold text-tinta-70 mb-1">
-                  {METODOLOGIA_LABELS[key] ?? key}
-                </p>
-                <p className="text-tinta-70 leading-relaxed max-w-[68ch]">{value}</p>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
+          </ol>
+        </Bloque>
       )}
 
-      {/* Parámetros técnicos */}
-      {parametros.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle asChild className="flex items-center gap-2 text-lg">
-              <h2>
-                <FileCheck className="w-5 h-5 text-tinta" />
-                Ficha del trabajo
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {parametros.map(([key, value]) => (
-              <div key={key}>
-                <p className="text-sm font-semibold text-tinta-70">
-                  {PARAMETROS_LABELS[key] ?? key}
-                </p>
-                <p className="text-tinta-70 max-w-[68ch]">{value}</p>
+      {/* Galería suelta: solo para los casos que aún no tienen pies. */}
+      {!project.fotos && project.images && project.images.length > 0 && (
+        <Bloque titulo="Fotos del trabajo">
+          <div className="grid grid-cols-2 gap-3">
+            {project.images.map((src, i) => (
+              <div key={src} className="relative aspect-[4/3] overflow-hidden bg-papel-alt">
+                <Image
+                  src={src}
+                  alt={`${project.title} — foto ${i + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 350px"
+                />
               </div>
             ))}
-          </CardContent>
-        </Card>
+          </div>
+        </Bloque>
       )}
 
-      {/* Resultados */}
-      <Card className="border-green-200 bg-green-50/30">
-        <CardHeader>
-          <CardTitle asChild className="flex items-center gap-2 text-lg">
-            <h2>
-              <CheckCircle2 className="w-5 h-5 text-green-600" />
-              Resultados
-            </h2>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-tinta leading-relaxed max-w-[68ch]">{project.resultados}</p>
-        </CardContent>
-      </Card>
+      {contexto.length > 0 && (
+        <Bloque titulo="El trabajo">
+          <Tabla filas={contexto} />
+        </Bloque>
+      )}
 
-      {/* Valor diferencial */}
+      {project.alcanceTrabajo && project.alcanceTrabajo.length > 0 && (
+        <Bloque titulo="Qué se hizo">
+          <Lista items={project.alcanceTrabajo} />
+        </Bloque>
+      )}
+
+      {project.desafiosOperativos.length > 0 && (
+        <Bloque titulo="Lo complicado">
+          <Lista items={project.desafiosOperativos} />
+        </Bloque>
+      )}
+
+      {metodologia.length > 0 && (
+        <Bloque titulo="Cómo se resolvió">
+          <Tabla filas={metodologia} />
+        </Bloque>
+      )}
+
+      <Bloque titulo="Cómo quedó">
+        <p className={`leading-relaxed text-tinta ${MEDIDA}`}>{project.resultados}</p>
+      </Bloque>
+
+      {/* Generalidades, no datos de este trabajo. Van separadas a propósito: el
+          caso cuenta lo que pasó, esto cuenta lo que suele pasar. Así el lector
+          se lleva lo que necesita sin que el caso afirme nada que no se pueda
+          sostener. */}
+      {project.comoSuele && project.comoSuele.length > 0 && (
+        <Bloque titulo="Cómo suele ser un trabajo así">
+          <Tabla filas={project.comoSuele} />
+        </Bloque>
+      )}
+
+      {/* Lo que pone el cliente. Se dice ANTES de contratar, no el día del
+          trabajo. Ver `contexto/21-realidad-operativa.md`. */}
+      {project.queNecesitamos && project.queNecesitamos.length > 0 && (
+        <section className="border-t-2 border-maquina-500 pt-6">
+          <h2 className={H3}>Qué necesitamos de tu lado</h2>
+          <Lista items={project.queNecesitamos} />
+        </section>
+      )}
+
       {project.valorDiferencial && project.valorDiferencial.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle asChild className="flex items-center gap-2 text-lg">
-              <h2>
-                <Sparkles className="w-5 h-5 text-tinta" />
-                Valor diferencial
-              </h2>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2">
-              {project.valorDiferencial.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-tinta-70">
-                  <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+        <Bloque titulo="Por qué nos eligieron">
+          <Lista items={project.valorDiferencial} />
+        </Bloque>
       )}
     </div>
   )

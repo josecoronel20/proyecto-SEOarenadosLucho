@@ -33,6 +33,7 @@ Next.js 16 (App Router) · React 19 · TypeScript 5.9 (strict) · Tailwind CSS 3
 
 | Tema | Archivo |
 |------|---------|
+| **⚠️ Cómo se trabaja de verdad (leer ANTES de tocar copy o Ads)** | **`contexto/21-realidad-operativa.md`** |
 | **Negocio real, servicios, cliente objetivo** | `contexto/00-proyecto-general.md` |
 | Rutas activas / eliminadas, App Router | `contexto/03-rutas-y-paginas.md` |
 | Formularios, WhatsApp, endpoints de conversión | `contexto/05-formularios-y-conversion.md` |
@@ -43,6 +44,8 @@ Next.js 16 (App Router) · React 19 · TypeScript 5.9 (strict) · Tailwind CSS 3
 | **Marketing: SEO, Google Ads, automatizaciones** | `contexto/marketing/` (empezar por su `README.md`) |
 
 Si cambiás algo estructural (rutas, eventos, endpoints), **actualizá el archivo `contexto/` correspondiente** en el mismo cambio.
+
+⚠️ **Antes de escribir o cambiar cualquier texto de landing, FAQ, caso o anuncio, leer [`contexto/21-realidad-operativa.md`](contexto/21-realidad-operativa.md).** Es la fuente de verdad sobre qué se hace y qué no. Ya aparecieron **cuatro afirmaciones falsas publicadas** en este proyecto y **ninguna era descubrible leyendo el repo**: el código era coherente consigo mismo mientras afirmaba algo que no era cierto. Si un dato no está en ese archivo, se pregunta y se agrega ahí **antes** de publicarlo.
 
 ## Marketing: `contexto/marketing/` — el norte del proyecto
 
