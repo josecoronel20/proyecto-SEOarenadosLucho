@@ -115,21 +115,18 @@
         "url": "/casos-de-exito/estructura-naval",
         "idSection": "estructura-naval",
         "images": [
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2444.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2445.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2446.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2447.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2448.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2449.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2450.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2451.PNG",
           "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
-          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG"
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2450.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2446.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2448.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2447.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG",
+          "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2449.PNG"
         ],
-        "overview": "Una estructura metálica que se usa para sostener y mover veleros, comida por el óxido de estar siempre al lado del agua salada. La arenamos para sacarle la corrosión y la suciedad y dejarla lista para pintar. Como el ambiente es húmedo, el óxido vuelve rápido: coordinamos con el que pintaba para que fuera pintando atrás nuestro.",
+        "overview": "Una estructura metálica que se usa para sostener y mover veleros, comida por el óxido de estar siempre al lado del agua. La arenamos ahí mismo, sobre la rampa, para sacarle la corrosión y dejarla lista para pintar. Con esa humedad el óxido vuelve rápido, así que se fue por etapas y el pintor iba atrás nuestro.",
         "context": {
           "tipoEstructura": "Estructura metálica de carga, con varios puntos de apoyo y zonas incómodas de alcanzar.",
-          "entornoTrabajo": "Zona naval, con humedad y salitre todo el tiempo.",
+          "entornoTrabajo": "Guardería náutica sobre el agua, con humedad todo el tiempo.",
           "objetivoCliente": "Dejar la estructura lista para pintar sin frenar el movimiento de embarcaciones."
         },
         "alcanceTrabajo": [
@@ -140,9 +137,9 @@
           "Entregamos la superficie lista para pintar."
         ],
         "desafiosOperativos": [
-          "El aire salado oxida rápido: todo lo que se limpia hay que pintarlo pronto.",
-          "Con esa humedad, una superficie recién arenada se puede volver a manchar sola.",
-          "La estructura tiene ángulos y refuerzos internos difíciles de alcanzar.",
+          "La humedad del agua oxida rápido: todo lo que se limpia hay que pintarlo pronto.",
+          "Con ese ambiente, una superficie recién arenada se puede volver a manchar sola.",
+          "La estructura tiene ángulos, uniones y refuerzos difíciles de alcanzar.",
           "Había que entrar sin frenar el movimiento de los barcos."
         ],
         "metodologia": {
@@ -157,6 +154,64 @@
           "Nos coordinamos con el que pinta para que no se pierda lo hecho.",
           "Entramos sin frenar la operación del lugar.",
           "Entregamos la superficie lista para pintar y sin volver a ensuciarse."
+        ],
+        "fotos": [
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2452.PNG",
+            "pie": "Dónde fue: la estructura apoyada sobre la rampa, con el agua y los veleros amarrados atrás. Se arenó ahí mismo, a unos metros del agua."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2450.PNG",
+            "pie": "El óxido avanzado sobre la pintura amarilla, justo al borde del agua. Así llega el hierro cuando vive a la intemperie y con humedad todo el año."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2446.PNG",
+            "pie": "De cerca: la pintura saltada en placas y la corrosión metida en la unión, alrededor del bulón."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2448.PNG",
+            "pie": "Un tramo todavía sin arenar, con la manguera del equipo cruzando el piso."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2447.PNG",
+            "pie": "Terminado: el metal a la vista, parejo, con la textura que deja el arenado. Las uniones y los pasadores también se limpian."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2453.PNG",
+            "pie": "La unión completa, ya lista para pintar. En el piso queda la arena usada, que se retira al terminar."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/EstructuraNaval/IMG_2449.PNG",
+            "pie": "Los brazos largos terminados. Al fondo, a la izquierda, quedó una pieza con la pintura original: sirve para comparar cómo estaba todo antes."
+          }
+        ],
+        "comoSuele": [
+          {
+            "concepto": "Cuánta gente",
+            "detalle": "Un arenador con uno o dos ayudantes, según la complejidad. Si el plazo aprieta, va un segundo equipo igual. Dos equipos es el tope: no prometemos más de lo que podemos poner."
+          },
+          {
+            "concepto": "Cuánto lleva",
+            "detalle": "Depende del tamaño de la estructura y de cuántas uniones y rincones haya que alcanzar. El plazo te lo damos en la visita."
+          },
+          {
+            "concepto": "Dónde se hace",
+            "detalle": "Al aire libre, en el mismo lugar donde está la pieza. Lo ideal es un sector amplio y despejado alrededor, para movernos y para que el polvo no moleste."
+          },
+          {
+            "concepto": "Con humedad cerca",
+            "detalle": "El hierro recién arenado se oxida rápido. Conviene tener al pintor listo para ir atrás nuestro, así no queda mucho tiempo a la intemperie."
+          },
+          {
+            "concepto": "Cómo queda",
+            "detalle": "Metal limpio y parejo, listo para antióxido y pintura. Donde el óxido había avanzado, queda picado: el arenado lo limpia, no lo rellena."
+          }
+        ],
+        "queNecesitamos": [
+          "El cerramiento. Nosotros no armamos cerramientos: si hay embarcaciones, autos o equipos cerca que no pueden recibir polvo, el cerramiento lo ponés vos. En la visita definimos qué tapar.",
+          "Un espacio para el compresor y la tolva, cerca de la pieza: la arena se carga al hombro desde el equipo.",
+          "Acceso al sector y definir con quién coordinamos.",
+          "Si se puede, tener resuelto quién pinta y cuándo: con humedad, cuanto antes se pinte, mejor aguanta."
         ]
       },
       {
@@ -167,15 +222,11 @@
         "url": "/casos-de-exito/pasarela-urbana",
         "idSection": "pasarela-urbana",
         "images": [
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2429.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2430.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2431.PNG",
           "/images/services/arenadoIndustrial/Pasarela/IMG_2432.PNG",
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2433.PNG",
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2434.PNG",
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2435.PNG",
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2436.PNG",
-          "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG"
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG",
+          "/images/services/arenadoIndustrial/Pasarela/IMG_2433.PNG"
         ],
         "overview": "Una pasarela metálica en plena calle, oxidada y con la pintura vieja saltada de años de sol y lluvia. La arenamos para dejarla lista para pintar de nuevo. Lo complicado no era el metal: era que abajo pasaba gente todo el día, así que hubo que trabajar por tramos y cuidar el polvo.",
         "context": {
@@ -208,6 +259,56 @@
           "Organizamos el trabajo para molestar lo menos posible a los que circulan.",
           "Cumplimos los plazos acordados con el organismo.",
           "Trabajo prolijo: la estructura se entrega lista para pintar."
+        ],
+        "fotos": [
+          {
+            "src": "/images/services/arenadoIndustrial/Pasarela/IMG_2430.PNG",
+            "pie": "Así estaba: la viga tapada de carteles pegados, pintura vieja saltada y óxido. En plena calle, con el edificio y la vereda a metros."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Pasarela/IMG_2431.PNG",
+            "pie": "Arenando, de una punta a la otra. El polvo que se ve en el aire es la razón por la que en zona urbana hay que coordinar horarios y avisar."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Pasarela/IMG_2432.PNG",
+            "pie": "El tramo terminado. Sin carteles, sin pintura vieja: el hierro y todos sus remaches a la vista."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Pasarela/IMG_2437.PNG",
+            "pie": "El detalle del final. Se ven las chapas, las cartelas y los remaches uno por uno, que es lo que después tiene que agarrar la pintura."
+          },
+          {
+            "src": "/images/services/arenadoIndustrial/Pasarela/IMG_2433.PNG",
+            "pie": "Desde la vereda, terminado. Es una estructura que la gente ve todos los días de cerca."
+          }
+        ],
+        "comoSuele": [
+          {
+            "concepto": "Cuánta gente",
+            "detalle": "Un arenador con uno o dos ayudantes, según la complejidad. Si el plazo aprieta, va un segundo equipo igual. Dos equipos es el tope: no prometemos más de lo que podemos poner."
+          },
+          {
+            "concepto": "Cuánto lleva",
+            "detalle": "Depende del largo y de cuántos rincones y remaches haya que alcanzar. El plazo te lo damos en la visita."
+          },
+          {
+            "concepto": "En la vía pública",
+            "detalle": "Se trabaja por tramos: se interviene uno, se libera y se sigue. Los horarios se coordinan para molestar lo menos posible."
+          },
+          {
+            "concepto": "El polvo, en la calle",
+            "detalle": "Es lo más delicado de un trabajo urbano. No armamos cerramientos, así que el vallado y la protección de lo que esté cerca los define quien contrata, y lo acordamos antes de empezar."
+          },
+          {
+            "concepto": "Cómo queda",
+            "detalle": "Hierro limpio y parejo, listo para antióxido y pintura. Donde el óxido había avanzado, queda picado: el arenado lo limpia, no lo rellena."
+          }
+        ],
+        "queNecesitamos": [
+          "El cerramiento y el vallado. Nosotros no armamos cerramientos: en la vía pública eso lo define y lo pone quien contrata.",
+          "Un espacio para el compresor y la tolva, cerca del tramo que se arena: la arena se carga al hombro desde el equipo.",
+          "Los permisos del lugar. Si da a la calle o hay circulación de gente cerca, hace falta tenerlos resueltos antes.",
+          "Definir con quién coordinamos las ventanas de trabajo y los horarios."
         ]
       },
       {
@@ -318,11 +419,9 @@
         "idSection": "arenado-pileta",
         "images": [
           "/images/services/arenadoParticular/Piletas/IMG_2454.PNG",
-          "/images/services/arenadoParticular/Piletas/IMG_2455.PNG",
           "/images/services/arenadoParticular/Piletas/IMG_2456.PNG",
-          "/images/services/arenadoParticular/Piletas/IMG_2457.PNG",
-          "/images/services/arenadoParticular/Piletas/IMG_2478.PNG",
-          "/images/services/arenadoParticular/Piletas/IMG_2479.PNG"
+          "/images/services/arenadoParticular/Piletas/IMG_2455.PNG",
+          "/images/services/arenadoParticular/Piletas/IMG_2457.PNG"
         ],
         "overview": "Arenado de una pileta de hormigón con la pintura vieja descascarada. Fuimos con el equipo al domicilio y sacamos toda la pintura y el material flojo, dejando el hormigón limpio y parejo, listo para repintar o revestir. El pintado o revestimiento final no está incluido en el trabajo de arenado.",
         "context": {
@@ -350,6 +449,52 @@
           "Trabajo in situ: fuimos con el equipo al domicilio.",
           "Removimos toda la pintura vieja de una sola vez, sin lijado a mano.",
           "Entrega rápida y superficie lista para repintar o revestir."
+        ],
+        "fotos": [
+          {
+            "src": "/images/services/arenadoParticular/Piletas/IMG_2454.PNG",
+            "pie": "Así estaba: la pintura azul gastada, manchada y despegada en sectores. Una pileta de hormigón pintada, que es con la que trabajamos."
+          },
+          {
+            "src": "/images/services/arenadoParticular/Piletas/IMG_2456.PNG",
+            "pie": "Los escalones, con la pintura saltada. Alrededor del borde se ve la cenefa de venecitas."
+          },
+          {
+            "src": "/images/services/arenadoParticular/Piletas/IMG_2455.PNG",
+            "pie": "Terminada: toda la pintura vieja afuera y el hormigón a la vista, limpio y parejo, listo para que le den la mano nueva."
+          },
+          {
+            "src": "/images/services/arenadoParticular/Piletas/IMG_2457.PNG",
+            "pie": "El detalle que más preguntan: la cenefa de venecitas quedó intacta. El arenado saca la pintura del hormigón; los revestimientos pegados no se tocan."
+          }
+        ],
+        "comoSuele": [
+          {
+            "concepto": "Cuánto lleva",
+            "detalle": "Una pileta familiar estándar suele quedar lista en el día. Las más grandes o muy descascaradas pueden llevar más: te lo confirmamos en la visita."
+          },
+          {
+            "concepto": "Cuánta gente",
+            "detalle": "Un arenador con uno o dos ayudantes. Para una pileta sola alcanza y sobra."
+          },
+          {
+            "concepto": "El polvo, en una casa",
+            "detalle": "La mayor parte de la arena queda adentro del vaso, así que en la práctica casi nadie tapa nada. Al terminar soplamos y retiramos la arena gruesa; el polvillo fino se sigue asentando unos días."
+          },
+          {
+            "concepto": "Qué no hacemos",
+            "detalle": "No pintamos ni revestimos: esa mano la da tu pintor o tu piletero. Tampoco sacamos venecitas ni mosaico, y no trabajamos piletas de fibra de vidrio."
+          },
+          {
+            "concepto": "Cómo queda",
+            "detalle": "Hormigón limpio y parejo. Donde la pintura estaba muy pegada puede quedar alguna sombra: lo que importa es que no quede nada flojo para que la mano nueva agarre."
+          }
+        ],
+        "queNecesitamos": [
+          "Tapar lo que no quieras que se ensucie. En una pileta suele no hacer falta, pero la regla es esa y en la visita te decimos qué conviene.",
+          "Un espacio para el compresor y la tolva, cerca de la pileta: la arena se carga al hombro desde el equipo.",
+          "Acceso al fondo o al patio para entrar con el equipo.",
+          "Que la pileta esté vacía y sin agua para el día acordado."
         ]
       }
     ]
