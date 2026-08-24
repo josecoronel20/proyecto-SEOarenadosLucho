@@ -123,6 +123,24 @@ Si hace falta ilustrar algo y no hay foto: **se pide la foto**, no se genera.
 Candidatas ya en el repo: `arenadoIndustrial/Tanque/IMG_2442.PNG` (camioneta +
 tolva + mangueras) e `IMG_2440.PNG` (tolva en primer plano).
 
+## 8 bis. Qué mide la conversión — decisión tomada el 24/08/2026
+
+**La conversión de Google Ads es "abrió WhatsApp", y se queda así.**
+
+- Se dispara cuando la persona **confirma el cartel** y se le abre WhatsApp. No
+  cuando manda el mensaje.
+- **Contar mensajes sería peor métrica:** quien llega por un anuncio, abre
+  WhatsApp y decide **llamar** en vez de escribir, igual fue una conversión.
+  Se mide la acción, no el formato.
+- ⚠️ **El número es siempre un poco optimista**: cuenta también a quien abre y
+  se arrepiente. Se acepta. Lo que se lee es **la tendencia y el costo relativo
+  entre campañas**, no el valor absoluto.
+- ⛔ **No es deuda técnica, es una decisión.** No "arreglarla" en el futuro.
+- 🔎 Atribución parcial que sí existe: desde el 21/08 los mensajes que vienen de
+  un anuncio arrancan con *"Hola, vi su anuncio en Google."* (`src/lib/origenTrafico.ts`).
+  Sirve para los que escriben, no para los que llaman.
+- **El juez final es el trabajo cobrado**, no la conversión.
+
 ## 9. Antigüedad y oficio
 
 - La **empresa tiene ~8 años**.
