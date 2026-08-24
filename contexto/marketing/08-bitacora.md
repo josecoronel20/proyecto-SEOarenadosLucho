@@ -12,6 +12,67 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-24 — Semana 1 con datos: 7 conversiones, piletas gana, y una lección sobre negativas
+
+- **Qué se hizo:** primera lectura del reporte semanal (scripts 02 y 03) con datos reales. Se agregaron 6 negativas. **No se tocó nada más** — sigue el congelamiento hasta el 03/09.
+
+### Los números (LAST_7_DAYS)
+
+| Campaña | Costo | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `AR-Search-Piletas` | 2.041 | 8 | **10,0%** | 3 | **680** |
+| `AR-Search-General-Marca` | 3.099 | 11 | 7,3% | 2 | 1.549 |
+| `AR-Search-Obra-Industrial` | 3.392 | 12 | 6,7% | 2 | 1.696 |
+| **Total** | **8.532** | **31** | **7,6%** | **7** | **1.219** |
+
+- **No está limitada por presupuesto:** gastó 8.532 de los ~25.000 posibles. La concordancia exacta y de frase limita el volumen, que es lo buscado para arrancar.
+- ⭐ **Piletas confirma el historial:** menos de la mitad de CPA que obra, y el mejor CTR. Cuando se levante el congelamiento, ahí está la plata.
+- ✅ **`[arenadora]` volvió a convertir en exacta**, como decía `03-keywords-maestro.md`. Se compra aunque suene a máquina.
+
+### 🔑 La lección de la semana: las negativas de Google NO reconocen variantes
+
+Singular, plural y acentos son términos **distintos**. La lista tenía `maquinas para arenar` (plural) y `maquina de arenar`; pasaron **`maquina para arenar`** (342) y **`maquina arenadora`** (321), las dos con 0 conversiones.
+
+**Regla que queda:** al agregar una negativa, agregar también singular, plural y la variante con y sin acento. Google no las cubre solo.
+
+### Negativas agregadas a `NEG-EQUIPOS-DIY` (en frase)
+
+`maquina arenadora` · `máquina arenadora` · `maquina para arenar` · `máquina para arenar` · `masilla` · `piezas`
+
+- `masilla` es de otro rubro (gastó 336 buscando masilla para piscinas). `piezas` coincide con un límite ya documentado: no se hacen piezas sueltas chicas.
+
+### ⛔ Lo que NO se bloqueó, y por qué importa
+
+Leer el n-gram sin criterio hace daño. Estos aparecían con costo y 0 conversiones y **se dejaron pasar a propósito**:
+
+- **`cemento`** (336) — viene de la búsqueda de masilla, pero bloquearlo saca a todo el que busca *"pileta de cemento"*, que es el cliente exacto del servicio más rentable.
+- **`precio`** y **`m2`** (628, 2 clics) — es alguien pidiendo precio: intención altísima. Con 2 clics no hay nada que decidir.
+- **`fachadas`**, **`metales`**, **`industrial`**, **`zona sur`**, **`piletas`** — son el negocio.
+
+### ⭐ Decisión de medición (dueño, 24/08) — TOMADA, no es deuda
+
+**La conversión es "abrió WhatsApp" y se queda así.** No se puede hacer mejor, y no hace falta:
+
+- El dueño recibió **más de 5 chats**, coherente con las 7 conversiones. Pero **no puede atribuirlos**: a la misma casilla llegan clientes viejos, recomendados y tráfico orgánico.
+- **Contar mensajes sería PEOR métrica.** Quien llega por un anuncio, abre WhatsApp y decide **llamar** en vez de escribir, igual fue una conversión: dio el paso. Lo que se mide es la acción, no el formato.
+- ⚠️ **Se acepta que el número sea siempre un poco optimista**: cuenta también a quien abre WhatsApp y se arrepiente. Es el precio de tener una métrica que funciona. Lo que se lee es **la tendencia y el costo relativo entre campañas**, no el valor absoluto.
+- 🔎 **Atribución parcial que sí existe:** desde el 21/08 los mensajes que vienen de un anuncio arrancan con *"Hola, vi su anuncio en Google."* Sirve para los que escriben, no para los que llaman. Con el tiempo, la proporción entre esos chats y las conversiones de Ads va a decir cuántos prefieren llamar.
+- **El juez final sigue siendo el trabajo cobrado**, no la conversión. A los 30 días la pregunta es cuántos de esos chats terminaron en laburo.
+
+### Para el 03/09, cuando se levante el congelamiento
+
+1. **Calidad baja en los genéricos:** `arenado` QS 5, `arenados` y `arenadora` QS 3. `ag_genericos` va a `/servicios`, que habla de obra e industria, pero quien busca "arenado" a secas puede querer una pileta. Hay un problema de coincidencia de mensaje.
+2. **`sandblasting` en QS 1 con 0 impresiones.** Nadie la busca y Google la castiga. Candidata a pausar.
+3. **Piletas merece más presupuesto**, con la primera lectura seria de CPA (19/09) en la mano.
+4. Lo que ya venía anotado: sacar `Smart campaign ad clicks to call` de los objetivos de cuenta, y las rutas del anuncio genérico.
+
+### Nota operativa
+
+**El reporte semanal cayó en correo no deseado** (Hotmail filtra los automáticos de Google con CSV adjunto). Marcado como legítimo. Si vuelve a fallar, el script escribe el reporte completo en su propio registro: `Herramientas → Acciones masivas → Scripts → el script → registro`.
+
+- **Resultado esperado y cuándo revisarlo:** las negativas deberían bajar el gasto sin conversiones. **Revisar el lunes 31/08** con el próximo reporte. La lectura seria de CPA es el **19/09** (30 días).
+- **Resultado real:** (completar)
+
 ## 2026-08-20 — ✅ Encendido: la medición llega a Ads y las 3 campañas quedan activas
 
 - **Qué se hizo:** el 18/08 se cargaron **ARS 100.000** y se encendió **solo `AR-Search-General-Marca`** (750/día). El 20/08, tras 48 h, se verificó el chequeo **C3** y se encendieron las otras dos: `AR-Search-Obra-Industrial` (3.000/día) y `AR-Search-Piletas` (1.250/día). **Las 3 activas desde el 20/08.**

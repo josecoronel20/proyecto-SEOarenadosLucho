@@ -1,4 +1,6 @@
 # Modo experto — gestión profesional de Google Ads
+> ⚠️ **Las palabras negativas de Google NO reconocen variantes.** Singular, plural y acentos son términos distintos: `maquinas para arenar` no bloquea `maquina para arenar`. Al agregar una negativa, agregar también singular, plural y la variante con y sin acento. Verificado con gasto real el 24/08/2026 (ver `08-bitacora.md`).
+
 > ⚠️ **Antes de escribir o aprobar cualquier texto de anuncio, leer [`contexto/21-realidad-operativa.md`](../21-realidad-operativa.md).** Un anuncio promete en 30 caracteres lo que después hay que cumplir en el lugar. Ahí está qué se hace, qué no, y qué datos no entran en un aviso porque no entra su condición.
 
 
