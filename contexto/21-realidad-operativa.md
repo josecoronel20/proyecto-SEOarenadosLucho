@@ -18,7 +18,7 @@ mientras afirmaba algo que no era cierto.
 | "+20 años de experiencia" | La empresa tiene ~8 años. Los 20 son **de oficio**, de un arenador del equipo | 11/08/2026 |
 | "Sacamos el revestimiento viejo" (piletas) | Solo pintura sobre hormigón | 14/08/2026 |
 | Conversiones de llamada y formulario activas | El único canal es WhatsApp | 14/08/2026 |
-| "Protegemos la zona", "contenemos el polvo" | **No se hace ningún cerramiento** | 26/08/2026 |
+| "Protegemos la zona", "contenemos el polvo" | **No se hace ningún cerramiento** | 21/08/2026 |
 
 La cuarta fue la peor: las tres primeras eran errores de currículum, esa creaba
 una **expectativa operativa** que se rompía en el lugar, con el trabajo agendado.

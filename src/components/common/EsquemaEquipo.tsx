@@ -8,7 +8,7 @@ import { Section, SectionHead, MEDIDA } from "@/components/common/system"
  * foto del compresor no contesta eso; un dibujo con la distancia sí. Y como se
  * ve claramente que es un dibujo, no promete ser una foto de nada.
  *
- * ⛔ El 26/08/2026 se descartó usar acá una imagen generada por IA. Motivo en
+ * ⛔ El 21/08/2026 se descartó usar acá una imagen generada por IA. Motivo en
  * `contexto/21-realidad-operativa.md` §8: una imagen fotorrealista al lado de
  * las ~38 fotos reales del sitio se lee como documental, no como ilustración —
  * y esa en particular traía texto en chino, un modelo deformado y marca de agua.

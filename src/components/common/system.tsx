@@ -71,7 +71,7 @@ export const H3 = "text-lg md:text-xl font-semibold leading-snug"
  * ⚠️ El valor NO es la cantidad de caracteres. `ch` mide el ancho del glifo
  * “0”, que es de los más anchos de Archivo, así que la prosa entra bastante
  * más holgada: 68ch daban ~88 caracteres reales y el detector los marcaba.
- * Medido en el navegador el 26/08/2026.
+ * Medido en el navegador el 21/08/2026.
  */
 export const MEDIDA = "max-w-[58ch]"
 
