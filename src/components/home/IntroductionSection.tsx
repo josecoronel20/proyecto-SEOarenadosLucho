@@ -13,7 +13,7 @@ const noRealizamos = [
   "Muebles y piezas sueltas chicas",
   "Portones y rejas de hogar",
   "Autos y motos particulares",
-  "El pintado o el revestimiento final",
+  "El pintado o el revestimiento, salvo que lo pidas aparte",
   "Granallado o arenado certificado con normas",
 ]
 
@@ -24,7 +24,11 @@ const noRealizamos = [
  *
  * La lista de "lo que no hacemos" no es humildad: filtra al comprador equivocado
  * (que cuesta plata en Ads y tiempo en WhatsApp) y le da credibilidad al que sí
- * sirve. Incluye el límite que más malentendidos genera: no pintamos.
+ * sirve.
+ *
+ * ⚠️ El renglón del pintado dice “salvo que lo pidas aparte” y no “no lo
+ * hacemos”: el 29/08/2026 se comprobó contra presupuestos reales que sí pintan
+ * cuando se lo piden. Ver `contexto/21-realidad-operativa.md` §6.
  *
  * Las dos listas van tabuladas bajo su rótulo, sin tilde verde ni cruz roja al
  * costado: el encabezado de la columna ya dice si es sí o no, y el ícono además
