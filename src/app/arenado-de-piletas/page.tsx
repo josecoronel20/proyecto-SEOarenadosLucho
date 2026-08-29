@@ -350,7 +350,7 @@ export default function ArenadoDePiletasPage() {
               </div>
               <div className="border-t-2 border-tinta pt-4">
                 <p className="ficha-num text-xs font-semibold uppercase tracking-wider text-tinta-70 mb-3">Lo que no hacemos</p>
-                <p className="text-tinta-70 leading-relaxed mb-3 max-w-[68ch]">No pintamos ni revestimos la pileta —ese paso lo hacés vos, tu pintor o tu piletero—. Tampoco hacemos granallado ni arenado con normas o mediciones: hacemos arenado sin vueltas.</p>
+                <p className="text-tinta-70 leading-relaxed mb-3 max-w-[68ch]">El pintado y el revestimiento no vienen incluidos: lo normal es que los haga tu pintor o tu piletero. Si necesitás que lo hagamos nosotros, se presupuesta aparte. Lo que no hacemos es granallado ni arenado con normas o mediciones: hacemos arenado sin vueltas.</p>
                 <p className="text-tinta-70 leading-relaxed max-w-[68ch]">Y dos límites concretos: <strong>no sacamos revestimientos pegados</strong> como venecitas o mosaico, y <strong>no trabajamos piletas de fibra de vidrio</strong>. Trabajamos hormigón pintado. Si no sabés cuál es la tuya, mandanos una foto y te lo decimos enseguida.</p>
               </div>
             </div>

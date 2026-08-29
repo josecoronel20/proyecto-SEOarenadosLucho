@@ -85,7 +85,16 @@ al dueño y se agrega acá **antes** de publicarlo.
 
 ## 6. Qué NO se hace — límites duros
 
-- ⛔ **No se pinta ni se reviste.** Ese paso lo da el cliente, su pintor o su piletero.
+- ⚠️ **Pintura: se hace si la piden, pero no se vende.** Corregido el 29/08/2026 —
+  el sitio afirmaba "no pintamos" como absoluto y era **falso**: 2 de 7
+  presupuestos reales cobran mano de obra de pintura, y en uno (perfiles en
+  Burzaco) la pintura factura **más que el arenado**. Posición del dueño:
+  *"pintamos a veces, preferimos que no, pero si nos piden lo hacemos"*.
+  - **Nunca se lidera con esto.** El servicio es el arenado; el pintado **no
+    viene incluido** y **se presupuesta aparte**.
+  - La pintura **la compra el cliente o la compramos nosotros** — se acuerda.
+  - ⛔ **No volver a escribir "no pintamos" como absoluto** en el sitio, en un
+    anuncio ni en un presupuesto.
 - ⛔ **No se hace granallado**, ni arenado con normas o mediciones (Sa3, ISO 8501,
   metal blanco, perfil de anclaje). **Prohibido nombrarlo** en copy, metadata,
   schema o anuncios.
