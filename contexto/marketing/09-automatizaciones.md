@@ -13,7 +13,7 @@ Aprobado por el dueño el 25/07/2026 como **modelo objetivo**: piloto automátic
 | `05-autopilot.js` | Semanal (lun 07:00) | Negativas de lista negra (incluye términos técnicos: granallado, sa3, iso 8501 — actualizada 26/07 al pivote), negativas exactas de términos que gastan sin convertir, pausa de keywords sangrantes. Máx. 25 negativas + 5 pausas por corrida; marca protegida; email de cada cambio | ⏳ **NO instalar aún** — recién con conversiones fluyendo + URLs 200 |
 | `06-guardian-presupuesto.js` | **Diario** (06:00) | Red secundaria del tope **ARS 300.000/mes**: avisa al 80%, pausa todo al ~95% (margen por latencia), reactiva al cambiar el mes. Heartbeat + kill-switch. El freno duro por día es el **presupuesto nativo ≈ tope/30** (en la UI) | ✅ **Instalado y programado (diario)** — 26/07/2026; Vista previa OK (heartbeat) |
 | `02-reporte-semanal.js` | Semanal (lun) | Solo lee: reporte de rendimiento por email | ✅ **Instalado** — 26/07/2026 |
-| `03-ngram-terminos.js` | Semanal | Solo lee: análisis n-gram para negativas | ✅ **Instalado** — 26/07/2026 |
+| `03-ngram-terminos.js` | Semanal | Solo lee: **búsquedas completas** + análisis n-gram para negativas | ✅ **Instalado** — 26/07/2026 · ⚠️ **corregido el 29/08/2026, hay que volver a pegarlo en la cuenta** |
 | `04-chequeo-urls.js` | Diario en migración, luego semanal | Solo lee: alerta URLs finales rotas | ✅ **Instalado** — 26/07/2026 |
 
 **Frenarlos (3 vías):** (1) kill-switch remoto — poner `STOP` en la celda A1 de la hoja de control (si está configurada en `HOJA_CONTROL_URL` del guardián); (2) `MODO_PRUEBA: true` en el CONFIG del autopilot; (3) Google Ads → Herramientas → Scripts → pausar o eliminar.
