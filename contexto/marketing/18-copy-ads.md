@@ -45,30 +45,48 @@ La cuenta arrastra recursos de su configuración anterior que **se aplican solos
 
 ### `NEG-EQUIPOS-DIY` — el que quiere comprar la máquina, no contratarnos
 
+**Estado real al 29/08/2026.** `F` = concordancia de frase; el resto, amplia.
+
+⚠️ **Las negativas de Google NO reconocen variantes**: singular, plural y acento
+son términos distintos. Cada una se carga con sus formas. Verificado con gasto
+real el 24/08: la lista tenía `maquinas para arenar` (plural) y pasó
+`maquina para arenar` (singular), que gastó 342 sin convertir.
+
 ```
-alquiler de arenadora
-venta de arenadora
-comprar arenadora
-arenadoras en venta
-maquina de arenar
-maquinas para arenar
-equipos para arenar
-equipo arenador
-compresor para arenado
-arena para arenado
-arena silica
-bolson de arena
-hidrolavado
-curso
-tutorial
-como hacer
-casero
-aprender
-callone
-magal
+alquiler de arenadora          maquina de arenar
+venta de arenadora             maquinas para arenar
+comprar arenadora              maquina para arenar        F
+arenadoras en venta            máquina para arenar        F
+equipos para arenar            maquina arenadora          F
+equipo arenador                máquina arenadora          F
+compresor para arenado         arenadora industrial       F
+arena para arenado             hidroarenado               F
+arena silica                   hidrolavado
+bolson de arena                masilla                    F
+curso                          sillas
+tutorial                       silla
+como hacer                     como sacar
+casero                         cómo sacar                 F
+aprender                       taller de arenado          F
+callone                        taller de arenados         F
+magal                          por m2                     F
 ```
 
-*Las dos últimas son marcas de arenadoras que aparecieron en el informe de términos.*
+*`callone` y `magal` son marcas de arenadoras que aparecieron en el informe.*
+
+### ⛔ Lo que NO se bloquea, y por qué
+
+Leer el informe sin criterio hace daño. Estos aparecen con costo y cero
+conversiones y **se dejan pasar a propósito**:
+
+| Término | Por qué NO |
+|---|---|
+| `arenadora` sola | ⚠️ **Es la mejor keyword de la cuenta** — 4 conversiones a CPA 465. Bloquearla sería el peor error posible. Por eso `arenadora industrial` va en **frase**, nunca en amplia |
+| `cemento` | Aparece por una búsqueda de masilla, pero bloquearlo saca a todo el que busca *"pileta de cemento"*: el cliente del servicio más rentable |
+| `precio` | Alguien pidiendo precio es la intención más caliente que hay. Se bloqueó solo `por m2`, que es lo específico |
+| `taller` en amplia | Bloquearía *"arenado de mi taller"* — el dueño de un taller es el cliente PYME exacto. Solo se bloquean las frases `taller de arenado(s)` |
+| `piezas` | **Se agregó el 24/08 y se sacó el 29/08.** Los presupuestos 211 (puerta de ascensor) y 213 (perfiles de doble T, 1.180 m²) **son piezas y se cobraron**. Lo que no se hace es **trasladarlas**, no arenarlas. El límite real es el tamaño, no la palabra |
+| `fachadas`, `metales`, `industrial`, `piletas`, zonas del AMBA | Son el negocio |
 
 ### `NEG-DATA` — trabajos que no compramos
 

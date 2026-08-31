@@ -14,8 +14,9 @@
 var CONFIG = {
   EMAIL: 'impruvagencia@hotmail.com',
   PERIODO: 'LAST_30_DAYS',
-  TOP: 40,          // filas por tabla del n-gram
-  TOP_TERMINOS: 60  // filas de la tabla de búsquedas completas
+  TOP: 40,           // filas por tabla del n-gram
+  TOP_TERMINOS: 50,  // búsquedas que NO convirtieron
+  TOP_CONVIERTEN: 25 // búsquedas que SÍ convirtieron
 };
 
 function main() {
@@ -51,7 +52,12 @@ function main() {
   var out = [];
   out.push('TÉRMINOS DE BÚSQUEDA — ' + CONFIG.PERIODO + ' — ' + totalTerminos + ' términos');
   out.push('');
-  out.push(tabla('BÚSQUEDAS COMPLETAS por costo, sin conversiones primero', completos, CONFIG.TOP_TERMINOS));
+  out.push(tablaFiltrada('BÚSQUEDAS QUE NO CONVIRTIERON — por costo', completos, false, CONFIG.TOP_TERMINOS));
+  out.push('');
+  out.push(tablaFiltrada('BÚSQUEDAS QUE SÍ CONVIRTIERON — por costo', completos, true, CONFIG.TOP_CONVIERTEN));
+  out.push('');
+  out.push('⚠️ Google OCULTA los términos que buscó muy poca gente. Si la suma de estas');
+  out.push('   tablas es bastante menor que el gasto real, la diferencia está ahí.');
   out.push('');
   out.push('--- Lo de abajo es el mismo dato picado en palabras, para ver patrones ---');
   out.push('');
@@ -81,6 +87,23 @@ function acum(mapa, clave, costo, clics, impr, conv) {
   mapa[clave].clics += clics;
   mapa[clave].impr += impr;
   mapa[clave].conv += conv;
+}
+
+/**
+ * Una tabla con solo las que convirtieron, o solo las que no.
+ *
+ * ⚠️ Existe porque antes había una sola tabla ordenada con las de cero
+ * conversiones primero y cortada en 60 filas: las 60 se llenaban con las que no
+ * convirtieron y las buenas nunca se veían. Detectado el 29/08/2026.
+ */
+function tablaFiltrada(titulo, mapa, conConv, cuantas) {
+  var sub = {};
+  Object.keys(mapa).forEach(function (k) {
+    var tuvo = mapa[k].conv > 0;
+    if (tuvo === conConv) sub[k] = mapa[k];
+  });
+  if (!Object.keys(sub).length) return titulo + '\n(ninguna)';
+  return tabla(titulo, sub, cuantas);
 }
 
 function tabla(titulo, mapa, cuantas) {
