@@ -12,6 +12,78 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-08-29 — Semana 2: el volumen se triplicó y apareció el costo de una afirmación falsa
+
+- **Qué se hizo:** lectura de la semana 2, corrección de dos bugs del script 03, y ajuste de la lista de negativas. **No se tocó ninguna campaña** — el congelamiento sigue hasta el 03/09.
+
+### Los números
+
+| | Semana 1 | Semana 2 |
+|---|---|---|
+| Costo | 8.532 | **27.754** |
+| Clics | 31 | **96** |
+| Conversiones | 7 | **16** |
+| CPA | 1.219 | **1.735** |
+
+| Campaña | Costo | Conv | CPA | % de su presupuesto |
+|---|---|---|---|---|
+| `AR-Search-General-Marca` | 3.192 | 4 | **798** | 61% |
+| `AR-Search-Obra-Industrial` | 13.714 | 7 | 1.959 | 65% |
+| `AR-Search-Piletas` | 10.847 | 5 | **2.169** | **124%** ⚠️ |
+
+- **El CPA subió 42% y es esperable:** las conversiones más baratas llegan primero; al triplicar volumen se paga por las que estaban más lejos. Con 23 conversiones acumuladas no se concluye nada — la lectura seria sigue siendo el **19/09**.
+- **Piletas se dio vuelta:** era la mejor (680) y pasó a ser la peor (2.169). Además **gasta por encima de su presupuesto diario** (1.550 contra 1.250). Dos semanas no alcanzan para concluir, pero hay que mirarlo.
+- ⭐ **`[arenadora]` en exacta: 4 conversiones a CPA 465.** Tercera semana consecutiva y **el mejor costo por contacto de la cuenta**, con QS 3. Google la califica mal y convierte mejor que ninguna.
+- **`sandblasteo`: 2 clics, 2 conversiones, CPA 349.** Volumen mínimo pero 100% de conversión.
+- **`empresa de arenado` (frase): 8.650, 28 clics, 4 conversiones.** Un tercio del gasto y el motor de la campaña de obra.
+
+### 🔴 El costo de "No pintamos", medido
+
+| Búsqueda | Impr. | Clics |
+|---|---|---|
+| `arenado y pintado` | 2 | **0** |
+| `arenados y pintura` | 2 | **0** |
+| `taller de arenado y pintura` | 6 | **0** |
+| `arenado y pintado epoxy mh` | 2 | **0** |
+| `arenado y pintura` | 1 | **0** |
+
+**13 impresiones en búsquedas de arenado + pintura, cero clics.** El anuncio aparece con el titular fijado *"No pintamos"* y la persona sigue de largo. Es la afirmación falsa corregida el 29/08 (§ entrada anterior) funcionando en contra, cuantificada.
+
+`arenado y pintado epoxy mh` es exactamente el trabajo del presupuesto **213**, donde la pintura epoxy facturó **15.000.000** — más que el arenado. **Sacar "No pintamos" de los RSA sube al primer puesto de la lista del 03/09.**
+
+### 🐛 Dos bugs del script 03, encontrados y corregidos
+
+1. **Tiraba las búsquedas completas.** Leía todos los términos y solo emitía palabras sueltas y pares. Se veía que la palabra `restaurar` gastó 3.296 sin convertir, pero no la frase — y sin la frase no se puede escribir una negativa precisa, solo adivinar.
+2. **El corte escondía todo lo bueno.** Una sola tabla ordenada con las de cero conversiones primero, cortada en 60 filas: las 60 se llenaban con las que no convirtieron y **ninguna de las que sí convirtieron llegaba a mostrarse**. Ahora son dos tablas separadas.
+
+⚠️ **Además, Google oculta los términos que buscó muy poca gente.** Los 10 clics de `restaurar piscina` no aparecen en ningún renglón. Con este volumen, una parte del gasto va a ser siempre invisible: con esa keyword se decide parcialmente a ciegas, y eso solo es un argumento más para tratarla el 03/09.
+
+⚠️ El script vive en la cuenta: **hay que volver a pegarlo** para que los dos arreglos tengan efecto.
+
+### Negativas — el cambio de la semana
+
+**Agregadas:** `hidroarenado` · `arenadora industrial` (F) · `como sacar` · `cómo sacar` (F) · `sillas` · `silla` · `taller de arenado` (F) · `taller de arenados` (F) · `por m2` (F)
+
+- `taller` se había pensado en **amplia** y se corrigió a frase: en amplia bloqueaba *"arenado de mi taller"*, que es el cliente PYME exacto. Las 31 impresiones eran todas de `taller de arenado(s)`.
+- `por m2`: tres semanas, 5 clics, cero conversiones. Se bloquea lo específico, no `precio`.
+
+**🔴 Quitada: `piezas`.** Error mío del 24/08. La justifiqué con el "no hacemos piezas sueltas chicas" del sitio, **antes de leer los presupuestos**. Los presupuestos **211** (puerta de ascensor) y **213** (perfiles de doble T, 1.180 m²) son piezas y se cobraron. Lo que no se hace es **trasladarlas**. El límite real es el tamaño, no la palabra — y la bloqueé con un solo clic de 338 pesos de evidencia.
+
+**La lección:** una negativa se valida contra lo que el negocio **factura**, no contra lo que el sitio dice que hace.
+
+### Otros hallazgos, para el 03/09
+
+- **Los genéricos son el agujero:** `arenados` gastó 1.286 con 5 clics y cero conversiones; `arenado` otros 948 con 3 clics. **2.234 sin nada**, con QS 3 los dos. No es un problema de negativas: la landing no le contesta a esa búsqueda.
+- **La Plata:** ~22 impresiones entre todas las variantes, 2 clics, cero conversiones. Al borde del radio de 60 km. Candidata a excluir como ubicación.
+- **`restaurar ladrillo visto exterior`: 4 impresiones, 0 clics.** Eso **es** el negocio (restauración de fachadas) y el anuncio no lo engancha. Hay copy para mejorar.
+
+### 💰 Caja
+
+**36.286 gastados de 100.000.** Al ritmo actual (~4.000/día) alcanza hasta el **14/09** aproximadamente. Conviene cargar antes: si se queda sin fondos las campañas se frenan solas y se pierde el aprendizaje acumulado.
+
+- **Resultado esperado y cuándo revisarlo:** las negativas nuevas deberían bajar el gasto sin conversiones. **Próximo reporte: lunes 31/08.** Lectura seria de CPA: **19/09**.
+- **Resultado real:** (completar)
+
 ## 2026-08-24 — Semana 1 con datos: 7 conversiones, piletas gana, y una lección sobre negativas
 
 - **Qué se hizo:** primera lectura del reporte semanal (scripts 02 y 03) con datos reales. Se agregaron 6 negativas. **No se tocó nada más** — sigue el congelamiento hasta el 03/09.
