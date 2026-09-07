@@ -166,11 +166,13 @@ La estructura objetivo del proyecto define 4 grupos dentro de Obra-Industrial. *
 "limpieza de pileta para pintar"
 "preparar pileta para pintar"
 "preparar pileta para revestir"
-"restaurar pileta"
-"restaurar piscina"
+[restaurar pileta]
+[restaurar piscina]
 ```
 **15 keywords.** Notas:
 - `arenado de piletas` en exacta es el **lead más barato del historial** (4 conv / 2.156).
+- ⚠️ **`restaurar pileta` / `restaurar piscina` van SOLO en exacta** (cambio del **04/09/2026**, primer movimiento tras el congelamiento). En **frase** gastaron **3.296 en una sola semana con 10 clics y 0 conversiones** — el **30% del gasto** de la campaña de piletas, y la causa de que su CPA se diera vuelta (2.169 con ellas, 1.510 sin ellas). La fuga es la cola larga que Google esconde por bajo volumen ("cómo restaurar una piscina", "cuánto sale restaurar…"): quien quiere **restaurar** una pileta busca el resultado terminado — revestir, pintar —, y nosotros hacemos un paso de eso. Mismo criterio que `mantenimiento de piletas`. Ver bitácora 04/09.
+- ⛔ **`restaurar` NO se agrega como negativa en ninguna lista, nunca.** Es la palabra del negocio al que transicionamos (Cluster 1 = "Obra / **restauración**"), y `restaurar ladrillo visto exterior` ya apareció en el informe como consulta buena. El problema es la intención en piletas, no la palabra. Bloquearla sería repetir el error de `piezas` del 24/08.
 - ⛔ **`mantenimiento de piletas` queda FUERA a propósito.** Histórico: 3 conv / 8.847 (~2.949 con conversiones infladas → CPA real probablemente el doble o el triple). La intención dominante es **mantenimiento químico semanal**, un servicio que no prestamos. Igual criterio para `"limpieza de piletas"` sola y para `arenado pintura` (32.246 ARS / 75 clics / **1 conv** en frase — el segundo mayor sumidero del histórico después de `arenado`).
 - ⛔ **`pintar pileta` / `pintura de piscina` quedan FUERA:** es pintado, no arenado. Ya fueron cortadas por la crítica adversarial del dossier (§4.6).
 
@@ -359,8 +361,14 @@ micraje
 certificación
 certificado
 "cabina de granallado"
+"al horno"
+laser
+láser
+"fibra de vidrio"
 ```
-**30 términos.** Notas:
+**34 términos.** Notas:
+- ⭐ **Agregados el 07/09/2026** tras la lectura de la semana 3: `"al horno"` (pintura al horno es otro rubro — la consulta `arenado y pintura al horno` costó 345), `laser` / `láser` (tecnología competidora — `laser quita oxido`, 347) y `"fibra de vidrio"` (`arreglo de piscinas de fibra de vidrio`, 664: el arenado **destruye** la fibra, nunca es trabajo nuestro). `laser` va con y sin acento — las negativas no absorben la variante.
+- ⚠️ **`"pileta de fibra"` ya estaba en el Bloque H y no alcanzó:** la consulta decía **piscinas** de fibra, no pileta. Por eso `"fibra de vidrio"` va a nivel de cuenta y no a la lista de piletas — cubre las dos palabras de una.
 - `granallado` y `granallados` van los dos: **las negativas no absorben plurales** (§4.7).
 - `nace` va como `"norma nace"` en frase y **nunca** suelto: "nace" es una palabra corriente del español y en amplia bloquearía consultas legítimas.
 - `certificado` / `certificación` filtran al comprador técnico que pide papeles. Es exactamente el cliente que se rechaza (caso naves ferroviarias).
@@ -429,8 +437,22 @@ hidrolavadora
 "casco de arenado"
 "repuestos de arenadora"
 "tolva de arenado"
+"máquina arenadora"
+"maquina para arenar"
+"máquina para arenar"
+masilla
+hidroarenado
+"arenadora industrial"
+"como sacar"
+"cómo sacar"
+sillas
+silla
+"taller de arenado"
+"taller de arenados"
+"por m2"
 ```
-**28 términos.** Notas:
+**41 términos.** Notas:
+- 🔴 **Los 13 últimos se cargaron recién el 07/09/2026.** Se habían decidido el 24 y el 29/08 y quedaron anotados en la bitácora, pero **nunca llegaron a la cuenta**: la lista tenía 33 términos cuando debía tener ~70. `"por m2"` sola costó 1.003 ARS en la semana del 31/08 al 06/09 por no estar cargada. Ver bitácora 07/09.
 - **`arenadora` sola NO está en la lista** — solo sus frases de compra/alquiler. Esto es lo que permite comprar `[arenadora]` en exacta (§4.3).
 - ⚠️ `"equipo de arenado"` / `"equipos de arenado"` se dejaron **fuera** a propósito: bloquearían "empresa de arenado con equipo propio", que es una consulta de comprador. Si aparecen en el informe de términos con intención de compra de máquinas, se suman entonces.
 - `compresor` en amplia tiene un riesgo mínimo (bloquearía "arenado con compresor propio"). Se asume: el que escribe "compresor" quiere comprar o alquilar uno.
@@ -518,6 +540,8 @@ natatorios
 > ⛔ **ESTOS TÉRMINOS JAMÁS VAN A NIVEL CUENTA.** Si aparecen en la lista de cuenta o aplicados a la campaña de Piletas, se apaga el servicio más rentable del historial y no hay ninguna alerta. **Verificar antes de encender** que la cuenta no arrastre esta negativa de la configuración vieja.
 
 #### Bloque H → lista `neg_piletas-filtro` (aplicar **SOLO** a Piletas)
+
+> ✅ **Creada en la cuenta el 07/09/2026 como `NEG-PILETAS-FILTRO`**, aplicada solo a `AR-Search-Piletas`. Hasta esa fecha **esta lista no existía**: se diseñó y nunca se cargó, así que la campaña de Piletas corrió tres semanas sin ningún filtro de homónimos. Ver bitácora 07/09.
 
 *Dos funciones: (1) ruteo inverso hacia Obra-Industrial; (2) ⭐ **propuesta nueva** — filtrar los homónimos de "pileta" en el español rioplatense. En Argentina "pileta" es también la **bacha de cocina o de lavadero**: una consulta como "sacar pintura de pileta de cocina" matchea nuestra frase palabra por palabra.*
 
@@ -628,6 +652,7 @@ La regla se mantiene, pero conviene dejar por escrito **bajo qué condiciones se
 | Semanal | Medir el **gasto ciego**: costo total de la campaña − suma del costo de los términos visibles. Esa diferencia es lo que se pagó sin poder verlo | Comparar la tabla de Términos de búsqueda contra la fila de la campaña |
 | Mensual | `Estadísticas e informes → Estadísticas (Insights)` → tarjeta de categorías de búsqueda: ¿el tráfico deriva a obra/PYME (deseado) o a empleo/insumos/DIY (fuga)? | Es la única vista que muestra los temas de bajo volumen que el informe clásico oculta |
 | Mensual | Verificar que las 5 listas siguen aplicadas a las campañas correctas y que la lista de cuenta no creció sola | `Herramientas → Biblioteca compartida → Listas de exclusiones` |
+| ⭐ **Cada vez que se cargan negativas** | **Contar los términos de la lista y compararlos contra el bloque de este doc.** Si el número no coincide, algo se perdió entre la decisión y la carga | Idem. Ver bitácora 07/09: la lista tenía 33 de ~70 y `neg_piletas-filtro` directamente no existía |
 | Mensual | Verificar que **`neg_RUTEO-piletas` NO** está aplicada a la campaña de Piletas | Idem |
 
 **Antes de negativizar cualquier término nuevo, pasarlo por estos 3 filtros:**

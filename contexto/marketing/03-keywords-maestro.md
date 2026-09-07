@@ -28,7 +28,7 @@ Fuente única de keywords para **SEO y Google Ads**. Cada grupo mapea a UNA URL.
 | arenado de estructuras metálicas | Por tipo | Gap — probar |
 | arenado de tanques · limpieza de tanques | **Limpieza**, no terminación certificada | Gap — probar |
 | arenado a domicilio · arenado in situ | El diferencial operativo: vamos con el equipo | a domicilio exacta: 0 conv/1.571 (probar con landing/mensaje correcto) |
-| quitar óxido de metal · sacar óxido · restaurar metal | El problema, sin jerga (como Cluster 3b) | Gap — probar |
+| quitar óxido de metal · sacar óxido · restaurar metal | El problema, sin jerga (como Cluster 3b) | 🔴 **Probado y fallido — pausadas el 07/09/2026.** 2.955 ARS / 10 clics / 0 conv en una semana; todas las búsquedas eran DIY (`líquido para quitar óxido`, `desoxidante para hierro`, `laser quita oxido`). ⚠️ **`óxido` NO se bloqueó como negativa**: sigue siendo lenguaje de comprador y puede entrar por otras keywords. Se pausó la keyword, no la palabra |
 | arenado de camiones / acoplados (frase, prueba) | Restauración de flota de PYME — ⚠️ distinto de "chasis/limpieza de auto" que sigue NEGATIVA (0 conv histórico) | Gap — probar con puja baja |
 | arenado de galpón / techos de galpón | La estructura misma del galpón | Gap |
 | servicio limpieza industrial (exacta) | Limpieza gruesa | Barato en historial (validar: medición sucia) |
@@ -46,7 +46,7 @@ Dos audiencias distintas que llegan a la misma landing:
 |---------|-----------|-------|
 | arenado de pileta(s) | Preparar para repintar/revestir | ⭐ Exacta: 4 conv / 2.156 · viejo: 14 conv / 16.192 |
 | limpieza de pileta para pintar · preparar pileta para pintar | Igual, dicho simple | limpieza de piletas exacta: 3 conv / 4.238 |
-| restaurar pileta / piscina | Restauración | 1 conv / 4.190 |
+| restaurar pileta / piscina | Restauración | 1 conv / 4.190 · ⚠️ **solo exacta desde el 04/09/2026** — en frase gastó 3.296 en una semana con 0 conv |
 | mantenimiento de piletas (exacta) | Cuidado: puede ser limpieza química | 3 conv / 8.847 |
 
 ### 3b. Sin jerga — el problema, no la técnica (gap sin explotar)
