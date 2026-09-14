@@ -12,6 +12,257 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-14 — Semana 4: la reparación funcionó, y se pausa `ag_pileta-sin-jerga`
+
+- **Qué se hizo:** lectura de la semana 4. Se pausó el grupo **`ag_pileta-sin-jerga`** completo y se agregaron dos negativas de cuenta: `"como reparar"` y `"cómo reparar"`.
+
+### Los números: 4 → 15 conversiones
+
+| | S1 | S2 | S3 | **S4** |
+|---|---|---|---|---|
+| Costo | 8.532 | 27.754 | 20.223 | 22.890 |
+| Clics | 31 | 96 | 74 | 89 |
+| **Conversiones** | 7 | 16 | 4 | **15** |
+| **CPA** | 1.219 | 1.735 | 5.056 | **1.526** |
+
+| Campaña | Costo | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 11.949 | 38 | 6,5% | **5** (venía de 0) | 2.390 |
+| `AR-Search-Piletas` | 8.434 | 41 | **15,7%** | **8** | **1.054** |
+| `AR-Search-General-Marca` | 2.507 | 10 | 3,9% | 2 | 1.253 |
+
+**Mejor CPA desde que la cuenta tiene volumen.** Las impresiones bajaron (1.774 → 1.104) y los clics subieron: se fue la basura que se mostraba y nadie clickeaba. CTR de la cuenta 4,2% → 8,1%. Piletas volvió a gastar dentro de su presupuesto (1.205/día contra 1.250).
+
+### ✅ Verificado: las negativas del 07/09 están funcionando
+
+Comparados los términos de 30 días contra los del reporte anterior: **todo lo bloqueado el 07/09 quedó con el mismo costo exacto — cero pesos nuevos.** `precio de arenado por m2` (1.965,96 en los dos reportes), `arreglo de piscinas de fibra de vidrio`, `laser quita oxido`, `arenado y pintura al horno`, `masilla para piscinas de cemento`, `taller de arenado`, `máquina arenadora`, `hidroarenado de piletas`, `con qué se saca el óxido`.
+
+⚠️ Siguen siendo **cuatro cambios juntos**: la recuperación no se puede atribuir a uno solo. Lo que sí está probado es que los términos bloqueados dejaron de gastar.
+
+### El cambio de la semana: pausar `ag_pileta-sin-jerga`
+
+Dos grupos de la misma campaña, **con la misma landing**:
+
+| Grupo | Clics | Conv | Tasa |
+|---|---|---|---|
+| `ag_pileta-jerga` (esta semana) | 25 | **8** | **32%** |
+| `ag_pileta-sin-jerga` (S3 + S4) | **23** | **0** | 0% |
+
+`ag_pileta-sin-jerga` acumula **5.539 ARS en dos semanas sin una conversión**. Con la tasa de la cuenta (16,9%), que 23 clics no conviertan por casualidad es ~1 en 70. Y como el grupo hermano convierte 1 de cada 3 **en la misma página**, el problema no es la landing: es la intención.
+
+Las búsquedas lo confirman: `como sacar pintura de pileta de cemento`, `remover pintura de pileta`, `eliminar pintura piscina`. **Es el mismo patrón del óxido: el que no dice "arenado" quiere hacerlo él.** La hipótesis del diseño ("el dueño de casa no sabe que se llama arenado y busca el problema") no se sostuvo con datos.
+
+- **Efecto buscado:** libera ~430/día **dentro** del presupuesto de Piletas, que pasan al grupo que convierte a CPA ~600. Sin tocar presupuesto.
+- ⚠️ **Se pausan las keywords, no las palabras.** `sacar pintura`, `despintar` y `decapar` **no** se negativizan (§4.10 de `ads-config/04-keywords-negativas.md`): una búsqueda como "arenado para sacar pintura de pileta" todavía puede entrar por las keywords de jerga.
+
+### Negativas
+
+`"como reparar"` · `"cómo reparar"` — la búsqueda `como reparar una piscina` (338,59, 1 clic) entró **por `[restaurar piscina]` en exacta**, como variante cercana. La exacta tampoco es hermética: Google la estira a búsquedas "del mismo significado".
+
+### Para mirar sin tocar
+
+- **`arenado de paredes`:** 2.401 esta semana (frase + exacta), 8 clics, 0 conv; ~10 clics en dos semanas. Es el negocio de la transición y la muestra no alcanza. **Se decide el 19/09.**
+- **`arenado de metales` / `arenado de metal`:** ~3.300 acumulados, 10 clics, 0 conv, QS 5. Mismo criterio: el presupuesto 213 (perfiles de doble T) es metal y se cobró. **19/09.**
+- **`[arenadora]` se recuperó:** 1 clic, 1 conversión. La alarma de la semana pasada fue ruido.
+- **La Plata genérico:** `arenados en la plata` (698, 2 clics) y `arenadora la plata` (341, 1 clic), 0 conv. La de pileta convirtió la semana pasada. Sigue siendo intención, no zona.
+- `[arenado de pileta]` tiene **QS 10**.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **21/09**, más la lectura seria de CPA a 30 días el **19/09**. Piletas debería sostener o mejorar su CPA con el mismo presupuesto.
+- **Resultado real:** (completar)
+
+## 2026-09-07 — 🔴 Las negativas nunca se cargaron, y el 73% del gasto es invisible
+
+- **Qué se hizo:** lectura de la semana 3 con el reporte de los scripts **más el CSV de términos de búsqueda de 7 días** pedido a la cuenta. Aparecieron dos problemas estructurales que ninguna lectura anterior podía ver. Se completaron las listas de negativas, se creó la que faltaba, se agregaron 12 negativas nuevas de cuenta y se **pausó el clúster de óxido**.
+
+### Los números: las conversiones se cayeron a un cuarto
+
+| | Semana 2 | Semana 3 |
+|---|---|---|
+| Costo | 27.754 | 20.223 |
+| Clics | 96 | 74 |
+| **Conversiones** | **16** | **4** |
+| CPA | 1.735 | **5.056** |
+| Tasa de conversión | 16,7% | **5,4%** |
+
+| Campaña | Costo | Clics | Conv | CPA |
+|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 9.499 | 30 | **0** | — |
+| `AR-Search-Piletas` | 9.711 | 39 | 3 | 3.237 |
+| `AR-Search-General-Marca` | 1.013 | 5 | 1 | **1.013** |
+
+**No es ruido.** Con la tasa de la semana 2, 74 clics deberían haber dado ~12 conversiones; salieron 4. La probabilidad de que sea casualidad es ~1 en 200. **El tracking no está roto** — se registraron 4, así que el circuito sitio → GTM → GA4 → Ads sigue vivo.
+
+⚠️ **Decisión del dueño (07/09), y cierra un tema recurrente:** no se va a cruzar contra los chats de WhatsApp. Otra persona atiende el teléfono, y a la misma casilla entran clientes viejos, recomendados, orgánico y llamados. **El parámetro son las conversiones trackeadas y nada más: si ese número sube, vamos bien.** Es la misma decisión del 24/08, ahora explícita como método de lectura. No volver a proponer el cruce.
+
+### 🔴 Hallazgo 1: las negativas se decidieron pero nunca llegaron a la cuenta
+
+El test fue simple: pedir el informe de términos filtrado a **31/08–06/09**, una ventana donde todas las negativas del 24 y del 29/08 ya deberían haber estado puestas. `precio de arenado por m2` apareció igual:
+
+| Entró por | Clics | Impr. | Costo |
+|---|---|---|---|
+| `"empresa de arenado"` | 2 | 17 | 658,81 |
+| `"sandblasteo"` | 1 | 3 | 344,56 |
+| | **3** | **20** | **1.003,37** |
+
+Auditadas las listas (`Herramientas → Biblioteca compartida → Listas de exclusiones`):
+
+| | Diseñado | En la cuenta |
+|---|---|---|
+| Listas | 5 | **3** |
+| `NEG-EQUIPOS-DIY` | ~70 términos | **33** |
+| `neg_piletas-filtro` | 23 términos | **no existía** |
+
+Las 3 listas que sí existían **estaban bien aplicadas** (3, 3 y 2 campañas — correcto). El problema era el contenido: **faltaba cerca de la mitad de las negativas y una lista entera nunca se creó** — justamente la que filtra los homónimos de "pileta" (bacha, pileta de cocina, pelopincho, construcción de pileta, pileta de fibra) en la campaña de Piletas.
+
+### ⭐ La lección que queda: una negativa anotada no es una negativa cargada
+
+La entrada del 29/08 registra 9 negativas agregadas. A la cuenta llegó una parte. **No existía ningún paso de verificación entre decidir y cargar**, y por eso el error sobrevivió dos semanas y se pagó todos los días.
+
+**Regla nueva:** después de cargar negativas, **contar los términos de la lista y compararlos contra el bloque del doc**. Si el número no coincide, algo se perdió en el camino. Es un chequeo de diez segundos que acá valía ~1.000 pesos por semana en una sola keyword.
+
+### 🔴 Hallazgo 2: el 73% del gasto es invisible
+
+El CSV trae una fila que los reportes de los scripts no muestran: **`Otros términos de búsqueda`** — el bucket donde Google esconde las consultas que buscó muy poca gente.
+
+| | Costo | Clics | Conv | CPA |
+|---|---|---|---|---|
+| Términos **visibles** | 5.431 | 20 | **3** | 1.810 |
+| **`Otros términos`** (ocultos) | **14.792** | 54 | **1** | **14.792** |
+| Total | 20.223 | 74 | 4 | 5.056 |
+
+**Lo que se ve convierte 8 veces mejor que lo que no se ve.** Y el 73% del dinero está del lado invisible.
+
+Esto tiene una consecuencia de método que hay que tener presente en cada lectura: **el loop de negativas del proyecto opera sobre el 27% del gasto.** Por más prolijo que sea el análisis semanal, tres cuartas partes de la plata se deciden sin datos. La causa es la **concordancia de frase** sobre keywords genéricas: abre a una cola larga infinita que Google no muestra. La exacta no tiene ese problema.
+
+⚠️ **Todavía no se actúa sobre esto** — es un cambio estructural grande (mover la cuenta hacia exacta) y necesita la lectura de CPA del 19/09. Pero queda escrito como el problema de fondo de la cuenta.
+
+### ✅ La pregunta del `por m2`, contestada por los datos
+
+El dueño preguntó por qué se bloquea `precio de arenado por m2` si parece una búsqueda buena. El propio reporte separa las dos cosas, en la misma semana:
+
+| Búsqueda | Costo | Clics | Conv |
+|---|---|---|---|
+| `arenado de piletas precio` | 767 | 3 | **1** ✅ |
+| `precio de arenado por m2` | 1.003 | 3 | **0** ❌ |
+
+**`precio` convierte; `por m2` no.** El corte del 29/08 (bloquear lo específico, no `precio`) estaba bien pensado — lo que falló fue la ejecución.
+
+**Por qué `por m2` falla aunque la intención parezca alta:** el que busca "por m2" quiere **una tarifa** para comparar en una planilla. El negocio vende **precio cerrado por trabajo** después de una visita sin costo (es el titular del RSA), y el sitio le contesta lo único honesto que puede: *"depende de la superficie, el estado y el acceso"*. Buscó un número, leyó "depende", se fue. Sumado al histórico (`valor arenado` 5.381 / 23 clics / 0 conv y `precio arenado` 4.983 / 16 clics / 0 conv), el segmento acumula **~12.300 ARS y 45 clics con cero conversiones** entre dos cuentas y más de un año.
+
+🔎 **Cómo se ganaría ese tráfico, si algún día se quiere:** no con concordancias, sino haciendo que el sitio conteste con un número ("no cobramos por m2, y este es el motivo; un trabajo típico arranca en $X"). **Bloqueado hasta tener el dato**: no hay ninguna cifra de precios en `21-realidad-operativa.md`, y la regla del proyecto es que un dato que no está ahí se pregunta antes de publicarlo.
+
+### ❌ Cancelado: La Plata NO se excluye
+
+Venía en la lista del 03/09 como candidata a excluir por ubicación. **Convirtió:**
+
+`arenado de piletas en la plata` — **144,94 · 1 clic · 1 conversión.** Fue **la conversión más barata de la semana**, con la campaña entera en CPA 5.056.
+
+El matiz que importa: `arenados en la plata` (15 impresiones, 0 clics) y `arenadora en la plata` (207,92, 1 clic, 0 conv) son genérico y equipo. **El problema nunca fue la zona, era la intención.** Se cae el punto 6 de la lista post-congelamiento.
+
+### ✅ `restaurar`: confirmado al 100%, ahora con las búsquedas a la vista
+
+El 04/09 se bajó a exacta por inferencia. El CSV muestra qué matcheaba en frase:
+
+`reparacion de piscinas` · `reparacion de piletas` · `sellar grietas de piscina` · `sika reparación de grietas piscinas` · `como reparar pileta de fibra de vidrio` · `como arreglar rajaduras en piletas de material` · `cemento para reparar piscinas` · `arreglo de piscinas de fibra de vidrio` (663,52) · `reparación de piletas de fibra de vidrio zona sur` · `como lijar y pintar una pileta de fibra de vidrio`
+
+**Todas son reparación de piletas. Ninguna es arenado.** La hipótesis era exacta.
+
+### 🔴 Pausado: el clúster de óxido — el experimento tiene resultado
+
+`"sacar el óxido del hierro"` · `"sacar óxido de metal"` · `"quitar óxido de metal"` — **2.955 en la semana, 10 clics, 0 conversiones.** Sus búsquedas visibles:
+
+`líquido para quitar óxido en metal` (16 impr) · `desoxidante para hierro` (9) · `como quitar el óxido del metal rápidamente` (12) · `quita oxido para metales` (5) · `como eliminar el oxido del hierro` (5) · `liquido para sacar oxido de hierro` (4) · `laser quita oxido` (346,96) · `con qué se saca el óxido` (348,81) · `limpiar hierro oxidado para pintar` (327,18)
+
+**Sin excepción: personas que quieren sacar el óxido ellas mismas**, con un líquido o con un láser. Ni una es una PYME buscando un servicio.
+
+En `03-keywords-maestro.md` estas keywords estaban marcadas como *"Gap — probar"*. **Se probaron y fallaron.**
+
+**Por qué se pausan en vez de bajarlas a exacta, al revés que `restaurar`:** en `restaurar piscina` la consulta literal era un cliente posible y solo la cola larga era basura. Acá **la consulta literal ya es el problema** — el que escribe "quitar óxido de metal" quiere hacerlo él. No hay versión buena que rescatar.
+
+### Otros hallazgos
+
+- ⚠️ **`[arenadora]`: 96 impresiones, 0 clics.** Era la estrella de la semana 2 (4 conv, CPA 465) y esta semana no se llevó un solo clic. Sus variantes cercanas explican por qué: `arenador`, `sandblaster`, `maquina de arenado`, `chorro arena` — se corrió hacia intención de equipo. **Vigilar la semana que viene**; si repite, el problema es del anuncio, no de la keyword.
+- **El motor de la cuenta hoy es `"arenado de pileta"` en frase:** 912 · 4 clics · **2 conversiones** · CPA **456**. Es la mejor keyword de la cuenta.
+- `arenado y pintura al horno` (345,39) entró por `"arenados industriales"`. Pintura al horno es otro rubro → negativa.
+
+### Qué se cargó (todo ejecutado el 07/09)
+
+1. **`NEG-EQUIPOS-DIY` completada** con los bloques D + E del diseño, más las negativas del 24 y 29/08 que nunca habían llegado.
+2. **Lista `NEG-PILETAS-FILTRO` creada** (23 términos del Bloque H) y aplicada **solo** a `AR-Search-Piletas`.
+3. **12 negativas nuevas de cuenta:** `"al horno"` · `laser` · `láser` · `"fibra de vidrio"` · `líquido` · `liquido` · `desoxidante` · `desoxidar` · `grietas` · `rajaduras` · `sika` · `sellar`.
+4. **3 keywords de óxido pausadas.**
+
+- **Resultado esperado y cuándo revisarlo:** el reporte del **lunes 14/09**. Lo que tiene que pasar: el gasto sin conversiones baja fuerte (solo entre `por m2`, óxido y `restaurar` son ~5.000 semanales) y las conversiones vuelven hacia el nivel de la semana 2. La lectura seria de CPA sigue siendo el **19/09**.
+- ⚠️ **Ojo con leer el 14/09 como prueba de nada:** se hicieron **cuatro cambios juntos**. Si mejora, no se va a poder atribuir a uno solo. Se aceptó a propósito porque el hallazgo 1 era una **reparación**, no un experimento — pero queda dicho.
+- **Resultado real:** (completar)
+
+## 2026-09-04 — Se levanta el congelamiento: el vuelco de piletas era una sola keyword
+
+- **Qué se hizo:** `"restaurar pileta"` y `"restaurar piscina"` pasaron de **frase a exacta** en `ag_pileta-jerga`. Es el **primer cambio desde el 20/08**: el congelamiento venció el **03/09** y se ejecutó el 04/09. **Un solo cambio**, como manda el protocolo.
+
+### El hallazgo: 30% del gasto de piletas en dos keywords que nunca convirtieron
+
+`restaurar` vive en **exactamente dos keywords** de la cuenta, las dos en frase y las dos en piletas. (`restaurar metal` figura en el diagrama de `ads-config/03-estructura.md` pero **nunca se cargó**; `"restauración de fachada"` es otra palabra.) Así que los **3.296 sin convertir** del n-gram de la semana 2 salen enteros de ahí, y la cuenta cierra sola: 3.296 ÷ 10 clics = **330 de CPC**, contra 289 de promedio de la cuenta esa semana.
+
+| `AR-Search-Piletas`, semana 2 | Con `restaurar` | Sin `restaurar` |
+|---|---|---|
+| Costo | 10.847 | 7.551 |
+| Conversiones | 5 | 5 |
+| **CPA** | **2.169** (la peor de la cuenta) | **1.510** |
+| Gasto diario | 1.550 (**124%** del presupuesto) | 1.079 (dentro) |
+
+**Las dos historias raras de la semana 2 eran la misma keyword.** El CPA de piletas dándose vuelta (680 → 2.169) y el sobregasto del 124% tenían una sola causa. Sacándola, piletas vuelve a ser la segunda mejor campaña y el sobregasto desaparece sin tocar el presupuesto. El CPA de toda la cuenta pasa de 1.735 a 1.529.
+
+Histórico de 365 días de la cuenta vieja: **4.189,75 / 18 clics / 1 conversión** (y esa conversión es de las infladas). **En dos semanas la cuenta nueva gastó casi lo mismo que la vieja en un año entero** — es estacionalidad de piletas empujando volumen sobre una intención que no nos sirve.
+
+### Por qué exacta y no negativa, y no pausa
+
+⛔ **`restaurar` NO va como negativa.** Sería repetir el error de `piezas` del 24/08 al pie de la letra: es la palabra del negocio al que transicionamos — el Cluster 1 se llama literalmente "Obra / **restauración**" —, y en el mismo informe apareció `restaurar ladrillo visto exterior`, que **es** el negocio. El problema no es la palabra: es la intención **en piletas**. Quien quiere *restaurar* una pileta busca el resultado terminado (revestir, pintar); nosotros hacemos un paso de eso y la landing le dice "no pintamos ni revestimos". Mismo criterio por el que `mantenimiento de piletas` se dejó afuera desde el diseño.
+
+**Exacta y no pausa** porque la fuga está en la **frase**: es la que abre a la cola larga que Google esconde por bajo volumen ("cómo restaurar una piscina", "cuánto sale restaurar…"). La exacta deja pasar solo la consulta literal — la que históricamente dio la única conversión — a razón de ~1,5 clics por mes. Cuesta casi nada, es reversible y no cierra la puerta en plena temporada.
+
+**Riesgo de tocar en campaña: ninguno.** Piletas usa *Maximizar clics con tope de CPC*, no Smart Bidding: no hay aprendizaje que reiniciar.
+
+### ⚠️ Lo honesto sobre la evidencia
+
+**10 clics con 0 conversiones no es prueba estadística.** Con la tasa de conversión real de la cuenta en la semana 2 (16 conv / 96 clics = **16,7%**), la probabilidad de que 10 clics no conviertan por pura mala suerte es del **16%**. O sea: ~84% de confianza en que la keyword es genuinamente peor, no el 95% que pediría una decisión formal.
+
+Lo que inclinó la balanza igual: el histórico ya la tenía en 4.190 de CPA con una conversión inflada, y **esperar cuesta 471 por día**. La decisión se toma sabiendo que es probabilística, no concluyente.
+
+### 🔴 Decisión del dueño (04/09): "No pintamos" se mantiene en los RSA
+
+La entrada del 29/08 lo había puesto **primero** en la lista del 03/09, con el costo medido (13 impresiones en búsquedas de arenado + pintura, **cero clics**, con el titular fijado). El dueño decidió **no tocarlo**. Queda registrado para que no se relea como un pendiente olvidado: **es una decisión tomada, no deuda**. El dato medido sigue en pie por si se quiere revisar más adelante.
+
+### ✅ Cerrado: `Smart campaign ad clicks to call` no se puede sacar — es candado de Google
+
+Venía en la lista desde el 20/08 con la salvedad *"(si el candado lo permite)"*. **No lo permite.** Verificado el 04/09 en `Objetivos → Resumen → Contactos → Optimización de acciones de conversión`:
+
+| Acción | Optimización | Fuente | ¿Editable? |
+|---|---|---|---|
+| `Arenados Lucho SEO (web) contact_whatsapp` | Principales | Sitio web (GA4) | ✅ sí |
+| `Smart campaign ad clicks to call` | Principales | Llamadas desde anuncios | 🔒 **no, en gris** |
+| `Smart campaign map clicks to call` | Principales | Alojada en Google | 🔒 **no, en gris** |
+
+Google creó las dos de Smart campaign y **no deja degradarlas a secundarias**. Tampoco sirve sacar la categoría "Contactos" de los objetivos: ahí adentro vive `contact_whatsapp`.
+
+**Por qué se cierra y no queda como deuda:** las dos fuentes (`Llamadas desde anuncios` y `Alojada en Google`) pertenecen a **campañas inteligentes**, un tipo de campaña que esta cuenta no tiene. Las 3 activas son Búsqueda estándar y no hay extensión de llamada desde el 27/07. **No tienen por dónde dispararse** — de hecho cuentan 0.00. El riesgo que se temía el 20/08 (que Ads empiece a optimizar hacia llamadas, cuando los llamados que entran son de gente buscando empleo) exigiría crear una campaña inteligente, cosa que no se va a hacer.
+
+⚠️ **Queda escrito en vez de borrado** porque si alguna vez alguien crea una campaña inteligente en esta cuenta, este renglón se reactiva solo.
+
+**Confirmado de paso, y vale por sí solo:** `contact_whatsapp` figura como **Principales** con fuente GA4, y las 3 campañas usan Contactos como **objetivo específico de la campaña** (0 usan el predeterminado de la cuenta). La medición está exactamente donde tiene que estar.
+
+### Pendiente de verificar
+
+**La columna Costo de `restaurar piscina` a 30 días.** Si da ~3.300 confirma el cálculo entero. Si da mucho menos, hay **otro sumidero** con esa palabra que todavía no ubicamos, y hay que buscarlo.
+
+### Nota operativa — dos cosas con fecha
+
+- ✅ **El script 03 ya fue re-pegado en la cuenta** (confirmado por el dueño el 04/09). El reporte del lunes **07/09 va a llegar por primera vez con las búsquedas completas** — es el que habilita decidir `sandblasting` y La Plata con datos.
+- 💰 **Caja.** Al 29/08 iban 36.286 de 100.000. A ~4.000/día se acaba cerca del **14/09**; este cambio ahorra ~471/día y lo estira a ~16/09. Si se queda sin fondos las campañas se frenan solas y se pierde el aprendizaje acumulado.
+
+- **Resultado esperado y cuándo revisarlo:** **reporte del lunes 07/09** — piletas debería volver a gastar dentro de su presupuesto diario y su CPA acercarse a 1.500. La lectura seria de CPA sigue siendo el **19/09**.
+- **Resultado real:** (completar)
+
 ## 2026-08-29 — Semana 2: el volumen se triplicó y apareció el costo de una afirmación falsa
 
 - **Qué se hizo:** lectura de la semana 2, corrección de dos bugs del script 03, y ajuste de la lista de negativas. **No se tocó ninguna campaña** — el congelamiento sigue hasta el 03/09.
