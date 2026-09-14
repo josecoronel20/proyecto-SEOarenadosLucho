@@ -12,6 +12,64 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-14 — Semana 4: la reparación funcionó, y se pausa `ag_pileta-sin-jerga`
+
+- **Qué se hizo:** lectura de la semana 4. Se pausó el grupo **`ag_pileta-sin-jerga`** completo y se agregaron dos negativas de cuenta: `"como reparar"` y `"cómo reparar"`.
+
+### Los números: 4 → 15 conversiones
+
+| | S1 | S2 | S3 | **S4** |
+|---|---|---|---|---|
+| Costo | 8.532 | 27.754 | 20.223 | 22.890 |
+| Clics | 31 | 96 | 74 | 89 |
+| **Conversiones** | 7 | 16 | 4 | **15** |
+| **CPA** | 1.219 | 1.735 | 5.056 | **1.526** |
+
+| Campaña | Costo | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 11.949 | 38 | 6,5% | **5** (venía de 0) | 2.390 |
+| `AR-Search-Piletas` | 8.434 | 41 | **15,7%** | **8** | **1.054** |
+| `AR-Search-General-Marca` | 2.507 | 10 | 3,9% | 2 | 1.253 |
+
+**Mejor CPA desde que la cuenta tiene volumen.** Las impresiones bajaron (1.774 → 1.104) y los clics subieron: se fue la basura que se mostraba y nadie clickeaba. CTR de la cuenta 4,2% → 8,1%. Piletas volvió a gastar dentro de su presupuesto (1.205/día contra 1.250).
+
+### ✅ Verificado: las negativas del 07/09 están funcionando
+
+Comparados los términos de 30 días contra los del reporte anterior: **todo lo bloqueado el 07/09 quedó con el mismo costo exacto — cero pesos nuevos.** `precio de arenado por m2` (1.965,96 en los dos reportes), `arreglo de piscinas de fibra de vidrio`, `laser quita oxido`, `arenado y pintura al horno`, `masilla para piscinas de cemento`, `taller de arenado`, `máquina arenadora`, `hidroarenado de piletas`, `con qué se saca el óxido`.
+
+⚠️ Siguen siendo **cuatro cambios juntos**: la recuperación no se puede atribuir a uno solo. Lo que sí está probado es que los términos bloqueados dejaron de gastar.
+
+### El cambio de la semana: pausar `ag_pileta-sin-jerga`
+
+Dos grupos de la misma campaña, **con la misma landing**:
+
+| Grupo | Clics | Conv | Tasa |
+|---|---|---|---|
+| `ag_pileta-jerga` (esta semana) | 25 | **8** | **32%** |
+| `ag_pileta-sin-jerga` (S3 + S4) | **23** | **0** | 0% |
+
+`ag_pileta-sin-jerga` acumula **5.539 ARS en dos semanas sin una conversión**. Con la tasa de la cuenta (16,9%), que 23 clics no conviertan por casualidad es ~1 en 70. Y como el grupo hermano convierte 1 de cada 3 **en la misma página**, el problema no es la landing: es la intención.
+
+Las búsquedas lo confirman: `como sacar pintura de pileta de cemento`, `remover pintura de pileta`, `eliminar pintura piscina`. **Es el mismo patrón del óxido: el que no dice "arenado" quiere hacerlo él.** La hipótesis del diseño ("el dueño de casa no sabe que se llama arenado y busca el problema") no se sostuvo con datos.
+
+- **Efecto buscado:** libera ~430/día **dentro** del presupuesto de Piletas, que pasan al grupo que convierte a CPA ~600. Sin tocar presupuesto.
+- ⚠️ **Se pausan las keywords, no las palabras.** `sacar pintura`, `despintar` y `decapar` **no** se negativizan (§4.10 de `ads-config/04-keywords-negativas.md`): una búsqueda como "arenado para sacar pintura de pileta" todavía puede entrar por las keywords de jerga.
+
+### Negativas
+
+`"como reparar"` · `"cómo reparar"` — la búsqueda `como reparar una piscina` (338,59, 1 clic) entró **por `[restaurar piscina]` en exacta**, como variante cercana. La exacta tampoco es hermética: Google la estira a búsquedas "del mismo significado".
+
+### Para mirar sin tocar
+
+- **`arenado de paredes`:** 2.401 esta semana (frase + exacta), 8 clics, 0 conv; ~10 clics en dos semanas. Es el negocio de la transición y la muestra no alcanza. **Se decide el 19/09.**
+- **`arenado de metales` / `arenado de metal`:** ~3.300 acumulados, 10 clics, 0 conv, QS 5. Mismo criterio: el presupuesto 213 (perfiles de doble T) es metal y se cobró. **19/09.**
+- **`[arenadora]` se recuperó:** 1 clic, 1 conversión. La alarma de la semana pasada fue ruido.
+- **La Plata genérico:** `arenados en la plata` (698, 2 clics) y `arenadora la plata` (341, 1 clic), 0 conv. La de pileta convirtió la semana pasada. Sigue siendo intención, no zona.
+- `[arenado de pileta]` tiene **QS 10**.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **21/09**, más la lectura seria de CPA a 30 días el **19/09**. Piletas debería sostener o mejorar su CPA con el mismo presupuesto.
+- **Resultado real:** (completar)
+
 ## 2026-09-07 — 🔴 Las negativas nunca se cargaron, y el 73% del gasto es invisible
 
 - **Qué se hizo:** lectura de la semana 3 con el reporte de los scripts **más el CSV de términos de búsqueda de 7 días** pedido a la cuenta. Aparecieron dos problemas estructurales que ninguna lectura anterior podía ver. Se completaron las listas de negativas, se creó la que faltaba, se agregaron 12 negativas nuevas de cuenta y se **pausó el clúster de óxido**.
