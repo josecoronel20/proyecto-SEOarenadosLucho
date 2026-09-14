@@ -12,6 +12,15 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-14 (2) — Los casos de éxito salían sin la marca en el título
+
+- **Qué se hizo:** los 5 casos de `/casos-de-exito/[slug]` vuelven a llevar " | Arenados Lucho" en el `<title>`. Lo detectó la auditoría SEO semanal y se confirmó en producción: `/casos-de-exito/nave-ferroviaria` decía *"Arenado de una nave ferroviaria"* mientras `/servicios` decía *"Servicios de arenado industrial | Arenados Lucho"*.
+- **La causa:** `src/app/casos-de-exito/layout.tsx` definía un título fijo. En Next, eso **corta el template del layout raíz** para todo lo que cuelga de ese nivel. Se repitió el template ahí mismo (`default` + `template`), con el motivo escrito en un comentario.
+- **Verificado en el build:** los 5 casos salen con marca, y la página del listado (`/casos-de-exito`) **no perdió** la suya.
+- **De la misma auditoría, descartado:** recomendaba sumar formulario y email en `/contacto`. Va contra la decisión del 28/07 (WhatsApp como único canal) y sumaría un canal que no se mide. Las instrucciones de la tarea programada son de antes de esa decisión, y `CLAUDE.md` todavía decía "formulario, WhatsApp, email" y mencionaba Formspree y `EmailBtn`: se corrigieron esos renglones. **Pendiente del dueño:** actualizar las instrucciones de la tarea en la app de Claude para que no lo repita cada lunes.
+- **Resultado esperado y cuándo revisarlo:** la auditoría del lunes 21/09 no debería volver a marcar ninguno de los dos puntos.
+- **Resultado real:** (completar)
+
 ## 2026-09-14 — Semana 4: la reparación funcionó, y se pausa `ag_pileta-sin-jerga`
 
 - **Qué se hizo:** lectura de la semana 4. Se pausó el grupo **`ag_pileta-sin-jerga`** completo y se agregaron dos negativas de cuenta: `"como reparar"` y `"cómo reparar"`.

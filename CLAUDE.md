@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es este proyecto
 
-Sitio de **marketing + conversión** para **Arenados Lucho**, empresa de arenado en Buenos Aires. Toda decisión técnica se subordina a un objetivo de negocio: **maximizar contactos calificados** (formulario, WhatsApp, email). Ver `.cursorrules` para las reglas de producto/copy/CTA que gobiernan cualquier cambio de UI o contenido — no son opcionales.
+Sitio de **marketing + conversión** para **Arenados Lucho**, empresa de arenado en Buenos Aires. Toda decisión técnica se subordina a un objetivo de negocio: **maximizar contactos calificados** por WhatsApp, el único canal desde el 28/07/2026 (ver "Invariantes críticos"). Ver `.cursorrules` para las reglas de producto/copy/CTA que gobiernan cualquier cambio de UI o contenido — no son opcionales.
 
 **Posicionamiento real (26/07/2026 — decisión del dueño):** el negocio hace arenado **"sin vueltas"** (obra, restauración, limpieza industrial básica, piletas, trabajos chicos). **NO hace arenado técnico medido** (Sa3, ISO 8501, metal blanco, perfil de anclaje) **ni granallado** — está **PROHIBIDO** prometer eso en copy, metadata, schema o anuncios. El sitio actual todavía lo promete: hay un **pivote de copy en curso** (`contexto/marketing/02-estrategia-seo.md` Fase 1). Negocio completo: `contexto/00-proyecto-general.md`.
 
@@ -25,7 +25,7 @@ npm run lint     # ESLint (eslint-config-next)
 
 Next.js 16 (App Router) · React 19 · TypeScript 5.9 (strict) · Tailwind CSS 3 · shadcn/ui estilo **new-york** (Radix) · `lucide-react` · `embla-carousel-react`. Alias `@/*` → `src/*`. Deploy en Vercel.
 
-**No hay** base de datos, CMS, ni API Routes de negocio. El contenido vive en componentes React y en `src/lib/projectsInfo.json`. El formulario hace `fetch` directo a **Formspree** desde el cliente.
+**No hay** base de datos, CMS, ni API Routes de negocio. El contenido vive en componentes React y en `src/lib/projectsInfo.json`. No hay formulario ni Formspree: se eliminaron el 28/07/2026 y el único canal es WhatsApp.
 
 ## Documentación del proyecto: `contexto/`
 
@@ -68,7 +68,7 @@ src/app/                 # App Router: cada carpeta con page.tsx = una URL
   {ruta}/page.tsx        # Páginas (delgadas: componen secciones)
   sitemap.ts, robots.ts  # SEO generado (sitemap incluye slugs de casos)
 src/components/
-  common/                # Transversal: Header, Footer, CTASection, WppBtn, EmailBtn, H2
+  common/                # Transversal: Header, Footer, CTASection, WppBtn, H2
   home/ servicios/ casos-de-exito/ preguntas-frecuentes/   # Secciones por página
   ui/                    # Primitivos shadcn — reutilizar antes de crear variantes
 src/lib/
@@ -80,7 +80,7 @@ src/lib/
 Nueva página → `src/app/{ruta}/page.tsx`. Sección de una página → `src/components/{dominio}/`. Dato tipo listado → JSON en `src/lib/` + helper.
 
 ### Server vs Client Components
-Default = **Server Component**. Poné `"use client"` solo si hay estado, handlers, hooks o browser APIs (formulario de contacto, Header con Sheet móvil, hero con video, FAQ accordion, filtros de casos, botones Wpp/Email). Varios bloques en `servicios/` y `home/` son client sin necesidad — **es deuda, no replicar** en código nuevo.
+Default = **Server Component**. Poné `"use client"` solo si hay estado, handlers, hooks o browser APIs (Header con Sheet móvil, hero con video, FAQ accordion, filtros de casos, botón de WhatsApp). Varios bloques en `servicios/` y `home/` son client sin necesidad — **es deuda, no replicar** en código nuevo.
 
 ### Capa de datos de casos
 Los casos de éxito viven en `src/lib/projectsInfo.json` y se leen con `getProjectBySlug.ts` (`getProjectBySlug`, `getAllSlugs`). El detalle `/casos-de-exito/[slug]` usa `generateStaticParams` + `generateMetadata` (SSG); el `slug` de la URL es el campo `idSection` del JSON. `sitemap.ts` también deriva sus entradas de casos desde `getAllSlugs()`. Al agregar un caso, el JSON es la fuente única.
