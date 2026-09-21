@@ -32,7 +32,7 @@ Fuente única de keywords para **SEO y Google Ads**. Cada grupo mapea a UNA URL.
 | arenado de camiones / acoplados (frase, prueba) | Restauración de flota de PYME — ⚠️ distinto de "chasis/limpieza de auto" que sigue NEGATIVA (0 conv histórico) | Gap — probar con puja baja |
 | arenado de galpón / techos de galpón | La estructura misma del galpón | Gap |
 | servicio limpieza industrial (exacta) | Limpieza gruesa | Barato en historial (validar: medición sucia) |
-| sandblasting | Sinónimo | Gap |
+| sandblasting · sandblasteo | Sinónimo | 🔴 **Probadas y fallidas — pausadas el 21/09/2026.** `sandblasteo` 2.953 / 9 clics / 0 conv; `sandblasting` QS 1, sin impresiones desde agosto y su único clic (350) tampoco convirtió |
 
 ## Cluster 3 — Piletas (el lead más barato del historial — protagonismo)
 
@@ -46,7 +46,7 @@ Dos audiencias distintas que llegan a la misma landing:
 |---------|-----------|-------|
 | arenado de pileta(s) | Preparar para repintar/revestir | ⭐ Exacta: 4 conv / 2.156 · viejo: 14 conv / 16.192 |
 | limpieza de pileta para pintar · preparar pileta para pintar | Igual, dicho simple | limpieza de piletas exacta: 3 conv / 4.238 |
-| restaurar pileta / piscina | Restauración | 1 conv / 4.190 · ⚠️ **solo exacta desde el 04/09/2026** — en frase gastó 3.296 en una semana con 0 conv |
+| restaurar pileta / piscina | Restauración | 1 conv / 4.190 · 🔴 **PAUSADAS el 21/09/2026.** En frase gastaron 3.296 en una semana con 0 conv (→ exacta el 04/09); en exacta, otros 679 y 2 clics sin convertir, estirándose a `como reparar una piscina` y `remodelar piscina` |
 | mantenimiento de piletas (exacta) | Cuidado: puede ser limpieza química | 3 conv / 8.847 |
 
 ### 3b. Sin jerga — el problema, no la técnica (gap sin explotar)

@@ -12,6 +12,91 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-21 — Semana 5: se limpia el sandblasteo y piletas pide lugar
+
+- **Qué se hizo:** lectura de la semana 5, que además es **la lectura de 30 días** que estaba parada para el 19/09. Se pausaron 4 keywords probadas muertas (`"sandblasteo"`, `"sandblasting"`, `[restaurar piscina]`, `[restaurar pileta]`), se agregaron 2 negativas de cuenta (`"talleres de arenado"`, `"talleres de arenados"`) y se **subió el presupuesto de Piletas de 1.250 a 1.600/día** (+28%).
+
+### Los números
+
+| | S2 | S3 | S4 | **S5** |
+|---|---|---|---|---|
+| Costo | 27.754 | 20.223 | 22.890 | **26.961** |
+| Clics | 96 | 74 | 89 | **106** |
+| Conversiones | 16 | 4 | 15 | **12** |
+| CPA | 1.735 | 5.056 | 1.526 | **2.247** |
+
+| Campaña | Costo | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `AR-Search-Piletas` | 9.998 | 48 | **13,5%** | **8** | **1.250** |
+| `AR-Search-Obra-Industrial` | 12.217 | 40 | 6,1% | 2 | 6.108 |
+| `AR-Search-General-Marca` | 4.746 | 18 | 5,3% | 2 | 2.373 |
+
+- ✅ **Piletas aguantó la pausa de `ag_pileta-sin-jerga`:** 8 conversiones dos semanas seguidas con el grupo apagado. La hipótesis del 14/09 se confirmó — ese grupo no aportaba nada.
+- 🔴 **Piletas quedó limitada por presupuesto:** gastó **1.428/día contra 1.250** (114%). El dinero del grupo pausado se fue al de jerga, como estaba previsto, y ahí topó.
+- 🔴 **Obra se cayó otra vez:** 5 → 2 conversiones, con 12.217 gastados.
+
+### ⭐ La lectura de 30 días: el CPA base real es 1.970
+
+**106.360 ARS y 54 conversiones en 5 semanas.** Ese es el número contra el que se mide todo de acá en adelante. Reemplaza al CPA histórico de ~8.790 del dossier, que estaba calculado con conversiones infladas y nunca fue una línea base válida.
+
+### 🔴 Pausado: el clúster de sandblasteo
+
+| Keyword | Acumulado | Clics | Conv |
+|---|---|---|---|
+| `"sandblasteo"` | 2.953 (S3+S4+S5) | 9 | **0** |
+| `"sandblasting"` (QS 1) | 350 (S5) | 1 | **0** |
+
+Solo esta semana `sandblasteo` se llevó **2.263 con 7 clics y cero conversiones** — venía gastando ~345 por semana y se disparó. `sandblasting` estaba en **QS 1 con cero impresiones** desde agosto (era el punto 5 de la lista post-congelamiento, "candidata a pausar") y esta semana consiguió su primer clic, también sin convertir.
+
+### 🔴 Pausado: `[restaurar piscina]` / `[restaurar pileta]` — la apuesta del 04/09 falló
+
+El 04/09 se bajaron de frase a **exacta** en vez de pausarlas, para no cerrar la puerta en plena temporada de piletas. El resultado a tres semanas: **679 ARS, 2 clics, 0 conversiones**, y la exacta se estiró igual a búsquedas de reparación — `como reparar una piscina` (S4) y `remodelar piscina` (S5).
+
+**La lección:** cuando la intención de la consulta literal ya está equivocada, bajar a exacta no salva nada — solo hace más lento el mismo gasto. Google estira la exacta a "mismo significado", y el mismo significado de `restaurar piscina` **es** reparar una piscina. El criterio correcto era el que se aplicó al óxido el 07/09: si la consulta literal es el problema, se pausa.
+
+### ⚠️ `[arenadora]` NO se toca, aunque asuste
+
+Esta semana: **1.982 ARS, 6 clics, 0 conversiones**, QS 3. Da ganas de matarla. Su vida completa dice otra cosa:
+
+| Semana | Costo | Conv |
+|---|---|---|
+| S2 | ~1.860 | **4** (CPA 465) |
+| S3 | 318 | 0 |
+| S4 | 336 | **1** |
+| S5 | 1.982 | 0 |
+| **Total** | **~4.497** | **5 → CPA 899** |
+
+**CPA 899 contra un promedio de cuenta de 1.970.** Es volátil, no está muerta. Matarla por una mala semana sería repetir el error de `piezas` del 24/08: decidir con la evidencia de una sola lectura.
+
+### 🟠 Lo incómodo: el grupo de obra/restauración no convierte
+
+Sacando `empresa de arenado` (la única que convierte ahí), el grupo acumula **~7.900 ARS y 25 clics con cero conversiones**: `arenado de paredes` (3.691 / 12 clics), `arenado de metales` (3.290 / 10), `arenado de fachadas` (610 / 2), `limpieza de ladrillo a la vista` (346 / 1). Con la tasa de conversión de la cuenta, eso es ~1 en 32 de ser casualidad.
+
+⛔ **No se pausan, y el motivo importa:** ese es el negocio al que el proyecto está transicionando (obra en construcción y restauración de edificios, el norte de `00-vision-y-objetivos.md`). Y los QS apuntan a otra causa: **3 en `arenado de metales`, 5 en `arenado de paredes`**, con el anuncio mandando a `/servicios`, que le habla al galpón y a la industria — no a una obra en construcción ni a una fachada. Es el mismo diagnóstico de **message match** que viene anotado desde el 24/08 sin resolverse.
+
+**Esto se arregla en el sitio, no pausando keywords.** Es el trabajo pendiente más valioso que tiene el proyecto hoy.
+
+### ✅ Las negativas del 07 y del 14/09 siguen firmes
+
+Ninguna gastó un peso nuevo: `precio de arenado por m2`, `arreglo de piscinas de fibra de vidrio`, `laser quita oxido`, `arenado y pintura al horno`, `taller de arenado`, `masilla`, `hidroarenado de piletas`, `con qué se saca el óxido`, `remover pintura de pileta`, `eliminar pintura piscina` y `como reparar una piscina` (esta última, cargada el 14/09, quedó congelada al primer intento).
+
+### Negativas nuevas: el plural otra vez
+
+`"talleres de arenado"` · `"talleres de arenados"` — se colaron **253 ARS** con `talleres de arenado en lomas de zamora`. La lista tenía `"taller de arenado"` y `"taller de arenados"`, **las dos en singular**. Es la tercera vez que el proyecto paga por la misma regla (24/08 con `maquina para arenar`, 07/09 con `piscinas de fibra`): **una negativa cubre exactamente la forma que se escribió.**
+
+### Para mirar, sin tocar
+
+- **`servicio de arenado` (exacta, QS 5):** 1.280 acumulado, 4 clics, 0 conv. Todavía poca muestra.
+- **`arenados lucho` (marca):** 1.265 en 30 días, **10 clics, 0 conversiones**. Alguien que te busca por nombre y no contacta. Puede ser cliente viejo que ya tiene el número, o gente que llama. Es plata chica pero llama la atención.
+- **La Plata genérico:** `arenados en la plata` (1.531 / 5 clics), `arenadora la plata` (341 / 1), `arenadora en la plata` (208 / 1) — **~2.080 y 7 clics sin convertir**, contra la única conversión de La Plata que sigue siendo `arenado de piletas en la plata` (145, S4). Confirma lo del 14/09: **el problema es la intención, no la zona.** Excluir la ubicación mataría la buena.
+
+### Lo que viene
+
+**Maximizar conversiones.** El criterio del proyecto era ≥15–30 conversiones limpias por mes y vamos en **~46**. Se cumple. **Se deja para la semana que viene a propósito:** dos cambios grandes en la misma semana hacen ilegible la lectura, y esta semana ya lleva la suba de presupuesto.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **28/09**. Piletas debería subir conversiones con los 350/día extra sin que el CPA se despegue de ~1.250, y el gasto sin conversiones debería bajar ~2.600 por semana. Si Piletas escala bien, ese es el argumento para el cambio de estrategia de puja.
+- **Resultado real:** (completar)
+
 ## 2026-09-14 (2) — Los casos de éxito salían sin la marca en el título
 
 - **Qué se hizo:** los 5 casos de `/casos-de-exito/[slug]` vuelven a llevar " | Arenados Lucho" en el `<title>`. Lo detectó la auditoría SEO semanal y se confirmó en producción: `/casos-de-exito/nave-ferroviaria` decía *"Arenado de una nave ferroviaria"* mientras `/servicios` decía *"Servicios de arenado industrial | Arenados Lucho"*.
