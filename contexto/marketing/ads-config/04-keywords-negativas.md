@@ -106,7 +106,8 @@ La estructura objetivo del proyecto define 4 grupos dentro de Obra-Industrial. *
 **18 keywords.** Notas:
 - `"arenado industrial"` en **frase** es la ganadora histórica (~3.273/conv) y rinde **mejor que la exacta** (65.106 / 6 conv ≈ 10.851). Se cargan ambas para no perder la consulta literal, pero la expectativa es que la frase se lleve el volumen.
 - `"arenado de camiones"` / `"arenado de acoplados"` son la **prueba de flota PYME**. ⚠️ Ver §4.6: obligan a afinar las negativas de `chasis`/`carrocería` para no bloquear al transportista.
-- `sandblasteo` es la variante local más usada que **no** figura hoy en `03-keywords-maestro.md`.
+- `sandblasteo` es la variante local más usada que **no** figuraba en `03-keywords-maestro.md` cuando se diseñó esta lista.
+- 🔴 **`"sandblasting"` y `"sandblasteo"` PAUSADAS el 21/09/2026.** `sandblasteo` acumuló **2.953 ARS con 9 clics y 0 conversiones** (345/semana durante dos semanas y 2.263 en la tercera); `sandblasting` estuvo en **QS 1 sin impresiones** desde agosto y su único clic (350) tampoco convirtió. La hipótesis del sinónimo local era razonable y se probó: en esta cuenta, quien busca el término en inglés o su calco no contrata. Ver bitácora 21/09.
 
 ##### Grupo `ag_obra-restauracion-estructuras` → `https://www.arenadoslucho.com/servicios`
 
@@ -146,7 +147,7 @@ La estructura objetivo del proyecto define 4 grupos dentro de Obra-Industrial. *
 
 ---
 
-#### CAMPAÑA 2 — `AR-Search-Piletas` (1.250 ARS/día)
+#### CAMPAÑA 2 — `AR-Search-Piletas` (**1.600 ARS/día** desde el 21/09/2026; arrancó en 1.250)
 
 ##### Grupo `ag_pileta-jerga` → `https://www.arenadoslucho.com/arenado-de-piletas`
 
@@ -169,8 +170,8 @@ La estructura objetivo del proyecto define 4 grupos dentro de Obra-Industrial. *
 [restaurar pileta]
 [restaurar piscina]
 ```
-**15 keywords.** Notas:
-- `arenado de piletas` en exacta es el **lead más barato del historial** (4 conv / 2.156).
+**15 keywords — 13 activas:** `[restaurar pileta]` y `[restaurar piscina]` quedaron **PAUSADAS el 21/09/2026** (ver nota abajo). Notas:
+- `arenado de piletas` en exacta es el **lead más barato del historial** (4 conv / 2.156). Al 21/09 el conjunto `arenado de pileta(s)` / `arenado de piscinas` es **el motor de toda la cuenta**: 8.441 ARS y 8 conversiones en una semana, CPA 1.055.
 - ⚠️ **`restaurar pileta` / `restaurar piscina` van SOLO en exacta** (cambio del **04/09/2026**, primer movimiento tras el congelamiento). En **frase** gastaron **3.296 en una sola semana con 10 clics y 0 conversiones** — el **30% del gasto** de la campaña de piletas, y la causa de que su CPA se diera vuelta (2.169 con ellas, 1.510 sin ellas). La fuga es la cola larga que Google esconde por bajo volumen ("cómo restaurar una piscina", "cuánto sale restaurar…"): quien quiere **restaurar** una pileta busca el resultado terminado — revestir, pintar —, y nosotros hacemos un paso de eso. Mismo criterio que `mantenimiento de piletas`. Ver bitácora 04/09.
 - ⛔ **`restaurar` NO se agrega como negativa en ninguna lista, nunca.** Es la palabra del negocio al que transicionamos (Cluster 1 = "Obra / **restauración**"), y `restaurar ladrillo visto exterior` ya apareció en el informe como consulta buena. El problema es la intención en piletas, no la palabra. Bloquearla sería repetir el error de `piezas` del 24/08.
 - ⛔ **`mantenimiento de piletas` queda FUERA a propósito.** Histórico: 3 conv / 8.847 (~2.949 con conversiones infladas → CPA real probablemente el doble o el triple). La intención dominante es **mantenimiento químico semanal**, un servicio que no prestamos. Igual criterio para `"limpieza de piletas"` sola y para `arenado pintura` (32.246 ARS / 75 clics / **1 conv** en frase — el segundo mayor sumidero del histórico después de `arenado`).
@@ -365,8 +366,20 @@ certificado
 laser
 láser
 "fibra de vidrio"
+líquido
+liquido
+desoxidante
+desoxidar
+grietas
+rajaduras
+sika
+sellar
+"talleres de arenado"
+"talleres de arenados"
 ```
-**34 términos.** Notas:
+**44 términos.** Notas:
+- ⭐ **Agregados el 21/09/2026:** `"talleres de arenado"` y `"talleres de arenados"`. Se colaron **253 ARS** con `talleres de arenado en lomas de zamora`: la lista tenía `"taller de arenado"` y `"taller de arenados"`, **las dos en singular**. Tercera vez que el proyecto paga la misma regla (24/08 `maquina para arenar`, 07/09 `piscinas de fibra`): **una negativa cubre exactamente la forma escrita.**
+- 🔴 **Corrección de registro (21/09):** el 07/09 se cargaron **12** términos en la cuenta pero este bloque solo anotó 4. Los 8 que faltaban — `líquido`, `liquido`, `desoxidante`, `desoxidar`, `grietas`, `rajaduras`, `sika`, `sellar` — **estaban en la cuenta y funcionando** (verificado: sus búsquedas dejaron de gastar), pero no en el doc. Es el error del 29/08 al revés, y la misma lección: **la lista del doc y la de la cuenta se comparan, no se suponen.**
 - ⭐ **Agregados el 07/09/2026** tras la lectura de la semana 3: `"al horno"` (pintura al horno es otro rubro — la consulta `arenado y pintura al horno` costó 345), `laser` / `láser` (tecnología competidora — `laser quita oxido`, 347) y `"fibra de vidrio"` (`arreglo de piscinas de fibra de vidrio`, 664: el arenado **destruye** la fibra, nunca es trabajo nuestro). `laser` va con y sin acento — las negativas no absorben la variante.
 - ⚠️ **`"pileta de fibra"` ya estaba en el Bloque H y no alcanzó:** la consulta decía **piscinas** de fibra, no pileta. Por eso `"fibra de vidrio"` va a nivel de cuenta y no a la lista de piletas — cubre las dos palabras de una.
 - `granallado` y `granallados` van los dos: **las negativas no absorben plurales** (§4.7).
