@@ -9,8 +9,8 @@ Fuente única de keywords para **SEO y Google Ads**. Cada grupo mapea a UNA URL.
 | Keyword | Intención | Hist. |
 |---------|-----------|-------|
 | arenado en obra · arenado in situ | Obra en ejecución | Sin datos (gap — probar) |
-| arenado de paredes · arenado de ladrillos / ladrillo a la vista | Restauración para repintar | Sin datos (gap — probar) |
-| arenado de fachada / frente | Restauración exterior | Campaña vieja "Fachadas": 8 conv / 17.865 |
+| arenado de paredes · arenado de ladrillos / ladrillo a la vista | Restauración para repintar | 🔴 **PAUSADAS el 28/09/2026** — 5.380 ARS y 17 clics sin una conversión. No es la keyword: `/servicios` no le contesta a quien tiene una pared de ladrillo. Se reactivan cuando exista la página de obra/restauración |
+| arenado de fachada / frente | Restauración exterior | Campaña vieja "Fachadas": 8 conv / 17.865 · 🔴 **PAUSADAS el 28/09/2026** (`arenado de fachadas` + `restauración de fachada`: 1.634 y 5 clics sin convertir) — mismo motivo: falta la landing |
 | arenado para repintar / para pintar | Preparación simple | Sin datos |
 | arenado restauración edificio | Remodelación edificios antiguos | Sin datos |
 | empresa de arenado · arenado construcción | Proveedor para obra | "constructora": convertía en términos de obra, quemaba en amplias |
