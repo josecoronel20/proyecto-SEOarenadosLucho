@@ -6,6 +6,7 @@ const staticPaths = [
   "",
   "/servicios",
   "/arenado-de-piletas",
+  "/arenado-de-fachadas",
   "/casos-de-exito",
   "/preguntas-frecuentes",
   "/contacto",
@@ -20,13 +21,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}${path}`,
     lastModified,
     changeFrequency:
-      path === "" || path === "/servicios" || path === "/arenado-de-piletas"
+      path === "" ||
+      path === "/servicios" ||
+      path === "/arenado-de-piletas" ||
+      path === "/arenado-de-fachadas"
         ? "weekly"
         : "monthly",
     priority:
       path === ""
         ? 1
-        : path === "/contacto" || path === "/servicios" || path === "/arenado-de-piletas"
+        : path === "/contacto" ||
+            path === "/servicios" ||
+            path === "/arenado-de-piletas" ||
+            path === "/arenado-de-fachadas"
           ? 0.9
           : 0.7,
   }))

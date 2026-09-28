@@ -8,7 +8,7 @@ export interface Faq {
 export const faqs: Faq[] = [
   { question: "¿Qué es el arenado y para qué sirve?", answer: "Es la forma más rápida de sacar óxido, pintura vieja y suciedad de una superficie. Lanzamos arena a presión y dejamos el material limpio y parejo, listo para pintar o revestir." },
   { question: "¿Vienen a domicilio o tengo que llevar algo a un taller?", answer: "Trabajamos in situ: vamos con nuestro equipo a tu casa, obra, galpón o fábrica. No hace falta que traslades nada; llevamos compresores propios." },
-  { question: "¿Cuánto tardan?", answer: "Depende del tamaño, el estado y la forma de la superficie. En superficies cómodas y planas —paredes, fachadas, piletas— cada equipo cubre alrededor de 100 m² por día. En estructuras metálicas complejas o con revestimientos muy resistentes lleva más tiempo. Si el trabajo es grande sumamos equipos, y en la visita te damos el plazo concreto." },
+  { question: "¿Cuánto tardan?", answer: "Depende del tamaño, el estado y la forma de la superficie. En superficies cómodas y planas —paredes, fachadas, piletas— cada equipo cubre alrededor de 100 m² por día. En estructuras metálicas complejas o con revestimientos muy resistentes lleva más tiempo. Si el plazo aprieta podemos ir con los dos equipos —son dos, no más—, y en la visita te damos el plazo concreto." },
   { question: "¿Qué espacio necesitan para el equipo?", answer: "Un equipo son un compresor y una tolva, que llegan remolcados o en la camioneta. Necesitamos poder ubicarlos medianamente cerca del lugar de trabajo, porque la arena se carga al hombro desde el equipo hasta donde se arena: cuanto más lejos, más lento y más pesado. En la visita miramos dónde conviene ponerlos." },
   { question: "¿Hacen mucho polvo? ¿Molesta a los vecinos?", answer: "Sí, bastante: es parte del trabajo y no se puede evitar. Por eso conviene un lugar amplio y, si se puede, techado y ventilado. No armamos cerramientos: si hay máquinas, autos, ventanas o un vecino que no pueden recibir polvo, el cerramiento lo ponés vos, y en la visita te decimos exactamente qué tapar. Al terminar retiramos la arena gruesa; el polvillo fino no se saca del todo y durante unos días vuelve a aparecer un poco." },
   { question: "¿Queda lista para pintar o revestir?", answer: "Sí, ese es el objetivo. Te entregamos la superficie limpia y pareja, lista para que apliques pintura, antióxido o revestimiento." },
@@ -59,6 +59,24 @@ export const faqsServicios: Faq[] = pick([
   "¿Pueden trabajar fines de semana o turnos extendidos?",
   "¿Hacen granallado o arenado certificado con normas?",
 ])
+
+// FAQs específicas de la landing /arenado-de-fachadas (obra y restauración de
+// edificios). Motor de cola larga: preguntas reales de un arquitecto, encargado
+// de obra o dueño de un frente, no keywords disfrazadas de pregunta.
+export const faqsFachadas: Faq[] = [
+  { question: "¿Qué es el arenado de una fachada?", answer: "Lanzamos arena a presión sobre la pared o el frente para sacar la pintura vieja, la cal suelta o el revoque flojo de una sola pasada. Debajo queda la superficie limpia y pareja, lista para pintar o revestir de nuevo." },
+  { question: "¿Sirve para sacar años de pintura vieja de un frente?", answer: "Sí, es uno de los usos más comunes: capas de pintura descascarada o mal adherida que a mano llevarían semanas, con arenado salen en una sola pasada." },
+  { question: "¿Pueden recuperar ladrillo a la vista que quedó tapado con pintura o revoque?", answer: "Sí. El arenado saca la pintura o el revoque suelto del ladrillo sin romperlo. Cómo queda depende del estado del ladrillo debajo: en la visita lo vemos y te decimos qué esperar." },
+  { question: "¿Cuánto tarda arenar una fachada?", answer: "Con paredes y fachadas —superficies planas y cómodas— cada equipo cubre alrededor de 100 m² por día. Si hay molduras, revestimientos duros o zonas de difícil acceso, se dilata. El plazo concreto te lo damos en la visita, con el frente a la vista." },
+  { question: "¿Hacen mucho polvo? ¿Tenemos que tapar algo?", answer: "Sí, el arenado hace polvo y no se puede evitar. Nosotros no armamos ningún cerramiento: el cerramiento lo ponés vos o la obra, y en la visita te decimos exactamente qué conviene tapar y hasta dónde llega el polvo. Al terminar retiramos la arena gruesa; el polvillo fino no se saca del todo y durante unos días vuelve a aparecer un poco." },
+  { question: "¿Pueden trabajar con la obra en marcha, sin frenar a las otras cuadrillas?", answer: "Sí, es como solemos trabajar: por sectores, coordinando con el encargado de obra qué zona liberamos primero para que el resto de las tareas siga sin esperarnos." },
+  { question: "¿Necesitamos algún permiso si el frente da a la calle?", answer: "Puede hacer falta, sobre todo si el polvo puede llegar a la vereda o la calle. Es algo que resuelve quien contrata; nosotros coordinamos los horarios y los sectores según lo que se acuerde." },
+  { question: "¿Ustedes pintan la fachada después?", answer: "No es lo que lideramos: te dejamos la superficie lista y lo normal es que la pinte tu pintor o tu contratista. Si no tenés a quién, lo podemos hacer nosotros, pero se presupuesta aparte del arenado." },
+  { question: "¿Qué necesitan para trabajar en el frente?", answer: "Un lugar para dejar el compresor y la tolva, medianamente cerca de donde arenamos: la arena se carga al hombro desde el equipo, así que cuanto más lejos, más lento. También acceso al sector y alguien con quien coordinar los horarios." },
+  { question: "¿Cuántos equipos tienen? ¿Pueden avanzar rápido en un edificio grande?", answer: "Tenemos 2 equipos propios completos —compresor, tolva y arenador con ayudantes— y ese es el tope: no prometemos más. En un frente grande, dos equipos trabajando por sectores en paralelo acortan bastante el plazo." },
+  { question: "¿Y si el frente tiene rejas, balcones o estructuras metálicas con óxido?", answer: "También se arenan. El resultado en metal es igual que en cualquier hierro: queda limpio y parejo, pero donde el óxido comió se ve picado —el arenado saca el óxido, no rellena el metal. Lo coordinamos junto con el resto del frente." },
+  { question: "¿Hacen visita y presupuesto antes de arrancar?", answer: "Sí, sin costo. Vamos, vemos el frente o la fachada y te pasamos un presupuesto claro antes de que decidas." },
+]
 
 // FAQs específicas de la landing /arenado-de-piletas (dueño de casa + contratista).
 // Alimentan el acordeón y el JSON-LD FAQPage de esa página.

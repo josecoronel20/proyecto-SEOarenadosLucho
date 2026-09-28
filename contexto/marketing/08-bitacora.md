@@ -12,6 +12,64 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-28 (2) — Se crea `/arenado-de-fachadas`, y la premisa con la que arrancó era falsa
+
+- **Qué se hizo:** se creó la landing `/arenado-de-fachadas` (obra y restauración de
+  edificios), con FAQ propia (`faqsFachadas`, 12 preguntas), schema `Service` +
+  `BreadcrumbList` + `FAQPage`, alta en `sitemap.ts` y enlace interno desde
+  `/servicios`. Alcance: fachadas, frentes, paredes, ladrillo a la vista y
+  restauración de edificios. Vigas/estructuras metálicas/tanques/silos se quedan
+  en `/servicios`, que ya convierte con esas keywords. Detalle en
+  `odd/tasks/landing-obra-fachadas.md` y `contexto/03-rutas-y-paginas.md`.
+- **Por qué / hipótesis:** en la semana 6 se pausaron 5 keywords del clúster de
+  obra/restauración (`arenado de paredes`, `arenado de fachadas`,
+  `limpieza de ladrillo a la vista`, `restauración de fachada`: 7.014 ARS, 22
+  clics, 0 conversiones) porque mandaban a `/servicios`, que le habla al galpón y
+  a la industria, no a quien tiene una fachada. Con la página nueva, esas
+  keywords tienen dónde aterrizar.
+### 🔴 Corrección de premisa, el mismo día: esta página NO desbloquea el ticket alto
+
+El análisis con el que se arrancó decía que la landing abría el canal hacia el trabajo grande. **El dueño lo corrigió, y tenía razón:** los trabajos de fachada son mayormente **particulares** — casas, muros perimetrales, frentes de vivienda —, no PYMEs.
+
+| | Ticket | Duración |
+|---|---|---|
+| Fachada de casa | **~400.000** | 1-2 días |
+| Pileta | ~800.000 | 1 día |
+| Obra | **millones** | ~1 semana |
+
+**Lo que se aprende, y vale más que la página:** el segmento de ticket alto **nunca estuvo bloqueado por falta de landing.** `empresa de arenado` (3 conv), `arenados industriales` (3 conv) y `[arenado a domicilio]` (1 conv) ya convertían mandando a `/servicios`. Ese segmento no necesita una página nueva: necesita **pujar más alto**, porque se está comprando a 1.891 un contacto que vale millones. Eso es Maximizar conversiones, no código.
+
+**La landing se justifica igual, por otro motivo:** recupera 7.014 ARS de tráfico ya pagado que hoy da cero, con un ticket de ~400.000 por uno o dos días de trabajo. Es plata que se estaba cayendo — no la jugada estratégica.
+
+Por eso la página quedó con **dos puertas**: `#casa` (donde está el volumen) y `#empresa` (frente comercial, consorcio, planta), para no perder la fachada de edificio, que es donde el ticket sube.
+
+### ✅ El hueco de las fotos, tapado el mismo día
+
+La página nació sin una sola foto de fachada — los 4 casos publicados son estructuras metálicas. **El dueño aportó 11 fotos reales de trabajos de fachada**, que entraron en `public/images/services/arenadoFachadas/`:
+
+- **4 pares antes/después:** frente de dos plantas con hongo · muro perimetral de ladrillo · ladrillo a la vista recuperado · esquina con escurrimiento.
+- **3 tomas del trabajo en curso**, incluida una con el polvo a la vista.
+- Los dos PNG pesados se convirtieron a webp: 388 KB → 23 KB y 466 KB → 32 KB.
+
+Los 4 casos industriales **siguen en la página**, movidos a la sección de empresas y presentados por lo que sí prueban: que se trabaja dentro de un lugar en funcionamiento. Nunca como si fueran fachadas.
+
+### ⛔ Y una afirmación falsa encontrada de paso, que estaba EN PRODUCCIÓN
+
+Auditando el copy apareció, en la FAQ del sitio (`src/lib/faqs.ts`, set general): *"Si el trabajo es grande **sumamos equipos**"*.
+
+`21-realidad-operativa.md` §4 dice literal: **"Dos equipos es el TOPE, nunca más. ⛔ No escribir 'sumamos equipos' a secas."** Corregido a *"Si el plazo aprieta podemos ir con los dos equipos —son dos, no más—"*. Afectaba a `/preguntas-frecuentes` y a toda página que consuma ese set, no solo a la nueva.
+
+Sería la quinta afirmación falsa publicada. Misma firma que las otras cuatro: suena bien, nadie la cuestiona, y promete algo que no se puede cumplir.
+
+### Verificación
+
+`npm run build` limpio · auditoría de términos prohibidos sobre todo `src/` sin hallazgos · las 15 imágenes verificadas contra disco una por una · capturas headless en escritorio y celular.
+
+⚠️ **Nota de método que se repite:** el panel del navegador **no pinta las imágenes** de este proyecto aunque el registro de red las dé en 200. Mirar ahí habría hecho creer que las fotos no cargaban. Para ver diseño acá, capturar headless con puppeteer. De esa captura salieron tres arreglos que el build no detecta: el recorte `4/5` cortaba un 20% de fotos que son todas cuadradas, el degradado del hero tapaba la foto, y el H1 hablaba solo de obra cuando la mitad del público es dueño de casa.
+
+- **Resultado esperado y cuándo revisarlo:** **reactivar las 5 keywords pausadas apuntando a `/arenado-de-fachadas`** (modo guiado, después del deploy) y leer conversión con 1-2 semanas de datos. Con ticket de 400.000, alcanza con que cierre 1 de cada 200 contactos para que la página se pague sola.
+- **Resultado real:** (completar después)
+
 ## 2026-09-28 — Semana 6: obra convirtió por fin, y se pausa el clúster de fachadas
 
 - **Qué se hizo:** lectura de la semana 6. Se pausaron **5 keywords** del grupo de obra/restauración (`"arenado de paredes"` + `[arenado de paredes]`, `"arenado de fachadas"`, `"limpieza de ladrillo a la vista"`, `"restauración de fachada"`) y se agregaron 4 negativas de cuenta: `"como pintar"`, `"cómo pintar"`, `"como lijar"`, `"cómo lijar"`.
