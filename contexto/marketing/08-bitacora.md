@@ -12,6 +12,121 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-28 — Semana 6: obra convirtió por fin, y se pausa el clúster de fachadas
+
+- **Qué se hizo:** lectura de la semana 6. Se pausaron **5 keywords** del grupo de obra/restauración (`"arenado de paredes"` + `[arenado de paredes]`, `"arenado de fachadas"`, `"limpieza de ladrillo a la vista"`, `"restauración de fachada"`) y se agregaron 4 negativas de cuenta: `"como pintar"`, `"cómo pintar"`, `"como lijar"`, `"cómo lijar"`.
+
+### Los números: la cuenta se recuperó
+
+| | S4 | S5 | **S6** |
+|---|---|---|---|
+| Costo | 22.890 | 26.961 | **26.094** |
+| Clics | 89 | 106 | **100** |
+| Conversiones | 15 | 12 | **15** |
+| CPA | 1.526 | 2.247 | **1.740** |
+
+| Campaña | Costo | Clics | Conv | CPA |
+|---|---|---|---|---|
+| `AR-Search-Obra-Industrial` | 13.235 | 47 | **7** (venía de 2) | **1.891** |
+| `AR-Search-Piletas` | 10.797 | 45 | 8 | 1.350 |
+| `AR-Search-General-Marca` | 2.062 | 8 | **0** | — |
+
+### ⭐ Obra convirtió: la transición no estaba fallando, faltaba separar qué parte
+
+| Keyword | Costo | Clics | Conv | CPA |
+|---|---|---|---|---|
+| `"empresa de arenado"` | 4.771 | 19 | **3** | 1.590 |
+| `"arenados industriales"` (QS **2**) | 3.319 | 11 | **3** | **1.106** |
+| `[arenado a domicilio]` | 335 | 1 | **1** | **335** |
+
+**`arenados industriales` tiene nivel de calidad 2 y es de las que mejor convierte.** Es la segunda vez que pasa en esta cuenta — la primera fue `[arenadora]` en la semana 2 (QS 3, CPA 465). **El QS de Google no predice conversiones acá**, y nunca debe usarse solo para decidir una pausa.
+
+### 🔴 Pausado: el clúster "por el problema" de obra
+
+| Keyword | Acumulado | Clics | Conv |
+|---|---|---|---|
+| `arenado de paredes` (frase + exacta) | 4.041 | 13 | 0 |
+| `limpieza de ladrillo a la vista` | 1.339 | 4 | 0 |
+| `arenado de fachadas` | 957 | 3 | 0 |
+| `restauración de fachada` | 676 | 2 | 0 |
+| **Total** | **7.014** | **22** | **0** |
+
+Con la tasa de conversión de la cuenta (15%), que 22 clics no den ninguna conversión es **~1 en 36**. Ya no es muestra chica.
+
+**La causa está identificada desde agosto y ahora tiene la prueba:** estas keywords mandan a `/servicios`, que le habla al **galpón y a la industria**. Nada en esa página le contesta a alguien con una fachada o una pared de ladrillo a la vista. En la **misma campaña y con la misma landing**, `empresa de arenado` y `arenados industriales` convierten — porque a esas sí les responde.
+
+⚠️ **Es una pausa HASTA QUE EXISTA LA PÁGINA, no un abandono de la transición.** El norte de `00-vision-y-objetivos.md` (obra en construcción y restauración de edificios) sigue en pie: lo que se apagó es comprar clics que aterrizan en una página que no habla de eso. **El desbloqueo es trabajo de sitio**, y hoy es lo más valioso pendiente del proyecto.
+
+### ❌ La suba de presupuesto de piletas no rindió
+
+| Piletas | S5 | S6 |
+|---|---|---|
+| Presupuesto | 1.250/día | **1.600/día** |
+| Gasto real | 1.428/día (tapada) | 1.542/día (96%) |
+| Costo | 9.998 | 10.797 |
+| Clics | 48 | **45** |
+| Conversiones | 8 | **8** |
+| CTR | 13,5% | **7,7%** |
+
+**798 pesos más, menos clics y las mismas 8 conversiones.** El CTR se partió al medio: más impresiones compradas, de peor calidad.
+
+**No se baja todavía, y el motivo es concreto:** casi toda la plata extra se fue a `"preparar pileta para pintar"` (3.356 — un tercio de la campaña, contra 593 la semana anterior), que está trayendo `como pintar piscina de cemento`, `como pintar una piscina de cemento` y `pintar piscina de cemento`. Es gente que quiere **pintarla ella misma**. Las negativas nuevas cortan eso. Si con el filtro puesto sigue sin rendir, se baja a 1.250. **Se reevalúa el 05/10.**
+
+El núcleo de piletas, mientras tanto, sigue siendo lo mejor de la cuenta: `arenado de pileta(s)` / `arenado de piscinas` = **5.614 · 26 clics · 7 conversiones · CPA 802**.
+
+### Negativas: la pregunta del que lo hace él mismo
+
+`"como pintar"` · `"cómo pintar"` · `"como lijar"` · `"cómo lijar"` — ~1.585 ARS esta semana entre `como pintar piscina de cemento` (677), `como pintar una piscina de cemento` (349), `pintar piscina de cemento` (254) y `como lijar una pileta` (304).
+
+⛔ **`pintar` sola NUNCA se bloquea:** *"queda listo para pintar"* es la promesa central del negocio y está en los RSA. Se bloquea **la forma de pregunta**, que es la del que va a hacerlo él. Mismo criterio que `por m2` el 29/08: se bloquea lo específico, no lo general.
+
+Es el **cuarto** clúster con el mismo patrón, después del óxido (07/09), `ag_pileta-sin-jerga` (14/09) y `restaurar` (21/09): **quien pregunta "cómo" no contrata.**
+
+### Para mirar, sin tocar
+
+- **`arenado de metales` / `arenado de metal`:** 4.315 acumulados, 14 clics, 0 conv. **Diagnóstico distinto al del clúster pausado:** sus búsquedas son `arenado de piezas`, `arenado de piezas metálicas`, `arenado de fierro`, `arenado metales` — o sea **piezas sueltas**, y el negocio **no tiene taller** (restricción dura en `00-proyecto-general.md`: todo in situ). La evidencia todavía no es concluyente (1 en 10 de ser casualidad). Una semana más.
+- **`"arenar pileta"`:** QS **10** y 2.315 acumulados con 9 clics sin convertir. Poca muestra todavía.
+- **`[arenadora]`:** **448 impresiones y 4 clics en 30 días — CTR 0,9%.** Desde la semana 4 lleva 3.026 sin convertir. Su CPA de vida sigue siendo 1.108, mejor que los 1.740 de la cuenta, así que **no se toca**; pero ese CTR está arrastrando a `General-Marca`, que esta semana terminó en **cero conversiones**.
+
+### Maximizar conversiones: se pospone otra vez, a propósito
+
+El criterio (≥15–30 conversiones limpias/mes) sigue cumplido. **Cambiar la estrategia de puja arriba de un cambio de presupuesto que todavía no asentó haría ilegible la lectura.** Va cuando piletas se estabilice — con el CPA de piletas leído el 05/10 en la mano.
+
+### ⭐ Dato del dueño (28/09) que cambia el marco: la economía del trabajo
+
+**Solo se toman trabajos que dejan ~800.000 ARS.** Proyección del dueño: ~200.000/mes en anuncios con ~60 conversiones (CPA 3.333).
+
+Con esos números el análisis se da vuelta:
+
+| | |
+|---|---|
+| Gasto mensual proyectado | 200.000 |
+| Valor de un trabajo | ~800.000 |
+| **Trabajos necesarios para empatar** | **0,25 por mes** — uno cada 4 meses |
+| **Tasa de cierre necesaria** (sobre 60 contactos) | **1 de cada 400** |
+
+**El CPA deja de ser el límite.** Veníamos optimizando como si la plata fuera la restricción; con un trabajo a 800.000, **la restricción real es la capacidad operativa**: cuántos trabajos por mes se pueden hacer con 2 equipos. Ese número, hoy, no está en ningún documento del proyecto — es la pregunta abierta más importante.
+
+También fija un techo de CPA aceptable: **hasta ~3.300**, contra los ~1.900 actuales. Eso es permiso explícito para pujar más agresivo.
+
+### ⚠️ Pero subir presupuestos, solo, no escala nada
+
+| Campaña | Presupuesto | Gasto real | Uso |
+|---|---|---|---|
+| `AR-Search-Piletas` | 1.600/día | 1.542 | **96%** |
+| `AR-Search-Obra-Industrial` | 3.000/día | 1.891 | **63%** |
+| `AR-Search-General-Marca` | 750/día | 295 | **39%** |
+
+**Dos de las tres campañas no gastan ni lo que ya tienen.** No es que falte presupuesto: **no hay más gente buscando**. La cuenta está limitada por demanda, no por plata. Y la única que sí estaba tapada, Piletas, ya demostró esta misma semana qué pasa al darle más: +798 gastados, mismas 8 conversiones y el CTR partido al medio.
+
+**Lo que sí escala, en orden:**
+1. **Maximizar conversiones** — deja que Google puje más alto por el que se parece a quien ya escribió. Ahora tiene número de referencia: CPA objetivo de hasta ~3.300.
+2. **La página de obra/restauración** — desbloquea el clúster pausado hoy y es la puerta a los tickets altos.
+3. **Pedir el dato que falta:** cuota de impresiones perdida **por ranking** y **por presupuesto**, por campaña. Dice exactamente cuánta demanda se está dejando pasar y por qué. Es gratis y nunca se miró.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **05/10**. (1) ¿Bajó el gasto de `preparar pileta para pintar` con las negativas puestas, y con eso mejoró el CPA de piletas? (2) ¿Se sostienen las conversiones de obra sin el clúster de fachadas? Se liberan ~2.700/semana entre lo pausado y lo bloqueado.
+- **Resultado real:** (completar)
+
 ## 2026-09-21 — Semana 5: se limpia el sandblasteo y piletas pide lugar
 
 - **Qué se hizo:** lectura de la semana 5, que además es **la lectura de 30 días** que estaba parada para el 19/09. Se pausaron 4 keywords probadas muertas (`"sandblasteo"`, `"sandblasting"`, `[restaurar piscina]`, `[restaurar pileta]`), se agregaron 2 negativas de cuenta (`"talleres de arenado"`, `"talleres de arenados"`) y se **subió el presupuesto de Piletas de 1.250 a 1.600/día** (+28%).

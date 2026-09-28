@@ -139,8 +139,8 @@ La estructura objetivo del proyecto define 4 grupos dentro de Obra-Industrial. *
 "restauración de fachada"
 "limpieza de ladrillo a la vista"
 ```
-**24 keywords.** Notas:
-- `"arenado de metal"` en frase: histórico ~6.487/conv, mejor que la exacta (20.947 / 1,5 conv). In-scope, se mantiene.
+**24 keywords — 19 activas.** 🔴 **PAUSADAS el 28/09/2026:** `"arenado de paredes"`, `[arenado de paredes]`, `"arenado de fachadas"`, `"limpieza de ladrillo a la vista"` y `"restauración de fachada"` — el clúster "por el problema" acumuló **7.014 ARS con 22 clics y 0 conversiones** (~1 en 36 de ser casualidad). **La causa no es la keyword: es que mandan a `/servicios`, que le habla al galpón y a la industria y no le contesta a nadie con una fachada o una pared de ladrillo.** En la misma campaña y con la misma landing, `"empresa de arenado"` y `"arenados industriales"` sí convierten. ⚠️ **Es una pausa hasta que exista la página, no un abandono de la transición.** Ver bitácora 28/09. Notas:
+- `"arenado de metal"` en frase: histórico ~6.487/conv, mejor que la exacta (20.947 / 1,5 conv). In-scope, se mantiene. ⚠️ Al 28/09 `arenado de metal(es)` acumula **4.315 y 14 clics sin convertir**, con búsquedas de **piezas sueltas** (`arenado de piezas`, `arenado de fierro`) que el negocio no puede tomar porque **no hay taller**. Evidencia todavía no concluyente — en observación.
 - `"arenado de tanques"` es la que más vigilancia pide: en Argentina "limpieza de tanques" arrastra intención de **tanque de agua domiciliario** (desinfección, potabilización), que es otro rubro. Por eso **no** se compra `"limpieza de tanques"` y se cargan negativas de campaña (§4.6).
 - `"restauración de fachada"` y `"limpieza de ladrillo a la vista"` son entradas por el problema (el arquitecto no siempre dice "arenado"). Vigilar que no traigan pedidos de pintura/impermeabilización: el sitio dice explícitamente que **no pintamos ni revestimos**, y eso filtra.
 - ⚠️ **Deliberadamente NO se compra `"limpieza industrial"` ni `"servicio limpieza industrial"`**: el CPA histórico (~784) es sospechosamente bajo y casi con seguridad es conversión basura (Local actions / page views). Volver a evaluarlo a los 60 días **con medición limpia**.
@@ -376,8 +376,13 @@ sika
 sellar
 "talleres de arenado"
 "talleres de arenados"
+"como pintar"
+"cómo pintar"
+"como lijar"
+"cómo lijar"
 ```
-**44 términos.** Notas:
+**48 términos.** Notas:
+- ⭐ **Agregados el 28/09/2026:** `"como pintar"` / `"cómo pintar"` / `"como lijar"` / `"cómo lijar"`. Se colaron ~1.585 ARS con `como pintar piscina de cemento` (677), `como pintar una piscina de cemento` (349), `pintar piscina de cemento` (254) y `como lijar una pileta` (304), todas por `"preparar pileta para pintar"`. ⛔ **`pintar` sola NUNCA se bloquea:** *"queda listo para pintar"* es la promesa central y está en los RSA. Se bloquea la **forma de pregunta**, que es la del que va a hacerlo él mismo — mismo criterio que `por m2`. Es el cuarto clúster con el mismo patrón (óxido 07/09, `ag_pileta-sin-jerga` 14/09, `restaurar` 21/09): **quien pregunta "cómo" no contrata.**
 - ⭐ **Agregados el 21/09/2026:** `"talleres de arenado"` y `"talleres de arenados"`. Se colaron **253 ARS** con `talleres de arenado en lomas de zamora`: la lista tenía `"taller de arenado"` y `"taller de arenados"`, **las dos en singular**. Tercera vez que el proyecto paga la misma regla (24/08 `maquina para arenar`, 07/09 `piscinas de fibra`): **una negativa cubre exactamente la forma escrita.**
 - 🔴 **Corrección de registro (21/09):** el 07/09 se cargaron **12** términos en la cuenta pero este bloque solo anotó 4. Los 8 que faltaban — `líquido`, `liquido`, `desoxidante`, `desoxidar`, `grietas`, `rajaduras`, `sika`, `sellar` — **estaban en la cuenta y funcionando** (verificado: sus búsquedas dejaron de gastar), pero no en el doc. Es el error del 29/08 al revés, y la misma lección: **la lista del doc y la de la cuenta se comparan, no se suponen.**
 - ⭐ **Agregados el 07/09/2026** tras la lectura de la semana 3: `"al horno"` (pintura al horno es otro rubro — la consulta `arenado y pintura al horno` costó 345), `laser` / `láser` (tecnología competidora — `laser quita oxido`, 347) y `"fibra de vidrio"` (`arreglo de piscinas de fibra de vidrio`, 664: el arenado **destruye** la fibra, nunca es trabajo nuestro). `laser` va con y sin acento — las negativas no absorben la variante.
