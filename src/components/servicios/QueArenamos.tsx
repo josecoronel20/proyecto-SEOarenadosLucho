@@ -82,10 +82,32 @@ export function QueArenamos() {
         ))}
       </div>
 
+      {/* Deriva la intención de fachadas/restauración a su landing dedicada */}
+      <Link
+        href="/arenado-de-fachadas"
+        className="group mt-8 flex flex-wrap items-center justify-between gap-4 border-b border-papel-linea pb-6"
+      >
+        <div>
+          <p className="font-semibold text-tinta group-hover:text-maquina-700 transition-colors">
+            ¿Es una fachada, pared o ladrillo a la vista?
+          </p>
+          <p className="text-tinta-70 text-sm mt-1">
+            Tenemos una página dedicada al arenado de fachadas y restauración de frentes.
+          </p>
+        </div>
+        <span className="inline-flex items-center gap-1.5 font-semibold text-maquina-700">
+          Ver arenado de fachadas
+          <ArrowRight
+            className="w-4 h-4 transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </span>
+      </Link>
+
       {/* Deriva la intención de piletas a su landing dedicada */}
       <Link
         href="/arenado-de-piletas"
-        className="group mt-8 flex flex-wrap items-center justify-between gap-4 border-b border-papel-linea pb-6"
+        className="group mt-4 flex flex-wrap items-center justify-between gap-4 border-b border-papel-linea pb-6"
       >
         <div>
           <p className="font-semibold text-tinta group-hover:text-maquina-700 transition-colors">

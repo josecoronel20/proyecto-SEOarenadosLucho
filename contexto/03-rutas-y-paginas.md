@@ -15,6 +15,7 @@ Nav principal (Header/Footer): Inicio, Servicios, **Piletas**, Casos de éxito, 
 | `/` | Estática | Sí |
 | `/servicios` | Estática | Sí |
 | `/arenado-de-piletas` | Estática | Sí |
+| `/arenado-de-fachadas` | Estática | No (enlazada desde `/servicios`) |
 | `/casos-de-exito` | Estática | Sí |
 | `/casos-de-exito/[slug]` | SSG (`generateStaticParams`) | No (detalle) |
 | `/preguntas-frecuentes` | Estática | Sí |
@@ -91,6 +92,36 @@ Build de referencia: **17 rutas** (incluye `robots.txt`, `sitemap.xml`, `_not-fo
 **Bloques:** hero por el problema · **banda estacional rotable** · selector de público · "¿qué es el arenado?" · gap sin jerga · galería antes/después (6 fotos) · 3 pasos in situ · qué incluye / qué no · **sección de contratistas y pileteros** · por qué confiar · zonas AMBA · **FAQ con schema `FAQPage` (11 Q)** · CTA final.
 
 🔄 **Rotación estacional:** el bloque con ícono `CalendarClock` arranca en **modo INVIERNO** (desde 27/07/2026: "Anticipate: llegá al verano con la pileta lista"). Próxima rotación → primavera/verano (~ago-sep). **Cada rotación se anota en `marketing/08-bitacora.md`.** Blueprint completo: `marketing/11-landing-piletas-ideal.md`.
+
+---
+
+## `/arenado-de-fachadas` — Landing de obra y restauración de edificios
+
+Creada el 28/09/2026 para desbloquear las 5 keywords de obra/restauración
+pausadas la misma semana (`odd/tasks/landing-obra-fachadas.md`): mandaban a
+`/servicios`, que le habla al galpón y a la industria, no a quien busca una
+fachada o una pared. Decisión explícita del dueño — cubre la restricción de
+`CLAUDE.md` sobre no crear landings nuevas por rubro sin aprobación.
+
+| Campo | Detalle |
+|-------|---------|
+| **Objetivo** | Ganar `arenado de fachadas/paredes`, `limpieza de ladrillo a la vista` y `restauración de fachada`, hablándole a un arquitecto, encargado de obra o dueño de un frente. |
+| **CTA principal** | `WhatsAppCTA` inline en varios bloques, con mensaje pre-cargado que pide dirección, tamaño y plazo. |
+| **CTAs secundarios** | Links a los 4 casos industriales; link a `/servicios` (estructuras/tanques) y `/arenado-de-piletas`. |
+| **Alcance** | Fachadas, frentes, paredes, ladrillo a la vista, restauración de edificios. Vigas/estructuras metálicas/tanques/silos siguen apuntando a `/servicios`, que ya convierte con esas keywords. |
+| **Intención SEO** | `arenado de fachadas/paredes`, `limpieza de ladrillo a la vista`, `restauración de fachada`. |
+| **Conversiones** | `contact_whatsapp` desde los CTAs inline y desde el flotante. |
+
+**Metadata:** title `Arenado de fachadas y restauración de frentes en obra`.
+
+**Bloques:** hero por el problema · el problema sin jerga · "¿qué es el arenado?" en criollo · cómo trabajamos por sectores (3 pasos) · qué incluye/qué no · `EsquemaEquipo` · prueba real · por qué confiar · zonas AMBA · FAQ con schema `FAQPage` (`faqsFachadas`, 12 preguntas) · CTA final · enlazado interno.
+
+⚠️ **Hueco conocido, no tapable por código:** no hay ninguna foto publicada de
+una fachada, pared o ladrillo a la vista arenado. La sección de prueba real usa
+los 4 casos industriales (estructuras metálicas) explícitamente por lo que sí
+prueban — trabajo en obra en marcha, por sectores, sin frenar otras cuadrillas
+y en la vía pública — nunca presentados como si fueran trabajos de fachada.
+Pendiente: pedir fotos de fachada al dueño.
 
 ---
 
@@ -192,7 +223,7 @@ Slugs generados desde `projectsInfo.json` (campo `idSection`):
 | Mecanismo | Ubicación | Evento / acción |
 |-----------|-----------|-----------------|
 | **WhatsApp flotante** | `layout.tsx` → `WppBtn` (**uno solo**) | `contact_whatsapp` tras confirmar el modal |
-| **CTAs inline de WhatsApp** | `WhatsAppCTA` en `/contacto` y `/arenado-de-piletas` | `contact_whatsapp` tras confirmar el modal |
+| **CTAs inline de WhatsApp** | `WhatsAppCTA` en `/contacto`, `/arenado-de-piletas` y `/arenado-de-fachadas` | `contact_whatsapp` tras confirmar el modal |
 | **Header / Footer** | Link **Contactanos** → `/contacto` | Navegación |
 
 ---
@@ -219,4 +250,4 @@ Prioridad de negocio (`.cursorrules`): maximizar el contacto calificado por What
 5. Enlazarla desde Header/Footer o desde una página relevante (nada huérfano).
 6. **Actualizar este archivo.**
 
-⚠️ Nuevas landings por rubro (`/servicios/arenado-*`) **no se crean sin decisión explícita** (`CLAUDE.md`). La excepción aprobada fue `/arenado-de-piletas`.
+⚠️ Nuevas landings por rubro (`/servicios/arenado-*`) **no se crean sin decisión explícita** (`CLAUDE.md`). Las excepciones aprobadas son `/arenado-de-piletas` y `/arenado-de-fachadas` (28/09/2026).
