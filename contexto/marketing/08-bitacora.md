@@ -12,6 +12,146 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-09-30 (2) — ⭐ Directiva del dueño: el presupuesto no es la restricción, el objetivo es el puesto 1
+
+**Textual:** *"el presupuesto no es el problema, en casi 2 meses cargamos 200 mil y podríamos haber cargado más sin problema. Tenemos que apuntar a ser los líderes del puesto 1 en anuncio y conversiones."*
+
+Es una directiva permanente, no un comentario sobre una semana. **Reemplaza el marco con el que se venía operando**, que trataba la plata como el recurso escaso.
+
+### Lo que deja de valer
+
+Todo razonamiento del tipo "conviene ahorrar en tal keyword" o "subamos de a 20-30%" pierde prioridad. **El techo de gasto deja de ser un criterio de decisión.** Referencias: gasto real 18/08→30/09 = **146.194 en 44 días (~100.000/mes)**, contra presupuestos ya autorizados de 6.750/día (**~202.000/mes**) y un guardián en **300.000/mes**. Hay margen de sobra sin tocar nada.
+
+### ⚠️ Pero "puesto 1" y "conversiones" pueden ser dos estrategias opuestas
+
+Hay que decirlo claro para no perseguir las dos con la herramienta equivocada:
+
+- **"Cuota de impresiones objetivo"** compra posición y **ignora las conversiones**. Te pone primero incluso en búsquedas que nunca convierten.
+- **"Maximizar conversiones"** optimiza contactos y te deja en la posición que sea eficiente.
+
+**El criterio que queda fijado: puesto 1 EN LO QUE CONVIERTE, no en todo.** Comprar el primer puesto en búsquedas muertas es la forma más cara de tirar plata, y la cuenta ya tiene cuatro clústeres probados que no convierten (óxido, sin-jerga, restaurar, cómo-pintar).
+
+### ⚠️ Y el presupuesto tampoco es la palanca — está medido
+
+Más plata no compra más alcance en esta cuenta: **ya nos llevamos el 79% de las impresiones disponibles en piletas** y el mercado son ~17 búsquedas por día. Obra usa el 63% de su presupuesto y General-Marca el 39%: **no gastan lo que ya tienen porque no hay más gente buscando.**
+
+**Lo que sí lleva al puesto 1**, en orden:
+
+1. **Estrategia de puja** — Maximizar conversiones (pendiente, lunes 05/10). Es lo único que puja alto donde vale la pena.
+2. **Nivel de calidad** — el Ad Rank es puja × calidad. Subir calidad te sube de posición sin pagar más.
+3. **Recursos del anuncio** — enlaces de sitio, textos destacados. Ocupan más pantalla, cuestan cero. Hoy faltan (Google lo avisa).
+4. **Presupuesto** — el último de la lista, y hoy no está frenando nada.
+
+### La métrica del objetivo
+
+| | Hoy | Objetivo |
+|---|---|---|
+| Parte superior absoluta — Piletas | **14,10%** | 50-60% |
+| Parte superior absoluta — cuenta | 16,38% | — |
+| `piscinasbuenosaires.com.ar` | **62,31%** | ← la referencia a superar |
+
+**Ese porcentaje pasa a ser un KPI de seguimiento semanal**, junto al CPA y las conversiones. Es el número que dice si estamos siendo líderes o no.
+
+- **Resultado esperado y cuándo revisarlo:** se mide todas las semanas de acá en adelante. Primera lectura con los cambios de puja: **05/10**.
+- **Resultado real:** (completar)
+
+## 2026-09-30 — Auditoría completa: dos fugas de configuración que nunca se habían mirado
+
+- **Qué se hizo:** auditoría de las 8 áreas del playbook de modo experto sobre landing y campañas, con datos reales del 18/08 al 30/09. Se corrigió la segmentación de ubicación en 2 campañas y se subió el tope de CPC de Piletas. **Se auditaron por primera vez las áreas 5 (anuncios y recursos), 6 (configuraciones enterradas) y 8 (competencia)**, que el propio playbook marcaba como "nunca revisadas en esta cuenta".
+
+### La foto completa de la cuenta (18/08 → 30/09)
+
+**146.194 ARS · 542 clics · 78 conversiones · CPA 1.874**
+
+| Grupo | Coste | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `ag_pileta-jerga` | 51.146 | 211 | 9,25% | **42** | **1.218** |
+| `ag_obra-restauracion` | **43.680** | 147 | 6,33% | 13 | **3.360** |
+| `ag_pymes-galpon` | 28.526 | 92 | 5,41% | 12 | 2.377 |
+| `ag_genericos` | 15.260 | 56 | 3,67% | 11 | 1.387 |
+| `ag_pileta-sin-jerga` (pausado 14/09) | 6.222 | 25 | 8,87% | **0** | — |
+| `ag_marca` | 1.359 | 11 | 20,75% | 0 | — |
+
+### 🔴 Hallazgo 1 — `AR-Search-Piletas` y `AR-Search-General-Marca` estaban en "Presencia **o interés**"
+
+Obra estaba bien en "Presencia"; las otras dos no. Esa opción muestra avisos a gente que **no está en el AMBA** pero que Google considera interesada en la zona. Explica las búsquedas `arenados en cordoba`, `arenados en mendoza` y `arenado mar del plata` que venían apareciendo en los informes sin explicación.
+
+**Corregido a "Presencia" en las dos el 30/09.** No costó nada y no tiene contraindicación: el negocio no puede atender Córdoba.
+
+⚠️ **Lección de método:** esto estuvo corriendo **desde el encendido del 20/08**, seis semanas, y ningún informe semanal lo mostraba. Las configuraciones no aparecen en los reportes de rendimiento: **hay que ir a mirarlas.** El playbook marcaba el área como pendiente desde julio.
+
+### 🔴 Hallazgo 2 — `ag_obra-restauracion-estructuras` es el agujero de eficiencia
+
+**43.680 ARS con 13 conversiones: CPA 3.360**, contra 1.874 de promedio de cuenta. Es el **30% de todo lo gastado** y el peor rendimiento entre los grupos que convierten.
+
+Parte ya se atacó el 28/09 sacándole el clúster de fachadas (7.014 sin convertir) a su propia landing. **Falta ver el 05/10 si con eso alcanza.** Es el próximo frente después de la puja.
+
+### 🟠 Hallazgo 3 — Hay un competidor comprando el primer puesto (primera vez que se mira)
+
+| | Cuota impr. | Superposición | **Parte sup. absoluta** |
+|---|---|---|---|
+| **Nosotros** | **38,85%** | — | **14,10%** |
+| `piscinasytanquesae.com.ar` | 33,21% | **35,50%** | 17,74% |
+| `piscinasbuenosaires.com.ar` | 14,58% | 5,87% | **62,31%** |
+| `mercadolibre.com.ar` | 13,21% | 18,28% | 27,63% |
+
+Dos lecturas:
+
+1. **`piscinasytanquesae` es el competidor real:** cuota parecida a la nuestra y **superposición del 35,5%** — aparece con nosotros en 1 de cada 3 subastas.
+2. **`piscinasbuenosaires` aparece la mitad de veces que nosotros y sale primero 4 veces más seguido.** Está pagando por posición y nosotros no.
+
+### 🟠 Hallazgo 4 — Faltan enlaces de sitio
+
+Google lo dice textual en el anuncio de marca: *"Añade 6 enlaces de sitio más a tu anuncio"*. Son CTR gratis. **Pendiente:** revisar `Anuncios y recursos → Recursos`, y de paso cazar los **5 sitelinks heredados de la cuenta vieja** anotados como pendientes desde agosto.
+
+### ✅ Lo verificado que está bien (y no se toca)
+
+- **Redes destildadas** en las 3 — sin Display ni socios de búsqueda.
+- **Recomendaciones automáticas DESACTIVADAS.** Era la trampa #1 documentada del proyecto; está cerrada.
+- Idioma español · rotación "Optimizar" (irrelevante con un solo anuncio por grupo).
+- **Eficacia del anuncio "Media" (y "Baja" en obra): se deja como está.** Es consecuencia del fijado de títulos, que es una decisión deliberada para garantizar que el aviso diga los límites. La eficacia **no entra en el Ad Rank ni en el nivel de calidad**.
+- **Nivel de calidad:** los 3 componentes medidos. Todo "por encima de la media" salvo la página en "Media" — **descartado como ruido**: la misma página saca "Por encima" en `arenar pileta` y "Media" en las otras, con 35 a 186 impresiones cada una.
+
+### ✅ La landing: cero hallazgos reales
+
+Detector con motor de navegador sobre producción: 11 hallazgos en piletas, 12 en fachadas, **todos el mismo falso positivo ya documentado en agosto**. Verificado midiendo en el navegador: el contenedor tiene padding 0 pero **el hijo tiene 32px**, y los ítems del acordeón quedan pegados al filete porque están colapsados y no tienen alto.
+
+Velocidad medida en celular con 3G emulado: **490 KB, LCP 1,7 s, imágenes servidas 35 KB** (Next/Image convierte 1,2 MB de origen). No es lenta.
+
+### Cambios ejecutados el 30/09
+
+1. **Ubicación → "Presencia"** en `AR-Search-Piletas` y `AR-Search-General-Marca`.
+2. **Tope de CPC de Piletas: 350 → 500.** Solo piletas, por la temporada. Obra y Marca quedan en 350.
+
+⚠️ **Se aceptan dos cambios juntos a propósito** (presupuesto a 3.000 el 29/09 + tope a 500 el 30/09): la temporada de piletas cierra en diciembre y los dos empujan para el mismo lado. **La contra: no vamos a poder atribuir cuál hizo qué.**
+
+- **Resultado esperado y cuándo revisarlo:** lunes **05/10**. La métrica es **`% de impr. (parte sup. abs.)` de Piletas: hoy 14,10%, objetivo 25-30%.** No mirar impresiones: ya nos llevamos el 79% de lo disponible, no hay más para ganar ahí. **Corte:** si el CPA de piletas pasa de 2.500 sin más conversiones, el tope vuelve a 350.
+- **Resultado real:** (completar)
+
+### 📌 Anotado para el lunes 05/10 — Maximizar conversiones en Piletas
+
+Pedido explícito del dueño el 30/09. Es el cambio pendiente con más rendimiento de todo lo que queda.
+
+- **Por qué ahora sí:** el criterio del proyecto era ≥15-30 conversiones limpias por mes. **Piletas sola lleva 42 en 44 días (~29/mes)** y la cuenta entera ~46. Se cumple de sobra.
+- **Por qué importa más después de esta auditoría:** "Maximizar clics" tiene la orden de traer **clics baratos**, no de ganar posición. Subirle el tope a 500 le da margen, pero puede usarlo comprando más clics baratos en vez de pelear el primer puesto. **Maximizar conversiones es lo único que usa ese margen con criterio:** puja alto solo cuando la persona se parece a las que ya escribieron.
+- **Lo que hay que aceptar:** 1-2 semanas de aprendizaje donde el rendimiento empeora, y **se pierde el tope de CPC** (esa estrategia no lo tiene). Con un trabajo de pileta a ~800.000 y un CPA actual de 1.218, hay margen de sobra.
+- ⚠️ **Precondición:** leer primero el resultado del 05/10. Encadenar un tercer cambio antes de entender los dos de esta semana haría ilegible todo.
+
+## 2026-09-28 (3) — Reactivadas las 5 keywords de fachada, apuntando a la landing nueva
+
+- **Qué se hizo:** en `AR-Search-Obra-Industrial` → `ag_obra-restauracion-estructuras` se reanudaron `"arenado de paredes"`, `[arenado de paredes]`, `"arenado de fachadas"`, `"limpieza de ladrillo a la vista"` y `"restauración de fachada"`, **con URL final a nivel keyword** apuntando a `https://www.arenadoslucho.com/arenado-de-fachadas`.
+- **Las otras 19 keywords del grupo siguen en `/servicios`** — `empresa de arenado`, `arenados industriales`, tanques, silos y metales convierten ahí y moverlas rompería lo único que funciona en obra.
+- **Por qué alcanzó con cambiar la URL y no hizo falta un grupo nuevo:** el RSA de ese grupo **ya tenía titulares de fachada** (`Arenado en obra y fachadas`, `Arenado de paredes y frentes`, `Arenado de ladrillo a la vista`). El aviso siempre estuvo bien; lo que fallaba era dónde aterrizaba. Ese matiz importa: el diagnóstico del 28/09 era "message match", y resultó ser message match **de la landing**, no del anuncio.
+
+### ⚠️ Lo que hay que vigilar: estas keywords traen otro comprador
+
+Las 5 reactivadas van a traer **dueños de casa** (ticket ~400.000, 1-2 días), no obra (millones, ~1 semana). Van a convivir en la misma campaña y con el mismo presupuesto que las keywords de ticket alto.
+
+**Si el volumen crece, separarlas en su propia campaña.** Mezclar dos tickets que difieren en un orden de magnitud dentro de la misma bolsa hace ilegible el CPA y le impide a la puja automática distinguir qué conviene. **No se hace ahora**: primero hay que ver si convierten. Es una decisión con datos, no preventiva.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **05/10** para ver si aparecen impresiones y clics, y **12/10** para leer conversión con dos semanas. Venían de 22 clics y 0 conversiones; con la página nueva, convertir 1 de cada 10 ya es un trabajo de 400.000 cada dos semanas.
+- **Resultado real:** (completar)
+
 ## 2026-09-28 (2) — Se crea `/arenado-de-fachadas`, y la premisa con la que arrancó era falsa
 
 - **Qué se hizo:** se creó la landing `/arenado-de-fachadas` (obra y restauración de

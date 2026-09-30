@@ -169,18 +169,30 @@ export default function ArenadoDePiletasPage() {
         </div>
       </section>
 
-      {/* 2. BANDA ESTACIONAL (rotable — HOY: invierno) */}
+      {/* 2. BANDA ESTACIONAL (rotable — HOY: temporada, sep→feb) */}
       <section className="bg-tinta">
         <div className="container mx-auto px-5 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
             <CalendarClock className="w-9 h-9 text-tinta-20 flex-shrink-0" />
             <div className="flex-1">
-              <p className="text-papel font-bold text-lg">Aprovechá el invierno: turno inmediato y llegás al verano con la pileta lista</p>
-              <p className="text-tinta-20 text-sm md:text-base max-w-[68ch]">En verano los turnos se llenan. Si la arenás ahora, conseguís turno enseguida y llegás a la temporada con el trabajo pesado ya hecho.</p>
+              {/* ⚠️ BLOQUE ESTACIONAL — hay que rotarlo dos veces al año.
+                  Estuvo en modo invierno hasta el 29/09/2026, un mes entrado en
+                  la temporada: le decía "aprovechá el invierno" a alguien que
+                  entra en primavera. Es el primer bloque que se ve, así que
+                  desalinearlo cuesta conversiones.
+
+                  · TEMPORADA (sep → feb) — el texto de abajo, el que está puesto.
+                  · ANTICIPACIÓN (mar → ago):
+                      "Aprovechá el invierno: turno inmediato y llegás al verano con la pileta lista"
+                      "En verano los turnos se llenan. Si la arenás ahora, conseguís turno enseguida y llegás a la temporada con el trabajo pesado ya hecho."
+                      CTA: "Reservar turno"
+                  Registrar cada rotación en marketing/08-bitacora.md. */}
+              <p className="text-papel font-bold text-lg">Estamos en plena temporada: si la querés lista para el verano, es ahora</p>
+              <p className="text-tinta-20 text-sm md:text-base max-w-[68ch]">De septiembre a diciembre es cuando todos preparan la pileta, y los turnos se llenan. Contanos cómo está la tuya y coordinamos la visita esta semana.</p>
             </div>
             <WhatsAppCTA message={WPP_DUENO} className={WPP_BTN + " flex-shrink-0"}>
               <MessageCircle className="w-5 h-5" />
-              Reservar turno
+              Pedir turno
             </WhatsAppCTA>
           </div>
         </div>
