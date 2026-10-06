@@ -12,6 +12,64 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-10-06 (4) — Se reemplaza la tanda de anuncios de Meta: de 8 piezas a 6, con públicos más finos
+
+- **Qué se hizo:** por pedido del dueño se **reemplazó por completo** la tanda de anuncios de Meta en [`21-meta-ads.md`](./21-meta-ads.md) §4. Los 8 anteriores (P1-P3, O1-O3, M1-M2) quedan **sin efecto**. La nueva tanda son **6** (A1-A6), con públicos más específicos y un tono más comercial. **Nada se ejecutó en Meta**: la campaña sigue en borrador y sin método de pago.
+- **Por qué:** el brief pedía separar mejor a quién le habla cada pieza — particular con pileta, piletero, metalúrgica con mucha pieza, industria con tanques, y marca.
+
+### La tanda nueva
+
+| | Anuncio | Público | Destino |
+|---|---|---|---|
+| **A1** | Pileta descascarada ⭐ | Dueño de casa, no sabe que esto se llama arenado | `/arenado-de-piletas` |
+| **A2** | Piletero: tercerizá | Piletero y contratista — **cliente recurrente** | `/arenado-de-piletas` |
+| **A3** | Estructuras y mucha pieza | Metalúrgica, herrería, PYME con galpón | `/servicios` |
+| **A4** | Industria: tanques | Planta, depósito, mantenimiento | `/servicios` |
+| **A5** | Marca | Reconocimiento | `/casos-de-exito` |
+| **A6** | ¿Qué es el arenado? | Descubrimiento de categoría | `/servicios` |
+
+### ⭐ A6 se recomienda, y es el que más puede rendir a largo plazo
+
+El dueño pidió evaluar una variante de descubrimiento: *"pensalo como una lija, pero a mucha más potencia"*. **Vale, y mucho.** Todo el plan arranca de que el comprador de piletas **no sabe que el servicio se llama arenado**; los otros cinco anuncios esquivan el problema hablando del síntoma. **A6 ataca la causa: enseña la categoría.**
+
+⚠️ **Con una condición: va en la campaña de marca, no en las de venta.** Trae curiosidad, no intención. Si entra con A1, le come presupuesto a la que convierte y ensucia el aprendizaje. **Se mide por alcance y reproducciones, no por costo por lead.** Juzgarlo con la vara de A1 lleva a apagar justo el que estaba resolviendo el problema de fondo.
+
+Y es el más barato de producir: **un operario, un celular, veinte segundos** de chorro comiendo pintura. Hay 2 equipos trabajando todos los días.
+
+### 🔴 El riesgo que trae el brief, y cómo se neutralizó
+
+El brief pedía hablar de *"muchas piezas"* y de *"metalúrgicas y herrerías que necesitan preparar grandes cantidades de piezas"*.
+
+**La palabra "piezas" sola es cara.** En Google Ads, `arenado de metales` acumuló **5.855 ARS y 19 clics sin una sola conversión** y se pausó el 05/10. Las búsquedas que traía: `arenado de piezas`, `arenado de muebles metalicos`, `arenado de sillones de hierro`. **Son piezas sueltas chicas, y el negocio no las toma** (`21-realidad-operativa.md`:103-104, y no hay taller).
+
+**Cómo quedó A3:** nunca "piezas" a secas. Siempre **"de gran tamaño, en cantidad"** y **"en tu planta, galpón u obra"**. Y una advertencia explícita en el doc: si el creativo muestra una pieza chica suelta, el anuncio trae el mismo tráfico que Google acaba de matar.
+
+### Otras correcciones al brief
+
+- **"Más de 20 años de oficio"** → se escribió **"20 años de oficio"**, que es la única forma aprobada. *"+20 años de experiencia"* fue la **afirmación falsa #1** del proyecto; la empresa tiene ~8 años.
+- **Tanques** → siempre **"por fuera"** en el cuerpo del copy. El interior se hace, pero como subcontratistas y bajo permiso ajeno.
+- **A3 y A4 van en el MISMO conjunto de anuncios.** Son dos ángulos del mismo producto y el comprador se superpone. Separarlos parte un presupuesto que ya es chico y deja a los dos sin salir de la fase de aprendizaje (Meta pide ~50 conversiones/semana **por conjunto**).
+
+### ✅ Decisión del dueño: el radio se centra distinto según el ticket
+
+El brief decía **60 km de Del Viso**; las campañas de Google usan **60 km de CABA**. No es lo mismo: desde Del Viso se cubre Pilar, Escobar, Luján y Campana pero se pierde toda la Zona Sur; desde CABA se cubre el AMBA entero.
+
+**Aprobado el 06/10:**
+
+| Campaña | Centro del radio | Por qué |
+|---|---|---|
+| `MT-Piletas-Temporada` | **Del Viso** | Ticket ~800.000 y **un día de trabajo**: el viaje tiene que ser corto o se come el margen |
+| `MT-Obra-PYME-InSitu` | **CABA** | Ticket de millones y ~una semana: **banca el viaje** |
+
+Es la misma lógica que `ads-config/05-configuracion-campanas.md` ya aplica en Google: *"Piletas y General-Marca no se amplían nunca: el ticket no soporta el viaje"*. **La diferencia es que acá el criterio se vuelve geográfico y no solo de presupuesto.**
+
+### Nota de alcance
+
+El brief asumía que los anuncios estaban **implementados en el sitio** —componentes, estilos, assets, un sistema de preview— y pedía reutilizar componentes y verificar en mobile. **No es así, y está bien que no lo sea:** los anuncios de Meta se arman en el Administrador de Anuncios, no en el código. En el repo viven como **copy y dirección de arte** en `21-meta-ads.md`. No se tocó una sola línea de `src/`.
+
+- **Resultado esperado y cuándo revisarlo:** nada que medir todavía. Los anuncios se cargan cuando estén las imágenes (las diseña el dueño) y cuando la cuenta tenga método de pago. El primer dato útil sale a los 14 días de encender A1.
+- **Resultado real:** (completar)
+
 ## 2026-10-06 (3) — Se abre Meta: píxel en producción, y el plan se corrigió dos veces contra la cuenta real
 
 - **Qué se hizo:** primera sesión operativa en Meta, en modo guiado. Se creó el portafolio empresarial, se dio de alta el **píxel** y quedó **publicado en GTM**. Se armó la campaña de piletas **en borrador**. De paso se limpiaron cuatro elementos huérfanos del contenedor. **No se publicó ningún anuncio y no se gastó un peso** — la cuenta todavía no tiene método de pago.

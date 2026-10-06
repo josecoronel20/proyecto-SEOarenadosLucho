@@ -14,8 +14,13 @@
 > | "No existe píxel" | ✅ Ya existe: **`28636604982615375`**, publicado en GTM el 06/10. |
 > | Fase 2 a 5.000 ARS/día | ⚠️ **No entra.** Meta pone un techo de **3.399,40/día** a cuentas nuevas; sube solo con historial de pagos. |
 >
-> Lo que **sí** sigue vigente: todo el razonamiento estratégico, los 8 anuncios con
-> su copy, la segmentación, el presupuesto y los KPIs.
+> Lo que **sí** sigue vigente: todo el razonamiento estratégico, la segmentación,
+> el presupuesto y los KPIs.
+>
+> 🔄 **Y los anuncios se reemplazaron por completo el mismo 06/10.** La tanda
+> original de 8 piezas (P1-P3, O1-O3, M1-M2) **quedó sin efecto**: no se usa
+> ninguna. La vigente es la de **§4**, seis anuncios (A1-A6) con públicos más
+> específicos, a pedido del dueño.
 >
 > Todo el copy de este archivo está verificado contra
 > [`contexto/21-realidad-operativa.md`](../21-realidad-operativa.md) y contra la
@@ -193,197 +198,315 @@ Si falta una foto, **se pide la foto, no se genera**.
 
 ---
 
-## 4. Los 8 anuncios
+## 4. Los anuncios
 
-> Formato Meta: la **primera línea del texto principal** es casi todo — en celular
-> se corta cerca de los 125 caracteres y ahí aparece "ver más". Todas las primeras
-> líneas de abajo entran completas.
+> **Tanda vigente desde el 06/10/2026.** Reemplaza por completo a la anterior de
+> 8 piezas (P1-P3, O1-O3, M1-M2), que queda sin efecto: no se usa ninguna.
+> El cambio responde a un brief del dueño que pide públicos **más específicos** y
+> una comunicación **más comercial**.
+
+### Cómo leer esta sección
+
+Cada anuncio trae **lo que se pega en Meta** (texto principal, título,
+descripción, botón) y **la dirección del creativo** — qué tiene que mostrar y qué
+frase va encima de la imagen. **Las imágenes las diseña el dueño**; acá va el
+qué y el porqué, no el archivo.
+
+> **Formato Meta, lo que manda:** en celular el texto principal se corta cerca de
+> los **125 caracteres** y recién ahí aparece "ver más". **La primera línea es casi
+> todo el anuncio.** Todas las de abajo entran completas.
 >
-> Todo verificado contra la lista de bloqueo: sin `granallado`, `sa3`, `iso 8501`,
-> `metal blanco`, `perfil de anclaje`, `rugosidad`, `micras`, `certific-`, `norma`,
-> `garantizamos`, `mediciones`. Sin "contenemos el polvo", sin "sumamos equipos",
-> sin "años de experiencia", sin "sacamos el revestimiento".
+> El título se trunca cerca de los **40 caracteres**. La descripción casi nunca se
+> muestra; vale como refuerzo, no como información necesaria.
 
-### 4.1 Piletas
+**Todos pasaron la lista de bloqueo** (`18-copy-ads.md` §Bloqueo): sin
+`granallado`, `sa3`, `iso 8501`, `metal blanco`, `perfil de anclaje`, `rugosidad`,
+`certific-`, `norma`, `garantizamos`, `mediciones`. Y sin las afirmaciones falsas
+ya publicadas: nada de contener el polvo, ni de sumar equipos, ni de "años de
+experiencia", ni de sacar revestimientos de piletas.
 
-#### P1 — "El tercer camino" ⭐ *el principal*
+---
+
+### A1 — Pileta descascarada ⭐
+
+**Quién:** dueño de casa con pileta de hormigón pintada, la pintura se levanta.
+**No sabe que esto se llama arenado.**
 
 > **Texto principal**
-> Si la pintura de la pileta se descascara, pintar encima no sirve: al verano siguiente está igual.
+> ¿La pintura de la pileta se está descascarando y se cae en pedazos?
 >
-> Sacamos toda la pintura vieja del hormigón, en tu casa, con equipo propio. Te la dejamos limpia y pareja, lista para que la repintes o la revistas. Sin lijar a mano ni rascar.
+> Pintar encima no lo soluciona: al verano siguiente está igual. Primero hay que sacar toda la pintura vieja y lo que esté flojo.
 >
-> Una pileta estándar queda lista en el día. Trabajamos en CABA y todo el AMBA.
+> Con arenado se la sacamos del hormigón de una sola vez, sin lijar a mano, y te la dejamos limpia y pareja, lista para repintar o revestir. Vamos a tu casa con equipo propio y una pileta estándar queda lista en el día.
 >
-> Mandanos una foto por WhatsApp y te decimos qué necesita. La visita y el presupuesto son sin costo.
+> Mirá trabajos reales y mandanos una foto por WhatsApp. La visita y el presupuesto son sin costo.
 >
-> **Título:** La pileta, lista para pintar
+> **Título:** ¿Pileta descascarada?
+> **Descripción:** Arenado de piletas de hormigón, in situ
+> **Botón:** Más información
+> **Destino:** `/arenado-de-piletas` ⬅ **nunca la home ni `/servicios`**
+
+**Creativo — antes / después, y en ese orden**
+
+| | |
+|---|---|
+| **Formato** | Carrusel de 3, o video vertical de 15 s |
+| **1** | **Antes**: pintura celeste levantada, a pedazos. Primer plano, que se vea el daño. |
+| **2** | **El trabajo**: el chorro sacando pintura. Es la imagen que explica el servicio sin una palabra. |
+| **3** | **Después**: hormigón gris, limpio y parejo. |
+| **Frase sobre la imagen 1** | **"¿Así está tu pileta?"** |
+| **Frase sobre la imagen 3** | **"Lista para pintar"** |
+
+**Assets que ya existen:** `public/images/services/arenadoParticular/Piletas` tiene
+**3 pares antes/después probables** (`2454→2455`, `2456→2457`, `2478→2479`).
+⚠️ Están en **828×828** y Meta pide 1080 mínimo — hacen falta los originales del
+celular. Y los pares **no están etiquetados**: hay que confirmar cuál es antes y
+cuál después antes de publicar.
+
+**Por qué así:** esta persona tiene dos opciones en la cabeza —pintar encima otra
+vez, o romper todo y hacerla de nuevo— y las dos son malas. **El anuncio existe
+para mostrarle una tercera que no sabe que existe.** Por eso arranca con el
+problema en sus palabras y la palabra "arenado" aparece recién en el tercer
+párrafo.
+
+---
+
+### A2 — Piletero / contratista
+
+**Quién:** piletero, constructor, mantenimiento. **Cliente recurrente**: varias
+piletas por temporada, no una.
+
+> **Texto principal**
+> ¿Hacés o mantenés piletas? No pierdas días sacando pintura vieja a mano.
+>
+> Tercerizá el arenado: vamos con equipo propio, sacamos toda la pintura y el material flojo del hormigón y te entregamos la pileta lista para que vos hagas la pintura o el revestimiento.
+>
+> Precio cerrado por pileta, así lo cargás a tu presupuesto sin sorpresas. Tenemos 2 equipos: en temporada podemos con varias seguidas.
+>
+> Vos seguís con tu obra. Nosotros hacemos la parte pesada.
+>
+> **Título:** Piletero: tercerizá el arenado
 > **Descripción:** Precio cerrado por pileta
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** par antes/después de pileta (`IMG_2454` → `IMG_2455`)
+> **Botón:** Enviar mensaje
+> **Destino:** `/arenado-de-piletas`
 
-**Por qué:** ataca directo el modelo mental equivocado ("pinto encima"). Es el
-único de los tres que *enseña* algo, y por eso es el que debería ganar.
+**Creativo — tiene que verse trabajo, no casa**
 
-#### P2 — "El reloj de la temporada"
+| | |
+|---|---|
+| **Formato** | Imagen única 4:5, o carrusel de 2 |
+| **Qué muestra** | El equipo trabajando: compresor, manguera, arenador con casco. **Contexto de obra, no de jardín.** |
+| **Frase sobre la imagen** | **"Vos seguís con la obra. Nosotros hacemos la parte pesada."** |
+| **Apoyo** | Un sello chico: **"Precio cerrado por pileta"** |
 
-> **Texto principal**
-> Para tenerla lista en diciembre, el trabajo se hace ahora.
->
-> Vamos a tu casa, sacamos toda la pintura vieja del hormigón y te la dejamos lista para repintar o revestir. Pileta estándar, lista en el día.
->
-> 2 equipos con compresores propios. CABA y todo el AMBA.
->
-> Mandanos una foto por WhatsApp y coordinamos la visita. Sin costo.
->
-> **Título:** ¿La querés lista para el verano?
-> **Descripción:** Visita y presupuesto sin costo
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** carrusel — antes · después · equipo trabajando
+⚠️ **Lo que NO debe parecer:** una casa linda con una pileta celeste. Si se
+confunde con el A1, los dos compiten por la misma gente y ninguno encuentra al
+piletero.
 
-**Por qué:** urgencia **real**, no inventada. La temporada va de agosto a diciembre
-(`PRODUCT.md`:38) y la landing ya tiene ese mismo mensaje. Caduca sola en febrero:
-**rotar el bloque en marzo** igual que se rota el de la landing.
+**Por qué así:** un piletero vale 5 trabajos, no uno. Y "tercerizá" es la palabra
+que lo hace sentir socio y no cliente — no le estás vendiendo a él, le estás
+sacando el trabajo que odia.
 
-#### P3 — "Pileteros" *(fase 2)*
+---
 
-> **Texto principal**
-> Si arreglás piletas, el arenado te lo hacemos nosotros.
->
-> Vamos con equipo propio, sacamos toda la pintura vieja del hormigón y te la entregamos lista para que la revistas o la pintes. Precio cerrado por pileta: lo cargás a tu presupuesto sin sorpresas.
->
-> Tenemos 2 equipos: en temporada podemos con varias seguidas.
->
-> Escribinos por WhatsApp y coordinamos.
->
-> **Título:** Arenado para pileteros
-> **Descripción:** Trabajamos con pileteros
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** después, limpio y parejo (el "producto terminado" que él revende)
+### A3 — Estructuras, metalúrgicas y mucha pieza
 
-**Por qué:** el piletero es **cliente recurrente** — varias piletas por temporada
-(`PRODUCT.md`:11-17). Un cliente vale 5 trabajos, no uno. Y la pregunta "¿sos
-piletero?" filtra sola, sin segmentación.
-
-### 4.2 Obra / PYME con galpón
-
-#### O1 — "No hace falta moverlas" ⭐ *el principal*
+**Quién:** metalúrgica, herrería grande, PYME con galpón propio. Tiene estructuras
+montadas o cantidad de piezas para preparar, **en su propio lugar**.
 
 > **Texto principal**
-> ¿Tenés estructuras oxidadas que no podés mover? No hace falta moverlas.
+> ¿Tenés una estructura montada o mucha pieza para arenar y moverla es un problema?
 >
-> Vamos a tu galpón con equipo y compresores propios. Sacamos el óxido y la pintura vieja ahí mismo y dejamos el metal limpio y parejo, listo para el revestimiento que le pongas. No trasladás nada a ningún taller.
+> No hace falta desarmar ni mandar nada afuera. Vamos a tu planta, galpón u obra con equipo y compresores propios, sacamos el óxido y la pintura vieja ahí mismo y dejamos el metal listo para el revestimiento que le pongas.
 >
-> Cabriadas, estructuras, camiones, acoplados y hierros. CABA y todo el AMBA.
+> Estructuras, cabriadas, camiones, acoplados, hierros y piezas de gran tamaño, en cantidad.
 >
-> Visita y presupuesto sin costo. Escribinos por WhatsApp.
+> Contanos qué tenés para arenar. Visita y presupuesto sin costo en CABA y el AMBA.
 >
-> **Título:** Arenado en tu galpón
-> **Descripción:** No trasladás nada
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** cabriada antes/después, o el acoplado `IMG_2472` → `IMG_2473`
+> **Título:** Arenado en tu planta o galpón
+> **Descripción:** In situ. No trasladás nada
+> **Botón:** Enviar mensaje
+> **Destino:** `/servicios`
 
-**Por qué:** dice el producto entero en la primera línea. Y "no trasladás nada" no
-es una promesa de marketing — es la consecuencia de que el negocio **no tiene
-taller**, o sea que es imposible de incumplir.
+**Creativo — industrial, y que se note el tamaño**
 
-#### O2 — "El polvo, dicho antes" ⭐ *el que nadie más escribe*
+| | |
+|---|---|
+| **Formato** | Imagen única 4:5, o carrusel de 3 |
+| **Qué muestra** | Cabriadas o estructura grande **antes y después** · el acoplado oxidado → gris · el equipo entrando al galpón |
+| **Frase grande** | **"NO TRASLADÁS NADA"** — es el centro de la pieza |
+| **Apoyo** | **"Vamos a tu galpón"** |
 
-> **Texto principal**
-> El arenado hace polvo. No se puede evitar, es parte del trabajo — y por eso te lo decimos antes y no después.
->
-> En la visita te marcamos exactamente qué tapar y hasta dónde llega. El cerramiento lo ponés vos; nosotros vamos con el equipo, arenamos lo que haya que arenar y al terminar retiramos la arena gruesa.
->
-> Estructuras, máquinas, camiones y acoplados, en tu planta, con equipo propio.
->
-> Escribinos por WhatsApp y coordinamos la visita. Sin costo.
->
-> **Título:** Te decimos qué tapar, antes
-> **Descripción:** Visita y presupuesto sin costo
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** `arenando-fachada-altura` (el polvo se ve) o el arenador en andamio
+**Assets que ya existen:** `arenadoParticular/Piezas` tiene **cabriadas antes y
+después** (estructura de galpón, exactamente el público). `arenadoParticular/Vehículos`
+tiene el **acoplado** `IMG_2472` (oxidado) → `IMG_2473` (gris). ⚠️ No hay ninguna
+foto de un galpón como sujeto: si la quieren, hay que sacarla.
 
-**Por qué:** este es el anuncio más valioso de los ocho, y sale directo de
-`21-realidad-operativa.md`:34-44. **"Protegemos la zona" fue una de las cuatro
-afirmaciones falsas que se publicaron, y el archivo la llama "la peor"** porque
-crea una expectativa que se rompe en el lugar.
+🔴 **Cuidado con la palabra "piezas" sola.** En Google Ads, `arenado de metales`
+acumuló **5.855 ARS y 19 clics sin una sola conversión** y se pausó el 05/10: las
+búsquedas eran `arenado de piezas`, `arenado de muebles metalicos`,
+`arenado de sillones de hierro`. **Son piezas sueltas chicas, y el negocio no las
+toma** — `21-realidad-operativa.md`:103-104 las excluye y no hay taller.
 
-Darlo vuelta y decir la verdad hace tres cosas a la vez: no miente, se diferencia
-de todo competidor que promete contención, y **filtra al cliente que después iba a
-reclamar.** La frase está aprobada textual en el archivo.
+Por eso el copy dice siempre **"de gran tamaño, en cantidad"** y **"en tu planta,
+galpón u obra"**. Nunca "piezas" a secas. Si en el creativo se ve una pieza
+chica suelta, el anuncio trae el mismo tráfico que Google acaba de matar.
 
-#### O3 — "El resultado real"
+---
 
-> **Texto principal**
-> El arenado saca el óxido. No rellena el metal: si estaba picado, va a quedar limpio y parejo, pero picado. Preferimos decírtelo antes de ir.
->
-> Lo que sí hacemos: vamos a tu galpón o planta con equipo propio y sacamos óxido y pintura vieja de estructuras, camiones, acoplados y hierros. También tanques y silos por fuera, con la planta andando.
->
-> Precio cerrado por trabajo. Visita sin costo en CABA y el AMBA.
->
-> **Título:** Arenado sin vueltas, in situ
-> **Descripción:** Precio cerrado por trabajo
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** tanque exterior con el arenador trabajando
+### A4 — Industria: tanques y grandes superficies
 
-**Por qué:** gestiona la expectativa que más decepciona (`21-realidad-operativa.md`:150-153)
-y **filtra al comprador técnico**, que es lo que `.cursorrules`:13 pide
-explícitamente. El que busca Sa3 se va solo, sin gastarnos un clic ni una visita.
-
-⚠️ **"tanques y silos por fuera" está escrito así a propósito.** El interior de
-tanques **sí se hace**, pero como subcontratistas y bajo permiso ajeno: publicarlo
-sería la quinta afirmación falsa (`21-realidad-operativa.md`:112-140). **Si alguien
-pregunta por interiores en el chat, la respuesta no es "sí".**
-
-### 4.3 Marca
-
-#### M1 — Remarketing
+**Quién:** planta, depósito, mantenimiento industrial. Tanque o estructura grande
+con años de pintura y óxido.
 
 > **Texto principal**
-> Viste nuestros trabajos y todavía no escribiste.
+> ¿Tu empresa tiene un tanque o una estructura con años de pintura y óxido encima?
 >
-> Somos Arenados Lucho: arenado in situ en Buenos Aires y todo el AMBA. 20 años de oficio, aprendido en familia, y 2 equipos con compresores propios. Vamos a tu obra, a tu galpón o a tu casa.
+> Hacemos arenado in situ para dejar la superficie lista antes de pintar o revestir. Vamos a la planta, al galpón o a la obra con equipos propios y nos adaptamos a las condiciones de cada trabajo, con la planta andando.
 >
-> La visita y el presupuesto son sin costo, y el precio se cierra por trabajo, no por lista.
+> Tanques y silos por fuera, estructuras metálicas, pasarelas y superficies grandes.
 >
-> Mandanos una foto por WhatsApp y te decimos qué necesita.
+> El arenado saca el óxido, no rellena el metal: si estaba picado, va a quedar limpio y parejo, pero picado. Preferimos decirlo antes de ir.
 >
-> **Título:** Arenados Lucho
-> **Descripción:** Buenos Aires y todo el AMBA
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** carrusel con un antes/después de cada rubro (pileta · fachada · estructura)
+> **Título:** Arenado industrial in situ
+> **Descripción:** Estructuras, tanques y grandes superficies
+> **Botón:** Más información
+> **Destino:** `/servicios`
 
-#### M2 — Prueba
+**Creativo — el más industrial de los cinco**
+
+| | |
+|---|---|
+| **Formato** | Imagen única 4:5 |
+| **Qué muestra** | Tanque o silo exterior con el arenador trabajando · estructura naval sobre rampa · pasarela metálica remachada |
+| **Frase grande** | **"ARENADO IN SITU"** |
+| **Apoyo** | **"Con la planta funcionando"** |
+
+**Assets que ya existen:** `arenadoIndustrial/Tanque` (6, todas exteriores),
+`EstructuraNaval` (10), `Pasarela` (9), `Nave` (7, incluye un arenador en andamio
+con casco y máscara — buena foto de capacidad).
+
+⚠️ **"Tanques y silos POR FUERA" está escrito así a propósito.** El interior sí se
+hace, pero como subcontratistas y bajo permiso ajeno: publicarlo sería la quinta
+afirmación falsa (`21-realidad-operativa.md`:112-140). **Si alguien pregunta por
+interiores en el chat, la respuesta no es "sí".**
+
+**Por qué el párrafo del metal picado:** gestiona la expectativa que más
+decepciona y **filtra al comprador técnico** —el que busca Sa3— antes de gastarle
+una visita. Es lo que `.cursorrules`:13 pide explícitamente.
+
+---
+
+### A5 — Marca
+
+**Quién:** gente y empresas que pueden necesitar arenado y no conocen Arenados
+Lucho. Es la pieza de reconocimiento.
 
 > **Texto principal**
-> Así queda una pared después de arenarla. Sin lijar a mano, sin rascar.
+> ¿Tenés algo que necesita arenado?
 >
-> Arenado in situ en Buenos Aires y el AMBA: paredes, fachadas, ladrillo a la vista, estructuras, camiones y piletas de hormigón. Equipo y compresores propios — vamos nosotros, no trasladás nada.
+> Sacamos pintura vieja, óxido y material flojo, y dejamos la superficie lista para pintar o revestir. Estructuras metálicas, tanques por fuera, silos, camiones, piletas de hormigón y superficies grandes.
 >
-> 20 años de oficio. Visita y presupuesto sin costo.
+> Trabajamos in situ: vamos a la obra, al galpón o a tu casa con equipo y compresores propios. No trasladás nada.
 >
-> Escribinos por WhatsApp.
+> 20 años de oficio, aprendido en familia, en Buenos Aires y todo el AMBA. Mirá los trabajos que hicimos.
 >
-> **Título:** Mirá los trabajos que hicimos
-> **Descripción:** Fotos reales de antes y después
-> **Botón:** Enviar mensaje de WhatsApp
-> **Creativo:** los 4 pares de fachada (`frente-casa`, `muro-ladrillo`, `ladrillo-visto`, `esquina`)
+> **Título:** Arenados Lucho — Arenado in situ
+> **Descripción:** Preparación y limpieza de superficies
+> **Botón:** Más información
+> **Destino:** `/casos-de-exito`
 
-### 4.4 Lo que ninguno de los ocho dice, y por qué
+**Creativo — variedad, y la marca presente**
+
+| | |
+|---|---|
+| **Formato** | Carrusel de 4, **un rubro por tarjeta** |
+| **1** | Pileta: antes → después |
+| **2** | Fachada o muro de ladrillo: antes → después |
+| **3** | Estructura metálica o tanque |
+| **4** | Cierre de marca: logo **Arenados Lucho** sobre fondo tinta, con "Buenos Aires y AMBA" |
+| **Frase** | **"¿Tenés algo que necesita arenado?"** |
+
+⚠️ **"20 años de oficio", nunca "más de 20 años" ni "de experiencia".** La empresa
+tiene ~8 años; *"+20 años de experiencia"* fue la **afirmación falsa #1** de este
+proyecto. "Oficio" es la única forma aprobada (`21-realidad-operativa.md`:194-195).
+
+---
+
+### A6 — "¿Qué es el arenado?" *(recomendado, y explico por qué)*
+
+**El dueño pidió evaluar si vale. Vale, y puede ser el de mejor retorno a largo
+plazo — pero no es un anuncio de venta y no hay que medirlo como tal.**
+
+> **Texto principal**
+> ¿Nunca escuchaste hablar del arenado?
+>
+> Pensalo como una lija, pero a muchísima más potencia. Un chorro de arena a presión saca pintura vieja, óxido y material flojo de una sola pasada, donde lijar a mano ya no tiene sentido.
+>
+> Sirve para piletas de hormigón, estructuras metálicas, tanques por fuera, camiones, paredes y ladrillo a la vista. La superficie queda limpia y pareja, lista para pintar o revestir.
+>
+> Lo hacemos in situ, con equipo propio. Mirá cómo queda.
+>
+> **Título:** ¿Qué es el arenado?
+> **Descripción:** Como lijar, pero a mucha más potencia
+> **Botón:** Más información
+> **Destino:** `/servicios`
+
+**Creativo — tiene que explicarse solo, sin leer**
+
+| | |
+|---|---|
+| **Formato** | **Video vertical de 10-20 s**, sin texto hablado |
+| **Qué muestra** | Plano fijo y cerrado del chorro **comiendo la pintura en tiempo real** |
+| **Texto en pantalla** | *"Esto es arenado."* al principio · *"Como lijar, pero a mucha más potencia."* al final |
+
+⭐ **Por qué lo recomiendo:** todo este plan arranca de que **el comprador de
+piletas no sabe que el servicio se llama "arenado"**. Los otros cinco anuncios lo
+esquivan hablando del problema. **Este resuelve la causa: enseña la categoría.**
+
+⚠️ **Pero con una condición: va en la campaña de marca, no en las de venta.** Trae
+curiosidad, no intención — si entra en la misma campaña que A1, le come
+presupuesto a la que convierte y ensucia el aprendizaje. Se mide por **alcance y
+reproducciones**, no por costo por lead.
+
+Y es el más barato de producir de los seis: **un operario, un celular, veinte
+segundos.** Hay 2 equipos trabajando todos los días.
+
+---
+
+### 4.1 Qué anuncio va en qué campaña
+
+| Anuncio | Campaña | Conjunto |
+|---|---|---|
+| **A1** Pileta descascarada | `MT-Piletas-Temporada` | `cj_piletas-amba-amplio` |
+| **A2** Piletero | `MT-Piletas-Temporada` | `cj_piletas-pileteros` *(fase 2)* |
+| **A3** Estructuras / mucha pieza | `MT-Obra-PYME-InSitu` | `cj_pyme-galpon` |
+| **A4** Industria / tanques | `MT-Obra-PYME-InSitu` | `cj_pyme-galpon` ⬅ **el mismo** |
+| **A5** Marca | `MT-Marca-Remarketing` | `cj_rmk-visitantes-180d` |
+| **A6** ¿Qué es el arenado? | `MT-Marca-Remarketing` | `cj_rmk-visitantes-180d` |
+
+⚠️ **A3 y A4 van juntos en el mismo conjunto, y es a propósito.** Son dos ángulos
+del mismo producto —arenado in situ para empresas— y el comprador se superpone
+bastante. Separarlos en dos conjuntos parte un presupuesto que ya es chico y
+**deja a los dos sin salir nunca de la fase de aprendizaje** (Meta pide ~50
+conversiones por semana **por conjunto**). Juntos, Meta elige cuál mostrarle a
+cada persona, que es exactamente para lo que sirve.
+
+### 4.2 Lo que ninguno de los seis dice, y por qué
 
 | No se dice | Porque |
 |---|---|
-| "Protegemos la zona", "contenemos el polvo", "sin ensuciar" | No se arma ningún cerramiento. Afirmación falsa ya publicada. |
+| "Protegemos la zona", "contenemos el polvo", "sin ensuciar" | No se arma ningún cerramiento. **Afirmación falsa ya publicada, la peor de las cuatro.** |
 | "Sumamos equipos" | El tope es 2. Ya se publicó y se corrigió el 28/09. |
 | "+20 años de experiencia" | La empresa tiene ~8 años. Se dice **"20 años de oficio"**. |
 | "~100 m²/día" | Solo vale en superficies cómodas. Sin su condición, no va en anuncios. |
 | "No pintamos" como absoluto | Se pinta si lo piden, no se vende. Se dice **"lista para pintar o revestir"**. |
-| "Sacamos el revestimiento" en piletas | Solo pintura sobre hormigón. Venecitas y mosaico **no**. |
-| Granallado, Sa3, ISO, metal blanco, normas | No se hace. Prohibido en copy, metadata, schema y anuncios. |
-| Portones, rejas de hogar, autos, motos, muebles | No se compran. Se aceptan si llegan solos. |
+| "Sacamos el revestimiento" en piletas | Solo pintura sobre hormigón. Venecitas, mosaico y fibra de vidrio **no**. |
+| Granallado, Sa3, ISO, metal blanco, normas, mediciones | No se hace. Prohibido en copy, metadata, schema y anuncios. |
+| "Piezas" a secas | Trae muebles, sillones y rejas de hogar. No se toman y no hay taller. |
 | "Arenamos tanques por dentro" | Se hace bajo permiso ajeno. Bloqueado hasta resolver el pendiente de seguridad. |
+| Portones y rejas de casa, autos, motos | Se aceptan si llegan solos, pero **no se les compra tráfico**. |
 
----
 
 ## 5. Configuración completa del panel
 
@@ -405,7 +528,7 @@ pregunta por interiores en el chat, la respuesta no es "sí".**
 
 | Campo | Valor |
 |---|---|
-| Ubicación | CABA + GBA, **radio 60 km desde CABA** |
+| Ubicación | **Radio de 60 km desde Del Viso** ⬅ decidido el 06/10 |
 | Tipo de ubicación | ⚠️ **"Personas que viven en esta ubicación"** |
 | Edad | 30 – 65 |
 | Género | Todos |
@@ -419,12 +542,31 @@ Google.** El 30/09 se descubrió que dos campañas estaban en *"Presencia o inte
 y mostraban avisos fuera del AMBA desde el encendido. Meta tiene el equivalente
 exacto, y viene mal por defecto. **Es el primer campo que hay que mirar.**
 
+#### ⚖️ Por qué piletas se centra en Del Viso y obra en CABA
+
+**Decisión del dueño, 06/10/2026.** No es lo mismo trazar los 60 km desde un lado
+o del otro: desde **Del Viso** entra Pilar, Escobar, Luján y Campana, y queda
+afuera toda la Zona Sur; desde **CABA** entra el AMBA completo.
+
+| Campaña | Centro del radio | Por qué |
+|---|---|---|
+| `MT-Piletas-Temporada` | **Del Viso** | Ticket ~800.000 y **un día de trabajo**: el viaje tiene que ser corto o se come el margen |
+| `MT-Obra-PYME-InSitu` | **CABA** | Ticket de millones y ~una semana de obra: **banca el viaje** |
+
+Es la misma lógica que ya está escrita para Google en
+`ads-config/05-configuracion-campanas.md`: *"Piletas y General-Marca no se amplían
+nunca: el ticket no soporta el viaje"*.
+
 **Anuncios:**
 
 | Anuncio | Copy | Creativo |
 |---|---|---|
-| `an_P1-tercer-camino` | P1 | Par antes/después |
-| `an_P2-reloj-temporada` | P2 | Carrusel |
+| `an_A1-pileta-descascarada` | **A1** | Carrusel antes · trabajo · después |
+
+**Conjunto `cj_piletas-pileteros`** *(fase 2, mismo campaña)* — se separa de
+`cj_piletas-amba-amplio` porque el piletero es otro comprador y conviene medirlo
+aparte. Público amplio con intereses de construcción y mantenimiento de piscinas;
+anuncio `an_A2-piletero-terceriza`.
 
 **Mensaje pre-escrito de WhatsApp** (se configura en el anuncio):
 > `Hola, vi el anuncio de arenado de piletas. Te mando una foto.`
@@ -460,7 +602,8 @@ miles de compradores posibles en el AMBA y el creativo filtra solo. El de PYME c
 galpón tiene quizá veinte mil, y en público amplio el 95% de las impresiones se
 tira. Y Daniel no está en Reels: está en el feed de Facebook a las 21 h.
 
-**Anuncios:** `an_O1-no-mover` · `an_O2-polvo-dicho-antes` · `an_O3-resultado-real`
+**Anuncios:** `an_A3-estructuras-in-situ` · `an_A4-industria-tanques` — **los dos
+en este mismo conjunto**, a propósito (ver §4.1).
 
 **Mensaje pre-escrito:**
 > `Hola, vi el anuncio de arenado en galpón. Quiero consultar por un trabajo.`
@@ -487,7 +630,11 @@ cerrarla con el dueño antes de encender.**
 | **Límite de frecuencia** | **2 impresiones cada 7 días** |
 | Ubicaciones | Advantage+ |
 
-**Anuncios:** `an_M1-remarketing` · `an_M2-prueba`
+**Anuncios:** `an_A5-marca` · `an_A6-que-es-arenado`
+
+⚠️ **`an_A6` se mide por alcance y reproducciones, no por costo por lead.** Enseña
+la categoría, no cierra una venta. Si se lo juzga con la vara de A1, parece malo y
+se apaga justo el que estaba resolviendo el problema de fondo.
 
 **Conjunto `cj_lal-1pct`** — fase 3, recién con **100+ conversaciones acumuladas**:
 público similar al 1% de quienes escribieron. Antes de ese volumen, un lookalike
