@@ -12,6 +12,83 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-10-06 (2) — Plan de Meta Ads: el creativo es la segmentación, no el público
+
+- **Qué se hizo:** se escribió [`21-meta-ads.md`](./21-meta-ads.md), el plan completo de implementación de Meta Ads: arquitectura, los 8 anuncios con su copy, la configuración campo por campo del panel, presupuesto, KPIs y las decisiones que faltan. **Es una propuesta: no se creó ni se encendió nada.**
+- **Por qué:** el dueño pidió abrir Meta para dar a conocer dos servicios — piletas viejas y descascaradas (B2C, estacional) y limpieza de estructuras y piezas metálicas in situ para PYMEs con galpón propio (B2B, el trabajo más rentable por día).
+
+### Punto de partida: Meta arranca de cero
+
+No existe **nada**: ni Business Manager, ni página de Facebook, ni Instagram, ni cuenta publicitaria, ni píxel. Lo único en el repo es un píxel hipotético mencionado en `06-tracking-y-analytics.md` como tag futuro de GTM.
+
+### La decisión que gobierna todo el plan
+
+**Google captura demanda; Meta la crea.** En Google segmenta la keyword. En Meta segmenta **la foto**: la imagen de una pileta descascarada frena a exactamente una persona, la que tiene una pileta descascarada.
+
+De ahí sale la asimetría que define la configuración:
+
+| | Público | Por qué |
+|---|---|---|
+| Piletas | **Ancho**, sin intereses | Cientos de miles de compradores posibles en el AMBA; el creativo filtra solo |
+| PYME con galpón | **Angosto**, con intereses y corredor industrial | Quizá 20.000 compradores posibles; en amplio se tira el 95% de las impresiones |
+
+Y el comprador de piletas **no sabe que el servicio se llama "arenado"**. Tiene dos opciones en la cabeza —pintar encima otra vez, o romper todo y hacerla de nuevo— y las dos son malas. **El anuncio existe para mostrarle una tercera que no sabe que existe.** Por eso ninguno de los tres anuncios de piletas arranca diciendo "arenado".
+
+### ⭐ Dos jugadas que el pedido no incluía
+
+**1. El remarketing de Meta se paga con el tráfico que ya compra Google.** Entran ~120 personas por semana desde Google Ads y la mayoría no escribe. Con el píxel puesto se vuelven público de Meta **sin comprar un solo clic**. Reimpactarlas cuesta una fracción de los 350 ARS por clic de Google. Es la campaña de mejor retorno de las tres.
+
+**2. Click-to-WhatsApp cuenta conversaciones de forma nativa, sin píxel.** Funciona el día 1, sin esperar la medición. Y el **mensaje pre-escrito es el sistema de atribución**: cada conversación llega marcada con el anuncio que la trajo, contable a mano en el inbox. Es el mismo mecanismo que ya usa el sitio con *"vi su anuncio en Google"*.
+
+Se descartan, por decisiones ya tomadas del proyecto: **formularios instantáneos** (el formulario se eliminó el 28/07) y **botón "Llamar"** (el teléfono no es público; traía gente buscando empleo).
+
+### La restricción real de Meta no es la plata
+
+Meta necesita **~50 conversiones por semana por conjunto** para salir de la fase de aprendizaje. Con un costo por conversación parecido al CPA de Google (~1.900), eso serían ~95.000 ARS por semana **en un solo conjunto**; la cuenta entera de Google gasta 38.900 por semana.
+
+La respuesta no es poner más plata: es **no fragmentarla**. Un solo conjunto por campaña, presupuesto de campaña (CBO), y no tocar nada durante 14 días.
+
+⚠️ **Y "ser el puesto 1" no se traduce.** En Meta no hay subasta por consulta ni posición que comprar. El equivalente de liderar es frecuencia alta sobre un geo bien definido — barato y alcanzable en el AMBA, pero es otra cosa.
+
+### ⚠️ Meta repite la trampa que costó 6 semanas en Google
+
+El tipo de ubicación viene mal por defecto, igual que *"Presencia o interés"* en Google. Hay que poner **"Personas que viven en esta ubicación"**. Es el primer campo a mirar al crear cada conjunto.
+
+### Los 8 anuncios
+
+**Piletas:** P1 *"el tercer camino"* (pintar encima no sirve) · P2 *"el reloj de la temporada"* · P3 *"pileteros"* (cliente recurrente, varias piletas por temporada).
+
+**Obra/PYME:** O1 *"no hace falta moverlas"* · O2 *"el polvo, dicho antes"* · O3 *"el resultado real"* (el metal queda picado).
+
+**Marca:** M1 remarketing · M2 prueba con antes/después.
+
+⭐ **O2 es el mejor de los ocho** y sale directo de `21-realidad-operativa.md`:34-44. Es la **afirmación falsa #4 dada vuelta**: en vez de prometer que se contiene el polvo —lo que el archivo llama *"la peor"* de las cuatro—, el anuncio dice que el arenado hace polvo, que el cerramiento lo pone el cliente y que en la visita se le marca qué tapar. Hace tres cosas a la vez: no miente, se diferencia de todo competidor que promete contención, y filtra al cliente que después iba a reclamar.
+
+Los ocho pasaron la lista de bloqueo: sin `granallado`, `sa3`, `iso 8501`, `metal blanco`, `perfil de anclaje`, `rugosidad`, `certific-`, `norma`, `garantizamos`, `mediciones`; sin *"contenemos el polvo"*, sin *"sumamos equipos"*, sin *"años de experiencia"*, sin *"sacamos el revestimiento"*.
+
+### 🔴 Un bug que daría vuelta toda la atribución
+
+`src/lib/origenTrafico.ts`:33-36 marca como "ads" cualquier tráfico con `utm_medium=cpc`, y la línea 84 antepone al mensaje de WhatsApp **"Hola, vi su anuncio en Google."**
+
+Si Meta usa la convención UTM de Google, **cada lead de Meta va a llegar diciendo que vino de Google.** Fix: `utm_medium=paid_social` y que `origenTrafico.ts` reconozca `fbclid` y `utm_source=meta`. **Bloquea el encendido.**
+
+### 🔴 Hallazgo colateral: la afirmación falsa #4 sigue viva en el sitio
+
+Auditando copy para este plan apareció que **"contención de polvo" / "conteniendo el polvo" sigue publicado** en `src/lib/projectsInfo.json` (líneas 253, 429, 440, 444), en los casos `pasarela-urbana` y `arenado-pileta`. Se corrigió en la FAQ y en las landings, pero quedó en los casos de éxito. **No es parte de este plan; hay que arreglarlo aparte.**
+
+### El riesgo que puede hundir el canal, y no es de Meta
+
+**El lead de Google es intención; el de Meta es impulso.** El de Google buscó "arenado de pileta" y tiene el problema en la cabeza hace semanas. El de Meta vio una foto, se acordó de su pileta y escribió en ese momento. Si la respuesta tarda seis horas, el impulso ya pasó. **El tiempo de respuesta en WhatsApp es el KPI oculto de este canal.**
+
+### Lo que falta y es del dueño
+
+Página de Facebook / Instagram / Business Manager (¿existen?) · si se acepta Click-to-WhatsApp · si el WhatsApp es **Business** (es requisito) · lista cerrada de partidos · presupuesto · y las **fotos**: las del repo están en 828×828 y Meta pide 1080 como mínimo.
+
+⭐ **El pedido más barato y más rentable del plan: que filmen 20-30 segundos en vertical** del arenador sacando pintura. Hay 2 equipos trabajando todos los días y el video de la transformación es el idioma nativo de Reels.
+
+- **Resultado esperado y cuándo revisarlo:** nada que medir todavía — es un plan, no un cambio. El primer hito es la Fase 0 (activos + píxel + el fix de `origenTrafico.ts`), que no gasta un peso. Recién con eso cerrado se enciende `MT-Piletas-Temporada` a 3.000/día y se lee a los 14 días contra el CPA de piletas de Google (**1.844**).
+- **Resultado real:** (completar)
+
 ## 2026-10-06 — Auditoría directa de la cuenta: la bitácora decía bien casi todo, y lo que decía mal lo decía de más
 
 - **Qué se hizo:** primera revisión de la cuenta de Google Ads **leída directamente, pantalla por pantalla**, en vez de reconstruida desde CSVs. Solo lectura: no se tocó ni un campo. Se contrastó cada afirmación de la bitácora contra la configuración viva de las 3 campañas, los 6 grupos, las 84 keywords, las 4 listas de negativas, las 61 negativas de cuenta, los 18 recursos y los **34 cambios del historial de los últimos 30 días**.
