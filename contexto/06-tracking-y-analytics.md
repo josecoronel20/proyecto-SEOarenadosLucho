@@ -109,16 +109,64 @@ Se dispara cuando:
 
 ---
 
-## Meta Pixel (Facebook)
+## Meta Pixel (Facebook / Instagram)
 
-- **No hay** script `fbq` en el repositorio.
-- Si el Pixel está activo, se carga vía tag **Meta Pixel** en GTM.
+> **Estado al 06/10/2026: el píxel EXISTE y está cableado en GTM.** Creado ese
+> día desde el Administrador de eventos de Meta, junto con la apertura del canal
+> (ver [`marketing/21-meta-ads.md`](./marketing/21-meta-ads.md)).
 
-| Evento Meta | Trigger desde dataLayer |
-|-------------|-------------------------|
-| **`Lead`** o **`Contact`** | `contact_whatsapp` |
+| Dato | Valor |
+|------|-------|
+| **ID del píxel** | **`28636604982615375`** |
+| Nombre en Meta | `AL-Sitio` |
+| Cuenta publicitaria | `620360575323052` (Peso argentino) |
+| Página de Facebook | `625000914022835` |
 
-**Nombres exactos en Pixel API:** `Lead`, `Contact` (PascalCase en `fbq('track', 'Lead')`).
+- ⛔ **No hay —ni debe haber— script `fbq` en el repositorio.** El píxel vive
+  **solo** como etiqueta de GTM. Pegarlo en `layout.tsx` parte la medición en dos
+  lugares y la vuelve inauditable.
+- Se puede crear un píxel **sin portafolio empresarial**, solo con la cuenta
+  publicitaria. Lo que sí necesita portafolio es verificar el dominio.
+
+### Las dos etiquetas en `GTM-W63ZV9D9`
+
+| Etiqueta | Tipo | Activador | Qué hace |
+|---|---|---|---|
+| `Meta Pixel - Base` | HTML personalizado | **All Pages** | Carga `fbq` e inicializa el píxel · `PageView` |
+| `Meta Pixel - Lead (contact_whatsapp)` | HTML personalizado | **`trigger_contact_whatsapp`** | `fbq('track', 'Lead')` |
+
+El evento Lead va envuelto en `if (typeof fbq === 'function')`: si la base no
+cargó (bloqueador de anuncios, consentimiento), no mide y **no tira error**.
+
+⚠️ **El mismo activador alimenta GA4 y Meta.** `trigger_contact_whatsapp` tiene
+dos etiquetas colgadas: la de GA4 y la de Meta. Las dos miden exactamente el
+mismo clic, así que los números son comparables entre canales.
+
+**Nombres exactos en Pixel API:** `Lead` (PascalCase en `fbq('track', 'Lead')`).
+
+### ⚠️ El sitio es una SPA
+
+Next.js App Router navega del lado del cliente, así que **`All Pages` dispara
+solo en la carga inicial**, no en los cambios de ruta. No es un problema para
+este uso: los anuncios aterrizan directo en la URL de la landing, así que el
+`PageView` inicial lleva la URL correcta y el remarketing por URL funciona. Si
+alguna vez hacen falta públicos por recorrido interno, se agrega un activador de
+*History Change*.
+
+### Sin deduplicación
+
+El `dataLayer.push` no lleva `event_id`. Si algún día se suma la **API de
+conversiones** de Meta (server-side), hay que agregarlo **primero** o los eventos
+se cuentan dos veces.
+
+### Lo que se limpió el 06/10
+
+Se borraron de GTM dos etiquetas y dos activadores **huérfanos desde el
+28/07/2026**, cuando se eliminaron el formulario y el `EmailBtn`:
+`GA4 – Evento contact_email`, `GA4 – Evento contact_form`,
+`Trigger_contact_email` y `Trigger_contact_form`. Verificado antes de borrar:
+cero menciones de esos eventos en todo `src/`. El contenedor quedó con **4
+etiquetas, todas vivas**.
 
 ---
 

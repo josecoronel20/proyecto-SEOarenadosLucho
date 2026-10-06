@@ -1,5 +1,5 @@
 /**
- * De dónde vino la persona: de un anuncio pago o del resto.
+ * De dónde vino la persona: de qué anuncio pago, o del resto.
  *
  * **Por qué existe.** El 20/08/2026 el dueño no podía saber si un WhatsApp había
  * venido de Ads o de una búsqueda orgánica. Google dice cuántas conversiones
@@ -7,34 +7,69 @@
  * llegan**: si Ads dice 12 y llegaron 4, hay un problema de medición. Sin poder
  * auditar el número contra la realidad, esa comprobación no se puede hacer.
  *
- * **Cómo se detecta.** Google Ads le agrega `gclid` a la URL de destino, y las
- * campañas llevan además el sufijo `utm_medium=cpc`. Cualquiera de los dos
- * alcanza.
+ * **Por qué distingue el canal y no solo "pago vs orgánico".** Desde el
+ * 06/10/2026 hay un segundo canal pago: Meta. Si los dos llegaran diciendo lo
+ * mismo, el inbox dejaría de servir para comparar canales — que es justamente lo
+ * único que mide de verdad este negocio. Peor: la versión anterior marcaba como
+ * Google **cualquier** tráfico con `utm_medium=cpc`, así que un lead de Meta
+ * etiquetado con la convención de Google habría llegado diciendo que vino de
+ * Google. La atribución quedaba dada vuelta sin que nadie lo notara.
+ *
+ * **Cómo se detecta.**
+ * - **Google** agrega `gclid` (o `wbraid`/`gbraid` en iOS) y sus campañas llevan
+ *   `utm_medium=cpc`.
+ * - **Meta** agrega `fbclid`, y sus campañas llevan `utm_medium=paid_social`.
+ *
+ * ⚠️ `utm_medium=cpc` sin más datos se asume **Google**, porque es la convención
+ * que ya usan las 3 campañas de Search. Por eso **Meta nunca debe etiquetarse con
+ * `cpc`** (ver la convención recomendada abajo).
+ *
+ * **Convención de UTM para Meta:**
+ * ```
+ * utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}
+ * ```
+ * `{{site_source_name}}` lo reemplaza Meta por `fb` o `ig` según dónde se vio el
+ * aviso, así el mensaje puede decir la red exacta. Si no se usa, con
+ * `utm_source=meta` alcanza y el mensaje dice "en redes".
  *
  * **Por qué se guarda en `sessionStorage`.** El parámetro solo existe en la
  * página de entrada. Si alguien cae en `/servicios?gclid=…` y después navega a
  * `/contacto` para escribir, la URL ya no lo tiene. Se marca al entrar y se lee
  * al momento de abrir WhatsApp.
  *
- * No guarda el valor del `gclid` ni ningún dato de la persona: solo un
- * "ads" / "web". Tampoco toca el `dataLayer` — el evento `contact_whatsapp`
+ * No guarda el `gclid`, el `fbclid` ni ningún dato de la persona: solo cuál de
+ * los canales fue. Tampoco toca el `dataLayer` — el evento `contact_whatsapp`
  * queda exactamente como estaba.
  */
 
 const CLAVE = "arl_origen"
 
-export type Origen = "ads" | "web"
+export type Origen = "google" | "facebook" | "instagram" | "meta" | "web"
+
+/** Los valores que sí se escriben en `sessionStorage`. */
+const PAGOS: readonly Origen[] = ["google", "facebook", "instagram", "meta"]
 
 /** Lee la URL actual y decide. No toca almacenamiento. */
 function detectarDeLaUrl(): Origen {
   if (typeof window === "undefined") return "web"
   const p = new URLSearchParams(window.location.search)
-  const esPago =
+  const fuente = (p.get("utm_source") ?? "").toLowerCase()
+
+  // Meta primero: así un `utm_source=facebook&utm_medium=cpc` mal etiquetado
+  // igual cae en Meta y no en el `cpc` genérico de abajo.
+  if (fuente === "facebook" || fuente === "fb") return "facebook"
+  if (fuente === "instagram" || fuente === "ig") return "instagram"
+  if (fuente === "meta" || p.has("fbclid")) return "meta"
+
+  const esGoogle =
     p.has("gclid") ||
     p.has("wbraid") || // variantes de gclid en iOS
     p.has("gbraid") ||
+    fuente === "google" ||
     p.get("utm_medium") === "cpc"
-  return esPago ? "ads" : "web"
+  if (esGoogle) return "google"
+
+  return "web"
 }
 
 /**
@@ -46,7 +81,8 @@ function detectarDeLaUrl(): Origen {
 export function marcarOrigen(): void {
   if (typeof window === "undefined") return
   try {
-    if (detectarDeLaUrl() === "ads") sessionStorage.setItem(CLAVE, "ads")
+    const origen = detectarDeLaUrl()
+    if (PAGOS.includes(origen)) sessionStorage.setItem(CLAVE, origen)
   } catch {
     // Modo incógnito o almacenamiento bloqueado: no es crítico, se pierde la
     // marca y el mensaje sale como orgánico.
@@ -57,11 +93,26 @@ export function marcarOrigen(): void {
 export function origenTrafico(): Origen {
   if (typeof window === "undefined") return "web"
   try {
-    if (sessionStorage.getItem(CLAVE) === "ads") return "ads"
+    const guardado = sessionStorage.getItem(CLAVE) as Origen | null
+    if (guardado && PAGOS.includes(guardado)) return guardado
   } catch {
     /* ver arriba */
   }
   return detectarDeLaUrl()
+}
+
+/**
+ * De dónde dice la persona que vino. Vacío si no vino de un anuncio.
+ *
+ * "En redes" es el caso en que Meta no dijo si fue Facebook o Instagram: es la
+ * única forma de nombrarlo que sigue siendo cierta sin adivinar.
+ */
+const DONDE: Record<Origen, string> = {
+  google: "Google",
+  facebook: "Facebook",
+  instagram: "Instagram",
+  meta: "redes",
+  web: "",
 }
 
 /**
@@ -78,10 +129,11 @@ export function origenTrafico(): Origen {
  * resuelve igual.
  */
 export function mensajeSegunOrigen(mensaje: string): string {
-  if (origenTrafico() !== "ads") return mensaje
+  const donde = DONDE[origenTrafico()]
+  if (!donde) return mensaje
 
   const PREFIJO = "Hola, "
-  const NUEVO = "Hola, vi su anuncio en Google. "
+  const NUEVO = `Hola, vi su anuncio en ${donde}. `
 
   if (mensaje.startsWith(PREFIJO)) {
     const resto = mensaje.slice(PREFIJO.length)
