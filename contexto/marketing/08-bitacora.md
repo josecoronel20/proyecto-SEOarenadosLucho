@@ -12,6 +12,196 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-10-06 — Auditoría directa de la cuenta: la bitácora decía bien casi todo, y lo que decía mal lo decía de más
+
+- **Qué se hizo:** primera revisión de la cuenta de Google Ads **leída directamente, pantalla por pantalla**, en vez de reconstruida desde CSVs. Solo lectura: no se tocó ni un campo. Se contrastó cada afirmación de la bitácora contra la configuración viva de las 3 campañas, los 6 grupos, las 84 keywords, las 4 listas de negativas, las 61 negativas de cuenta, los 18 recursos y los **34 cambios del historial de los últimos 30 días**.
+- **Por qué:** la bitácora es el único registro de qué se hizo y por qué, y nunca se había validado contra la cuenta. Un registro que nadie audita envejece mintiendo.
+
+### ✅ Lo que está exactamente como dice la bitácora
+
+| | Piletas | Obra-Industrial | General-Marca |
+|---|---|---|---|
+| Presupuesto | ARS 3.000/día | ARS 3.000/día | ARS 750/día |
+| Estrategia | Maximizar clics | Maximizar clics | Maximizar clics |
+| **Tope de CPC** | **500** | **350** | **350** |
+| Ubicación | 60 km de CABA · **Presencia** | 60 km de CABA · **Presencia** | 60 km de CABA · **Presencia** |
+| Red | Solo Búsqueda de Google | ídem | ídem |
+| Objetivo de conversión | Contactos | Contactos | Contactos |
+
+Y además, verificado una por una: **IA Max desactivado** en las 3 · **recursos creados automáticamente desactivados** en las 3 · **concordancia amplia automática desactivada** en las 3 · **anuncios dinámicos (DSA) sin configurar** · rotación "Optimizar" · idioma español · zona horaria Argentina · **etiquetado automático en Sí** (sin eso no entra una sola conversión a Ads) · **aplicación automática de recomendaciones desactivada** · sin exclusiones de IP · sin plantilla de seguimiento.
+
+**El fix de "Presencia" del 30/09 se mantiene en las tres.** Era el hallazgo más caro de esa auditoría y no se revirtió solo.
+
+**Las 4 listas de negativas, bien ruteadas:**
+
+| Lista | Términos | Campañas |
+|---|---|---|
+| `NEG-EQUIPOS-DIY` | 87 | las 3 |
+| `NEG-DATA` | 7 | las 3 |
+| `NEG-PILETAS-FILTRO` | 23 | solo Piletas |
+| `RUTEO-PILETAS` | 5 | solo Obra + Marca |
+
+No hay ni una negativa suelta a nivel campaña: todo pasa por listas. Es la forma correcta y es auditable.
+
+**Grupos de anuncios (6):** `ag_pileta-sin-jerga` **detenido** ✅ (como dice la entrada del 14/09); los otros 5 activos — `ag_marca`, `ag_genericos`, `ag_obra-restauracion-estructuras`, `ag_pileta-jerga`, `ag_pymes-galpon-in-situ`.
+
+**Las 3 pausas del 05/10 y las 4 negativas de cuenta de ese día están aplicadas.** Confirmado en el historial: `9:07:01` 1 keyword, `9:08:03` 2 keywords, `9:08:27` las 4 negativas.
+
+### 🔒 Nadie más tocó la cuenta
+
+**34 cambios en 30 días, los 34 hechos por `jossemaaria20@gmail.com` desde "Cliente web (manual)".** Ningún script, ninguna recomendación auto-aplicada, ningún tercero. El aviso rojo *"Proteja su cuenta de la actividad no autorizada"* que muestra Google es el pedido estándar de verificación en dos pasos, no un incidente: no hay rastro de acceso ajeno.
+
+### 🔴 Hallazgo 1 — Las TRES campañas están "Limitada por la estrategia de ofertas"
+
+No aparece en ningún CSV descargado: es una etiqueta de la interfaz. Las tres campañas dicen **"Apto (limitado)"** y el motivo es el **tope de CPC**, no el presupuesto. Obra además suma *"Parámetro de configuración de ofertas limitado"*.
+
+Esto cambia el encuadre del pendiente del 12/10. Se venía pensando el tope como un tema de piletas; **está frenando también a obra, que es la campaña del ticket de millones y la que tiene el tope más bajo en proporción a lo que vale su lead.** La misma tecla que subió el `% de impr. (parte sup. abs.)` de 12,64% a 33,01% en piletas está sin tocar en obra desde el encendido.
+
+Google lo dice de frente en la propia pantalla de ofertas: *"Usted decidió centrarse en los clics (…), pero su cuenta realiza un seguimiento de las conversiones. Podría conseguir una mayor cantidad de conversiones si se centra en ellas."* Y en el panel: **Maximizar conversiones con CPA objetivo, +6,7%**.
+
+### 🔴 Hallazgo 2 — `"restauración de fachada"` quedó pausada el 28/09 y nunca se reactivó
+
+El historial de cambios lo muestra sin ambigüedad: el 28/09 a las 8:52 se pausaron **10** keywords del clúster de fachadas y a las 10:31–10:32 se reactivaron **9**, con URL final a `/arenado-de-fachadas`. La décima —`"restauración de fachada"`— **sigue detenida y sin URL final**.
+
+Es justo la de intención más clara de todo el clúster: no busca un tutorial ni un precio, busca el servicio. Y la bitácora decía "5 keywords" cuando en realidad el movimiento fue de 10 y 9, así que el faltante no era visible leyendo el registro.
+
+**Para decidir:** reactivarla con URL a `/arenado-de-fachadas`, igual que las otras.
+
+### 🔴 Hallazgo 3 — 12 de las 20 keywords de obra están "No apta: volumen de búsquedas bajo"
+
+Google directamente **no las muestra**. Las apagó él, no nosotros:
+
+`"arenado de fachada"` (singular) · `"arenado de frente"` · `"arenado de ladrillo a la vista"` · `"arenado de ladrillos"` · `"arenado para pintar"` · `"arenado para repintar"` · `"arenado en obra"` · `"arenado de obra"` · `"arenado de vigas"` · `"arenado de silos"` · `"arenado de estructura metálica"` · `"arenado de estructuras metálicas"`.
+
+**Cuatro de esas doce son del clúster de fachadas** y tres de ellas tienen la URL de la landing nueva cargada. Es decir: la landing se construyó para un grupo de keywords del que **la mitad no corre**.
+
+Lo que queda vivo en obra, con los números de la semana 29/09–05/10:
+
+| Keyword | Costo | Conv | CPA |
+|---|---|---|---|
+| `"empresa de arenado"` | 6.474 | 5,00 | 1.295 |
+| `"arenado de paredes"` | 981 | 2,00 | **490** |
+| `"arenado de fachadas"` | 1.268 | 1,39 | 912 |
+
+**El grupo entero de obra vive de tres keywords.** `"arenado de paredes"` es hoy **el mejor CPA de toda la cuenta** y tiene nivel de calidad 7/10.
+
+**Qué significa, y es incómodo:** el plan de "reactivar el clúster de fachadas" dio menos superficie de la que se creyó. No porque la landing no sirva —sirve, convirtió— sino porque **no hay búsquedas suficientes para esos términos exactos en el AMBA**. La palanca para fachadas no es agregar más variantes largas: es que `"arenado de paredes"` y `"arenado de fachadas"`, las dos que sí tienen volumen, aparezcan más arriba.
+
+### 🟠 Hallazgo 4 — Las negativas de cuenta son 61, no 48
+
+`ads-config/04-keywords-negativas.md` habla de 48 términos en el Bloque B y de un plan A+B+C de 81. **La cuenta tiene 61 cargadas** (de un máximo de 1.000). El documento y la cuenta no están peleados en contenido —se verificaron los bloques de empleo, técnicas y homónimos, y están— pero **el conteo del documento no describe la cuenta**. Hay que decidir si el documento pasa a ser un espejo exacto o se declara explícitamente como "plan", no como inventario.
+
+Lo que sí está y es correcto: `granallado` y toda su familia, `sa3`, `"sa 2"`, `"st 2"`, `"metal blanco"`, `"perfil de anclaje"`, `"iso 8501"`, `"fibra de vidrio"`, el bloque de empleo completo (`"busco trabajo"`, `"cv"`, `"curriculum"`, `"sueldo"`, `"vacante"`, `"rrhh"`…), `"talleres de arenado"` y `"talleres de arenados"` (el plural que faltó el 21/09), y las cuatro de `pintar pileta|piletas|piscina|piscinas` del 05/10. **`restaurar` no está como negativa en ningún lado** ✅ — la regla se respetó.
+
+### 🟠 Hallazgo 5 — Sin contacto de protección de datos
+
+`Configuración de la cuenta` muestra **"Contactos relacionados con la protección de datos: ⚠️ Ninguno"**. No afecta la entrega de anuncios hoy. Es un campo administrativo de Google que conviene completar y nada más.
+
+### Lo que NO hay que hacer con esto
+
+Ninguno de los hallazgos justifica tocar la cuenta hoy. **Sigue vigente la regla de un cambio estructural por vez**, y el cambio del 12/10 (Maximizar conversiones en Piletas sobre la base limpia de las tres pausas) ya está comprometido. Meter la reactivación de `"restauración de fachada"` y una suba de tope en obra en la misma semana haría ilegible la lectura, que es exactamente el error que el proyecto dejó de cometer en agosto.
+
+- **Resultado esperado y cuándo revisarlo:** nada que medir — es una auditoría, no un cambio. Lo que queda es la agenda:
+  1. **12/10 (ya comprometido):** Piletas a Maximizar conversiones. Leer primero el efecto de las tres pausas del 05/10.
+  2. **12/10, en el mismo rato:** reactivar `"restauración de fachada"` con URL a `/arenado-de-fachadas`. Es reponer algo que debía estar, no un experimento nuevo, y no compite con la lectura de piletas porque vive en otra campaña.
+  3. **19/10 o cuando piletas esté leída:** evaluar el tope de CPC de **obra**. Hoy está en 350 con la campaña marcada "limitada por la estrategia de ofertas" y un ticket de millones por lead.
+  4. **Cuando se toque el doc:** decidir qué es `04-keywords-negativas.md`, inventario o plan.
+- **Resultado real:** (completar)
+
+## 2026-10-05 — Semana 7: récord de conversiones, la puja funcionó, y el agujero más grande hasta ahora
+
+- **Qué se hizo:** lectura de la semana 7 (28/09 → 04/10), la primera con la suba de presupuesto y de puja adentro. Se pausaron **3 keywords probadas muertas** (`"preparar pileta para pintar"`, `"arenado de metales"`, `"limpieza de ladrillo a la vista"`) y se agregaron **4 negativas de cuenta** de la familia `pintar pileta/piscina`.
+
+### Los números
+
+| Campaña | Costo | Clics | CTR | Conv | CPA |
+|---|---|---|---|---|---|
+| `AR-Search-Piletas` | 20.283 | 58 | 9,81% | **11** | **1.844** |
+| `AR-Search-Obra-Industrial` | 17.883 | 58 | 8,42% | 6,4 | 2.798 |
+| `AR-Search-General-Marca` | 781 | 4 | 1,65% | 0,6 | 1.283 |
+| **Total** | **38.947** | **120** | **7,9%** | **18** | **2.164** |
+
+**18 conversiones: el mejor número desde que la cuenta está encendida.** Serie: 7 · 16 · 4 · 15 · 12 · 15 · **18**.
+
+### ✅ La suba de puja funcionó, y se puede demostrar
+
+| `ag_pileta-jerga` | S6 | **S7** |
+|---|---|---|
+| Impresiones | 583 | **591** |
+| Clics | 45 | **58** |
+| CTR | 7,72% | **9,81%** |
+| CPC | 240 | 350 |
+| Conversiones | 8 | **11** |
+
+**Mismas impresiones, 29% más clics.** Eso solo pasa si el aviso aparece más arriba.
+
+Y el KPI que se fijó el 30/09 lo confirma de frente:
+
+| | 18/08–30/09 | **28/09–04/10** | Objetivo |
+|---|---|---|---|
+| **% de impr. (parte sup. abs.)** | 12,64% | **33,01%** | 25-30% ✅ |
+| Cuota de parte sup. absoluta | < 10% | **25,70%** | — |
+| Cuota de impresiones | 36,98% | **77,86%** | — |
+| Perdida por ranking | 45,47% | **22,14%** | — |
+| Cuota de clics | — | **57,26%** | — |
+
+⚠️ **Salvedad honesta:** parte de la mejora es **composición de mezcla**, no puja. El número viejo era un promedio de 44 días que arrastraba `restaurar piscina` y `preparar pileta para pintar`, dos keywords con muchísimas impresiones y mala calidad. Al pausar una, el promedio sube solo. La puja hizo la mayor parte, no toda.
+
+**El CPA de piletas subió de 1.350 a 1.844, pero el corte fijado era 2.500 sin más conversiones.** Estamos abajo y con 3 conversiones más: **la puja se queda en 500.** Y todavía hay margen — se pierde el primer puesto por ranking el **74,30%** de las veces, con un CPC medio de 350 contra un tope de 500.
+
+### 🔴 `"preparar pileta para pintar"` se desbocó — y la lección que deja
+
+| Semana | Costo | Clics | Conv |
+|---|---|---|---|
+| S5 | 593 | 2 | 0 |
+| S6 | 3.356 | 11 | 1 |
+| **S7** | **7.795** | **18** | **1** |
+| **Acumulado** | **11.744** | **31** | **2** |
+
+Sola fue el **38% del gasto de piletas** y el mayor gasto individual de toda la cuenta.
+
+**⭐ La lección, y es nueva:** el 28/09 se bloqueó `"como pintar"` / `"cómo pintar"` pensando que el problema era la **forma de pregunta**. Cortó la mitad. Esta semana entró exactamente la misma gente **por la forma afirmativa**:
+
+`pintar piletas de cemento` (953) · `pintar pileta de cemento` (484) · `pintar pileta de hormigon` (482) · `pintar pileta` (477) · `pintar piscina de cemento` (254) → **4.010 ARS, 10 clics, 0 conversiones.**
+
+**Regla que queda: bloquear la forma de pregunta no alcanza. Hay que bloquear también la afirmativa.** Es la quinta vez que el proyecto paga por una variante no cubierta (24/08 `maquina para arenar`, 07/09 `piscinas de fibra`, 21/09 `talleres` plural, 28/09 `como pintar`, y ahora `pintar` sin el "cómo").
+
+⛔ **`pintar` sola NUNCA se bloquea:** *"queda listo para pintar"* es la promesa central del negocio y está en todos los RSA.
+
+### 🔴 `"arenado de metales"` — ya es concluyente
+
+**5.855 ARS y 19 clics acumulados sin una sola conversión** (S3 1.959 · S4 1.331 · S6 1.025 · S7 1.540). Con la tasa de la cuenta eso es **~1 en 22** de ser casualidad. Se venía observando desde el 28/09 con evidencia insuficiente; ahora alcanza.
+
+Sus búsquedas confirman el diagnóstico que ya se sospechaba: `arenado de piezas`, `arenado de piezas metálicas`, `arenado de fierro`, `arenado de muebles metalicos`, `arenado de sillones de hierro`. **Son piezas sueltas y muebles — y el negocio no tiene taller** (restricción dura: todo in situ).
+
+### 🔴 `"limpieza de ladrillo a la vista"` — el que pregunta "cómo", otra vez
+
+1.731 ARS, 5 clics, 0 conversiones. Era una de las 5 reactivadas el 28/09 hacia la landing nueva. Sus búsquedas: `como tratar el ladrillo visto` (695) · `como limpiar los ladrillos a la vista` (349) · `con que se limpian los ladrillos ala vista` (346) · `limpieza de ladrillo visto` (338).
+
+**No busca un proveedor, busca un tutorial.**
+
+### ⭐ Pero la landing de fachadas funcionó
+
+**`"arenado de fachadas"`: 1.274 ARS, 4 clics, 1,39 conversiones.** Es la **primera conversión del clúster de fachadas** desde que existe, después de 22 clics sin ninguna cuando apuntaba a `/servicios`.
+
+La hipótesis del 28/09 era que el problema no era la keyword sino la página que las recibía. **Confirmada.**
+
+### Para mirar
+
+- **`"arenados industriales"` (QS 2):** 4.393 ARS y 13 clics con **0 conversiones** esta semana, después de dar **3** la semana pasada. Muy volátil. Una semana más.
+- **`AR-Search-General-Marca` se desplomó:** 781 ARS, 4 clics, CTR de 5,33% a **1,65%**, impresiones de 338 a 243. Coincide con el cambio a "Presencia" del 30/09. Es la campaña más chica y no urge, pero hay que mirarla.
+
+### Qué se ejecutó (05/10)
+
+1. **Pausadas:** `"preparar pileta para pintar"` · `"arenado de metales"` · `"limpieza de ladrillo a la vista"`.
+2. **Negativas de cuenta:** `"pintar pileta"` · `"pintar piletas"` · `"pintar piscina"` · `"pintar piscinas"`.
+
+Entre las tres pausas se liberan **~11.000 por semana que dieron 1 conversión entre las tres**.
+
+- **Resultado esperado y cuándo revisarlo:** lunes **12/10**. El gasto de piletas debería caer de 20.283 a ~12.500 **sin perder conversiones** (las tres pausadas dieron 1 entre las tres), y por lo tanto el CPA debería mejorar desde 1.844. Si el gasto baja y las conversiones se sostienen, queda confirmado que eran 11.000 de puro ruido.
+- 📌 **Y el 12/10 va Maximizar conversiones**, sobre la base limpia. Se postergó una semana más a propósito: pausar el mayor gasto de la cuenta cambia los números de piletas de arriba abajo, y encimarle un cambio de estrategia de puja haría ilegible la lectura. Ahí también se evalúa si conviene estirar el tope más allá de 500, con el 74,30% de parte superior absoluta todavía perdido por ranking.
+- **Resultado real:** (completar)
+
 ## 2026-09-30 (2) — ⭐ Directiva del dueño: el presupuesto no es la restricción, el objetivo es el puesto 1
 
 **Textual:** *"el presupuesto no es el problema, en casi 2 meses cargamos 200 mil y podríamos haber cargado más sin problema. Tenemos que apuntar a ser los líderes del puesto 1 en anuncio y conversiones."*
@@ -104,6 +294,8 @@ Dos lecturas:
 
 Google lo dice textual en el anuncio de marca: *"Añade 6 enlaces de sitio más a tu anuncio"*. Son CTR gratis. **Pendiente:** revisar `Anuncios y recursos → Recursos`, y de paso cazar los **5 sitelinks heredados de la cuenta vieja** anotados como pendientes desde agosto.
 
+> ❌ **Corregido el 06/10/2026 con la cuenta a la vista: este hallazgo era falso.** Hay **18 enlaces de sitio — 6 por campaña, los tres juegos en estado "Apto"**, cargados el 11, 12 y 13 de agosto. Google no avisaba que faltaran: pide *más* de 6 (el máximo es 20). Y los **5 sitelinks heredados de la cuenta vieja ya no existen**: a nivel cuenta solo quedan el logotipo y el nombre de la empresa. Dos pendientes arrastrados desde agosto, cerrados sin tocar nada. La lección: un aviso de Google no es un diagnóstico.
+
 ### ✅ Lo verificado que está bien (y no se toca)
 
 - **Redes destildadas** en las 3 — sin Display ni socios de búsqueda.
@@ -141,6 +333,11 @@ Pedido explícito del dueño el 30/09. Es el cambio pendiente con más rendimien
 
 - **Qué se hizo:** en `AR-Search-Obra-Industrial` → `ag_obra-restauracion-estructuras` se reanudaron `"arenado de paredes"`, `[arenado de paredes]`, `"arenado de fachadas"`, `"limpieza de ladrillo a la vista"` y `"restauración de fachada"`, **con URL final a nivel keyword** apuntando a `https://www.arenadoslucho.com/arenado-de-fachadas`.
 - **Las otras 19 keywords del grupo siguen en `/servicios`** — `empresa de arenado`, `arenados industriales`, tanques, silos y metales convierten ahí y moverlas rompería lo único que funciona en obra.
+
+> ⚠️ **Corregido el 06/10/2026 contra el historial de cambios de la cuenta: no fueron 5, fueron 10 y 9.**
+> A las 8:52 del 28/09 se pausaron **10** keywords (`"arenado de fachada"`, `"arenado de fachadas"`, `"arenado de frente"`, `"arenado de ladrillo a la vista"`, `"arenado de ladrillos"`, `"arenado de paredes"`, `"limpieza de ladrillo a la vista"`, `"restauración de fachada"`, `[arenado de fachada]`, `[arenado de paredes]`) y a las 10:31–10:32 se reactivaron **9** con URL a la landing. **La que quedó afuera es `"restauración de fachada"`: sigue detenida y sin URL final.** Ver la entrada del 06/10.
+
+
 - **Por qué alcanzó con cambiar la URL y no hizo falta un grupo nuevo:** el RSA de ese grupo **ya tenía titulares de fachada** (`Arenado en obra y fachadas`, `Arenado de paredes y frentes`, `Arenado de ladrillo a la vista`). El aviso siempre estuvo bien; lo que fallaba era dónde aterrizaba. Ese matiz importa: el diagnóstico del 28/09 era "message match", y resultó ser message match **de la landing**, no del anuncio.
 
 ### ⚠️ Lo que hay que vigilar: estas keywords traen otro comprador

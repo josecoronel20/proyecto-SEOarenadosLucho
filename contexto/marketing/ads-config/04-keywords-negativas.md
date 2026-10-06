@@ -276,6 +276,20 @@ Google ofrece tres lugares para cargar negativas, con propiedades distintas. Usa
 
 > ⚠️ El nombre `neg_RUTEO-piletas` lleva "RUTEO" en mayúsculas a propósito: si alguien alguna vez la aplica a la campaña de Piletas, **apaga el servicio más barato del negocio** y no hay ninguna alerta que lo avise. Los anuncios simplemente dejan de mostrarse.
 
+#### ⚠️ Este documento es un PLAN, no el inventario de la cuenta
+
+Verificado leyendo la cuenta el **06/10/2026**. Los nombres reales y los conteos **no coinciden** con la tabla de arriba, y eso es esperable: la tabla es lo que se diseñó, la cuenta es lo que se cargó y creció desde entonces. **Fuente de verdad del estado: la cuenta. Fuente de verdad del criterio: este documento.**
+
+| En la cuenta | Términos | Aplicada a |
+|---|---|---|
+| `NEG-EQUIPOS-DIY` | 87 | las 3 campañas |
+| `NEG-DATA` | 7 | las 3 campañas |
+| `NEG-PILETAS-FILTRO` | 23 | solo Piletas |
+| `RUTEO-PILETAS` | 5 | solo Obra-Industrial + General-Marca |
+| *(nivel cuenta)* | **61** (de 1.000) | toda la cuenta |
+
+El ruteo es correcto y no hay **ninguna negativa suelta a nivel campaña** ✅ — la regla de "todo en lista o en cuenta" se respetó. Lo que no cuadra son los números: el Bloque B dice 48 términos y el plan A+B+C habla de 81, contra **61 reales**. Antes de citar un conteo de este archivo, verificarlo contra `Administrador → Configuración de la cuenta → Palabras clave negativas`.
+
 ---
 
 ### 4.5 Negativas de cuenta — bloques listos para pegar
