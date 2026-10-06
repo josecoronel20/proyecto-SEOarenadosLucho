@@ -12,9 +12,11 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
-## 2026-10-06 (4) — Se reemplaza la tanda de anuncios de Meta: de 8 piezas a 6, con públicos más finos
+## 2026-10-06 (4) — Se probó una tanda alternativa de anuncios y se volvió a los 8 originales
 
-- **Qué se hizo:** por pedido del dueño se **reemplazó por completo** la tanda de anuncios de Meta en [`21-meta-ads.md`](./21-meta-ads.md) §4. Los 8 anteriores (P1-P3, O1-O3, M1-M2) quedan **sin efecto**. La nueva tanda son **6** (A1-A6), con públicos más específicos y un tono más comercial. **Nada se ejecutó en Meta**: la campaña sigue en borrador y sin método de pago.
+> ↩️ **Revertido el mismo día.** Se escribió una tanda de 6 piezas (A1-A6) con públicos más finos y el dueño decidió **volver a los 8 originales** (P1-P3, O1-O3, M1-M2), que son los vigentes. La entrada se deja porque **el análisis que sobrevive vale más que la tanda**: los tres riesgos de abajo siguen aplicando a cualquier copy futuro, y la decisión del radio quedó firme. La tanda alternativa está en git, commit `716c4a5`.
+
+- **Qué se hizo:** se escribió una tanda alternativa de anuncios en [`21-meta-ads.md`](./21-meta-ads.md) §4 y después se restauró la original. **Nada se ejecutó en Meta**: la campaña sigue en borrador y sin método de pago.
 - **Por qué:** el brief pedía separar mejor a quién le habla cada pieza — particular con pileta, piletero, metalúrgica con mucha pieza, industria con tanques, y marca.
 
 ### La tanda nueva
