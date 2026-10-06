@@ -82,7 +82,7 @@ export default function PoliticaPrivacidadPage() {
                   El intercambio por WhatsApp se realiza dentro de esa aplicación y se rige también por las políticas de privacidad de Meta.
                 </p>
                 <p className="text-tinta-70 leading-relaxed max-w-[68ch]">
-                  Por separado, utilizamos cookies y tecnologías de medición para obtener datos de navegación agregados, como páginas visitadas y tiempo de permanencia, con fines estadísticos y publicitarios. Esto se implementa mediante Google Tag Manager y puede incluir servicios de terceros como Google Analytics y Google Ads.{' '}
+                  Por separado, utilizamos cookies y tecnologías de medición para obtener datos de navegación agregados, como páginas visitadas y tiempo de permanencia, con fines estadísticos y publicitarios. Esto se implementa mediante Google Tag Manager y puede incluir servicios de terceros como Google Analytics, Google Ads y el píxel de Meta, que nos permite medir el resultado de nuestros anuncios en Facebook e Instagram y volver a mostrarte publicidad más adelante.{' '}
                   <span className="font-semibold text-tinta">Esas herramientas de medición no reciben tu nombre, tu teléfono ni tu correo electrónico:</span>{' '}
                   registran que alguien inició una conversación de WhatsApp, no quién.
                 </p>
@@ -104,7 +104,7 @@ export default function PoliticaPrivacidadPage() {
                   <li>Hacer el seguimiento del trabajo y responder dudas posteriores.</li>
                 </ul>
                 <p className="text-tinta-70 leading-relaxed mt-4">
-                  No vendemos tus datos ni los cedemos a terceros con fines comerciales. Solo intervienen los proveedores técnicos necesarios para operar: el alojamiento del sitio (Vercel), las herramientas de medición y publicidad (Google) y la mensajería (WhatsApp, de Meta), cada uno bajo sus propias políticas de privacidad.
+                  No vendemos tus datos ni los cedemos a terceros con fines comerciales. Solo intervienen los proveedores técnicos necesarios para operar: el alojamiento del sitio (Vercel), las herramientas de medición y publicidad (Google y Meta) y la mensajería (WhatsApp, de Meta), cada uno bajo sus propias políticas de privacidad.
                 </p>
               </div>
             </section>
@@ -159,7 +159,7 @@ export default function PoliticaPrivacidadPage() {
               </p>
               <div className="mt-4 pt-4 border-t border-papel-linea">
                 <p className="text-sm text-tinta-70">
-                  <strong>Fecha de última revisión:</strong> 2 de agosto de 2026.
+                  <strong>Fecha de última revisión:</strong> 6 de octubre de 2026.
                 </p>
               </div>
             </section>

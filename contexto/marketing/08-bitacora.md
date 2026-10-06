@@ -12,6 +12,100 @@ Registro cronológico (más reciente arriba) de todo cambio, experimento y decis
 
 ---
 
+## 2026-10-06 (3) — Se abre Meta: píxel en producción, y el plan se corrigió dos veces contra la cuenta real
+
+- **Qué se hizo:** primera sesión operativa en Meta, en modo guiado. Se creó el portafolio empresarial, se dio de alta el **píxel** y quedó **publicado en GTM**. Se armó la campaña de piletas **en borrador**. De paso se limpiaron cuatro elementos huérfanos del contenedor. **No se publicó ningún anuncio y no se gastó un peso** — la cuenta todavía no tiene método de pago.
+- **Por qué:** el dueño pidió abrir Meta para dar a conocer dos servicios: piletas viejas y descascaradas (B2C, estacional) y limpieza de estructuras y piezas metálicas in situ para PYMEs con galpón. El plan está en [`21-meta-ads.md`](./21-meta-ads.md).
+
+### Los activos, con sus IDs
+
+| | |
+|---|---|
+| Página de Facebook | `625000914022835` — Abella Caprile 1246, Pilar · 2 seguidores |
+| Cuenta publicitaria | `620360575323052` — **Peso argentino** ✅, sin método de pago, modelo prepago |
+| Portafolio empresarial | `1509708434325323` — creado, **vacío** (ver el bloqueo de abajo) |
+| **Píxel de Meta** | **`28636604982615375`** — nombre `AL-Sitio` |
+| Campaña (borrador) | `MT-Piletas-Temporada` `120255534771550054` · conjunto `cj_piletas-amba-amplio` `120255534771540054` |
+
+También aparecieron activos que nadie había inventariado: las páginas **Bulker** y **corona_designer**, el portafolio **logostwitch**, y una cuenta de **Instagram** (`josecoronel20`) sin conectar. El dueño administra **5 páginas** en total.
+
+### 🔴 Corrección al plan #1: el objetivo no era "Ventas"
+
+El documento decía campaña con objetivo **Ventas** → destino WhatsApp. **Meta lo rechaza:** con Ventas, "Maximizar el número de conversaciones" no está permitido, y la única alternativa —"Maximizar conversiones"— optimiza por conversiones **en el sitio web** y exige píxel.
+
+El correcto es **Clientes potenciales**. Meta lo dice textual en su propia pantalla: *"ideal para Messenger, WhatsApp e Instagram"*. Ahí "Maximizar conversaciones" es el **único** objetivo de rendimiento disponible, y funciona.
+
+⚠️ **El objetivo de campaña no se puede cambiar después de creada, ni en borrador.** Hubo que borrar la campaña mal armada y rehacerla. Queda como regla: el objetivo se elige bien de entrada.
+
+### 🔴 Corrección al plan #2: no se conecta WhatsApp Business
+
+El plan proponía **Click-to-WhatsApp**. Al llegar a la pantalla apareció el riesgo: el flujo de "bandeja de entrada compartida" de Business Suite puede **migrar el número a la API**, y cuando eso pasa **la app de WhatsApp Business del teléfono deja de funcionar**. Ese teléfono lo atiende otra persona y es el **único canal de conversión del negocio**.
+
+**Decisión del dueño: no se toca.** Los anuncios van al **sitio**.
+
+**Lo que eso cambia, y no es menor:** el píxel deja de ser "Fase 2" y pasa a ser **camino crítico**. Sin píxel, al sitio, Meta solo puede optimizar por **clics** — y buscaría gente barata de clickear, no gente que escribe. Es exactamente el agujero que esta cuenta ya vivió en Google.
+
+**Lo que se gana:** cero riesgo operativo sobre el WhatsApp · cada visita alimenta el **remarketing** · la landing filtra · y el lead termina igual en WhatsApp por el botón del sitio, disparando `contact_whatsapp`, **el mismo evento que ya mide Google**. Los números van a ser comparables contra el CPA de piletas de Google (**1.844**).
+
+### ✅ El píxel, cableado en GTM y publicado
+
+⛔ **El código del píxel NO se pegó en el sitio.** La regla del proyecto es que todo vive en `GTM-W63ZV9D9`; meter `fbq` en `layout.tsx` parte la medición en dos lugares y la vuelve inauditable.
+
+**Versión 6 de GTM, publicada el 06/10/2026 — 4 etiquetas, 1 activador:**
+
+| Etiqueta | Activador |
+|---|---|
+| Google Tag – GA4 Base | Initialization - All Pages |
+| GA4 – Evento contact_whatsapp | `trigger_contact_whatsapp` |
+| **Meta Pixel - Base** | All Pages |
+| **Meta Pixel - Lead (contact_whatsapp)** | `trigger_contact_whatsapp` |
+
+El evento Lead va envuelto en `if (typeof fbq === 'function')`: si la base no cargó (bloqueador, consentimiento), no mide y **no rompe nada**.
+
+⭐ **GA4 y Meta cuelgan del mismo activador.** Miden exactamente el mismo clic, así que los costos por lead son comparables entre canales sin asteriscos.
+
+✅ **Y se puede crear un píxel sin portafolio empresarial**, solo con la cuenta publicitaria. Eso destrabó todo pese al bloqueo de abajo. Lo que sí necesita portafolio es verificar el dominio.
+
+### 🧹 Lo que se limpió, y por qué importa
+
+Se borraron de GTM **dos etiquetas y dos activadores huérfanos desde el 28/07/2026**, cuando se eliminaron el formulario y el `EmailBtn`: `GA4 – Evento contact_email`, `GA4 – Evento contact_form`, `Trigger_contact_email` y `Trigger_contact_form`.
+
+`contexto/06-tracking-y-analytics.md` ya advertía que *"si aparecen en un tag de GTM están huérfanos: no los va a disparar nadie"*. **Estaban.** Verificado antes de borrar: cero menciones de esos eventos en todo `src/`, y el contador de GTM mostraba **0 etiquetas** colgadas de cada activador huérfano contra **2** del vivo.
+
+No hacían daño, pero el próximo que abriera el contenedor iba a creer que el sitio tiene formulario y mail.
+
+### ⚖️ Política de privacidad actualizada
+
+Declaraba medición **solo con Google**. Publicar el píxel sin tocarla era rastrear usuarios con una herramienta no declarada. Se agregó el píxel de Meta donde se enumeran las tecnologías de medición y a Meta en la lista de proveedores, y se corrigió la **fecha de última revisión** (2 de agosto → 6 de octubre), porque la propia política dice que las actualizaciones rigen desde su publicación.
+
+Sigue siendo cierta la frase *"esas herramientas no reciben tu nombre, tu teléfono ni tu correo"*: el evento `Lead` no lleva ningún dato personal.
+
+### 🔴 Bloqueo abierto: el número de verificación de Facebook
+
+La cuenta personal de Facebook tenía como único número **11-5479-7863**, que el dueño ya no tiene. Se agregó el actual (**11-6800-1863**) y se confirmó, pero Meta siguió mandando el código al viejo — **los dos terminan en 63 y la máscara no los distingue**.
+
+**Consecuencia:** el portafolio quedó **vacío**, sin la página reclamada. Eso bloquea únicamente **verificar el dominio**, o sea el remarketing. Todo lo demás corre.
+
+**Pendiente del dueño:** eliminar el número viejo en `accountscenter.facebook.com`. Vale aunque no se corra un anuncio: hoy el método de recuperación de la cuenta está muerto, y de esa cuenta cuelgan la página, el portafolio y la cuenta publicitaria.
+
+### ⚠️ Techo de gasto que reordena el presupuesto
+
+**Meta pone un límite de ARS 3.399,40/día** a una cuenta nueva sin historial de pagos. El plan proponía 3.000/día solo para piletas: **entra justo**. La fase 2 (las tres campañas, 5.000/día) **no entra** hasta que el techo suba, y sube solo con historial de pagos.
+
+O sea: la secuencia del plan —piletas sola dos semanas, después el resto— no era solo prudencia metodológica. Ahora es la única que Meta deja hacer.
+
+### Estado de la verificación
+
+**Confirmado:** el contenedor que sirve Google **contiene el píxel** (verificado por `curl` desde afuera y por `fetch` sin caché desde la propia página) · la versión 6 figura como publicada · el sitio carga sin un error de consola.
+
+**Sin confirmar:** que el píxel **dispare**. Al 06/10 el Administrador de eventos marca *"Tu píxel no ha recibido ninguna actividad"*, también filtrando por hoy y en la pestaña de pruebas.
+
+⚠️ **No se puede verificar desde el navegador de Claude: bloquea `connect.facebook.net`.** Queda anotado como limitación del entorno, igual que la del panel que no pinta imágenes.
+
+- **Resultado esperado y cuándo revisarlo:** **mañana 07/10**. Entran ~17 visitas por día al sitio desde Google Ads, así que si el píxel funciona **debería mostrar actividad solo, sin que nadie haga nada**. Si mañana sigue en cero, el problema es real y se depura con la vista previa de GTM. Causas probables, en orden: (1) bloqueador de anuncios en el navegador donde se probó —es lo que más pasa y es lo mismo que le ocurre al navegador de Claude—, (2) demora de Meta en los primeros eventos, (3) la etiqueta no dispara.
+- **Y después:** arreglar `origenTrafico.ts`, que hoy marca como Google cualquier tráfico con `utm_medium=cpc` — **todo lead de Meta llegaría diciendo que vino de Google** · cambiar el destino de la campaña de WhatsApp a sitio web · método de pago · fotos en alta (las del repo están en 828×828 y Meta pide 1080).
+- **Resultado real:** (completar)
+
 ## 2026-10-06 (2) — Plan de Meta Ads: el creativo es la segmentación, no el público
 
 - **Qué se hizo:** se escribió [`21-meta-ads.md`](./21-meta-ads.md), el plan completo de implementación de Meta Ads: arquitectura, los 8 anuncios con su copy, la configuración campo por campo del panel, presupuesto, KPIs y las decisiones que faltan. **Es una propuesta: no se creó ni se encendió nada.**

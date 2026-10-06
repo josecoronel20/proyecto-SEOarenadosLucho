@@ -1,8 +1,21 @@
 # Meta Ads — plan completo de implementación
 
-> **Estado: PROPUESTA. Nada de esto está ejecutado.** Escrito el 06/10/2026.
-> No existe cuenta publicitaria, Business Manager, página de Facebook, Instagram
-> ni píxel. Meta arranca de cero.
+> ### ⚠️ Leé esto antes que nada — el plan se corrigió el mismo día
+>
+> Escrito el 06/10/2026 y **parcialmente ejecutado esa misma tarde**. Al llevarlo
+> a la cuenta real, dos decisiones centrales resultaron equivocadas. Estado y
+> detalle en [`08-bitacora.md`](./08-bitacora.md), entrada del **06/10 (3)**.
+>
+> | Lo que dice este plan | Lo que pasó de verdad |
+> |---|---|
+> | Campaña con objetivo **Ventas** | ⛔ Meta lo rechaza: con Ventas, "Maximizar conversaciones" no está permitido. **El correcto es Clientes potenciales.** Y el objetivo **no se puede cambiar** después de crear la campaña. |
+> | Destino **Click-to-WhatsApp** | ⛔ Descartado por decisión del dueño: el flujo de bandeja compartida puede migrar el número a la API y **dejar sin app el teléfono de quien atiende**. Los anuncios van **al sitio**. |
+> | El píxel es "Fase 2" | 🔴 Al ir al sitio, el píxel pasa a ser **camino crítico**: sin él Meta optimiza por clics. |
+> | "No existe píxel" | ✅ Ya existe: **`28636604982615375`**, publicado en GTM el 06/10. |
+> | Fase 2 a 5.000 ARS/día | ⚠️ **No entra.** Meta pone un techo de **3.399,40/día** a cuentas nuevas; sube solo con historial de pagos. |
+>
+> Lo que **sí** sigue vigente: todo el razonamiento estratégico, los 8 anuncios con
+> su copy, la segmentación, el presupuesto y los KPIs.
 >
 > Todo el copy de este archivo está verificado contra
 > [`contexto/21-realidad-operativa.md`](../21-realidad-operativa.md) y contra la
