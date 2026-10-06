@@ -137,32 +137,47 @@ año con datos de conversión que no servían. **No se repite con otro logo.**
 | 0.6 | Crear el **píxel** y cargarlo **como tag de GTM**, nunca en el código | Guiado | remarketing |
 | 0.7 | Tag de evento `Lead` disparado por `contact_whatsapp` en GTM | Guiado | optimización por conversión |
 | 0.8 | Agregar Meta a la **política de privacidad** | Código | legal |
-| 0.9 | Arreglar `origenTrafico.ts` (ver 3.1) | Código | atribución |
+| 0.9 | ✅ **Hecho 06/10** — `origenTrafico.ts` distingue Google de Meta (ver 3.1) | Código | atribución |
 | 0.10 | Pedir las **fotos en alta** (ver 3.2) | Dueño | los creativos |
 
-### 3.1 🔴 Un bug real que hay que arreglar antes de encender
+### 3.1 ✅ El bug de atribución — arreglado el 06/10
 
-`src/lib/origenTrafico.ts`:33-36 marca el tráfico como "ads" si ve
-`utm_medium=cpc`, y la línea 84 antepone al mensaje de WhatsApp:
-**"Hola, vi su anuncio en Google."**
+**Qué estaba mal:** `src/lib/origenTrafico.ts` marcaba como "ads" **cualquier**
+tráfico con `utm_medium=cpc`, y el mensaje de WhatsApp arrancaba siempre con
+*"Hola, vi su anuncio en Google."* Si Meta se etiquetaba con la convención de
+Google, **cada lead de Meta iba a llegar diciendo que vino de Google.** La
+atribución quedaba dada vuelta y no había forma de notarlo mirando el inbox.
 
-Si Meta se etiqueta con la convención de Google, **cada lead de Meta va a llegar
-diciendo que vino de Google.** La atribución queda dada vuelta y no hay forma de
-saberlo mirando el inbox.
+**Cómo quedó:** el módulo ahora distingue el canal y lo dice en el mensaje.
 
-**Dos arreglos, y hay que hacer los dos:**
+| Entra con | El WhatsApp arranca con |
+|---|---|
+| `gclid` · `wbraid` · `gbraid` · `utm_source=google` · `utm_medium=cpc` | *"Hola, vi su anuncio en **Google**."* |
+| `utm_source=fb` o `facebook` | *"…en **Facebook**."* |
+| `utm_source=ig` o `instagram` | *"…en **Instagram**."* |
+| `fbclid` solo, o `utm_source=meta` | *"…en **redes**."* |
+| Sin parámetros | Sin prefijo |
 
-1. **UTM de Meta distinto** — nunca `utm_medium=cpc`:
-   ```
-   utm_source=meta&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}
-   ```
-2. **`origenTrafico.ts` tiene que reconocer `fbclid` y `utm_source=meta`**, y
-   anteponer *"Hola, vi su anuncio en Facebook/Instagram."*
+⚠️ **`utm_medium=cpc` sin más datos se sigue asumiendo Google**, porque es la
+convención que ya usan las 3 campañas de Search. Por eso **Meta nunca se etiqueta
+con `cpc`**.
 
-Mientras tanto, el **mensaje pre-escrito de Click-to-WhatsApp** resuelve la
-atribución solo (ver 5.1). Es el mismo truco que ya usa el sitio, y es la única
-atribución real que este negocio tiene — `21-realidad-operativa.md`:185 lo
-documenta: *"sirve para los que escriben, no para los que llaman"*.
+**La convención de UTM para Meta:**
+```
+utm_source={{site_source_name}}&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}
+```
+`{{site_source_name}}` lo reemplaza Meta por `fb` o `ig` según dónde se vio el
+aviso — por eso el mensaje puede nombrar la red exacta. Con `utm_source=meta` también
+funciona, pero el mensaje dice "en redes".
+
+**"En redes" es a propósito:** es la única forma de nombrarlo que sigue siendo
+cierta cuando Meta no dijo dónde se vio el aviso. El prefijo es **una frase de
+verdad**, no un código de seguimiento — ese es el criterio con el que se escribió
+desde el principio.
+
+**Verificado** en el build de producción, los cuatro casos de punta a punta: se
+entra con el parámetro, se confirma el diálogo y se lee la URL de WhatsApp que
+sale. Google sigue igual que antes.
 
 ### 3.2 🔴 Las fotos no alcanzan para Meta
 
@@ -646,7 +661,7 @@ es ruido.
 |---|---|
 | Píxel | Tag en **GTM** (`GTM-W63ZV9D9`), nunca en el código |
 | Evento | `Lead`, disparado por `contact_whatsapp` |
-| UTM | `utm_source=meta&utm_medium=paid_social&...` — ⛔ **nunca `cpc`** |
+| UTM | `utm_source={{site_source_name}}&utm_medium=paid_social&...` — ⛔ **nunca `cpc`** (ver 3.1) |
 | Conversaciones | Nativo de Meta, por campaña |
 | Atribución en el inbox | El prefijo del mensaje pre-escrito |
 
